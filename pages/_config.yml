@@ -1,0 +1,14 @@
+title: ROCm QA Test Results
+description: Test results dashboard for ROCm packages on Ubuntu
+baseurl: "/rocm-qa"
+url: "https://canonical.github.io"
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
