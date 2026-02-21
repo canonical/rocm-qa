@@ -1,0 +1,57 @@
+project: rocm-qa
+path: /root/rocm-qa
+backends:
+  bare-gfx1151:
+    type: adhoc
+    wait-timeout: 2h
+    kill-timeout: 12h
+    halt-timeout: 3h
+    discard: echo "Discarding $SPREAD_SYSTEM..."
+    allocate: |
+      echo "Allocating $SPREAD_SYSTEM..."
+      ADDRESS 192.168.1.53:22
+    restore: |
+      sudo rm -rf /root/rocm-qa
+    systems:
+      - gfx-1151:
+          username: canonical
+          ssh-rsa-key: '$(HOST: echo "$SPREAD_SSH_KEY")'
+          # ssh-key-pass: '$(HOST: echo "$SPREAD_SSH_KEY_PASS")'
+          environment:
+            DEB_BUILD_OPTIONS: "parallel=79"
+prepare: |
+  # Create a profile with GPU access
+  echo "Creating LXD 'rocm-gpu' profile "
+  snap install lxd --channel=latest/stable
+  snap refresh lxd --channel=latest/stable
+  # LXD setup
+  usermod -a -G lxd $USER
+  usermod -a -G render,video $USER
+  newgrp lxd
+  lxd waitready
+  lxd init --auto
+
+  # check if rocm-gpu profile exist or not, if not then create it
+  if ! o=$(lxc profile show rocm-gpu 2>&1); then
+    lxc profile create rocm-gpu
+    lxc storage create rocm-gpu-pool dir
+    lxc profile device add rocm-gpu root disk path=/ pool=rocm-gpu-pool
+    # /dev/kfd and /dev/dri/renderD* must have RW perms and must be assigned to the "render" group
+    # to fetch the corresponding 992 gid there was used inside the container:
+    # "getent group render | cut -d: -f3"
+    lxc profile device add rocm-gpu kfd unix-char path=/dev/kfd mode=0666 uid=0 gid=992 required=true
+    for i in /dev/dri/renderD*; do
+      name=$(basename $i)
+      lxc profile device add rocm-gpu $name unix-char path=$i mode=0666 uid=0 gid=992 required=true
+    done
+    lxc profile device add rocm-gpu eth0 nic network=lxdbr0
+    lxc profile device add rocm-gpu gpu gpu
+    lxc profile show rocm-gpu
+  fi
+
+  DEBIAN_FRONTEND=noninteractive apt update
+  DEBIAN_FRONTEND=noninteractive apt install -y \
+    software-properties-common autopkgtest
+suites:
+  tests/:
+    summary: integration tests for rocm stack
