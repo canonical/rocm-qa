@@ -78,7 +78,7 @@ jobs:
             [[ -z "$package" ]] && continue
 
             # Get the section for this package (from ## package to next ## or end)
-            section=$(awk "/^## ${package}\$/,/^## [^#]|^$/" pages/index.md)
+            section=$(awk "/^## ${package}\$/{p=1} /^## /&&!/^## ${package}\$/{p=0} p" pages/index.md)
 
             # Determine status: FAIL if any test failed, PASS otherwise
             if echo "$section" | grep -q 'badge fail'; then
