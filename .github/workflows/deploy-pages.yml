@@ -1,0 +1,121 @@
+name: Deploy to GitHub Pages
+on:
+  workflow_run:
+    workflows: ["Test"]
+    types: [completed]
+  workflow_dispatch:
+permissions:
+  contents: read
+  issues: read
+  pages: write
+  id-token: write
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Fetch pinned issue content
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          set -e
+
+          # Get pinned issue with test results
+          ISSUE_BODY=$(gh issue view 1 \
+            --json body \
+            --jq '.body // empty')
+
+          if [[ -z "$ISSUE_BODY" ]]; then
+            echo "No issue found with labels 'generated,sources-test'. Using placeholder."
+            exit 0
+          fi
+
+          # Convert LaTeX badges to HTML badges
+          # Match: $${\color{green}\textbf{PASS}\space✅}$$ -> <span class="badge pass">PASS</span>
+          # Match: $${\color{red}\textbf{FAIL}\space⭕}$$ -> <span class="badge fail">FAIL</span>
+          echo "$ISSUE_BODY" | sed \
+            -e 's/\$\$[^$]*PASS[^$]*\$\$/<span class="badge pass">PASS<\/span>/g' \
+            -e 's/\$\$[^$]*FAIL[^$]*\$\$/<span class="badge fail">FAIL<\/span>/g' \
+            > pages/content.md
+
+          # Add front matter to create index.md
+          {
+            echo "---"
+            echo "layout: default"
+            echo "---"
+            echo ""
+            cat pages/content.md
+          } > pages/index.md
+
+          rm pages/content.md
+
+          echo "::group::Generated index.md"
+          cat pages/index.md
+          echo "::endgroup::"
+      - name: Generate badge JSON files
+        run: |
+          set -e
+          mkdir -p pages/badges
+
+          # Extract package names from h2 headings
+          packages=$(grep -E '^## ' pages/index.md | sed 's/^## //' || true)
+
+          if [[ -z "$packages" ]]; then
+            echo "No packages found in index.md"
+            exit 0
+          fi
+
+          echo "Found packages:"
+          echo "$packages"
+
+          while IFS= read -r package; do
+            # Skip empty lines
+            [[ -z "$package" ]] && continue
+
+            # Get the section for this package (from ## package to next ## or end)
+            section=$(awk "/^## ${package}\$/,/^## [^#]|^$/" pages/index.md)
+
+            # Determine status: FAIL if any test failed, PASS otherwise
+            if echo "$section" | grep -q 'badge fail'; then
+              status="FAIL"
+              color="red"
+            else
+              status="PASS"
+              color="green"
+            fi
+
+            # Create badge JSON
+            cat > "pages/badges/${package}.json" << EOF
+          {"schemaVersion":1,"label":"${package}","message":"${status}","color":"${color}"}
+          EOF
+
+            echo "Created badge for $package: $status"
+          done <<< "$packages"
+
+          echo "::group::Badge files"
+          ls -la pages/badges/
+          echo "::endgroup::"
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./pages
+          destination: ./_site
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+  deploy:
+    needs: build
+    runs-on: ubuntu-24.04
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
