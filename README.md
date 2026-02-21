@@ -8,50 +8,77 @@ Automated testing infrastructure for ROCm packages on Ubuntu.
 
 ### Core ROCm Stack
 
-[![rocm-core](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/rocm-core.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/)
-[![rocm-cmake](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/rocm-cmake.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/)
-[![rocm-smi-lib](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/rocm-smi-lib.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/)
-[![rocm-hipamd](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/rocm-hipamd.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/)
-[![rocr-runtime](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/rocr-runtime.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/)
-[![rocm-llvm](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/rocm-llvm.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/)
+[![rocm-core](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/rocm-core.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#rocm-core)
+
+[![rocm-cmake](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/rocm-cmake.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#rocm-cmake)
+
+[![rocm-smi-lib](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/rocm-smi-lib.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#rocm-smi-lib)
+
+[![rocm-hipamd](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/rocm-hipamd.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#rocm-hipamd)
+
+[![rocr-runtime](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/rocr-runtime.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#rocr-runtime)
+
+[![rocm-llvm](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/rocm-llvm.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#rocm-llvm)
 
 ### Tools
 
-[![amdsmi](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/amdsmi.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/)
-[![hipify](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/hipify.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/)
-[![pkg-rocm-tools](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/pkg-rocm-tools.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/)
-[![rocminfo](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/rocminfo.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/)
-[![roctracer](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/roctracer.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/)
-[![rocdbgapi](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/rocdbgapi.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/)
+[![amdsmi](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/amdsmi.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#amdsmi)
+
+[![hipify](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/hipify.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#hipify)
+
+[![pkg-rocm-tools](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/pkg-rocm-tools.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#pkg-rocm-tools)
+
+[![rocminfo](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/rocminfo.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#rocminfo)
+
+[![roctracer](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/roctracer.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#roctracer)
+
+[![rocdbgapi](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/rocdbgapi.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#rocdbgapi)
 
 ### Numerical Libraries
 
-[![rocblas](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/rocblas.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/)
-[![rocfft](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/rocfft.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/)
-[![rocsparse](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/rocsparse.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/)
-[![rocalution](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/rocalution.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/)
-[![rocprim](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/rocprim.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/)
-[![rocthrust](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/rocthrust.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/)
-[![rocrand](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/rocrand.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/)
-[![rocsolver](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/rocsolver.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/)
-[![rocwmma](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/rocwmma.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/)
+[![rocblas](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/rocblas.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#rocblas)
+
+[![rocfft](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/rocfft.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#rocfft)
+
+[![rocsparse](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/rocsparse.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#rocsparse)
+
+[![rocalution](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/rocalution.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#rocalution)
+
+[![rocprim](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/rocprim.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#rocprim)
+
+[![rocthrust](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/rocthrust.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#rocthrust)
+
+[![rocrand](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/rocrand.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#rocrand)
+
+[![rocsolver](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/rocsolver.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#rocsolver)
+
+[![rocwmma](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/rocwmma.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#rocwmma)
 
 ### HIP Libraries
 
-[![hipblas](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/hipblas.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/)
-[![hipblas-common](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/hipblas-common.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/)
-[![hipblaslt](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/hipblaslt.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/)
-[![hiprand](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/hiprand.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/)
-[![hipsolver](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/hipsolver.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/)
-[![hipcub](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/hipcub.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/)
-[![hipfft](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/hipfft.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/)
-[![hipsparse](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/hipsparse.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/)
-[![hipsparselt](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/hipsparselt.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/)
+[![hipblas](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/hipblas.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#hipblas)
+
+[![hipblas-common](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/hipblas-common.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#hipblas-common)
+
+[![hipblaslt](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/hipblaslt.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#hipblaslt)
+
+[![hiprand](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/hiprand.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#hiprand)
+
+[![hipsolver](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/hipsolver.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#hipsolver)
+
+[![hipcub](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/hipcub.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#hipcub)
+
+[![hipfft](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/hipfft.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#hipfft)
+
+[![hipsparse](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/hipsparse.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#hipsparse)
+
+[![hipsparselt](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/hipsparselt.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#hipsparselt)
 
 ### Communication & ML
 
-[![rccl](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/rccl.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/)
-[![miopen](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/miopen.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/)
+[![rccl](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/rccl.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#rccl)
+
+[![miopen](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/miopen.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#miopen)
 
 ## About
 
