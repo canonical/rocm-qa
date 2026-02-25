@@ -47,7 +47,10 @@ jobs:
           {
             echo "---"
             echo "layout: default"
+            echo "last_updated: \"$(date -u +'%Y-%m-%d %H:%M UTC')\""
             echo "---"
+            echo ""
+            echo "_Last test run: {{ page.last_updated }}_"
             echo ""
             cat pages/content.md
           } > pages/index.md
