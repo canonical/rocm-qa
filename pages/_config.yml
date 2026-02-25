@@ -1,5 +1,5 @@
-title: ROCm QA Test Results
-description: Test results dashboard for ROCm packages on Ubuntu
+title: Ubuntu ROCm QA
+description: QA dashboard for ROCm packages on Ubuntu
 baseurl: "/rocm-qa"
 url: "https://canonical.github.io"
 

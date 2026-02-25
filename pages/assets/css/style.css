@@ -6,7 +6,9 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+    sans-serif;
   background: #f8fafc;
   color: #1e293b;
   line-height: 1.6;
@@ -65,7 +67,9 @@ main {
 }
 
 /* Headings */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   color: #0f172a;
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -88,7 +92,8 @@ table {
   margin-bottom: 1.5rem;
 }
 
-th, td {
+th,
+td {
   padding: 0.875rem 1rem;
   text-align: left;
   border-bottom: 1px solid #e2e8f0;
@@ -173,7 +178,8 @@ tr:hover {
     font-size: 0.875rem;
   }
 
-  th, td {
+  th,
+  td {
     padding: 0.625rem 0.75rem;
   }
 
@@ -186,4 +192,20 @@ tr:hover {
 main > h1:first-child,
 main > h2:first-child {
   margin-top: 0;
+}
+
+/* Spacing utilities */
+.spacing-sm {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.spacing-md {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.spacing-lg {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
