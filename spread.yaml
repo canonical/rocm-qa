@@ -1,6 +1,24 @@
 project: rocm-qa
 path: /root/rocm-qa
 backends:
+  tchavadar:
+    type: adhoc
+    wait-timeout: 2h
+    kill-timeout: 12h
+    halt-timeout: 3h
+    discard: echo "Discarding $SPREAD_SYSTEM..."
+    allocate: |
+      echo "Allocating $SPREAD_SYSTEM..."
+      ADDRESS 10.17.99.227:22
+    restore: |
+      sudo rm -rf /root/rocm-qa
+    systems:
+      - gfx-1201:
+          username: talha
+          ssh-rsa-key: '$(HOST: echo "$SPREAD_SSH_KEY")'
+          # ssh-key-pass: '$(HOST: echo "$SPREAD_SSH_KEY_PASS")'
+          environment:
+            DEB_BUILD_OPTIONS: "parallel=4"
   bare-gfx1151:
     type: adhoc
     wait-timeout: 2h
@@ -22,8 +40,8 @@ backends:
 prepare: |
   # Create a profile with GPU access
   echo "Creating LXD 'rocm-gpu' profile "
-  snap install lxd --channel=latest/stable
-  snap refresh lxd --channel=latest/stable
+  snap install lxd --channel=6/candidate
+  snap refresh lxd --channel=6/candidate
   # LXD setup
   usermod -a -G lxd $USER
   usermod -a -G render,video $USER
@@ -31,23 +49,23 @@ prepare: |
   lxd waitready
   lxd init --auto
 
-  # check if rocm-gpu profile exist or not, if not then create it
-  if ! o=$(lxc profile show rocm-gpu 2>&1); then
-    lxc profile create rocm-gpu
-    lxc storage create rocm-gpu-pool dir
-    lxc profile device add rocm-gpu root disk path=/ pool=rocm-gpu-pool
-    # /dev/kfd and /dev/dri/renderD* must have RW perms and must be assigned to the "render" group
-    # to fetch the corresponding 992 gid there was used inside the container:
-    # "getent group render | cut -d: -f3"
-    lxc profile device add rocm-gpu kfd unix-char path=/dev/kfd mode=0666 uid=0 gid=992 required=true
-    for i in /dev/dri/renderD*; do
-      name=$(basename $i)
-      lxc profile device add rocm-gpu $name unix-char path=$i mode=0666 uid=0 gid=992 required=true
-    done
-    lxc profile device add rocm-gpu eth0 nic network=lxdbr0
-    lxc profile device add rocm-gpu gpu gpu
-    lxc profile show rocm-gpu
-  fi
+  # delete existing, we will recreate anyways
+  lxc profile delete rocm-gpu
+  lxc profile create rocm-gpu
+  lxc storage delete rocm-gpu-pool
+  lxc storage create rocm-gpu-pool dir
+  lxc profile device add rocm-gpu root disk path=/ pool=rocm-gpu-pool
+  # /dev/kfd and /dev/dri/renderD* must have RW perms and must be assigned to the "render" group
+  # to fetch the corresponding 992 gid there was used inside the container:
+  # "getent group render | cut -d: -f3"
+  lxc profile device add rocm-gpu kfd unix-char path=/dev/kfd mode=0666 uid=0 gid=992 required=true
+  for i in /dev/dri/renderD*; do
+    name=$(basename $i)
+    lxc profile device add rocm-gpu $name unix-char path=$i mode=0666 uid=0 gid=992 required=true
+  done
+  lxc profile device add rocm-gpu eth0 nic network=lxdbr0
+  lxc profile device add rocm-gpu gpu gpu
+  lxc profile show rocm-gpu
 
   DEBIAN_FRONTEND=noninteractive apt update
   DEBIAN_FRONTEND=noninteractive apt install -y \
