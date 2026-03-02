@@ -65,6 +65,9 @@ prepare: |
   done
   lxc profile device add rocm-gpu eth0 nic network=lxdbr0
   lxc profile device add rocm-gpu gpu gpu
+  lxc profile set rocm-gpu limits.cpu.allowance=80%
+  lxc profile set rocm-gpu limits.memory=90%
+  lxc profile set rocm-gpu limits.memory.enforce=soft
   lxc profile show rocm-gpu
 
   DEBIAN_FRONTEND=noninteractive apt update
