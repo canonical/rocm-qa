@@ -20,21 +20,11 @@ Automated testing infrastructure for ROCm packages on Ubuntu.
 
 [![rocm-llvm](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/rocm-llvm.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#rocm-llvm)
 
-### Tools
-
 [![amdsmi](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/amdsmi.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#amdsmi)
-
-[![hipify](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/hipify.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#hipify)
-
-[![pkg-rocm-tools](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/pkg-rocm-tools.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#pkg-rocm-tools)
 
 [![rocminfo](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/rocminfo.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#rocminfo)
 
-[![roctracer](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/roctracer.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#roctracer)
-
-[![rocdbgapi](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/rocdbgapi.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#rocdbgapi)
-
-### Numerical Libraries
+### ROC - 1
 
 [![rocblas](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/rocblas.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#rocblas)
 
@@ -42,37 +32,55 @@ Automated testing infrastructure for ROCm packages on Ubuntu.
 
 [![rocsparse](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/rocsparse.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#rocsparse)
 
-[![rocalution](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/rocalution.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#rocalution)
+### ROC - 2
 
 [![rocprim](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/rocprim.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#rocprim)
-
-[![rocthrust](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/rocthrust.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#rocthrust)
 
 [![rocrand](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/rocrand.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#rocrand)
 
 [![rocsolver](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/rocsolver.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#rocsolver)
 
+### ROC - 3
+
+[![roctracer](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/roctracer.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#roctracer)
+
+[![rocthrust](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/rocthrust.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#rocthrust)
+
 [![rocwmma](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/rocwmma.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#rocwmma)
 
-### HIP Libraries
+### HIP - 1
 
-[![hipblas](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/hipblas.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#hipblas)
+[![hipify](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/hipify.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#hipify)
 
 [![hipblas-common](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/hipblas-common.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#hipblas-common)
 
-[![hipblaslt](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/hipblaslt.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#hipblaslt)
+[![hipblas](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/hipblas.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#hipblas)
+
+[![hipcub](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/hipcub.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#hipcub)
 
 [![hiprand](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/hiprand.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#hiprand)
 
-[![hipsolver](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/hipsolver.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#hipsolver)
+### HIP - 2
 
-[![hipcub](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/hipcub.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#hipcub)
+[![hipsolver](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/hipsolver.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#hipsolver)
 
 [![hipfft](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/hipfft.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#hipfft)
 
 [![hipsparse](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/hipsparse.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#hipsparse)
 
+### HIP - 3
+
+[![hipblaslt](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/hipblaslt.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#hipblaslt)
+
 [![hipsparselt](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/hipsparselt.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#hipsparselt)
+
+### Misc
+
+[![pkg-rocm-tools](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/pkg-rocm-tools.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#pkg-rocm-tools)
+
+[![rocdbgapi](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/rocdbgapi.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#rocdbgapi)
+
+[![rocalution](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/rocalution.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#rocalution)
 
 ### Communication & ML
 
