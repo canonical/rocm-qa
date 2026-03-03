@@ -1,0 +1,131 @@
+name: "Test ROCm - [ROC-1]"
+on:
+  schedule:
+    - cron: "0 3 2-30/2 * *" # On even days at 03:00 UTC
+  workflow_dispatch:
+jobs:
+  run-tests:
+    runs-on: ubuntu-24.04
+    env:
+      SPREAD_SSH_KEY: ${{ secrets.PE_BOT_BULLWINKLE_PRIVATE_SSH_KEY }}
+      SPREAD_BIN: ${{ github.workspace }}/spread-plus/spread-plus
+      SOURCES_PROJECT_DIR: ${{ github.workspace }}/common-actions/sources
+      ROCM_QA_PROJECT_DIR: ${{ github.workspace }}/rocm-qa
+      WIREGUARD_SERVER_IP: ${{ secrets.WIREGUARD_SERVER_IP }}
+      WIREGUARD_SERVER_IP_TCHAVADAR: ${{ secrets.WIREGUARD_SERVER_IP_tchavadar }}
+      WIREGUARD_SERVER_PORT: ${{ vars.WIREGUARD_SERVER_PORT }}
+      WIREGUARD_CLIENT_CONFIG: ${{ secrets.WIREGUARD_CLIENT_CONFIG }}
+      WIREGUARD_CLIENT_CONFIG_TCHAVADAR: ${{ secrets.WIREGUARD_CLIENT_CONFIG_TCHAVADAR }}
+      SPREAD_PARAMS: "${{ vars.SPREAD_PARAMS }} ${{ vars.ROCM_ROC1_PACKAGES }}"
+    outputs:
+      spread-results-artifact-id: ${{ steps.upload-spread-results.outputs.artifact-id }}
+    steps:
+      - shell: bash
+        run: |
+          # Hide Secrets
+          echo "::add-mask::$WIREGUARD_SERVER_IP"
+          echo "::add-mask::$(getent ahostsv4 ${{ env.WIREGUARD_SERVER_IP }} | awk '/RAW/ {print $1}' | paste -sd,)"
+          echo "::add-mask::$(getent ahostsv4 ${{ env.WIREGUARD_SERVER_IP_TCHAVADAR }} | awk '/RAW/ {print $1}' | paste -sd,)"
+      - name: Checkout Bullwinkle
+        uses: actions/checkout@v6
+        with:
+          repository: canonical/bullwinkle-cicd
+          token: ${{ secrets.PE_PAT }}
+          path: .
+      - name: Checkout ROCm QA
+        uses: actions/checkout@v6
+        with:
+          path: ${{ env.ROCM_QA_PROJECT_DIR }}
+      - name: Checkout common actions
+        uses: actions/checkout@v6
+        with:
+          repository: canonical/partner-eng-gh-actions
+          token: ${{ secrets.PE_PAT }}
+          path: common-actions
+          ref: sparse/talhaHavadar/wireguard/slice/1
+      - uses: actions/checkout@v6
+        with:
+          repository: canonical/spread-plus
+          path: spread-plus
+      - name: Install uv
+        uses: astral-sh/setup-uv@v7
+        with:
+          version: "latest"
+      - name: Install dependencies
+        env:
+          GOCHANNEL: 1.24/stable
+        run: |
+          sudo snap install go --classic --channel "$GOCHANNEL"
+          uv sync --project "$SOURCES_PROJECT_DIR"
+      - name: Build spread
+        run: |
+          cd spread-plus
+          GOARCH="amd64" go build -o spread-plus cmd/spread/main.go
+      - name: Respread
+        shell: bash
+        run: |
+          cp "$ROCM_QA_PROJECT_DIR/spread.yaml" .
+          uv run --project "$SOURCES_PROJECT_DIR" sources respread
+      - name: Setup Wireguard
+        shell: bash
+        run: |
+          set -x
+
+          sudo apt update -y
+          sudo apt install -y wireguard-tools resolvconf
+
+          sudo tee /etc/wireguard/wg0.conf > /dev/null <<'EOF'
+          ${{ env.WIREGUARD_CLIENT_CONFIG }}
+          EOF
+
+          sudo tee /etc/wireguard/wg1.conf > /dev/null <<'EOF'
+          ${{ env.WIREGUARD_CLIENT_CONFIG_TCHAVADAR }}
+          EOF
+
+          nc -zvu "${{ env.WIREGUARD_SERVER_IP }}" "${{ env.WIREGUARD_SERVER_PORT }}"
+          nc -zvu "${{ env.WIREGUARD_SERVER_IP_TCHAVADAR }}" "${{ env.WIREGUARD_SERVER_PORT }}"
+          wg-quick up wg0
+          wg-quick up wg1
+          sudo wg show
+      - name: Run Spread
+        id: run-spread
+        continue-on-error: true
+        shell: bash
+        run: |
+          set -eu
+          echo "::group::Spread YAML"
+          cat spread.yaml
+          echo "::endgroup::"
+          chmod +x "$SPREAD_BIN"
+          # "pipefail" ensures that a non-zero status from the spread is propagated
+          (
+            set -o pipefail
+            echo "results=spread-results.json" >> "$GITHUB_OUTPUT"
+            echo "log=spread.log" >> "$GITHUB_OUTPUT"
+            # shellcheck disable=SC2086
+            "$SPREAD_BIN" -json spread-results.json $SPREAD_PARAMS | tee spread.log
+          )
+      - name: Upload spread results
+        id: upload-spread-results
+        uses: actions/upload-artifact@v6
+        if: always() && !cancelled()
+        with:
+          name: "spread-${{ github.run_id }}-results"
+          retention-days: 3
+          path: |
+            ${{ steps.run-spread.outputs.log }}
+            ${{ steps.run-spread.outputs.results }}
+      - name: Discard spread workers
+        if: always()
+        run: |
+          shopt -s nullglob;
+          for r in .spread-reuse.*.yaml; do
+            "$SPREAD_BIN" -discard -reuse-pid="$(echo "$r" | grep -o -E '[0-9]+')";
+          done
+  parse-results:
+    needs:
+      - run-tests
+    uses: ./.github/workflows/parse-results.yml
+    secrets: inherit
+    with:
+      spread-results-artifact-id: ${{ needs.run-tests.outputs.spread-results-artifact-id }}
