@@ -1,7 +1,7 @@
 name: "Test ROCm - [COMM.-ML]"
 on:
   schedule:
-    - cron: "0 4 1-31/2 * *" # On odd days at 03:00 UTC
+    - cron: "0 6 1-31/2 * *" # On odd days at 06:00 UTC
   workflow_dispatch:
 jobs:
   run-tests:
