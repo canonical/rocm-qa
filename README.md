@@ -64,8 +64,6 @@ Automated testing infrastructure for ROCm packages on Ubuntu.
 
 [![hipsolver](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/hipsolver.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#hipsolver)
 
-[![hipfft](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/hipfft.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#hipfft)
-
 [![hipsparse](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/hipsparse.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#hipsparse)
 
 ### HIP - 3
@@ -73,6 +71,8 @@ Automated testing infrastructure for ROCm packages on Ubuntu.
 [![hipblaslt](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/hipblaslt.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#hipblaslt)
 
 [![hipsparselt](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/hipsparselt.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#hipsparselt)
+
+[![hipfft](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/hipfft.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#hipfft)
 
 ### Communication & ML
 
