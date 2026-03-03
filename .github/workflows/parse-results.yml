@@ -1,0 +1,70 @@
+name: "Parse Spread Results"
+on:
+  workflow_call:
+    inputs:
+      spread-results-artifact-id:
+        description: "Artifact ID containing spread results"
+        required: true
+        type: string
+jobs:
+  parse-results:
+    runs-on: ubuntu-24.04
+    env:
+      SPREAD_RESULTS_ARTIFACT_ID: ${{ inputs.spread-results-artifact-id }}
+      SPREAD_RESULTS_DIR: "${{ github.workspace }}/spread-results"
+      LABELS: generated,sources-test
+      BULLWINKLE_PROJECT_DIR: "${{ github.workspace }}/bullwinkle"
+    steps:
+      - uses: actions/checkout@v5
+      - name: Checkout Bullwinkle
+        uses: actions/checkout@v6
+        with:
+          repository: canonical/bullwinkle-cicd
+          token: ${{ secrets.PE_PAT }}
+          path: ${{ env.BULLWINKLE_PROJECT_DIR }}
+      - name: Download spread-results
+        uses: actions/download-artifact@v7
+        with:
+          artifact-ids: ${{ env.SPREAD_RESULTS_ARTIFACT_ID }}
+          path: ${{ env.SPREAD_RESULTS_DIR }}
+      - name: Install uv
+        uses: astral-sh/setup-uv@v7
+        with:
+          version: "latest"
+      - name: Create issue body
+        id: issue-body
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          previous_issue_number="1"
+          if [[ -n $previous_issue_number ]]; then
+            gh issue view "$previous_issue_number" --json body --jq .body > "$SPREAD_RESULTS_DIR/body.md"
+            echo "::group::Existing Test Results Body ( $SPREAD_RESULTS_DIR/body.md )"
+            cat "$SPREAD_RESULTS_DIR/body.md"
+            echo "::endgroup::"
+          fi
+          uv run "$BULLWINKLE_PROJECT_DIR/scripts/docs/test-results-to-md.py" \
+            -o "$SPREAD_RESULTS_DIR/body.md" "$SPREAD_RESULTS_DIR/spread-results.json"
+          cat "$SPREAD_RESULTS_DIR/body.md" >> "$GITHUB_STEP_SUMMARY"
+      - name: Update issue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          TITLE: ROCm Test Results
+          ASSIGNEES: talhaHavadar
+          PINNED: true
+        run: |
+          previous_issue_number="1"
+
+          if [[ -n $previous_issue_number ]]; then
+            gh issue edit "$previous_issue_number" --body-file "$SPREAD_RESULTS_DIR/body.md"
+          else
+            new_issue_url=$(gh issue create \
+              --title "$TITLE" \
+              --assignee "$ASSIGNEES" \
+              --label "$LABELS" \
+              --body-file "$SPREAD_RESULTS_DIR/body.md")
+            if [[ $PINNED == true ]]; then
+              gh issue pin "$new_issue_url"
+            fi
+          fi
