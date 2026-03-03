@@ -1,4 +1,4 @@
-name: "Test ROCm - [COMM.-ML]"
+name: "Test ROCm - COMM-ML"
 on:
   schedule:
     - cron: "0 6 1-31/2 * *" # On odd days at 06:00 UTC
