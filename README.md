@@ -74,6 +74,12 @@ Automated testing infrastructure for ROCm packages on Ubuntu.
 
 [![hipsparselt](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/hipsparselt.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#hipsparselt)
 
+### Communication & ML
+
+[![rccl](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/rccl.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#rccl)
+
+[![miopen](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/miopen.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#miopen)
+
 ### Misc
 
 [![pkg-rocm-tools](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/pkg-rocm-tools.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#pkg-rocm-tools)
@@ -81,12 +87,6 @@ Automated testing infrastructure for ROCm packages on Ubuntu.
 [![rocdbgapi](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/rocdbgapi.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#rocdbgapi)
 
 [![rocalution](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/rocalution.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#rocalution)
-
-### Communication & ML
-
-[![rccl](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/rccl.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#rccl)
-
-[![miopen](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/miopen.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#miopen)
 
 ## About
 
