@@ -28,8 +28,6 @@ backends:
     allocate: |
       echo "Allocating $SPREAD_SYSTEM..."
       ADDRESS 192.168.1.53:22
-    restore: |
-      sudo rm -rf /root/rocm-qa
     systems:
       - gfx-1151:
           username: test
