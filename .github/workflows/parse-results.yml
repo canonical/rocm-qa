@@ -44,6 +44,9 @@ jobs:
             cp "$SPREAD_RESULTS_DIR/body.md" "$SPREAD_RESULTS_DIR/body.md.old"
             echo "::endgroup::"
           fi
+          echo "::group::Spread Results"
+          cat "$SPREAD_RESULTS_DIR/spread-results.json" | jq
+          echo "::endgroup::"
           uv run "$BULLWINKLE_PROJECT_DIR/scripts/docs/test-results-to-md.py" \
             -o "$SPREAD_RESULTS_DIR/body.md" "$SPREAD_RESULTS_DIR/spread-results.json"
           cat "$SPREAD_RESULTS_DIR/body.md" >> "$GITHUB_STEP_SUMMARY"
