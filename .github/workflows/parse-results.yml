@@ -41,11 +41,15 @@ jobs:
             gh issue view "$previous_issue_number" --json body --jq .body > "$SPREAD_RESULTS_DIR/body.md"
             echo "::group::Existing Test Results Body ( $SPREAD_RESULTS_DIR/body.md )"
             cat "$SPREAD_RESULTS_DIR/body.md"
+            cp "$SPREAD_RESULTS_DIR/body.md" "$SPREAD_RESULTS_DIR/body.md.old"
             echo "::endgroup::"
           fi
           uv run "$BULLWINKLE_PROJECT_DIR/scripts/docs/test-results-to-md.py" \
             -o "$SPREAD_RESULTS_DIR/body.md" "$SPREAD_RESULTS_DIR/spread-results.json"
           cat "$SPREAD_RESULTS_DIR/body.md" >> "$GITHUB_STEP_SUMMARY"
+          echo "::group::Diff"
+          git diff --no-index "$SPREAD_RESULTS_DIR/body.md.old" "$SPREAD_RESULTS_DIR/body.md"
+          echo "::endgroup::"
       - name: Update issue
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
