@@ -32,7 +32,7 @@ backends:
       sudo rm -rf /root/rocm-qa
     systems:
       - gfx-1151:
-          username: canonical
+          username: test
           ssh-rsa-key: '$(HOST: echo "$SPREAD_SSH_KEY")'
           # ssh-key-pass: '$(HOST: echo "$SPREAD_SSH_KEY_PASS")'
           environment:
