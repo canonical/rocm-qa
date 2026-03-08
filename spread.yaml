@@ -38,36 +38,43 @@ backends:
           environment:
             DEB_BUILD_OPTIONS: "parallel=79"
 prepare: |
-  # Create a profile with GPU access
-  echo "Creating LXD 'rocm-gpu' profile "
-  snap install lxd --channel=6/candidate
-  snap refresh lxd --channel=6/candidate
-  # LXD setup
+  echo "Creating LXD 'rocm-gpu' profile"
+
+  # Install/refresh LXD
+  snap install lxd --channel=latest/stable 2>/dev/null || snap refresh lxd --channel=latest/stable || true
+
+  # User group setup
   usermod -a -G lxd $USER
   usermod -a -G render,video $USER
-  newgrp lxd
-  lxd waitready
-  lxd init --auto
 
-  # delete existing, we will recreate anyways
-  lxc profile delete rocm-gpu
+  # LXD initialization (skip if already initialized)
+  lxd waitready
+  lxd init --auto 2>/dev/null || true
+
+  # Clean up existing profile/storage if they exist
+  lxc profile show rocm-gpu &>/dev/null && lxc profile delete rocm-gpu || true
+  lxc storage show rocm-gpu-pool &>/dev/null && lxc storage delete rocm-gpu-pool || true
+
+  # Create fresh profile and storage
   lxc profile create rocm-gpu
-  lxc storage delete rocm-gpu-pool
   lxc storage create rocm-gpu-pool dir
+
+  # Configure profile devices
   lxc profile device add rocm-gpu root disk path=/ pool=rocm-gpu-pool
-  # /dev/kfd and /dev/dri/renderD* must have RW perms and must be assigned to the "render" group
-  # to fetch the corresponding 992 gid there was used inside the container:
-  # "getent group render | cut -d: -f3"
   lxc profile device add rocm-gpu kfd unix-char path=/dev/kfd mode=0666 uid=0 gid=992 required=true
+
   for i in /dev/dri/renderD*; do
-    name=$(basename $i)
-    lxc profile device add rocm-gpu $name unix-char path=$i mode=0666 uid=0 gid=992 required=true
+    name=$(basename "$i")
+    lxc profile device add rocm-gpu "$name" unix-char path="$i" mode=0666 uid=0 gid=992 required=true
   done
+
   lxc profile device add rocm-gpu eth0 nic network=lxdbr0
   lxc profile device add rocm-gpu gpu gpu
+
   lxc profile set rocm-gpu limits.cpu.allowance=80%
   lxc profile set rocm-gpu limits.memory=90%
   lxc profile set rocm-gpu limits.memory.enforce=soft
+
   lxc profile show rocm-gpu
 
   DEBIAN_FRONTEND=noninteractive apt update
