@@ -77,7 +77,7 @@ prepare: |
 
   DEBIAN_FRONTEND=noninteractive apt update
   DEBIAN_FRONTEND=noninteractive apt install -y \
-    software-properties-common autopkgtest
+    software-properties-common autopkgtest dnsmasq-base
 suites:
   tests/:
     summary: integration tests for rocm stack
