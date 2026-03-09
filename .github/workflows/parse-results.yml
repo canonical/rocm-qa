@@ -51,7 +51,7 @@ jobs:
             -o "$SPREAD_RESULTS_DIR/body.md" "$SPREAD_RESULTS_DIR/spread-results.json"
           cat "$SPREAD_RESULTS_DIR/body.md" >> "$GITHUB_STEP_SUMMARY"
           echo "::group::Diff"
-          git diff --no-index "$SPREAD_RESULTS_DIR/body.md.old" "$SPREAD_RESULTS_DIR/body.md"
+          git diff --no-index "$SPREAD_RESULTS_DIR/body.md.old" "$SPREAD_RESULTS_DIR/body.md" || true
           echo "::endgroup::"
       - name: Update issue
         env:
