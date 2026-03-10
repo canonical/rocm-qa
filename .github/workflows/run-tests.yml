@@ -94,7 +94,6 @@ jobs:
           nc -zvu "${{ env.WIREGUARD_SERVER_IP_TCHAVADAR }}" "${{ env.WIREGUARD_SERVER_PORT }}"
           wg-quick up wg0
           wg-quick up wg1
-          sudo wg show
       - name: Run Spread
         id: run-spread
         continue-on-error: true
