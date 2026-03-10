@@ -10,11 +10,9 @@ backends:
     allocate: |
       echo "Allocating $SPREAD_SYSTEM..."
       ADDRESS 10.17.99.227:22
-    restore: |
-      sudo rm -rf /root/rocm-qa
     systems:
       - gfx-1201:
-          username: talha
+          username: github
           ssh-rsa-key: '$(HOST: echo "$SPREAD_SSH_KEY")'
           # ssh-key-pass: '$(HOST: echo "$SPREAD_SSH_KEY_PASS")'
           environment:
