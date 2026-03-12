@@ -38,11 +38,11 @@ Automated testing infrastructure for ROCm packages on Ubuntu.
 
 [![rocrand](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/rocrand.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#rocrand)
 
-[![rocsolver](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/rocsolver.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#rocsolver)
+[![roctracer](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/roctracer.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#roctracer)
 
 ### ROC - 3
 
-[![roctracer](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/roctracer.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#roctracer)
+[![rocsolver](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/rocsolver.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#rocsolver)
 
 [![rocthrust](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/rocthrust.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#rocthrust)
 
