@@ -1,0 +1,18 @@
+name: "Test ROCm - Apps"
+on:
+  schedule:
+    - cron: "0 23 1-31/2 * *" # On odd days at 23:00 UTC
+  workflow_dispatch:
+jobs:
+  run-tests:
+    uses: ./.github/workflows/run-tests.yml
+    secrets: inherit
+    with:
+      spread-params-extra: ${{ vars.ROCM_APP_TESTS }}
+  parse-results:
+    needs:
+      - run-tests
+    uses: ./.github/workflows/parse-results.yml
+    secrets: inherit
+    with:
+      spread-results-artifact-id: ${{ needs.run-tests.outputs.spread-results-artifact-id }}
