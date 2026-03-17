@@ -88,6 +88,10 @@ Automated testing infrastructure for ROCm packages on Ubuntu.
 
 [![rocalution](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/rocalution.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#rocalution)
 
+### Apps
+
+[![llama.cpp](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/llama.cpp.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#llama.cpp)
+
 ## About
 
 This repository contains automated testing infrastructure for ROCm packages
