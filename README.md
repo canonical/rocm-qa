@@ -90,7 +90,7 @@ Automated testing infrastructure for ROCm packages on Ubuntu.
 
 ### Apps
 
-[![llama.cpp](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/llama.cpp.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#llama.cpp)
+[![llama.cpp](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/llama.cpp.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#llamacpp)
 
 ## About
 
