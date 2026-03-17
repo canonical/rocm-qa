@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 on:
   workflow_run:
     workflows:
-      - "Test"
+      - "Test ROCm - Core"
       - "Test ROCm - ROC-1"
       - "Test ROCm - ROC-2"
       - "Test ROCm - ROC-3"
@@ -11,6 +11,7 @@ on:
       - "Test ROCm - HIP-3"
       - "Test ROCm - MISC"
       - "Test ROCm - COMM-ML"
+      - "Test ROCm - Apps"
     types: [completed]
     branches: [main]
   workflow_dispatch:
