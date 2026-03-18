@@ -35,7 +35,7 @@ _level-one_: Placeholder name for a test suite that will run basic heartbeat tes
 
 #### System: Name of the system the test ran on.
 
-#### Result: Result of the test run either FAIL or PASS.
+#### Result: Result of the test run either FAIL or PASS. If 'ERROR' seen, that means there was an infrastructure error while running that test.
 
 ## Development PPA
 
