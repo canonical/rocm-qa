@@ -103,7 +103,44 @@ functionality.
 - **Orchestration**: [spread](https://github.com/canonical/spread) for test distribution
 - **Package Testing**: autopkgtest for Debian package validation
 - **Environment**: LXD containers with GPU passthrough
-- **Schedule**: Tests run automatically every even day at 02:00 UTC
+
+### Test Schedule
+
+Tests run automatically on a weekly schedule during off-hours (nights, US Eastern timezone) to avoid disrupting development work.
+
+```
+┌─────────┬────────────────────────────────────────────────────────────────┐
+│   DAY   │  23:00 UTC   02:00 UTC                                         │
+│         │  (6PM EST)   (9PM EST)                                         │
+├─────────┼────────────────────────────────────────────────────────────────┤
+│   SUN   │  HIP-1   ──► Core                                              │
+├─────────┼────────────────────────────────────────────────────────────────┤
+│   MON   │  ROC-1   ──► MISC                                              │
+├─────────┼────────────────────────────────────────────────────────────────┤
+│   TUE   │  HIP-2   ──► Apps                                              │
+├─────────┼────────────────────────────────────────────────────────────────┤
+│   WED   │  ROC-2   ──► COMM-ML                                           │
+├─────────┼────────────────────────────────────────────────────────────────┤
+│   THU   │  HIP-3                                                         │
+├─────────┼────────────────────────────────────────────────────────────────┤
+│   FRI   │  ROC-3                                                         │
+├─────────┼────────────────────────────────────────────────────────────────┤
+│   SAT   │  (rest day - available for manual/ad-hoc runs)                 │
+└─────────┴────────────────────────────────────────────────────────────────┘
+```
+
+| Workflow     | Schedule     | Description            |
+| ------------ | ------------ | ---------------------- |
+| test_hip1    | `0 23 * * 0` | Sunday at 23:00 UTC    |
+| test_core    | `0 2 * * 1`  | Monday at 02:00 UTC    |
+| test_roc1    | `0 23 * * 1` | Monday at 23:00 UTC    |
+| test_misc    | `0 2 * * 2`  | Tuesday at 02:00 UTC   |
+| test_hip2    | `0 23 * * 2` | Tuesday at 23:00 UTC   |
+| test_apps    | `0 2 * * 3`  | Wednesday at 02:00 UTC |
+| test_roc2    | `0 23 * * 3` | Wednesday at 23:00 UTC |
+| test_comm_ml | `0 2 * * 4`  | Thursday at 02:00 UTC  |
+| test_hip3    | `0 23 * * 4` | Thursday at 23:00 UTC  |
+| test_roc3    | `0 23 * * 5` | Friday at 23:00 UTC    |
 
 ## Links
 

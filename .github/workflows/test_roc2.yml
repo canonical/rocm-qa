@@ -1,7 +1,7 @@
 name: "Test ROCm - ROC-2"
 on:
   schedule:
-    - cron: "0 4 2-30/2 * *" # On even days at 04:00 UTC
+    - cron: "0 23 * * 3" # Wednesday at 23:00 UTC
   workflow_dispatch:
 jobs:
   run-tests:
