@@ -33,6 +33,23 @@ backends:
           # ssh-key-pass: '$(HOST: echo "$SPREAD_SSH_KEY_PASS")'
           environment:
             DEB_BUILD_OPTIONS: "parallel=79"
+  bare-gfx908:
+    type: adhoc
+    wait-timeout: 2h
+    kill-timeout: 12h
+    halt-timeout: 3h
+    discard: echo "Discarding $SPREAD_SYSTEM..."
+    allocate: |
+      echo "Allocating $SPREAD_SYSTEM..."
+      ADDRESS 192.168.1.109:22
+    systems:
+      - gfx-908:
+          username: canonical
+          password: ubuntu
+          # ssh-rsa-key: '$(HOST: echo "$SPREAD_SSH_KEY")'
+          # ssh-key-pass: '$(HOST: echo "$SPREAD_SSH_KEY_PASS")'
+          environment:
+            DEB_BUILD_OPTIONS: "parallel=79"
 prepare: |
   echo "Creating LXD 'rocm-gpu' profile"
 
