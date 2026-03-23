@@ -98,3 +98,7 @@ suites:
     summary: smoke tests for llama.cpp with ROCm
   tests/llama.cpp/prompt/:
     summary: prompt tests for llama.cpp with ROCm
+  tests/lemonade/smoke/:
+    summary: smoke tests for lemonade-server
+  tests/lemonade/prompt/:
+    summary: prompt tests for lemonade-server with LLM inference
