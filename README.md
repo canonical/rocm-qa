@@ -92,6 +92,10 @@ Automated testing infrastructure for ROCm packages on Ubuntu.
 
 [![llama.cpp](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/llama.cpp.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#llamacpp)
 
+[![lemonade](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/lemonade.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#lemonade)
+
+[![blender](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/blender.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#blender)
+
 ## About
 
 This repository contains automated testing infrastructure for ROCm packages
