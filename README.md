@@ -114,12 +114,12 @@ Tests run automatically on a weekly schedule during off-hours (nights, US Easter
 
 ```
 ┌─────────┬────────────────────────────────────────────────────────────────┐
-│   DAY   │  23:00 UTC   02:00 UTC                                         │
-│         │  (6PM EST)   (9PM EST)                                         │
+│   DAY   │  23:00 UTC   02:00 UTC    04:00 UTC                            │
+│         │  (6PM EST)   (9PM EST)   (11PM EST)                            │
 ├─────────┼────────────────────────────────────────────────────────────────┤
 │   SUN   │  HIP-1   ──► Core                                              │
 ├─────────┼────────────────────────────────────────────────────────────────┤
-│   MON   │  ROC-1   ──► MISC                                              │
+│   MON   │  ROC-1   ─--------------─► MISC                                │
 ├─────────┼────────────────────────────────────────────────────────────────┤
 │   TUE   │  HIP-2   ──► Apps                                              │
 ├─────────┼────────────────────────────────────────────────────────────────┤
@@ -138,7 +138,7 @@ Tests run automatically on a weekly schedule during off-hours (nights, US Easter
 | test_hip1    | `0 23 * * 0` | Sunday at 23:00 UTC    |
 | test_core    | `0 2 * * 1`  | Monday at 02:00 UTC    |
 | test_roc1    | `0 23 * * 1` | Monday at 23:00 UTC    |
-| test_misc    | `0 2 * * 2`  | Tuesday at 02:00 UTC   |
+| test_misc    | `0 4 * * 2`  | Tuesday at 04:00 UTC   |
 | test_hip2    | `0 23 * * 2` | Tuesday at 23:00 UTC   |
 | test_apps    | `0 2 * * 3`  | Wednesday at 02:00 UTC |
 | test_roc2    | `0 23 * * 3` | Wednesday at 23:00 UTC |
