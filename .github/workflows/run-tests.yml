@@ -25,6 +25,7 @@ jobs:
       WIREGUARD_CLIENT_CONFIG: ${{ secrets.WIREGUARD_CLIENT_CONFIG }}
       WIREGUARD_CLIENT_CONFIG_TCHAVADAR: ${{ secrets.WIREGUARD_CLIENT_CONFIG_TCHAVADAR }}
       SPREAD_PARAMS: "${{ vars.SPREAD_PARAMS }} ${{ inputs.spread-params-extra }}"
+      GH_TOKEN: ${{ secrets.PE_PAT }}
     outputs:
       spread-results-artifact-id: ${{ steps.upload-spread-results.outputs.artifact-id }}
     steps:
@@ -110,7 +111,7 @@ jobs:
             echo "results=spread-results.json" >> "$GITHUB_OUTPUT"
             echo "log=spread.log" >> "$GITHUB_OUTPUT"
             # shellcheck disable=SC2086
-            "$SPREAD_BIN" -json spread-results.json $SPREAD_PARAMS | tee spread.log
+            "$SPREAD_BIN" -json spread-results.json -artifacts=./logs $SPREAD_PARAMS | tee spread.log
           )
       - name: Upload spread results
         id: upload-spread-results
@@ -122,6 +123,31 @@ jobs:
           path: |
             ${{ steps.run-spread.outputs.log }}
             ${{ steps.run-spread.outputs.results }}
+      - name: Push spread logs to rocm-qa
+        id: push-spread-logs-to-rocm-qa
+        if: always() && !cancelled()
+        run: |
+          set -e
+
+          cd "$ROCM_QA_PROJECT_DIR"
+
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git fetch origin logs
+          git checkout logs
+
+          # This will fail if spread fails or was not run correctly with artifacts argument
+          cp -r "$GITHUB_WORKSPACE/logs/." logs/
+
+          git add logs/
+
+          if ! git diff --cached --quiet; then
+            git commit -m "RUN ${{ github.run_id }} logs"
+            git push https://x-access-token:${GH_TOKEN}@github.com/canonical/rocm-qa logs
+          else
+            echo "No changes in logs"
+          fi
       - name: Discard spread workers
         if: always()
         run: |
