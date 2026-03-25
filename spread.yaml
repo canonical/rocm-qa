@@ -1,5 +1,9 @@
 project: rocm-qa
 path: /root/rocm-qa
+environment:
+  DEBIAN_FRONTEND: noninteractive
+  TIMESTAMP: $(date -u +"%Y-%m-%d-%H:%M:%S")
+  ARTIFACT_LOG: "output-${TIMESTAMP}.log"
 backends:
   tchavadar:
     type: adhoc
