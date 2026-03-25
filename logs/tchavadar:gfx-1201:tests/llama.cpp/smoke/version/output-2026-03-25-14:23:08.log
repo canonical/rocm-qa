@@ -1,0 +1,16 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+llama.cpp is already the newest version (8064+dfsg-1ubuntu1).
+libggml0-backend-hip is already the newest version (0.9.7-2ubuntu1).
+Solving dependencies...
+The following packages were automatically installed and are no longer required:
+  libpython3.13-minimal  python3.13       python3.13-minimal
+  libpython3.13-stdlib   python3.13-gdbm
+Use 'apt autoremove' to remove them.
+
+Summary:
+  Upgrading: 0, Installing: 0, Removing: 0, Not Upgrading: 214
