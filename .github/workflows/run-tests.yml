@@ -138,7 +138,8 @@ jobs:
           git checkout logs
 
           # This will fail if spread fails or was not run correctly with artifacts argument
-          cp -r "$GITHUB_WORKSPACE/logs/." logs/
+          # Limit log files to 99M to avoid git issues
+          rsync -av --max-size=99M "$GITHUB_WORKSPACE/logs/" logs/
 
           git add logs/
 
