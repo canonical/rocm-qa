@@ -1,0 +1,11 @@
+ggml_cuda_init: found 1 ROCm devices (Total VRAM: 23327 MiB):
+  Device 0: Radeon 8060S Graphics, gfx1151 (0x1151), VMM: no, Wave Size: 32, VRAM: 23327 MiB
+load_backend: loaded ROCm backend from /usr/lib/x86_64-linux-gnu/ggml/backends0/libggml-hip.so
+load_backend: loaded CPU backend from /usr/lib/x86_64-linux-gnu/ggml/backends0/libggml-cpu-zen4.so
+common_download_file_single_online: no previous model file found /root/.cache/llama.cpp/ggml-org_gemma-3-1b-it-GGUF_preset.ini
+common_download_file_single_online: HEAD failed, status: 404
+no remote preset found, skipping
+common_download_file_single_online: no previous model file found /root/.cache/llama.cpp/ggml-org_gemma-3-1b-it-GGUF_gemma-3-1b-it-Q4_K_M.gguf
+common_download_file_single_online: downloading from https://huggingface.co/ggml-org/gemma-3-1b-it-GGUF/resolve/main/gemma-3-1b-it-Q4_K_M.gguf to /root/.cache/llama.cpp/ggml-org_gemma-3-1b-it-GGUF_gemma-3-1b-it-Q4_K_M.gguf.downloadInProgress (etag:"107078f2011b8db626bee8040bb2bf82aa23ff7f5a81c786f3cf58dbcd75db2e")...
+
+Loading model... |-\|/-\|

@@ -1,0 +1,6 @@
+ggml_cuda_init: found 1 ROCm devices (Total VRAM: 23327 MiB):
+  Device 0: Radeon 8060S Graphics, gfx1151 (0x1151), VMM: no, Wave Size: 32, VRAM: 23327 MiB
+load_backend: loaded ROCm backend from /usr/lib/x86_64-linux-gnu/ggml/backends0/libggml-hip.so
+load_backend: loaded CPU backend from /usr/lib/x86_64-linux-gnu/ggml/backends0/libggml-cpu-zen4.so
+version: 8064 (Debian)
+built with GNU 15.2.0 for Linux x86_64
