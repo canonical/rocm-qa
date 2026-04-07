@@ -1,0 +1,3514 @@
+autopkgtest [20:36:47]: starting date and time: 2026-04-07 20:36:47+0000
+autopkgtest [20:36:47]: version 5.55
+autopkgtest [20:36:47]: host lxc-sessionizer-test-1; command line: /usr/bin/autopkgtest rocm-cmake -U '--setup-commands=add-apt-repository -ss -y' '--setup-commands=add-apt-repository ppa:bullwinkle-team/rocm-devel-21 --enable-source -y' -- lxd ubuntu-daily:resolute --profile=rocm-gpu
+autopkgtest [20:38:59]: testbed dpkg architecture: amd64
+autopkgtest [20:38:59]: testbed apt version: 3.1.16
+autopkgtest [20:39:00]: @@@@@@@@@@@@@@@@@@@@ test bed setup
+autopkgtest [20:39:00]: updating testbed package index (apt update)
+Get:1 http://archive.ubuntu.com/ubuntu resolute InRelease [124 kB]
+Get:2 http://security.ubuntu.com/ubuntu resolute-security InRelease [124 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease [124 kB]
+Get:4 http://archive.ubuntu.com/ubuntu resolute-backports InRelease [124 kB]
+Get:5 http://archive.ubuntu.com/ubuntu resolute/main amd64 Packages [1484 kB]
+Get:6 http://archive.ubuntu.com/ubuntu resolute/main Translation-en [526 kB]
+Get:7 http://archive.ubuntu.com/ubuntu resolute/main amd64 Components [394 kB]
+Get:8 http://archive.ubuntu.com/ubuntu resolute/main amd64 c-n-f Metadata [32.4 kB]
+Get:9 http://archive.ubuntu.com/ubuntu resolute/universe amd64 Packages [16.1 MB]
+Get:10 http://security.ubuntu.com/ubuntu resolute-security/main amd64 Components [208 B]
+Get:11 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Components [212 B]
+Get:12 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 c-n-f Metadata [116 B]
+Get:13 http://security.ubuntu.com/ubuntu resolute-security/restricted amd64 Components [212 B]
+Get:14 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 Components [212 B]
+Get:15 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 c-n-f Metadata [120 B]
+Get:16 http://archive.ubuntu.com/ubuntu resolute/universe Translation-en [6338 kB]
+Get:17 http://archive.ubuntu.com/ubuntu resolute/universe amd64 Components [4530 kB]
+Get:18 http://archive.ubuntu.com/ubuntu resolute/universe amd64 c-n-f Metadata [312 kB]
+Get:19 http://archive.ubuntu.com/ubuntu resolute/restricted amd64 Packages [150 kB]
+Get:20 http://archive.ubuntu.com/ubuntu resolute/restricted Translation-en [29.1 kB]
+Get:21 http://archive.ubuntu.com/ubuntu resolute/restricted amd64 Components [556 B]
+Get:22 http://archive.ubuntu.com/ubuntu resolute/restricted amd64 c-n-f Metadata [384 B]
+Get:23 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 Packages [290 kB]
+Get:24 http://archive.ubuntu.com/ubuntu resolute/multiverse Translation-en [127 kB]
+Get:25 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 Components [49.9 kB]
+Get:26 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 c-n-f Metadata [8276 B]
+Get:27 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Components [208 B]
+Get:28 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Components [212 B]
+Get:29 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 c-n-f Metadata [116 B]
+Get:30 http://archive.ubuntu.com/ubuntu resolute-updates/restricted amd64 Components [212 B]
+Get:31 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 Components [216 B]
+Get:32 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 c-n-f Metadata [116 B]
+Get:33 http://archive.ubuntu.com/ubuntu resolute-backports/main amd64 Components [212 B]
+Get:34 http://archive.ubuntu.com/ubuntu resolute-backports/main amd64 c-n-f Metadata [112 B]
+Get:35 http://archive.ubuntu.com/ubuntu resolute-backports/universe amd64 Components [216 B]
+Get:36 http://archive.ubuntu.com/ubuntu resolute-backports/universe amd64 c-n-f Metadata [116 B]
+Get:37 http://archive.ubuntu.com/ubuntu resolute-backports/restricted amd64 Components [216 B]
+Get:38 http://archive.ubuntu.com/ubuntu resolute-backports/restricted amd64 c-n-f Metadata [120 B]
+Get:39 http://archive.ubuntu.com/ubuntu resolute-backports/multiverse amd64 Components [216 B]
+Get:40 http://archive.ubuntu.com/ubuntu resolute-backports/multiverse amd64 c-n-f Metadata [120 B]
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 30.8 MB in 2s (13.3 MB/s)
+Reading package lists...
+autopkgtest [20:39:05]: testbed release detected to be: resolute
+autopkgtest [20:39:05]: updating testbed package index (apt update)
+Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:2 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Reading package lists...
+Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:3 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Get:5 http://archive.ubuntu.com/ubuntu resolute/multiverse Sources [324 kB]
+Get:6 http://archive.ubuntu.com/ubuntu resolute/universe Sources [21.4 MB]
+Get:7 http://archive.ubuntu.com/ubuntu resolute/restricted Sources [19.2 kB]
+Get:8 http://archive.ubuntu.com/ubuntu resolute/main Sources [1425 kB]
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 23.2 MB in 2s (12.9 MB/s)
+Reading package lists...
+Enabling deb-src for all repositories.
+Added: ## Ubuntu distribution repository
+##
+## The following settings can be adjusted to configure which packages to use from Ubuntu.
+## Mirror your choices (except for URIs and Suites) in the security section below to
+## ensure timely security updates.
+##
+## Types: Append deb-src to enable the fetching of source package.
+## URIs: A URL to the repository (you may add multiple URLs)
+## Suites: The following additional suites can be configured
+##   <name>-updates   - Major bug fix updates produced after the final release of the
+##                      distribution.
+##   <name>-backports - software from this repository may not have been tested as
+##                      extensively as that contained in the main release, although it includes
+##                      newer versions of some applications which may provide useful features.
+##                      Also, please note that software in backports WILL NOT receive any review
+##                      or updates from the Ubuntu security team.
+## Components: Aside from main, the following components can be added to the list
+##   restricted  - Software that may not be under a free license, or protected by patents.
+##   universe    - Community maintained packages. Software in this repository receives maintenance
+##                 from volunteers in the Ubuntu community, or a 10 year security maintenance
+##                 commitment from Canonical when an Ubuntu Pro subscription is attached.
+##   multiverse  - Community maintained of restricted. Software from this repository is
+##                 ENTIRELY UNSUPPORTED by the Ubuntu team, and may not be under a free
+##                 licence. Please satisfy yourself as to your rights to use the software.
+##                 Also, please note that software in multiverse WILL NOT receive any
+##                 review or updates from the Ubuntu security team.
+##
+## See the sources.list(5) manual page for further settings.
+Types: deb-src
+URIs: http://archive.ubuntu.com/ubuntu
+Suites: resolute resolute-updates resolute-backports
+Components: universe restricted multiverse main
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+Added: ## Ubuntu security updates. Aside from URIs and Suites,
+## this should mirror your choices in the previous section.
+Types: deb-src
+URIs: http://security.ubuntu.com/ubuntu
+Suites: resolute-security
+Components: universe restricted multiverse main
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+Hit:1 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Get:5 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel-21/ubuntu resolute InRelease [27.2 kB]
+Get:6 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel-21/ubuntu resolute/main Sources [16.1 kB]
+Get:7 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel-21/ubuntu resolute/main amd64 Packages [24.6 kB]
+Get:8 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel-21/ubuntu resolute/main Translation-en [15.4 kB]
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 83.4 kB in 1s (74.6 kB/s)
+Reading package lists...
+PPA publishes dbgsym, you may need to include 'main/debug' component
+Repository: 'Types: deb
+URIs: https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel-21/ubuntu/
+Suites: resolute
+Components: main
+'
+Description:
+ROCm development archive which holds packages built against upstream LLVM-21
+More info: https://launchpad.net/~bullwinkle-team/+archive/ubuntu/rocm-devel-21
+Adding repository.
+autopkgtest [20:39:14]: upgrading testbed (apt dist-upgrade and autopurge)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+The following packages will be upgraded:
+  bind9-dnsutils bind9-host bind9-libs dpkg fuse3 gawk gcc-16-base iproute2
+  libatomic1 libfuse3-4 libgcc-s1 libnetplan1 libpython3.14
+  libpython3.14-minimal libpython3.14-stdlib libstdc++6 libtirpc-common
+  libtirpc3t64 libx11-6 libx11-data libxslt1.1 netplan-generator netplan.io
+  networkd-dispatcher pollinate python3-distupgrade python3-jwt
+  python3-netplan python3-software-properties python3.14 python3.14-gdbm
+  python3.14-minimal software-properties-common systemd-hwe-hwdb
+  ubuntu-release-upgrader-core unattended-upgrades
+36 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Need to get 16.5 MB of archives.
+After this operation, 50.2 kB disk space will be freed.
+Get:1 http://archive.ubuntu.com/ubuntu resolute/main amd64 dpkg amd64 1.23.7ubuntu1 [1285 kB]
+Get:2 http://archive.ubuntu.com/ubuntu resolute/main amd64 gawk amd64 1:5.3.2-1ubuntu1 [526 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute/main amd64 libpython3.14 amd64 3.14.3-5 [2577 kB]
+Get:4 http://archive.ubuntu.com/ubuntu resolute/main amd64 python3.14 amd64 3.14.3-5 [823 kB]
+Get:5 http://archive.ubuntu.com/ubuntu resolute/main amd64 libpython3.14-stdlib amd64 3.14.3-5 [2404 kB]
+Get:6 http://archive.ubuntu.com/ubuntu resolute/main amd64 python3.14-minimal amd64 3.14.3-5 [2580 kB]
+Get:7 http://archive.ubuntu.com/ubuntu resolute/main amd64 libpython3.14-minimal amd64 3.14.3-5 [915 kB]
+Get:8 http://archive.ubuntu.com/ubuntu resolute/main amd64 libatomic1 amd64 16-20260322-1ubuntu1 [11.4 kB]
+Get:9 http://archive.ubuntu.com/ubuntu resolute/main amd64 gcc-16-base amd64 16-20260322-1ubuntu1 [38.3 kB]
+Get:10 http://archive.ubuntu.com/ubuntu resolute/main amd64 libstdc++6 amd64 16-20260322-1ubuntu1 [843 kB]
+Get:11 http://archive.ubuntu.com/ubuntu resolute/main amd64 libgcc-s1 amd64 16-20260322-1ubuntu1 [80.3 kB]
+Get:12 http://archive.ubuntu.com/ubuntu resolute/main amd64 libtirpc-common all 1.3.7-0.1 [7114 B]
+Get:13 http://archive.ubuntu.com/ubuntu resolute/main amd64 libtirpc3t64 amd64 1.3.7-0.1 [80.9 kB]
+Get:14 http://archive.ubuntu.com/ubuntu resolute/main amd64 iproute2 amd64 6.19.0-1ubuntu1 [1198 kB]
+Get:15 http://archive.ubuntu.com/ubuntu resolute/main amd64 netplan-generator amd64 1.2-1ubuntu4 [65.1 kB]
+Get:16 http://archive.ubuntu.com/ubuntu resolute/main amd64 python3-netplan amd64 1.2-1ubuntu4 [24.8 kB]
+Get:17 http://archive.ubuntu.com/ubuntu resolute/main amd64 netplan.io amd64 1.2-1ubuntu4 [69.5 kB]
+Get:18 http://archive.ubuntu.com/ubuntu resolute/main amd64 libnetplan1 amd64 1.2-1ubuntu4 [132 kB]
+Get:19 http://archive.ubuntu.com/ubuntu resolute/main amd64 networkd-dispatcher all 2.2.4-1.1ubuntu1 [15.2 kB]
+Get:20 http://archive.ubuntu.com/ubuntu resolute/main amd64 systemd-hwe-hwdb all 259.5.2ubuntu [3326 B]
+Get:21 http://archive.ubuntu.com/ubuntu resolute/main amd64 bind9-dnsutils amd64 1:9.20.18-1ubuntu2 [163 kB]
+Get:22 http://archive.ubuntu.com/ubuntu resolute/main amd64 bind9-host amd64 1:9.20.18-1ubuntu2 [49.8 kB]
+Get:23 http://archive.ubuntu.com/ubuntu resolute/main amd64 bind9-libs amd64 1:9.20.18-1ubuntu2 [1303 kB]
+Get:24 http://archive.ubuntu.com/ubuntu resolute/main amd64 fuse3 amd64 3.18.2-1 [27.5 kB]
+Get:25 http://archive.ubuntu.com/ubuntu resolute/main amd64 libfuse3-4 amd64 3.18.2-1 [93.0 kB]
+Get:26 http://archive.ubuntu.com/ubuntu resolute/main amd64 libx11-data all 2:1.8.13-1 [114 kB]
+Get:27 http://archive.ubuntu.com/ubuntu resolute/main amd64 libx11-6 amd64 2:1.8.13-1 [657 kB]
+Get:28 http://archive.ubuntu.com/ubuntu resolute/main amd64 ubuntu-release-upgrader-core all 1:26.04.13 [24.9 kB]
+Get:29 http://archive.ubuntu.com/ubuntu resolute/main amd64 python3-distupgrade all 1:26.04.13 [99.7 kB]
+Get:30 http://archive.ubuntu.com/ubuntu resolute/main amd64 python3.14-gdbm amd64 3.14.3-5 [28.3 kB]
+Get:31 http://archive.ubuntu.com/ubuntu resolute/main amd64 libxslt1.1 amd64 1.1.45-0.1 [165 kB]
+Get:32 http://archive.ubuntu.com/ubuntu resolute/main amd64 pollinate all 4.33-4ubuntu6 [11.7 kB]
+Get:33 http://archive.ubuntu.com/ubuntu resolute/main amd64 python3-jwt all 2.10.1-4ubuntu1 [20.6 kB]
+Get:34 http://archive.ubuntu.com/ubuntu resolute/main amd64 software-properties-common all 0.120 [16.6 kB]
+Get:35 http://archive.ubuntu.com/ubuntu resolute/main amd64 python3-software-properties all 0.120 [28.6 kB]
+Get:36 http://archive.ubuntu.com/ubuntu resolute/main amd64 unattended-upgrades all 2.12ubuntu9 [53.3 kB]
+Preconfiguring packages ...
+Fetched 16.5 MB in 2s (7461 kB/s)
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45007 files and directories currently installed.)
+Preparing to unpack .../dpkg_1.23.7ubuntu1_amd64.deb ...
+Unpacking dpkg (1.23.7ubuntu1) over (1.23.6ubuntu2) ...
+Setting up dpkg (1.23.7ubuntu1) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45007 files and directories currently installed.)
+Preparing to unpack .../0-gawk_1%3a5.3.2-1ubuntu1_amd64.deb ...
+Unpacking gawk (1:5.3.2-1ubuntu1) over (1:5.3.2-1build1) ...
+Preparing to unpack .../1-libpython3.14_3.14.3-5_amd64.deb ...
+Unpacking libpython3.14:amd64 (3.14.3-5) over (3.14.3-3) ...
+Preparing to unpack .../2-python3.14_3.14.3-5_amd64.deb ...
+Unpacking python3.14 (3.14.3-5) over (3.14.3-3) ...
+Preparing to unpack .../3-libpython3.14-stdlib_3.14.3-5_amd64.deb ...
+Unpacking libpython3.14-stdlib:amd64 (3.14.3-5) over (3.14.3-3) ...
+Preparing to unpack .../4-python3.14-minimal_3.14.3-5_amd64.deb ...
+Unpacking python3.14-minimal (3.14.3-5) over (3.14.3-3) ...
+Preparing to unpack .../5-libpython3.14-minimal_3.14.3-5_amd64.deb ...
+Unpacking libpython3.14-minimal:amd64 (3.14.3-5) over (3.14.3-3) ...
+Preparing to unpack .../6-libatomic1_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libatomic1:amd64 (16-20260322-1ubuntu1) over (16-20260315-1ubuntu1) ...
+Preparing to unpack .../7-gcc-16-base_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking gcc-16-base:amd64 (16-20260322-1ubuntu1) over (16-20260315-1ubuntu1) ...
+Setting up gcc-16-base:amd64 (16-20260322-1ubuntu1) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45007 files and directories currently installed.)
+Preparing to unpack .../libstdc++6_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libstdc++6:amd64 (16-20260322-1ubuntu1) over (16-20260315-1ubuntu1) ...
+Setting up libstdc++6:amd64 (16-20260322-1ubuntu1) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45007 files and directories currently installed.)
+Preparing to unpack .../libgcc-s1_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libgcc-s1:amd64 (16-20260322-1ubuntu1) over (16-20260315-1ubuntu1) ...
+Setting up libgcc-s1:amd64 (16-20260322-1ubuntu1) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45007 files and directories currently installed.)
+Preparing to unpack .../00-libtirpc-common_1.3.7-0.1_all.deb ...
+Unpacking libtirpc-common (1.3.7-0.1) over (1.3.6+ds-1ubuntu1) ...
+Preparing to unpack .../01-libtirpc3t64_1.3.7-0.1_amd64.deb ...
+Unpacking libtirpc3t64:amd64 (1.3.7-0.1) over (1.3.6+ds-1ubuntu1) ...
+Preparing to unpack .../02-iproute2_6.19.0-1ubuntu1_amd64.deb ...
+Unpacking iproute2 (6.19.0-1ubuntu1) over (6.18.0-1ubuntu1) ...
+Preparing to unpack .../03-netplan-generator_1.2-1ubuntu4_amd64.deb ...
+Adding 'diversion of /lib/systemd/system-generators/netplan to /lib/systemd/system-generators/netplan.usr-is-merged by netplan-generator'
+Unpacking netplan-generator (1.2-1ubuntu4) over (1.2-1ubuntu3) ...
+Preparing to unpack .../04-python3-netplan_1.2-1ubuntu4_amd64.deb ...
+Unpacking python3-netplan (1.2-1ubuntu4) over (1.2-1ubuntu3) ...
+Preparing to unpack .../05-netplan.io_1.2-1ubuntu4_amd64.deb ...
+Unpacking netplan.io (1.2-1ubuntu4) over (1.2-1ubuntu3) ...
+Preparing to unpack .../06-libnetplan1_1.2-1ubuntu4_amd64.deb ...
+Unpacking libnetplan1:amd64 (1.2-1ubuntu4) over (1.2-1ubuntu3) ...
+Preparing to unpack .../07-networkd-dispatcher_2.2.4-1.1ubuntu1_all.deb ...
+Unpacking networkd-dispatcher (2.2.4-1.1ubuntu1) over (2.2.4-1.1build1) ...
+Preparing to unpack .../08-systemd-hwe-hwdb_259.5.2ubuntu_all.deb ...
+Unpacking systemd-hwe-hwdb (259.5.2ubuntu) over (259.5.1ubuntu) ...
+Preparing to unpack .../09-bind9-dnsutils_1%3a9.20.18-1ubuntu2_amd64.deb ...
+Unpacking bind9-dnsutils (1:9.20.18-1ubuntu2) over (1:9.20.18-1ubuntu1) ...
+Preparing to unpack .../10-bind9-host_1%3a9.20.18-1ubuntu2_amd64.deb ...
+Unpacking bind9-host (1:9.20.18-1ubuntu2) over (1:9.20.18-1ubuntu1) ...
+Preparing to unpack .../11-bind9-libs_1%3a9.20.18-1ubuntu2_amd64.deb ...
+Unpacking bind9-libs:amd64 (1:9.20.18-1ubuntu2) over (1:9.20.18-1ubuntu1) ...
+Preparing to unpack .../12-fuse3_3.18.2-1_amd64.deb ...
+Adding 'diversion of /bin/fusermount to /bin/fusermount.usr-is-merged by fuse3'
+Adding 'diversion of /sbin/mount.fuse to /sbin/mount.fuse.usr-is-merged by fuse3'
+Unpacking fuse3 (3.18.2-1) over (3.18.1-1) ...
+Preparing to unpack .../13-libfuse3-4_3.18.2-1_amd64.deb ...
+Unpacking libfuse3-4:amd64 (3.18.2-1) over (3.18.1-1) ...
+Preparing to unpack .../14-libx11-data_2%3a1.8.13-1_all.deb ...
+Unpacking libx11-data (2:1.8.13-1) over (2:1.8.12-1build2) ...
+Preparing to unpack .../15-libx11-6_2%3a1.8.13-1_amd64.deb ...
+Unpacking libx11-6:amd64 (2:1.8.13-1) over (2:1.8.12-1build2) ...
+Preparing to unpack .../16-ubuntu-release-upgrader-core_1%3a26.04.13_all.deb ...
+Unpacking ubuntu-release-upgrader-core (1:26.04.13) over (1:26.04.9) ...
+Preparing to unpack .../17-python3-distupgrade_1%3a26.04.13_all.deb ...
+Unpacking python3-distupgrade (1:26.04.13) over (1:26.04.9) ...
+Preparing to unpack .../18-python3.14-gdbm_3.14.3-5_amd64.deb ...
+Unpacking python3.14-gdbm (3.14.3-5) over (3.14.3-3) ...
+Preparing to unpack .../19-libxslt1.1_1.1.45-0.1_amd64.deb ...
+Unpacking libxslt1.1:amd64 (1.1.45-0.1) over (1.1.43-0.3) ...
+Preparing to unpack .../20-pollinate_4.33-4ubuntu6_all.deb ...
+Unpacking pollinate (4.33-4ubuntu6) over (4.33-4ubuntu5) ...
+Preparing to unpack .../21-python3-jwt_2.10.1-4ubuntu1_all.deb ...
+Unpacking python3-jwt (2.10.1-4ubuntu1) over (2.10.1-4) ...
+Preparing to unpack .../22-software-properties-common_0.120_all.deb ...
+Unpacking software-properties-common (0.120) over (0.119) ...
+Preparing to unpack .../23-python3-software-properties_0.120_all.deb ...
+Unpacking python3-software-properties (0.120) over (0.119) ...
+Preparing to unpack .../24-unattended-upgrades_2.12ubuntu9_all.deb ...
+Unpacking unattended-upgrades (2.12ubuntu9) over (2.12ubuntu7) ...
+Setting up networkd-dispatcher (2.2.4-1.1ubuntu1) ...
+Could not execute systemctl:  at /usr/bin/deb-systemd-invoke line 148.
+Setting up bind9-libs:amd64 (1:9.20.18-1ubuntu2) ...
+Setting up python3-jwt (2.10.1-4ubuntu1) ...
+Setting up gawk (1:5.3.2-1ubuntu1) ...
+Setting up libtirpc-common (1.3.7-0.1) ...
+Setting up libpython3.14-minimal:amd64 (3.14.3-5) ...
+Setting up libnetplan1:amd64 (1.2-1ubuntu4) ...
+Setting up python3-distupgrade (1:26.04.13) ...
+Setting up unattended-upgrades (2.12ubuntu9) ...
+Setting up pollinate (4.33-4ubuntu6) ...
+Installing new version of config file /etc/default/pollinate ...
+apparmor_parser: Unable to replace "pollinate".  apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+Removing obsolete conffile /etc/pollinate/entropy.ubuntu.com.pem ...
+Setting up python3.14-gdbm (3.14.3-5) ...
+Setting up python3-software-properties (0.120) ...
+Setting up libx11-data (2:1.8.13-1) ...
+Setting up libatomic1:amd64 (16-20260322-1ubuntu1) ...
+Setting up ubuntu-release-upgrader-core (1:26.04.13) ...
+Setting up systemd-hwe-hwdb (259.5.2ubuntu) ...
+input14: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:08.1/0000:c4:00.0/rc/rc0/input14/uevent': Permission denied
+event14: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:08.1/0000:c4:00.0/rc/rc0/input14/event14/uevent': Permission denied
+input10: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:08.1/0000:c4:00.1/sound/card0/input10/uevent': Permission denied
+event10: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:08.1/0000:c4:00.1/sound/card0/input10/event10/uevent': Permission denied
+input11: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:08.1/0000:c4:00.1/sound/card0/input11/uevent': Permission denied
+event11: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:08.1/0000:c4:00.1/sound/card0/input11/event11/uevent': Permission denied
+input8: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:08.1/0000:c4:00.1/sound/card0/input8/uevent': Permission denied
+event8: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:08.1/0000:c4:00.1/sound/card0/input8/event8/uevent': Permission denied
+input9: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:08.1/0000:c4:00.1/sound/card0/input9/uevent': Permission denied
+event9: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:08.1/0000:c4:00.1/sound/card0/input9/event9/uevent': Permission denied
+input12: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:08.1/0000:c4:00.6/sound/card1/input12/uevent': Permission denied
+event12: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:08.1/0000:c4:00.6/sound/card1/input12/event12/uevent': Permission denied
+input13: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:08.1/0000:c4:00.6/sound/card1/input13/uevent': Permission denied
+event13: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:08.1/0000:c4:00.6/sound/card1/input13/event13/uevent': Permission denied
+input2: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:08.1/acpi.video_bus.0/input/input2/uevent': Permission denied
+event2: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:08.1/acpi.video_bus.0/input/input2/event2/uevent': Permission denied
+input3: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:08.3/0000:c6:00.0/usb3/3-5/3-5.2/3-5.2:1.7/0003:2207:0019.0001/input/input3/uevent': Permission denied
+event3: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:08.3/0000:c6:00.0/usb3/3-5/3-5.2/3-5.2:1.7/0003:2207:0019.0001/input/input3/event3/uevent': Permission denied
+input4: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:08.3/0000:c6:00.0/usb3/3-5/3-5.2/3-5.2:1.7/0003:2207:0019.0001/input/input4/uevent': Permission denied
+event4: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:08.3/0000:c6:00.0/usb3/3-5/3-5.2/3-5.2:1.7/0003:2207:0019.0001/input/input4/event4/uevent': Permission denied
+mouse0: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:08.3/0000:c6:00.0/usb3/3-5/3-5.2/3-5.2:1.7/0003:2207:0019.0001/input/input4/mouse0/uevent': Permission denied
+input5: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:08.3/0000:c6:00.0/usb3/3-5/3-5.2/3-5.2:1.8/0003:2207:0019.0002/input/input5/uevent': Permission denied
+event5: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:08.3/0000:c6:00.0/usb3/3-5/3-5.2/3-5.2:1.8/0003:2207:0019.0002/input/input5/event5/uevent': Permission denied
+mouse1: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:08.3/0000:c6:00.0/usb3/3-5/3-5.2/3-5.2:1.8/0003:2207:0019.0002/input/input5/mouse1/uevent': Permission denied
+input1: Failed to write 'change' to '/sys/devices/platform/LNXPWRBN:00/input/input1/uevent': Permission denied
+event1: Failed to write 'change' to '/sys/devices/platform/LNXPWRBN:00/input/input1/event1/uevent': Permission denied
+input0: Failed to write 'change' to '/sys/devices/platform/PNP0C0C:00/input/input0/uevent': Permission denied
+event0: Failed to write 'change' to '/sys/devices/platform/PNP0C0C:00/input/input0/event0/uevent': Permission denied
+input6: Failed to write 'change' to '/sys/devices/virtual/input/input6/uevent': Permission denied
+event6: Failed to write 'change' to '/sys/devices/virtual/input/input6/event6/uevent': Permission denied
+input7: Failed to write 'change' to '/sys/devices/virtual/input/input7/uevent': Permission denied
+event7: Failed to write 'change' to '/sys/devices/virtual/input/input7/event7/uevent': Permission denied
+mice: Failed to write 'change' to '/sys/devices/virtual/input/mice/uevent': Permission denied
+Setting up libxslt1.1:amd64 (1.1.45-0.1) ...
+Setting up python3-netplan (1.2-1ubuntu4) ...
+Setting up libx11-6:amd64 (2:1.8.13-1) ...
+Setting up netplan-generator (1.2-1ubuntu4) ...
+Removing 'diversion of /lib/systemd/system-generators/netplan to /lib/systemd/system-generators/netplan.usr-is-merged by netplan-generator'
+Setting up libfuse3-4:amd64 (3.18.2-1) ...
+Setting up bind9-host (1:9.20.18-1ubuntu2) ...
+Setting up python3.14-minimal (3.14.3-5) ...
+Setting up libtirpc3t64:amd64 (1.3.7-0.1) ...
+Setting up libpython3.14-stdlib:amd64 (3.14.3-5) ...
+Setting up iproute2 (6.19.0-1ubuntu1) ...
+Setting up software-properties-common (0.120) ...
+Setting up netplan.io (1.2-1ubuntu4) ...
+Setting up fuse3 (3.18.2-1) ...
+Removing 'diversion of /bin/fusermount to /bin/fusermount.usr-is-merged by fuse3'
+Removing 'diversion of /sbin/mount.fuse to /sbin/mount.fuse.usr-is-merged by fuse3'
+update-initramfs: deferring update (trigger activated)
+Setting up libpython3.14:amd64 (3.14.3-5) ...
+Setting up bind9-dnsutils (1:9.20.18-1ubuntu2) ...
+Setting up python3.14 (3.14.3-5) ...
+Processing triggers for systemd (259.5-0ubuntu1) ...
+Processing triggers for man-db (2.13.1-1build1) ...
+Processing triggers for dbus (1.16.2-2ubuntu4) ...
+Failed to open connection to "system" message bus: Failed to query AppArmor policy: Permission denied
+Processing triggers for udev (259.5-0ubuntu1) ...
+Processing triggers for dracut (110-7) ...
+Processing triggers for libc-bin (2.43-2ubuntu1) ...
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+
+Restarting services...
+
+Service restarts being deferred:
+ systemctl restart unattended-upgrades.service
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+autopkgtest [20:39:24]: rebooting testbed after setup commands that affected boot
+autopkgtest [20:41:33]: testbed running kernel: Linux 7.0.0-10-generic #10-Ubuntu SMP PREEMPT_DYNAMIC Thu Mar 19 10:24:42 UTC 2026
+autopkgtest [20:41:35]: @@@@@@@@@@@@@@@@@@@@ apt-source rocm-cmake
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+The following NEW packages will be installed:
+  bzip2 dpkg-dev libdpkg-perl lto-disabled-list make
+0 upgraded, 5 newly installed, 0 to remove and 0 not upgraded.
+Need to get 1596 kB of archives.
+After this operation, 4247 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu resolute/main amd64 bzip2 amd64 1.0.8-6build2 [34.3 kB]
+Get:2 http://archive.ubuntu.com/ubuntu resolute/main amd64 libdpkg-perl all 1.23.7ubuntu1 [289 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute/main amd64 make amd64 4.4.1-3 [197 kB]
+Get:4 http://archive.ubuntu.com/ubuntu resolute/main amd64 lto-disabled-list all 79 [14.2 kB]
+Get:5 http://archive.ubuntu.com/ubuntu resolute/main amd64 dpkg-dev all 1.23.7ubuntu1 [1062 kB]
+Fetched 1596 kB in 1s (2739 kB/s)
+Selecting previously unselected package bzip2.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45003 files and directories currently installed.)
+Preparing to unpack .../bzip2_1.0.8-6build2_amd64.deb ...
+Unpacking bzip2 (1.0.8-6build2) ...
+Selecting previously unselected package libdpkg-perl.
+Preparing to unpack .../libdpkg-perl_1.23.7ubuntu1_all.deb ...
+Unpacking libdpkg-perl (1.23.7ubuntu1) ...
+Selecting previously unselected package make.
+Preparing to unpack .../make_4.4.1-3_amd64.deb ...
+Unpacking make (4.4.1-3) ...
+Selecting previously unselected package lto-disabled-list.
+Preparing to unpack .../lto-disabled-list_79_all.deb ...
+Unpacking lto-disabled-list (79) ...
+Selecting previously unselected package dpkg-dev.
+Preparing to unpack .../dpkg-dev_1.23.7ubuntu1_all.deb ...
+Unpacking dpkg-dev (1.23.7ubuntu1) ...
+Setting up lto-disabled-list (79) ...
+Setting up bzip2 (1.0.8-6build2) ...
+Setting up make (4.4.1-3) ...
+Setting up libdpkg-perl (1.23.7ubuntu1) ...
+Setting up dpkg-dev (1.23.7ubuntu1) ...
+Processing triggers for man-db (2.13.1-1build1) ...
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+Get:1 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel-21/ubuntu resolute/main rocm-cmake 7.1.0-0ubuntu2~git202603201630.6e65260~ubuntu26.04.1 (tar) [76.5 kB]
+Get:2 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel-21/ubuntu resolute/main rocm-cmake 7.1.0-0ubuntu2~git202603201630.6e65260~ubuntu26.04.1 (dsc) [1325 B]
+dpkg-source: warning: extracting unsigned source package (rocm-cmake_7.1.0-0ubuntu2~git202603201630.6e65260~ubuntu26.04.1.dsc)
+dpkg-source: warning: native package version may not have a revision
+autopkgtest [20:41:39]: testing package rocm-cmake version 7.1.0-0ubuntu2~git202603201630.6e65260~ubuntu26.04.1
+autopkgtest [20:41:40]: build not needed
+autopkgtest [20:41:40]: test cmake-find-package: preparing testbed
+autopkgtest [20:43:47]: testbed dpkg architecture: amd64
+autopkgtest [20:43:48]: testbed apt version: 3.1.16
+autopkgtest [20:43:48]: @@@@@@@@@@@@@@@@@@@@ test bed setup
+autopkgtest [20:43:48]: updating testbed package index (apt update)
+Get:1 http://archive.ubuntu.com/ubuntu resolute InRelease [124 kB]
+Get:2 http://security.ubuntu.com/ubuntu resolute-security InRelease [124 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease [124 kB]
+Get:4 http://security.ubuntu.com/ubuntu resolute-security/main amd64 Components [208 B]
+Get:5 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Components [212 B]
+Get:6 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 c-n-f Metadata [116 B]
+Get:7 http://security.ubuntu.com/ubuntu resolute-security/restricted amd64 Components [212 B]
+Get:8 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 Components [212 B]
+Get:9 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 c-n-f Metadata [120 B]
+Get:10 http://archive.ubuntu.com/ubuntu resolute-backports InRelease [124 kB]
+Get:11 http://archive.ubuntu.com/ubuntu resolute/main amd64 Packages [1484 kB]
+Get:12 http://archive.ubuntu.com/ubuntu resolute/main Translation-en [526 kB]
+Get:13 http://archive.ubuntu.com/ubuntu resolute/main amd64 Components [394 kB]
+Get:14 http://archive.ubuntu.com/ubuntu resolute/main amd64 c-n-f Metadata [32.4 kB]
+Get:15 http://archive.ubuntu.com/ubuntu resolute/universe amd64 Packages [16.1 MB]
+Get:16 http://archive.ubuntu.com/ubuntu resolute/universe Translation-en [6338 kB]
+Get:17 http://archive.ubuntu.com/ubuntu resolute/universe amd64 Components [4530 kB]
+Get:18 http://archive.ubuntu.com/ubuntu resolute/universe amd64 c-n-f Metadata [312 kB]
+Get:19 http://archive.ubuntu.com/ubuntu resolute/restricted amd64 Packages [150 kB]
+Get:20 http://archive.ubuntu.com/ubuntu resolute/restricted Translation-en [29.1 kB]
+Get:21 http://archive.ubuntu.com/ubuntu resolute/restricted amd64 Components [556 B]
+Get:22 http://archive.ubuntu.com/ubuntu resolute/restricted amd64 c-n-f Metadata [384 B]
+Get:23 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 Packages [290 kB]
+Get:24 http://archive.ubuntu.com/ubuntu resolute/multiverse Translation-en [127 kB]
+Get:25 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 Components [49.9 kB]
+Get:26 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 c-n-f Metadata [8276 B]
+Get:27 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Components [208 B]
+Get:28 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Components [212 B]
+Get:29 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 c-n-f Metadata [116 B]
+Get:30 http://archive.ubuntu.com/ubuntu resolute-updates/restricted amd64 Components [212 B]
+Get:31 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 Components [216 B]
+Get:32 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 c-n-f Metadata [116 B]
+Get:33 http://archive.ubuntu.com/ubuntu resolute-backports/main amd64 Components [212 B]
+Get:34 http://archive.ubuntu.com/ubuntu resolute-backports/main amd64 c-n-f Metadata [112 B]
+Get:35 http://archive.ubuntu.com/ubuntu resolute-backports/universe amd64 Components [216 B]
+Get:36 http://archive.ubuntu.com/ubuntu resolute-backports/universe amd64 c-n-f Metadata [116 B]
+Get:37 http://archive.ubuntu.com/ubuntu resolute-backports/restricted amd64 Components [216 B]
+Get:38 http://archive.ubuntu.com/ubuntu resolute-backports/restricted amd64 c-n-f Metadata [120 B]
+Get:39 http://archive.ubuntu.com/ubuntu resolute-backports/multiverse amd64 Components [216 B]
+Get:40 http://archive.ubuntu.com/ubuntu resolute-backports/multiverse amd64 c-n-f Metadata [120 B]
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 30.8 MB in 2s (13.8 MB/s)
+Reading package lists...
+autopkgtest [20:43:53]: testbed release detected to be: resolute
+autopkgtest [20:43:53]: updating testbed package index (apt update)
+Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:2 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Reading package lists...
+Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Hit:4 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Get:5 http://archive.ubuntu.com/ubuntu resolute/multiverse Sources [324 kB]
+Get:6 http://archive.ubuntu.com/ubuntu resolute/universe Sources [21.4 MB]
+Get:7 http://archive.ubuntu.com/ubuntu resolute/main Sources [1425 kB]
+Get:8 http://archive.ubuntu.com/ubuntu resolute/restricted Sources [19.2 kB]
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 23.2 MB in 2s (13.3 MB/s)
+Reading package lists...
+Enabling deb-src for all repositories.
+Added: ## Ubuntu distribution repository
+##
+## The following settings can be adjusted to configure which packages to use from Ubuntu.
+## Mirror your choices (except for URIs and Suites) in the security section below to
+## ensure timely security updates.
+##
+## Types: Append deb-src to enable the fetching of source package.
+## URIs: A URL to the repository (you may add multiple URLs)
+## Suites: The following additional suites can be configured
+##   <name>-updates   - Major bug fix updates produced after the final release of the
+##                      distribution.
+##   <name>-backports - software from this repository may not have been tested as
+##                      extensively as that contained in the main release, although it includes
+##                      newer versions of some applications which may provide useful features.
+##                      Also, please note that software in backports WILL NOT receive any review
+##                      or updates from the Ubuntu security team.
+## Components: Aside from main, the following components can be added to the list
+##   restricted  - Software that may not be under a free license, or protected by patents.
+##   universe    - Community maintained packages. Software in this repository receives maintenance
+##                 from volunteers in the Ubuntu community, or a 10 year security maintenance
+##                 commitment from Canonical when an Ubuntu Pro subscription is attached.
+##   multiverse  - Community maintained of restricted. Software from this repository is
+##                 ENTIRELY UNSUPPORTED by the Ubuntu team, and may not be under a free
+##                 licence. Please satisfy yourself as to your rights to use the software.
+##                 Also, please note that software in multiverse WILL NOT receive any
+##                 review or updates from the Ubuntu security team.
+##
+## See the sources.list(5) manual page for further settings.
+Types: deb-src
+URIs: http://archive.ubuntu.com/ubuntu
+Suites: resolute resolute-updates resolute-backports
+Components: restricted multiverse universe main
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+Added: ## Ubuntu security updates. Aside from URIs and Suites,
+## this should mirror your choices in the previous section.
+Types: deb-src
+URIs: http://security.ubuntu.com/ubuntu
+Suites: resolute-security
+Components: restricted multiverse universe main
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+Hit:1 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Get:5 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel-21/ubuntu resolute InRelease [27.2 kB]
+Get:6 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel-21/ubuntu resolute/main Sources [16.1 kB]
+Get:7 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel-21/ubuntu resolute/main amd64 Packages [24.6 kB]
+Get:8 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel-21/ubuntu resolute/main Translation-en [15.4 kB]
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 83.4 kB in 1s (84.9 kB/s)
+Reading package lists...
+PPA publishes dbgsym, you may need to include 'main/debug' component
+Repository: 'Types: deb
+URIs: https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel-21/ubuntu/
+Suites: resolute
+Components: main
+'
+Description:
+ROCm development archive which holds packages built against upstream LLVM-21
+More info: https://launchpad.net/~bullwinkle-team/+archive/ubuntu/rocm-devel-21
+Adding repository.
+autopkgtest [20:44:02]: upgrading testbed (apt dist-upgrade and autopurge)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+The following packages will be upgraded:
+  bind9-dnsutils bind9-host bind9-libs dpkg fuse3 gawk gcc-16-base iproute2
+  libatomic1 libfuse3-4 libgcc-s1 libnetplan1 libpython3.14
+  libpython3.14-minimal libpython3.14-stdlib libstdc++6 libtirpc-common
+  libtirpc3t64 libx11-6 libx11-data libxslt1.1 netplan-generator netplan.io
+  networkd-dispatcher pollinate python3-distupgrade python3-jwt
+  python3-netplan python3-software-properties python3.14 python3.14-gdbm
+  python3.14-minimal software-properties-common systemd-hwe-hwdb
+  ubuntu-release-upgrader-core unattended-upgrades
+36 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Need to get 16.5 MB of archives.
+After this operation, 50.2 kB disk space will be freed.
+Get:1 http://archive.ubuntu.com/ubuntu resolute/main amd64 dpkg amd64 1.23.7ubuntu1 [1285 kB]
+Get:2 http://archive.ubuntu.com/ubuntu resolute/main amd64 gawk amd64 1:5.3.2-1ubuntu1 [526 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute/main amd64 libpython3.14 amd64 3.14.3-5 [2577 kB]
+Get:4 http://archive.ubuntu.com/ubuntu resolute/main amd64 python3.14 amd64 3.14.3-5 [823 kB]
+Get:5 http://archive.ubuntu.com/ubuntu resolute/main amd64 libpython3.14-stdlib amd64 3.14.3-5 [2404 kB]
+Get:6 http://archive.ubuntu.com/ubuntu resolute/main amd64 python3.14-minimal amd64 3.14.3-5 [2580 kB]
+Get:7 http://archive.ubuntu.com/ubuntu resolute/main amd64 libpython3.14-minimal amd64 3.14.3-5 [915 kB]
+Get:8 http://archive.ubuntu.com/ubuntu resolute/main amd64 libatomic1 amd64 16-20260322-1ubuntu1 [11.4 kB]
+Get:9 http://archive.ubuntu.com/ubuntu resolute/main amd64 gcc-16-base amd64 16-20260322-1ubuntu1 [38.3 kB]
+Get:10 http://archive.ubuntu.com/ubuntu resolute/main amd64 libstdc++6 amd64 16-20260322-1ubuntu1 [843 kB]
+Get:11 http://archive.ubuntu.com/ubuntu resolute/main amd64 libgcc-s1 amd64 16-20260322-1ubuntu1 [80.3 kB]
+Get:12 http://archive.ubuntu.com/ubuntu resolute/main amd64 libtirpc-common all 1.3.7-0.1 [7114 B]
+Get:13 http://archive.ubuntu.com/ubuntu resolute/main amd64 libtirpc3t64 amd64 1.3.7-0.1 [80.9 kB]
+Get:14 http://archive.ubuntu.com/ubuntu resolute/main amd64 iproute2 amd64 6.19.0-1ubuntu1 [1198 kB]
+Get:15 http://archive.ubuntu.com/ubuntu resolute/main amd64 netplan-generator amd64 1.2-1ubuntu4 [65.1 kB]
+Get:16 http://archive.ubuntu.com/ubuntu resolute/main amd64 python3-netplan amd64 1.2-1ubuntu4 [24.8 kB]
+Get:17 http://archive.ubuntu.com/ubuntu resolute/main amd64 netplan.io amd64 1.2-1ubuntu4 [69.5 kB]
+Get:18 http://archive.ubuntu.com/ubuntu resolute/main amd64 libnetplan1 amd64 1.2-1ubuntu4 [132 kB]
+Get:19 http://archive.ubuntu.com/ubuntu resolute/main amd64 networkd-dispatcher all 2.2.4-1.1ubuntu1 [15.2 kB]
+Get:20 http://archive.ubuntu.com/ubuntu resolute/main amd64 systemd-hwe-hwdb all 259.5.2ubuntu [3326 B]
+Get:21 http://archive.ubuntu.com/ubuntu resolute/main amd64 bind9-dnsutils amd64 1:9.20.18-1ubuntu2 [163 kB]
+Get:22 http://archive.ubuntu.com/ubuntu resolute/main amd64 bind9-host amd64 1:9.20.18-1ubuntu2 [49.8 kB]
+Get:23 http://archive.ubuntu.com/ubuntu resolute/main amd64 bind9-libs amd64 1:9.20.18-1ubuntu2 [1303 kB]
+Get:24 http://archive.ubuntu.com/ubuntu resolute/main amd64 fuse3 amd64 3.18.2-1 [27.5 kB]
+Get:25 http://archive.ubuntu.com/ubuntu resolute/main amd64 libfuse3-4 amd64 3.18.2-1 [93.0 kB]
+Get:26 http://archive.ubuntu.com/ubuntu resolute/main amd64 libx11-data all 2:1.8.13-1 [114 kB]
+Get:27 http://archive.ubuntu.com/ubuntu resolute/main amd64 libx11-6 amd64 2:1.8.13-1 [657 kB]
+Get:28 http://archive.ubuntu.com/ubuntu resolute/main amd64 ubuntu-release-upgrader-core all 1:26.04.13 [24.9 kB]
+Get:29 http://archive.ubuntu.com/ubuntu resolute/main amd64 python3-distupgrade all 1:26.04.13 [99.7 kB]
+Get:30 http://archive.ubuntu.com/ubuntu resolute/main amd64 python3.14-gdbm amd64 3.14.3-5 [28.3 kB]
+Get:31 http://archive.ubuntu.com/ubuntu resolute/main amd64 libxslt1.1 amd64 1.1.45-0.1 [165 kB]
+Get:32 http://archive.ubuntu.com/ubuntu resolute/main amd64 pollinate all 4.33-4ubuntu6 [11.7 kB]
+Get:33 http://archive.ubuntu.com/ubuntu resolute/main amd64 python3-jwt all 2.10.1-4ubuntu1 [20.6 kB]
+Get:34 http://archive.ubuntu.com/ubuntu resolute/main amd64 software-properties-common all 0.120 [16.6 kB]
+Get:35 http://archive.ubuntu.com/ubuntu resolute/main amd64 python3-software-properties all 0.120 [28.6 kB]
+Get:36 http://archive.ubuntu.com/ubuntu resolute/main amd64 unattended-upgrades all 2.12ubuntu9 [53.3 kB]
+Preconfiguring packages ...
+Fetched 16.5 MB in 2s (7227 kB/s)
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45007 files and directories currently installed.)
+Preparing to unpack .../dpkg_1.23.7ubuntu1_amd64.deb ...
+Unpacking dpkg (1.23.7ubuntu1) over (1.23.6ubuntu2) ...
+Setting up dpkg (1.23.7ubuntu1) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45007 files and directories currently installed.)
+Preparing to unpack .../0-gawk_1%3a5.3.2-1ubuntu1_amd64.deb ...
+Unpacking gawk (1:5.3.2-1ubuntu1) over (1:5.3.2-1build1) ...
+Preparing to unpack .../1-libpython3.14_3.14.3-5_amd64.deb ...
+Unpacking libpython3.14:amd64 (3.14.3-5) over (3.14.3-3) ...
+Preparing to unpack .../2-python3.14_3.14.3-5_amd64.deb ...
+Unpacking python3.14 (3.14.3-5) over (3.14.3-3) ...
+Preparing to unpack .../3-libpython3.14-stdlib_3.14.3-5_amd64.deb ...
+Unpacking libpython3.14-stdlib:amd64 (3.14.3-5) over (3.14.3-3) ...
+Preparing to unpack .../4-python3.14-minimal_3.14.3-5_amd64.deb ...
+Unpacking python3.14-minimal (3.14.3-5) over (3.14.3-3) ...
+Preparing to unpack .../5-libpython3.14-minimal_3.14.3-5_amd64.deb ...
+Unpacking libpython3.14-minimal:amd64 (3.14.3-5) over (3.14.3-3) ...
+Preparing to unpack .../6-libatomic1_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libatomic1:amd64 (16-20260322-1ubuntu1) over (16-20260315-1ubuntu1) ...
+Preparing to unpack .../7-gcc-16-base_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking gcc-16-base:amd64 (16-20260322-1ubuntu1) over (16-20260315-1ubuntu1) ...
+Setting up gcc-16-base:amd64 (16-20260322-1ubuntu1) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45007 files and directories currently installed.)
+Preparing to unpack .../libstdc++6_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libstdc++6:amd64 (16-20260322-1ubuntu1) over (16-20260315-1ubuntu1) ...
+Setting up libstdc++6:amd64 (16-20260322-1ubuntu1) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45007 files and directories currently installed.)
+Preparing to unpack .../libgcc-s1_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libgcc-s1:amd64 (16-20260322-1ubuntu1) over (16-20260315-1ubuntu1) ...
+Setting up libgcc-s1:amd64 (16-20260322-1ubuntu1) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45007 files and directories currently installed.)
+Preparing to unpack .../00-libtirpc-common_1.3.7-0.1_all.deb ...
+Unpacking libtirpc-common (1.3.7-0.1) over (1.3.6+ds-1ubuntu1) ...
+Preparing to unpack .../01-libtirpc3t64_1.3.7-0.1_amd64.deb ...
+Unpacking libtirpc3t64:amd64 (1.3.7-0.1) over (1.3.6+ds-1ubuntu1) ...
+Preparing to unpack .../02-iproute2_6.19.0-1ubuntu1_amd64.deb ...
+Unpacking iproute2 (6.19.0-1ubuntu1) over (6.18.0-1ubuntu1) ...
+Preparing to unpack .../03-netplan-generator_1.2-1ubuntu4_amd64.deb ...
+Adding 'diversion of /lib/systemd/system-generators/netplan to /lib/systemd/system-generators/netplan.usr-is-merged by netplan-generator'
+Unpacking netplan-generator (1.2-1ubuntu4) over (1.2-1ubuntu3) ...
+Preparing to unpack .../04-python3-netplan_1.2-1ubuntu4_amd64.deb ...
+Unpacking python3-netplan (1.2-1ubuntu4) over (1.2-1ubuntu3) ...
+Preparing to unpack .../05-netplan.io_1.2-1ubuntu4_amd64.deb ...
+Unpacking netplan.io (1.2-1ubuntu4) over (1.2-1ubuntu3) ...
+Preparing to unpack .../06-libnetplan1_1.2-1ubuntu4_amd64.deb ...
+Unpacking libnetplan1:amd64 (1.2-1ubuntu4) over (1.2-1ubuntu3) ...
+Preparing to unpack .../07-networkd-dispatcher_2.2.4-1.1ubuntu1_all.deb ...
+Unpacking networkd-dispatcher (2.2.4-1.1ubuntu1) over (2.2.4-1.1build1) ...
+Preparing to unpack .../08-systemd-hwe-hwdb_259.5.2ubuntu_all.deb ...
+Unpacking systemd-hwe-hwdb (259.5.2ubuntu) over (259.5.1ubuntu) ...
+Preparing to unpack .../09-bind9-dnsutils_1%3a9.20.18-1ubuntu2_amd64.deb ...
+Unpacking bind9-dnsutils (1:9.20.18-1ubuntu2) over (1:9.20.18-1ubuntu1) ...
+Preparing to unpack .../10-bind9-host_1%3a9.20.18-1ubuntu2_amd64.deb ...
+Unpacking bind9-host (1:9.20.18-1ubuntu2) over (1:9.20.18-1ubuntu1) ...
+Preparing to unpack .../11-bind9-libs_1%3a9.20.18-1ubuntu2_amd64.deb ...
+Unpacking bind9-libs:amd64 (1:9.20.18-1ubuntu2) over (1:9.20.18-1ubuntu1) ...
+Preparing to unpack .../12-fuse3_3.18.2-1_amd64.deb ...
+Adding 'diversion of /bin/fusermount to /bin/fusermount.usr-is-merged by fuse3'
+Adding 'diversion of /sbin/mount.fuse to /sbin/mount.fuse.usr-is-merged by fuse3'
+Unpacking fuse3 (3.18.2-1) over (3.18.1-1) ...
+Preparing to unpack .../13-libfuse3-4_3.18.2-1_amd64.deb ...
+Unpacking libfuse3-4:amd64 (3.18.2-1) over (3.18.1-1) ...
+Preparing to unpack .../14-libx11-data_2%3a1.8.13-1_all.deb ...
+Unpacking libx11-data (2:1.8.13-1) over (2:1.8.12-1build2) ...
+Preparing to unpack .../15-libx11-6_2%3a1.8.13-1_amd64.deb ...
+Unpacking libx11-6:amd64 (2:1.8.13-1) over (2:1.8.12-1build2) ...
+Preparing to unpack .../16-ubuntu-release-upgrader-core_1%3a26.04.13_all.deb ...
+Unpacking ubuntu-release-upgrader-core (1:26.04.13) over (1:26.04.9) ...
+Preparing to unpack .../17-python3-distupgrade_1%3a26.04.13_all.deb ...
+Unpacking python3-distupgrade (1:26.04.13) over (1:26.04.9) ...
+Preparing to unpack .../18-python3.14-gdbm_3.14.3-5_amd64.deb ...
+Unpacking python3.14-gdbm (3.14.3-5) over (3.14.3-3) ...
+Preparing to unpack .../19-libxslt1.1_1.1.45-0.1_amd64.deb ...
+Unpacking libxslt1.1:amd64 (1.1.45-0.1) over (1.1.43-0.3) ...
+Preparing to unpack .../20-pollinate_4.33-4ubuntu6_all.deb ...
+Unpacking pollinate (4.33-4ubuntu6) over (4.33-4ubuntu5) ...
+Preparing to unpack .../21-python3-jwt_2.10.1-4ubuntu1_all.deb ...
+Unpacking python3-jwt (2.10.1-4ubuntu1) over (2.10.1-4) ...
+Preparing to unpack .../22-software-properties-common_0.120_all.deb ...
+Unpacking software-properties-common (0.120) over (0.119) ...
+Preparing to unpack .../23-python3-software-properties_0.120_all.deb ...
+Unpacking python3-software-properties (0.120) over (0.119) ...
+Preparing to unpack .../24-unattended-upgrades_2.12ubuntu9_all.deb ...
+Unpacking unattended-upgrades (2.12ubuntu9) over (2.12ubuntu7) ...
+Setting up networkd-dispatcher (2.2.4-1.1ubuntu1) ...
+Could not execute systemctl:  at /usr/bin/deb-systemd-invoke line 148.
+Setting up bind9-libs:amd64 (1:9.20.18-1ubuntu2) ...
+Setting up python3-jwt (2.10.1-4ubuntu1) ...
+Setting up gawk (1:5.3.2-1ubuntu1) ...
+Setting up libtirpc-common (1.3.7-0.1) ...
+Setting up libpython3.14-minimal:amd64 (3.14.3-5) ...
+Setting up libnetplan1:amd64 (1.2-1ubuntu4) ...
+Setting up python3-distupgrade (1:26.04.13) ...
+Setting up unattended-upgrades (2.12ubuntu9) ...
+Setting up pollinate (4.33-4ubuntu6) ...
+Installing new version of config file /etc/default/pollinate ...
+apparmor_parser: Unable to replace "pollinate".  apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+Removing obsolete conffile /etc/pollinate/entropy.ubuntu.com.pem ...
+Setting up python3.14-gdbm (3.14.3-5) ...
+Setting up python3-software-properties (0.120) ...
+Setting up libx11-data (2:1.8.13-1) ...
+Setting up libatomic1:amd64 (16-20260322-1ubuntu1) ...
+Setting up ubuntu-release-upgrader-core (1:26.04.13) ...
+Setting up systemd-hwe-hwdb (259.5.2ubuntu) ...
+input14: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:08.1/0000:c4:00.0/rc/rc0/input14/uevent': Permission denied
+event14: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:08.1/0000:c4:00.0/rc/rc0/input14/event14/uevent': Permission denied
+input10: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:08.1/0000:c4:00.1/sound/card0/input10/uevent': Permission denied
+event10: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:08.1/0000:c4:00.1/sound/card0/input10/event10/uevent': Permission denied
+input11: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:08.1/0000:c4:00.1/sound/card0/input11/uevent': Permission denied
+event11: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:08.1/0000:c4:00.1/sound/card0/input11/event11/uevent': Permission denied
+input8: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:08.1/0000:c4:00.1/sound/card0/input8/uevent': Permission denied
+event8: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:08.1/0000:c4:00.1/sound/card0/input8/event8/uevent': Permission denied
+input9: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:08.1/0000:c4:00.1/sound/card0/input9/uevent': Permission denied
+event9: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:08.1/0000:c4:00.1/sound/card0/input9/event9/uevent': Permission denied
+input12: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:08.1/0000:c4:00.6/sound/card1/input12/uevent': Permission denied
+event12: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:08.1/0000:c4:00.6/sound/card1/input12/event12/uevent': Permission denied
+input13: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:08.1/0000:c4:00.6/sound/card1/input13/uevent': Permission denied
+event13: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:08.1/0000:c4:00.6/sound/card1/input13/event13/uevent': Permission denied
+input2: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:08.1/acpi.video_bus.0/input/input2/uevent': Permission denied
+event2: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:08.1/acpi.video_bus.0/input/input2/event2/uevent': Permission denied
+input3: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:08.3/0000:c6:00.0/usb3/3-5/3-5.2/3-5.2:1.7/0003:2207:0019.0001/input/input3/uevent': Permission denied
+event3: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:08.3/0000:c6:00.0/usb3/3-5/3-5.2/3-5.2:1.7/0003:2207:0019.0001/input/input3/event3/uevent': Permission denied
+input4: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:08.3/0000:c6:00.0/usb3/3-5/3-5.2/3-5.2:1.7/0003:2207:0019.0001/input/input4/uevent': Permission denied
+event4: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:08.3/0000:c6:00.0/usb3/3-5/3-5.2/3-5.2:1.7/0003:2207:0019.0001/input/input4/event4/uevent': Permission denied
+mouse0: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:08.3/0000:c6:00.0/usb3/3-5/3-5.2/3-5.2:1.7/0003:2207:0019.0001/input/input4/mouse0/uevent': Permission denied
+input5: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:08.3/0000:c6:00.0/usb3/3-5/3-5.2/3-5.2:1.8/0003:2207:0019.0002/input/input5/uevent': Permission denied
+event5: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:08.3/0000:c6:00.0/usb3/3-5/3-5.2/3-5.2:1.8/0003:2207:0019.0002/input/input5/event5/uevent': Permission denied
+mouse1: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:08.3/0000:c6:00.0/usb3/3-5/3-5.2/3-5.2:1.8/0003:2207:0019.0002/input/input5/mouse1/uevent': Permission denied
+input1: Failed to write 'change' to '/sys/devices/platform/LNXPWRBN:00/input/input1/uevent': Permission denied
+event1: Failed to write 'change' to '/sys/devices/platform/LNXPWRBN:00/input/input1/event1/uevent': Permission denied
+input0: Failed to write 'change' to '/sys/devices/platform/PNP0C0C:00/input/input0/uevent': Permission denied
+event0: Failed to write 'change' to '/sys/devices/platform/PNP0C0C:00/input/input0/event0/uevent': Permission denied
+input6: Failed to write 'change' to '/sys/devices/virtual/input/input6/uevent': Permission denied
+event6: Failed to write 'change' to '/sys/devices/virtual/input/input6/event6/uevent': Permission denied
+input7: Failed to write 'change' to '/sys/devices/virtual/input/input7/uevent': Permission denied
+event7: Failed to write 'change' to '/sys/devices/virtual/input/input7/event7/uevent': Permission denied
+mice: Failed to write 'change' to '/sys/devices/virtual/input/mice/uevent': Permission denied
+Setting up libxslt1.1:amd64 (1.1.45-0.1) ...
+Setting up python3-netplan (1.2-1ubuntu4) ...
+Setting up libx11-6:amd64 (2:1.8.13-1) ...
+Setting up netplan-generator (1.2-1ubuntu4) ...
+Removing 'diversion of /lib/systemd/system-generators/netplan to /lib/systemd/system-generators/netplan.usr-is-merged by netplan-generator'
+Setting up libfuse3-4:amd64 (3.18.2-1) ...
+Setting up bind9-host (1:9.20.18-1ubuntu2) ...
+Setting up python3.14-minimal (3.14.3-5) ...
+Setting up libtirpc3t64:amd64 (1.3.7-0.1) ...
+Setting up libpython3.14-stdlib:amd64 (3.14.3-5) ...
+Setting up iproute2 (6.19.0-1ubuntu1) ...
+Setting up software-properties-common (0.120) ...
+Setting up netplan.io (1.2-1ubuntu4) ...
+Setting up fuse3 (3.18.2-1) ...
+Removing 'diversion of /bin/fusermount to /bin/fusermount.usr-is-merged by fuse3'
+Removing 'diversion of /sbin/mount.fuse to /sbin/mount.fuse.usr-is-merged by fuse3'
+update-initramfs: deferring update (trigger activated)
+Setting up libpython3.14:amd64 (3.14.3-5) ...
+Setting up bind9-dnsutils (1:9.20.18-1ubuntu2) ...
+Setting up python3.14 (3.14.3-5) ...
+Processing triggers for systemd (259.5-0ubuntu1) ...
+Processing triggers for man-db (2.13.1-1build1) ...
+Processing triggers for dbus (1.16.2-2ubuntu4) ...
+Failed to open connection to "system" message bus: Failed to query AppArmor policy: Permission denied
+Processing triggers for udev (259.5-0ubuntu1) ...
+Processing triggers for dracut (110-7) ...
+Processing triggers for libc-bin (2.43-2ubuntu1) ...
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+
+Restarting services...
+
+Service restarts being deferred:
+ systemctl restart unattended-upgrades.service
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+autopkgtest [20:44:11]: rebooting testbed after setup commands that affected boot
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+The following NEW packages will be installed:
+  cmake cmake-data libarchive13t64 libjsoncpp26 librhash1 make rocm-cmake
+0 upgraded, 7 newly installed, 0 to remove and 0 not upgraded.
+Need to get 17.2 MB of archives.
+After this operation, 60.6 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu resolute/main amd64 cmake-data all 4.2.3-2ubuntu2 [2581 kB]
+Get:2 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel-21/ubuntu resolute/main amd64 rocm-cmake all 7.1.0-0ubuntu2~git202603201630.6e65260~ubuntu26.04.1 [27.6 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute/main amd64 libarchive13t64 amd64 3.8.5-1ubuntu1 [399 kB]
+Get:4 http://archive.ubuntu.com/ubuntu resolute/main amd64 libjsoncpp26 amd64 1.9.6-5 [84.0 kB]
+Get:5 http://archive.ubuntu.com/ubuntu resolute/main amd64 librhash1 amd64 1.4.6-1.1 [133 kB]
+Get:6 http://archive.ubuntu.com/ubuntu resolute/main amd64 cmake amd64 4.2.3-2ubuntu2 [13.7 MB]
+Get:7 http://archive.ubuntu.com/ubuntu resolute/main amd64 make amd64 4.4.1-3 [197 kB]
+Fetched 17.2 MB in 1s (21.2 MB/s)
+Selecting previously unselected package cmake-data.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45003 files and directories currently installed.)
+Preparing to unpack .../0-cmake-data_4.2.3-2ubuntu2_all.deb ...
+Unpacking cmake-data (4.2.3-2ubuntu2) ...
+Selecting previously unselected package libarchive13t64:amd64.
+Preparing to unpack .../1-libarchive13t64_3.8.5-1ubuntu1_amd64.deb ...
+Unpacking libarchive13t64:amd64 (3.8.5-1ubuntu1) ...
+Selecting previously unselected package libjsoncpp26:amd64.
+Preparing to unpack .../2-libjsoncpp26_1.9.6-5_amd64.deb ...
+Unpacking libjsoncpp26:amd64 (1.9.6-5) ...
+Selecting previously unselected package librhash1:amd64.
+Preparing to unpack .../3-librhash1_1.4.6-1.1_amd64.deb ...
+Unpacking librhash1:amd64 (1.4.6-1.1) ...
+Selecting previously unselected package cmake.
+Preparing to unpack .../4-cmake_4.2.3-2ubuntu2_amd64.deb ...
+Unpacking cmake (4.2.3-2ubuntu2) ...
+Selecting previously unselected package make.
+Preparing to unpack .../5-make_4.4.1-3_amd64.deb ...
+Unpacking make (4.4.1-3) ...
+Selecting previously unselected package rocm-cmake.
+Preparing to unpack .../6-rocm-cmake_7.1.0-0ubuntu2~git202603201630.6e65260~ubuntu26.04.1_all.deb ...
+Unpacking rocm-cmake (7.1.0-0ubuntu2~git202603201630.6e65260~ubuntu26.04.1) ...
+Setting up rocm-cmake (7.1.0-0ubuntu2~git202603201630.6e65260~ubuntu26.04.1) ...
+Setting up make (4.4.1-3) ...
+Setting up libjsoncpp26:amd64 (1.9.6-5) ...
+Setting up cmake-data (4.2.3-2ubuntu2) ...
+Setting up librhash1:amd64 (1.4.6-1.1) ...
+Setting up libarchive13t64:amd64 (3.8.5-1ubuntu1) ...
+Setting up cmake (4.2.3-2ubuntu2) ...
+Processing triggers for man-db (2.13.1-1build1) ...
+Processing triggers for libc-bin (2.43-2ubuntu1) ...
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+autopkgtest [20:46:25]: test cmake-find-package: [-----------------------
+-- rocm-cmake modules loaded successfully
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.5c5Ox2R01z
+PASS: rocm-cmake find_package test succeeded
+autopkgtest [20:46:25]: test cmake-find-package: -----------------------]
+autopkgtest [20:46:26]: test cmake-find-package:  - - - - - - - - - - results - - - - - - - - - -
+cmake-find-package   PASS (superficial)
+autopkgtest [20:46:26]: test build-simple-library: preparing testbed
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+The following NEW packages will be installed:
+  build-essential bzip2 cpp cpp-15 cpp-15-x86-64-linux-gnu
+  cpp-x86-64-linux-gnu dpkg-dev g++ g++-15 g++-15-x86-64-linux-gnu
+  g++-x86-64-linux-gnu gcc gcc-15 gcc-15-base gcc-15-x86-64-linux-gnu
+  gcc-x86-64-linux-gnu libasan8 libc-dev-bin libc6-dev libcc1-0 libdpkg-perl
+  libgcc-15-dev libgomp1 libhwasan0 libisl23 libitm1 liblsan0 libmpc3
+  libquadmath0 libstdc++-15-dev libtsan2 libubsan1 linux-libc-dev
+  lto-disabled-list rpcsvc-proto
+0 upgraded, 35 newly installed, 0 to remove and 0 not upgraded.
+Need to get 76.1 MB of archives.
+After this operation, 268 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu resolute/main amd64 libc-dev-bin amd64 2.43-2ubuntu1 [23.3 kB]
+Get:2 http://archive.ubuntu.com/ubuntu resolute/main amd64 linux-libc-dev amd64 7.0.0-12.12 [1547 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute/main amd64 rpcsvc-proto amd64 1.4.3-1build1 [68.3 kB]
+Get:4 http://archive.ubuntu.com/ubuntu resolute/main amd64 libc6-dev amd64 2.43-2ubuntu1 [2295 kB]
+Get:5 http://archive.ubuntu.com/ubuntu resolute/main amd64 gcc-15-base amd64 15.2.0-16ubuntu1 [39.0 kB]
+Get:6 http://archive.ubuntu.com/ubuntu resolute/main amd64 libisl23 amd64 0.27-1build1 [691 kB]
+Get:7 http://archive.ubuntu.com/ubuntu resolute/main amd64 libmpc3 amd64 1.3.1-2 [54.8 kB]
+Get:8 http://archive.ubuntu.com/ubuntu resolute/main amd64 cpp-15-x86-64-linux-gnu amd64 15.2.0-16ubuntu1 [12.9 MB]
+Get:9 http://archive.ubuntu.com/ubuntu resolute/main amd64 cpp-15 amd64 15.2.0-16ubuntu1 [1030 B]
+Get:10 http://archive.ubuntu.com/ubuntu resolute/main amd64 cpp-x86-64-linux-gnu amd64 4:15.2.0-5ubuntu1 [5840 B]
+Get:11 http://archive.ubuntu.com/ubuntu resolute/main amd64 cpp amd64 4:15.2.0-5ubuntu1 [22.4 kB]
+Get:12 http://archive.ubuntu.com/ubuntu resolute/main amd64 libcc1-0 amd64 16-20260322-1ubuntu1 [51.2 kB]
+Get:13 http://archive.ubuntu.com/ubuntu resolute/main amd64 libgomp1 amd64 16-20260322-1ubuntu1 [162 kB]
+Get:14 http://archive.ubuntu.com/ubuntu resolute/main amd64 libitm1 amd64 16-20260322-1ubuntu1 [30.0 kB]
+Get:15 http://archive.ubuntu.com/ubuntu resolute/main amd64 libasan8 amd64 16-20260322-1ubuntu1 [3184 kB]
+Get:16 http://archive.ubuntu.com/ubuntu resolute/main amd64 liblsan0 amd64 16-20260322-1ubuntu1 [1394 kB]
+Get:17 http://archive.ubuntu.com/ubuntu resolute/main amd64 libtsan2 amd64 16-20260322-1ubuntu1 [2849 kB]
+Get:18 http://archive.ubuntu.com/ubuntu resolute/main amd64 libubsan1 amd64 16-20260322-1ubuntu1 [1240 kB]
+Get:19 http://archive.ubuntu.com/ubuntu resolute/main amd64 libhwasan0 amd64 16-20260322-1ubuntu1 [1731 kB]
+Get:20 http://archive.ubuntu.com/ubuntu resolute/main amd64 libquadmath0 amd64 16-20260322-1ubuntu1 [155 kB]
+Get:21 http://archive.ubuntu.com/ubuntu resolute/main amd64 libgcc-15-dev amd64 15.2.0-16ubuntu1 [2866 kB]
+Get:22 http://archive.ubuntu.com/ubuntu resolute/main amd64 gcc-15-x86-64-linux-gnu amd64 15.2.0-16ubuntu1 [25.4 MB]
+Get:23 http://archive.ubuntu.com/ubuntu resolute/main amd64 gcc-15 amd64 15.2.0-16ubuntu1 [539 kB]
+Get:24 http://archive.ubuntu.com/ubuntu resolute/main amd64 gcc-x86-64-linux-gnu amd64 4:15.2.0-5ubuntu1 [1208 B]
+Get:25 http://archive.ubuntu.com/ubuntu resolute/main amd64 gcc amd64 4:15.2.0-5ubuntu1 [5010 B]
+Get:26 http://archive.ubuntu.com/ubuntu resolute/main amd64 libstdc++-15-dev amd64 15.2.0-16ubuntu1 [2920 kB]
+Get:27 http://archive.ubuntu.com/ubuntu resolute/main amd64 g++-15-x86-64-linux-gnu amd64 15.2.0-16ubuntu1 [14.4 MB]
+Get:28 http://archive.ubuntu.com/ubuntu resolute/main amd64 g++-15 amd64 15.2.0-16ubuntu1 [26.7 kB]
+Get:29 http://archive.ubuntu.com/ubuntu resolute/main amd64 g++-x86-64-linux-gnu amd64 4:15.2.0-5ubuntu1 [968 B]
+Get:30 http://archive.ubuntu.com/ubuntu resolute/main amd64 g++ amd64 4:15.2.0-5ubuntu1 [1100 B]
+Get:31 http://archive.ubuntu.com/ubuntu resolute/main amd64 libdpkg-perl all 1.23.7ubuntu1 [289 kB]
+Get:32 http://archive.ubuntu.com/ubuntu resolute/main amd64 bzip2 amd64 1.0.8-6build2 [34.3 kB]
+Get:33 http://archive.ubuntu.com/ubuntu resolute/main amd64 lto-disabled-list all 79 [14.2 kB]
+Get:34 http://archive.ubuntu.com/ubuntu resolute/main amd64 dpkg-dev all 1.23.7ubuntu1 [1062 kB]
+Get:35 http://archive.ubuntu.com/ubuntu resolute/main amd64 build-essential amd64 12.12ubuntu2 [5256 B]
+Fetched 76.1 MB in 3s (28.4 MB/s)
+Selecting previously unselected package libc-dev-bin.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 49169 files and directories currently installed.)
+Preparing to unpack .../00-libc-dev-bin_2.43-2ubuntu1_amd64.deb ...
+Unpacking libc-dev-bin (2.43-2ubuntu1) ...
+Selecting previously unselected package linux-libc-dev:amd64.
+Preparing to unpack .../01-linux-libc-dev_7.0.0-12.12_amd64.deb ...
+Unpacking linux-libc-dev:amd64 (7.0.0-12.12) ...
+Selecting previously unselected package rpcsvc-proto.
+Preparing to unpack .../02-rpcsvc-proto_1.4.3-1build1_amd64.deb ...
+Unpacking rpcsvc-proto (1.4.3-1build1) ...
+Selecting previously unselected package libc6-dev:amd64.
+Preparing to unpack .../03-libc6-dev_2.43-2ubuntu1_amd64.deb ...
+Unpacking libc6-dev:amd64 (2.43-2ubuntu1) ...
+Selecting previously unselected package gcc-15-base:amd64.
+Preparing to unpack .../04-gcc-15-base_15.2.0-16ubuntu1_amd64.deb ...
+Unpacking gcc-15-base:amd64 (15.2.0-16ubuntu1) ...
+Selecting previously unselected package libisl23:amd64.
+Preparing to unpack .../05-libisl23_0.27-1build1_amd64.deb ...
+Unpacking libisl23:amd64 (0.27-1build1) ...
+Selecting previously unselected package libmpc3:amd64.
+Preparing to unpack .../06-libmpc3_1.3.1-2_amd64.deb ...
+Unpacking libmpc3:amd64 (1.3.1-2) ...
+Selecting previously unselected package cpp-15-x86-64-linux-gnu.
+Preparing to unpack .../07-cpp-15-x86-64-linux-gnu_15.2.0-16ubuntu1_amd64.deb ...
+Unpacking cpp-15-x86-64-linux-gnu (15.2.0-16ubuntu1) ...
+Selecting previously unselected package cpp-15.
+Preparing to unpack .../08-cpp-15_15.2.0-16ubuntu1_amd64.deb ...
+Unpacking cpp-15 (15.2.0-16ubuntu1) ...
+Selecting previously unselected package cpp-x86-64-linux-gnu.
+Preparing to unpack .../09-cpp-x86-64-linux-gnu_4%3a15.2.0-5ubuntu1_amd64.deb ...
+Unpacking cpp-x86-64-linux-gnu (4:15.2.0-5ubuntu1) ...
+Selecting previously unselected package cpp.
+Preparing to unpack .../10-cpp_4%3a15.2.0-5ubuntu1_amd64.deb ...
+Unpacking cpp (4:15.2.0-5ubuntu1) ...
+Selecting previously unselected package libcc1-0:amd64.
+Preparing to unpack .../11-libcc1-0_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libcc1-0:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libgomp1:amd64.
+Preparing to unpack .../12-libgomp1_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libgomp1:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libitm1:amd64.
+Preparing to unpack .../13-libitm1_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libitm1:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libasan8:amd64.
+Preparing to unpack .../14-libasan8_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libasan8:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package liblsan0:amd64.
+Preparing to unpack .../15-liblsan0_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking liblsan0:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libtsan2:amd64.
+Preparing to unpack .../16-libtsan2_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libtsan2:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libubsan1:amd64.
+Preparing to unpack .../17-libubsan1_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libubsan1:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libhwasan0:amd64.
+Preparing to unpack .../18-libhwasan0_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libhwasan0:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libquadmath0:amd64.
+Preparing to unpack .../19-libquadmath0_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libquadmath0:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libgcc-15-dev:amd64.
+Preparing to unpack .../20-libgcc-15-dev_15.2.0-16ubuntu1_amd64.deb ...
+Unpacking libgcc-15-dev:amd64 (15.2.0-16ubuntu1) ...
+Selecting previously unselected package gcc-15-x86-64-linux-gnu.
+Preparing to unpack .../21-gcc-15-x86-64-linux-gnu_15.2.0-16ubuntu1_amd64.deb ...
+Unpacking gcc-15-x86-64-linux-gnu (15.2.0-16ubuntu1) ...
+Selecting previously unselected package gcc-15.
+Preparing to unpack .../22-gcc-15_15.2.0-16ubuntu1_amd64.deb ...
+Unpacking gcc-15 (15.2.0-16ubuntu1) ...
+Selecting previously unselected package gcc-x86-64-linux-gnu.
+Preparing to unpack .../23-gcc-x86-64-linux-gnu_4%3a15.2.0-5ubuntu1_amd64.deb ...
+Unpacking gcc-x86-64-linux-gnu (4:15.2.0-5ubuntu1) ...
+Selecting previously unselected package gcc.
+Preparing to unpack .../24-gcc_4%3a15.2.0-5ubuntu1_amd64.deb ...
+Unpacking gcc (4:15.2.0-5ubuntu1) ...
+Selecting previously unselected package libstdc++-15-dev:amd64.
+Preparing to unpack .../25-libstdc++-15-dev_15.2.0-16ubuntu1_amd64.deb ...
+Unpacking libstdc++-15-dev:amd64 (15.2.0-16ubuntu1) ...
+Selecting previously unselected package g++-15-x86-64-linux-gnu.
+Preparing to unpack .../26-g++-15-x86-64-linux-gnu_15.2.0-16ubuntu1_amd64.deb ...
+Unpacking g++-15-x86-64-linux-gnu (15.2.0-16ubuntu1) ...
+Selecting previously unselected package g++-15.
+Preparing to unpack .../27-g++-15_15.2.0-16ubuntu1_amd64.deb ...
+Unpacking g++-15 (15.2.0-16ubuntu1) ...
+Selecting previously unselected package g++-x86-64-linux-gnu.
+Preparing to unpack .../28-g++-x86-64-linux-gnu_4%3a15.2.0-5ubuntu1_amd64.deb ...
+Unpacking g++-x86-64-linux-gnu (4:15.2.0-5ubuntu1) ...
+Selecting previously unselected package g++.
+Preparing to unpack .../29-g++_4%3a15.2.0-5ubuntu1_amd64.deb ...
+Unpacking g++ (4:15.2.0-5ubuntu1) ...
+Selecting previously unselected package libdpkg-perl.
+Preparing to unpack .../30-libdpkg-perl_1.23.7ubuntu1_all.deb ...
+Unpacking libdpkg-perl (1.23.7ubuntu1) ...
+Selecting previously unselected package bzip2.
+Preparing to unpack .../31-bzip2_1.0.8-6build2_amd64.deb ...
+Unpacking bzip2 (1.0.8-6build2) ...
+Selecting previously unselected package lto-disabled-list.
+Preparing to unpack .../32-lto-disabled-list_79_all.deb ...
+Unpacking lto-disabled-list (79) ...
+Selecting previously unselected package dpkg-dev.
+Preparing to unpack .../33-dpkg-dev_1.23.7ubuntu1_all.deb ...
+Unpacking dpkg-dev (1.23.7ubuntu1) ...
+Selecting previously unselected package build-essential.
+Preparing to unpack .../34-build-essential_12.12ubuntu2_amd64.deb ...
+Unpacking build-essential (12.12ubuntu2) ...
+Setting up lto-disabled-list (79) ...
+Setting up linux-libc-dev:amd64 (7.0.0-12.12) ...
+Setting up libgomp1:amd64 (16-20260322-1ubuntu1) ...
+Setting up bzip2 (1.0.8-6build2) ...
+Setting up rpcsvc-proto (1.4.3-1build1) ...
+Setting up libquadmath0:amd64 (16-20260322-1ubuntu1) ...
+Setting up libmpc3:amd64 (1.3.1-2) ...
+Setting up libdpkg-perl (1.23.7ubuntu1) ...
+Setting up libubsan1:amd64 (16-20260322-1ubuntu1) ...
+Setting up libhwasan0:amd64 (16-20260322-1ubuntu1) ...
+Setting up libasan8:amd64 (16-20260322-1ubuntu1) ...
+Setting up libtsan2:amd64 (16-20260322-1ubuntu1) ...
+Setting up libisl23:amd64 (0.27-1build1) ...
+Setting up libc-dev-bin (2.43-2ubuntu1) ...
+Setting up gcc-15-base:amd64 (15.2.0-16ubuntu1) ...
+Setting up libcc1-0:amd64 (16-20260322-1ubuntu1) ...
+Setting up liblsan0:amd64 (16-20260322-1ubuntu1) ...
+Setting up libitm1:amd64 (16-20260322-1ubuntu1) ...
+Setting up libgcc-15-dev:amd64 (15.2.0-16ubuntu1) ...
+Setting up cpp-15-x86-64-linux-gnu (15.2.0-16ubuntu1) ...
+Setting up dpkg-dev (1.23.7ubuntu1) ...
+Setting up gcc-15-x86-64-linux-gnu (15.2.0-16ubuntu1) ...
+Setting up cpp-15 (15.2.0-16ubuntu1) ...
+Setting up libc6-dev:amd64 (2.43-2ubuntu1) ...
+Setting up cpp-x86-64-linux-gnu (4:15.2.0-5ubuntu1) ...
+Setting up gcc-x86-64-linux-gnu (4:15.2.0-5ubuntu1) ...
+Setting up gcc-15 (15.2.0-16ubuntu1) ...
+Setting up libstdc++-15-dev:amd64 (15.2.0-16ubuntu1) ...
+Setting up cpp (4:15.2.0-5ubuntu1) ...
+Setting up g++-15-x86-64-linux-gnu (15.2.0-16ubuntu1) ...
+Setting up gcc (4:15.2.0-5ubuntu1) ...
+Setting up g++-x86-64-linux-gnu (4:15.2.0-5ubuntu1) ...
+Setting up g++-15 (15.2.0-16ubuntu1) ...
+Setting up g++ (4:15.2.0-5ubuntu1) ...
+update-alternatives: using /usr/bin/g++ to provide /usr/bin/c++ (c++) in auto mode
+Setting up build-essential (12.12ubuntu2) ...
+Processing triggers for man-db (2.13.1-1build1) ...
+Processing triggers for libc-bin (2.43-2ubuntu1) ...
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+autopkgtest [20:46:32]: test build-simple-library: [-----------------------
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- rocm-cmake: Set license file to /tmp/tmp.RPZ8ndgkg3/src/LICENSE.
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.RPZ8ndgkg3/build
+[ 50%] Building CXX object CMakeFiles/mylib.dir/mylib.cpp.o
+[100%] Linking CXX static library libmylib.a
+[100%] Built target mylib
+-- Install configuration: ""
+-- Installing: /tmp/tmp.RPZ8ndgkg3/install/include
+-- Installing: /tmp/tmp.RPZ8ndgkg3/install/include/mylib.h
+-- Installing: /tmp/tmp.RPZ8ndgkg3/install/lib/libmylib.a
+-- Installing: /tmp/tmp.RPZ8ndgkg3/install/lib/cmake/mylib/mylib-targets.cmake
+-- Installing: /tmp/tmp.RPZ8ndgkg3/install/lib/cmake/mylib/mylib-targets-noconfig.cmake
+-- Installing: /tmp/tmp.RPZ8ndgkg3/install/lib/cmake/mylib/mylib-config.cmake
+-- Installing: /tmp/tmp.RPZ8ndgkg3/install/lib/cmake/mylib/mylib-config-version.cmake
+-- Installing: /tmp/tmp.RPZ8ndgkg3/install/share/doc/mylib/LICENSE
+PASS: build-simple-library test succeeded
+autopkgtest [20:46:33]: test build-simple-library: -----------------------]
+autopkgtest [20:46:34]: test build-simple-library:  - - - - - - - - - - results - - - - - - - - - -
+build-simple-library PASS
+autopkgtest [20:46:34]: test upstream-tests: preparing testbed
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+autopkgtest [20:46:35]: test upstream-tests: [-----------------------
+Running test: analyze-gh.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-s3Rkt/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Clang tidy not found
+-- Cppcheck not found
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.hUXHbAUqh1/tmp-s3Rkt/builds/VBOYd
+[ 33%] Building CXX object CMakeFiles/simple.dir/simple.cpp.o
+[ 66%] Building CXX object CMakeFiles/simple.dir/simple2.cpp.o
+[100%] Linking CXX static library libsimple.a
+[100%] Built target simple
+Built target analyze
+Built target analyze
+[100%] Built target simple
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-s3Rkt/usr/include
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-s3Rkt/usr/include/simple.h
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-s3Rkt/usr/lib/libsimple.a
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-s3Rkt/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-s3Rkt/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Clang tidy not found
+-- Cppcheck not found
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.hUXHbAUqh1/tmp-s3Rkt/builds/p9Cbk
+[ 33%] Building CXX object CMakeFiles/simple.dir/simple.cpp.o
+[ 66%] Building CXX object CMakeFiles/simple.dir/simple2.cpp.o
+[100%] Linking CXX static library libsimple.a
+[100%] Built target simple
+Built target analyze
+Built target analyze
+[100%] Built target simple
+Install the project...
+-- Install configuration: ""
+-- Up-to-date: /tmp/tmp.hUXHbAUqh1/tmp-s3Rkt/usr/include
+-- Up-to-date: /tmp/tmp.hUXHbAUqh1/tmp-s3Rkt/usr/include/simple.h
+-- Up-to-date: /tmp/tmp.hUXHbAUqh1/tmp-s3Rkt/usr/lib/libsimple.a
+Running test: analyze.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-CK5bz/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Clang tidy not found
+-- Cppcheck not found
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.hUXHbAUqh1/tmp-CK5bz/builds/6Y1YH
+[ 33%] Building CXX object CMakeFiles/simple.dir/simple.cpp.o
+[ 66%] Building CXX object CMakeFiles/simple.dir/simple2.cpp.o
+[100%] Linking CXX static library libsimple.a
+[100%] Built target simple
+Built target analyze
+Built target analyze
+[100%] Built target simple
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-CK5bz/usr/include
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-CK5bz/usr/include/simple.h
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-CK5bz/usr/lib/libsimple.a
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-CK5bz/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-CK5bz/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Clang tidy not found
+-- Cppcheck not found
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.hUXHbAUqh1/tmp-CK5bz/builds/nOPYb
+[ 33%] Building CXX object CMakeFiles/simple.dir/simple.cpp.o
+[ 66%] Building CXX object CMakeFiles/simple.dir/simple2.cpp.o
+[100%] Linking CXX static library libsimple.a
+[100%] Built target simple
+Built target analyze
+Built target analyze
+[100%] Built target simple
+Install the project...
+-- Install configuration: ""
+-- Up-to-date: /tmp/tmp.hUXHbAUqh1/tmp-CK5bz/usr/include
+-- Up-to-date: /tmp/tmp.hUXHbAUqh1/tmp-CK5bz/usr/include/simple.h
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-CK5bz/usr/lib/libsimple.a
+Running test: basic-shared.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-ryTe7/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- rocm-cmake: Set license file to /tmp/autopkgtest.icb9Vf/build.NxA/src/test/libsimple/LICENSE.
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.hUXHbAUqh1/tmp-ryTe7/builds/iLKWQ
+[ 25%] Building CXX object CMakeFiles/simple.dir/simple.cpp.o
+[ 50%] Linking CXX shared library lib/libsimple.so
+[ 50%] Built target simple
+[ 75%] Building CXX object CMakeFiles/simple-main.dir/main.cpp.o
+[100%] Linking CXX executable bin/simple-main
+[100%] Built target simple-main
+[ 50%] Built target simple
+[100%] Built target simple-main
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-ryTe7/usr/share/doc/simple/LICENSE
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-ryTe7/usr/include
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-ryTe7/usr/include/simple.h
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-ryTe7/usr/lib/libsimple.so.1.1.2
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-ryTe7/usr/lib/libsimple.so.1
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.hUXHbAUqh1/tmp-ryTe7/usr/lib/libsimple.so.1.1.2" to "$ORIGIN/../lib:$ORIGIN/../lib/simple/lib"
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-ryTe7/usr/lib/libsimple.so
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-ryTe7/usr/bin/simple-main
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.hUXHbAUqh1/tmp-ryTe7/usr/bin/simple-main" to "$ORIGIN/../lib:$ORIGIN/../lib/simple/lib"
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-ryTe7/usr/lib/cmake/simple/importtarget.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-ryTe7/usr/lib/cmake/simple/simple-targets.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-ryTe7/usr/lib/cmake/simple/simple-targets-noconfig.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-ryTe7/usr/lib/cmake/simple/simple-config.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-ryTe7/usr/lib/cmake/simple/simple-config-version.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-ryTe7/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-ryTe7/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- PKG: simple
+-- PKG_TARGET: simple
+-- CHECK_TARGET: simple
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    ROCM_ERROR_TOOLCHAIN_VAR
+    ROCM_SYMLINK_LIBS
+
+
+-- Build files have been written to: /tmp/tmp.hUXHbAUqh1/tmp-ryTe7/builds/GEANM
+[ 50%] Building CXX object CMakeFiles/main.dir/main.cpp.o
+[100%] Linking CXX executable main
+[100%] Built target main
+[100%] Built target main
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-ryTe7/usr/bin/main
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.hUXHbAUqh1/tmp-ryTe7/usr/bin/main" to ""
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-ryTe7/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-ryTe7/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.hUXHbAUqh1/tmp-ryTe7/builds/HxIaH
+[ 50%] Building CXX object CMakeFiles/basic.dir/main.cpp.o
+[100%] Linking CXX shared library libbasic.so
+[100%] Built target basic
+[100%] Built target basic
+Install the project...
+-- Install configuration: ""
+-- Up-to-date: /tmp/tmp.hUXHbAUqh1/tmp-ryTe7/usr/include
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-ryTe7/usr/include/basic.h
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-ryTe7/usr/lib/libbasic.so
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.hUXHbAUqh1/tmp-ryTe7/usr/lib/libbasic.so" to "$ORIGIN/../lib:$ORIGIN/../lib/basic/lib"
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-ryTe7/usr/lib/cmake/basic/basic-targets.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-ryTe7/usr/lib/cmake/basic/basic-targets-noconfig.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-ryTe7/usr/lib/cmake/basic/basic-config.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-ryTe7/usr/lib/cmake/basic/basic-config-version.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-ryTe7/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-ryTe7/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- PKG: basic
+-- PKG_TARGET: basic
+-- CHECK_TARGET: basic
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    ROCM_ERROR_TOOLCHAIN_VAR
+    ROCM_SYMLINK_LIBS
+
+
+-- Build files have been written to: /tmp/tmp.hUXHbAUqh1/tmp-ryTe7/builds/eSHmO
+[ 50%] Building CXX object CMakeFiles/main.dir/main.cpp.o
+[100%] Linking CXX executable main
+[100%] Built target main
+[100%] Built target main
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-ryTe7/usr/bin/main
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.hUXHbAUqh1/tmp-ryTe7/usr/bin/main" to ""
+Running test: basic-static.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-2hpV9/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- rocm-cmake: Set license file to /tmp/autopkgtest.icb9Vf/build.NxA/src/test/libsimple/LICENSE.
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.hUXHbAUqh1/tmp-2hpV9/builds/62916
+[ 25%] Building CXX object CMakeFiles/simple.dir/simple.cpp.o
+[ 50%] Linking CXX static library lib/libsimple.a
+[ 50%] Built target simple
+[ 75%] Building CXX object CMakeFiles/simple-main.dir/main.cpp.o
+[100%] Linking CXX executable bin/simple-main
+[100%] Built target simple-main
+[ 50%] Built target simple
+[100%] Built target simple-main
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-2hpV9/usr/share/doc/simple/LICENSE
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-2hpV9/usr/include
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-2hpV9/usr/include/simple.h
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-2hpV9/usr/lib/libsimple.a
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-2hpV9/usr/bin/simple-main
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.hUXHbAUqh1/tmp-2hpV9/usr/bin/simple-main" to "$ORIGIN/../lib:$ORIGIN/../lib/simple/lib"
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-2hpV9/usr/lib/cmake/simple/importtarget.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-2hpV9/usr/lib/cmake/simple/simple-targets.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-2hpV9/usr/lib/cmake/simple/simple-targets-noconfig.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-2hpV9/usr/lib/cmake/simple/simple-config.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-2hpV9/usr/lib/cmake/simple/simple-config-version.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-2hpV9/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-2hpV9/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- PKG: simple
+-- PKG_TARGET: simple
+-- CHECK_TARGET: simple
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    ROCM_ERROR_TOOLCHAIN_VAR
+    ROCM_SYMLINK_LIBS
+
+
+-- Build files have been written to: /tmp/tmp.hUXHbAUqh1/tmp-2hpV9/builds/u7G69
+[ 50%] Building CXX object CMakeFiles/main.dir/main.cpp.o
+[100%] Linking CXX executable main
+[100%] Built target main
+[100%] Built target main
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-2hpV9/usr/bin/main
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-2hpV9/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-2hpV9/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.hUXHbAUqh1/tmp-2hpV9/builds/feXeC
+[ 50%] Building CXX object CMakeFiles/basic.dir/main.cpp.o
+[100%] Linking CXX static library libbasic.a
+[100%] Built target basic
+[100%] Built target basic
+Install the project...
+-- Install configuration: ""
+-- Up-to-date: /tmp/tmp.hUXHbAUqh1/tmp-2hpV9/usr/include
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-2hpV9/usr/include/basic.h
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-2hpV9/usr/lib/libbasic.a
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-2hpV9/usr/lib/cmake/basic/basic-targets.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-2hpV9/usr/lib/cmake/basic/basic-targets-noconfig.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-2hpV9/usr/lib/cmake/basic/basic-config.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-2hpV9/usr/lib/cmake/basic/basic-config-version.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-2hpV9/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-2hpV9/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- PKG: basic
+-- PKG_TARGET: basic
+-- CHECK_TARGET: simple
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    ROCM_ERROR_TOOLCHAIN_VAR
+    ROCM_SYMLINK_LIBS
+
+
+-- Build files have been written to: /tmp/tmp.hUXHbAUqh1/tmp-2hpV9/builds/C8rcj
+[ 50%] Building CXX object CMakeFiles/main.dir/main.cpp.o
+[100%] Linking CXX executable main
+[100%] Built target main
+[100%] Built target main
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-2hpV9/usr/bin/main
+Skipping test: doc-sphinxdoxygen.cmake (requires sphinx)
+Running test: headeronly.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-vWnFO/usr"
+
+
+-- rocm-cmake: Set license file to /tmp/autopkgtest.icb9Vf/build.NxA/src/test/libheaderonly/LICENSE.
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.hUXHbAUqh1/tmp-vWnFO/builds/Az9zq
+Run CPack packaging tool...
+CPack: Create package using TGZ
+CPack: Install projects
+CPack: - Run preinstall target for: headeronly
+CPack: - Install project: headeronly []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.hUXHbAUqh1/tmp-vWnFO/builds/Az9zq/headeronly-1.0.0-Linux-devel.tar.gz generated.
+CPack: Create package using ZIP
+CPack: Install projects
+CPack: - Run preinstall target for: headeronly
+CPack: - Install project: headeronly []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.hUXHbAUqh1/tmp-vWnFO/builds/Az9zq/headeronly-1.0.0-Linux-devel.zip generated.
+CPack: Create package using DEB
+CPack: Install projects
+CPack: - Run preinstall target for: headeronly
+CPack: - Install project: headeronly []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.hUXHbAUqh1/tmp-vWnFO/builds/Az9zq/headeronly-dev_1.0.0_amd64.deb generated.
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-vWnFO/usr/share/doc/headeronly/LICENSE
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-vWnFO/usr/include
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-vWnFO/usr/include/headeronly.h
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-vWnFO/usr/headeronly/include/
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-vWnFO/usr/headeronly/include//headeronly.h
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-vWnFO/usr/lib/cmake/headeronly/importtarget.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-vWnFO/usr/lib/cmake/headeronly/headeronly-targets.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-vWnFO/usr/lib/cmake/headeronly/headeronly-config.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-vWnFO/usr/lib/cmake/headeronly/headeronly-config-version.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-vWnFO/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-vWnFO/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- PKG: headeronly
+-- PKG_TARGET: headeronly
+-- CHECK_TARGET: headeronly
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    ROCM_ERROR_TOOLCHAIN_VAR
+    ROCM_SYMLINK_LIBS
+
+
+-- Build files have been written to: /tmp/tmp.hUXHbAUqh1/tmp-vWnFO/builds/lvQeF
+[ 50%] Building CXX object CMakeFiles/main.dir/main.cpp.o
+[100%] Linking CXX executable main
+[100%] Built target main
+[100%] Built target main
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-vWnFO/usr/bin/main
+Running test: libprivate.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-l7ORU/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- rocm-cmake: Set license file to /tmp/autopkgtest.icb9Vf/build.NxA/src/test/libprivate/LICENSE.
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.hUXHbAUqh1/tmp-l7ORU/builds/6jz6A
+[ 25%] Building CXX object CMakeFiles/simple_private.dir/simpleprivate.cpp.o
+[ 50%] Linking CXX static library lib/libsimple_private.a
+[ 50%] Built target simple_private
+[ 75%] Building CXX object CMakeFiles/simple_private_main.dir/main.cpp.o
+[100%] Linking CXX executable bin/simple_private_main
+[100%] Built target simple_private_main
+[ 50%] Built target simple_private
+[100%] Built target simple_private_main
+Run CPack packaging tool...
+CPack: Create package using TGZ
+CPack: Install projects
+CPack: - Run preinstall target for: libprivate
+CPack: - Install project: libprivate []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.hUXHbAUqh1/tmp-l7ORU/builds/6jz6A/simple-private-1.0.0-Linux-devel.tar.gz generated.
+CPack: Create package using ZIP
+CPack: Install projects
+CPack: - Run preinstall target for: libprivate
+CPack: - Install project: libprivate []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.hUXHbAUqh1/tmp-l7ORU/builds/6jz6A/simple-private-1.0.0-Linux-devel.zip generated.
+CPack: Create package using DEB
+CPack: Install projects
+CPack: - Run preinstall target for: libprivate
+CPack: - Install project: libprivate []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.hUXHbAUqh1/tmp-l7ORU/builds/6jz6A/simple-private-dev_1.0.0_amd64.deb generated.
+[ 50%] Built target simple_private
+[100%] Built target simple_private_main
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-l7ORU/usr/share/doc/simple-private/LICENSE
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-l7ORU/usr/rocm/lib/libprivate/include
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-l7ORU/usr/rocm/lib/libprivate/include/simpleprivate.h
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-l7ORU/usr/rocm/lib/libprivate/lib/libsimple_private.a
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-l7ORU/usr/rocm/lib/libprivate/bin/simple_private_main
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.hUXHbAUqh1/tmp-l7ORU/usr/rocm/lib/libprivate/bin/simple_private_main" to "$ORIGIN/../lib:$ORIGIN/../../"
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-l7ORU/usr/rocm/lib/cmake/libprivate/importtarget.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-l7ORU/usr/rocm/lib/cmake/libprivate/libprivate-targets.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-l7ORU/usr/rocm/lib/cmake/libprivate/libprivate-targets-noconfig.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-l7ORU/usr/rocm/lib/cmake/libprivate/libprivate-config.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-l7ORU/usr/rocm/lib/cmake/libprivate/libprivate-config-version.cmake
+-- symlink: ../../../rocm/lib/cmake/libprivate/importtarget.cmake -> /tmp/tmp.hUXHbAUqh1/tmp-l7ORU/usr/lib/cmake/libprivate/importtarget.cmake
+-- symlink: ../../../rocm/lib/cmake/libprivate/libprivate-config-version.cmake -> /tmp/tmp.hUXHbAUqh1/tmp-l7ORU/usr/lib/cmake/libprivate/libprivate-config-version.cmake
+-- symlink: ../../../rocm/lib/cmake/libprivate/libprivate-config.cmake -> /tmp/tmp.hUXHbAUqh1/tmp-l7ORU/usr/lib/cmake/libprivate/libprivate-config.cmake
+-- symlink: ../../../rocm/lib/cmake/libprivate/libprivate-targets-noconfig.cmake -> /tmp/tmp.hUXHbAUqh1/tmp-l7ORU/usr/lib/cmake/libprivate/libprivate-targets-noconfig.cmake
+-- symlink: ../../../rocm/lib/cmake/libprivate/libprivate-targets.cmake -> /tmp/tmp.hUXHbAUqh1/tmp-l7ORU/usr/lib/cmake/libprivate/libprivate-targets.cmake
+-- symlink: ../../../rocm/lib/libprivate/bin/simple_private_main -> /tmp/tmp.hUXHbAUqh1/tmp-l7ORU/usr/lib/libprivate/bin/simple_private_main
+-- symlink: ../../../rocm/lib/libprivate/include/simpleprivate.h -> /tmp/tmp.hUXHbAUqh1/tmp-l7ORU/usr/lib/libprivate/include/simpleprivate.h
+-- symlink: ../../../rocm/lib/libprivate/lib/libsimple_private.a -> /tmp/tmp.hUXHbAUqh1/tmp-l7ORU/usr/lib/libprivate/lib/libsimple_private.a
+-- symlink: ../../../rocm/lib/cmake/libprivate/importtarget.cmake -> /tmp/tmp.hUXHbAUqh1/tmp-l7ORU/usr/lib/cmake/libprivate/importtarget.cmake
+-- symlink: ../../../rocm/lib/cmake/libprivate/libprivate-config-version.cmake -> /tmp/tmp.hUXHbAUqh1/tmp-l7ORU/usr/lib/cmake/libprivate/libprivate-config-version.cmake
+-- symlink: ../../../rocm/lib/cmake/libprivate/libprivate-config.cmake -> /tmp/tmp.hUXHbAUqh1/tmp-l7ORU/usr/lib/cmake/libprivate/libprivate-config.cmake
+-- symlink: ../../../rocm/lib/cmake/libprivate/libprivate-targets-noconfig.cmake -> /tmp/tmp.hUXHbAUqh1/tmp-l7ORU/usr/lib/cmake/libprivate/libprivate-targets-noconfig.cmake
+-- symlink: ../../../rocm/lib/cmake/libprivate/libprivate-targets.cmake -> /tmp/tmp.hUXHbAUqh1/tmp-l7ORU/usr/lib/cmake/libprivate/libprivate-targets.cmake
+-- symlink: ../../../rocm/lib/libprivate/bin/simple_private_main -> /tmp/tmp.hUXHbAUqh1/tmp-l7ORU/usr/lib/libprivate/bin/simple_private_main
+-- symlink: ../../../rocm/lib/libprivate/include/simpleprivate.h -> /tmp/tmp.hUXHbAUqh1/tmp-l7ORU/usr/lib/libprivate/include/simpleprivate.h
+-- symlink: ../../../rocm/lib/libprivate/lib/libsimple_private.a -> /tmp/tmp.hUXHbAUqh1/tmp-l7ORU/usr/lib/libprivate/lib/libsimple_private.a
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-l7ORU/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-l7ORU/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- rocm-cmake: Set license file to /tmp/autopkgtest.icb9Vf/build.NxA/src/test/libprivate/LICENSE.
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.hUXHbAUqh1/tmp-l7ORU/builds/iqrE9
+[ 25%] Building CXX object CMakeFiles/simple_private.dir/simpleprivate.cpp.o
+[ 50%] Linking CXX static library lib/libsimple_private.a
+[ 50%] Built target simple_private
+[ 75%] Building CXX object CMakeFiles/simple_private_main.dir/main.cpp.o
+[100%] Linking CXX executable bin/simple_private_main
+[100%] Built target simple_private_main
+[ 50%] Built target simple_private
+[100%] Built target simple_private_main
+Install the project...
+-- Install configuration: ""
+-- Up-to-date: /tmp/tmp.hUXHbAUqh1/tmp-l7ORU/usr/share/doc/simple-private/LICENSE
+-- Up-to-date: /tmp/tmp.hUXHbAUqh1/tmp-l7ORU/usr/lib/libprivate/include
+-- Up-to-date: /tmp/tmp.hUXHbAUqh1/tmp-l7ORU/usr/lib/libprivate/include/simpleprivate.h
+-- Up-to-date: /tmp/tmp.hUXHbAUqh1/tmp-l7ORU/usr/lib/libprivate/lib/libsimple_private.a
+-- Up-to-date: /tmp/tmp.hUXHbAUqh1/tmp-l7ORU/usr/lib/libprivate/bin/simple_private_main
+-- Up-to-date: /tmp/tmp.hUXHbAUqh1/tmp-l7ORU/usr/lib/cmake/libprivate/importtarget.cmake
+-- Old export file "/tmp/tmp.hUXHbAUqh1/tmp-l7ORU/usr/lib/cmake/libprivate/libprivate-targets.cmake" will be replaced.  Removing files [/tmp/tmp.hUXHbAUqh1/tmp-l7ORU/usr/lib/cmake/libprivate/libprivate-targets-noconfig.cmake].
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-l7ORU/usr/lib/cmake/libprivate/libprivate-targets.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-l7ORU/usr/lib/cmake/libprivate/libprivate-targets-noconfig.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-l7ORU/usr/lib/cmake/libprivate/libprivate-config.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-l7ORU/usr/lib/cmake/libprivate/libprivate-config-version.cmake
+Running test: rename-compatibility.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-44k8E/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- rocm-cmake: Set license file to /tmp/autopkgtest.icb9Vf/build.NxA/src/test/libsimplecompat/LICENSE.
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.hUXHbAUqh1/tmp-44k8E/builds/jC7Py
+[ 25%] Building CXX object CMakeFiles/simple.dir/simple.cpp.o
+[ 50%] Linking CXX static library lib/libsimple.a
+[ 50%] Built target simple
+[ 75%] Building CXX object CMakeFiles/simple-main.dir/main.cpp.o
+[100%] Linking CXX executable bin/simple-main
+[100%] Built target simple-main
+[ 50%] Built target simple
+[100%] Built target simple-main
+Run CPack packaging tool...
+CPack: Create package using TGZ
+CPack: Install projects
+CPack: - Run preinstall target for: simple
+CPack: - Install project: simple []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.hUXHbAUqh1/tmp-44k8E/builds/jC7Py/simple-1.0.0-Linux-devel.tar.gz generated.
+CPack: Create package using ZIP
+CPack: Install projects
+CPack: - Run preinstall target for: simple
+CPack: - Install project: simple []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.hUXHbAUqh1/tmp-44k8E/builds/jC7Py/simple-1.0.0-Linux-devel.zip generated.
+CPack: Create package using DEB
+CPack: Install projects
+CPack: - Run preinstall target for: simple
+CPack: - Install project: simple []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.hUXHbAUqh1/tmp-44k8E/builds/jC7Py/simple-dev_1.0.0_amd64.deb generated.
+[ 50%] Built target simple
+[100%] Built target simple-main
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-44k8E/usr/share/doc/simple/LICENSE
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-44k8E/usr/include
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-44k8E/usr/include/simple.h
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-44k8E/usr/lib/libsimple.a
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-44k8E/usr/bin/simple-main
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.hUXHbAUqh1/tmp-44k8E/usr/bin/simple-main" to "$ORIGIN/../lib:$ORIGIN/../lib/simple/lib"
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-44k8E/usr/lib/cmake/simple/importtarget.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-44k8E/usr/lib/cmake/simple/simple-targets.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-44k8E/usr/lib/cmake/simple/simple-targets-noconfig.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-44k8E/usr/lib/cmake/simple/simple-config.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-44k8E/usr/lib/cmake/simple/simple-config-version.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-44k8E/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-44k8E/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- PKG: simple
+-- PKG_TARGET: simple
+-- CHECK_TARGET: simple
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    ROCM_ERROR_TOOLCHAIN_VAR
+    ROCM_SYMLINK_LIBS
+
+
+-- Build files have been written to: /tmp/tmp.hUXHbAUqh1/tmp-44k8E/builds/1Johk
+[ 50%] Building CXX object CMakeFiles/main.dir/main.cpp.o
+[100%] Linking CXX executable main
+[100%] Built target main
+[100%] Built target main
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-44k8E/usr/bin/main
+Running test: rocm-find-program-version.cmake
+CMake Warning at /usr/share/rocmcmakebuildtools/cmake/ROCMUtilities.cmake:77 (message):
+  Could not determine the version of program foobar.
+Call Stack (most recent call first):
+  /tmp/autopkgtest.icb9Vf/build.NxA/src/test/pass/rocm-find-program-version.cmake:28 (rocm_find_program_version)
+  test.cmake:177 (include)
+
+
+Running test: rocm-join-if-set.cmake
+Running test: rocm-list-split.cmake
+Running test: rocm-package-add-dependencies.cmake
+Running test: rocm-package-setup-component.cmake
+Running test: simple-build-id.cmake
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-3nWIY/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- rocm-cmake: Set license file to /tmp/autopkgtest.icb9Vf/build.NxA/src/test/libsimple/LICENSE.
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.hUXHbAUqh1/tmp-3nWIY/builds/3JH5S
+[ 25%] Building CXX object CMakeFiles/simple.dir/simple.cpp.o
+[ 50%] Linking CXX static library lib/libsimple.a
+[ 50%] Built target simple
+[ 75%] Building CXX object CMakeFiles/simple-main.dir/main.cpp.o
+[100%] Linking CXX executable bin/simple-main
+[100%] Built target simple-main
+[ 50%] Built target simple
+[100%] Built target simple-main
+Run CPack packaging tool...
+CPack: Create package using TGZ
+CPack: Install projects
+CPack: - Run preinstall target for: simple
+CPack: - Install project: simple []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.hUXHbAUqh1/tmp-3nWIY/builds/3JH5S/simple-1.0.0-Linux-devel.tar.gz generated.
+CPack: Create package using ZIP
+CPack: Install projects
+CPack: - Run preinstall target for: simple
+CPack: - Install project: simple []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.hUXHbAUqh1/tmp-3nWIY/builds/3JH5S/simple-1.0.0-Linux-devel.zip generated.
+CPack: Create package using DEB
+CPack: Install projects
+CPack: - Run preinstall target for: simple
+CPack: - Install project: simple []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.hUXHbAUqh1/tmp-3nWIY/builds/3JH5S/simple-dev_1.0.0_amd64.deb generated.
+[ 50%] Built target simple
+[100%] Built target simple-main
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-3nWIY/usr/share/doc/simple/LICENSE
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-3nWIY/usr/include
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-3nWIY/usr/include/simple.h
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-3nWIY/usr/lib/libsimple.a
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-3nWIY/usr/bin/simple-main
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.hUXHbAUqh1/tmp-3nWIY/usr/bin/simple-main" to "$ORIGIN/../lib:$ORIGIN/../lib/simple/lib"
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-3nWIY/usr/lib/cmake/simple/importtarget.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-3nWIY/usr/lib/cmake/simple/simple-targets.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-3nWIY/usr/lib/cmake/simple/simple-targets-noconfig.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-3nWIY/usr/lib/cmake/simple/simple-config.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-3nWIY/usr/lib/cmake/simple/simple-config-version.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-3nWIY/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-3nWIY/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- PKG: simple
+-- PKG_TARGET: simple
+-- CHECK_TARGET: simple
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    ROCM_ERROR_TOOLCHAIN_VAR
+    ROCM_SYMLINK_LIBS
+
+
+-- Build files have been written to: /tmp/tmp.hUXHbAUqh1/tmp-3nWIY/builds/5PODY
+[ 50%] Building CXX object CMakeFiles/main.dir/main.cpp.o
+[100%] Linking CXX executable main
+[100%] Built target main
+[100%] Built target main
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-3nWIY/usr/bin/main
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-3nWIY/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-3nWIY/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.hUXHbAUqh1/tmp-3nWIY/builds/NhdE6
+[ 50%] Building CXX object CMakeFiles/basic.dir/main.cpp.o
+[100%] Linking CXX static library libbasic.a
+[100%] Built target basic
+[100%] Built target basic
+Install the project...
+-- Install configuration: ""
+-- Up-to-date: /tmp/tmp.hUXHbAUqh1/tmp-3nWIY/usr/include
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-3nWIY/usr/include/basic.h
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-3nWIY/usr/lib/libbasic.a
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-3nWIY/usr/lib/cmake/basic/basic-targets.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-3nWIY/usr/lib/cmake/basic/basic-targets-noconfig.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-3nWIY/usr/lib/cmake/basic/basic-config.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-3nWIY/usr/lib/cmake/basic/basic-config-version.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-3nWIY/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-3nWIY/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- rocm-cmake: Set license file to /tmp/autopkgtest.icb9Vf/build.NxA/src/test/libsimple2/LICENSE.
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.hUXHbAUqh1/tmp-3nWIY/builds/J9Fnw
+[ 50%] Building CXX object CMakeFiles/simple2.dir/simple2.cpp.o
+[100%] Linking CXX static library libsimple2.a
+[100%] Built target simple2
+[100%] Built target simple2
+Run CPack packaging tool...
+CPack: Create package using TGZ
+CPack: Install projects
+CPack: - Run preinstall target for: simple2
+CPack: - Install project: simple2 []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.hUXHbAUqh1/tmp-3nWIY/builds/J9Fnw/simple2-1.0.0-Linux-devel.tar.gz generated.
+CPack: Create package using ZIP
+CPack: Install projects
+CPack: - Run preinstall target for: simple2
+CPack: - Install project: simple2 []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.hUXHbAUqh1/tmp-3nWIY/builds/J9Fnw/simple2-1.0.0-Linux-devel.zip generated.
+CPack: Create package using DEB
+CPack: Install projects
+CPack: - Run preinstall target for: simple2
+CPack: - Install project: simple2 []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.hUXHbAUqh1/tmp-3nWIY/builds/J9Fnw/simple2-dev_1.0.0_amd64.deb generated.
+[100%] Built target simple2
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-3nWIY/usr/share/doc/simple2/LICENSE
+-- Up-to-date: /tmp/tmp.hUXHbAUqh1/tmp-3nWIY/usr/include
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-3nWIY/usr/include/simple2.h
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-3nWIY/usr/lib/libsimple2.a
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-3nWIY/usr/lib/cmake/simple2/importtarget.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-3nWIY/usr/lib/cmake/simple2/simple2-targets.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-3nWIY/usr/lib/cmake/simple2/simple2-targets-noconfig.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-3nWIY/usr/lib/cmake/simple2/simple2-config.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-3nWIY/usr/lib/cmake/simple2/simple2-config-version.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-3nWIY/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-3nWIY/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- PKG: simple2
+-- PKG_TARGET: simple2
+-- CHECK_TARGET: simple2
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    ROCM_ERROR_TOOLCHAIN_VAR
+    ROCM_SYMLINK_LIBS
+
+
+-- Build files have been written to: /tmp/tmp.hUXHbAUqh1/tmp-3nWIY/builds/cwFGT
+[ 50%] Building CXX object CMakeFiles/main.dir/main.cpp.o
+[100%] Linking CXX executable main
+[100%] Built target main
+[100%] Built target main
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-3nWIY/usr/bin/main
+Running test: simple-prefix.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-cjEqX/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- rocm-cmake: Set license file to /tmp/autopkgtest.icb9Vf/build.NxA/src/test/libsimple/LICENSE.
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.hUXHbAUqh1/tmp-cjEqX/builds/Negrc
+[ 25%] Building CXX object CMakeFiles/simple.dir/simple.cpp.o
+[ 50%] Linking CXX static library lib/libsimple.a
+[ 50%] Built target simple
+[ 75%] Building CXX object CMakeFiles/simple-main.dir/main.cpp.o
+[100%] Linking CXX executable bin/simple-main
+[100%] Built target simple-main
+[ 50%] Built target simple
+[100%] Built target simple-main
+Run CPack packaging tool...
+CPack: Create package using TGZ
+CPack: Install projects
+CPack: - Run preinstall target for: simple
+CPack: - Install project: simple []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.hUXHbAUqh1/tmp-cjEqX/builds/Negrc/simple-1.0.0-Linux-devel.tar.gz generated.
+CPack: Create package using ZIP
+CPack: Install projects
+CPack: - Run preinstall target for: simple
+CPack: - Install project: simple []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.hUXHbAUqh1/tmp-cjEqX/builds/Negrc/simple-1.0.0-Linux-devel.zip generated.
+CPack: Create package using DEB
+CPack: Install projects
+CPack: - Run preinstall target for: simple
+CPack: - Install project: simple []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.hUXHbAUqh1/tmp-cjEqX/builds/Negrc/simple-dev_1.0.0_amd64.deb generated.
+[ 50%] Built target simple
+[100%] Built target simple-main
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-cjEqX/usr/share/doc/simple/LICENSE
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-cjEqX/usr/simple/include
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-cjEqX/usr/simple/include/simple.h
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-cjEqX/usr/simple/lib/libsimple.a
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-cjEqX/usr/simple/bin/simple-main
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.hUXHbAUqh1/tmp-cjEqX/usr/simple/bin/simple-main" to "$ORIGIN/../lib:$ORIGIN/../lib/simple/lib"
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-cjEqX/usr/simple/lib/cmake/simple/importtarget.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-cjEqX/usr/simple/lib/cmake/simple/simple-targets.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-cjEqX/usr/simple/lib/cmake/simple/simple-targets-noconfig.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-cjEqX/usr/simple/lib/cmake/simple/simple-config.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-cjEqX/usr/simple/lib/cmake/simple/simple-config-version.cmake
+-- symlink: ../simple/bin/simple-main -> /tmp/tmp.hUXHbAUqh1/tmp-cjEqX/usr/bin/simple-main
+-- symlink: ../simple/include/simple.h -> /tmp/tmp.hUXHbAUqh1/tmp-cjEqX/usr/include/simple.h
+-- symlink: ../../../simple/lib/cmake/simple/importtarget.cmake -> /tmp/tmp.hUXHbAUqh1/tmp-cjEqX/usr/lib/cmake/simple/importtarget.cmake
+-- symlink: ../../../simple/lib/cmake/simple/simple-config-version.cmake -> /tmp/tmp.hUXHbAUqh1/tmp-cjEqX/usr/lib/cmake/simple/simple-config-version.cmake
+-- symlink: ../../../simple/lib/cmake/simple/simple-config.cmake -> /tmp/tmp.hUXHbAUqh1/tmp-cjEqX/usr/lib/cmake/simple/simple-config.cmake
+-- symlink: ../../../simple/lib/cmake/simple/simple-targets-noconfig.cmake -> /tmp/tmp.hUXHbAUqh1/tmp-cjEqX/usr/lib/cmake/simple/simple-targets-noconfig.cmake
+-- symlink: ../../../simple/lib/cmake/simple/simple-targets.cmake -> /tmp/tmp.hUXHbAUqh1/tmp-cjEqX/usr/lib/cmake/simple/simple-targets.cmake
+-- symlink: ../simple/lib/libsimple.a -> /tmp/tmp.hUXHbAUqh1/tmp-cjEqX/usr/lib/libsimple.a
+-- symlink: ../simple/bin/simple-main -> /tmp/tmp.hUXHbAUqh1/tmp-cjEqX/usr/bin/simple-main
+-- symlink: ../simple/include/simple.h -> /tmp/tmp.hUXHbAUqh1/tmp-cjEqX/usr/include/simple.h
+-- symlink: ../../../simple/lib/cmake/simple/importtarget.cmake -> /tmp/tmp.hUXHbAUqh1/tmp-cjEqX/usr/lib/cmake/simple/importtarget.cmake
+-- symlink: ../../../simple/lib/cmake/simple/simple-config-version.cmake -> /tmp/tmp.hUXHbAUqh1/tmp-cjEqX/usr/lib/cmake/simple/simple-config-version.cmake
+-- symlink: ../../../simple/lib/cmake/simple/simple-config.cmake -> /tmp/tmp.hUXHbAUqh1/tmp-cjEqX/usr/lib/cmake/simple/simple-config.cmake
+-- symlink: ../../../simple/lib/cmake/simple/simple-targets-noconfig.cmake -> /tmp/tmp.hUXHbAUqh1/tmp-cjEqX/usr/lib/cmake/simple/simple-targets-noconfig.cmake
+-- symlink: ../../../simple/lib/cmake/simple/simple-targets.cmake -> /tmp/tmp.hUXHbAUqh1/tmp-cjEqX/usr/lib/cmake/simple/simple-targets.cmake
+-- symlink: ../simple/lib/libsimple.a -> /tmp/tmp.hUXHbAUqh1/tmp-cjEqX/usr/lib/libsimple.a
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-cjEqX/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-cjEqX/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.hUXHbAUqh1/tmp-cjEqX/builds/d8Mki
+[ 50%] Building CXX object CMakeFiles/basic.dir/main.cpp.o
+[100%] Linking CXX static library libbasic.a
+[100%] Built target basic
+[100%] Built target basic
+Install the project...
+-- Install configuration: ""
+-- Up-to-date: /tmp/tmp.hUXHbAUqh1/tmp-cjEqX/usr/include
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-cjEqX/usr/include/basic.h
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-cjEqX/usr/lib/libbasic.a
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-cjEqX/usr/lib/cmake/basic/basic-targets.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-cjEqX/usr/lib/cmake/basic/basic-targets-noconfig.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-cjEqX/usr/lib/cmake/basic/basic-config.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-cjEqX/usr/lib/cmake/basic/basic-config-version.cmake
+Running test: simple-rocmversion-env.cmake
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-shGV5/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- rocm-cmake: Set license file to /tmp/autopkgtest.icb9Vf/build.NxA/src/test/libsimple/LICENSE.
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.hUXHbAUqh1/tmp-shGV5/builds/ma7sV
+[ 25%] Building CXX object CMakeFiles/simple.dir/simple.cpp.o
+[ 50%] Linking CXX static library lib/libsimple.a
+[ 50%] Built target simple
+[ 75%] Building CXX object CMakeFiles/simple-main.dir/main.cpp.o
+[100%] Linking CXX executable bin/simple-main
+[100%] Built target simple-main
+[ 50%] Built target simple
+[100%] Built target simple-main
+Run CPack packaging tool...
+CPack: Create package using TGZ
+CPack: Install projects
+CPack: - Run preinstall target for: simple
+CPack: - Install project: simple []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.hUXHbAUqh1/tmp-shGV5/builds/ma7sV/simple-1.0.0.21001-Linux-devel.tar.gz generated.
+CPack: Create package using ZIP
+CPack: Install projects
+CPack: - Run preinstall target for: simple
+CPack: - Install project: simple []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.hUXHbAUqh1/tmp-shGV5/builds/ma7sV/simple-1.0.0.21001-Linux-devel.zip generated.
+CPack: Create package using DEB
+CPack: Install projects
+CPack: - Run preinstall target for: simple
+CPack: - Install project: simple []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.hUXHbAUqh1/tmp-shGV5/builds/ma7sV/simple-dev_1.0.0.21001_amd64.deb generated.
+[ 50%] Built target simple
+[100%] Built target simple-main
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-shGV5/usr/share/doc/simple/LICENSE
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-shGV5/usr/include
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-shGV5/usr/include/simple.h
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-shGV5/usr/lib/libsimple.a
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-shGV5/usr/bin/simple-main
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.hUXHbAUqh1/tmp-shGV5/usr/bin/simple-main" to "$ORIGIN/../lib:$ORIGIN/../lib/simple/lib"
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-shGV5/usr/lib/cmake/simple/importtarget.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-shGV5/usr/lib/cmake/simple/simple-targets.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-shGV5/usr/lib/cmake/simple/simple-targets-noconfig.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-shGV5/usr/lib/cmake/simple/simple-config.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-shGV5/usr/lib/cmake/simple/simple-config-version.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-shGV5/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-shGV5/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- PKG: simple
+-- PKG_TARGET: simple
+-- CHECK_TARGET: simple
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    ROCM_ERROR_TOOLCHAIN_VAR
+    ROCM_SYMLINK_LIBS
+
+
+-- Build files have been written to: /tmp/tmp.hUXHbAUqh1/tmp-shGV5/builds/nUfdD
+[ 50%] Building CXX object CMakeFiles/main.dir/main.cpp.o
+[100%] Linking CXX executable main
+[100%] Built target main
+[100%] Built target main
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-shGV5/usr/bin/main
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-shGV5/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-shGV5/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.hUXHbAUqh1/tmp-shGV5/builds/kYvvd
+[ 50%] Building CXX object CMakeFiles/basic.dir/main.cpp.o
+[100%] Linking CXX static library libbasic.a
+[100%] Built target basic
+[100%] Built target basic
+Install the project...
+-- Install configuration: ""
+-- Up-to-date: /tmp/tmp.hUXHbAUqh1/tmp-shGV5/usr/include
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-shGV5/usr/include/basic.h
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-shGV5/usr/lib/libbasic.a
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-shGV5/usr/lib/cmake/basic/basic-targets.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-shGV5/usr/lib/cmake/basic/basic-targets-noconfig.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-shGV5/usr/lib/cmake/basic/basic-config.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-shGV5/usr/lib/cmake/basic/basic-config-version.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-shGV5/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-shGV5/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- rocm-cmake: Set license file to /tmp/autopkgtest.icb9Vf/build.NxA/src/test/libsimple2/LICENSE.
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.hUXHbAUqh1/tmp-shGV5/builds/woKIB
+[ 50%] Building CXX object CMakeFiles/simple2.dir/simple2.cpp.o
+[100%] Linking CXX static library libsimple2.a
+[100%] Built target simple2
+[100%] Built target simple2
+Run CPack packaging tool...
+CPack: Create package using TGZ
+CPack: Install projects
+CPack: - Run preinstall target for: simple2
+CPack: - Install project: simple2 []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.hUXHbAUqh1/tmp-shGV5/builds/woKIB/simple2-1.0.0.21001-Linux-devel.tar.gz generated.
+CPack: Create package using ZIP
+CPack: Install projects
+CPack: - Run preinstall target for: simple2
+CPack: - Install project: simple2 []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.hUXHbAUqh1/tmp-shGV5/builds/woKIB/simple2-1.0.0.21001-Linux-devel.zip generated.
+CPack: Create package using DEB
+CPack: Install projects
+CPack: - Run preinstall target for: simple2
+CPack: - Install project: simple2 []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.hUXHbAUqh1/tmp-shGV5/builds/woKIB/simple2-dev_1.0.0.21001_amd64.deb generated.
+[100%] Built target simple2
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-shGV5/usr/share/doc/simple2/LICENSE
+-- Up-to-date: /tmp/tmp.hUXHbAUqh1/tmp-shGV5/usr/include
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-shGV5/usr/include/simple2.h
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-shGV5/usr/lib/libsimple2.a
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-shGV5/usr/lib/cmake/simple2/importtarget.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-shGV5/usr/lib/cmake/simple2/simple2-targets.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-shGV5/usr/lib/cmake/simple2/simple2-targets-noconfig.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-shGV5/usr/lib/cmake/simple2/simple2-config.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-shGV5/usr/lib/cmake/simple2/simple2-config-version.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-shGV5/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-shGV5/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- PKG: simple2
+-- PKG_TARGET: simple2
+-- CHECK_TARGET: simple2
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    ROCM_ERROR_TOOLCHAIN_VAR
+    ROCM_SYMLINK_LIBS
+
+
+-- Build files have been written to: /tmp/tmp.hUXHbAUqh1/tmp-shGV5/builds/dq1YZ
+[ 50%] Building CXX object CMakeFiles/main.dir/main.cpp.o
+[100%] Linking CXX executable main
+[100%] Built target main
+[100%] Built target main
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-shGV5/usr/bin/main
+Running test: simple-soversion-env.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-hhvz1/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- rocm-cmake: Set license file to /tmp/autopkgtest.icb9Vf/build.NxA/src/test/libsimple/LICENSE.
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.hUXHbAUqh1/tmp-hhvz1/builds/fmEHY
+[ 25%] Building CXX object CMakeFiles/simple.dir/simple.cpp.o
+[ 50%] Linking CXX shared library lib/libsimple.so
+[ 50%] Built target simple
+[ 75%] Building CXX object CMakeFiles/simple-main.dir/main.cpp.o
+[100%] Linking CXX executable bin/simple-main
+[100%] Built target simple-main
+[ 50%] Built target simple
+[100%] Built target simple-main
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-hhvz1/usr/share/doc/simple/LICENSE
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-hhvz1/usr/include
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-hhvz1/usr/include/simple.h
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-hhvz1/usr/lib/libsimple.so.1.1.2.21001
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-hhvz1/usr/lib/libsimple.so.1
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.hUXHbAUqh1/tmp-hhvz1/usr/lib/libsimple.so.1.1.2.21001" to "$ORIGIN/../lib:$ORIGIN/../lib/simple/lib"
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-hhvz1/usr/lib/libsimple.so
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-hhvz1/usr/bin/simple-main
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.hUXHbAUqh1/tmp-hhvz1/usr/bin/simple-main" to "$ORIGIN/../lib:$ORIGIN/../lib/simple/lib"
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-hhvz1/usr/lib/cmake/simple/importtarget.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-hhvz1/usr/lib/cmake/simple/simple-targets.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-hhvz1/usr/lib/cmake/simple/simple-targets-noconfig.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-hhvz1/usr/lib/cmake/simple/simple-config.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-hhvz1/usr/lib/cmake/simple/simple-config-version.cmake
+Running test: simple-soversion.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-I3nuX/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- rocm-cmake: Set license file to /tmp/autopkgtest.icb9Vf/build.NxA/src/test/libsimple/LICENSE.
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.hUXHbAUqh1/tmp-I3nuX/builds/QUiSV
+[ 25%] Building CXX object CMakeFiles/simple.dir/simple.cpp.o
+[ 50%] Linking CXX shared library lib/libsimple.so
+[ 50%] Built target simple
+[ 75%] Building CXX object CMakeFiles/simple-main.dir/main.cpp.o
+[100%] Linking CXX executable bin/simple-main
+[100%] Built target simple-main
+[ 50%] Built target simple
+[100%] Built target simple-main
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-I3nuX/usr/share/doc/simple/LICENSE
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-I3nuX/usr/include
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-I3nuX/usr/include/simple.h
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-I3nuX/usr/lib/libsimple.so.1.1.2
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-I3nuX/usr/lib/libsimple.so.1
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.hUXHbAUqh1/tmp-I3nuX/usr/lib/libsimple.so.1.1.2" to "$ORIGIN/../lib:$ORIGIN/../lib/simple/lib"
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-I3nuX/usr/lib/libsimple.so
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-I3nuX/usr/bin/simple-main
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.hUXHbAUqh1/tmp-I3nuX/usr/bin/simple-main" to "$ORIGIN/../lib:$ORIGIN/../lib/simple/lib"
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-I3nuX/usr/lib/cmake/simple/importtarget.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-I3nuX/usr/lib/cmake/simple/simple-targets.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-I3nuX/usr/lib/cmake/simple/simple-targets-noconfig.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-I3nuX/usr/lib/cmake/simple/simple-config.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-I3nuX/usr/lib/cmake/simple/simple-config-version.cmake
+Running test: simple-test-package.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-HxCdW/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Enable test package simple
+-- rocm-cmake: Set license file to /tmp/autopkgtest.icb9Vf/build.NxA/src/test/libsimpletest/LICENSE.
+-- Generate ctest file
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.hUXHbAUqh1/tmp-HxCdW/builds/MIgJM
+[ 11%] Building CXX object CMakeFiles/simple.dir/simple.cpp.o
+[ 22%] Linking CXX static library lib/libsimple.a
+[ 22%] Built target simple
+[ 33%] Building CXX object CMakeFiles/simple-main.dir/main.cpp.o
+[ 44%] Linking CXX executable bin/simple-main
+[ 44%] Built target simple-main
+[ 55%] Building CXX object test/CMakeFiles/simple-test.dir/__/test.cpp.o
+[ 66%] Linking CXX executable ../bin/simple-test
+[ 66%] Built target simple-test
+[ 77%] Building CXX object test/CMakeFiles/header_include_simple_h.dir/header-main-include-header_include_simple_h.cpp.o
+[ 88%] Building CXX object test/CMakeFiles/header_include_simple_h.dir/header-static-include-header_include_simple_h.cpp.o
+[100%] Linking CXX executable ../bin/header_include_simple_h
+[100%] Built target header_include_simple_h
+Run CPack packaging tool...
+CPack: Create package using TGZ
+CPack: Install projects
+CPack: - Run preinstall target for: simple
+CPack: - Install project: simple []
+CPack: -   Install component: devel
+CPack: -   Install component: tests
+CPack: Create package
+CPack: - package: /tmp/tmp.hUXHbAUqh1/tmp-HxCdW/builds/MIgJM/simple-1.0.0-Linux-devel.tar.gz generated.
+CPack: - package: /tmp/tmp.hUXHbAUqh1/tmp-HxCdW/builds/MIgJM/simple-1.0.0-Linux-tests.tar.gz generated.
+CPack: Create package using ZIP
+CPack: Install projects
+CPack: - Run preinstall target for: simple
+CPack: - Install project: simple []
+CPack: -   Install component: devel
+CPack: -   Install component: tests
+CPack: Create package
+CPack: - package: /tmp/tmp.hUXHbAUqh1/tmp-HxCdW/builds/MIgJM/simple-1.0.0-Linux-devel.zip generated.
+CPack: - package: /tmp/tmp.hUXHbAUqh1/tmp-HxCdW/builds/MIgJM/simple-1.0.0-Linux-tests.zip generated.
+CPack: Create package using DEB
+CPack: Install projects
+CPack: - Run preinstall target for: simple
+CPack: - Install project: simple []
+CPack: -   Install component: devel
+CPack: -   Install component: tests
+CPack: Create package
+CPack: - package: /tmp/tmp.hUXHbAUqh1/tmp-HxCdW/builds/MIgJM/simple-dev_1.0.0_amd64.deb generated.
+CPack: - package: /tmp/tmp.hUXHbAUqh1/tmp-HxCdW/builds/MIgJM/simple-tests_1.0.0_amd64.deb generated.
+tmp/tmp.hUXHbAUqh1/tmp-HxCdW/usr/libexec/
+tmp/tmp.hUXHbAUqh1/tmp-HxCdW/usr/libexec/installed-tests/
+tmp/tmp.hUXHbAUqh1/tmp-HxCdW/usr/libexec/installed-tests/simple/
+tmp/tmp.hUXHbAUqh1/tmp-HxCdW/usr/libexec/installed-tests/simple/CTestTestfile.cmake
+tmp/tmp.hUXHbAUqh1/tmp-HxCdW/usr/libexec/installed-tests/simple/bin/
+tmp/tmp.hUXHbAUqh1/tmp-HxCdW/usr/libexec/installed-tests/simple/bin/header_include_simple_h
+tmp/tmp.hUXHbAUqh1/tmp-HxCdW/usr/libexec/installed-tests/simple/bin/simple-test
+Running test: simple-test.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-o5xK7/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Enable test package simple
+-- rocm-cmake: Set license file to /tmp/autopkgtest.icb9Vf/build.NxA/src/test/libsimpletest/LICENSE.
+-- Generate ctest file
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.hUXHbAUqh1/tmp-o5xK7/builds/ardFh
+[ 11%] Building CXX object CMakeFiles/simple.dir/simple.cpp.o
+[ 22%] Linking CXX static library lib/libsimple.a
+[ 22%] Built target simple
+[ 33%] Building CXX object CMakeFiles/simple-main.dir/main.cpp.o
+[ 44%] Linking CXX executable bin/simple-main
+[ 44%] Built target simple-main
+[ 55%] Building CXX object test/CMakeFiles/simple-test.dir/__/test.cpp.o
+[ 66%] Linking CXX executable ../bin/simple-test
+[ 66%] Built target simple-test
+[ 77%] Building CXX object test/CMakeFiles/header_include_simple_h.dir/header-main-include-header_include_simple_h.cpp.o
+[ 88%] Building CXX object test/CMakeFiles/header_include_simple_h.dir/header-static-include-header_include_simple_h.cpp.o
+[100%] Linking CXX executable ../bin/header_include_simple_h
+[100%] Built target header_include_simple_h
+[ 28%] Built target simple
+[ 71%] Built target header_include_simple_h
+[100%] Built target simple-test
+[100%] Built target tests
+Test project /tmp/tmp.hUXHbAUqh1/tmp-o5xK7/builds/ardFh
+    Start 1: simple-test
+    Start 2: header_include_simple_h
+1/2 Test #1: simple-test ......................   Passed    0.00 sec
+2/2 Test #2: header_include_simple_h ..........   Passed    0.00 sec
+
+100% tests passed, 0 tests failed out of 2
+
+Total Test time (real) =   0.00 sec
+[100%] Built target check
+[ 28%] Built target simple
+[ 71%] Built target header_include_simple_h
+[100%] Built target simple-test
+[100%] Built target tests
+-- Install configuration: ""
+-- Install component: "tests"
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-o5xK7/usr/libexec/installed-tests/simple/bin/simple-test
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.hUXHbAUqh1/tmp-o5xK7/usr/libexec/installed-tests/simple/bin/simple-test" to "$ORIGIN/../../../../lib:$ORIGIN/../../../../lib/simple/lib"
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-o5xK7/usr/libexec/installed-tests/simple/bin/header_include_simple_h
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.hUXHbAUqh1/tmp-o5xK7/usr/libexec/installed-tests/simple/bin/header_include_simple_h" to "$ORIGIN/../../../../lib:$ORIGIN/../../../../lib/simple/lib"
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-o5xK7/usr/libexec/installed-tests/simple//CTestTestfile.cmake
+[100%] Built target install-tests
+[ 22%] Built target simple
+[ 44%] Built target simple-main
+[ 66%] Built target simple-test
+[100%] Built target header_include_simple_h
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-o5xK7/usr/share/doc/simple/LICENSE
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-o5xK7/usr/include
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-o5xK7/usr/include/simple.h
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-o5xK7/usr/lib/libsimple.a
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-o5xK7/usr/bin/simple-main
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.hUXHbAUqh1/tmp-o5xK7/usr/bin/simple-main" to "$ORIGIN/../lib:$ORIGIN/../lib/simple/lib"
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-o5xK7/usr/lib/cmake/simple/simple-targets.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-o5xK7/usr/lib/cmake/simple/simple-targets-noconfig.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-o5xK7/usr/lib/cmake/simple/simple-config.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-o5xK7/usr/lib/cmake/simple/simple-config-version.cmake
+Test project /tmp/tmp.hUXHbAUqh1/tmp-o5xK7/usr/libexec/installed-tests/simple
+    Start 1: simple-test
+1/2 Test #1: simple-test ......................   Passed    0.00 sec
+    Start 2: header_include_simple_h
+2/2 Test #2: header_include_simple_h ..........   Passed    0.00 sec
+
+100% tests passed, 0 tests failed out of 2
+
+Total Test time (real) =   0.00 sec
+Running test: simple.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-jCMgq/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- rocm-cmake: Set license file to /tmp/autopkgtest.icb9Vf/build.NxA/src/test/libsimple/LICENSE.
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.hUXHbAUqh1/tmp-jCMgq/builds/reWFz
+[ 25%] Building CXX object CMakeFiles/simple.dir/simple.cpp.o
+[ 50%] Linking CXX static library lib/libsimple.a
+[ 50%] Built target simple
+[ 75%] Building CXX object CMakeFiles/simple-main.dir/main.cpp.o
+[100%] Linking CXX executable bin/simple-main
+[100%] Built target simple-main
+[ 50%] Built target simple
+[100%] Built target simple-main
+Run CPack packaging tool...
+CPack: Create package using TGZ
+CPack: Install projects
+CPack: - Run preinstall target for: simple
+CPack: - Install project: simple []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.hUXHbAUqh1/tmp-jCMgq/builds/reWFz/simple-1.0.0-Linux-devel.tar.gz generated.
+CPack: Create package using ZIP
+CPack: Install projects
+CPack: - Run preinstall target for: simple
+CPack: - Install project: simple []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.hUXHbAUqh1/tmp-jCMgq/builds/reWFz/simple-1.0.0-Linux-devel.zip generated.
+CPack: Create package using DEB
+CPack: Install projects
+CPack: - Run preinstall target for: simple
+CPack: - Install project: simple []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.hUXHbAUqh1/tmp-jCMgq/builds/reWFz/simple-dev_1.0.0_amd64.deb generated.
+[ 50%] Built target simple
+[100%] Built target simple-main
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-jCMgq/usr/share/doc/simple/LICENSE
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-jCMgq/usr/include
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-jCMgq/usr/include/simple.h
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-jCMgq/usr/lib/libsimple.a
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-jCMgq/usr/bin/simple-main
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.hUXHbAUqh1/tmp-jCMgq/usr/bin/simple-main" to "$ORIGIN/../lib:$ORIGIN/../lib/simple/lib"
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-jCMgq/usr/lib/cmake/simple/importtarget.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-jCMgq/usr/lib/cmake/simple/simple-targets.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-jCMgq/usr/lib/cmake/simple/simple-targets-noconfig.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-jCMgq/usr/lib/cmake/simple/simple-config.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-jCMgq/usr/lib/cmake/simple/simple-config-version.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-jCMgq/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-jCMgq/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- PKG: simple
+-- PKG_TARGET: simple
+-- CHECK_TARGET: simple
+-- Configuring done (0.1s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    ROCM_ERROR_TOOLCHAIN_VAR
+    ROCM_SYMLINK_LIBS
+
+
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.hUXHbAUqh1/tmp-jCMgq/builds/EdHfZ
+[ 50%] Building CXX object CMakeFiles/main.dir/main.cpp.o
+[100%] Linking CXX executable main
+[100%] Built target main
+[100%] Built target main
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-jCMgq/usr/bin/main
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-jCMgq/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-jCMgq/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.hUXHbAUqh1/tmp-jCMgq/builds/mMKxf
+[ 50%] Building CXX object CMakeFiles/basic.dir/main.cpp.o
+[100%] Linking CXX static library libbasic.a
+[100%] Built target basic
+[100%] Built target basic
+Install the project...
+-- Install configuration: ""
+-- Up-to-date: /tmp/tmp.hUXHbAUqh1/tmp-jCMgq/usr/include
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-jCMgq/usr/include/basic.h
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-jCMgq/usr/lib/libbasic.a
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-jCMgq/usr/lib/cmake/basic/basic-targets.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-jCMgq/usr/lib/cmake/basic/basic-targets-noconfig.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-jCMgq/usr/lib/cmake/basic/basic-config.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-jCMgq/usr/lib/cmake/basic/basic-config-version.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-jCMgq/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-jCMgq/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- rocm-cmake: Set license file to /tmp/autopkgtest.icb9Vf/build.NxA/src/test/libsimple2/LICENSE.
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.hUXHbAUqh1/tmp-jCMgq/builds/AtZEs
+[ 50%] Building CXX object CMakeFiles/simple2.dir/simple2.cpp.o
+[100%] Linking CXX static library libsimple2.a
+[100%] Built target simple2
+[100%] Built target simple2
+Run CPack packaging tool...
+CPack: Create package using TGZ
+CPack: Install projects
+CPack: - Run preinstall target for: simple2
+CPack: - Install project: simple2 []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.hUXHbAUqh1/tmp-jCMgq/builds/AtZEs/simple2-1.0.0-Linux-devel.tar.gz generated.
+CPack: Create package using ZIP
+CPack: Install projects
+CPack: - Run preinstall target for: simple2
+CPack: - Install project: simple2 []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.hUXHbAUqh1/tmp-jCMgq/builds/AtZEs/simple2-1.0.0-Linux-devel.zip generated.
+CPack: Create package using DEB
+CPack: Install projects
+CPack: - Run preinstall target for: simple2
+CPack: - Install project: simple2 []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.hUXHbAUqh1/tmp-jCMgq/builds/AtZEs/simple2-dev_1.0.0_amd64.deb generated.
+[100%] Built target simple2
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-jCMgq/usr/share/doc/simple2/LICENSE
+-- Up-to-date: /tmp/tmp.hUXHbAUqh1/tmp-jCMgq/usr/include
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-jCMgq/usr/include/simple2.h
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-jCMgq/usr/lib/libsimple2.a
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-jCMgq/usr/lib/cmake/simple2/importtarget.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-jCMgq/usr/lib/cmake/simple2/simple2-targets.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-jCMgq/usr/lib/cmake/simple2/simple2-targets-noconfig.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-jCMgq/usr/lib/cmake/simple2/simple2-config.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-jCMgq/usr/lib/cmake/simple2/simple2-config-version.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-jCMgq/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-jCMgq/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- PKG: simple2
+-- PKG_TARGET: simple2
+-- CHECK_TARGET: simple2
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    ROCM_ERROR_TOOLCHAIN_VAR
+    ROCM_SYMLINK_LIBS
+
+
+-- Build files have been written to: /tmp/tmp.hUXHbAUqh1/tmp-jCMgq/builds/Wip4S
+[ 50%] Building CXX object CMakeFiles/main.dir/main.cpp.o
+[100%] Linking CXX executable main
+[100%] Built target main
+[100%] Built target main
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-jCMgq/usr/bin/main
+Skipping test: version-atag-short.cmake (requires git)
+Skipping test: version-atag.cmake (requires git)
+Skipping test: version-nogit.cmake (requires git)
+Skipping test: version-norepo.cmake (requires git)
+Skipping test: version-parent.cmake (requires git)
+Skipping test: version-patch.cmake (requires git)
+Skipping test: version.cmake (requires git)
+Running test: wrapper-nowarn.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-paDae/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- rocm-cmake: Set license file to /tmp/autopkgtest.icb9Vf/build.NxA/src/test/libwrapper/LICENSE.
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.hUXHbAUqh1/tmp-paDae/builds/94fdt
+[ 16%] Building CXX object CMakeFiles/wrapper.dir/wrapper.cpp.o
+[ 33%] Linking CXX shared library lib/libwrapper.so
+[ 33%] Built target wrapper
+[ 50%] Building CXX object CMakeFiles/wrapper-use-wrapper.dir/use_wrapper.cpp.o
+[ 66%] Linking CXX executable bin/wrapper-use-wrapper
+[ 66%] Built target wrapper-use-wrapper
+[ 83%] Building CXX object CMakeFiles/wrapper-use-original.dir/use_original.cpp.o
+[100%] Linking CXX executable bin/wrapper-use-original
+[100%] Built target wrapper-use-original
+[ 33%] Built target wrapper
+[ 66%] Built target wrapper-use-wrapper
+[100%] Built target wrapper-use-original
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-paDae/usr/share/doc/wrapper/LICENSE
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-paDae/usr/include
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-paDae/usr/include/wrapper
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-paDae/usr/include/wrapper/wrapper.h
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-paDae/usr/include/other
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-paDae/usr/include/other/th
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-paDae/usr/include/other/th/two-letter-dir.h
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-paDae/usr/include/other/other.h
+-- Up-to-date: /tmp/tmp.hUXHbAUqh1/tmp-paDae/usr/include
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-paDae/usr/include/th
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-paDae/usr/include/th/two-letter-dir.h
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-paDae/usr/include/other.h
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-paDae/usr/include/wrapper.h
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-paDae/usr/lib/libwrapper.so.1.1.2
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-paDae/usr/lib/libwrapper.so.1
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.hUXHbAUqh1/tmp-paDae/usr/lib/libwrapper.so.1.1.2" to "$ORIGIN/../lib:$ORIGIN/../lib/test-wrapper/lib"
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-paDae/usr/lib/libwrapper.so
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-paDae/usr/bin/wrapper-use-wrapper
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.hUXHbAUqh1/tmp-paDae/usr/bin/wrapper-use-wrapper" to "$ORIGIN/../lib:$ORIGIN/../lib/test-wrapper/lib"
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-paDae/usr/bin/wrapper-use-original
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.hUXHbAUqh1/tmp-paDae/usr/bin/wrapper-use-original" to "$ORIGIN/../lib:$ORIGIN/../lib/test-wrapper/lib"
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-paDae/usr/lib/cmake/test-wrapper/importtarget.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-paDae/usr/lib/cmake/test-wrapper/test-wrapper-targets.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-paDae/usr/lib/cmake/test-wrapper/test-wrapper-targets-noconfig.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-paDae/usr/lib/cmake/test-wrapper/test-wrapper-config.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-paDae/usr/lib/cmake/test-wrapper/test-wrapper-config-version.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-paDae/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-paDae/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- PKG: test-wrapper
+-- PKG_TARGET: wrapper
+-- CHECK_TARGET: wrapper
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    ROCM_ERROR_TOOLCHAIN_VAR
+    ROCM_SYMLINK_LIBS
+
+
+-- Build files have been written to: /tmp/tmp.hUXHbAUqh1/tmp-paDae/builds/0wzkI
+[ 50%] Building CXX object CMakeFiles/main.dir/main.cpp.o
+In file included from /tmp/tmp.hUXHbAUqh1/tmp-paDae/builds/0wzkI/main.cpp:2:
+/tmp/tmp.hUXHbAUqh1/tmp-paDae/usr/include/wrapper.h:22:2: warning: #warning "This file is deprecated. Use the header file from /tmp/tmp.hUXHbAUqh1/tmp-paDae/usr/include/wrapper/wrapper.h by using #include <wrapper/wrapper.h>" [-Wcpp]
+   22 | #warning "This file is deprecated. Use the header file from /tmp/tmp.hUXHbAUqh1/tmp-paDae/usr/include/wrapper/wrapper.h by using #include <wrapper/wrapper.h>"
+      |  ^~~~~~~
+[100%] Linking CXX executable main
+[100%] Built target main
+[100%] Built target main
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-paDae/usr/bin/main
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.hUXHbAUqh1/tmp-paDae/usr/bin/main" to ""
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-paDae/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-paDae/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- PKG: test-wrapper
+-- PKG_TARGET: wrapper
+-- CHECK_TARGET: wrapper
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    ROCM_ERROR_TOOLCHAIN_VAR
+    ROCM_SYMLINK_LIBS
+
+
+-- Build files have been written to: /tmp/tmp.hUXHbAUqh1/tmp-paDae/builds/Nuqye
+[ 50%] Building CXX object CMakeFiles/main.dir/main.cpp.o
+[100%] Linking CXX executable main
+[100%] Built target main
+[100%] Built target main
+Install the project...
+-- Install configuration: ""
+-- Up-to-date: /tmp/tmp.hUXHbAUqh1/tmp-paDae/usr/bin/main
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-paDae/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-paDae/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- PKG: test-wrapper
+-- PKG_TARGET: wrapper
+-- CHECK_TARGET: wrapper
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    ROCM_ERROR_TOOLCHAIN_VAR
+    ROCM_SYMLINK_LIBS
+
+
+-- Build files have been written to: /tmp/tmp.hUXHbAUqh1/tmp-paDae/builds/jAegh
+[ 50%] Building CXX object CMakeFiles/main.dir/main.cpp.o
+In file included from /tmp/tmp.hUXHbAUqh1/tmp-paDae/builds/jAegh/main.cpp:2:
+/tmp/tmp.hUXHbAUqh1/tmp-paDae/usr/include/other.h:22:2: warning: #warning "This file is deprecated. Use the header file from /tmp/tmp.hUXHbAUqh1/tmp-paDae/usr/include/other/other.h by using #include <other/other.h>" [-Wcpp]
+   22 | #warning "This file is deprecated. Use the header file from /tmp/tmp.hUXHbAUqh1/tmp-paDae/usr/include/other/other.h by using #include <other/other.h>"
+      |  ^~~~~~~
+[100%] Linking CXX executable main
+[100%] Built target main
+[100%] Built target main
+Install the project...
+-- Install configuration: ""
+-- Up-to-date: /tmp/tmp.hUXHbAUqh1/tmp-paDae/usr/bin/main
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-paDae/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-paDae/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- PKG: test-wrapper
+-- PKG_TARGET: wrapper
+-- CHECK_TARGET: wrapper
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    ROCM_ERROR_TOOLCHAIN_VAR
+    ROCM_SYMLINK_LIBS
+
+
+-- Build files have been written to: /tmp/tmp.hUXHbAUqh1/tmp-paDae/builds/GXXAY
+[ 50%] Building CXX object CMakeFiles/main.dir/main.cpp.o
+[100%] Linking CXX executable main
+[100%] Built target main
+[100%] Built target main
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-paDae/usr/bin/main
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.hUXHbAUqh1/tmp-paDae/usr/bin/main" to ""
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-paDae/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-paDae/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- PKG: test-wrapper
+-- PKG_TARGET: wrapper
+-- CHECK_TARGET: wrapper
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    ROCM_ERROR_TOOLCHAIN_VAR
+    ROCM_SYMLINK_LIBS
+
+
+-- Build files have been written to: /tmp/tmp.hUXHbAUqh1/tmp-paDae/builds/vZJ93
+[ 50%] Building CXX object CMakeFiles/main.dir/main.cpp.o
+[100%] Linking CXX executable main
+[100%] Built target main
+[100%] Built target main
+Install the project...
+-- Install configuration: ""
+-- Up-to-date: /tmp/tmp.hUXHbAUqh1/tmp-paDae/usr/bin/main
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-paDae/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-paDae/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- PKG: test-wrapper
+-- PKG_TARGET: wrapper
+-- CHECK_TARGET: wrapper
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    ROCM_ERROR_TOOLCHAIN_VAR
+    ROCM_SYMLINK_LIBS
+
+
+-- Build files have been written to: /tmp/tmp.hUXHbAUqh1/tmp-paDae/builds/Z9N6d
+[ 50%] Building CXX object CMakeFiles/main.dir/main.cpp.o
+In file included from /tmp/tmp.hUXHbAUqh1/tmp-paDae/builds/Z9N6d/main.cpp:2:
+/tmp/tmp.hUXHbAUqh1/tmp-paDae/usr/include/th/two-letter-dir.h:22:2: warning: #warning "This file is deprecated. Use the header file from /tmp/tmp.hUXHbAUqh1/tmp-paDae/usr/include/other/th/two-letter-dir.h by using #include <other/th/two-letter-dir.h>" [-Wcpp]
+   22 | #warning "This file is deprecated. Use the header file from /tmp/tmp.hUXHbAUqh1/tmp-paDae/usr/include/other/th/two-letter-dir.h by using #include <other/th/two-letter-dir.h>"
+      |  ^~~~~~~
+[100%] Linking CXX executable main
+[100%] Built target main
+[100%] Built target main
+Install the project...
+-- Install configuration: ""
+-- Up-to-date: /tmp/tmp.hUXHbAUqh1/tmp-paDae/usr/bin/main
+Running test: wrapper.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- rocm-cmake: Set license file to /tmp/autopkgtest.icb9Vf/build.NxA/src/test/libwrapper/LICENSE.
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.hUXHbAUqh1/tmp-SbM9o/builds/yd9az
+[ 16%] Building CXX object CMakeFiles/wrapper.dir/wrapper.cpp.o
+[ 33%] Linking CXX shared library lib/libwrapper.so
+[ 33%] Built target wrapper
+[ 50%] Building CXX object CMakeFiles/wrapper-use-wrapper.dir/use_wrapper.cpp.o
+In file included from /tmp/autopkgtest.icb9Vf/build.NxA/src/test/libwrapper/use_wrapper.cpp:1:
+/tmp/tmp.hUXHbAUqh1/tmp-SbM9o/builds/yd9az/include/wrapper.h:22:2: warning: #warning "This file is deprecated. Use the header file from /tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr/include/wrapper/wrapper.h by using #include <wrapper/wrapper.h>" [-Wcpp]
+   22 | #warning "This file is deprecated. Use the header file from /tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr/include/wrapper/wrapper.h by using #include <wrapper/wrapper.h>"
+      |  ^~~~~~~
+In file included from /tmp/autopkgtest.icb9Vf/build.NxA/src/test/libwrapper/use_wrapper.cpp:2:
+/tmp/tmp.hUXHbAUqh1/tmp-SbM9o/builds/yd9az/include/other.h:22:2: warning: #warning "This file is deprecated. Use the header file from /tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr/include/other/other.h by using #include <other/other.h>" [-Wcpp]
+   22 | #warning "This file is deprecated. Use the header file from /tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr/include/other/other.h by using #include <other/other.h>"
+      |  ^~~~~~~
+[ 66%] Linking CXX executable bin/wrapper-use-wrapper
+[ 66%] Built target wrapper-use-wrapper
+[ 83%] Building CXX object CMakeFiles/wrapper-use-original.dir/use_original.cpp.o
+[100%] Linking CXX executable bin/wrapper-use-original
+[100%] Built target wrapper-use-original
+[ 33%] Built target wrapper
+[ 66%] Built target wrapper-use-wrapper
+[100%] Built target wrapper-use-original
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr/share/doc/wrapper/LICENSE
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr/include
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr/include/wrapper
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr/include/wrapper/wrapper.h
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr/include/other
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr/include/other/th
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr/include/other/th/two-letter-dir.h
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr/include/other/other.h
+-- Up-to-date: /tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr/include
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr/include/th
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr/include/th/two-letter-dir.h
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr/include/other.h
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr/include/wrapper.h
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr/lib/libwrapper.so.1.1.2
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr/lib/libwrapper.so.1
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr/lib/libwrapper.so.1.1.2" to "$ORIGIN/../lib:$ORIGIN/../lib/test-wrapper/lib"
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr/lib/libwrapper.so
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr/bin/wrapper-use-wrapper
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr/bin/wrapper-use-wrapper" to "$ORIGIN/../lib:$ORIGIN/../lib/test-wrapper/lib"
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr/bin/wrapper-use-original
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr/bin/wrapper-use-original" to "$ORIGIN/../lib:$ORIGIN/../lib/test-wrapper/lib"
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr/lib/cmake/test-wrapper/importtarget.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr/lib/cmake/test-wrapper/test-wrapper-targets.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr/lib/cmake/test-wrapper/test-wrapper-targets-noconfig.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr/lib/cmake/test-wrapper/test-wrapper-config.cmake
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr/lib/cmake/test-wrapper/test-wrapper-config-version.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- PKG: test-wrapper
+-- PKG_TARGET: wrapper
+-- CHECK_TARGET: wrapper
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    ROCM_ERROR_TOOLCHAIN_VAR
+    ROCM_SYMLINK_LIBS
+
+
+-- Build files have been written to: /tmp/tmp.hUXHbAUqh1/tmp-SbM9o/builds/Ycae6
+[ 50%] Building CXX object CMakeFiles/main.dir/main.cpp.o
+In file included from /tmp/tmp.hUXHbAUqh1/tmp-SbM9o/builds/Ycae6/main.cpp:2:
+/tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr/include/wrapper.h:22:2: warning: #warning "This file is deprecated. Use the header file from /tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr/include/wrapper/wrapper.h by using #include <wrapper/wrapper.h>" [-Wcpp]
+   22 | #warning "This file is deprecated. Use the header file from /tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr/include/wrapper/wrapper.h by using #include <wrapper/wrapper.h>"
+      |  ^~~~~~~
+[100%] Linking CXX executable main
+[100%] Built target main
+[100%] Built target main
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr/bin/main
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr/bin/main" to ""
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- PKG: test-wrapper
+-- PKG_TARGET: wrapper
+-- CHECK_TARGET: wrapper
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    ROCM_ERROR_TOOLCHAIN_VAR
+    ROCM_SYMLINK_LIBS
+
+
+-- Build files have been written to: /tmp/tmp.hUXHbAUqh1/tmp-SbM9o/builds/L3WVA
+[ 50%] Building CXX object CMakeFiles/main.dir/main.cpp.o
+[100%] Linking CXX executable main
+[100%] Built target main
+[100%] Built target main
+Install the project...
+-- Install configuration: ""
+-- Up-to-date: /tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr/bin/main
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- PKG: test-wrapper
+-- PKG_TARGET: wrapper
+-- CHECK_TARGET: wrapper
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    ROCM_ERROR_TOOLCHAIN_VAR
+    ROCM_SYMLINK_LIBS
+
+
+-- Build files have been written to: /tmp/tmp.hUXHbAUqh1/tmp-SbM9o/builds/Of9eF
+[ 50%] Building CXX object CMakeFiles/main.dir/main.cpp.o
+In file included from /tmp/tmp.hUXHbAUqh1/tmp-SbM9o/builds/Of9eF/main.cpp:2:
+/tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr/include/other.h:22:2: warning: #warning "This file is deprecated. Use the header file from /tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr/include/other/other.h by using #include <other/other.h>" [-Wcpp]
+   22 | #warning "This file is deprecated. Use the header file from /tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr/include/other/other.h by using #include <other/other.h>"
+      |  ^~~~~~~
+[100%] Linking CXX executable main
+[100%] Built target main
+[100%] Built target main
+Install the project...
+-- Install configuration: ""
+-- Up-to-date: /tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr/bin/main
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- PKG: test-wrapper
+-- PKG_TARGET: wrapper
+-- CHECK_TARGET: wrapper
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    ROCM_ERROR_TOOLCHAIN_VAR
+    ROCM_SYMLINK_LIBS
+
+
+-- Build files have been written to: /tmp/tmp.hUXHbAUqh1/tmp-SbM9o/builds/23INi
+[ 50%] Building CXX object CMakeFiles/main.dir/main.cpp.o
+[100%] Linking CXX executable main
+[100%] Built target main
+[100%] Built target main
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr/bin/main
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr/bin/main" to ""
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- PKG: test-wrapper
+-- PKG_TARGET: wrapper
+-- CHECK_TARGET: wrapper
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    ROCM_ERROR_TOOLCHAIN_VAR
+    ROCM_SYMLINK_LIBS
+
+
+-- Build files have been written to: /tmp/tmp.hUXHbAUqh1/tmp-SbM9o/builds/4mTXn
+[ 50%] Building CXX object CMakeFiles/main.dir/main.cpp.o
+[100%] Linking CXX executable main
+[100%] Built target main
+[100%] Built target main
+Install the project...
+-- Install configuration: ""
+-- Up-to-date: /tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr/bin/main
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- PKG: test-wrapper
+-- PKG_TARGET: wrapper
+-- CHECK_TARGET: wrapper
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    ROCM_ERROR_TOOLCHAIN_VAR
+    ROCM_SYMLINK_LIBS
+
+
+-- Build files have been written to: /tmp/tmp.hUXHbAUqh1/tmp-SbM9o/builds/DMSDq
+[ 50%] Building CXX object CMakeFiles/main.dir/main.cpp.o
+In file included from /tmp/tmp.hUXHbAUqh1/tmp-SbM9o/builds/DMSDq/main.cpp:2:
+/tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr/include/th/two-letter-dir.h:22:2: warning: #warning "This file is deprecated. Use the header file from /tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr/include/other/th/two-letter-dir.h by using #include <other/th/two-letter-dir.h>" [-Wcpp]
+   22 | #warning "This file is deprecated. Use the header file from /tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr/include/other/th/two-letter-dir.h by using #include <other/th/two-letter-dir.h>"
+      |  ^~~~~~~
+[100%] Linking CXX executable main
+[100%] Built target main
+[100%] Built target main
+Install the project...
+-- Install configuration: ""
+-- Up-to-date: /tmp/tmp.hUXHbAUqh1/tmp-SbM9o/usr/bin/main
+PASS: all upstream tests succeeded
+autopkgtest [20:46:53]: test upstream-tests: -----------------------]
+autopkgtest [20:46:54]: test upstream-tests:  - - - - - - - - - - results - - - - - - - - - -
+upstream-tests       PASS
+autopkgtest [20:46:55]: @@@@@@@@@@@@@@@@@@@@ summary
+cmake-find-package   PASS (superficial)
+build-simple-library PASS
+upstream-tests       PASS
