@@ -1,0 +1,6 @@
+ggml_cuda_init: found 1 ROCm devices (Total VRAM: 32624 MiB):
+  Device 0: AMD Radeon AI PRO R9700, gfx1201 (0x1201), VMM: no, Wave Size: 32, VRAM: 32624 MiB
+load_backend: loaded ROCm backend from /usr/lib/x86_64-linux-gnu/ggml/backends0/libggml-hip.so
+load_backend: loaded CPU backend from /usr/lib/x86_64-linux-gnu/ggml/backends0/libggml-cpu-haswell.so
+version: 8064 (Debian)
+built with GNU 15.2.0 for Linux x86_64
