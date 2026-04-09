@@ -1,0 +1,1498 @@
+autopkgtest [03:05:25]: starting date and time: 2026-04-09 03:05:25+0000
+autopkgtest [03:05:25]: version 5.55
+autopkgtest [03:05:25]: host lxc-sessionizer-github-1; command line: /usr/bin/autopkgtest miopen -U '--setup-commands=add-apt-repository -ss -y' '--setup-commands=add-apt-repository ppa:bullwinkle-team/rocm-devel-21 --enable-source -y' -- lxd ubuntu-daily:resolute --profile=rocm-gpu
+autopkgtest [03:07:34]: testbed dpkg architecture: amd64
+autopkgtest [03:07:34]: testbed apt version: 3.1.16
+autopkgtest [03:07:34]: @@@@@@@@@@@@@@@@@@@@ test bed setup
+autopkgtest [03:07:34]: updating testbed package index (apt update)
+Get:1 http://archive.ubuntu.com/ubuntu resolute InRelease [124 kB]
+Get:2 http://archive.ubuntu.com/ubuntu resolute-updates InRelease [124 kB]
+Get:3 http://security.ubuntu.com/ubuntu resolute-security InRelease [124 kB]
+Get:4 http://archive.ubuntu.com/ubuntu resolute-backports InRelease [124 kB]
+Get:5 http://archive.ubuntu.com/ubuntu resolute/main amd64 Packages [1470 kB]
+Get:6 http://archive.ubuntu.com/ubuntu resolute/main Translation-en [525 kB]
+Get:7 http://archive.ubuntu.com/ubuntu resolute/main amd64 Components [394 kB]
+Get:8 http://archive.ubuntu.com/ubuntu resolute/main amd64 c-n-f Metadata [32.4 kB]
+Get:9 http://archive.ubuntu.com/ubuntu resolute/universe amd64 Packages [15.8 MB]
+Get:10 http://security.ubuntu.com/ubuntu resolute-security/main amd64 Components [208 B]
+Get:11 http://archive.ubuntu.com/ubuntu resolute/universe Translation-en [6337 kB]
+Get:12 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Components [212 B]
+Get:13 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 c-n-f Metadata [116 B]
+Get:14 http://security.ubuntu.com/ubuntu resolute-security/restricted amd64 Components [212 B]
+Get:15 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 Components [212 B]
+Get:16 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 c-n-f Metadata [120 B]
+Get:17 http://archive.ubuntu.com/ubuntu resolute/universe amd64 Components [4531 kB]
+Get:18 http://archive.ubuntu.com/ubuntu resolute/universe amd64 c-n-f Metadata [312 kB]
+Get:19 http://archive.ubuntu.com/ubuntu resolute/restricted amd64 Packages [125 kB]
+Get:20 http://archive.ubuntu.com/ubuntu resolute/restricted Translation-en [24.1 kB]
+Get:21 http://archive.ubuntu.com/ubuntu resolute/restricted amd64 Components [556 B]
+Get:22 http://archive.ubuntu.com/ubuntu resolute/restricted amd64 c-n-f Metadata [384 B]
+Get:23 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 Packages [290 kB]
+Get:24 http://archive.ubuntu.com/ubuntu resolute/multiverse Translation-en [127 kB]
+Get:25 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 Components [49.9 kB]
+Get:26 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 c-n-f Metadata [8276 B]
+Get:27 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Components [208 B]
+Get:28 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Components [212 B]
+Get:29 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 c-n-f Metadata [116 B]
+Get:30 http://archive.ubuntu.com/ubuntu resolute-updates/restricted amd64 Components [212 B]
+Get:31 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 Components [216 B]
+Get:32 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 c-n-f Metadata [116 B]
+Get:33 http://archive.ubuntu.com/ubuntu resolute-backports/main amd64 Components [212 B]
+Get:34 http://archive.ubuntu.com/ubuntu resolute-backports/main amd64 c-n-f Metadata [112 B]
+Get:35 http://archive.ubuntu.com/ubuntu resolute-backports/universe amd64 Components [216 B]
+Get:36 http://archive.ubuntu.com/ubuntu resolute-backports/universe amd64 c-n-f Metadata [116 B]
+Get:37 http://archive.ubuntu.com/ubuntu resolute-backports/restricted amd64 Components [216 B]
+Get:38 http://archive.ubuntu.com/ubuntu resolute-backports/restricted amd64 c-n-f Metadata [120 B]
+Get:39 http://archive.ubuntu.com/ubuntu resolute-backports/multiverse amd64 Components [216 B]
+Get:40 http://archive.ubuntu.com/ubuntu resolute-backports/multiverse amd64 c-n-f Metadata [120 B]
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 30.6 MB in 2s (13.2 MB/s)
+Reading package lists...
+autopkgtest [03:07:39]: testbed release detected to be: resolute
+autopkgtest [03:07:39]: updating testbed package index (apt update)
+Hit:1 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Reading package lists...
+Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Get:4 http://archive.ubuntu.com/ubuntu resolute/multiverse Sources [324 kB]
+Hit:5 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Get:6 http://archive.ubuntu.com/ubuntu resolute/main Sources [1413 kB]
+Get:7 http://archive.ubuntu.com/ubuntu resolute/restricted Sources [19.2 kB]
+Get:8 http://archive.ubuntu.com/ubuntu resolute/universe Sources [21.4 MB]
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 23.2 MB in 1s (15.9 MB/s)
+Reading package lists...
+Enabling deb-src for all repositories.
+Added: ## Ubuntu distribution repository
+##
+## The following settings can be adjusted to configure which packages to use from Ubuntu.
+## Mirror your choices (except for URIs and Suites) in the security section below to
+## ensure timely security updates.
+##
+## Types: Append deb-src to enable the fetching of source package.
+## URIs: A URL to the repository (you may add multiple URLs)
+## Suites: The following additional suites can be configured
+##   <name>-updates   - Major bug fix updates produced after the final release of the
+##                      distribution.
+##   <name>-backports - software from this repository may not have been tested as
+##                      extensively as that contained in the main release, although it includes
+##                      newer versions of some applications which may provide useful features.
+##                      Also, please note that software in backports WILL NOT receive any review
+##                      or updates from the Ubuntu security team.
+## Components: Aside from main, the following components can be added to the list
+##   restricted  - Software that may not be under a free license, or protected by patents.
+##   universe    - Community maintained packages. Software in this repository receives maintenance
+##                 from volunteers in the Ubuntu community, or a 10 year security maintenance
+##                 commitment from Canonical when an Ubuntu Pro subscription is attached.
+##   multiverse  - Community maintained of restricted. Software from this repository is
+##                 ENTIRELY UNSUPPORTED by the Ubuntu team, and may not be under a free
+##                 licence. Please satisfy yourself as to your rights to use the software.
+##                 Also, please note that software in multiverse WILL NOT receive any
+##                 review or updates from the Ubuntu security team.
+##
+## See the sources.list(5) manual page for further settings.
+Types: deb-src
+URIs: http://archive.ubuntu.com/ubuntu
+Suites: resolute resolute-updates resolute-backports
+Components: restricted main universe multiverse
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+Added: ## Ubuntu security updates. Aside from URIs and Suites,
+## this should mirror your choices in the previous section.
+Types: deb-src
+URIs: http://security.ubuntu.com/ubuntu
+Suites: resolute-security
+Components: restricted main universe multiverse
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+Hit:1 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Get:5 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel-21/ubuntu resolute InRelease [27.2 kB]
+Get:6 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel-21/ubuntu resolute/main Sources [16.1 kB]
+Get:7 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel-21/ubuntu resolute/main amd64 Packages [24.6 kB]
+Get:8 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel-21/ubuntu resolute/main Translation-en [15.4 kB]
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 83.4 kB in 0s (419 kB/s)
+Reading package lists...
+PPA publishes dbgsym, you may need to include 'main/debug' component
+Repository: 'Types: deb
+URIs: https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel-21/ubuntu/
+Suites: resolute
+Components: main
+'
+Description:
+ROCm development archive which holds packages built against upstream LLVM-21
+More info: https://launchpad.net/~bullwinkle-team/+archive/ubuntu/rocm-devel-21
+Adding repository.
+autopkgtest [03:07:52]: upgrading testbed (apt dist-upgrade and autopurge)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+The following packages will be upgraded:
+  bind9-dnsutils bind9-host bind9-libs dpkg fuse3 gawk gcc-16-base
+  initramfs-tools-bin initramfs-tools-core iproute2 libatomic1 libcbor0.10
+  libfuse3-4 libgcc-s1 libnetplan1 libpython3.14 libpython3.14-minimal
+  libpython3.14-stdlib libstdc++6 libtirpc-common libtirpc3t64 libx11-6
+  libx11-data libxslt1.1 linux-base netplan-generator netplan.io
+  networkd-dispatcher pollinate python3-distupgrade python3-jwt
+  python3-netplan python3-rpds-py python3-software-properties python3.14
+  python3.14-gdbm python3.14-minimal software-properties-common
+  systemd-hwe-hwdb ubuntu-release-upgrader-core unattended-upgrades
+  update-notifier-common
+42 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Need to get 17.2 MB of archives.
+After this operation, 894 kB disk space will be freed.
+Get:1 http://archive.ubuntu.com/ubuntu resolute/main amd64 dpkg amd64 1.23.7ubuntu1 [1285 kB]
+Get:2 http://archive.ubuntu.com/ubuntu resolute/main amd64 gawk amd64 1:5.3.2-1ubuntu1 [526 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute/main amd64 libpython3.14 amd64 3.14.3-5 [2577 kB]
+Get:4 http://archive.ubuntu.com/ubuntu resolute/main amd64 python3.14 amd64 3.14.3-5 [823 kB]
+Get:5 http://archive.ubuntu.com/ubuntu resolute/main amd64 libpython3.14-stdlib amd64 3.14.3-5 [2404 kB]
+Get:6 http://archive.ubuntu.com/ubuntu resolute/main amd64 python3.14-minimal amd64 3.14.3-5 [2580 kB]
+Get:7 http://archive.ubuntu.com/ubuntu resolute/main amd64 libpython3.14-minimal amd64 3.14.3-5 [915 kB]
+Get:8 http://archive.ubuntu.com/ubuntu resolute/main amd64 update-notifier-common all 3.206 [211 kB]
+Get:9 http://archive.ubuntu.com/ubuntu resolute/main amd64 libatomic1 amd64 16-20260322-1ubuntu1 [11.4 kB]
+Get:10 http://archive.ubuntu.com/ubuntu resolute/main amd64 gcc-16-base amd64 16-20260322-1ubuntu1 [38.3 kB]
+Get:11 http://archive.ubuntu.com/ubuntu resolute/main amd64 libstdc++6 amd64 16-20260322-1ubuntu1 [843 kB]
+Get:12 http://archive.ubuntu.com/ubuntu resolute/main amd64 libgcc-s1 amd64 16-20260322-1ubuntu1 [80.3 kB]
+Get:13 http://archive.ubuntu.com/ubuntu resolute/main amd64 libtirpc-common all 1.3.7-0.1 [7114 B]
+Get:14 http://archive.ubuntu.com/ubuntu resolute/main amd64 libtirpc3t64 amd64 1.3.7-0.1 [80.9 kB]
+Get:15 http://archive.ubuntu.com/ubuntu resolute/main amd64 iproute2 amd64 6.19.0-1ubuntu1 [1198 kB]
+Get:16 http://archive.ubuntu.com/ubuntu resolute/main amd64 netplan-generator amd64 1.2-1ubuntu4 [65.1 kB]
+Get:17 http://archive.ubuntu.com/ubuntu resolute/main amd64 python3-netplan amd64 1.2-1ubuntu4 [24.8 kB]
+Get:18 http://archive.ubuntu.com/ubuntu resolute/main amd64 netplan.io amd64 1.2-1ubuntu4 [69.5 kB]
+Get:19 http://archive.ubuntu.com/ubuntu resolute/main amd64 libnetplan1 amd64 1.2-1ubuntu4 [132 kB]
+Get:20 http://archive.ubuntu.com/ubuntu resolute/main amd64 networkd-dispatcher all 2.2.4-1.1ubuntu1 [15.2 kB]
+Get:21 http://archive.ubuntu.com/ubuntu resolute/main amd64 systemd-hwe-hwdb all 259.5.2ubuntu [3326 B]
+Get:22 http://archive.ubuntu.com/ubuntu resolute/main amd64 bind9-dnsutils amd64 1:9.20.18-1ubuntu2 [163 kB]
+Get:23 http://archive.ubuntu.com/ubuntu resolute/main amd64 bind9-host amd64 1:9.20.18-1ubuntu2 [49.8 kB]
+Get:24 http://archive.ubuntu.com/ubuntu resolute/main amd64 bind9-libs amd64 1:9.20.18-1ubuntu2 [1303 kB]
+Get:25 http://archive.ubuntu.com/ubuntu resolute/main amd64 fuse3 amd64 3.18.2-1 [27.5 kB]
+Get:26 http://archive.ubuntu.com/ubuntu resolute/main amd64 libfuse3-4 amd64 3.18.2-1 [93.0 kB]
+Get:27 http://archive.ubuntu.com/ubuntu resolute/main amd64 libcbor0.10 amd64 0.10.2-2ubuntu3 [25.3 kB]
+Get:28 http://archive.ubuntu.com/ubuntu resolute/main amd64 libx11-data all 2:1.8.13-1 [114 kB]
+Get:29 http://archive.ubuntu.com/ubuntu resolute/main amd64 libx11-6 amd64 2:1.8.13-1 [657 kB]
+Get:30 http://archive.ubuntu.com/ubuntu resolute/main amd64 ubuntu-release-upgrader-core all 1:26.04.14 [24.9 kB]
+Get:31 http://archive.ubuntu.com/ubuntu resolute/main amd64 python3-distupgrade all 1:26.04.14 [100 kB]
+Get:32 http://archive.ubuntu.com/ubuntu resolute/main amd64 python3.14-gdbm amd64 3.14.3-5 [28.3 kB]
+Get:33 http://archive.ubuntu.com/ubuntu resolute/main amd64 initramfs-tools-bin amd64 0.151ubuntu1 [24.2 kB]
+Get:34 http://archive.ubuntu.com/ubuntu resolute/main amd64 initramfs-tools-core all 0.151ubuntu1 [50.3 kB]
+Get:35 http://archive.ubuntu.com/ubuntu resolute/main amd64 libxslt1.1 amd64 1.1.45-0.1 [165 kB]
+Get:36 http://archive.ubuntu.com/ubuntu resolute/main amd64 linux-base all 4.15ubuntu5 [30.5 kB]
+Get:37 http://archive.ubuntu.com/ubuntu resolute/main amd64 pollinate all 4.33-4ubuntu6 [11.7 kB]
+Get:38 http://archive.ubuntu.com/ubuntu resolute/main amd64 python3-jwt all 2.10.1-4ubuntu1 [20.6 kB]
+Get:39 http://archive.ubuntu.com/ubuntu resolute/main amd64 python3-rpds-py amd64 0.27.1-2ubuntu3 [281 kB]
+Get:40 http://archive.ubuntu.com/ubuntu resolute/main amd64 software-properties-common all 0.120 [16.6 kB]
+Get:41 http://archive.ubuntu.com/ubuntu resolute/main amd64 python3-software-properties all 0.120 [28.6 kB]
+Get:42 http://archive.ubuntu.com/ubuntu resolute/main amd64 unattended-upgrades all 2.12ubuntu9 [53.3 kB]
+Preconfiguring packages ...
+Fetched 17.2 MB in 2s (10.4 MB/s)
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45007 files and directories currently installed.)
+Preparing to unpack .../dpkg_1.23.7ubuntu1_amd64.deb ...
+Unpacking dpkg (1.23.7ubuntu1) over (1.23.6ubuntu2) ...
+Setting up dpkg (1.23.7ubuntu1) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45007 files and directories currently installed.)
+Preparing to unpack .../0-gawk_1%3a5.3.2-1ubuntu1_amd64.deb ...
+Unpacking gawk (1:5.3.2-1ubuntu1) over (1:5.3.2-1build1) ...
+Preparing to unpack .../1-libpython3.14_3.14.3-5_amd64.deb ...
+Unpacking libpython3.14:amd64 (3.14.3-5) over (3.14.3-3) ...
+Preparing to unpack .../2-python3.14_3.14.3-5_amd64.deb ...
+Unpacking python3.14 (3.14.3-5) over (3.14.3-3) ...
+Preparing to unpack .../3-libpython3.14-stdlib_3.14.3-5_amd64.deb ...
+Unpacking libpython3.14-stdlib:amd64 (3.14.3-5) over (3.14.3-3) ...
+Preparing to unpack .../4-python3.14-minimal_3.14.3-5_amd64.deb ...
+Unpacking python3.14-minimal (3.14.3-5) over (3.14.3-3) ...
+Preparing to unpack .../5-libpython3.14-minimal_3.14.3-5_amd64.deb ...
+Unpacking libpython3.14-minimal:amd64 (3.14.3-5) over (3.14.3-3) ...
+Preparing to unpack .../6-update-notifier-common_3.206_all.deb ...
+Unpacking update-notifier-common (3.206) over (3.205) ...
+Preparing to unpack .../7-libatomic1_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libatomic1:amd64 (16-20260322-1ubuntu1) over (16-20260315-1ubuntu1) ...
+Preparing to unpack .../8-gcc-16-base_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking gcc-16-base:amd64 (16-20260322-1ubuntu1) over (16-20260315-1ubuntu1) ...
+Setting up gcc-16-base:amd64 (16-20260322-1ubuntu1) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45007 files and directories currently installed.)
+Preparing to unpack .../libstdc++6_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libstdc++6:amd64 (16-20260322-1ubuntu1) over (16-20260315-1ubuntu1) ...
+Setting up libstdc++6:amd64 (16-20260322-1ubuntu1) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45007 files and directories currently installed.)
+Preparing to unpack .../libgcc-s1_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libgcc-s1:amd64 (16-20260322-1ubuntu1) over (16-20260315-1ubuntu1) ...
+Setting up libgcc-s1:amd64 (16-20260322-1ubuntu1) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45007 files and directories currently installed.)
+Preparing to unpack .../00-libtirpc-common_1.3.7-0.1_all.deb ...
+Unpacking libtirpc-common (1.3.7-0.1) over (1.3.6+ds-1ubuntu1) ...
+Preparing to unpack .../01-libtirpc3t64_1.3.7-0.1_amd64.deb ...
+Unpacking libtirpc3t64:amd64 (1.3.7-0.1) over (1.3.6+ds-1ubuntu1) ...
+Preparing to unpack .../02-iproute2_6.19.0-1ubuntu1_amd64.deb ...
+Unpacking iproute2 (6.19.0-1ubuntu1) over (6.18.0-1ubuntu1) ...
+Preparing to unpack .../03-netplan-generator_1.2-1ubuntu4_amd64.deb ...
+Adding 'diversion of /lib/systemd/system-generators/netplan to /lib/systemd/system-generators/netplan.usr-is-merged by netplan-generator'
+Unpacking netplan-generator (1.2-1ubuntu4) over (1.2-1ubuntu3) ...
+Preparing to unpack .../04-python3-netplan_1.2-1ubuntu4_amd64.deb ...
+Unpacking python3-netplan (1.2-1ubuntu4) over (1.2-1ubuntu3) ...
+Preparing to unpack .../05-netplan.io_1.2-1ubuntu4_amd64.deb ...
+Unpacking netplan.io (1.2-1ubuntu4) over (1.2-1ubuntu3) ...
+Preparing to unpack .../06-libnetplan1_1.2-1ubuntu4_amd64.deb ...
+Unpacking libnetplan1:amd64 (1.2-1ubuntu4) over (1.2-1ubuntu3) ...
+Preparing to unpack .../07-networkd-dispatcher_2.2.4-1.1ubuntu1_all.deb ...
+Unpacking networkd-dispatcher (2.2.4-1.1ubuntu1) over (2.2.4-1.1build1) ...
+Preparing to unpack .../08-systemd-hwe-hwdb_259.5.2ubuntu_all.deb ...
+Unpacking systemd-hwe-hwdb (259.5.2ubuntu) over (259.5.1ubuntu) ...
+Preparing to unpack .../09-bind9-dnsutils_1%3a9.20.18-1ubuntu2_amd64.deb ...
+Unpacking bind9-dnsutils (1:9.20.18-1ubuntu2) over (1:9.20.18-1ubuntu1) ...
+Preparing to unpack .../10-bind9-host_1%3a9.20.18-1ubuntu2_amd64.deb ...
+Unpacking bind9-host (1:9.20.18-1ubuntu2) over (1:9.20.18-1ubuntu1) ...
+Preparing to unpack .../11-bind9-libs_1%3a9.20.18-1ubuntu2_amd64.deb ...
+Unpacking bind9-libs:amd64 (1:9.20.18-1ubuntu2) over (1:9.20.18-1ubuntu1) ...
+Preparing to unpack .../12-fuse3_3.18.2-1_amd64.deb ...
+Adding 'diversion of /bin/fusermount to /bin/fusermount.usr-is-merged by fuse3'
+Adding 'diversion of /sbin/mount.fuse to /sbin/mount.fuse.usr-is-merged by fuse3'
+Unpacking fuse3 (3.18.2-1) over (3.18.1-1) ...
+Preparing to unpack .../13-libfuse3-4_3.18.2-1_amd64.deb ...
+Unpacking libfuse3-4:amd64 (3.18.2-1) over (3.18.1-1) ...
+Preparing to unpack .../14-libcbor0.10_0.10.2-2ubuntu3_amd64.deb ...
+Unpacking libcbor0.10:amd64 (0.10.2-2ubuntu3) over (0.10.2-2ubuntu2) ...
+Preparing to unpack .../15-libx11-data_2%3a1.8.13-1_all.deb ...
+Unpacking libx11-data (2:1.8.13-1) over (2:1.8.12-1build2) ...
+Preparing to unpack .../16-libx11-6_2%3a1.8.13-1_amd64.deb ...
+Unpacking libx11-6:amd64 (2:1.8.13-1) over (2:1.8.12-1build2) ...
+Preparing to unpack .../17-ubuntu-release-upgrader-core_1%3a26.04.14_all.deb ...
+Unpacking ubuntu-release-upgrader-core (1:26.04.14) over (1:26.04.9) ...
+Preparing to unpack .../18-python3-distupgrade_1%3a26.04.14_all.deb ...
+Unpacking python3-distupgrade (1:26.04.14) over (1:26.04.9) ...
+Preparing to unpack .../19-python3.14-gdbm_3.14.3-5_amd64.deb ...
+Unpacking python3.14-gdbm (3.14.3-5) over (3.14.3-3) ...
+Preparing to unpack .../20-initramfs-tools-bin_0.151ubuntu1_amd64.deb ...
+Unpacking initramfs-tools-bin (0.151ubuntu1) over (0.150ubuntu8) ...
+Preparing to unpack .../21-initramfs-tools-core_0.151ubuntu1_all.deb ...
+Unpacking initramfs-tools-core (0.151ubuntu1) over (0.150ubuntu8) ...
+Preparing to unpack .../22-libxslt1.1_1.1.45-0.1_amd64.deb ...
+Unpacking libxslt1.1:amd64 (1.1.45-0.1) over (1.1.43-0.3) ...
+Preparing to unpack .../23-linux-base_4.15ubuntu5_all.deb ...
+Unpacking linux-base (4.15ubuntu5) over (4.15ubuntu4) ...
+Preparing to unpack .../24-pollinate_4.33-4ubuntu6_all.deb ...
+Unpacking pollinate (4.33-4ubuntu6) over (4.33-4ubuntu5) ...
+Preparing to unpack .../25-python3-jwt_2.10.1-4ubuntu1_all.deb ...
+Unpacking python3-jwt (2.10.1-4ubuntu1) over (2.10.1-4) ...
+Preparing to unpack .../26-python3-rpds-py_0.27.1-2ubuntu3_amd64.deb ...
+Unpacking python3-rpds-py (0.27.1-2ubuntu3) over (0.27.1-2ubuntu1) ...
+Preparing to unpack .../27-software-properties-common_0.120_all.deb ...
+Unpacking software-properties-common (0.120) over (0.119) ...
+Preparing to unpack .../28-python3-software-properties_0.120_all.deb ...
+Unpacking python3-software-properties (0.120) over (0.119) ...
+Preparing to unpack .../29-unattended-upgrades_2.12ubuntu9_all.deb ...
+Unpacking unattended-upgrades (2.12ubuntu9) over (2.12ubuntu7) ...
+Setting up networkd-dispatcher (2.2.4-1.1ubuntu1) ...
+Could not execute systemctl:  at /usr/bin/deb-systemd-invoke line 148.
+Setting up linux-base (4.15ubuntu5) ...
+Setting up bind9-libs:amd64 (1:9.20.18-1ubuntu2) ...
+Setting up python3-jwt (2.10.1-4ubuntu1) ...
+Setting up gawk (1:5.3.2-1ubuntu1) ...
+Setting up libcbor0.10:amd64 (0.10.2-2ubuntu3) ...
+Setting up update-notifier-common (3.206) ...
+update-notifier-download.service is a disabled or a static unit not running, not starting it.
+update-notifier-motd.service is a disabled or a static unit not running, not starting it.
+Setting up libtirpc-common (1.3.7-0.1) ...
+Setting up libpython3.14-minimal:amd64 (3.14.3-5) ...
+Setting up libnetplan1:amd64 (1.2-1ubuntu4) ...
+Setting up python3-distupgrade (1:26.04.14) ...
+Setting up unattended-upgrades (2.12ubuntu9) ...
+Setting up pollinate (4.33-4ubuntu6) ...
+Installing new version of config file /etc/default/pollinate ...
+apparmor_parser: Unable to replace "pollinate".  apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+Removing obsolete conffile /etc/pollinate/entropy.ubuntu.com.pem ...
+Setting up python3.14-gdbm (3.14.3-5) ...
+Setting up python3-software-properties (0.120) ...
+Setting up libx11-data (2:1.8.13-1) ...
+Setting up libatomic1:amd64 (16-20260322-1ubuntu1) ...
+Setting up ubuntu-release-upgrader-core (1:26.04.14) ...
+Setting up systemd-hwe-hwdb (259.5.2ubuntu) ...
+input5: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.1/sound/card1/input5/uevent': Permission denied
+event4: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.1/sound/card1/input5/event4/uevent': Permission denied
+input6: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.1/sound/card1/input6/uevent': Permission denied
+event5: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.1/sound/card1/input6/event5/uevent': Permission denied
+input7: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.1/sound/card1/input7/uevent': Permission denied
+event6: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.1/sound/card1/input7/event6/uevent': Permission denied
+input8: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.1/sound/card1/input8/uevent': Permission denied
+event7: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.1/sound/card1/input8/event7/uevent': Permission denied
+input0: Failed to write 'change' to '/sys/devices/platform/LNXPWRBN:00/input/input0/uevent': Permission denied
+event0: Failed to write 'change' to '/sys/devices/platform/LNXPWRBN:00/input/input0/event0/uevent': Permission denied
+input1: Failed to write 'change' to '/sys/devices/platform/i8042/serio0/input/input1/uevent': Permission denied
+event1: Failed to write 'change' to '/sys/devices/platform/i8042/serio0/input/input1/event1/uevent': Permission denied
+input3: Failed to write 'change' to '/sys/devices/platform/i8042/serio1/input/input3/uevent': Permission denied
+event3: Failed to write 'change' to '/sys/devices/platform/i8042/serio1/input/input3/event3/uevent': Permission denied
+mouse1: Failed to write 'change' to '/sys/devices/platform/i8042/serio1/input/input3/mouse1/uevent': Permission denied
+input4: Failed to write 'change' to '/sys/devices/platform/i8042/serio1/input/input4/uevent': Permission denied
+event2: Failed to write 'change' to '/sys/devices/platform/i8042/serio1/input/input4/event2/uevent': Permission denied
+mouse0: Failed to write 'change' to '/sys/devices/platform/i8042/serio1/input/input4/mouse0/uevent': Permission denied
+mice: Failed to write 'change' to '/sys/devices/virtual/input/mice/uevent': Permission denied
+Setting up python3-rpds-py (0.27.1-2ubuntu3) ...
+Setting up libxslt1.1:amd64 (1.1.45-0.1) ...
+Setting up python3-netplan (1.2-1ubuntu4) ...
+Setting up libx11-6:amd64 (2:1.8.13-1) ...
+Setting up netplan-generator (1.2-1ubuntu4) ...
+Removing 'diversion of /lib/systemd/system-generators/netplan to /lib/systemd/system-generators/netplan.usr-is-merged by netplan-generator'
+Setting up libfuse3-4:amd64 (3.18.2-1) ...
+Setting up bind9-host (1:9.20.18-1ubuntu2) ...
+Setting up python3.14-minimal (3.14.3-5) ...
+Setting up initramfs-tools-bin (0.151ubuntu1) ...
+Setting up libtirpc3t64:amd64 (1.3.7-0.1) ...
+Setting up libpython3.14-stdlib:amd64 (3.14.3-5) ...
+Setting up iproute2 (6.19.0-1ubuntu1) ...
+Setting up software-properties-common (0.120) ...
+Setting up netplan.io (1.2-1ubuntu4) ...
+Setting up fuse3 (3.18.2-1) ...
+Removing 'diversion of /bin/fusermount to /bin/fusermount.usr-is-merged by fuse3'
+Removing 'diversion of /sbin/mount.fuse to /sbin/mount.fuse.usr-is-merged by fuse3'
+update-initramfs: deferring update (trigger activated)
+Setting up libpython3.14:amd64 (3.14.3-5) ...
+Setting up bind9-dnsutils (1:9.20.18-1ubuntu2) ...
+Setting up python3.14 (3.14.3-5) ...
+Setting up initramfs-tools-core (0.151ubuntu1) ...
+Processing triggers for systemd (259.5-0ubuntu1) ...
+Processing triggers for man-db (2.13.1-1build1) ...
+Processing triggers for dbus (1.16.2-2ubuntu4) ...
+Failed to open connection to "system" message bus: Failed to query AppArmor policy: Permission denied
+Processing triggers for udev (259.5-0ubuntu1) ...
+Processing triggers for dracut (110-7) ...
+Processing triggers for libc-bin (2.43-2ubuntu1) ...
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+
+Restarting services...
+
+Service restarts being deferred:
+ systemctl restart unattended-upgrades.service
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+autopkgtest [03:08:01]: rebooting testbed after setup commands that affected boot
+autopkgtest [03:10:07]: testbed running kernel: Linux 7.0.0-12-generic #12-Ubuntu SMP PREEMPT_DYNAMIC Thu Apr  2 10:21:43 UTC 2026
+autopkgtest [03:10:09]: @@@@@@@@@@@@@@@@@@@@ apt-source miopen
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+The following NEW packages will be installed:
+  bzip2 dpkg-dev libdpkg-perl lto-disabled-list make
+0 upgraded, 5 newly installed, 0 to remove and 0 not upgraded.
+Need to get 1596 kB of archives.
+After this operation, 4247 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu resolute/main amd64 bzip2 amd64 1.0.8-6build2 [34.3 kB]
+Get:2 http://archive.ubuntu.com/ubuntu resolute/main amd64 libdpkg-perl all 1.23.7ubuntu1 [289 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute/main amd64 make amd64 4.4.1-3 [197 kB]
+Get:4 http://archive.ubuntu.com/ubuntu resolute/main amd64 lto-disabled-list all 79 [14.2 kB]
+Get:5 http://archive.ubuntu.com/ubuntu resolute/main amd64 dpkg-dev all 1.23.7ubuntu1 [1062 kB]
+Fetched 1596 kB in 1s (1696 kB/s)
+Selecting previously unselected package bzip2.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45004 files and directories currently installed.)
+Preparing to unpack .../bzip2_1.0.8-6build2_amd64.deb ...
+Unpacking bzip2 (1.0.8-6build2) ...
+Selecting previously unselected package libdpkg-perl.
+Preparing to unpack .../libdpkg-perl_1.23.7ubuntu1_all.deb ...
+Unpacking libdpkg-perl (1.23.7ubuntu1) ...
+Selecting previously unselected package make.
+Preparing to unpack .../make_4.4.1-3_amd64.deb ...
+Unpacking make (4.4.1-3) ...
+Selecting previously unselected package lto-disabled-list.
+Preparing to unpack .../lto-disabled-list_79_all.deb ...
+Unpacking lto-disabled-list (79) ...
+Selecting previously unselected package dpkg-dev.
+Preparing to unpack .../dpkg-dev_1.23.7ubuntu1_all.deb ...
+Unpacking dpkg-dev (1.23.7ubuntu1) ...
+Setting up lto-disabled-list (79) ...
+Setting up bzip2 (1.0.8-6build2) ...
+Setting up make (4.4.1-3) ...
+Setting up libdpkg-perl (1.23.7ubuntu1) ...
+Setting up dpkg-dev (1.23.7ubuntu1) ...
+Processing triggers for man-db (2.13.1-1build1) ...
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+Get:1 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel-21/ubuntu resolute/main miopen 7.1.0+dfsg-0ubuntu5 (tar) [44.4 MB]
+Get:2 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel-21/ubuntu resolute/main miopen 7.1.0+dfsg-0ubuntu5 (diff) [14.4 kB]
+Get:3 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel-21/ubuntu resolute/main miopen 7.1.0+dfsg-0ubuntu5 (dsc) [3215 B]
+gpgv: Signature made Sat Feb 14 01:21:28 2026 UTC
+gpgv:                using RSA key 886641D6358CDA46A56C1C72AC983EB5BF6BCBA9
+gpgv: Can't check signature: No public key
+dpkg-source: warning: cannot verify inline signature for ./miopen_7.1.0+dfsg-0ubuntu5.dsc: no acceptable signature found
+autopkgtest [03:10:44]: testing package miopen version 7.1.0+dfsg-0ubuntu5
+autopkgtest [03:10:45]: build not needed
+autopkgtest [03:10:45]: test command1: preparing testbed
+autopkgtest [03:12:51]: testbed dpkg architecture: amd64
+autopkgtest [03:12:51]: testbed apt version: 3.1.16
+autopkgtest [03:12:51]: @@@@@@@@@@@@@@@@@@@@ test bed setup
+autopkgtest [03:12:51]: updating testbed package index (apt update)
+Get:1 http://archive.ubuntu.com/ubuntu resolute InRelease [124 kB]
+Get:2 http://archive.ubuntu.com/ubuntu resolute-updates InRelease [124 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute-backports InRelease [124 kB]
+Get:4 http://archive.ubuntu.com/ubuntu resolute/main amd64 Packages [1470 kB]
+Get:5 http://archive.ubuntu.com/ubuntu resolute/main Translation-en [525 kB]
+Get:6 http://archive.ubuntu.com/ubuntu resolute/main amd64 Components [394 kB]
+Get:7 http://archive.ubuntu.com/ubuntu resolute/main amd64 c-n-f Metadata [32.4 kB]
+Get:8 http://archive.ubuntu.com/ubuntu resolute/universe amd64 Packages [15.8 MB]
+Get:9 http://security.ubuntu.com/ubuntu resolute-security InRelease [124 kB]
+Get:10 http://archive.ubuntu.com/ubuntu resolute/universe Translation-en [6337 kB]
+Get:11 http://archive.ubuntu.com/ubuntu resolute/universe amd64 Components [4531 kB]
+Get:12 http://security.ubuntu.com/ubuntu resolute-security/main amd64 Components [208 B]
+Get:13 http://archive.ubuntu.com/ubuntu resolute/universe amd64 c-n-f Metadata [312 kB]
+Get:14 http://archive.ubuntu.com/ubuntu resolute/restricted amd64 Packages [125 kB]
+Get:15 http://archive.ubuntu.com/ubuntu resolute/restricted Translation-en [24.1 kB]
+Get:16 http://archive.ubuntu.com/ubuntu resolute/restricted amd64 Components [556 B]
+Get:17 http://archive.ubuntu.com/ubuntu resolute/restricted amd64 c-n-f Metadata [384 B]
+Get:18 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 Packages [290 kB]
+Get:19 http://archive.ubuntu.com/ubuntu resolute/multiverse Translation-en [127 kB]
+Get:20 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 Components [49.9 kB]
+Get:21 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 c-n-f Metadata [8276 B]
+Get:22 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Components [208 B]
+Get:23 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Components [212 B]
+Get:24 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 c-n-f Metadata [116 B]
+Get:25 http://archive.ubuntu.com/ubuntu resolute-updates/restricted amd64 Components [212 B]
+Get:26 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 Components [216 B]
+Get:27 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 c-n-f Metadata [116 B]
+Get:28 http://archive.ubuntu.com/ubuntu resolute-backports/main amd64 Components [212 B]
+Get:29 http://archive.ubuntu.com/ubuntu resolute-backports/main amd64 c-n-f Metadata [112 B]
+Get:30 http://archive.ubuntu.com/ubuntu resolute-backports/universe amd64 Components [216 B]
+Get:31 http://archive.ubuntu.com/ubuntu resolute-backports/universe amd64 c-n-f Metadata [116 B]
+Get:32 http://archive.ubuntu.com/ubuntu resolute-backports/restricted amd64 Components [216 B]
+Get:33 http://archive.ubuntu.com/ubuntu resolute-backports/restricted amd64 c-n-f Metadata [120 B]
+Get:34 http://archive.ubuntu.com/ubuntu resolute-backports/multiverse amd64 Components [216 B]
+Get:35 http://archive.ubuntu.com/ubuntu resolute-backports/multiverse amd64 c-n-f Metadata [120 B]
+Get:36 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Components [212 B]
+Get:37 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 c-n-f Metadata [116 B]
+Get:38 http://security.ubuntu.com/ubuntu resolute-security/restricted amd64 Components [212 B]
+Get:39 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 Components [212 B]
+Get:40 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 c-n-f Metadata [120 B]
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 30.6 MB in 2s (14.4 MB/s)
+Reading package lists...
+autopkgtest [03:12:56]: testbed release detected to be: resolute
+autopkgtest [03:12:56]: updating testbed package index (apt update)
+Hit:1 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Reading package lists...
+Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Get:4 http://archive.ubuntu.com/ubuntu resolute/multiverse Sources [324 kB]
+Hit:5 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Get:6 http://archive.ubuntu.com/ubuntu resolute/main Sources [1413 kB]
+Get:7 http://archive.ubuntu.com/ubuntu resolute/universe Sources [21.4 MB]
+Get:8 http://archive.ubuntu.com/ubuntu resolute/restricted Sources [19.2 kB]
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 23.2 MB in 1s (15.5 MB/s)
+Reading package lists...
+Enabling deb-src for all repositories.
+Added: ## Ubuntu distribution repository
+##
+## The following settings can be adjusted to configure which packages to use from Ubuntu.
+## Mirror your choices (except for URIs and Suites) in the security section below to
+## ensure timely security updates.
+##
+## Types: Append deb-src to enable the fetching of source package.
+## URIs: A URL to the repository (you may add multiple URLs)
+## Suites: The following additional suites can be configured
+##   <name>-updates   - Major bug fix updates produced after the final release of the
+##                      distribution.
+##   <name>-backports - software from this repository may not have been tested as
+##                      extensively as that contained in the main release, although it includes
+##                      newer versions of some applications which may provide useful features.
+##                      Also, please note that software in backports WILL NOT receive any review
+##                      or updates from the Ubuntu security team.
+## Components: Aside from main, the following components can be added to the list
+##   restricted  - Software that may not be under a free license, or protected by patents.
+##   universe    - Community maintained packages. Software in this repository receives maintenance
+##                 from volunteers in the Ubuntu community, or a 10 year security maintenance
+##                 commitment from Canonical when an Ubuntu Pro subscription is attached.
+##   multiverse  - Community maintained of restricted. Software from this repository is
+##                 ENTIRELY UNSUPPORTED by the Ubuntu team, and may not be under a free
+##                 licence. Please satisfy yourself as to your rights to use the software.
+##                 Also, please note that software in multiverse WILL NOT receive any
+##                 review or updates from the Ubuntu security team.
+##
+## See the sources.list(5) manual page for further settings.
+Types: deb-src
+URIs: http://archive.ubuntu.com/ubuntu
+Suites: resolute resolute-updates resolute-backports
+Components: universe restricted main multiverse
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+Added: ## Ubuntu security updates. Aside from URIs and Suites,
+## this should mirror your choices in the previous section.
+Types: deb-src
+URIs: http://security.ubuntu.com/ubuntu
+Suites: resolute-security
+Components: universe restricted main multiverse
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:2 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Get:5 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel-21/ubuntu resolute InRelease [27.2 kB]
+Get:6 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel-21/ubuntu resolute/main Sources [16.1 kB]
+Get:7 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel-21/ubuntu resolute/main amd64 Packages [24.6 kB]
+Get:8 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel-21/ubuntu resolute/main Translation-en [15.4 kB]
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 83.4 kB in 0s (427 kB/s)
+Reading package lists...
+PPA publishes dbgsym, you may need to include 'main/debug' component
+Repository: 'Types: deb
+URIs: https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel-21/ubuntu/
+Suites: resolute
+Components: main
+'
+Description:
+ROCm development archive which holds packages built against upstream LLVM-21
+More info: https://launchpad.net/~bullwinkle-team/+archive/ubuntu/rocm-devel-21
+Adding repository.
+autopkgtest [03:13:03]: upgrading testbed (apt dist-upgrade and autopurge)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+The following packages will be upgraded:
+  bind9-dnsutils bind9-host bind9-libs dpkg fuse3 gawk gcc-16-base
+  initramfs-tools-bin initramfs-tools-core iproute2 libatomic1 libcbor0.10
+  libfuse3-4 libgcc-s1 libnetplan1 libpython3.14 libpython3.14-minimal
+  libpython3.14-stdlib libstdc++6 libtirpc-common libtirpc3t64 libx11-6
+  libx11-data libxslt1.1 linux-base netplan-generator netplan.io
+  networkd-dispatcher pollinate python3-distupgrade python3-jwt
+  python3-netplan python3-rpds-py python3-software-properties python3.14
+  python3.14-gdbm python3.14-minimal software-properties-common
+  systemd-hwe-hwdb ubuntu-release-upgrader-core unattended-upgrades
+  update-notifier-common
+42 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Need to get 17.2 MB of archives.
+After this operation, 894 kB disk space will be freed.
+Get:1 http://archive.ubuntu.com/ubuntu resolute/main amd64 dpkg amd64 1.23.7ubuntu1 [1285 kB]
+Get:2 http://archive.ubuntu.com/ubuntu resolute/main amd64 gawk amd64 1:5.3.2-1ubuntu1 [526 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute/main amd64 libpython3.14 amd64 3.14.3-5 [2577 kB]
+Get:4 http://archive.ubuntu.com/ubuntu resolute/main amd64 python3.14 amd64 3.14.3-5 [823 kB]
+Get:5 http://archive.ubuntu.com/ubuntu resolute/main amd64 libpython3.14-stdlib amd64 3.14.3-5 [2404 kB]
+Get:6 http://archive.ubuntu.com/ubuntu resolute/main amd64 python3.14-minimal amd64 3.14.3-5 [2580 kB]
+Get:7 http://archive.ubuntu.com/ubuntu resolute/main amd64 libpython3.14-minimal amd64 3.14.3-5 [915 kB]
+Get:8 http://archive.ubuntu.com/ubuntu resolute/main amd64 update-notifier-common all 3.206 [211 kB]
+Get:9 http://archive.ubuntu.com/ubuntu resolute/main amd64 libatomic1 amd64 16-20260322-1ubuntu1 [11.4 kB]
+Get:10 http://archive.ubuntu.com/ubuntu resolute/main amd64 gcc-16-base amd64 16-20260322-1ubuntu1 [38.3 kB]
+Get:11 http://archive.ubuntu.com/ubuntu resolute/main amd64 libstdc++6 amd64 16-20260322-1ubuntu1 [843 kB]
+Get:12 http://archive.ubuntu.com/ubuntu resolute/main amd64 libgcc-s1 amd64 16-20260322-1ubuntu1 [80.3 kB]
+Get:13 http://archive.ubuntu.com/ubuntu resolute/main amd64 libtirpc-common all 1.3.7-0.1 [7114 B]
+Get:14 http://archive.ubuntu.com/ubuntu resolute/main amd64 libtirpc3t64 amd64 1.3.7-0.1 [80.9 kB]
+Get:15 http://archive.ubuntu.com/ubuntu resolute/main amd64 iproute2 amd64 6.19.0-1ubuntu1 [1198 kB]
+Get:16 http://archive.ubuntu.com/ubuntu resolute/main amd64 netplan-generator amd64 1.2-1ubuntu4 [65.1 kB]
+Get:17 http://archive.ubuntu.com/ubuntu resolute/main amd64 python3-netplan amd64 1.2-1ubuntu4 [24.8 kB]
+Get:18 http://archive.ubuntu.com/ubuntu resolute/main amd64 netplan.io amd64 1.2-1ubuntu4 [69.5 kB]
+Get:19 http://archive.ubuntu.com/ubuntu resolute/main amd64 libnetplan1 amd64 1.2-1ubuntu4 [132 kB]
+Get:20 http://archive.ubuntu.com/ubuntu resolute/main amd64 networkd-dispatcher all 2.2.4-1.1ubuntu1 [15.2 kB]
+Get:21 http://archive.ubuntu.com/ubuntu resolute/main amd64 systemd-hwe-hwdb all 259.5.2ubuntu [3326 B]
+Get:22 http://archive.ubuntu.com/ubuntu resolute/main amd64 bind9-dnsutils amd64 1:9.20.18-1ubuntu2 [163 kB]
+Get:23 http://archive.ubuntu.com/ubuntu resolute/main amd64 bind9-host amd64 1:9.20.18-1ubuntu2 [49.8 kB]
+Get:24 http://archive.ubuntu.com/ubuntu resolute/main amd64 bind9-libs amd64 1:9.20.18-1ubuntu2 [1303 kB]
+Get:25 http://archive.ubuntu.com/ubuntu resolute/main amd64 fuse3 amd64 3.18.2-1 [27.5 kB]
+Get:26 http://archive.ubuntu.com/ubuntu resolute/main amd64 libfuse3-4 amd64 3.18.2-1 [93.0 kB]
+Get:27 http://archive.ubuntu.com/ubuntu resolute/main amd64 libcbor0.10 amd64 0.10.2-2ubuntu3 [25.3 kB]
+Get:28 http://archive.ubuntu.com/ubuntu resolute/main amd64 libx11-data all 2:1.8.13-1 [114 kB]
+Get:29 http://archive.ubuntu.com/ubuntu resolute/main amd64 libx11-6 amd64 2:1.8.13-1 [657 kB]
+Get:30 http://archive.ubuntu.com/ubuntu resolute/main amd64 ubuntu-release-upgrader-core all 1:26.04.14 [24.9 kB]
+Get:31 http://archive.ubuntu.com/ubuntu resolute/main amd64 python3-distupgrade all 1:26.04.14 [100 kB]
+Get:32 http://archive.ubuntu.com/ubuntu resolute/main amd64 python3.14-gdbm amd64 3.14.3-5 [28.3 kB]
+Get:33 http://archive.ubuntu.com/ubuntu resolute/main amd64 initramfs-tools-bin amd64 0.151ubuntu1 [24.2 kB]
+Get:34 http://archive.ubuntu.com/ubuntu resolute/main amd64 initramfs-tools-core all 0.151ubuntu1 [50.3 kB]
+Get:35 http://archive.ubuntu.com/ubuntu resolute/main amd64 libxslt1.1 amd64 1.1.45-0.1 [165 kB]
+Get:36 http://archive.ubuntu.com/ubuntu resolute/main amd64 linux-base all 4.15ubuntu5 [30.5 kB]
+Get:37 http://archive.ubuntu.com/ubuntu resolute/main amd64 pollinate all 4.33-4ubuntu6 [11.7 kB]
+Get:38 http://archive.ubuntu.com/ubuntu resolute/main amd64 python3-jwt all 2.10.1-4ubuntu1 [20.6 kB]
+Get:39 http://archive.ubuntu.com/ubuntu resolute/main amd64 python3-rpds-py amd64 0.27.1-2ubuntu3 [281 kB]
+Get:40 http://archive.ubuntu.com/ubuntu resolute/main amd64 software-properties-common all 0.120 [16.6 kB]
+Get:41 http://archive.ubuntu.com/ubuntu resolute/main amd64 python3-software-properties all 0.120 [28.6 kB]
+Get:42 http://archive.ubuntu.com/ubuntu resolute/main amd64 unattended-upgrades all 2.12ubuntu9 [53.3 kB]
+Preconfiguring packages ...
+Fetched 17.2 MB in 2s (10.1 MB/s)
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45007 files and directories currently installed.)
+Preparing to unpack .../dpkg_1.23.7ubuntu1_amd64.deb ...
+Unpacking dpkg (1.23.7ubuntu1) over (1.23.6ubuntu2) ...
+Setting up dpkg (1.23.7ubuntu1) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45007 files and directories currently installed.)
+Preparing to unpack .../0-gawk_1%3a5.3.2-1ubuntu1_amd64.deb ...
+Unpacking gawk (1:5.3.2-1ubuntu1) over (1:5.3.2-1build1) ...
+Preparing to unpack .../1-libpython3.14_3.14.3-5_amd64.deb ...
+Unpacking libpython3.14:amd64 (3.14.3-5) over (3.14.3-3) ...
+Preparing to unpack .../2-python3.14_3.14.3-5_amd64.deb ...
+Unpacking python3.14 (3.14.3-5) over (3.14.3-3) ...
+Preparing to unpack .../3-libpython3.14-stdlib_3.14.3-5_amd64.deb ...
+Unpacking libpython3.14-stdlib:amd64 (3.14.3-5) over (3.14.3-3) ...
+Preparing to unpack .../4-python3.14-minimal_3.14.3-5_amd64.deb ...
+Unpacking python3.14-minimal (3.14.3-5) over (3.14.3-3) ...
+Preparing to unpack .../5-libpython3.14-minimal_3.14.3-5_amd64.deb ...
+Unpacking libpython3.14-minimal:amd64 (3.14.3-5) over (3.14.3-3) ...
+Preparing to unpack .../6-update-notifier-common_3.206_all.deb ...
+Unpacking update-notifier-common (3.206) over (3.205) ...
+Preparing to unpack .../7-libatomic1_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libatomic1:amd64 (16-20260322-1ubuntu1) over (16-20260315-1ubuntu1) ...
+Preparing to unpack .../8-gcc-16-base_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking gcc-16-base:amd64 (16-20260322-1ubuntu1) over (16-20260315-1ubuntu1) ...
+Setting up gcc-16-base:amd64 (16-20260322-1ubuntu1) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45007 files and directories currently installed.)
+Preparing to unpack .../libstdc++6_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libstdc++6:amd64 (16-20260322-1ubuntu1) over (16-20260315-1ubuntu1) ...
+Setting up libstdc++6:amd64 (16-20260322-1ubuntu1) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45007 files and directories currently installed.)
+Preparing to unpack .../libgcc-s1_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libgcc-s1:amd64 (16-20260322-1ubuntu1) over (16-20260315-1ubuntu1) ...
+Setting up libgcc-s1:amd64 (16-20260322-1ubuntu1) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45007 files and directories currently installed.)
+Preparing to unpack .../00-libtirpc-common_1.3.7-0.1_all.deb ...
+Unpacking libtirpc-common (1.3.7-0.1) over (1.3.6+ds-1ubuntu1) ...
+Preparing to unpack .../01-libtirpc3t64_1.3.7-0.1_amd64.deb ...
+Unpacking libtirpc3t64:amd64 (1.3.7-0.1) over (1.3.6+ds-1ubuntu1) ...
+Preparing to unpack .../02-iproute2_6.19.0-1ubuntu1_amd64.deb ...
+Unpacking iproute2 (6.19.0-1ubuntu1) over (6.18.0-1ubuntu1) ...
+Preparing to unpack .../03-netplan-generator_1.2-1ubuntu4_amd64.deb ...
+Adding 'diversion of /lib/systemd/system-generators/netplan to /lib/systemd/system-generators/netplan.usr-is-merged by netplan-generator'
+Unpacking netplan-generator (1.2-1ubuntu4) over (1.2-1ubuntu3) ...
+Preparing to unpack .../04-python3-netplan_1.2-1ubuntu4_amd64.deb ...
+Unpacking python3-netplan (1.2-1ubuntu4) over (1.2-1ubuntu3) ...
+Preparing to unpack .../05-netplan.io_1.2-1ubuntu4_amd64.deb ...
+Unpacking netplan.io (1.2-1ubuntu4) over (1.2-1ubuntu3) ...
+Preparing to unpack .../06-libnetplan1_1.2-1ubuntu4_amd64.deb ...
+Unpacking libnetplan1:amd64 (1.2-1ubuntu4) over (1.2-1ubuntu3) ...
+Preparing to unpack .../07-networkd-dispatcher_2.2.4-1.1ubuntu1_all.deb ...
+Unpacking networkd-dispatcher (2.2.4-1.1ubuntu1) over (2.2.4-1.1build1) ...
+Preparing to unpack .../08-systemd-hwe-hwdb_259.5.2ubuntu_all.deb ...
+Unpacking systemd-hwe-hwdb (259.5.2ubuntu) over (259.5.1ubuntu) ...
+Preparing to unpack .../09-bind9-dnsutils_1%3a9.20.18-1ubuntu2_amd64.deb ...
+Unpacking bind9-dnsutils (1:9.20.18-1ubuntu2) over (1:9.20.18-1ubuntu1) ...
+Preparing to unpack .../10-bind9-host_1%3a9.20.18-1ubuntu2_amd64.deb ...
+Unpacking bind9-host (1:9.20.18-1ubuntu2) over (1:9.20.18-1ubuntu1) ...
+Preparing to unpack .../11-bind9-libs_1%3a9.20.18-1ubuntu2_amd64.deb ...
+Unpacking bind9-libs:amd64 (1:9.20.18-1ubuntu2) over (1:9.20.18-1ubuntu1) ...
+Preparing to unpack .../12-fuse3_3.18.2-1_amd64.deb ...
+Adding 'diversion of /bin/fusermount to /bin/fusermount.usr-is-merged by fuse3'
+Adding 'diversion of /sbin/mount.fuse to /sbin/mount.fuse.usr-is-merged by fuse3'
+Unpacking fuse3 (3.18.2-1) over (3.18.1-1) ...
+Preparing to unpack .../13-libfuse3-4_3.18.2-1_amd64.deb ...
+Unpacking libfuse3-4:amd64 (3.18.2-1) over (3.18.1-1) ...
+Preparing to unpack .../14-libcbor0.10_0.10.2-2ubuntu3_amd64.deb ...
+Unpacking libcbor0.10:amd64 (0.10.2-2ubuntu3) over (0.10.2-2ubuntu2) ...
+Preparing to unpack .../15-libx11-data_2%3a1.8.13-1_all.deb ...
+Unpacking libx11-data (2:1.8.13-1) over (2:1.8.12-1build2) ...
+Preparing to unpack .../16-libx11-6_2%3a1.8.13-1_amd64.deb ...
+Unpacking libx11-6:amd64 (2:1.8.13-1) over (2:1.8.12-1build2) ...
+Preparing to unpack .../17-ubuntu-release-upgrader-core_1%3a26.04.14_all.deb ...
+Unpacking ubuntu-release-upgrader-core (1:26.04.14) over (1:26.04.9) ...
+Preparing to unpack .../18-python3-distupgrade_1%3a26.04.14_all.deb ...
+Unpacking python3-distupgrade (1:26.04.14) over (1:26.04.9) ...
+Preparing to unpack .../19-python3.14-gdbm_3.14.3-5_amd64.deb ...
+Unpacking python3.14-gdbm (3.14.3-5) over (3.14.3-3) ...
+Preparing to unpack .../20-initramfs-tools-bin_0.151ubuntu1_amd64.deb ...
+Unpacking initramfs-tools-bin (0.151ubuntu1) over (0.150ubuntu8) ...
+Preparing to unpack .../21-initramfs-tools-core_0.151ubuntu1_all.deb ...
+Unpacking initramfs-tools-core (0.151ubuntu1) over (0.150ubuntu8) ...
+Preparing to unpack .../22-libxslt1.1_1.1.45-0.1_amd64.deb ...
+Unpacking libxslt1.1:amd64 (1.1.45-0.1) over (1.1.43-0.3) ...
+Preparing to unpack .../23-linux-base_4.15ubuntu5_all.deb ...
+Unpacking linux-base (4.15ubuntu5) over (4.15ubuntu4) ...
+Preparing to unpack .../24-pollinate_4.33-4ubuntu6_all.deb ...
+Unpacking pollinate (4.33-4ubuntu6) over (4.33-4ubuntu5) ...
+Preparing to unpack .../25-python3-jwt_2.10.1-4ubuntu1_all.deb ...
+Unpacking python3-jwt (2.10.1-4ubuntu1) over (2.10.1-4) ...
+Preparing to unpack .../26-python3-rpds-py_0.27.1-2ubuntu3_amd64.deb ...
+Unpacking python3-rpds-py (0.27.1-2ubuntu3) over (0.27.1-2ubuntu1) ...
+Preparing to unpack .../27-software-properties-common_0.120_all.deb ...
+Unpacking software-properties-common (0.120) over (0.119) ...
+Preparing to unpack .../28-python3-software-properties_0.120_all.deb ...
+Unpacking python3-software-properties (0.120) over (0.119) ...
+Preparing to unpack .../29-unattended-upgrades_2.12ubuntu9_all.deb ...
+Unpacking unattended-upgrades (2.12ubuntu9) over (2.12ubuntu7) ...
+Setting up networkd-dispatcher (2.2.4-1.1ubuntu1) ...
+Could not execute systemctl:  at /usr/bin/deb-systemd-invoke line 148.
+Setting up linux-base (4.15ubuntu5) ...
+Setting up bind9-libs:amd64 (1:9.20.18-1ubuntu2) ...
+Setting up python3-jwt (2.10.1-4ubuntu1) ...
+Setting up gawk (1:5.3.2-1ubuntu1) ...
+Setting up libcbor0.10:amd64 (0.10.2-2ubuntu3) ...
+Setting up update-notifier-common (3.206) ...
+update-notifier-download.service is a disabled or a static unit not running, not starting it.
+update-notifier-motd.service is a disabled or a static unit not running, not starting it.
+Setting up libtirpc-common (1.3.7-0.1) ...
+Setting up libpython3.14-minimal:amd64 (3.14.3-5) ...
+Setting up libnetplan1:amd64 (1.2-1ubuntu4) ...
+Setting up python3-distupgrade (1:26.04.14) ...
+Setting up unattended-upgrades (2.12ubuntu9) ...
+Setting up pollinate (4.33-4ubuntu6) ...
+Installing new version of config file /etc/default/pollinate ...
+apparmor_parser: Unable to replace "pollinate".  apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+Removing obsolete conffile /etc/pollinate/entropy.ubuntu.com.pem ...
+Setting up python3.14-gdbm (3.14.3-5) ...
+Setting up python3-software-properties (0.120) ...
+Setting up libx11-data (2:1.8.13-1) ...
+Setting up libatomic1:amd64 (16-20260322-1ubuntu1) ...
+Setting up ubuntu-release-upgrader-core (1:26.04.14) ...
+Setting up systemd-hwe-hwdb (259.5.2ubuntu) ...
+input5: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.1/sound/card1/input5/uevent': Permission denied
+event4: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.1/sound/card1/input5/event4/uevent': Permission denied
+input6: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.1/sound/card1/input6/uevent': Permission denied
+event5: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.1/sound/card1/input6/event5/uevent': Permission denied
+input7: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.1/sound/card1/input7/uevent': Permission denied
+event6: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.1/sound/card1/input7/event6/uevent': Permission denied
+input8: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.1/sound/card1/input8/uevent': Permission denied
+event7: Failed to write 'change' to '/sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.1/sound/card1/input8/event7/uevent': Permission denied
+input0: Failed to write 'change' to '/sys/devices/platform/LNXPWRBN:00/input/input0/uevent': Permission denied
+event0: Failed to write 'change' to '/sys/devices/platform/LNXPWRBN:00/input/input0/event0/uevent': Permission denied
+input1: Failed to write 'change' to '/sys/devices/platform/i8042/serio0/input/input1/uevent': Permission denied
+event1: Failed to write 'change' to '/sys/devices/platform/i8042/serio0/input/input1/event1/uevent': Permission denied
+input3: Failed to write 'change' to '/sys/devices/platform/i8042/serio1/input/input3/uevent': Permission denied
+event3: Failed to write 'change' to '/sys/devices/platform/i8042/serio1/input/input3/event3/uevent': Permission denied
+mouse1: Failed to write 'change' to '/sys/devices/platform/i8042/serio1/input/input3/mouse1/uevent': Permission denied
+input4: Failed to write 'change' to '/sys/devices/platform/i8042/serio1/input/input4/uevent': Permission denied
+event2: Failed to write 'change' to '/sys/devices/platform/i8042/serio1/input/input4/event2/uevent': Permission denied
+mouse0: Failed to write 'change' to '/sys/devices/platform/i8042/serio1/input/input4/mouse0/uevent': Permission denied
+mice: Failed to write 'change' to '/sys/devices/virtual/input/mice/uevent': Permission denied
+Setting up python3-rpds-py (0.27.1-2ubuntu3) ...
+Setting up libxslt1.1:amd64 (1.1.45-0.1) ...
+Setting up python3-netplan (1.2-1ubuntu4) ...
+Setting up libx11-6:amd64 (2:1.8.13-1) ...
+Setting up netplan-generator (1.2-1ubuntu4) ...
+Removing 'diversion of /lib/systemd/system-generators/netplan to /lib/systemd/system-generators/netplan.usr-is-merged by netplan-generator'
+Setting up libfuse3-4:amd64 (3.18.2-1) ...
+Setting up bind9-host (1:9.20.18-1ubuntu2) ...
+Setting up python3.14-minimal (3.14.3-5) ...
+Setting up initramfs-tools-bin (0.151ubuntu1) ...
+Setting up libtirpc3t64:amd64 (1.3.7-0.1) ...
+Setting up libpython3.14-stdlib:amd64 (3.14.3-5) ...
+Setting up iproute2 (6.19.0-1ubuntu1) ...
+Setting up software-properties-common (0.120) ...
+Setting up netplan.io (1.2-1ubuntu4) ...
+Setting up fuse3 (3.18.2-1) ...
+Removing 'diversion of /bin/fusermount to /bin/fusermount.usr-is-merged by fuse3'
+Removing 'diversion of /sbin/mount.fuse to /sbin/mount.fuse.usr-is-merged by fuse3'
+update-initramfs: deferring update (trigger activated)
+Setting up libpython3.14:amd64 (3.14.3-5) ...
+Setting up bind9-dnsutils (1:9.20.18-1ubuntu2) ...
+Setting up python3.14 (3.14.3-5) ...
+Setting up initramfs-tools-core (0.151ubuntu1) ...
+Processing triggers for systemd (259.5-0ubuntu1) ...
+Processing triggers for man-db (2.13.1-1build1) ...
+Processing triggers for dbus (1.16.2-2ubuntu4) ...
+Failed to open connection to "system" message bus: Failed to query AppArmor policy: Permission denied
+Processing triggers for udev (259.5-0ubuntu1) ...
+Processing triggers for dracut (110-7) ...
+Processing triggers for libc-bin (2.43-2ubuntu1) ...
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+
+Restarting services...
+
+Service restarts being deferred:
+ systemctl restart unattended-upgrades.service
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+autopkgtest [03:13:12]: rebooting testbed after setup commands that affected boot
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+The following NEW packages will be installed:
+  libamd-comgr3 libamdhip64-7 libboost-atomic1.90.0 libboost-filesystem1.90.0
+  libclang-common-21-dev libhiprtc-builtins7 libhsa-runtime64-1 libhsakmt1
+  libllvm21 libmiopen1 libmiopen1-tests librocblas5 librocrand1 libroctx64-4
+0 upgraded, 14 newly installed, 0 to remove and 0 not upgraded.
+Need to get 382 MB of archives.
+After this operation, 1208 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu resolute/main amd64 libllvm21 amd64 1:21.1.8-6ubuntu1 [30.7 MB]
+Get:2 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel-21/ubuntu resolute/main amd64 libamd-comgr3 amd64 7.1.0+dfsg-0ubuntu6 [15.2 MB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute/universe amd64 libboost-atomic1.90.0 amd64 1.90.0-5ubuntu2 [234 kB]
+Get:4 http://archive.ubuntu.com/ubuntu resolute/main amd64 libboost-filesystem1.90.0 amd64 1.90.0-5ubuntu2 [282 kB]
+Get:5 http://archive.ubuntu.com/ubuntu resolute/universe amd64 libclang-common-21-dev amd64 1:21.1.8-6ubuntu1 [770 kB]
+Get:6 http://archive.ubuntu.com/ubuntu resolute/universe amd64 librocblas5 amd64 7.1.0-1ubuntu4 [260 MB]
+Get:7 http://archive.ubuntu.com/ubuntu resolute/universe amd64 librocrand1 amd64 7.1.0-0ubuntu3 [45.0 MB]
+Get:8 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel-21/ubuntu resolute/main amd64 libhsakmt1 amd64 7.1.0+dfsg-0ubuntu8~git202604071133.6a64d06~ubuntu26.04.1 [77.5 kB]
+Get:9 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel-21/ubuntu resolute/main amd64 libhsa-runtime64-1 amd64 7.1.0+dfsg-0ubuntu8~git202604071133.6a64d06~ubuntu26.04.1 [604 kB]
+Get:10 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel-21/ubuntu resolute/main amd64 libamdhip64-7 amd64 7.1.0-0ubuntu2 [11.1 MB]
+Get:11 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel-21/ubuntu resolute/main amd64 libhiprtc-builtins7 amd64 7.1.0-0ubuntu2 [67.2 kB]
+Get:12 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel-21/ubuntu resolute/main amd64 libroctx64-4 amd64 7.1.0-0ubuntu4~git202603261549.332b3fb~ubuntu26.04.1 [6218 B]
+Get:13 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel-21/ubuntu resolute/main amd64 libmiopen1 amd64 7.1.0+dfsg-0ubuntu5 [4773 kB]
+Get:14 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel-21/ubuntu resolute/main amd64 libmiopen1-tests amd64 7.1.0+dfsg-0ubuntu5 [12.5 MB]
+Fetched 382 MB in 24s (16.0 MB/s)
+Selecting previously unselected package libllvm21:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45004 files and directories currently installed.)
+Preparing to unpack .../00-libllvm21_1%3a21.1.8-6ubuntu1_amd64.deb ...
+Unpacking libllvm21:amd64 (1:21.1.8-6ubuntu1) ...
+Selecting previously unselected package libamd-comgr3:amd64.
+Preparing to unpack .../01-libamd-comgr3_7.1.0+dfsg-0ubuntu6_amd64.deb ...
+Unpacking libamd-comgr3:amd64 (7.1.0+dfsg-0ubuntu6) ...
+Selecting previously unselected package libhsakmt1:amd64.
+Preparing to unpack .../02-libhsakmt1_7.1.0+dfsg-0ubuntu8~git202604071133.6a64d06~ubuntu26.04.1_amd64.deb ...
+Unpacking libhsakmt1:amd64 (7.1.0+dfsg-0ubuntu8~git202604071133.6a64d06~ubuntu26.04.1) ...
+Selecting previously unselected package libhsa-runtime64-1:amd64.
+Preparing to unpack .../03-libhsa-runtime64-1_7.1.0+dfsg-0ubuntu8~git202604071133.6a64d06~ubuntu26.04.1_amd64.deb ...
+Unpacking libhsa-runtime64-1:amd64 (7.1.0+dfsg-0ubuntu8~git202604071133.6a64d06~ubuntu26.04.1) ...
+Selecting previously unselected package libamdhip64-7:amd64.
+Preparing to unpack .../04-libamdhip64-7_7.1.0-0ubuntu2_amd64.deb ...
+Unpacking libamdhip64-7:amd64 (7.1.0-0ubuntu2) ...
+Selecting previously unselected package libboost-atomic1.90.0:amd64.
+Preparing to unpack .../05-libboost-atomic1.90.0_1.90.0-5ubuntu2_amd64.deb ...
+Unpacking libboost-atomic1.90.0:amd64 (1.90.0-5ubuntu2) ...
+Selecting previously unselected package libboost-filesystem1.90.0:amd64.
+Preparing to unpack .../06-libboost-filesystem1.90.0_1.90.0-5ubuntu2_amd64.deb ...
+Unpacking libboost-filesystem1.90.0:amd64 (1.90.0-5ubuntu2) ...
+Selecting previously unselected package libclang-common-21-dev:amd64.
+Preparing to unpack .../07-libclang-common-21-dev_1%3a21.1.8-6ubuntu1_amd64.deb ...
+Unpacking libclang-common-21-dev:amd64 (1:21.1.8-6ubuntu1) ...
+Selecting previously unselected package libhiprtc-builtins7:amd64.
+Preparing to unpack .../08-libhiprtc-builtins7_7.1.0-0ubuntu2_amd64.deb ...
+Unpacking libhiprtc-builtins7:amd64 (7.1.0-0ubuntu2) ...
+Selecting previously unselected package libroctx64-4.
+Preparing to unpack .../09-libroctx64-4_7.1.0-0ubuntu4~git202603261549.332b3fb~ubuntu26.04.1_amd64.deb ...
+Unpacking libroctx64-4 (7.1.0-0ubuntu4~git202603261549.332b3fb~ubuntu26.04.1) ...
+Selecting previously unselected package librocblas5.
+Preparing to unpack .../10-librocblas5_7.1.0-1ubuntu4_amd64.deb ...
+Unpacking librocblas5 (7.1.0-1ubuntu4) ...
+Selecting previously unselected package libmiopen1.
+Preparing to unpack .../11-libmiopen1_7.1.0+dfsg-0ubuntu5_amd64.deb ...
+Unpacking libmiopen1 (7.1.0+dfsg-0ubuntu5) ...
+Selecting previously unselected package librocrand1.
+Preparing to unpack .../12-librocrand1_7.1.0-0ubuntu3_amd64.deb ...
+Unpacking librocrand1 (7.1.0-0ubuntu3) ...
+Selecting previously unselected package libmiopen1-tests.
+Preparing to unpack .../13-libmiopen1-tests_7.1.0+dfsg-0ubuntu5_amd64.deb ...
+Unpacking libmiopen1-tests (7.1.0+dfsg-0ubuntu5) ...
+Setting up libroctx64-4 (7.1.0-0ubuntu4~git202603261549.332b3fb~ubuntu26.04.1) ...
+Setting up libhiprtc-builtins7:amd64 (7.1.0-0ubuntu2) ...
+Setting up libllvm21:amd64 (1:21.1.8-6ubuntu1) ...
+Setting up libamd-comgr3:amd64 (7.1.0+dfsg-0ubuntu6) ...
+Setting up libboost-atomic1.90.0:amd64 (1.90.0-5ubuntu2) ...
+Setting up libclang-common-21-dev:amd64 (1:21.1.8-6ubuntu1) ...
+Setting up libboost-filesystem1.90.0:amd64 (1.90.0-5ubuntu2) ...
+Setting up libhsakmt1:amd64 (7.1.0+dfsg-0ubuntu8~git202604071133.6a64d06~ubuntu26.04.1) ...
+Setting up libhsa-runtime64-1:amd64 (7.1.0+dfsg-0ubuntu8~git202604071133.6a64d06~ubuntu26.04.1) ...
+Setting up libamdhip64-7:amd64 (7.1.0-0ubuntu2) ...
+Setting up librocblas5 (7.1.0-1ubuntu4) ...
+Setting up librocrand1 (7.1.0-0ubuntu3) ...
+Setting up libmiopen1 (7.1.0+dfsg-0ubuntu5) ...
+Setting up libmiopen1-tests (7.1.0+dfsg-0ubuntu5) ...
+Processing triggers for libc-bin (2.43-2ubuntu1) ...
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+autopkgtest [03:15:47]: test command1: /bin/bash debian/tests/upstream-binaries libmiopen1-tests
+autopkgtest [03:15:47]: test command1: [-----------------------
+mount: /sys/kernel/debug: permission denied.
+       dmesg(1) may have more information after failed mount system call.
+dmesg: read kernel buffer failed: Operation not permitted
+debian/tests/upstream-binaries: line 64: /usr/libexec/rocm/libmiopen1-tests/test_*: No such file or directory
+MIOpenDriver conv -V 1 -t 1
+MIOpen(HIP): Error [ValidateGcnAssemblerImpl] Path to assembler is not provided. Expect performance degradation.
+PRNG seed: 12345678
+Timestamp: 2026-04-09 03:15:48 UTC; Host Name: autopkgtest-lxd-diozxd; Operating System: Linux 7.0.0-12-generic; ROCm: 7.1.52801; MIOpen Driver: 3.5.1; CPU Vendor: Intel; CPU Model: 1 x QEMU Virtual CPU version 2.5+; RAM Size: 15 GB; GPU Model: 1 x AMD Radeon AI PRO R9700; AMDGPU Driver: 0.0.0
+sh: 1: /usr/bin/clang++-21: not found
+terminate called after throwing an instance of 'miopen::Exception'
+  what():  src/hip/hip_build_utils.cpp:185: Failed cmd: '/usr/bin/clang++-21', args: ' -DMIOPEN_USE_FP16=0 -DMIOPEN_USE_FP16x4=0 -DMIOPEN_USE_FP16x8=0 -DMIOPEN_USE_FP32=1 -DMIOPEN_USE_INT8=0 -DMIOPEN_USE_BFP16=0 -DMIOPEN_USE_INT32=0 -DMIOPEN_USE_RNE_BFLOAT16=1 -DMIOPEN_FP8_IEEE_EXPONENT_BIAS=0 -DMIOPEN_FP8_CLIPPING=1  -Wno-everything --std=c++17 --cuda-gpu-arch=gfx1201 --cuda-device-only -c -O3  -Wno-unused-command-line-argument -I. -x hip -isystem /usr/include -D__HIP_PLATFORM_AMD__=1 -DUSE_PROF_API=1 -isystem /usr/include --hip-link -fno-offload-uniform-block -DHIP_PACKAGE_VERSION_FLAT=7001052801 naive_conv.cpp -o /tmp/miopen-naive_conv.cpp-db21-0ed6-08fe-1783/naive_conv.cpp.o'
+debian/tests/upstream-binaries: line 69:  1538 Aborted                    (core dumped) ${TESTSDIR}/MIOpenDriver ${SUITE} -V 1 -t 1
+MIOpenDriver convfp16 -V 1 -t 1
+MIOpen(HIP): Error [ValidateGcnAssemblerImpl] Path to assembler is not provided. Expect performance degradation.
+PRNG seed: 12345678
+Timestamp: 2026-04-09 03:15:50 UTC; Host Name: autopkgtest-lxd-diozxd; Operating System: Linux 7.0.0-12-generic; ROCm: 7.1.52801; MIOpen Driver: 3.5.1; CPU Vendor: Intel; CPU Model: 1 x QEMU Virtual CPU version 2.5+; RAM Size: 15 GB; GPU Model: 1 x AMD Radeon AI PRO R9700; AMDGPU Driver: 0.0.0
+sh: 1: /usr/bin/clang++-21: not found
+terminate called after throwing an instance of 'miopen::Exception'
+  what():  src/hip/hip_build_utils.cpp:185: Failed cmd: '/usr/bin/clang++-21', args: ' -DMIOPEN_USE_FP16=1 -DMIOPEN_USE_FP16x4=0 -DMIOPEN_USE_FP16x8=0 -DMIOPEN_USE_FP32=0 -DMIOPEN_USE_INT8=0 -DMIOPEN_USE_BFP16=0 -DMIOPEN_USE_INT32=0 -DMIOPEN_USE_RNE_BFLOAT16=1 -DMIOPEN_FP8_IEEE_EXPONENT_BIAS=0 -DMIOPEN_FP8_CLIPPING=1  -Wno-everything --std=c++17 --cuda-gpu-arch=gfx1201 --cuda-device-only -c -O3  -Wno-unused-command-line-argument -I. -x hip -isystem /usr/include -D__HIP_PLATFORM_AMD__=1 -DUSE_PROF_API=1 -isystem /usr/include --hip-link -fno-offload-uniform-block -DHIP_PACKAGE_VERSION_FLAT=7001052801 naive_conv.cpp -o /tmp/miopen-naive_conv.cpp-d1e6-859f-66ae-83c3/naive_conv.cpp.o'
+debian/tests/upstream-binaries: line 69:  1559 Aborted                    (core dumped) ${TESTSDIR}/MIOpenDriver "${SUITE}fp16" -V 1 -t 1
+MIOpenDriver pool -V 1 -t 1
+MIOpen(HIP): Error [ValidateGcnAssemblerImpl] Path to assembler is not provided. Expect performance degradation.
+PRNG seed: 12345678
+Timestamp: 2026-04-09 03:15:51 UTC; Host Name: autopkgtest-lxd-diozxd; Operating System: Linux 7.0.0-12-generic; ROCm: 7.1.52801; MIOpen Driver: 3.5.1; CPU Vendor: Intel; CPU Model: 1 x QEMU Virtual CPU version 2.5+; RAM Size: 15 GB; GPU Model: 1 x AMD Radeon AI PRO R9700; AMDGPU Driver: 0.0.0
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenPooling.cl-e7d9-ce82-9723-dd72/MIOpenPooling.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenPooling.cl-5cfd-2965-7008-399c/MIOpenPooling.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenPooling.cl-ef79-dd07-ada5-a0a6/MIOpenPooling.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenPooling.cl-7b6a-6cfb-0896-7acf/MIOpenPooling.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenPooling.cl-63e1-4dee-f9e7-bb9f/MIOpenPooling.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenPooling.cl-8d65-72a8-663c-83a6/MIOpenPooling.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenPooling.cl-a01b-230b-42cf-b2d2/MIOpenPooling.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenPooling.cl-b234-47e4-ebee-7fdf/MIOpenPooling.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenPooling.cl-ccb2-5e91-99d2-f6d4/MIOpenPooling.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenPooling.cl-f69b-345e-b069-d032/MIOpenPooling.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenPooling.cl-2a7a-1e60-9cdc-943e/MIOpenPooling.cl.o
+GPU Kernel Time Forward Pooling Elapsed: 0.000000 ms
+RunForwardGPU() FAILED, rc = 0x7
+Mask mismatch, gpu 0 cpu 6(64)
+Difference 0.943499 too large (> 1e-05) at {0,0,0,0}, cpu_val = 0.943499 vs gpu_val = 0
+Number of flops used: 0, pool_size: 9
+Forward Pooling verification FAILED
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenPoolingBwd.cl-4609-5347-1b0b-224b/MIOpenPoolingBwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenPoolingBwd.cl-2bd0-f29c-78c3-7daf/MIOpenPoolingBwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenPoolingBwd.cl-9085-a4c2-6e69-d2d6/MIOpenPoolingBwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenPoolingBwd.cl-36a3-70c2-3b55-54d0/MIOpenPoolingBwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenPoolingBwd.cl-47fc-0316-d73d-60d5/MIOpenPoolingBwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenPoolingBwd.cl-3169-cdc5-de08-dabb/MIOpenPoolingBwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenPoolingBwd.cl-bdc0-6926-1ba8-cdae/MIOpenPoolingBwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenPoolingBwd.cl-01c7-a4b8-4e37-0554/MIOpenPoolingBwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenPoolingBwd.cl-e3b5-7696-4a9f-8ad5/MIOpenPoolingBwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenPoolingBwd.cl-79f5-9d76-b8ae-5e16/MIOpenPoolingBwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenPoolingBwd.cl-4398-06df-0c96-f528/MIOpenPoolingBwd.cl.o
+GPU Kernel Time Backward Pooling Elapsed: 0.000000 ms
+RunBackwardGPU() FAILED, rc = 0x7
+RMS too big: 1. Max diff: 1.00022 at {0,0,2,0}, cpu_v = -0.000216257 vs gpu_v = 1
+Backward Pooling verification FAILED (1, 269999)
+Warning: Resource leak detected by SharedSignalPool, 385 Signals leaked.
+MIOpenDriver poolfp16 -V 1 -t 1
+PRNG seed: 12345678
+Timestamp: 2026-04-09 03:15:51 UTC; Host Name: autopkgtest-lxd-diozxd; Operating System: Linux 7.0.0-12-generic; ROCm: 7.1.52801; MIOpen Driver: 3.5.1; CPU Vendor: Intel; CPU Model: 1 x QEMU Virtual CPU version 2.5+; RAM Size: 15 GB; GPU Model: 1 x AMD Radeon AI PRO R9700; AMDGPU Driver: 0.0.0
+MIOpen(HIP): Error [ValidateGcnAssemblerImpl] Path to assembler is not provided. Expect performance degradation.
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenPooling.cl-6882-1ab4-882f-e77e/MIOpenPooling.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenPooling.cl-ac96-1b7c-30a9-b40a/MIOpenPooling.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenPooling.cl-a024-1243-1e3c-83f9/MIOpenPooling.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenPooling.cl-3a35-2c71-8469-1f31/MIOpenPooling.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenPooling.cl-9dc3-0e76-8710-2c61/MIOpenPooling.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenPooling.cl-862b-d7cd-fa6f-07d7/MIOpenPooling.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenPooling.cl-9c8d-17b4-15aa-9823/MIOpenPooling.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenPooling.cl-f27a-b85f-01ca-bc5e/MIOpenPooling.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenPooling.cl-8bf9-ec51-2b93-2fce/MIOpenPooling.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenPooling.cl-e0b2-6684-b4ed-b675/MIOpenPooling.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenPooling.cl-ae69-bd2d-d5b4-d9f0/MIOpenPooling.cl.o
+GPU Kernel Time Forward Pooling Elapsed: 0.000000 ms
+RunForwardGPU() FAILED, rc = 0x7
+Mask mismatch, gpu 0 cpu 6(64)
+Difference 0.943359 too large (> 0.005) at {0,0,0,0}, cpu_val = 0.943359 vs gpu_val = 0
+Number of flops used: 0, pool_size: 9
+Forward Pooling verification FAILED
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenPoolingBwd.cl-d542-472a-209b-5128/MIOpenPoolingBwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenPoolingBwd.cl-526e-9aa7-f552-fa73/MIOpenPoolingBwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenPoolingBwd.cl-9a23-3253-6a56-48b2/MIOpenPoolingBwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenPoolingBwd.cl-c777-5e59-2fda-39d6/MIOpenPoolingBwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenPoolingBwd.cl-151b-70cd-0c71-991e/MIOpenPoolingBwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenPoolingBwd.cl-524a-021b-0664-a41c/MIOpenPoolingBwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenPoolingBwd.cl-bd02-9e6d-e956-da94/MIOpenPoolingBwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenPoolingBwd.cl-ceb1-7021-629f-2ad5/MIOpenPoolingBwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenPoolingBwd.cl-4f3b-c465-26a2-64bc/MIOpenPoolingBwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenPoolingBwd.cl-8c96-e56d-0fc3-14f4/MIOpenPoolingBwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenPoolingBwd.cl-4716-b807-192f-1a6c/MIOpenPoolingBwd.cl.o
+GPU Kernel Time Backward Pooling Elapsed: 0.000000 ms
+RunBackwardGPU() FAILED, rc = 0x7
+RMS too big: 1. Max diff: 1.00022 at {0,0,2,0}, cpu_v = -0.000216365 vs gpu_v = 1
+Backward Pooling verification FAILED (1, 269999)
+Warning: Resource leak detected by SharedSignalPool, 385 Signals leaked.
+MIOpenDriver lrn -V 1 -t 1
+PRNG seed: 12345678
+Timestamp: 2026-04-09 03:15:51 UTC; Host Name: autopkgtest-lxd-diozxd; Operating System: Linux 7.0.0-12-generic; ROCm: 7.1.52801; MIOpen Driver: 3.5.1; CPU Vendor: Intel; CPU Model: 1 x QEMU Virtual CPU version 2.5+; RAM Size: 15 GB; GPU Model: 1 x AMD Radeon AI PRO R9700; AMDGPU Driver: 0.0.0
+MIOpen(HIP): Error [ValidateGcnAssemblerImpl] Path to assembler is not provided. Expect performance degradation.
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenLRNFwd.cl-aa4f-ccc7-8f01-cdce/MIOpenLRNFwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenLRNFwd.cl-e392-e85b-1dd0-6261/MIOpenLRNFwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenLRNFwd.cl-8a4f-d6a7-f460-250a/MIOpenLRNFwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenLRNFwd.cl-735e-d6ca-fae6-b6ab/MIOpenLRNFwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenLRNFwd.cl-6483-3f19-6bac-e18a/MIOpenLRNFwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenLRNFwd.cl-42ed-6386-ed8a-b8e6/MIOpenLRNFwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenLRNFwd.cl-0b64-151e-d325-52df/MIOpenLRNFwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenLRNFwd.cl-6041-210c-7d54-a104/MIOpenLRNFwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenLRNFwd.cl-6735-4a85-778c-0786/MIOpenLRNFwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenLRNFwd.cl-dedb-069e-bb78-3cee/MIOpenLRNFwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenLRNFwd.cl-93c5-9292-1399-f94e/MIOpenLRNFwd.cl.o
+GPU Kernel Time Forward LRN Elapsed: 0.000000 ms
+Forward LRN FAILED: 0.577553
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenLRNBwd.cl-ea6b-1802-b95e-41c7/MIOpenLRNBwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenLRNBwd.cl-3d40-6cc0-3278-ebf5/MIOpenLRNBwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenLRNBwd.cl-3824-7433-2a61-9547/MIOpenLRNBwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenLRNBwd.cl-b797-1544-ff22-eb74/MIOpenLRNBwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenLRNBwd.cl-c38d-25c4-d3cb-3493/MIOpenLRNBwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenLRNBwd.cl-9828-d447-e1c7-1353/MIOpenLRNBwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenLRNBwd.cl-e74b-705e-439c-c169/MIOpenLRNBwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenLRNBwd.cl-5704-bebf-b902-681c/MIOpenLRNBwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenLRNBwd.cl-715b-6ca5-52b8-2ae0/MIOpenLRNBwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenLRNBwd.cl-57e0-0f26-a506-38ea/MIOpenLRNBwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenLRNBwd.cl-46af-59c6-82e9-ec55/MIOpenLRNBwd.cl.o
+GPU Kernel Time Backward LRN Elapsed: 0.000000 ms
+Backward LRN FAILED: -nan
+Warning: Resource leak detected by SharedSignalPool, 77 Signals leaked.
+MIOpenDriver lrnfp16 -V 1 -t 1
+PRNG seed: 12345678
+Timestamp: 2026-04-09 03:15:52 UTC; Host Name: autopkgtest-lxd-diozxd; Operating System: Linux 7.0.0-12-generic; ROCm: 7.1.52801; MIOpen Driver: 3.5.1; CPU Vendor: Intel; CPU Model: 1 x QEMU Virtual CPU version 2.5+; RAM Size: 15 GB; GPU Model: 1 x AMD Radeon AI PRO R9700; AMDGPU Driver: 0.0.0
+MIOpen(HIP): Error [ValidateGcnAssemblerImpl] Path to assembler is not provided. Expect performance degradation.
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenLRNFwd.cl-5828-5473-f230-a879/MIOpenLRNFwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenLRNFwd.cl-dedc-d62d-a75b-cfcc/MIOpenLRNFwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenLRNFwd.cl-0b76-3542-29fa-4771/MIOpenLRNFwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenLRNFwd.cl-abf0-8abb-8f17-ca27/MIOpenLRNFwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenLRNFwd.cl-b52f-3b46-e9e2-185f/MIOpenLRNFwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenLRNFwd.cl-cd09-cb02-479b-9793/MIOpenLRNFwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenLRNFwd.cl-73f9-3ea2-e95e-1263/MIOpenLRNFwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenLRNFwd.cl-867c-80d6-5e51-9cf4/MIOpenLRNFwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenLRNFwd.cl-0278-c462-f802-ae6f/MIOpenLRNFwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenLRNFwd.cl-de91-c45a-b1ad-76ae/MIOpenLRNFwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenLRNFwd.cl-d625-8758-9a89-13d3/MIOpenLRNFwd.cl.o
+GPU Kernel Time Forward LRN Elapsed: 0.000000 ms
+Forward LRN FAILED: 0.577529
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenLRNBwd.cl-b521-a79f-a439-6d2e/MIOpenLRNBwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenLRNBwd.cl-7fca-cece-c14c-db54/MIOpenLRNBwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenLRNBwd.cl-7804-eb78-a674-d928/MIOpenLRNBwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenLRNBwd.cl-3b10-61c2-1ec8-805b/MIOpenLRNBwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenLRNBwd.cl-6abf-eefd-936b-a75e/MIOpenLRNBwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenLRNBwd.cl-8cd7-7705-d348-b1f8/MIOpenLRNBwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenLRNBwd.cl-413b-4b83-c608-540a/MIOpenLRNBwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenLRNBwd.cl-fb00-8153-b6d3-563e/MIOpenLRNBwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenLRNBwd.cl-1e84-ddc4-3216-3985/MIOpenLRNBwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenLRNBwd.cl-3734-1cd4-cb65-cca3/MIOpenLRNBwd.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenLRNBwd.cl-bed7-0c7a-fd69-f6a4/MIOpenLRNBwd.cl.o
+GPU Kernel Time Backward LRN Elapsed: 0.000000 ms
+Backward LRN FAILED: -nan
+Warning: Resource leak detected by SharedSignalPool, 77 Signals leaked.
+MIOpenDriver activ -V 1 -t 1
+PRNG seed: 12345678
+Timestamp: 2026-04-09 03:15:52 UTC; Host Name: autopkgtest-lxd-diozxd; Operating System: Linux 7.0.0-12-generic; ROCm: 7.1.52801; MIOpen Driver: 3.5.1; CPU Vendor: Intel; CPU Model: 1 x QEMU Virtual CPU version 2.5+; RAM Size: 15 GB; GPU Model: 1 x AMD Radeon AI PRO R9700; AMDGPU Driver: 0.0.0
+MIOpen(HIP): Error [ValidateGcnAssemblerImpl] Path to assembler is not provided. Expect performance degradation.
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenNeuron.cl-5b4e-01d7-2ca2-c961/MIOpenNeuron.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenNeuron.cl-6442-9a7f-87e4-e93f/MIOpenNeuron.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenNeuron.cl-ac3f-5bbd-f1e1-9ca9/MIOpenNeuron.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenNeuron.cl-b5cf-e13f-6350-17e6/MIOpenNeuron.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenNeuron.cl-e79e-7585-ee78-c821/MIOpenNeuron.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenNeuron.cl-e5f0-3f51-b766-359c/MIOpenNeuron.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenNeuron.cl-d613-0fb8-b720-9939/MIOpenNeuron.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenNeuron.cl-0f99-909c-bd53-9e24/MIOpenNeuron.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenNeuron.cl-3998-789b-e329-2ec8/MIOpenNeuron.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenNeuron.cl-58b7-cd8b-2712-c814/MIOpenNeuron.cl.o
+GPU Kernel Min Time Forward Activation Elapsed: 0.000000 ms
+GPU Kernel Avg Time Forward Activation Elapsed: 0.000000 ms, for 9 iterations.
+stats: name, bytesRead, bytesWritten, GB/s, timeMs
+stats: fwd-activ, 1228800, 1228800, inf, 0.000000
+Difference in neuron layer: 0.193284 too large at 0 x = 0.193284  c_v = 0.193284 vs g_val = 0 tolerance = 9.53674e-06
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenNeuron.cl-1a9c-5c7d-81b9-ec7c/MIOpenNeuron.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenNeuron.cl-ec2b-9741-d586-0195/MIOpenNeuron.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenNeuron.cl-9953-6e79-6557-e831/MIOpenNeuron.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenNeuron.cl-e028-b998-cc66-1ed5/MIOpenNeuron.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenNeuron.cl-be07-3bf4-a144-3217/MIOpenNeuron.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenNeuron.cl-8944-265e-a8b9-47a7/MIOpenNeuron.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenNeuron.cl-ff97-01d2-7e4e-4dfe/MIOpenNeuron.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenNeuron.cl-4ab2-4bfe-c371-556a/MIOpenNeuron.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenNeuron.cl-9d79-ef65-e74d-4c8e/MIOpenNeuron.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenNeuron.cl-f91e-4e11-1af3-38a6/MIOpenNeuron.cl.o
+GPU Kernel Min Time Backward Activation Elapsed: 0.000000 ms
+GPU Kernel Avg Time Backward Activation Elapsed: 0.000000 ms, for 9 iterations.
+stats: name, bytesRead, bytesWritten, GB/s, timeMs
+stats: bwd-activ, 1228800, 1228800, inf, 0.000000
+Difference in neuron back-propagation: 0.216257 too large at 0 dy = -0.216257 x = 0.193284 y = 0  c_v = -0.216257 vs g_val = 0 tolerance = 9.53674e-06
+Warning: Resource leak detected by SharedSignalPool, 77 Signals leaked.
+MIOpenDriver activfp16 -V 1 -t 1
+PRNG seed: 12345678
+Timestamp: 2026-04-09 03:15:52 UTC; Host Name: autopkgtest-lxd-diozxd; Operating System: Linux 7.0.0-12-generic; ROCm: 7.1.52801; MIOpen Driver: 3.5.1; CPU Vendor: Intel; CPU Model: 1 x QEMU Virtual CPU version 2.5+; RAM Size: 15 GB; GPU Model: 1 x AMD Radeon AI PRO R9700; AMDGPU Driver: 0.0.0
+MIOpen(HIP): Error [ValidateGcnAssemblerImpl] Path to assembler is not provided. Expect performance degradation.
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenNeuron.cl-5a13-fdc9-89c6-1136/MIOpenNeuron.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenNeuron.cl-1217-3e7a-0a5c-f2aa/MIOpenNeuron.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenNeuron.cl-f7f1-aa1a-ddd3-8e40/MIOpenNeuron.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenNeuron.cl-3ec6-eed9-df76-4e0c/MIOpenNeuron.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenNeuron.cl-bb47-5412-59ad-2524/MIOpenNeuron.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenNeuron.cl-c960-d12d-e09e-350b/MIOpenNeuron.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenNeuron.cl-7b40-3d3b-4353-c639/MIOpenNeuron.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenNeuron.cl-611b-d53d-c7e5-8355/MIOpenNeuron.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenNeuron.cl-4771-2532-caa6-cc61/MIOpenNeuron.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenNeuron.cl-7e87-ffd2-1461-e692/MIOpenNeuron.cl.o
+GPU Kernel Min Time Forward Activation Elapsed: 0.000000 ms
+GPU Kernel Avg Time Forward Activation Elapsed: 0.000000 ms, for 9 iterations.
+stats: name, bytesRead, bytesWritten, GB/s, timeMs
+stats: fwd-activ, 614400, 614400, inf, 0.000000
+Difference in neuron layer: 0.193359 too large at 0 x = 0.193359  c_v = 0.193359 vs g_val = 0 tolerance = 0.078125
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenNeuron.cl-0b5f-cde4-ee74-4c46/MIOpenNeuron.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenNeuron.cl-ba98-7fb6-e4a7-2a24/MIOpenNeuron.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenNeuron.cl-3a13-294e-c64a-d65d/MIOpenNeuron.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenNeuron.cl-32d3-7bd1-e57f-88b4/MIOpenNeuron.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenNeuron.cl-9fe6-1c29-6d98-f792/MIOpenNeuron.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenNeuron.cl-3a68-81ff-9bc7-1a9e/MIOpenNeuron.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenNeuron.cl-8176-4e5a-a3f8-7479/MIOpenNeuron.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenNeuron.cl-f538-675c-cd8c-1895/MIOpenNeuron.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenNeuron.cl-0ca2-3818-7571-6fe5/MIOpenNeuron.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenNeuron.cl-b824-7805-6c8e-c5b1/MIOpenNeuron.cl.o
+GPU Kernel Min Time Backward Activation Elapsed: 0.000000 ms
+GPU Kernel Avg Time Backward Activation Elapsed: 0.000000 ms, for 9 iterations.
+stats: name, bytesRead, bytesWritten, GB/s, timeMs
+stats: bwd-activ, 614400, 614400, inf, 0.000000
+Difference in neuron back-propagation: 0.216309 too large at 0 dy = -0.216309 x = 0.193359 y = 0  c_v = -0.216309 vs g_val = 0 tolerance = 0.078125
+Warning: Resource leak detected by SharedSignalPool, 77 Signals leaked.
+MIOpenDriver softmax -V 1 -t 1
+PRNG seed: 12345678
+Timestamp: 2026-04-09 03:15:53 UTC; Host Name: autopkgtest-lxd-diozxd; Operating System: Linux 7.0.0-12-generic; ROCm: 7.1.52801; MIOpen Driver: 3.5.1; CPU Vendor: Intel; CPU Model: 1 x QEMU Virtual CPU version 2.5+; RAM Size: 15 GB; GPU Model: 1 x AMD Radeon AI PRO R9700; AMDGPU Driver: 0.0.0
+MIOpen(HIP): Error [ValidateGcnAssemblerImpl] Path to assembler is not provided. Expect performance degradation.
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenSoftmax.cl-d956-e153-f4a4-fe3d/MIOpenSoftmax.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenSoftmax.cl-838f-f68f-07be-0135/MIOpenSoftmax.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenSoftmax.cl-cbf9-0955-bf99-2ad5/MIOpenSoftmax.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenSoftmax.cl-e815-f329-f6cb-3d2d/MIOpenSoftmax.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenSoftmax.cl-f428-6e2b-94a1-9d96/MIOpenSoftmax.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenSoftmax.cl-49da-5f0b-d9d4-6aae/MIOpenSoftmax.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenSoftmax.cl-327b-e7a0-a740-3b79/MIOpenSoftmax.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenSoftmax.cl-5ea8-dd66-64db-ac2c/MIOpenSoftmax.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenSoftmax.cl-040a-9fc4-c981-3e99/MIOpenSoftmax.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenSoftmax.cl-690c-a959-a064-746d/MIOpenSoftmax.cl.o
+GPU Kernel Time Forward Softmax Elapsed: 0.000000 ms
+Forward Softmax FAILED: 0.810812
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenSoftmax.cl-8381-64f2-d81e-f3f1/MIOpenSoftmax.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenSoftmax.cl-b90d-2a98-bcdf-9962/MIOpenSoftmax.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenSoftmax.cl-8cbb-5ad5-c4ec-3cab/MIOpenSoftmax.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenSoftmax.cl-9795-e124-5d31-3425/MIOpenSoftmax.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenSoftmax.cl-f6bf-1849-daf8-ce25/MIOpenSoftmax.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenSoftmax.cl-dcc6-67cd-d964-2cce/MIOpenSoftmax.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenSoftmax.cl-2756-f98c-d057-93a5/MIOpenSoftmax.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenSoftmax.cl-728b-2123-0f05-edd3/MIOpenSoftmax.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenSoftmax.cl-2031-ed91-b0d6-35cf/MIOpenSoftmax.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenSoftmax.cl-63b5-1219-d87f-4cf7/MIOpenSoftmax.cl.o
+GPU Kernel Time Backward Softmax Elapsed: 0.000000 ms
+Backward Softmax FAILED: 0.176541
+Warning: Resource leak detected by SharedSignalPool, 77 Signals leaked.
+MIOpenDriver softmaxfp16 -V 1 -t 1
+PRNG seed: 12345678
+Timestamp: 2026-04-09 03:15:53 UTC; Host Name: autopkgtest-lxd-diozxd; Operating System: Linux 7.0.0-12-generic; ROCm: 7.1.52801; MIOpen Driver: 3.5.1; CPU Vendor: Intel; CPU Model: 1 x QEMU Virtual CPU version 2.5+; RAM Size: 15 GB; GPU Model: 1 x AMD Radeon AI PRO R9700; AMDGPU Driver: 0.0.0
+MIOpen(HIP): Error [ValidateGcnAssemblerImpl] Path to assembler is not provided. Expect performance degradation.
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenSoftmax.cl-b486-3399-3ced-5c29/MIOpenSoftmax.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenSoftmax.cl-c971-ad2a-1f03-92df/MIOpenSoftmax.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenSoftmax.cl-60fd-aa95-50cd-fb99/MIOpenSoftmax.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenSoftmax.cl-6b6f-3e64-edd1-9d88/MIOpenSoftmax.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenSoftmax.cl-0a04-563c-c041-9bcb/MIOpenSoftmax.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenSoftmax.cl-aff0-c953-c22a-bafe/MIOpenSoftmax.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenSoftmax.cl-3a1e-0b10-c4b3-cbf8/MIOpenSoftmax.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenSoftmax.cl-e550-77fb-ff23-3b1b/MIOpenSoftmax.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenSoftmax.cl-8b34-54f6-32af-5c6b/MIOpenSoftmax.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenSoftmax.cl-b4c1-cbb0-7d8d-9e2c/MIOpenSoftmax.cl.o
+GPU Kernel Time Forward Softmax Elapsed: 0.000000 ms
+Forward Softmax FAILED: 0.810744
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenSoftmax.cl-46eb-0861-8d35-5c77/MIOpenSoftmax.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenSoftmax.cl-440d-80be-e58c-2719/MIOpenSoftmax.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenSoftmax.cl-a82e-648e-5046-ef04/MIOpenSoftmax.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenSoftmax.cl-f648-be29-0cb9-27a5/MIOpenSoftmax.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenSoftmax.cl-e924-7f18-84ee-35ec/MIOpenSoftmax.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenSoftmax.cl-c5a0-8359-349f-d599/MIOpenSoftmax.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenSoftmax.cl-c414-2eee-4f85-dc50/MIOpenSoftmax.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenSoftmax.cl-a1ba-bd7e-2481-e06b/MIOpenSoftmax.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenSoftmax.cl-ef36-edc3-95f7-6da8/MIOpenSoftmax.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenSoftmax.cl-14f1-4772-2412-f0f9/MIOpenSoftmax.cl.o
+GPU Kernel Time Backward Softmax Elapsed: 0.000000 ms
+Backward Softmax FAILED: 0.176514
+Warning: Resource leak detected by SharedSignalPool, 77 Signals leaked.
+MIOpenDriver bnorm -V 1 -t 1
+PRNG seed: 12345678
+Timestamp: 2026-04-09 03:15:53 UTC; Host Name: autopkgtest-lxd-diozxd; Operating System: Linux 7.0.0-12-generic; ROCm: 7.1.52801; MIOpen Driver: 3.5.1; CPU Vendor: Intel; CPU Model: 1 x QEMU Virtual CPU version 2.5+; RAM Size: 15 GB; GPU Model: 1 x AMD Radeon AI PRO R9700; AMDGPU Driver: 0.0.0
+MIOpen(HIP): Error [ValidateGcnAssemblerImpl] Path to assembler is not provided. Expect performance degradation.
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenBatchNormFwdTrainPerAct.cl-0243-833d-5700-2a7f/MIOpenBatchNormFwdTrainPerAct.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenBatchNormFwdTrainPerAct.cl-aa3f-b3f1-68e5-3e94/MIOpenBatchNormFwdTrainPerAct.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenBatchNormFwdTrainPerAct.cl-0482-7ea2-e243-2e59/MIOpenBatchNormFwdTrainPerAct.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenBatchNormFwdTrainPerAct.cl-c059-d001-a7f1-8333/MIOpenBatchNormFwdTrainPerAct.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenBatchNormFwdTrainPerAct.cl-fbe8-3f69-4375-62c8/MIOpenBatchNormFwdTrainPerAct.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenBatchNormFwdTrainPerAct.cl-df5b-3ad1-6ebe-b1c4/MIOpenBatchNormFwdTrainPerAct.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenBatchNormFwdTrainPerAct.cl-dee1-d6d8-f76c-f6fb/MIOpenBatchNormFwdTrainPerAct.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenBatchNormFwdTrainPerAct.cl-462c-2ad1-ae83-f54e/MIOpenBatchNormFwdTrainPerAct.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenBatchNormFwdTrainPerAct.cl-729a-4d46-ea1d-0383/MIOpenBatchNormFwdTrainPerAct.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenBatchNormFwdTrainPerAct.cl-dc57-a444-9f41-54e9/MIOpenBatchNormFwdTrainPerAct.cl.o
+GPU Kernel Min Time Forward Batch Normalization Elapsed: 0.000000 ms
+GPU Kernel Avg Time Forward Batch Normalization Elapsed: 0.000000 ms, for 9 iterations.
+stats: bnormf, 0, 393240, 393240, 0, inf, 0.000000
+Forward batch norm verification FAILED on output: 0.258075
+Warning: Resource leak detected by SharedSignalPool, 77 Signals leaked.
+MIOpenDriver bnormfp16 -V 1 -t 1
+PRNG seed: 12345678
+Timestamp: 2026-04-09 03:15:53 UTC; Host Name: autopkgtest-lxd-diozxd; Operating System: Linux 7.0.0-12-generic; ROCm: 7.1.52801; MIOpen Driver: 3.5.1; CPU Vendor: Intel; CPU Model: 1 x QEMU Virtual CPU version 2.5+; RAM Size: 15 GB; GPU Model: 1 x AMD Radeon AI PRO R9700; AMDGPU Driver: 0.0.0
+MIOpen(HIP): Error [ValidateGcnAssemblerImpl] Path to assembler is not provided. Expect performance degradation.
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenBatchNormFwdTrainPerAct.cl-ff4d-2471-b5e6-7743/MIOpenBatchNormFwdTrainPerAct.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenBatchNormFwdTrainPerAct.cl-c4d8-2877-a4ea-444a/MIOpenBatchNormFwdTrainPerAct.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenBatchNormFwdTrainPerAct.cl-921d-2207-e88e-15f4/MIOpenBatchNormFwdTrainPerAct.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenBatchNormFwdTrainPerAct.cl-955f-5f82-140e-dc52/MIOpenBatchNormFwdTrainPerAct.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenBatchNormFwdTrainPerAct.cl-4184-d707-fecb-64a8/MIOpenBatchNormFwdTrainPerAct.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenBatchNormFwdTrainPerAct.cl-bf4f-6822-775a-7bc9/MIOpenBatchNormFwdTrainPerAct.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenBatchNormFwdTrainPerAct.cl-1e12-1273-c146-3d5f/MIOpenBatchNormFwdTrainPerAct.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenBatchNormFwdTrainPerAct.cl-fd13-8ec6-91cc-8eaf/MIOpenBatchNormFwdTrainPerAct.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenBatchNormFwdTrainPerAct.cl-030a-b312-82c0-ef31/MIOpenBatchNormFwdTrainPerAct.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenBatchNormFwdTrainPerAct.cl-8ae5-c30b-e28b-7de0/MIOpenBatchNormFwdTrainPerAct.cl.o
+GPU Kernel Min Time Forward Batch Normalization Elapsed: 0.000000 ms
+GPU Kernel Avg Time Forward Batch Normalization Elapsed: 0.000000 ms, for 9 iterations.
+stats: bnormf, 0, 196620, 196620, 0, inf, 0.000000
+Forward batch norm verification FAILED on output: 0.258081
+Warning: Resource leak detected by SharedSignalPool, 77 Signals leaked.
+MIOpenDriver rnn -V 1 -t 1
+Warning: Resource leak detected by SharedSignalPool, 77 Signals leaked.
+Input Flag: t Not Found !MIOpenDriver rnnfp16 -V 1 -t 1
+Warning: Resource leak detected by SharedSignalPool, 77 Signals leaked.
+Input Flag: t Not Found !MIOpenDriver tensorop -V 1 -t 1
+PRNG seed: 12345678
+Timestamp: 2026-04-09 03:15:54 UTC; Host Name: autopkgtest-lxd-diozxd; Operating System: Linux 7.0.0-12-generic; ROCm: 7.1.52801; MIOpen Driver: 3.5.1; CPU Vendor: Intel; CPU Model: 1 x QEMU Virtual CPU version 2.5+; RAM Size: 15 GB; GPU Model: 1 x AMD Radeon AI PRO R9700; AMDGPU Driver: 0.0.0
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenSubTensorOpWithScalarKernel.cl-d2e1-1cae-15e9-641c/MIOpenSubTensorOpWithScalarKernel.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenSubTensorOpWithScalarKernel.cl-db3b-e3aa-2b3e-f65a/MIOpenSubTensorOpWithScalarKernel.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenSubTensorOpWithScalarKernel.cl-5ddf-a0d1-f212-c6b9/MIOpenSubTensorOpWithScalarKernel.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenSubTensorOpWithScalarKernel.cl-f9b0-bc0c-0bbf-6d30/MIOpenSubTensorOpWithScalarKernel.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenSubTensorOpWithScalarKernel.cl-72cd-a870-7c40-e51f/MIOpenSubTensorOpWithScalarKernel.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenSubTensorOpWithScalarKernel.cl-e31e-ddb4-6a5a-c32f/MIOpenSubTensorOpWithScalarKernel.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenSubTensorOpWithScalarKernel.cl-d680-065a-c56d-32a5/MIOpenSubTensorOpWithScalarKernel.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenSubTensorOpWithScalarKernel.cl-5d4b-c29b-24b8-9073/MIOpenSubTensorOpWithScalarKernel.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenSubTensorOpWithScalarKernel.cl-f98f-ecb4-4cdc-e80d/MIOpenSubTensorOpWithScalarKernel.cl.o
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenSubTensorOpWithScalarKernel.cl-5e71-4ec7-d011-c04f/MIOpenSubTensorOpWithScalarKernel.cl.o
+GPU Kernel Min Time Tensor Op Elapsed: 0.000000 ms
+GPU Kernel Avg Time Tensor Op Elapsed: 0.000000 ms, for 9 iterations.
+stats: name, bytesRead, bytesWritten, GB/s, timeMs
+stats: tensor op, 2359296, 786432, inf, 0.000000
+Difference in Tensor Op result: 0.806716 too large at 0 cpu value = 1 , gpu_val = 0.193284 tolreance = 9.53674e-06
+Warning: Resource leak detected by SharedSignalPool, 77 Signals leaked.
+FAILED: Invalid Base Input Argument
+Usage: ./driver *base_arg* *other_args*
+Supported Base Arguments: conv[fp16|int8|bfp16], CBAInfer[fp16|bfp16], CAInfer[fp16|bfp16], pool[fp16], lrn[fp16], activ[fp16], softmax[fp16], bnorm[fp16], rnn[fp16], gemm[fp16], ctc, dropout[fp16], tensorop, reduce[fp16|fp64], layernorm[bfp16|fp16], groupnorm[bfp16|fp16], cat[bfp16|fp16], addlayernorm[bfp16|fp16], t5layernorm[bfp16|fp16], adam[fp16], ampadam, reduceextreme[bfp16|fp16], adamw[fp16], ampadamw, transformersadamw[fp16], transformersampadamw, getitem[bfp16|fp16], reducecalculation[bfp16|fp16], rope[bfp16|fp16], prelu[bfp16|fp16], kthvalue[bfp16|fp16], glu[bfp16|fp16], softmarginloss[bfp16|fp16], multimarginloss[bfp16|fp16]
+MIOpenDriver reduce -V 1 -t 1
+PRNG seed: 12345678
+Timestamp: 2026-04-09 03:15:55 UTC; Host Name: autopkgtest-lxd-diozxd; Operating System: Linux 7.0.0-12-generic; ROCm: 7.1.52801; MIOpen Driver: 3.5.1; CPU Vendor: Intel; CPU Model: 1 x QEMU Virtual CPU version 2.5+; RAM Size: 15 GB; GPU Model: 1 x AMD Radeon AI PRO R9700; AMDGPU Driver: 0.0.0
+sh: 1: /usr/bin/clang++-21: not found
+MIOpen Error: src/hip/hip_build_utils.cpp:185: Failed cmd: '/usr/bin/clang++-21', args: ' --std=c++17 -DCK_AMD_GPU_GFX1201 -DCK_USE_AMD_BUFFER_ATOMIC_FADD=0 -DCK_BLOCK_SYNC_LDS_WITHOUT_SYNC_VMEM=1 -DCK_USE_AMD_BUFFER_ADDRESSING=1 -DCK_PARAM_SRC_DATATYPE=1 -DCK_PARAM_DST_DATATYPE=1 -DCK_PARAM_REDUCE_COMPTYPE=1  -DCK_PARAM_BLOCKSIZE=256 -DCK_PARAM_THREAD_BUFFER_LENGTH=8 -DCK_PARAM_ACCESSES_PER_THREAD_INBLOCK=2 -DCK_PARAM_ACCESSES_PER_THREAD_INWARP=2 -DCK_PARAM_NUM_TOREDUCE_DIMS=2 -DCK_PARAM_REDUCE_OP=0 -DCK_PARAM_NAN_PROPAGATE=0 -DCK_PARAM_REDUCE_INDICES=0 -DCK_PARAM_IN_DIMS=4 -DCK_PARAM_OUT_DIMS=2 -DCK_PARAM_SRC2D_PADDING=1 -DCK_PARAM_DST1D_PADDING=0  -Wno-everything --cuda-gpu-arch=gfx1201 --cuda-device-only -c -O3  -Wno-unused-command-line-argument -I. -x hip -isystem /usr/include -D__HIP_PLATFORM_AMD__=1 -DUSE_PROF_API=1 -isystem /usr/include --hip-link -fno-offload-uniform-block -DHIP_PACKAGE_VERSION_FLAT=7001052801 gridwise_generic_reduction_first_call_multiblock_reduce_partial_dims.cpp -o /tmp/miopen-gridwise_generic_reduction_first_call_multiblock_reduce_partial_dims.cpp-872d-8488-00fc-9585/gridwise_generic_reduction_first_call_multiblock_reduce_partial_dims.cpp.o'
+sh: 1: /usr/bin/clang++-21: not found
+MIOpen Error: src/hip/hip_build_utils.cpp:185: Failed cmd: '/usr/bin/clang++-21', args: ' --std=c++17 -DCK_AMD_GPU_GFX1201 -DCK_USE_AMD_BUFFER_ATOMIC_FADD=0 -DCK_BLOCK_SYNC_LDS_WITHOUT_SYNC_VMEM=1 -DCK_USE_AMD_BUFFER_ADDRESSING=1 -DCK_PARAM_SRC_DATATYPE=1 -DCK_PARAM_DST_DATATYPE=1 -DCK_PARAM_REDUCE_COMPTYPE=1  -DCK_PARAM_BLOCKSIZE=256 -DCK_PARAM_THREAD_BUFFER_LENGTH=8 -DCK_PARAM_ACCESSES_PER_THREAD_INBLOCK=2 -DCK_PARAM_ACCESSES_PER_THREAD_INWARP=2 -DCK_PARAM_NUM_TOREDUCE_DIMS=2 -DCK_PARAM_REDUCE_OP=0 -DCK_PARAM_NAN_PROPAGATE=0 -DCK_PARAM_REDUCE_INDICES=0 -DCK_PARAM_IN_DIMS=4 -DCK_PARAM_OUT_DIMS=2 -DCK_PARAM_SRC2D_PADDING=1 -DCK_PARAM_DST1D_PADDING=0  -Wno-everything --cuda-gpu-arch=gfx1201 --cuda-device-only -c -O3  -Wno-unused-command-line-argument -I. -x hip -isystem /usr/include -D__HIP_PLATFORM_AMD__=1 -DUSE_PROF_API=1 -isystem /usr/include --hip-link -fno-offload-uniform-block -DHIP_PACKAGE_VERSION_FLAT=7001052801 gridwise_generic_reduction_first_call_multiblock_reduce_partial_dims.cpp -o /tmp/miopen-gridwise_generic_reduction_first_call_multiblock_reduce_partial_dims.cpp-0bf3-650b-250c-ecd6/gridwise_generic_reduction_first_call_multiblock_reduce_partial_dims.cpp.o'
+GPU Kernel Time Reduction Elapsed: 0.000000 ms
+ReduceTensor() FAILED with error = 0.947513 , tolerance = 0.00015
+Warning: Resource leak detected by SharedSignalPool, 77 Signals leaked.
+MIOpenDriver reducefp16 -V 1 -t 1
+PRNG seed: 12345678
+Timestamp: 2026-04-09 03:15:55 UTC; Host Name: autopkgtest-lxd-diozxd; Operating System: Linux 7.0.0-12-generic; ROCm: 7.1.52801; MIOpen Driver: 3.5.1; CPU Vendor: Intel; CPU Model: 1 x QEMU Virtual CPU version 2.5+; RAM Size: 15 GB; GPU Model: 1 x AMD Radeon AI PRO R9700; AMDGPU Driver: 0.0.0
+sh: 1: /usr/bin/clang++-21: not found
+MIOpen Error: src/hip/hip_build_utils.cpp:185: Failed cmd: '/usr/bin/clang++-21', args: ' --std=c++17 -DCK_AMD_GPU_GFX1201 -DCK_USE_AMD_BUFFER_ATOMIC_FADD=0 -DCK_BLOCK_SYNC_LDS_WITHOUT_SYNC_VMEM=1 -DCK_USE_AMD_BUFFER_ADDRESSING=1 -DCK_PARAM_SRC_DATATYPE=0 -DCK_PARAM_DST_DATATYPE=0 -DCK_PARAM_REDUCE_COMPTYPE=1  -DCK_PARAM_BLOCKSIZE=256 -DCK_PARAM_THREAD_BUFFER_LENGTH=8 -DCK_PARAM_ACCESSES_PER_THREAD_INBLOCK=2 -DCK_PARAM_ACCESSES_PER_THREAD_INWARP=2 -DCK_PARAM_NUM_TOREDUCE_DIMS=2 -DCK_PARAM_REDUCE_OP=0 -DCK_PARAM_NAN_PROPAGATE=0 -DCK_PARAM_REDUCE_INDICES=0 -DCK_PARAM_IN_DIMS=4 -DCK_PARAM_OUT_DIMS=2 -DCK_PARAM_SRC2D_PADDING=1 -DCK_PARAM_DST1D_PADDING=0  -Wno-everything --cuda-gpu-arch=gfx1201 --cuda-device-only -c -O3  -Wno-unused-command-line-argument -I. -x hip -isystem /usr/include -D__HIP_PLATFORM_AMD__=1 -DUSE_PROF_API=1 -isystem /usr/include --hip-link -fno-offload-uniform-block -DHIP_PACKAGE_VERSION_FLAT=7001052801 gridwise_generic_reduction_first_call_multiblock_reduce_partial_dims.cpp -o /tmp/miopen-gridwise_generic_reduction_first_call_multiblock_reduce_partial_dims.cpp-5285-c791-4503-23cb/gridwise_generic_reduction_first_call_multiblock_reduce_partial_dims.cpp.o'
+sh: 1: /usr/bin/clang++-21: not found
+MIOpen Error: src/hip/hip_build_utils.cpp:185: Failed cmd: '/usr/bin/clang++-21', args: ' --std=c++17 -DCK_AMD_GPU_GFX1201 -DCK_USE_AMD_BUFFER_ATOMIC_FADD=0 -DCK_BLOCK_SYNC_LDS_WITHOUT_SYNC_VMEM=1 -DCK_USE_AMD_BUFFER_ADDRESSING=1 -DCK_PARAM_SRC_DATATYPE=0 -DCK_PARAM_DST_DATATYPE=0 -DCK_PARAM_REDUCE_COMPTYPE=1  -DCK_PARAM_BLOCKSIZE=256 -DCK_PARAM_THREAD_BUFFER_LENGTH=8 -DCK_PARAM_ACCESSES_PER_THREAD_INBLOCK=2 -DCK_PARAM_ACCESSES_PER_THREAD_INWARP=2 -DCK_PARAM_NUM_TOREDUCE_DIMS=2 -DCK_PARAM_REDUCE_OP=0 -DCK_PARAM_NAN_PROPAGATE=0 -DCK_PARAM_REDUCE_INDICES=0 -DCK_PARAM_IN_DIMS=4 -DCK_PARAM_OUT_DIMS=2 -DCK_PARAM_SRC2D_PADDING=1 -DCK_PARAM_DST1D_PADDING=0  -Wno-everything --cuda-gpu-arch=gfx1201 --cuda-device-only -c -O3  -Wno-unused-command-line-argument -I. -x hip -isystem /usr/include -D__HIP_PLATFORM_AMD__=1 -DUSE_PROF_API=1 -isystem /usr/include --hip-link -fno-offload-uniform-block -DHIP_PACKAGE_VERSION_FLAT=7001052801 gridwise_generic_reduction_first_call_multiblock_reduce_partial_dims.cpp -o /tmp/miopen-gridwise_generic_reduction_first_call_multiblock_reduce_partial_dims.cpp-1a89-18df-a58c-6f68/gridwise_generic_reduction_first_call_multiblock_reduce_partial_dims.cpp.o'
+GPU Kernel Time Reduction Elapsed: 0.000000 ms
+ReduceTensor() FAILED with error = 0.947519 , tolerance = 0.0006
+Warning: Resource leak detected by SharedSignalPool, 77 Signals leaked.
+MIOpenDriver ctc -V 1 -t 1
+PRNG seed: 12345678
+Timestamp: 2026-04-09 03:15:56 UTC; Host Name: autopkgtest-lxd-diozxd; Operating System: Linux 7.0.0-12-generic; ROCm: 7.1.52801; MIOpen Driver: 3.5.1; CPU Vendor: Intel; CPU Model: 1 x QEMU Virtual CPU version 2.5+; RAM Size: 15 GB; GPU Model: 1 x AMD Radeon AI PRO R9700; AMDGPU Driver: 0.0.0
+MIOpen(HIP): Error [ValidateGcnAssemblerImpl] Path to assembler is not provided. Expect performance degradation.
+sh: 1: /build/miopen-PSCJNj/miopen-7.1.0+dfsg/build/clang-21: not found
+MIOpen Error: src/hipoc/hipoc_program.cpp:260: Cant find file: /tmp/miopen-MIOpenSoftmax.cl-4c10-d95d-b791-01d5/MIOpenSoftmax.cl.o
+GPU Kernel Time Forward Conv. Elapsed: 0.000000 ms (average)
+CTC loss FAILED: 0.977598
+CTC gradient FAILED: 0.302806
+Warning: Resource leak detected by SharedSignalPool, 77 Signals leaked.
+dmesg: read kernel buffer failed: Operation not permitted
+autopkgtest [03:15:56]: test command1: -----------------------]
+autopkgtest [03:15:56]: test command1:  - - - - - - - - - - results - - - - - - - - - -
+command1             FAIL non-zero exit status 1
+autopkgtest [03:15:57]: @@@@@@@@@@@@@@@@@@@@ summary
+command1             FAIL non-zero exit status 1
