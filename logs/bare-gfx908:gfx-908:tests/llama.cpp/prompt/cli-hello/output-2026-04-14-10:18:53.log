@@ -1,0 +1,40 @@
+ggml_cuda_init: found 1 ROCm devices (Total VRAM: 32752 MiB):
+  Device 0: AMD Instinct MI100, gfx908:sramecc+:xnack- (0x908), VMM: no, Wave Size: 64, VRAM: 32752 MiB
+load_backend: loaded ROCm backend from /usr/lib/x86_64-linux-gnu/ggml/backends0/libggml-hip.so
+load_backend: loaded CPU backend from /usr/lib/x86_64-linux-gnu/ggml/backends0/libggml-cpu-haswell.so
+
+Loading model... |-\|/-\|/-\ 
+
+
+▄▄ ▄▄
+██ ██
+██ ██  ▀▀█▄ ███▄███▄  ▀▀█▄    ▄████ ████▄ ████▄
+██ ██ ▄█▀██ ██ ██ ██ ▄█▀██    ██    ██ ██ ██ ██
+██ ██ ▀█▄██ ██ ██ ██ ▀█▄██ ██ ▀████ ████▀ ████▀
+                                    ██    ██
+                                    ▀▀    ▀▀
+
+build      : b8681-Debian
+model      : ggml-org/gemma-3-1b-it-GGUF
+modalities : text
+
+available commands:
+  /exit or Ctrl+C     stop or exit
+  /regen              regenerate the last response
+  /clear              clear the chat history
+  /read <file>        add a text file
+  /glob <pattern>     add text files using globbing pattern
+
+
+> Hello Moto!
+
+| Hello there! How's your day going? 😊 
+
+Is there anything you'd like to chat about or need help with?llama_memory_breakdown_print: | memory breakdown [MiB] | total    free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - ROCm0 (MI100)      | 32752 = 31128 + (1426 =   762 +     150 +     514) +         197 |
+llama_memory_breakdown_print: |   - Host               |                   376 =   306 +       0 +      70                |
+
+
+[ Prompt: 436.8 t/s | Generation: 202.4 t/s ]
+
+Exiting...
