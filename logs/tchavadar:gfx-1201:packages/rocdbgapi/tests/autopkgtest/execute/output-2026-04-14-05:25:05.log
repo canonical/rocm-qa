@@ -1,0 +1,2204 @@
+autopkgtest [05:25:05]: starting date and time: 2026-04-14 05:25:05+0000
+autopkgtest [05:25:05]: version 5.55
+autopkgtest [05:25:05]: host lxc-sessionizer-github-1; command line: /usr/bin/autopkgtest rocdbgapi -U '--setup-commands=add-apt-repository -ss -y' '--setup-commands=add-apt-repository ppa:bullwinkle-team/rocm-devel-21 --enable-source -y' -- lxd ubuntu-daily:resolute --profile=rocm-gpu
+autopkgtest [05:27:09]: testbed dpkg architecture: amd64
+autopkgtest [05:27:10]: testbed apt version: 3.1.16
+autopkgtest [05:27:10]: @@@@@@@@@@@@@@@@@@@@ test bed setup
+autopkgtest [05:27:10]: updating testbed package index (apt update)
+Get:1 http://archive.ubuntu.com/ubuntu resolute InRelease [124 kB]
+Get:2 http://security.ubuntu.com/ubuntu resolute-security InRelease [124 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease [124 kB]
+Get:4 http://security.ubuntu.com/ubuntu resolute-security/main amd64 Components [208 B]
+Get:5 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Components [212 B]
+Get:6 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 c-n-f Metadata [116 B]
+Get:7 http://security.ubuntu.com/ubuntu resolute-security/restricted amd64 Components [212 B]
+Get:8 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 Components [212 B]
+Get:9 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 c-n-f Metadata [120 B]
+Get:10 http://archive.ubuntu.com/ubuntu resolute-backports InRelease [124 kB]
+Get:11 http://archive.ubuntu.com/ubuntu resolute/main amd64 Packages [1462 kB]
+Get:12 http://archive.ubuntu.com/ubuntu resolute/main Translation-en [525 kB]
+Get:13 http://archive.ubuntu.com/ubuntu resolute/main amd64 Components [394 kB]
+Get:14 http://archive.ubuntu.com/ubuntu resolute/main amd64 c-n-f Metadata [32.4 kB]
+Get:15 http://archive.ubuntu.com/ubuntu resolute/universe amd64 Packages [15.9 MB]
+Get:16 http://archive.ubuntu.com/ubuntu resolute/universe Translation-en [6340 kB]
+Get:17 http://archive.ubuntu.com/ubuntu resolute/universe amd64 Components [4562 kB]
+Get:18 http://archive.ubuntu.com/ubuntu resolute/universe amd64 c-n-f Metadata [313 kB]
+Get:19 http://archive.ubuntu.com/ubuntu resolute/restricted amd64 Packages [161 kB]
+Get:20 http://archive.ubuntu.com/ubuntu resolute/restricted Translation-en [28.8 kB]
+Get:21 http://archive.ubuntu.com/ubuntu resolute/restricted amd64 Components [556 B]
+Get:22 http://archive.ubuntu.com/ubuntu resolute/restricted amd64 c-n-f Metadata [388 B]
+Get:23 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 Packages [282 kB]
+Get:24 http://archive.ubuntu.com/ubuntu resolute/multiverse Translation-en [125 kB]
+Get:25 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 Components [49.9 kB]
+Get:26 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 c-n-f Metadata [8276 B]
+Get:27 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Components [208 B]
+Get:28 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Components [212 B]
+Get:29 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 c-n-f Metadata [116 B]
+Get:30 http://archive.ubuntu.com/ubuntu resolute-updates/restricted amd64 Components [212 B]
+Get:31 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 Components [216 B]
+Get:32 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 c-n-f Metadata [116 B]
+Get:33 http://archive.ubuntu.com/ubuntu resolute-backports/main amd64 Components [212 B]
+Get:34 http://archive.ubuntu.com/ubuntu resolute-backports/main amd64 c-n-f Metadata [112 B]
+Get:35 http://archive.ubuntu.com/ubuntu resolute-backports/universe amd64 Components [216 B]
+Get:36 http://archive.ubuntu.com/ubuntu resolute-backports/universe amd64 c-n-f Metadata [116 B]
+Get:37 http://archive.ubuntu.com/ubuntu resolute-backports/restricted amd64 Components [216 B]
+Get:38 http://archive.ubuntu.com/ubuntu resolute-backports/restricted amd64 c-n-f Metadata [120 B]
+Get:39 http://archive.ubuntu.com/ubuntu resolute-backports/multiverse amd64 Components [216 B]
+Get:40 http://archive.ubuntu.com/ubuntu resolute-backports/multiverse amd64 c-n-f Metadata [120 B]
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 30.6 MB in 3s (9443 kB/s)
+Reading package lists...
+autopkgtest [05:27:16]: testbed release detected to be: resolute
+autopkgtest [05:27:16]: updating testbed package index (apt update)
+Hit:1 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Reading package lists...
+Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Get:4 http://archive.ubuntu.com/ubuntu resolute/restricted Sources [20.1 kB]
+Get:5 http://archive.ubuntu.com/ubuntu resolute/main Sources [1423 kB]
+Get:6 http://archive.ubuntu.com/ubuntu resolute/universe Sources [21.4 MB]
+Hit:7 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Get:8 http://archive.ubuntu.com/ubuntu resolute/multiverse Sources [321 kB]
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 23.2 MB in 1s (15.9 MB/s)
+Reading package lists...
+Enabling deb-src for all repositories.
+Added: ## Ubuntu distribution repository
+##
+## The following settings can be adjusted to configure which packages to use from Ubuntu.
+## Mirror your choices (except for URIs and Suites) in the security section below to
+## ensure timely security updates.
+##
+## Types: Append deb-src to enable the fetching of source package.
+## URIs: A URL to the repository (you may add multiple URLs)
+## Suites: The following additional suites can be configured
+##   <name>-updates   - Major bug fix updates produced after the final release of the
+##                      distribution.
+##   <name>-backports - software from this repository may not have been tested as
+##                      extensively as that contained in the main release, although it includes
+##                      newer versions of some applications which may provide useful features.
+##                      Also, please note that software in backports WILL NOT receive any review
+##                      or updates from the Ubuntu security team.
+## Components: Aside from main, the following components can be added to the list
+##   restricted  - Software that may not be under a free license, or protected by patents.
+##   universe    - Community maintained packages. Software in this repository receives maintenance
+##                 from volunteers in the Ubuntu community, or a 10 year security maintenance
+##                 commitment from Canonical when an Ubuntu Pro subscription is attached.
+##   multiverse  - Community maintained of restricted. Software from this repository is
+##                 ENTIRELY UNSUPPORTED by the Ubuntu team, and may not be under a free
+##                 licence. Please satisfy yourself as to your rights to use the software.
+##                 Also, please note that software in multiverse WILL NOT receive any
+##                 review or updates from the Ubuntu security team.
+##
+## See the sources.list(5) manual page for further settings.
+Types: deb-src
+URIs: http://archive.ubuntu.com/ubuntu
+Suites: resolute resolute-updates resolute-backports
+Components: multiverse universe main restricted
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+Added: ## Ubuntu security updates. Aside from URIs and Suites,
+## this should mirror your choices in the previous section.
+Types: deb-src
+URIs: http://security.ubuntu.com/ubuntu
+Suites: resolute-security
+Components: multiverse universe main restricted
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+Hit:1 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Get:2 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel-21/ubuntu resolute InRelease [27.2 kB]
+Hit:3 http://archive.ubuntu.com/ubuntu resolute InRelease
+Get:4 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel-21/ubuntu resolute/main Sources [16.0 kB]
+Get:5 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel-21/ubuntu resolute/main amd64 Packages [24.7 kB]
+Get:6 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel-21/ubuntu resolute/main Translation-en [15.4 kB]
+Hit:7 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:8 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 83.3 kB in 0s (229 kB/s)
+Reading package lists...
+PPA publishes dbgsym, you may need to include 'main/debug' component
+Repository: 'Types: deb
+URIs: https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel-21/ubuntu/
+Suites: resolute
+Components: main
+'
+Description:
+ROCm development archive which holds packages built against upstream LLVM-21
+More info: https://launchpad.net/~bullwinkle-team/+archive/ubuntu/rocm-devel-21
+Adding repository.
+autopkgtest [05:27:23]: upgrading testbed (apt dist-upgrade and autopurge)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+The following packages will be upgraded:
+  apparmor apport apport-core-dump-handler apt bind9-dnsutils bind9-host
+  bind9-libs ca-certificates cloud-initramfs-copymods
+  cloud-initramfs-dyn-netconf coreutils coreutils-from-uutils dpkg dracut
+  dracut-core dracut-install dracut-network fuse3 fwupd gawk gcc-16-base
+  initramfs-tools-bin initramfs-tools-core iproute2 libapparmor1 libapt-pkg7.0
+  libatomic1 libcap2 libcap2-bin libcbor0.10 libffi8 libftdi1-2 libfuse3-4
+  libfwupd3 libgcc-s1 libgstreamer1.0-0 liblzma5 libmpfr6 libnetplan1
+  libnss-systemd libpam-cap libpam-systemd libpng16-16t64 libpolkit-agent-1-0
+  libpolkit-gobject-1-0 libpython3.14 libpython3.14-minimal
+  libpython3.14-stdlib libssl3t64 libstdc++6 libsystemd-shared libsystemd0
+  libtirpc-common libtirpc3t64 libtraceevent1 libtraceevent1-plugin libudev1
+  libx11-6 libx11-data libxslt1.1 linux-base netplan-generator netplan.io
+  networkd-dispatcher openssl openssl-provider-legacy overlayroot polkitd
+  pollinate python3-apport python3-cryptography python3-distupgrade python3-gi
+  python3-jwt python3-netplan python3-problem-report python3-rpds-py
+  python3-software-properties python3.14 python3.14-gdbm python3.14-minimal
+  software-properties-common systemd systemd-cryptsetup systemd-hwe-hwdb
+  systemd-resolved systemd-sysv tzdata ubuntu-release-upgrader-core udev
+  unattended-upgrades update-notifier-common xz-utils
+93 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Need to get 50.5 MB of archives.
+After this operation, 948 kB disk space will be freed.
+Get:1 http://archive.ubuntu.com/ubuntu resolute/main amd64 coreutils all 9.5-1ubuntu2+0.0.0~ubuntu25 [3060 B]
+Get:2 http://archive.ubuntu.com/ubuntu resolute/main amd64 coreutils-from-uutils all 0.0.0~ubuntu25 [7124 B]
+Get:3 http://archive.ubuntu.com/ubuntu resolute/main amd64 libatomic1 amd64 16-20260322-1ubuntu1 [11.4 kB]
+Get:4 http://archive.ubuntu.com/ubuntu resolute/main amd64 gcc-16-base amd64 16-20260322-1ubuntu1 [38.3 kB]
+Get:5 http://archive.ubuntu.com/ubuntu resolute/main amd64 libgcc-s1 amd64 16-20260322-1ubuntu1 [80.3 kB]
+Get:6 http://archive.ubuntu.com/ubuntu resolute/main amd64 libstdc++6 amd64 16-20260322-1ubuntu1 [843 kB]
+Get:7 http://archive.ubuntu.com/ubuntu resolute/main amd64 liblzma5 amd64 5.8.3-1 [145 kB]
+Get:8 http://archive.ubuntu.com/ubuntu resolute/main amd64 openssl-provider-legacy amd64 3.5.5-1ubuntu3 [39.7 kB]
+Get:9 http://archive.ubuntu.com/ubuntu resolute/main amd64 libssl3t64 amd64 3.5.5-1ubuntu3 [2359 kB]
+Get:10 http://archive.ubuntu.com/ubuntu resolute/main amd64 libsystemd0 amd64 259.5-0ubuntu2 [480 kB]
+Get:11 http://archive.ubuntu.com/ubuntu resolute/main amd64 libpam-systemd amd64 259.5-0ubuntu2 [274 kB]
+Get:12 http://archive.ubuntu.com/ubuntu resolute/main amd64 systemd-sysv amd64 259.5-0ubuntu2 [9244 B]
+Get:13 http://archive.ubuntu.com/ubuntu resolute/main amd64 systemd-resolved amd64 259.5-0ubuntu2 [298 kB]
+Get:14 http://archive.ubuntu.com/ubuntu resolute/main amd64 libsystemd-shared amd64 259.5-0ubuntu2 [2461 kB]
+Get:15 http://archive.ubuntu.com/ubuntu resolute/main amd64 systemd amd64 259.5-0ubuntu2 [3128 kB]
+Get:16 http://archive.ubuntu.com/ubuntu resolute/main amd64 systemd-cryptsetup amd64 259.5-0ubuntu2 [124 kB]
+Get:17 http://archive.ubuntu.com/ubuntu resolute/main amd64 udev amd64 259.5-0ubuntu2 [1501 kB]
+Get:18 http://archive.ubuntu.com/ubuntu resolute/main amd64 libudev1 amd64 259.5-0ubuntu2 [150 kB]
+Get:19 http://archive.ubuntu.com/ubuntu resolute/main amd64 libapt-pkg7.0 amd64 3.2.0 [1138 kB]
+Get:20 http://archive.ubuntu.com/ubuntu resolute/main amd64 dpkg amd64 1.23.7ubuntu1 [1285 kB]
+Get:21 http://archive.ubuntu.com/ubuntu resolute/main amd64 apt amd64 3.2.0 [1486 kB]
+Get:22 http://archive.ubuntu.com/ubuntu resolute/main amd64 gawk amd64 1:5.3.2-1ubuntu1 [526 kB]
+Get:23 http://archive.ubuntu.com/ubuntu resolute/main amd64 libpython3.14 amd64 3.14.4-1 [2577 kB]
+Get:24 http://archive.ubuntu.com/ubuntu resolute/main amd64 python3.14 amd64 3.14.4-1 [830 kB]
+Get:25 http://archive.ubuntu.com/ubuntu resolute/main amd64 libpython3.14-stdlib amd64 3.14.4-1 [2406 kB]
+Get:26 http://archive.ubuntu.com/ubuntu resolute/main amd64 python3.14-minimal amd64 3.14.4-1 [2579 kB]
+Get:27 http://archive.ubuntu.com/ubuntu resolute/main amd64 libpython3.14-minimal amd64 3.14.4-1 [916 kB]
+Get:28 http://archive.ubuntu.com/ubuntu resolute/main amd64 tzdata all 2026a-3ubuntu1 [194 kB]
+Get:29 http://archive.ubuntu.com/ubuntu resolute/main amd64 libffi8 amd64 3.5.2-4 [26.3 kB]
+Get:30 http://archive.ubuntu.com/ubuntu resolute/main amd64 update-notifier-common all 3.206 [211 kB]
+Get:31 http://archive.ubuntu.com/ubuntu resolute/main amd64 libcap2 amd64 1:2.75-10ubuntu2 [29.3 kB]
+Get:32 http://archive.ubuntu.com/ubuntu resolute/main amd64 openssl amd64 3.5.5-1ubuntu3 [1243 kB]
+Get:33 http://archive.ubuntu.com/ubuntu resolute/main amd64 ca-certificates all 20260223 [158 kB]
+Get:34 http://archive.ubuntu.com/ubuntu resolute/main amd64 libtirpc-common all 1.3.7-0.1 [7114 B]
+Get:35 http://archive.ubuntu.com/ubuntu resolute/main amd64 libtirpc3t64 amd64 1.3.7-0.1 [80.9 kB]
+Get:36 http://archive.ubuntu.com/ubuntu resolute/main amd64 libpam-cap amd64 1:2.75-10ubuntu2 [12.7 kB]
+Get:37 http://archive.ubuntu.com/ubuntu resolute/main amd64 libcap2-bin amd64 1:2.75-10ubuntu2 [33.5 kB]
+Get:38 http://archive.ubuntu.com/ubuntu resolute/main amd64 iproute2 amd64 6.19.0-1ubuntu1 [1198 kB]
+Get:39 http://archive.ubuntu.com/ubuntu resolute/main amd64 libapparmor1 amd64 5.0.0~beta1-0ubuntu6 [49.9 kB]
+Get:40 http://archive.ubuntu.com/ubuntu resolute/main amd64 netplan-generator amd64 1.2-1ubuntu5 [65.1 kB]
+Get:41 http://archive.ubuntu.com/ubuntu resolute/main amd64 python3-netplan amd64 1.2-1ubuntu5 [24.8 kB]
+Get:42 http://archive.ubuntu.com/ubuntu resolute/main amd64 netplan.io amd64 1.2-1ubuntu5 [69.5 kB]
+Get:43 http://archive.ubuntu.com/ubuntu resolute/main amd64 libnetplan1 amd64 1.2-1ubuntu5 [132 kB]
+Get:44 http://archive.ubuntu.com/ubuntu resolute/main amd64 libnss-systemd amd64 259.5-0ubuntu2 [225 kB]
+Get:45 http://archive.ubuntu.com/ubuntu resolute/main amd64 python3-gi amd64 3.56.2-1 [238 kB]
+Get:46 http://archive.ubuntu.com/ubuntu resolute/main amd64 networkd-dispatcher all 2.2.4-1.1ubuntu1 [15.2 kB]
+Get:47 http://archive.ubuntu.com/ubuntu resolute/main amd64 systemd-hwe-hwdb all 259.5.3ubuntu [3384 B]
+Get:48 http://archive.ubuntu.com/ubuntu resolute/main amd64 apparmor amd64 5.0.0~beta1-0ubuntu6 [376 kB]
+Get:49 http://archive.ubuntu.com/ubuntu resolute/main amd64 bind9-dnsutils amd64 1:9.20.18-1ubuntu2 [163 kB]
+Get:50 http://archive.ubuntu.com/ubuntu resolute/main amd64 bind9-host amd64 1:9.20.18-1ubuntu2 [49.8 kB]
+Get:51 http://archive.ubuntu.com/ubuntu resolute/main amd64 bind9-libs amd64 1:9.20.18-1ubuntu2 [1303 kB]
+Get:52 http://archive.ubuntu.com/ubuntu resolute/main amd64 fuse3 amd64 3.18.2-1 [27.5 kB]
+Get:53 http://archive.ubuntu.com/ubuntu resolute/main amd64 libfuse3-4 amd64 3.18.2-1 [93.0 kB]
+Get:54 http://archive.ubuntu.com/ubuntu resolute/main amd64 libcbor0.10 amd64 0.10.2-2ubuntu3 [25.3 kB]
+Get:55 http://archive.ubuntu.com/ubuntu resolute/main amd64 libpng16-16t64 amd64 1.6.56-1 [194 kB]
+Get:56 http://archive.ubuntu.com/ubuntu resolute/main amd64 libtraceevent1-plugin amd64 1:1.8.7-1 [21.4 kB]
+Get:57 http://archive.ubuntu.com/ubuntu resolute/main amd64 libtraceevent1 amd64 1:1.8.7-1 [61.4 kB]
+Get:58 http://archive.ubuntu.com/ubuntu resolute/main amd64 libx11-data all 2:1.8.13-1 [114 kB]
+Get:59 http://archive.ubuntu.com/ubuntu resolute/main amd64 libx11-6 amd64 2:1.8.13-1 [657 kB]
+Get:60 http://archive.ubuntu.com/ubuntu resolute/main amd64 ubuntu-release-upgrader-core all 1:26.04.14 [24.9 kB]
+Get:61 http://archive.ubuntu.com/ubuntu resolute/main amd64 python3-distupgrade all 1:26.04.14 [100 kB]
+Get:62 http://archive.ubuntu.com/ubuntu resolute/main amd64 python3.14-gdbm amd64 3.14.4-1 [28.5 kB]
+Get:63 http://archive.ubuntu.com/ubuntu resolute/main amd64 xz-utils amd64 5.8.3-1 [406 kB]
+Get:64 http://archive.ubuntu.com/ubuntu resolute/main amd64 python3-problem-report all 2.34.0-0ubuntu2 [16.3 kB]
+Get:65 http://archive.ubuntu.com/ubuntu resolute/main amd64 python3-apport all 2.34.0-0ubuntu2 [95.8 kB]
+Get:66 http://archive.ubuntu.com/ubuntu resolute/main amd64 linux-base all 4.15ubuntu5 [30.5 kB]
+Get:67 http://archive.ubuntu.com/ubuntu resolute/main amd64 apport-core-dump-handler all 2.34.0-0ubuntu2 [9232 B]
+Get:68 http://archive.ubuntu.com/ubuntu resolute/main amd64 apport all 2.34.0-0ubuntu2 [83.9 kB]
+Get:69 http://archive.ubuntu.com/ubuntu resolute/main amd64 overlayroot all 0.56 [17.1 kB]
+Get:70 http://archive.ubuntu.com/ubuntu resolute/main amd64 dracut all 110-10 [8222 B]
+Get:71 http://archive.ubuntu.com/ubuntu resolute/main amd64 dracut-install amd64 110-10 [45.2 kB]
+Get:72 http://archive.ubuntu.com/ubuntu resolute/main amd64 cloud-initramfs-copymods all 0.56 [4876 B]
+Get:73 http://archive.ubuntu.com/ubuntu resolute/main amd64 dracut-core amd64 110-10 [327 kB]
+Get:74 http://archive.ubuntu.com/ubuntu resolute/main amd64 dracut-network all 110-10 [45.4 kB]
+Get:75 http://archive.ubuntu.com/ubuntu resolute/main amd64 fwupd amd64 2.1.1-1ubuntu2 [12.7 MB]
+Get:76 http://archive.ubuntu.com/ubuntu resolute/main amd64 libfwupd3 amd64 2.1.1-1ubuntu2 [145 kB]
+Get:77 http://archive.ubuntu.com/ubuntu resolute/main amd64 polkitd amd64 127-2ubuntu1 [102 kB]
+Get:78 http://archive.ubuntu.com/ubuntu resolute/main amd64 libpolkit-agent-1-0 amd64 127-2ubuntu1 [18.1 kB]
+Get:79 http://archive.ubuntu.com/ubuntu resolute/main amd64 libpolkit-gobject-1-0 amd64 127-2ubuntu1 [45.7 kB]
+Get:80 http://archive.ubuntu.com/ubuntu resolute/main amd64 initramfs-tools-bin amd64 0.151ubuntu1 [24.2 kB]
+Get:81 http://archive.ubuntu.com/ubuntu resolute/main amd64 initramfs-tools-core all 0.151ubuntu1 [50.3 kB]
+Get:82 http://archive.ubuntu.com/ubuntu resolute/main amd64 libftdi1-2 amd64 1.6~rc1-1build1 [30.7 kB]
+Get:83 http://archive.ubuntu.com/ubuntu resolute/main amd64 libgstreamer1.0-0 amd64 1.28.2-1 [1218 kB]
+Get:84 http://archive.ubuntu.com/ubuntu resolute/main amd64 libmpfr6 amd64 4.2.2-3 [361 kB]
+Get:85 http://archive.ubuntu.com/ubuntu resolute/main amd64 libxslt1.1 amd64 1.1.45-0.1 [165 kB]
+Get:86 http://archive.ubuntu.com/ubuntu resolute/main amd64 pollinate all 4.33-4ubuntu6 [11.7 kB]
+Get:87 http://archive.ubuntu.com/ubuntu resolute/main amd64 python3-cryptography amd64 46.0.5-1ubuntu2 [1153 kB]
+Get:88 http://archive.ubuntu.com/ubuntu resolute/main amd64 python3-jwt all 2.10.1-4ubuntu1 [20.6 kB]
+Get:89 http://archive.ubuntu.com/ubuntu resolute/main amd64 python3-rpds-py amd64 0.27.1-2ubuntu3 [281 kB]
+Get:90 http://archive.ubuntu.com/ubuntu resolute/main amd64 software-properties-common all 0.120 [16.6 kB]
+Get:91 http://archive.ubuntu.com/ubuntu resolute/main amd64 python3-software-properties all 0.120 [28.6 kB]
+Get:92 http://archive.ubuntu.com/ubuntu resolute/main amd64 unattended-upgrades all 2.12ubuntu9 [53.3 kB]
+Get:93 http://archive.ubuntu.com/ubuntu resolute/main amd64 cloud-initramfs-dyn-netconf all 0.56 [7228 B]
+Preconfiguring packages ...
+Fetched 50.5 MB in 1s (37.6 MB/s)
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45007 files and directories currently installed.)
+Preparing to unpack .../coreutils_9.5-1ubuntu2+0.0.0~ubuntu25_all.deb ...
+Unpacking coreutils (9.5-1ubuntu2+0.0.0~ubuntu25) over (9.5-1ubuntu2+0.0.0~ubuntu24) ...
+Setting up coreutils (9.5-1ubuntu2+0.0.0~ubuntu25) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45007 files and directories currently installed.)
+Preparing to unpack .../coreutils-from-uutils_0.0.0~ubuntu25_all.deb ...
+Unpacking coreutils-from-uutils (0.0.0~ubuntu25) over (0.0.0~ubuntu24) ...
+Setting up coreutils-from-uutils (0.0.0~ubuntu25) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45006 files and directories currently installed.)
+Preparing to unpack .../libatomic1_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libatomic1:amd64 (16-20260322-1ubuntu1) over (16-20260315-1ubuntu1) ...
+Preparing to unpack .../gcc-16-base_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking gcc-16-base:amd64 (16-20260322-1ubuntu1) over (16-20260315-1ubuntu1) ...
+Setting up gcc-16-base:amd64 (16-20260322-1ubuntu1) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45006 files and directories currently installed.)
+Preparing to unpack .../libgcc-s1_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libgcc-s1:amd64 (16-20260322-1ubuntu1) over (16-20260315-1ubuntu1) ...
+Setting up libgcc-s1:amd64 (16-20260322-1ubuntu1) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45006 files and directories currently installed.)
+Preparing to unpack .../libstdc++6_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libstdc++6:amd64 (16-20260322-1ubuntu1) over (16-20260315-1ubuntu1) ...
+Setting up libstdc++6:amd64 (16-20260322-1ubuntu1) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45006 files and directories currently installed.)
+Preparing to unpack .../liblzma5_5.8.3-1_amd64.deb ...
+Unpacking liblzma5:amd64 (5.8.3-1) over (5.8.2-2) ...
+Setting up liblzma5:amd64 (5.8.3-1) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45006 files and directories currently installed.)
+Preparing to unpack .../openssl-provider-legacy_3.5.5-1ubuntu3_amd64.deb ...
+Unpacking openssl-provider-legacy (3.5.5-1ubuntu3) over (3.5.5-1ubuntu1) ...
+Setting up openssl-provider-legacy (3.5.5-1ubuntu3) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45006 files and directories currently installed.)
+Preparing to unpack .../libssl3t64_3.5.5-1ubuntu3_amd64.deb ...
+Unpacking libssl3t64:amd64 (3.5.5-1ubuntu3) over (3.5.5-1ubuntu1) ...
+Setting up libssl3t64:amd64 (3.5.5-1ubuntu3) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45006 files and directories currently installed.)
+Preparing to unpack .../libsystemd0_259.5-0ubuntu2_amd64.deb ...
+Unpacking libsystemd0:amd64 (259.5-0ubuntu2) over (259.5-0ubuntu1) ...
+Setting up libsystemd0:amd64 (259.5-0ubuntu2) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45006 files and directories currently installed.)
+Preparing to unpack .../libpam-systemd_259.5-0ubuntu2_amd64.deb ...
+Unpacking libpam-systemd:amd64 (259.5-0ubuntu2) over (259.5-0ubuntu1) ...
+Preparing to unpack .../systemd-sysv_259.5-0ubuntu2_amd64.deb ...
+Unpacking systemd-sysv (259.5-0ubuntu2) over (259.5-0ubuntu1) ...
+Preparing to unpack .../systemd-resolved_259.5-0ubuntu2_amd64.deb ...
+Unpacking systemd-resolved (259.5-0ubuntu2) over (259.5-0ubuntu1) ...
+Preparing to unpack .../libsystemd-shared_259.5-0ubuntu2_amd64.deb ...
+Unpacking libsystemd-shared:amd64 (259.5-0ubuntu2) over (259.5-0ubuntu1) ...
+Setting up libsystemd-shared:amd64 (259.5-0ubuntu2) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45006 files and directories currently installed.)
+Preparing to unpack .../systemd_259.5-0ubuntu2_amd64.deb ...
+Unpacking systemd (259.5-0ubuntu2) over (259.5-0ubuntu1) ...
+Preparing to unpack .../systemd-cryptsetup_259.5-0ubuntu2_amd64.deb ...
+Unpacking systemd-cryptsetup (259.5-0ubuntu2) over (259.5-0ubuntu1) ...
+Preparing to unpack .../udev_259.5-0ubuntu2_amd64.deb ...
+Unpacking udev (259.5-0ubuntu2) over (259.5-0ubuntu1) ...
+Preparing to unpack .../libudev1_259.5-0ubuntu2_amd64.deb ...
+Unpacking libudev1:amd64 (259.5-0ubuntu2) over (259.5-0ubuntu1) ...
+Setting up libudev1:amd64 (259.5-0ubuntu2) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45006 files and directories currently installed.)
+Preparing to unpack .../libapt-pkg7.0_3.2.0_amd64.deb ...
+Unpacking libapt-pkg7.0:amd64 (3.2.0) over (3.1.16) ...
+Setting up libapt-pkg7.0:amd64 (3.2.0) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45006 files and directories currently installed.)
+Preparing to unpack .../dpkg_1.23.7ubuntu1_amd64.deb ...
+Unpacking dpkg (1.23.7ubuntu1) over (1.23.6ubuntu2) ...
+Setting up dpkg (1.23.7ubuntu1) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45006 files and directories currently installed.)
+Preparing to unpack .../archives/apt_3.2.0_amd64.deb ...
+Unpacking apt (3.2.0) over (3.1.16) ...
+Setting up apt (3.2.0) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45006 files and directories currently installed.)
+Preparing to unpack .../00-gawk_1%3a5.3.2-1ubuntu1_amd64.deb ...
+Unpacking gawk (1:5.3.2-1ubuntu1) over (1:5.3.2-1build1) ...
+Preparing to unpack .../01-libpython3.14_3.14.4-1_amd64.deb ...
+Unpacking libpython3.14:amd64 (3.14.4-1) over (3.14.3-3) ...
+Preparing to unpack .../02-python3.14_3.14.4-1_amd64.deb ...
+Unpacking python3.14 (3.14.4-1) over (3.14.3-3) ...
+Preparing to unpack .../03-libpython3.14-stdlib_3.14.4-1_amd64.deb ...
+Unpacking libpython3.14-stdlib:amd64 (3.14.4-1) over (3.14.3-3) ...
+Preparing to unpack .../04-python3.14-minimal_3.14.4-1_amd64.deb ...
+Unpacking python3.14-minimal (3.14.4-1) over (3.14.3-3) ...
+Preparing to unpack .../05-libpython3.14-minimal_3.14.4-1_amd64.deb ...
+Unpacking libpython3.14-minimal:amd64 (3.14.4-1) over (3.14.3-3) ...
+Preparing to unpack .../06-tzdata_2026a-3ubuntu1_all.deb ...
+Unpacking tzdata (2026a-3ubuntu1) over (2026a-1ubuntu1) ...
+Preparing to unpack .../07-libffi8_3.5.2-4_amd64.deb ...
+Unpacking libffi8:amd64 (3.5.2-4) over (3.5.2-3) ...
+Preparing to unpack .../08-update-notifier-common_3.206_all.deb ...
+Unpacking update-notifier-common (3.206) over (3.205) ...
+Preparing to unpack .../09-libcap2_1%3a2.75-10ubuntu2_amd64.deb ...
+Unpacking libcap2:amd64 (1:2.75-10ubuntu2) over (1:2.75-10ubuntu1) ...
+Preparing to unpack .../10-openssl_3.5.5-1ubuntu3_amd64.deb ...
+Unpacking openssl (3.5.5-1ubuntu3) over (3.5.5-1ubuntu1) ...
+Preparing to unpack .../11-ca-certificates_20260223_all.deb ...
+Unpacking ca-certificates (20260223) over (20250419build1) ...
+Preparing to unpack .../12-libtirpc-common_1.3.7-0.1_all.deb ...
+Unpacking libtirpc-common (1.3.7-0.1) over (1.3.6+ds-1ubuntu1) ...
+Preparing to unpack .../13-libtirpc3t64_1.3.7-0.1_amd64.deb ...
+Unpacking libtirpc3t64:amd64 (1.3.7-0.1) over (1.3.6+ds-1ubuntu1) ...
+Preparing to unpack .../14-libpam-cap_1%3a2.75-10ubuntu2_amd64.deb ...
+Unpacking libpam-cap:amd64 (1:2.75-10ubuntu2) over (1:2.75-10ubuntu1) ...
+Preparing to unpack .../15-libcap2-bin_1%3a2.75-10ubuntu2_amd64.deb ...
+Unpacking libcap2-bin (1:2.75-10ubuntu2) over (1:2.75-10ubuntu1) ...
+Preparing to unpack .../16-iproute2_6.19.0-1ubuntu1_amd64.deb ...
+Unpacking iproute2 (6.19.0-1ubuntu1) over (6.18.0-1ubuntu1) ...
+Preparing to unpack .../17-libapparmor1_5.0.0~beta1-0ubuntu6_amd64.deb ...
+Unpacking libapparmor1:amd64 (5.0.0~beta1-0ubuntu6) over (5.0.0~beta1-0ubuntu5) ...
+Preparing to unpack .../18-netplan-generator_1.2-1ubuntu5_amd64.deb ...
+Adding 'diversion of /lib/systemd/system-generators/netplan to /lib/systemd/system-generators/netplan.usr-is-merged by netplan-generator'
+Unpacking netplan-generator (1.2-1ubuntu5) over (1.2-1ubuntu3) ...
+Preparing to unpack .../19-python3-netplan_1.2-1ubuntu5_amd64.deb ...
+Unpacking python3-netplan (1.2-1ubuntu5) over (1.2-1ubuntu3) ...
+Preparing to unpack .../20-netplan.io_1.2-1ubuntu5_amd64.deb ...
+Unpacking netplan.io (1.2-1ubuntu5) over (1.2-1ubuntu3) ...
+Preparing to unpack .../21-libnetplan1_1.2-1ubuntu5_amd64.deb ...
+Unpacking libnetplan1:amd64 (1.2-1ubuntu5) over (1.2-1ubuntu3) ...
+Preparing to unpack .../22-libnss-systemd_259.5-0ubuntu2_amd64.deb ...
+Unpacking libnss-systemd:amd64 (259.5-0ubuntu2) over (259.5-0ubuntu1) ...
+Preparing to unpack .../23-python3-gi_3.56.2-1_amd64.deb ...
+Unpacking python3-gi (3.56.2-1) over (3.56.1-2) ...
+Preparing to unpack .../24-networkd-dispatcher_2.2.4-1.1ubuntu1_all.deb ...
+Unpacking networkd-dispatcher (2.2.4-1.1ubuntu1) over (2.2.4-1.1build1) ...
+Preparing to unpack .../25-systemd-hwe-hwdb_259.5.3ubuntu_all.deb ...
+Unpacking systemd-hwe-hwdb (259.5.3ubuntu) over (259.5.1ubuntu) ...
+Preparing to unpack .../26-apparmor_5.0.0~beta1-0ubuntu6_amd64.deb ...
+Unpacking apparmor (5.0.0~beta1-0ubuntu6) over (5.0.0~beta1-0ubuntu5) ...
+Preparing to unpack .../27-bind9-dnsutils_1%3a9.20.18-1ubuntu2_amd64.deb ...
+Unpacking bind9-dnsutils (1:9.20.18-1ubuntu2) over (1:9.20.18-1ubuntu1) ...
+Preparing to unpack .../28-bind9-host_1%3a9.20.18-1ubuntu2_amd64.deb ...
+Unpacking bind9-host (1:9.20.18-1ubuntu2) over (1:9.20.18-1ubuntu1) ...
+Preparing to unpack .../29-bind9-libs_1%3a9.20.18-1ubuntu2_amd64.deb ...
+Unpacking bind9-libs:amd64 (1:9.20.18-1ubuntu2) over (1:9.20.18-1ubuntu1) ...
+Preparing to unpack .../30-fuse3_3.18.2-1_amd64.deb ...
+Adding 'diversion of /bin/fusermount to /bin/fusermount.usr-is-merged by fuse3'
+Adding 'diversion of /sbin/mount.fuse to /sbin/mount.fuse.usr-is-merged by fuse3'
+Unpacking fuse3 (3.18.2-1) over (3.18.1-1) ...
+Preparing to unpack .../31-libfuse3-4_3.18.2-1_amd64.deb ...
+Unpacking libfuse3-4:amd64 (3.18.2-1) over (3.18.1-1) ...
+Preparing to unpack .../32-libcbor0.10_0.10.2-2ubuntu3_amd64.deb ...
+Unpacking libcbor0.10:amd64 (0.10.2-2ubuntu3) over (0.10.2-2ubuntu2) ...
+Preparing to unpack .../33-libpng16-16t64_1.6.56-1_amd64.deb ...
+Unpacking libpng16-16t64:amd64 (1.6.56-1) over (1.6.55-1) ...
+Preparing to unpack .../34-libtraceevent1-plugin_1%3a1.8.7-1_amd64.deb ...
+Unpacking libtraceevent1-plugin:amd64 (1:1.8.7-1) over (1:1.8.4-2build1) ...
+Preparing to unpack .../35-libtraceevent1_1%3a1.8.7-1_amd64.deb ...
+Unpacking libtraceevent1:amd64 (1:1.8.7-1) over (1:1.8.4-2build1) ...
+Preparing to unpack .../36-libx11-data_2%3a1.8.13-1_all.deb ...
+Unpacking libx11-data (2:1.8.13-1) over (2:1.8.12-1build2) ...
+Preparing to unpack .../37-libx11-6_2%3a1.8.13-1_amd64.deb ...
+Unpacking libx11-6:amd64 (2:1.8.13-1) over (2:1.8.12-1build2) ...
+Preparing to unpack .../38-ubuntu-release-upgrader-core_1%3a26.04.14_all.deb ...
+Unpacking ubuntu-release-upgrader-core (1:26.04.14) over (1:26.04.9) ...
+Preparing to unpack .../39-python3-distupgrade_1%3a26.04.14_all.deb ...
+Unpacking python3-distupgrade (1:26.04.14) over (1:26.04.9) ...
+Preparing to unpack .../40-python3.14-gdbm_3.14.4-1_amd64.deb ...
+Unpacking python3.14-gdbm (3.14.4-1) over (3.14.3-3) ...
+Preparing to unpack .../41-xz-utils_5.8.3-1_amd64.deb ...
+Unpacking xz-utils (5.8.3-1) over (5.8.2-2) ...
+Preparing to unpack .../42-python3-problem-report_2.34.0-0ubuntu2_all.deb ...
+Unpacking python3-problem-report (2.34.0-0ubuntu2) over (2.33.1-0ubuntu7) ...
+Preparing to unpack .../43-python3-apport_2.34.0-0ubuntu2_all.deb ...
+Unpacking python3-apport (2.34.0-0ubuntu2) over (2.33.1-0ubuntu7) ...
+Preparing to unpack .../44-linux-base_4.15ubuntu5_all.deb ...
+Unpacking linux-base (4.15ubuntu5) over (4.15ubuntu4) ...
+Preparing to unpack .../45-apport-core-dump-handler_2.34.0-0ubuntu2_all.deb ...
+Unpacking apport-core-dump-handler (2.34.0-0ubuntu2) over (2.33.1-0ubuntu7) ...
+Preparing to unpack .../46-apport_2.34.0-0ubuntu2_all.deb ...
+Unpacking apport (2.34.0-0ubuntu2) over (2.33.1-0ubuntu7) ...
+Preparing to unpack .../47-overlayroot_0.56_all.deb ...
+Unpacking overlayroot (0.56) over (0.55) ...
+Preparing to unpack .../48-dracut_110-10_all.deb ...
+Unpacking dracut (110-10) over (110-7) ...
+Preparing to unpack .../49-dracut-install_110-10_amd64.deb ...
+Unpacking dracut-install (110-10) over (110-7) ...
+Preparing to unpack .../50-cloud-initramfs-copymods_0.56_all.deb ...
+Unpacking cloud-initramfs-copymods (0.56) over (0.55) ...
+Preparing to unpack .../51-dracut-core_110-10_amd64.deb ...
+Unpacking dracut-core (110-10) over (110-7) ...
+Preparing to unpack .../52-dracut-network_110-10_all.deb ...
+Unpacking dracut-network (110-10) over (110-7) ...
+Preparing to unpack .../53-fwupd_2.1.1-1ubuntu2_amd64.deb ...
+Unpacking fwupd (2.1.1-1ubuntu2) over (2.1.1-1ubuntu1) ...
+Preparing to unpack .../54-libfwupd3_2.1.1-1ubuntu2_amd64.deb ...
+Unpacking libfwupd3:amd64 (2.1.1-1ubuntu2) over (2.1.1-1ubuntu1) ...
+Preparing to unpack .../55-polkitd_127-2ubuntu1_amd64.deb ...
+Unpacking polkitd (127-2ubuntu1) over (127-2) ...
+Preparing to unpack .../56-libpolkit-agent-1-0_127-2ubuntu1_amd64.deb ...
+Unpacking libpolkit-agent-1-0:amd64 (127-2ubuntu1) over (127-2) ...
+Preparing to unpack .../57-libpolkit-gobject-1-0_127-2ubuntu1_amd64.deb ...
+Unpacking libpolkit-gobject-1-0:amd64 (127-2ubuntu1) over (127-2) ...
+Preparing to unpack .../58-initramfs-tools-bin_0.151ubuntu1_amd64.deb ...
+Unpacking initramfs-tools-bin (0.151ubuntu1) over (0.150ubuntu8) ...
+Preparing to unpack .../59-initramfs-tools-core_0.151ubuntu1_all.deb ...
+Unpacking initramfs-tools-core (0.151ubuntu1) over (0.150ubuntu8) ...
+Preparing to unpack .../60-libftdi1-2_1.6~rc1-1build1_amd64.deb ...
+Unpacking libftdi1-2:amd64 (1.6~rc1-1build1) over (1.6~rc1-1) ...
+Preparing to unpack .../61-libgstreamer1.0-0_1.28.2-1_amd64.deb ...
+Unpacking libgstreamer1.0-0:amd64 (1.28.2-1) over (1.28.1-1) ...
+Preparing to unpack .../62-libmpfr6_4.2.2-3_amd64.deb ...
+Unpacking libmpfr6:amd64 (4.2.2-3) over (4.2.2-2) ...
+Preparing to unpack .../63-libxslt1.1_1.1.45-0.1_amd64.deb ...
+Unpacking libxslt1.1:amd64 (1.1.45-0.1) over (1.1.43-0.3) ...
+Preparing to unpack .../64-pollinate_4.33-4ubuntu6_all.deb ...
+Unpacking pollinate (4.33-4ubuntu6) over (4.33-4ubuntu5) ...
+Preparing to unpack .../65-python3-cryptography_46.0.5-1ubuntu2_amd64.deb ...
+Unpacking python3-cryptography (46.0.5-1ubuntu2) over (46.0.5-1ubuntu1) ...
+Preparing to unpack .../66-python3-jwt_2.10.1-4ubuntu1_all.deb ...
+Unpacking python3-jwt (2.10.1-4ubuntu1) over (2.10.1-4) ...
+Preparing to unpack .../67-python3-rpds-py_0.27.1-2ubuntu3_amd64.deb ...
+Unpacking python3-rpds-py (0.27.1-2ubuntu3) over (0.27.1-2ubuntu1) ...
+Preparing to unpack .../68-software-properties-common_0.120_all.deb ...
+Unpacking software-properties-common (0.120) over (0.119) ...
+Preparing to unpack .../69-python3-software-properties_0.120_all.deb ...
+Unpacking python3-software-properties (0.120) over (0.119) ...
+Preparing to unpack .../70-unattended-upgrades_2.12ubuntu9_all.deb ...
+Unpacking unattended-upgrades (2.12ubuntu9) over (2.12ubuntu7) ...
+Preparing to unpack .../71-cloud-initramfs-dyn-netconf_0.56_all.deb ...
+Unpacking cloud-initramfs-dyn-netconf (0.56) over (0.55) ...
+Setting up libapparmor1:amd64 (5.0.0~beta1-0ubuntu6) ...
+Setting up linux-base (4.15ubuntu5) ...
+Setting up bind9-libs:amd64 (1:9.20.18-1ubuntu2) ...
+Setting up python3-jwt (2.10.1-4ubuntu1) ...
+Setting up libcbor0.10:amd64 (0.10.2-2ubuntu3) ...
+Setting up python3-problem-report (2.34.0-0ubuntu2) ...
+Setting up update-notifier-common (3.206) ...
+update-notifier-download.service is a disabled or a static unit not running, not starting it.
+update-notifier-motd.service is a disabled or a static unit not running, not starting it.
+Setting up libtirpc-common (1.3.7-0.1) ...
+Setting up libpython3.14-minimal:amd64 (3.14.4-1) ...
+Setting up libnss-systemd:amd64 (259.5-0ubuntu2) ...
+Setting up libfwupd3:amd64 (2.1.1-1ubuntu2) ...
+Setting up systemd (259.5-0ubuntu2) ...
+fchownat() of /sys/kernel/security/ima/binary_runtime_measurements failed: Permission denied
+Setting up libnetplan1:amd64 (1.2-1ubuntu5) ...
+Setting up python3-distupgrade (1:26.04.14) ...
+Setting up libcap2:amd64 (1:2.75-10ubuntu2) ...
+Setting up python3-apport (2.34.0-0ubuntu2) ...
+Setting up tzdata (2026a-3ubuntu1) ...
+
+Current default time zone: 'Etc/UTC'
+Local time is now:      Tue Apr 14 05:27:30 UTC 2026.
+Universal Time is now:  Tue Apr 14 05:27:30 UTC 2026.
+Run 'dpkg-reconfigure tzdata' if you wish to change it.
+
+Setting up libcap2-bin (1:2.75-10ubuntu2) ...
+Setting up apparmor (5.0.0~beta1-0ubuntu6) ...
+Installing new version of config file /etc/apparmor.d/abstractions/base ...
+Installing new version of config file /etc/apparmor.d/gs ...
+Installing new version of config file /etc/apparmor.d/openvpn ...
+Installing new version of config file /etc/apparmor.d/tunables/gs ...
+Installing new version of config file /etc/apparmor.d/unix-chkpwd ...
+apparmor_parser: Unable to replace "lsb_release".  apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+apparmor_parser: Unable to replace "kmod".  apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+apparmor_parser: Unable to replace "nvidia_modprobe".  apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+Reloading AppArmor profiles 
+/sbin/apparmor_parser: Unable to replace "1password".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "Discord".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "MongoDB Compass".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "QtWebEngineProcess".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "balena-etcher".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "brave".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "buildah".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "cam".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "ch-checkns".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "ch-run".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "chrome".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "chromium".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "vscode".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "crun".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "devhelp".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "babeld".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "bfdd".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "bgpd".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "bwrap".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "element-desktop".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "epiphany".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "evolution".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "alsamixer".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "firefox".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "flatpak".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "foliate".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "geary".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "dnstracer".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "github-desktop".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "eigrpd".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "goldendict".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "fabricd".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "dig".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "hostname".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "iotop-c".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "fusermount3".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "keybase".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "kchmviewer".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "lc-compliance".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "libcamerify".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "Xorg".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "isisd".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "linux-sandbox".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "ipa_verify".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "loupe".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "john".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "gs".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "lxc-attach".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "ldpd".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "linux-boot-prober".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "lxc-create".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "lxc-destroy".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "lxc-execute".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "lxc-usernsexec".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "lxc-stop".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "lxc-unshare".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "mmdebstrap".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "lsblk".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "lsusb".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "compressor".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "locale".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "notepadqq".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "msedge".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "lsb_release".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "mosquitto".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "mbsync".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "obsidian".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "opam".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "opera".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "irssi".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "nhrpd".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "nslookup".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "pageedit".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "notify-send".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "nc.openbsd".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "kmod".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "nvidia_modprobe".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "pathd".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "os-prober".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "podman".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "pbrd".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "polypane".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "ospfd".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "ospf6d".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "pim6d".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "privacybrowser".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "qmapshack".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "QtWebEngineProcess".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "plasmashell".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "qcam".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "qutebrowser".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "pimd".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "rootlesskit".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "rpm".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "rssguard".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "runc".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "ripngd".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "sbuild".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "ripd".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "pollinate".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "sbuild-abort".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "qpdf".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "sbuild-adduser".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "sbuild-apt".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "sbuild-clean".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "sbuild-checkpackages".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "sbuild-distupgrade".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "sbuild-destroychroot".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "sbuild-createchroot".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "ip".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "openvpn".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "sbuild-hold".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "sbuild-unhold".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "scide".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "sbuild-update".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "signal-desktop".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "slack".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "slirp4netns".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "proftpd".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "steam".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "sbuild-shell".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "stress-ng".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "surfshark".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "thunderbird".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "systemd-coredump".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "sbuild-upgrade".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "trinity".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "ssh-keyscan".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "systemd-detect-virt".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "staticd".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "tuxedo-control-center".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "tup".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "tinyproxy".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "unprivileged_userns".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "userbindmount".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "mx-extract".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "rygel".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "unix-chkpwd".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "ubuntu_pro_apt_news".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "/usr/bin/man".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "/usr/sbin/chronyd".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "uwsgi-core".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "vdens".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "virtiofsd".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "rsyslogd".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "vivaldi-bin".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "vpnns".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "cmds".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "tnftp".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "wg".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "vrrpd".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "wike".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "wpcom".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "tcpdump".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "who".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "mount-namespace-capture-helper".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "/usr/lib/snapd/snap-confine".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "ip".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "wg-quick".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "dumpcap".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "tshark".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "znc".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "apt_methods".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "ubuntu_pro_esm_cache".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "transmission-cli".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+Error: At least one profile failed to load
+Setting up libftdi1-2:amd64 (1.6~rc1-1build1) ...
+Setting up python3.14-gdbm (3.14.4-1) ...
+Setting up systemd-cryptsetup (259.5-0ubuntu2) ...
+Setting up libx11-data (2:1.8.13-1) ...
+Setting up libmpfr6:amd64 (4.2.2-3) ...
+Setting up python3-cryptography (46.0.5-1ubuntu2) ...
+Setting up xz-utils (5.8.3-1) ...
+Setting up libpng16-16t64:amd64 (1.6.56-1) ...
+Setting up libatomic1:amd64 (16-20260322-1ubuntu1) ...
+Setting up udev (259.5-0ubuntu2) ...
+Setting up systemd-hwe-hwdb (259.5.3ubuntu) ...
+Setting up python3-rpds-py (0.27.1-2ubuntu3) ...
+Setting up libffi8:amd64 (3.5.2-4) ...
+Setting up dracut-install (110-10) ...
+Setting up libtraceevent1:amd64 (1:1.8.7-1) ...
+Setting up libxslt1.1:amd64 (1.1.45-0.1) ...
+Setting up python3-netplan (1.2-1ubuntu5) ...
+Setting up libx11-6:amd64 (2:1.8.13-1) ...
+Setting up netplan-generator (1.2-1ubuntu5) ...
+Removing 'diversion of /lib/systemd/system-generators/netplan to /lib/systemd/system-generators/netplan.usr-is-merged by netplan-generator'
+Setting up libfuse3-4:amd64 (3.18.2-1) ...
+Setting up bind9-host (1:9.20.18-1ubuntu2) ...
+Setting up openssl (3.5.5-1ubuntu3) ...
+Setting up libpam-cap:amd64 (1:2.75-10ubuntu2) ...
+Setting up python3.14-minimal (3.14.4-1) ...
+Setting up libpolkit-gobject-1-0:amd64 (127-2ubuntu1) ...
+Setting up libgstreamer1.0-0:amd64 (1.28.2-1) ...
+Setcap worked! gst-ptp-helper is not suid!
+Setting up systemd-resolved (259.5-0ubuntu2) ...
+Setting up initramfs-tools-bin (0.151ubuntu1) ...
+Setting up systemd-sysv (259.5-0ubuntu2) ...
+Setting up libtirpc3t64:amd64 (1.3.7-0.1) ...
+Setting up libpython3.14-stdlib:amd64 (3.14.4-1) ...
+Setting up gawk (1:5.3.2-1ubuntu1) ...
+Setting up iproute2 (6.19.0-1ubuntu1) ...
+Setting up netplan.io (1.2-1ubuntu5) ...
+Setting up fuse3 (3.18.2-1) ...
+Removing 'diversion of /bin/fusermount to /bin/fusermount.usr-is-merged by fuse3'
+Removing 'diversion of /sbin/mount.fuse to /sbin/mount.fuse.usr-is-merged by fuse3'
+update-initramfs: deferring update (trigger activated)
+Setting up ca-certificates (20260223) ...
+Updating certificates in /etc/ssl/certs...
+rehash: warning: skipping ca-certificates.crt, it does not contain exactly one certificate or CRL
+5 added, 11 removed; done.
+Setting up unattended-upgrades (2.12ubuntu9) ...
+Setting up pollinate (4.33-4ubuntu6) ...
+Installing new version of config file /etc/default/pollinate ...
+apparmor_parser: Unable to replace "pollinate".  apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+Removing obsolete conffile /etc/pollinate/entropy.ubuntu.com.pem ...
+Setting up dracut-core (110-10) ...
+Setting up python3-gi (3.56.2-1) ...
+Setting up ubuntu-release-upgrader-core (1:26.04.14) ...
+Setting up dracut (110-10) ...
+update-initramfs: deferring update (trigger activated)
+Setting up libtraceevent1-plugin:amd64 (1:1.8.7-1) ...
+Setting up dracut-network (110-10) ...
+Setting up cloud-initramfs-dyn-netconf (0.56) ...
+Setting up libpam-systemd:amd64 (259.5-0ubuntu2) ...
+Setting up libpython3.14:amd64 (3.14.4-1) ...
+Setting up libpolkit-agent-1-0:amd64 (127-2ubuntu1) ...
+Setting up bind9-dnsutils (1:9.20.18-1ubuntu2) ...
+Setting up python3.14 (3.14.4-1) ...
+Setting up initramfs-tools-core (0.151ubuntu1) ...
+Setting up overlayroot (0.56) ...
+Setting up fwupd (2.1.1-1ubuntu2) ...
+fwupd-refresh.service is a disabled or a static unit not running, not starting it.
+fwupd.service is a disabled or a static unit not running, not starting it.
+Job for dbus.service failed.
+See "systemctl status dbus.service" and "journalctl -xeu dbus.service" for details.
+Setting up polkitd (127-2ubuntu1) ...
+Setting up networkd-dispatcher (2.2.4-1.1ubuntu1) ...
+Could not execute systemctl:  at /usr/bin/deb-systemd-invoke line 148.
+Setting up python3-software-properties (0.120) ...
+Setting up cloud-initramfs-copymods (0.56) ...
+Setting up software-properties-common (0.120) ...
+Setting up apport-core-dump-handler (2.34.0-0ubuntu2) ...
+Setting up apport (2.34.0-0ubuntu2) ...
+Installing new version of config file /etc/apport/crashdb.conf ...
+apport-autoreport.service is a disabled or a static unit not running, not starting it.
+Processing triggers for dbus (1.16.2-2ubuntu4) ...
+Failed to open connection to "system" message bus: Failed to query AppArmor policy: Permission denied
+Processing triggers for shared-mime-info (2.4-5build3) ...
+Processing triggers for procps (2:4.0.4-9ubuntu1) ...
+Processing triggers for sgml-base (1.31+nmu1build1) ...
+Processing triggers for libc-bin (2.43-2ubuntu1) ...
+Processing triggers for man-db (2.13.1-1build1) ...
+Processing triggers for ca-certificates (20260223) ...
+Updating certificates in /etc/ssl/certs...
+0 added, 0 removed; done.
+Running hooks in /etc/ca-certificates/update.d...
+done.
+Processing triggers for dracut (110-10) ...
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+
+Restarting services...
+ systemctl restart rsyslog.service ssh.service
+
+Service restarts being deferred:
+ /etc/needrestart/restart.d/dbus.service
+ systemctl restart systemd-logind.service
+ systemctl restart unattended-upgrades.service
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+autopkgtest [05:27:42]: rebooting testbed after setup commands that affected boot
+autopkgtest [05:29:49]: testbed running kernel: Linux 7.0.0-12-generic #12-Ubuntu SMP PREEMPT_DYNAMIC Thu Apr  2 10:21:43 UTC 2026
+autopkgtest [05:29:50]: @@@@@@@@@@@@@@@@@@@@ apt-source rocdbgapi
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+The following NEW packages will be installed:
+  bzip2 dpkg-dev libdpkg-perl lto-disabled-list make
+0 upgraded, 5 newly installed, 0 to remove and 0 not upgraded.
+Need to get 1596 kB of archives.
+After this operation, 4247 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu resolute/main amd64 bzip2 amd64 1.0.8-6build2 [34.3 kB]
+Get:2 http://archive.ubuntu.com/ubuntu resolute/main amd64 libdpkg-perl all 1.23.7ubuntu1 [289 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute/main amd64 make amd64 4.4.1-3 [197 kB]
+Get:4 http://archive.ubuntu.com/ubuntu resolute/main amd64 lto-disabled-list all 79 [14.2 kB]
+Get:5 http://archive.ubuntu.com/ubuntu resolute/main amd64 dpkg-dev all 1.23.7ubuntu1 [1062 kB]
+Fetched 1596 kB in 0s (12.3 MB/s)
+Selecting previously unselected package bzip2.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45007 files and directories currently installed.)
+Preparing to unpack .../bzip2_1.0.8-6build2_amd64.deb ...
+Unpacking bzip2 (1.0.8-6build2) ...
+Selecting previously unselected package libdpkg-perl.
+Preparing to unpack .../libdpkg-perl_1.23.7ubuntu1_all.deb ...
+Unpacking libdpkg-perl (1.23.7ubuntu1) ...
+Selecting previously unselected package make.
+Preparing to unpack .../make_4.4.1-3_amd64.deb ...
+Unpacking make (4.4.1-3) ...
+Selecting previously unselected package lto-disabled-list.
+Preparing to unpack .../lto-disabled-list_79_all.deb ...
+Unpacking lto-disabled-list (79) ...
+Selecting previously unselected package dpkg-dev.
+Preparing to unpack .../dpkg-dev_1.23.7ubuntu1_all.deb ...
+Unpacking dpkg-dev (1.23.7ubuntu1) ...
+Setting up lto-disabled-list (79) ...
+Setting up bzip2 (1.0.8-6build2) ...
+Setting up make (4.4.1-3) ...
+Setting up libdpkg-perl (1.23.7ubuntu1) ...
+Setting up dpkg-dev (1.23.7ubuntu1) ...
+Processing triggers for man-db (2.13.1-1build1) ...
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+Get:1 http://archive.ubuntu.com/ubuntu resolute/universe rocdbgapi 7.1.0-0ubuntu3 (dsc) [2304 B]
+Get:2 http://archive.ubuntu.com/ubuntu resolute/universe rocdbgapi 7.1.0-0ubuntu3 (tar) [283 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute/universe rocdbgapi 7.1.0-0ubuntu3 (diff) [5568 B]
+gpgv: Signature made Mon Apr 13 08:56:54 2026 UTC
+gpgv:                using RSA key 1E1312DF4B7158B6EBF9DE782574387962FEB0D1
+gpgv:                issuer "talha.can.havadar@canonical.com"
+gpgv: Can't check signature: No public key
+dpkg-source: warning: cannot verify inline signature for ./rocdbgapi_7.1.0-0ubuntu3.dsc: no acceptable signature found
+autopkgtest [05:29:53]: testing package rocdbgapi version 7.1.0-0ubuntu3
+autopkgtest [05:29:53]: build not needed
+autopkgtest [05:29:53]: test dbgapi-test: preparing testbed
+autopkgtest [05:31:59]: testbed dpkg architecture: amd64
+autopkgtest [05:31:59]: testbed apt version: 3.1.16
+autopkgtest [05:31:59]: @@@@@@@@@@@@@@@@@@@@ test bed setup
+autopkgtest [05:31:59]: updating testbed package index (apt update)
+Get:1 http://archive.ubuntu.com/ubuntu resolute InRelease [124 kB]
+Get:2 http://security.ubuntu.com/ubuntu resolute-security InRelease [124 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease [124 kB]
+Get:4 http://security.ubuntu.com/ubuntu resolute-security/main amd64 Components [208 B]
+Get:5 http://archive.ubuntu.com/ubuntu resolute-backports InRelease [124 kB]
+Get:6 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Components [212 B]
+Get:7 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 c-n-f Metadata [116 B]
+Get:8 http://security.ubuntu.com/ubuntu resolute-security/restricted amd64 Components [212 B]
+Get:9 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 Components [212 B]
+Get:10 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 c-n-f Metadata [120 B]
+Get:11 http://archive.ubuntu.com/ubuntu resolute/main amd64 Packages [1462 kB]
+Get:12 http://archive.ubuntu.com/ubuntu resolute/main Translation-en [525 kB]
+Get:13 http://archive.ubuntu.com/ubuntu resolute/main amd64 Components [394 kB]
+Get:14 http://archive.ubuntu.com/ubuntu resolute/main amd64 c-n-f Metadata [32.4 kB]
+Get:15 http://archive.ubuntu.com/ubuntu resolute/universe amd64 Packages [15.9 MB]
+Get:16 http://archive.ubuntu.com/ubuntu resolute/universe Translation-en [6340 kB]
+Get:17 http://archive.ubuntu.com/ubuntu resolute/universe amd64 Components [4562 kB]
+Get:18 http://archive.ubuntu.com/ubuntu resolute/universe amd64 c-n-f Metadata [313 kB]
+Get:19 http://archive.ubuntu.com/ubuntu resolute/restricted amd64 Packages [161 kB]
+Get:20 http://archive.ubuntu.com/ubuntu resolute/restricted Translation-en [28.8 kB]
+Get:21 http://archive.ubuntu.com/ubuntu resolute/restricted amd64 Components [556 B]
+Get:22 http://archive.ubuntu.com/ubuntu resolute/restricted amd64 c-n-f Metadata [388 B]
+Get:23 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 Packages [282 kB]
+Get:24 http://archive.ubuntu.com/ubuntu resolute/multiverse Translation-en [125 kB]
+Get:25 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 Components [49.9 kB]
+Get:26 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 c-n-f Metadata [8276 B]
+Get:27 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Components [208 B]
+Get:28 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Components [212 B]
+Get:29 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 c-n-f Metadata [116 B]
+Get:30 http://archive.ubuntu.com/ubuntu resolute-updates/restricted amd64 Components [212 B]
+Get:31 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 Components [216 B]
+Get:32 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 c-n-f Metadata [116 B]
+Get:33 http://archive.ubuntu.com/ubuntu resolute-backports/main amd64 Components [212 B]
+Get:34 http://archive.ubuntu.com/ubuntu resolute-backports/main amd64 c-n-f Metadata [112 B]
+Get:35 http://archive.ubuntu.com/ubuntu resolute-backports/universe amd64 Components [216 B]
+Get:36 http://archive.ubuntu.com/ubuntu resolute-backports/universe amd64 c-n-f Metadata [116 B]
+Get:37 http://archive.ubuntu.com/ubuntu resolute-backports/restricted amd64 Components [216 B]
+Get:38 http://archive.ubuntu.com/ubuntu resolute-backports/restricted amd64 c-n-f Metadata [120 B]
+Get:39 http://archive.ubuntu.com/ubuntu resolute-backports/multiverse amd64 Components [216 B]
+Get:40 http://archive.ubuntu.com/ubuntu resolute-backports/multiverse amd64 c-n-f Metadata [120 B]
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 30.6 MB in 2s (13.7 MB/s)
+Reading package lists...
+autopkgtest [05:32:04]: testbed release detected to be: resolute
+autopkgtest [05:32:04]: updating testbed package index (apt update)
+Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:2 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Reading package lists...
+Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:2 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Get:5 http://archive.ubuntu.com/ubuntu resolute/restricted Sources [20.1 kB]
+Get:6 http://archive.ubuntu.com/ubuntu resolute/universe Sources [21.4 MB]
+Get:7 http://archive.ubuntu.com/ubuntu resolute/multiverse Sources [321 kB]
+Get:8 http://archive.ubuntu.com/ubuntu resolute/main Sources [1423 kB]
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 23.2 MB in 3s (8991 kB/s)
+Reading package lists...
+Enabling deb-src for all repositories.
+Added: ## Ubuntu distribution repository
+##
+## The following settings can be adjusted to configure which packages to use from Ubuntu.
+## Mirror your choices (except for URIs and Suites) in the security section below to
+## ensure timely security updates.
+##
+## Types: Append deb-src to enable the fetching of source package.
+## URIs: A URL to the repository (you may add multiple URLs)
+## Suites: The following additional suites can be configured
+##   <name>-updates   - Major bug fix updates produced after the final release of the
+##                      distribution.
+##   <name>-backports - software from this repository may not have been tested as
+##                      extensively as that contained in the main release, although it includes
+##                      newer versions of some applications which may provide useful features.
+##                      Also, please note that software in backports WILL NOT receive any review
+##                      or updates from the Ubuntu security team.
+## Components: Aside from main, the following components can be added to the list
+##   restricted  - Software that may not be under a free license, or protected by patents.
+##   universe    - Community maintained packages. Software in this repository receives maintenance
+##                 from volunteers in the Ubuntu community, or a 10 year security maintenance
+##                 commitment from Canonical when an Ubuntu Pro subscription is attached.
+##   multiverse  - Community maintained of restricted. Software from this repository is
+##                 ENTIRELY UNSUPPORTED by the Ubuntu team, and may not be under a free
+##                 licence. Please satisfy yourself as to your rights to use the software.
+##                 Also, please note that software in multiverse WILL NOT receive any
+##                 review or updates from the Ubuntu security team.
+##
+## See the sources.list(5) manual page for further settings.
+Types: deb-src
+URIs: http://archive.ubuntu.com/ubuntu
+Suites: resolute resolute-updates resolute-backports
+Components: main universe restricted multiverse
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+Added: ## Ubuntu security updates. Aside from URIs and Suites,
+## this should mirror your choices in the previous section.
+Types: deb-src
+URIs: http://security.ubuntu.com/ubuntu
+Suites: resolute-security
+Components: main universe restricted multiverse
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Get:4 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel-21/ubuntu resolute InRelease [27.2 kB]
+Get:5 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel-21/ubuntu resolute/main Sources [16.0 kB]
+Get:6 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel-21/ubuntu resolute/main amd64 Packages [24.7 kB]
+Get:7 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel-21/ubuntu resolute/main Translation-en [15.4 kB]
+Hit:8 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 83.3 kB in 0s (448 kB/s)
+Reading package lists...
+PPA publishes dbgsym, you may need to include 'main/debug' component
+Repository: 'Types: deb
+URIs: https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel-21/ubuntu/
+Suites: resolute
+Components: main
+'
+Description:
+ROCm development archive which holds packages built against upstream LLVM-21
+More info: https://launchpad.net/~bullwinkle-team/+archive/ubuntu/rocm-devel-21
+Adding repository.
+autopkgtest [05:32:11]: upgrading testbed (apt dist-upgrade and autopurge)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+The following packages will be upgraded:
+  apparmor apport apport-core-dump-handler apt bind9-dnsutils bind9-host
+  bind9-libs ca-certificates cloud-initramfs-copymods
+  cloud-initramfs-dyn-netconf coreutils coreutils-from-uutils dpkg dracut
+  dracut-core dracut-install dracut-network fuse3 fwupd gawk gcc-16-base
+  initramfs-tools-bin initramfs-tools-core iproute2 libapparmor1 libapt-pkg7.0
+  libatomic1 libcap2 libcap2-bin libcbor0.10 libffi8 libftdi1-2 libfuse3-4
+  libfwupd3 libgcc-s1 libgstreamer1.0-0 liblzma5 libmpfr6 libnetplan1
+  libnss-systemd libpam-cap libpam-systemd libpng16-16t64 libpolkit-agent-1-0
+  libpolkit-gobject-1-0 libpython3.14 libpython3.14-minimal
+  libpython3.14-stdlib libssl3t64 libstdc++6 libsystemd-shared libsystemd0
+  libtirpc-common libtirpc3t64 libtraceevent1 libtraceevent1-plugin libudev1
+  libx11-6 libx11-data libxslt1.1 linux-base netplan-generator netplan.io
+  networkd-dispatcher openssl openssl-provider-legacy overlayroot polkitd
+  pollinate python3-apport python3-cryptography python3-distupgrade python3-gi
+  python3-jwt python3-netplan python3-problem-report python3-rpds-py
+  python3-software-properties python3.14 python3.14-gdbm python3.14-minimal
+  software-properties-common systemd systemd-cryptsetup systemd-hwe-hwdb
+  systemd-resolved systemd-sysv tzdata ubuntu-release-upgrader-core udev
+  unattended-upgrades update-notifier-common xz-utils
+93 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Need to get 50.5 MB of archives.
+After this operation, 948 kB disk space will be freed.
+Get:1 http://archive.ubuntu.com/ubuntu resolute/main amd64 coreutils all 9.5-1ubuntu2+0.0.0~ubuntu25 [3060 B]
+Get:2 http://archive.ubuntu.com/ubuntu resolute/main amd64 coreutils-from-uutils all 0.0.0~ubuntu25 [7124 B]
+Get:3 http://archive.ubuntu.com/ubuntu resolute/main amd64 libatomic1 amd64 16-20260322-1ubuntu1 [11.4 kB]
+Get:4 http://archive.ubuntu.com/ubuntu resolute/main amd64 gcc-16-base amd64 16-20260322-1ubuntu1 [38.3 kB]
+Get:5 http://archive.ubuntu.com/ubuntu resolute/main amd64 libgcc-s1 amd64 16-20260322-1ubuntu1 [80.3 kB]
+Get:6 http://archive.ubuntu.com/ubuntu resolute/main amd64 libstdc++6 amd64 16-20260322-1ubuntu1 [843 kB]
+Get:7 http://archive.ubuntu.com/ubuntu resolute/main amd64 liblzma5 amd64 5.8.3-1 [145 kB]
+Get:8 http://archive.ubuntu.com/ubuntu resolute/main amd64 openssl-provider-legacy amd64 3.5.5-1ubuntu3 [39.7 kB]
+Get:9 http://archive.ubuntu.com/ubuntu resolute/main amd64 libssl3t64 amd64 3.5.5-1ubuntu3 [2359 kB]
+Get:10 http://archive.ubuntu.com/ubuntu resolute/main amd64 libsystemd0 amd64 259.5-0ubuntu2 [480 kB]
+Get:11 http://archive.ubuntu.com/ubuntu resolute/main amd64 libpam-systemd amd64 259.5-0ubuntu2 [274 kB]
+Get:12 http://archive.ubuntu.com/ubuntu resolute/main amd64 systemd-sysv amd64 259.5-0ubuntu2 [9244 B]
+Get:13 http://archive.ubuntu.com/ubuntu resolute/main amd64 systemd-resolved amd64 259.5-0ubuntu2 [298 kB]
+Get:14 http://archive.ubuntu.com/ubuntu resolute/main amd64 libsystemd-shared amd64 259.5-0ubuntu2 [2461 kB]
+Get:15 http://archive.ubuntu.com/ubuntu resolute/main amd64 systemd amd64 259.5-0ubuntu2 [3128 kB]
+Get:16 http://archive.ubuntu.com/ubuntu resolute/main amd64 systemd-cryptsetup amd64 259.5-0ubuntu2 [124 kB]
+Get:17 http://archive.ubuntu.com/ubuntu resolute/main amd64 udev amd64 259.5-0ubuntu2 [1501 kB]
+Get:18 http://archive.ubuntu.com/ubuntu resolute/main amd64 libudev1 amd64 259.5-0ubuntu2 [150 kB]
+Get:19 http://archive.ubuntu.com/ubuntu resolute/main amd64 libapt-pkg7.0 amd64 3.2.0 [1138 kB]
+Get:20 http://archive.ubuntu.com/ubuntu resolute/main amd64 dpkg amd64 1.23.7ubuntu1 [1285 kB]
+Get:21 http://archive.ubuntu.com/ubuntu resolute/main amd64 apt amd64 3.2.0 [1486 kB]
+Get:22 http://archive.ubuntu.com/ubuntu resolute/main amd64 gawk amd64 1:5.3.2-1ubuntu1 [526 kB]
+Get:23 http://archive.ubuntu.com/ubuntu resolute/main amd64 libpython3.14 amd64 3.14.4-1 [2577 kB]
+Get:24 http://archive.ubuntu.com/ubuntu resolute/main amd64 python3.14 amd64 3.14.4-1 [830 kB]
+Get:25 http://archive.ubuntu.com/ubuntu resolute/main amd64 libpython3.14-stdlib amd64 3.14.4-1 [2406 kB]
+Get:26 http://archive.ubuntu.com/ubuntu resolute/main amd64 python3.14-minimal amd64 3.14.4-1 [2579 kB]
+Get:27 http://archive.ubuntu.com/ubuntu resolute/main amd64 libpython3.14-minimal amd64 3.14.4-1 [916 kB]
+Get:28 http://archive.ubuntu.com/ubuntu resolute/main amd64 tzdata all 2026a-3ubuntu1 [194 kB]
+Get:29 http://archive.ubuntu.com/ubuntu resolute/main amd64 libffi8 amd64 3.5.2-4 [26.3 kB]
+Get:30 http://archive.ubuntu.com/ubuntu resolute/main amd64 update-notifier-common all 3.206 [211 kB]
+Get:31 http://archive.ubuntu.com/ubuntu resolute/main amd64 libcap2 amd64 1:2.75-10ubuntu2 [29.3 kB]
+Get:32 http://archive.ubuntu.com/ubuntu resolute/main amd64 openssl amd64 3.5.5-1ubuntu3 [1243 kB]
+Get:33 http://archive.ubuntu.com/ubuntu resolute/main amd64 ca-certificates all 20260223 [158 kB]
+Get:34 http://archive.ubuntu.com/ubuntu resolute/main amd64 libtirpc-common all 1.3.7-0.1 [7114 B]
+Get:35 http://archive.ubuntu.com/ubuntu resolute/main amd64 libtirpc3t64 amd64 1.3.7-0.1 [80.9 kB]
+Get:36 http://archive.ubuntu.com/ubuntu resolute/main amd64 libpam-cap amd64 1:2.75-10ubuntu2 [12.7 kB]
+Get:37 http://archive.ubuntu.com/ubuntu resolute/main amd64 libcap2-bin amd64 1:2.75-10ubuntu2 [33.5 kB]
+Get:38 http://archive.ubuntu.com/ubuntu resolute/main amd64 iproute2 amd64 6.19.0-1ubuntu1 [1198 kB]
+Get:39 http://archive.ubuntu.com/ubuntu resolute/main amd64 libapparmor1 amd64 5.0.0~beta1-0ubuntu6 [49.9 kB]
+Get:40 http://archive.ubuntu.com/ubuntu resolute/main amd64 netplan-generator amd64 1.2-1ubuntu5 [65.1 kB]
+Get:41 http://archive.ubuntu.com/ubuntu resolute/main amd64 python3-netplan amd64 1.2-1ubuntu5 [24.8 kB]
+Get:42 http://archive.ubuntu.com/ubuntu resolute/main amd64 netplan.io amd64 1.2-1ubuntu5 [69.5 kB]
+Get:43 http://archive.ubuntu.com/ubuntu resolute/main amd64 libnetplan1 amd64 1.2-1ubuntu5 [132 kB]
+Get:44 http://archive.ubuntu.com/ubuntu resolute/main amd64 libnss-systemd amd64 259.5-0ubuntu2 [225 kB]
+Get:45 http://archive.ubuntu.com/ubuntu resolute/main amd64 python3-gi amd64 3.56.2-1 [238 kB]
+Get:46 http://archive.ubuntu.com/ubuntu resolute/main amd64 networkd-dispatcher all 2.2.4-1.1ubuntu1 [15.2 kB]
+Get:47 http://archive.ubuntu.com/ubuntu resolute/main amd64 systemd-hwe-hwdb all 259.5.3ubuntu [3384 B]
+Get:48 http://archive.ubuntu.com/ubuntu resolute/main amd64 apparmor amd64 5.0.0~beta1-0ubuntu6 [376 kB]
+Get:49 http://archive.ubuntu.com/ubuntu resolute/main amd64 bind9-dnsutils amd64 1:9.20.18-1ubuntu2 [163 kB]
+Get:50 http://archive.ubuntu.com/ubuntu resolute/main amd64 bind9-host amd64 1:9.20.18-1ubuntu2 [49.8 kB]
+Get:51 http://archive.ubuntu.com/ubuntu resolute/main amd64 bind9-libs amd64 1:9.20.18-1ubuntu2 [1303 kB]
+Get:52 http://archive.ubuntu.com/ubuntu resolute/main amd64 fuse3 amd64 3.18.2-1 [27.5 kB]
+Get:53 http://archive.ubuntu.com/ubuntu resolute/main amd64 libfuse3-4 amd64 3.18.2-1 [93.0 kB]
+Get:54 http://archive.ubuntu.com/ubuntu resolute/main amd64 libcbor0.10 amd64 0.10.2-2ubuntu3 [25.3 kB]
+Get:55 http://archive.ubuntu.com/ubuntu resolute/main amd64 libpng16-16t64 amd64 1.6.56-1 [194 kB]
+Get:56 http://archive.ubuntu.com/ubuntu resolute/main amd64 libtraceevent1-plugin amd64 1:1.8.7-1 [21.4 kB]
+Get:57 http://archive.ubuntu.com/ubuntu resolute/main amd64 libtraceevent1 amd64 1:1.8.7-1 [61.4 kB]
+Get:58 http://archive.ubuntu.com/ubuntu resolute/main amd64 libx11-data all 2:1.8.13-1 [114 kB]
+Get:59 http://archive.ubuntu.com/ubuntu resolute/main amd64 libx11-6 amd64 2:1.8.13-1 [657 kB]
+Get:60 http://archive.ubuntu.com/ubuntu resolute/main amd64 ubuntu-release-upgrader-core all 1:26.04.14 [24.9 kB]
+Get:61 http://archive.ubuntu.com/ubuntu resolute/main amd64 python3-distupgrade all 1:26.04.14 [100 kB]
+Get:62 http://archive.ubuntu.com/ubuntu resolute/main amd64 python3.14-gdbm amd64 3.14.4-1 [28.5 kB]
+Get:63 http://archive.ubuntu.com/ubuntu resolute/main amd64 xz-utils amd64 5.8.3-1 [406 kB]
+Get:64 http://archive.ubuntu.com/ubuntu resolute/main amd64 python3-problem-report all 2.34.0-0ubuntu2 [16.3 kB]
+Get:65 http://archive.ubuntu.com/ubuntu resolute/main amd64 python3-apport all 2.34.0-0ubuntu2 [95.8 kB]
+Get:66 http://archive.ubuntu.com/ubuntu resolute/main amd64 linux-base all 4.15ubuntu5 [30.5 kB]
+Get:67 http://archive.ubuntu.com/ubuntu resolute/main amd64 apport-core-dump-handler all 2.34.0-0ubuntu2 [9232 B]
+Get:68 http://archive.ubuntu.com/ubuntu resolute/main amd64 apport all 2.34.0-0ubuntu2 [83.9 kB]
+Get:69 http://archive.ubuntu.com/ubuntu resolute/main amd64 overlayroot all 0.56 [17.1 kB]
+Get:70 http://archive.ubuntu.com/ubuntu resolute/main amd64 dracut all 110-10 [8222 B]
+Get:71 http://archive.ubuntu.com/ubuntu resolute/main amd64 dracut-install amd64 110-10 [45.2 kB]
+Get:72 http://archive.ubuntu.com/ubuntu resolute/main amd64 cloud-initramfs-copymods all 0.56 [4876 B]
+Get:73 http://archive.ubuntu.com/ubuntu resolute/main amd64 dracut-core amd64 110-10 [327 kB]
+Get:74 http://archive.ubuntu.com/ubuntu resolute/main amd64 dracut-network all 110-10 [45.4 kB]
+Get:75 http://archive.ubuntu.com/ubuntu resolute/main amd64 fwupd amd64 2.1.1-1ubuntu2 [12.7 MB]
+Get:76 http://archive.ubuntu.com/ubuntu resolute/main amd64 libfwupd3 amd64 2.1.1-1ubuntu2 [145 kB]
+Get:77 http://archive.ubuntu.com/ubuntu resolute/main amd64 polkitd amd64 127-2ubuntu1 [102 kB]
+Get:78 http://archive.ubuntu.com/ubuntu resolute/main amd64 libpolkit-agent-1-0 amd64 127-2ubuntu1 [18.1 kB]
+Get:79 http://archive.ubuntu.com/ubuntu resolute/main amd64 libpolkit-gobject-1-0 amd64 127-2ubuntu1 [45.7 kB]
+Get:80 http://archive.ubuntu.com/ubuntu resolute/main amd64 initramfs-tools-bin amd64 0.151ubuntu1 [24.2 kB]
+Get:81 http://archive.ubuntu.com/ubuntu resolute/main amd64 initramfs-tools-core all 0.151ubuntu1 [50.3 kB]
+Get:82 http://archive.ubuntu.com/ubuntu resolute/main amd64 libftdi1-2 amd64 1.6~rc1-1build1 [30.7 kB]
+Get:83 http://archive.ubuntu.com/ubuntu resolute/main amd64 libgstreamer1.0-0 amd64 1.28.2-1 [1218 kB]
+Get:84 http://archive.ubuntu.com/ubuntu resolute/main amd64 libmpfr6 amd64 4.2.2-3 [361 kB]
+Get:85 http://archive.ubuntu.com/ubuntu resolute/main amd64 libxslt1.1 amd64 1.1.45-0.1 [165 kB]
+Get:86 http://archive.ubuntu.com/ubuntu resolute/main amd64 pollinate all 4.33-4ubuntu6 [11.7 kB]
+Get:87 http://archive.ubuntu.com/ubuntu resolute/main amd64 python3-cryptography amd64 46.0.5-1ubuntu2 [1153 kB]
+Get:88 http://archive.ubuntu.com/ubuntu resolute/main amd64 python3-jwt all 2.10.1-4ubuntu1 [20.6 kB]
+Get:89 http://archive.ubuntu.com/ubuntu resolute/main amd64 python3-rpds-py amd64 0.27.1-2ubuntu3 [281 kB]
+Get:90 http://archive.ubuntu.com/ubuntu resolute/main amd64 software-properties-common all 0.120 [16.6 kB]
+Get:91 http://archive.ubuntu.com/ubuntu resolute/main amd64 python3-software-properties all 0.120 [28.6 kB]
+Get:92 http://archive.ubuntu.com/ubuntu resolute/main amd64 unattended-upgrades all 2.12ubuntu9 [53.3 kB]
+Get:93 http://archive.ubuntu.com/ubuntu resolute/main amd64 cloud-initramfs-dyn-netconf all 0.56 [7228 B]
+Preconfiguring packages ...
+Fetched 50.5 MB in 1s (66.1 MB/s)
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45007 files and directories currently installed.)
+Preparing to unpack .../coreutils_9.5-1ubuntu2+0.0.0~ubuntu25_all.deb ...
+Unpacking coreutils (9.5-1ubuntu2+0.0.0~ubuntu25) over (9.5-1ubuntu2+0.0.0~ubuntu24) ...
+Setting up coreutils (9.5-1ubuntu2+0.0.0~ubuntu25) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45007 files and directories currently installed.)
+Preparing to unpack .../coreutils-from-uutils_0.0.0~ubuntu25_all.deb ...
+Unpacking coreutils-from-uutils (0.0.0~ubuntu25) over (0.0.0~ubuntu24) ...
+Setting up coreutils-from-uutils (0.0.0~ubuntu25) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45006 files and directories currently installed.)
+Preparing to unpack .../libatomic1_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libatomic1:amd64 (16-20260322-1ubuntu1) over (16-20260315-1ubuntu1) ...
+Preparing to unpack .../gcc-16-base_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking gcc-16-base:amd64 (16-20260322-1ubuntu1) over (16-20260315-1ubuntu1) ...
+Setting up gcc-16-base:amd64 (16-20260322-1ubuntu1) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45006 files and directories currently installed.)
+Preparing to unpack .../libgcc-s1_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libgcc-s1:amd64 (16-20260322-1ubuntu1) over (16-20260315-1ubuntu1) ...
+Setting up libgcc-s1:amd64 (16-20260322-1ubuntu1) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45006 files and directories currently installed.)
+Preparing to unpack .../libstdc++6_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libstdc++6:amd64 (16-20260322-1ubuntu1) over (16-20260315-1ubuntu1) ...
+Setting up libstdc++6:amd64 (16-20260322-1ubuntu1) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45006 files and directories currently installed.)
+Preparing to unpack .../liblzma5_5.8.3-1_amd64.deb ...
+Unpacking liblzma5:amd64 (5.8.3-1) over (5.8.2-2) ...
+Setting up liblzma5:amd64 (5.8.3-1) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45006 files and directories currently installed.)
+Preparing to unpack .../openssl-provider-legacy_3.5.5-1ubuntu3_amd64.deb ...
+Unpacking openssl-provider-legacy (3.5.5-1ubuntu3) over (3.5.5-1ubuntu1) ...
+Setting up openssl-provider-legacy (3.5.5-1ubuntu3) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45006 files and directories currently installed.)
+Preparing to unpack .../libssl3t64_3.5.5-1ubuntu3_amd64.deb ...
+Unpacking libssl3t64:amd64 (3.5.5-1ubuntu3) over (3.5.5-1ubuntu1) ...
+Setting up libssl3t64:amd64 (3.5.5-1ubuntu3) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45006 files and directories currently installed.)
+Preparing to unpack .../libsystemd0_259.5-0ubuntu2_amd64.deb ...
+Unpacking libsystemd0:amd64 (259.5-0ubuntu2) over (259.5-0ubuntu1) ...
+Setting up libsystemd0:amd64 (259.5-0ubuntu2) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45006 files and directories currently installed.)
+Preparing to unpack .../libpam-systemd_259.5-0ubuntu2_amd64.deb ...
+Unpacking libpam-systemd:amd64 (259.5-0ubuntu2) over (259.5-0ubuntu1) ...
+Preparing to unpack .../systemd-sysv_259.5-0ubuntu2_amd64.deb ...
+Unpacking systemd-sysv (259.5-0ubuntu2) over (259.5-0ubuntu1) ...
+Preparing to unpack .../systemd-resolved_259.5-0ubuntu2_amd64.deb ...
+Unpacking systemd-resolved (259.5-0ubuntu2) over (259.5-0ubuntu1) ...
+Preparing to unpack .../libsystemd-shared_259.5-0ubuntu2_amd64.deb ...
+Unpacking libsystemd-shared:amd64 (259.5-0ubuntu2) over (259.5-0ubuntu1) ...
+Setting up libsystemd-shared:amd64 (259.5-0ubuntu2) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45006 files and directories currently installed.)
+Preparing to unpack .../systemd_259.5-0ubuntu2_amd64.deb ...
+Unpacking systemd (259.5-0ubuntu2) over (259.5-0ubuntu1) ...
+Preparing to unpack .../systemd-cryptsetup_259.5-0ubuntu2_amd64.deb ...
+Unpacking systemd-cryptsetup (259.5-0ubuntu2) over (259.5-0ubuntu1) ...
+Preparing to unpack .../udev_259.5-0ubuntu2_amd64.deb ...
+Unpacking udev (259.5-0ubuntu2) over (259.5-0ubuntu1) ...
+Preparing to unpack .../libudev1_259.5-0ubuntu2_amd64.deb ...
+Unpacking libudev1:amd64 (259.5-0ubuntu2) over (259.5-0ubuntu1) ...
+Setting up libudev1:amd64 (259.5-0ubuntu2) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45006 files and directories currently installed.)
+Preparing to unpack .../libapt-pkg7.0_3.2.0_amd64.deb ...
+Unpacking libapt-pkg7.0:amd64 (3.2.0) over (3.1.16) ...
+Setting up libapt-pkg7.0:amd64 (3.2.0) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45006 files and directories currently installed.)
+Preparing to unpack .../dpkg_1.23.7ubuntu1_amd64.deb ...
+Unpacking dpkg (1.23.7ubuntu1) over (1.23.6ubuntu2) ...
+Setting up dpkg (1.23.7ubuntu1) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45006 files and directories currently installed.)
+Preparing to unpack .../archives/apt_3.2.0_amd64.deb ...
+Unpacking apt (3.2.0) over (3.1.16) ...
+Setting up apt (3.2.0) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45006 files and directories currently installed.)
+Preparing to unpack .../00-gawk_1%3a5.3.2-1ubuntu1_amd64.deb ...
+Unpacking gawk (1:5.3.2-1ubuntu1) over (1:5.3.2-1build1) ...
+Preparing to unpack .../01-libpython3.14_3.14.4-1_amd64.deb ...
+Unpacking libpython3.14:amd64 (3.14.4-1) over (3.14.3-3) ...
+Preparing to unpack .../02-python3.14_3.14.4-1_amd64.deb ...
+Unpacking python3.14 (3.14.4-1) over (3.14.3-3) ...
+Preparing to unpack .../03-libpython3.14-stdlib_3.14.4-1_amd64.deb ...
+Unpacking libpython3.14-stdlib:amd64 (3.14.4-1) over (3.14.3-3) ...
+Preparing to unpack .../04-python3.14-minimal_3.14.4-1_amd64.deb ...
+Unpacking python3.14-minimal (3.14.4-1) over (3.14.3-3) ...
+Preparing to unpack .../05-libpython3.14-minimal_3.14.4-1_amd64.deb ...
+Unpacking libpython3.14-minimal:amd64 (3.14.4-1) over (3.14.3-3) ...
+Preparing to unpack .../06-tzdata_2026a-3ubuntu1_all.deb ...
+Unpacking tzdata (2026a-3ubuntu1) over (2026a-1ubuntu1) ...
+Preparing to unpack .../07-libffi8_3.5.2-4_amd64.deb ...
+Unpacking libffi8:amd64 (3.5.2-4) over (3.5.2-3) ...
+Preparing to unpack .../08-update-notifier-common_3.206_all.deb ...
+Unpacking update-notifier-common (3.206) over (3.205) ...
+Preparing to unpack .../09-libcap2_1%3a2.75-10ubuntu2_amd64.deb ...
+Unpacking libcap2:amd64 (1:2.75-10ubuntu2) over (1:2.75-10ubuntu1) ...
+Preparing to unpack .../10-openssl_3.5.5-1ubuntu3_amd64.deb ...
+Unpacking openssl (3.5.5-1ubuntu3) over (3.5.5-1ubuntu1) ...
+Preparing to unpack .../11-ca-certificates_20260223_all.deb ...
+Unpacking ca-certificates (20260223) over (20250419build1) ...
+Preparing to unpack .../12-libtirpc-common_1.3.7-0.1_all.deb ...
+Unpacking libtirpc-common (1.3.7-0.1) over (1.3.6+ds-1ubuntu1) ...
+Preparing to unpack .../13-libtirpc3t64_1.3.7-0.1_amd64.deb ...
+Unpacking libtirpc3t64:amd64 (1.3.7-0.1) over (1.3.6+ds-1ubuntu1) ...
+Preparing to unpack .../14-libpam-cap_1%3a2.75-10ubuntu2_amd64.deb ...
+Unpacking libpam-cap:amd64 (1:2.75-10ubuntu2) over (1:2.75-10ubuntu1) ...
+Preparing to unpack .../15-libcap2-bin_1%3a2.75-10ubuntu2_amd64.deb ...
+Unpacking libcap2-bin (1:2.75-10ubuntu2) over (1:2.75-10ubuntu1) ...
+Preparing to unpack .../16-iproute2_6.19.0-1ubuntu1_amd64.deb ...
+Unpacking iproute2 (6.19.0-1ubuntu1) over (6.18.0-1ubuntu1) ...
+Preparing to unpack .../17-libapparmor1_5.0.0~beta1-0ubuntu6_amd64.deb ...
+Unpacking libapparmor1:amd64 (5.0.0~beta1-0ubuntu6) over (5.0.0~beta1-0ubuntu5) ...
+Preparing to unpack .../18-netplan-generator_1.2-1ubuntu5_amd64.deb ...
+Adding 'diversion of /lib/systemd/system-generators/netplan to /lib/systemd/system-generators/netplan.usr-is-merged by netplan-generator'
+Unpacking netplan-generator (1.2-1ubuntu5) over (1.2-1ubuntu3) ...
+Preparing to unpack .../19-python3-netplan_1.2-1ubuntu5_amd64.deb ...
+Unpacking python3-netplan (1.2-1ubuntu5) over (1.2-1ubuntu3) ...
+Preparing to unpack .../20-netplan.io_1.2-1ubuntu5_amd64.deb ...
+Unpacking netplan.io (1.2-1ubuntu5) over (1.2-1ubuntu3) ...
+Preparing to unpack .../21-libnetplan1_1.2-1ubuntu5_amd64.deb ...
+Unpacking libnetplan1:amd64 (1.2-1ubuntu5) over (1.2-1ubuntu3) ...
+Preparing to unpack .../22-libnss-systemd_259.5-0ubuntu2_amd64.deb ...
+Unpacking libnss-systemd:amd64 (259.5-0ubuntu2) over (259.5-0ubuntu1) ...
+Preparing to unpack .../23-python3-gi_3.56.2-1_amd64.deb ...
+Unpacking python3-gi (3.56.2-1) over (3.56.1-2) ...
+Preparing to unpack .../24-networkd-dispatcher_2.2.4-1.1ubuntu1_all.deb ...
+Unpacking networkd-dispatcher (2.2.4-1.1ubuntu1) over (2.2.4-1.1build1) ...
+Preparing to unpack .../25-systemd-hwe-hwdb_259.5.3ubuntu_all.deb ...
+Unpacking systemd-hwe-hwdb (259.5.3ubuntu) over (259.5.1ubuntu) ...
+Preparing to unpack .../26-apparmor_5.0.0~beta1-0ubuntu6_amd64.deb ...
+Unpacking apparmor (5.0.0~beta1-0ubuntu6) over (5.0.0~beta1-0ubuntu5) ...
+Preparing to unpack .../27-bind9-dnsutils_1%3a9.20.18-1ubuntu2_amd64.deb ...
+Unpacking bind9-dnsutils (1:9.20.18-1ubuntu2) over (1:9.20.18-1ubuntu1) ...
+Preparing to unpack .../28-bind9-host_1%3a9.20.18-1ubuntu2_amd64.deb ...
+Unpacking bind9-host (1:9.20.18-1ubuntu2) over (1:9.20.18-1ubuntu1) ...
+Preparing to unpack .../29-bind9-libs_1%3a9.20.18-1ubuntu2_amd64.deb ...
+Unpacking bind9-libs:amd64 (1:9.20.18-1ubuntu2) over (1:9.20.18-1ubuntu1) ...
+Preparing to unpack .../30-fuse3_3.18.2-1_amd64.deb ...
+Adding 'diversion of /bin/fusermount to /bin/fusermount.usr-is-merged by fuse3'
+Adding 'diversion of /sbin/mount.fuse to /sbin/mount.fuse.usr-is-merged by fuse3'
+Unpacking fuse3 (3.18.2-1) over (3.18.1-1) ...
+Preparing to unpack .../31-libfuse3-4_3.18.2-1_amd64.deb ...
+Unpacking libfuse3-4:amd64 (3.18.2-1) over (3.18.1-1) ...
+Preparing to unpack .../32-libcbor0.10_0.10.2-2ubuntu3_amd64.deb ...
+Unpacking libcbor0.10:amd64 (0.10.2-2ubuntu3) over (0.10.2-2ubuntu2) ...
+Preparing to unpack .../33-libpng16-16t64_1.6.56-1_amd64.deb ...
+Unpacking libpng16-16t64:amd64 (1.6.56-1) over (1.6.55-1) ...
+Preparing to unpack .../34-libtraceevent1-plugin_1%3a1.8.7-1_amd64.deb ...
+Unpacking libtraceevent1-plugin:amd64 (1:1.8.7-1) over (1:1.8.4-2build1) ...
+Preparing to unpack .../35-libtraceevent1_1%3a1.8.7-1_amd64.deb ...
+Unpacking libtraceevent1:amd64 (1:1.8.7-1) over (1:1.8.4-2build1) ...
+Preparing to unpack .../36-libx11-data_2%3a1.8.13-1_all.deb ...
+Unpacking libx11-data (2:1.8.13-1) over (2:1.8.12-1build2) ...
+Preparing to unpack .../37-libx11-6_2%3a1.8.13-1_amd64.deb ...
+Unpacking libx11-6:amd64 (2:1.8.13-1) over (2:1.8.12-1build2) ...
+Preparing to unpack .../38-ubuntu-release-upgrader-core_1%3a26.04.14_all.deb ...
+Unpacking ubuntu-release-upgrader-core (1:26.04.14) over (1:26.04.9) ...
+Preparing to unpack .../39-python3-distupgrade_1%3a26.04.14_all.deb ...
+Unpacking python3-distupgrade (1:26.04.14) over (1:26.04.9) ...
+Preparing to unpack .../40-python3.14-gdbm_3.14.4-1_amd64.deb ...
+Unpacking python3.14-gdbm (3.14.4-1) over (3.14.3-3) ...
+Preparing to unpack .../41-xz-utils_5.8.3-1_amd64.deb ...
+Unpacking xz-utils (5.8.3-1) over (5.8.2-2) ...
+Preparing to unpack .../42-python3-problem-report_2.34.0-0ubuntu2_all.deb ...
+Unpacking python3-problem-report (2.34.0-0ubuntu2) over (2.33.1-0ubuntu7) ...
+Preparing to unpack .../43-python3-apport_2.34.0-0ubuntu2_all.deb ...
+Unpacking python3-apport (2.34.0-0ubuntu2) over (2.33.1-0ubuntu7) ...
+Preparing to unpack .../44-linux-base_4.15ubuntu5_all.deb ...
+Unpacking linux-base (4.15ubuntu5) over (4.15ubuntu4) ...
+Preparing to unpack .../45-apport-core-dump-handler_2.34.0-0ubuntu2_all.deb ...
+Unpacking apport-core-dump-handler (2.34.0-0ubuntu2) over (2.33.1-0ubuntu7) ...
+Preparing to unpack .../46-apport_2.34.0-0ubuntu2_all.deb ...
+Unpacking apport (2.34.0-0ubuntu2) over (2.33.1-0ubuntu7) ...
+Preparing to unpack .../47-overlayroot_0.56_all.deb ...
+Unpacking overlayroot (0.56) over (0.55) ...
+Preparing to unpack .../48-dracut_110-10_all.deb ...
+Unpacking dracut (110-10) over (110-7) ...
+Preparing to unpack .../49-dracut-install_110-10_amd64.deb ...
+Unpacking dracut-install (110-10) over (110-7) ...
+Preparing to unpack .../50-cloud-initramfs-copymods_0.56_all.deb ...
+Unpacking cloud-initramfs-copymods (0.56) over (0.55) ...
+Preparing to unpack .../51-dracut-core_110-10_amd64.deb ...
+Unpacking dracut-core (110-10) over (110-7) ...
+Preparing to unpack .../52-dracut-network_110-10_all.deb ...
+Unpacking dracut-network (110-10) over (110-7) ...
+Preparing to unpack .../53-fwupd_2.1.1-1ubuntu2_amd64.deb ...
+Unpacking fwupd (2.1.1-1ubuntu2) over (2.1.1-1ubuntu1) ...
+Preparing to unpack .../54-libfwupd3_2.1.1-1ubuntu2_amd64.deb ...
+Unpacking libfwupd3:amd64 (2.1.1-1ubuntu2) over (2.1.1-1ubuntu1) ...
+Preparing to unpack .../55-polkitd_127-2ubuntu1_amd64.deb ...
+Unpacking polkitd (127-2ubuntu1) over (127-2) ...
+Preparing to unpack .../56-libpolkit-agent-1-0_127-2ubuntu1_amd64.deb ...
+Unpacking libpolkit-agent-1-0:amd64 (127-2ubuntu1) over (127-2) ...
+Preparing to unpack .../57-libpolkit-gobject-1-0_127-2ubuntu1_amd64.deb ...
+Unpacking libpolkit-gobject-1-0:amd64 (127-2ubuntu1) over (127-2) ...
+Preparing to unpack .../58-initramfs-tools-bin_0.151ubuntu1_amd64.deb ...
+Unpacking initramfs-tools-bin (0.151ubuntu1) over (0.150ubuntu8) ...
+Preparing to unpack .../59-initramfs-tools-core_0.151ubuntu1_all.deb ...
+Unpacking initramfs-tools-core (0.151ubuntu1) over (0.150ubuntu8) ...
+Preparing to unpack .../60-libftdi1-2_1.6~rc1-1build1_amd64.deb ...
+Unpacking libftdi1-2:amd64 (1.6~rc1-1build1) over (1.6~rc1-1) ...
+Preparing to unpack .../61-libgstreamer1.0-0_1.28.2-1_amd64.deb ...
+Unpacking libgstreamer1.0-0:amd64 (1.28.2-1) over (1.28.1-1) ...
+Preparing to unpack .../62-libmpfr6_4.2.2-3_amd64.deb ...
+Unpacking libmpfr6:amd64 (4.2.2-3) over (4.2.2-2) ...
+Preparing to unpack .../63-libxslt1.1_1.1.45-0.1_amd64.deb ...
+Unpacking libxslt1.1:amd64 (1.1.45-0.1) over (1.1.43-0.3) ...
+Preparing to unpack .../64-pollinate_4.33-4ubuntu6_all.deb ...
+Unpacking pollinate (4.33-4ubuntu6) over (4.33-4ubuntu5) ...
+Preparing to unpack .../65-python3-cryptography_46.0.5-1ubuntu2_amd64.deb ...
+Unpacking python3-cryptography (46.0.5-1ubuntu2) over (46.0.5-1ubuntu1) ...
+Preparing to unpack .../66-python3-jwt_2.10.1-4ubuntu1_all.deb ...
+Unpacking python3-jwt (2.10.1-4ubuntu1) over (2.10.1-4) ...
+Preparing to unpack .../67-python3-rpds-py_0.27.1-2ubuntu3_amd64.deb ...
+Unpacking python3-rpds-py (0.27.1-2ubuntu3) over (0.27.1-2ubuntu1) ...
+Preparing to unpack .../68-software-properties-common_0.120_all.deb ...
+Unpacking software-properties-common (0.120) over (0.119) ...
+Preparing to unpack .../69-python3-software-properties_0.120_all.deb ...
+Unpacking python3-software-properties (0.120) over (0.119) ...
+Preparing to unpack .../70-unattended-upgrades_2.12ubuntu9_all.deb ...
+Unpacking unattended-upgrades (2.12ubuntu9) over (2.12ubuntu7) ...
+Preparing to unpack .../71-cloud-initramfs-dyn-netconf_0.56_all.deb ...
+Unpacking cloud-initramfs-dyn-netconf (0.56) over (0.55) ...
+Setting up libapparmor1:amd64 (5.0.0~beta1-0ubuntu6) ...
+Setting up linux-base (4.15ubuntu5) ...
+Setting up bind9-libs:amd64 (1:9.20.18-1ubuntu2) ...
+Setting up python3-jwt (2.10.1-4ubuntu1) ...
+Setting up libcbor0.10:amd64 (0.10.2-2ubuntu3) ...
+Setting up python3-problem-report (2.34.0-0ubuntu2) ...
+Setting up update-notifier-common (3.206) ...
+update-notifier-download.service is a disabled or a static unit not running, not starting it.
+update-notifier-motd.service is a disabled or a static unit not running, not starting it.
+Setting up libtirpc-common (1.3.7-0.1) ...
+Setting up libpython3.14-minimal:amd64 (3.14.4-1) ...
+Setting up libnss-systemd:amd64 (259.5-0ubuntu2) ...
+Setting up libfwupd3:amd64 (2.1.1-1ubuntu2) ...
+Setting up systemd (259.5-0ubuntu2) ...
+fchownat() of /sys/kernel/security/ima/binary_runtime_measurements failed: Permission denied
+Setting up libnetplan1:amd64 (1.2-1ubuntu5) ...
+Setting up python3-distupgrade (1:26.04.14) ...
+Setting up libcap2:amd64 (1:2.75-10ubuntu2) ...
+Setting up python3-apport (2.34.0-0ubuntu2) ...
+Setting up tzdata (2026a-3ubuntu1) ...
+
+Current default time zone: 'Etc/UTC'
+Local time is now:      Tue Apr 14 05:32:19 UTC 2026.
+Universal Time is now:  Tue Apr 14 05:32:19 UTC 2026.
+Run 'dpkg-reconfigure tzdata' if you wish to change it.
+
+Setting up libcap2-bin (1:2.75-10ubuntu2) ...
+Setting up apparmor (5.0.0~beta1-0ubuntu6) ...
+Installing new version of config file /etc/apparmor.d/abstractions/base ...
+Installing new version of config file /etc/apparmor.d/gs ...
+Installing new version of config file /etc/apparmor.d/openvpn ...
+Installing new version of config file /etc/apparmor.d/tunables/gs ...
+Installing new version of config file /etc/apparmor.d/unix-chkpwd ...
+apparmor_parser: Unable to replace "lsb_release".  apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+apparmor_parser: Unable to replace "kmod".  apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+apparmor_parser: Unable to replace "nvidia_modprobe".  apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+Reloading AppArmor profiles 
+/sbin/apparmor_parser: Unable to replace "1password".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "MongoDB Compass".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "Discord".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "QtWebEngineProcess".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "balena-etcher".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "brave".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "buildah".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "cam".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "ch-checkns".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "ch-run".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "bwrap".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "chrome".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "vscode".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "chromium".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "babeld".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "crun".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "devhelp".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "bgpd".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "element-desktop".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "epiphany".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "alsamixer".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "evolution".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "bfdd".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "firefox".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "foliate".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "flatpak".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "geary".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "github-desktop".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "eigrpd".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "goldendict".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "dnstracer".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "dig".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "fabricd".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "hostname".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "iotop-c".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "kchmviewer".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "keybase".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "lc-compliance".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "Xorg".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "isisd".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "libcamerify".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "linux-sandbox".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "ldpd".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "john".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "fusermount3".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "loupe".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "ipa_verify".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "lxc-attach".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "lxc-create".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "gs".  /sbin/apparmor_parser: Unable to replace "lxc-destroy".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "lxc-execute".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "irssi".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "lxc-unshare".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "lxc-stop".  /sbin/apparmor_parser: Unable to replace "lxc-usernsexec".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "mmdebstrap".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "msedge".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "lsusb".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "linux-boot-prober".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "notepadqq".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "compressor".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "locale".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "lsb_release".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "lsblk".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "obsidian".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "opam".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "mbsync".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "mosquitto".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "opera".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "nhrpd".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "notify-send".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "pageedit".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "nc.openbsd".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "nslookup".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "os-prober".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "kmod".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "nvidia_modprobe".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "pathd".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "podman".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "pbrd".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "ospf6d".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "polypane".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "privacybrowser".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "qcam".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "QtWebEngineProcess".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "plasmashell".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "pimd".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "qmapshack".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "ospfd".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "pim6d".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "qutebrowser".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "rootlesskit".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "rpm".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "runc".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "rssguard".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "qpdf".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "sbuild".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "ripngd".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "ip".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "openvpn".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "sbuild-apt".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "sbuild-abort".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "pollinate".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "sbuild-adduser".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "ripd".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "sbuild-checkpackages".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "sbuild-clean".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "sbuild-destroychroot".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "proftpd".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "sbuild-createchroot".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "sbuild-shell".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "sbuild-distupgrade".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "scide".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "signal-desktop".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "sbuild-hold".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "sbuild-update".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "sbuild-unhold".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "slack".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "sbuild-upgrade".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "slirp4netns".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "steam".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "stress-ng".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "systemd-coredump".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "thunderbird".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "surfshark".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "trinity".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "ssh-keyscan".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "systemd-detect-virt".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "tup".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "tuxedo-control-center".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "tinyproxy".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "staticd".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "mx-extract".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "rygel".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "userbindmount".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "unprivileged_userns".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "ubuntu_pro_apt_news".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "unix-chkpwd".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "/usr/bin/man".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "dumpcap".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "tshark".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "cmds".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "tnftp".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "uwsgi-core".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "vdens".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "vivaldi-bin".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "virtiofsd".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "vpnns".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "wg".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "/usr/sbin/chronyd".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "rsyslogd".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "tcpdump".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "vrrpd".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "wpcom".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "wike".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "mount-namespace-capture-helper".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "/usr/lib/snapd/snap-confine".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "who".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "ip".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "wg-quick".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "znc".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "apt_methods".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "ubuntu_pro_esm_cache".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+/sbin/apparmor_parser: Unable to replace "transmission-cli".  /sbin/apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+Error: At least one profile failed to load
+Setting up libftdi1-2:amd64 (1.6~rc1-1build1) ...
+Setting up python3.14-gdbm (3.14.4-1) ...
+Setting up systemd-cryptsetup (259.5-0ubuntu2) ...
+Setting up libx11-data (2:1.8.13-1) ...
+Setting up libmpfr6:amd64 (4.2.2-3) ...
+Setting up python3-cryptography (46.0.5-1ubuntu2) ...
+Setting up xz-utils (5.8.3-1) ...
+Setting up libpng16-16t64:amd64 (1.6.56-1) ...
+Setting up libatomic1:amd64 (16-20260322-1ubuntu1) ...
+Setting up udev (259.5-0ubuntu2) ...
+Setting up systemd-hwe-hwdb (259.5.3ubuntu) ...
+Setting up python3-rpds-py (0.27.1-2ubuntu3) ...
+Setting up libffi8:amd64 (3.5.2-4) ...
+Setting up dracut-install (110-10) ...
+Setting up libtraceevent1:amd64 (1:1.8.7-1) ...
+Setting up libxslt1.1:amd64 (1.1.45-0.1) ...
+Setting up python3-netplan (1.2-1ubuntu5) ...
+Setting up libx11-6:amd64 (2:1.8.13-1) ...
+Setting up netplan-generator (1.2-1ubuntu5) ...
+Removing 'diversion of /lib/systemd/system-generators/netplan to /lib/systemd/system-generators/netplan.usr-is-merged by netplan-generator'
+Setting up libfuse3-4:amd64 (3.18.2-1) ...
+Setting up bind9-host (1:9.20.18-1ubuntu2) ...
+Setting up openssl (3.5.5-1ubuntu3) ...
+Setting up libpam-cap:amd64 (1:2.75-10ubuntu2) ...
+Setting up python3.14-minimal (3.14.4-1) ...
+Setting up libpolkit-gobject-1-0:amd64 (127-2ubuntu1) ...
+Setting up libgstreamer1.0-0:amd64 (1.28.2-1) ...
+Setcap worked! gst-ptp-helper is not suid!
+Setting up systemd-resolved (259.5-0ubuntu2) ...
+Setting up initramfs-tools-bin (0.151ubuntu1) ...
+Setting up systemd-sysv (259.5-0ubuntu2) ...
+Setting up libtirpc3t64:amd64 (1.3.7-0.1) ...
+Setting up libpython3.14-stdlib:amd64 (3.14.4-1) ...
+Setting up gawk (1:5.3.2-1ubuntu1) ...
+Setting up iproute2 (6.19.0-1ubuntu1) ...
+Setting up netplan.io (1.2-1ubuntu5) ...
+Setting up fuse3 (3.18.2-1) ...
+Removing 'diversion of /bin/fusermount to /bin/fusermount.usr-is-merged by fuse3'
+Removing 'diversion of /sbin/mount.fuse to /sbin/mount.fuse.usr-is-merged by fuse3'
+update-initramfs: deferring update (trigger activated)
+Setting up ca-certificates (20260223) ...
+Updating certificates in /etc/ssl/certs...
+rehash: warning: skipping ca-certificates.crt, it does not contain exactly one certificate or CRL
+5 added, 11 removed; done.
+Setting up unattended-upgrades (2.12ubuntu9) ...
+Setting up pollinate (4.33-4ubuntu6) ...
+Installing new version of config file /etc/default/pollinate ...
+apparmor_parser: Unable to replace "pollinate".  apparmor_parser: Access denied. You need policy admin privileges to manage profiles.
+
+Removing obsolete conffile /etc/pollinate/entropy.ubuntu.com.pem ...
+Setting up dracut-core (110-10) ...
+Setting up python3-gi (3.56.2-1) ...
+Setting up ubuntu-release-upgrader-core (1:26.04.14) ...
+Setting up dracut (110-10) ...
+update-initramfs: deferring update (trigger activated)
+Setting up libtraceevent1-plugin:amd64 (1:1.8.7-1) ...
+Setting up dracut-network (110-10) ...
+Setting up cloud-initramfs-dyn-netconf (0.56) ...
+Setting up libpam-systemd:amd64 (259.5-0ubuntu2) ...
+Setting up libpython3.14:amd64 (3.14.4-1) ...
+Setting up libpolkit-agent-1-0:amd64 (127-2ubuntu1) ...
+Setting up bind9-dnsutils (1:9.20.18-1ubuntu2) ...
+Setting up python3.14 (3.14.4-1) ...
+Setting up initramfs-tools-core (0.151ubuntu1) ...
+Setting up overlayroot (0.56) ...
+Setting up fwupd (2.1.1-1ubuntu2) ...
+fwupd-refresh.service is a disabled or a static unit not running, not starting it.
+fwupd.service is a disabled or a static unit not running, not starting it.
+Job for dbus.service failed.
+See "systemctl status dbus.service" and "journalctl -xeu dbus.service" for details.
+Setting up polkitd (127-2ubuntu1) ...
+Setting up networkd-dispatcher (2.2.4-1.1ubuntu1) ...
+Could not execute systemctl:  at /usr/bin/deb-systemd-invoke line 148.
+Setting up python3-software-properties (0.120) ...
+Setting up cloud-initramfs-copymods (0.56) ...
+Setting up software-properties-common (0.120) ...
+Setting up apport-core-dump-handler (2.34.0-0ubuntu2) ...
+Setting up apport (2.34.0-0ubuntu2) ...
+Installing new version of config file /etc/apport/crashdb.conf ...
+apport-autoreport.service is a disabled or a static unit not running, not starting it.
+Processing triggers for dbus (1.16.2-2ubuntu4) ...
+Failed to open connection to "system" message bus: Failed to query AppArmor policy: Permission denied
+Processing triggers for shared-mime-info (2.4-5build3) ...
+Processing triggers for procps (2:4.0.4-9ubuntu1) ...
+Processing triggers for sgml-base (1.31+nmu1build1) ...
+Processing triggers for libc-bin (2.43-2ubuntu1) ...
+Processing triggers for man-db (2.13.1-1build1) ...
+Processing triggers for ca-certificates (20260223) ...
+Updating certificates in /etc/ssl/certs...
+0 added, 0 removed; done.
+Running hooks in /etc/ca-certificates/update.d...
+done.
+Processing triggers for dracut (110-10) ...
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+
+Restarting services...
+ systemctl restart rsyslog.service ssh.service
+
+Service restarts being deferred:
+ /etc/needrestart/restart.d/dbus.service
+ systemctl restart systemd-logind.service
+ systemctl restart unattended-upgrades.service
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+autopkgtest [05:32:30]: rebooting testbed after setup commands that affected boot
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+The following NEW packages will be installed:
+  amd-dbgapi-dev cpp cpp-15 cpp-15-x86-64-linux-gnu cpp-x86-64-linux-gnu g++
+  g++-15 g++-15-x86-64-linux-gnu g++-x86-64-linux-gnu gcc gcc-15 gcc-15-base
+  gcc-15-x86-64-linux-gnu gcc-x86-64-linux-gnu libamd-comgr3 libasan8
+  libc-dev-bin libc6-dev libcc1-0 libgcc-15-dev libgomp1 libhwasan0 libisl23
+  libitm1 libllvm21 liblsan0 libmpc3 libpkgconf7 libquadmath0 librocm-dbgapi0
+  libstdc++-15-dev libtsan2 libubsan1 linux-libc-dev pkg-config pkgconf
+  pkgconf-bin rpcsvc-proto
+0 upgraded, 38 newly installed, 0 to remove and 0 not upgraded.
+Need to get 121 MB of archives.
+After this operation, 465 MB of additional disk space will be used.
+Get:1 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel-21/ubuntu resolute/main amd64 libamd-comgr3 amd64 7.1.0+dfsg-0ubuntu6 [15.2 MB]
+Get:2 http://archive.ubuntu.com/ubuntu resolute/main amd64 libllvm21 amd64 1:21.1.8-6ubuntu1 [30.7 MB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute/universe amd64 librocm-dbgapi0 amd64 7.1.0-0ubuntu3 [402 kB]
+Get:4 http://archive.ubuntu.com/ubuntu resolute/universe amd64 amd-dbgapi-dev amd64 7.1.0-0ubuntu3 [50.3 kB]
+Get:5 http://archive.ubuntu.com/ubuntu resolute/main amd64 gcc-15-base amd64 15.2.0-16ubuntu1 [39.0 kB]
+Get:6 http://archive.ubuntu.com/ubuntu resolute/main amd64 libisl23 amd64 0.27-1build1 [691 kB]
+Get:7 http://archive.ubuntu.com/ubuntu resolute/main amd64 libmpc3 amd64 1.3.1-3 [54.6 kB]
+Get:8 http://archive.ubuntu.com/ubuntu resolute/main amd64 cpp-15-x86-64-linux-gnu amd64 15.2.0-16ubuntu1 [12.9 MB]
+Get:9 http://archive.ubuntu.com/ubuntu resolute/main amd64 cpp-15 amd64 15.2.0-16ubuntu1 [1030 B]
+Get:10 http://archive.ubuntu.com/ubuntu resolute/main amd64 cpp-x86-64-linux-gnu amd64 4:15.2.0-5ubuntu1 [5840 B]
+Get:11 http://archive.ubuntu.com/ubuntu resolute/main amd64 cpp amd64 4:15.2.0-5ubuntu1 [22.4 kB]
+Get:12 http://archive.ubuntu.com/ubuntu resolute/main amd64 libcc1-0 amd64 16-20260322-1ubuntu1 [51.2 kB]
+Get:13 http://archive.ubuntu.com/ubuntu resolute/main amd64 libgomp1 amd64 16-20260322-1ubuntu1 [162 kB]
+Get:14 http://archive.ubuntu.com/ubuntu resolute/main amd64 libitm1 amd64 16-20260322-1ubuntu1 [30.0 kB]
+Get:15 http://archive.ubuntu.com/ubuntu resolute/main amd64 libasan8 amd64 16-20260322-1ubuntu1 [3184 kB]
+Get:16 http://archive.ubuntu.com/ubuntu resolute/main amd64 liblsan0 amd64 16-20260322-1ubuntu1 [1394 kB]
+Get:17 http://archive.ubuntu.com/ubuntu resolute/main amd64 libtsan2 amd64 16-20260322-1ubuntu1 [2849 kB]
+Get:18 http://archive.ubuntu.com/ubuntu resolute/main amd64 libubsan1 amd64 16-20260322-1ubuntu1 [1240 kB]
+Get:19 http://archive.ubuntu.com/ubuntu resolute/main amd64 libhwasan0 amd64 16-20260322-1ubuntu1 [1731 kB]
+Get:20 http://archive.ubuntu.com/ubuntu resolute/main amd64 libquadmath0 amd64 16-20260322-1ubuntu1 [155 kB]
+Get:21 http://archive.ubuntu.com/ubuntu resolute/main amd64 libgcc-15-dev amd64 15.2.0-16ubuntu1 [2866 kB]
+Get:22 http://archive.ubuntu.com/ubuntu resolute/main amd64 gcc-15-x86-64-linux-gnu amd64 15.2.0-16ubuntu1 [25.4 MB]
+Get:23 http://archive.ubuntu.com/ubuntu resolute/main amd64 gcc-15 amd64 15.2.0-16ubuntu1 [539 kB]
+Get:24 http://archive.ubuntu.com/ubuntu resolute/main amd64 gcc-x86-64-linux-gnu amd64 4:15.2.0-5ubuntu1 [1208 B]
+Get:25 http://archive.ubuntu.com/ubuntu resolute/main amd64 gcc amd64 4:15.2.0-5ubuntu1 [5010 B]
+Get:26 http://archive.ubuntu.com/ubuntu resolute/main amd64 libc-dev-bin amd64 2.43-2ubuntu1 [23.3 kB]
+Get:27 http://archive.ubuntu.com/ubuntu resolute/main amd64 linux-libc-dev amd64 7.0.0-13.13 [1547 kB]
+Get:28 http://archive.ubuntu.com/ubuntu resolute/main amd64 rpcsvc-proto amd64 1.4.3-1build1 [68.3 kB]
+Get:29 http://archive.ubuntu.com/ubuntu resolute/main amd64 libc6-dev amd64 2.43-2ubuntu1 [2295 kB]
+Get:30 http://archive.ubuntu.com/ubuntu resolute/main amd64 libstdc++-15-dev amd64 15.2.0-16ubuntu1 [2920 kB]
+Get:31 http://archive.ubuntu.com/ubuntu resolute/main amd64 g++-15-x86-64-linux-gnu amd64 15.2.0-16ubuntu1 [14.4 MB]
+Get:32 http://archive.ubuntu.com/ubuntu resolute/main amd64 g++-15 amd64 15.2.0-16ubuntu1 [26.7 kB]
+Get:33 http://archive.ubuntu.com/ubuntu resolute/main amd64 g++-x86-64-linux-gnu amd64 4:15.2.0-5ubuntu1 [968 B]
+Get:34 http://archive.ubuntu.com/ubuntu resolute/main amd64 g++ amd64 4:15.2.0-5ubuntu1 [1100 B]
+Get:35 http://archive.ubuntu.com/ubuntu resolute/main amd64 libpkgconf7 amd64 2.5.1-4 [38.8 kB]
+Get:36 http://archive.ubuntu.com/ubuntu resolute/main amd64 pkgconf-bin amd64 2.5.1-4 [22.7 kB]
+Get:37 http://archive.ubuntu.com/ubuntu resolute/main amd64 pkgconf amd64 2.5.1-4 [20.0 kB]
+Get:38 http://archive.ubuntu.com/ubuntu resolute/main amd64 pkg-config amd64 2.5.1-4 [7684 B]
+Fetched 121 MB in 7s (16.5 MB/s)
+Selecting previously unselected package libllvm21:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45007 files and directories currently installed.)
+Preparing to unpack .../00-libllvm21_1%3a21.1.8-6ubuntu1_amd64.deb ...
+Unpacking libllvm21:amd64 (1:21.1.8-6ubuntu1) ...
+Selecting previously unselected package libamd-comgr3:amd64.
+Preparing to unpack .../01-libamd-comgr3_7.1.0+dfsg-0ubuntu6_amd64.deb ...
+Unpacking libamd-comgr3:amd64 (7.1.0+dfsg-0ubuntu6) ...
+Selecting previously unselected package librocm-dbgapi0.
+Preparing to unpack .../02-librocm-dbgapi0_7.1.0-0ubuntu3_amd64.deb ...
+Unpacking librocm-dbgapi0 (7.1.0-0ubuntu3) ...
+Selecting previously unselected package amd-dbgapi-dev.
+Preparing to unpack .../03-amd-dbgapi-dev_7.1.0-0ubuntu3_amd64.deb ...
+Unpacking amd-dbgapi-dev (7.1.0-0ubuntu3) ...
+Selecting previously unselected package gcc-15-base:amd64.
+Preparing to unpack .../04-gcc-15-base_15.2.0-16ubuntu1_amd64.deb ...
+Unpacking gcc-15-base:amd64 (15.2.0-16ubuntu1) ...
+Selecting previously unselected package libisl23:amd64.
+Preparing to unpack .../05-libisl23_0.27-1build1_amd64.deb ...
+Unpacking libisl23:amd64 (0.27-1build1) ...
+Selecting previously unselected package libmpc3:amd64.
+Preparing to unpack .../06-libmpc3_1.3.1-3_amd64.deb ...
+Unpacking libmpc3:amd64 (1.3.1-3) ...
+Selecting previously unselected package cpp-15-x86-64-linux-gnu.
+Preparing to unpack .../07-cpp-15-x86-64-linux-gnu_15.2.0-16ubuntu1_amd64.deb ...
+Unpacking cpp-15-x86-64-linux-gnu (15.2.0-16ubuntu1) ...
+Selecting previously unselected package cpp-15.
+Preparing to unpack .../08-cpp-15_15.2.0-16ubuntu1_amd64.deb ...
+Unpacking cpp-15 (15.2.0-16ubuntu1) ...
+Selecting previously unselected package cpp-x86-64-linux-gnu.
+Preparing to unpack .../09-cpp-x86-64-linux-gnu_4%3a15.2.0-5ubuntu1_amd64.deb ...
+Unpacking cpp-x86-64-linux-gnu (4:15.2.0-5ubuntu1) ...
+Selecting previously unselected package cpp.
+Preparing to unpack .../10-cpp_4%3a15.2.0-5ubuntu1_amd64.deb ...
+Unpacking cpp (4:15.2.0-5ubuntu1) ...
+Selecting previously unselected package libcc1-0:amd64.
+Preparing to unpack .../11-libcc1-0_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libcc1-0:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libgomp1:amd64.
+Preparing to unpack .../12-libgomp1_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libgomp1:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libitm1:amd64.
+Preparing to unpack .../13-libitm1_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libitm1:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libasan8:amd64.
+Preparing to unpack .../14-libasan8_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libasan8:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package liblsan0:amd64.
+Preparing to unpack .../15-liblsan0_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking liblsan0:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libtsan2:amd64.
+Preparing to unpack .../16-libtsan2_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libtsan2:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libubsan1:amd64.
+Preparing to unpack .../17-libubsan1_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libubsan1:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libhwasan0:amd64.
+Preparing to unpack .../18-libhwasan0_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libhwasan0:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libquadmath0:amd64.
+Preparing to unpack .../19-libquadmath0_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libquadmath0:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libgcc-15-dev:amd64.
+Preparing to unpack .../20-libgcc-15-dev_15.2.0-16ubuntu1_amd64.deb ...
+Unpacking libgcc-15-dev:amd64 (15.2.0-16ubuntu1) ...
+Selecting previously unselected package gcc-15-x86-64-linux-gnu.
+Preparing to unpack .../21-gcc-15-x86-64-linux-gnu_15.2.0-16ubuntu1_amd64.deb ...
+Unpacking gcc-15-x86-64-linux-gnu (15.2.0-16ubuntu1) ...
+Selecting previously unselected package gcc-15.
+Preparing to unpack .../22-gcc-15_15.2.0-16ubuntu1_amd64.deb ...
+Unpacking gcc-15 (15.2.0-16ubuntu1) ...
+Selecting previously unselected package gcc-x86-64-linux-gnu.
+Preparing to unpack .../23-gcc-x86-64-linux-gnu_4%3a15.2.0-5ubuntu1_amd64.deb ...
+Unpacking gcc-x86-64-linux-gnu (4:15.2.0-5ubuntu1) ...
+Selecting previously unselected package gcc.
+Preparing to unpack .../24-gcc_4%3a15.2.0-5ubuntu1_amd64.deb ...
+Unpacking gcc (4:15.2.0-5ubuntu1) ...
+Selecting previously unselected package libc-dev-bin.
+Preparing to unpack .../25-libc-dev-bin_2.43-2ubuntu1_amd64.deb ...
+Unpacking libc-dev-bin (2.43-2ubuntu1) ...
+Selecting previously unselected package linux-libc-dev:amd64.
+Preparing to unpack .../26-linux-libc-dev_7.0.0-13.13_amd64.deb ...
+Unpacking linux-libc-dev:amd64 (7.0.0-13.13) ...
+Selecting previously unselected package rpcsvc-proto.
+Preparing to unpack .../27-rpcsvc-proto_1.4.3-1build1_amd64.deb ...
+Unpacking rpcsvc-proto (1.4.3-1build1) ...
+Selecting previously unselected package libc6-dev:amd64.
+Preparing to unpack .../28-libc6-dev_2.43-2ubuntu1_amd64.deb ...
+Unpacking libc6-dev:amd64 (2.43-2ubuntu1) ...
+Selecting previously unselected package libstdc++-15-dev:amd64.
+Preparing to unpack .../29-libstdc++-15-dev_15.2.0-16ubuntu1_amd64.deb ...
+Unpacking libstdc++-15-dev:amd64 (15.2.0-16ubuntu1) ...
+Selecting previously unselected package g++-15-x86-64-linux-gnu.
+Preparing to unpack .../30-g++-15-x86-64-linux-gnu_15.2.0-16ubuntu1_amd64.deb ...
+Unpacking g++-15-x86-64-linux-gnu (15.2.0-16ubuntu1) ...
+Selecting previously unselected package g++-15.
+Preparing to unpack .../31-g++-15_15.2.0-16ubuntu1_amd64.deb ...
+Unpacking g++-15 (15.2.0-16ubuntu1) ...
+Selecting previously unselected package g++-x86-64-linux-gnu.
+Preparing to unpack .../32-g++-x86-64-linux-gnu_4%3a15.2.0-5ubuntu1_amd64.deb ...
+Unpacking g++-x86-64-linux-gnu (4:15.2.0-5ubuntu1) ...
+Selecting previously unselected package g++.
+Preparing to unpack .../33-g++_4%3a15.2.0-5ubuntu1_amd64.deb ...
+Unpacking g++ (4:15.2.0-5ubuntu1) ...
+Selecting previously unselected package libpkgconf7:amd64.
+Preparing to unpack .../34-libpkgconf7_2.5.1-4_amd64.deb ...
+Unpacking libpkgconf7:amd64 (2.5.1-4) ...
+Selecting previously unselected package pkgconf-bin.
+Preparing to unpack .../35-pkgconf-bin_2.5.1-4_amd64.deb ...
+Unpacking pkgconf-bin (2.5.1-4) ...
+Selecting previously unselected package pkgconf:amd64.
+Preparing to unpack .../36-pkgconf_2.5.1-4_amd64.deb ...
+Unpacking pkgconf:amd64 (2.5.1-4) ...
+Selecting previously unselected package pkg-config:amd64.
+Preparing to unpack .../37-pkg-config_2.5.1-4_amd64.deb ...
+Unpacking pkg-config:amd64 (2.5.1-4) ...
+Setting up libpkgconf7:amd64 (2.5.1-4) ...
+Setting up linux-libc-dev:amd64 (7.0.0-13.13) ...
+Setting up libgomp1:amd64 (16-20260322-1ubuntu1) ...
+Setting up rpcsvc-proto (1.4.3-1build1) ...
+Setting up libllvm21:amd64 (1:21.1.8-6ubuntu1) ...
+Setting up libquadmath0:amd64 (16-20260322-1ubuntu1) ...
+Setting up libmpc3:amd64 (1.3.1-3) ...
+Setting up pkgconf-bin (2.5.1-4) ...
+Setting up libubsan1:amd64 (16-20260322-1ubuntu1) ...
+Setting up libhwasan0:amd64 (16-20260322-1ubuntu1) ...
+Setting up libamd-comgr3:amd64 (7.1.0+dfsg-0ubuntu6) ...
+Setting up libasan8:amd64 (16-20260322-1ubuntu1) ...
+Setting up libtsan2:amd64 (16-20260322-1ubuntu1) ...
+Setting up libisl23:amd64 (0.27-1build1) ...
+Setting up libc-dev-bin (2.43-2ubuntu1) ...
+Setting up gcc-15-base:amd64 (15.2.0-16ubuntu1) ...
+Setting up libcc1-0:amd64 (16-20260322-1ubuntu1) ...
+Setting up liblsan0:amd64 (16-20260322-1ubuntu1) ...
+Setting up libitm1:amd64 (16-20260322-1ubuntu1) ...
+Setting up libgcc-15-dev:amd64 (15.2.0-16ubuntu1) ...
+Setting up librocm-dbgapi0 (7.1.0-0ubuntu3) ...
+Setting up cpp-15-x86-64-linux-gnu (15.2.0-16ubuntu1) ...
+Setting up pkgconf:amd64 (2.5.1-4) ...
+Setting up gcc-15-x86-64-linux-gnu (15.2.0-16ubuntu1) ...
+Setting up pkg-config:amd64 (2.5.1-4) ...
+Setting up cpp-15 (15.2.0-16ubuntu1) ...
+Setting up libc6-dev:amd64 (2.43-2ubuntu1) ...
+Setting up amd-dbgapi-dev (7.1.0-0ubuntu3) ...
+Setting up cpp-x86-64-linux-gnu (4:15.2.0-5ubuntu1) ...
+Setting up gcc-x86-64-linux-gnu (4:15.2.0-5ubuntu1) ...
+Setting up gcc-15 (15.2.0-16ubuntu1) ...
+Setting up libstdc++-15-dev:amd64 (15.2.0-16ubuntu1) ...
+Setting up cpp (4:15.2.0-5ubuntu1) ...
+Setting up g++-15-x86-64-linux-gnu (15.2.0-16ubuntu1) ...
+Setting up gcc (4:15.2.0-5ubuntu1) ...
+Setting up g++-x86-64-linux-gnu (4:15.2.0-5ubuntu1) ...
+Setting up g++-15 (15.2.0-16ubuntu1) ...
+Setting up g++ (4:15.2.0-5ubuntu1) ...
+update-alternatives: using /usr/bin/g++ to provide /usr/bin/c++ (c++) in auto mode
+Processing triggers for man-db (2.13.1-1build1) ...
+Processing triggers for libc-bin (2.43-2ubuntu1) ...
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+autopkgtest [05:34:49]: test dbgapi-test: [-----------------------
+Checking pkg-config...
+  CFLAGS: -I/usr/lib/x86_64-linux-gnu/pkgconfig/../../../include
+  LIBS:   -L/usr/lib/x86_64-linux-gnu/pkgconfig/../../../lib/x86_64-linux-gnu -lrocm-dbgapi
+Compiling test...
+Running test...
+ROCm Debugger API Version: 0.77.4
+Build string: 0.77.4-developer-build-20260401T210002-buildd
+Status string for SUCCESS: The function has executed successfully
+Autopkgtest rocdbgapi: PASS
+autopkgtest [05:34:50]: test dbgapi-test: -----------------------]
+autopkgtest [05:34:50]: test dbgapi-test:  - - - - - - - - - - results - - - - - - - - - -
+dbgapi-test          PASS (superficial)
+autopkgtest [05:34:50]: @@@@@@@@@@@@@@@@@@@@ summary
+dbgapi-test          PASS (superficial)
