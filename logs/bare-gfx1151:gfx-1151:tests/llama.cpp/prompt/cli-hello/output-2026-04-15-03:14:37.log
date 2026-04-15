@@ -1,0 +1,40 @@
+ggml_cuda_init: found 1 ROCm devices (Total VRAM: 23327 MiB):
+  Device 0: Radeon 8060S Graphics, gfx1151 (0x1151), VMM: no, Wave Size: 32, VRAM: 23327 MiB
+load_backend: loaded ROCm backend from /usr/lib/x86_64-linux-gnu/ggml/backends0/libggml-hip.so
+load_backend: loaded CPU backend from /usr/lib/x86_64-linux-gnu/ggml/backends0/libggml-cpu-zen4.so
+
+Loading model... |-\|/-\| 
+
+
+▄▄ ▄▄
+██ ██
+██ ██  ▀▀█▄ ███▄███▄  ▀▀█▄    ▄████ ████▄ ████▄
+██ ██ ▄█▀██ ██ ██ ██ ▄█▀██    ██    ██ ██ ██ ██
+██ ██ ▀█▄██ ██ ██ ██ ▀█▄██ ██ ▀████ ████▀ ████▀
+                                    ██    ██
+                                    ▀▀    ▀▀
+
+build      : b8681-Debian
+model      : ggml-org/gemma-3-1b-it-GGUF
+modalities : text
+
+available commands:
+  /exit or Ctrl+C     stop or exit
+  /regen              regenerate the last response
+  /clear              clear the chat history
+  /read <file>        add a text file
+  /glob <pattern>     add text files using globbing pattern
+
+
+> Hello Moto!
+
+| Hello there! How's your day going? 😊 
+
+Is there anything you'd like to chat about or need help with?llama_memory_breakdown_print: | memory breakdown [MiB]     | total    free    self   model   context   compute       unaccounted |
+llama_memory_breakdown_print: |   - ROCm0 (8060S Graphics) | 23327 = 46192 + (1426 =   762 +     150 +     514) + 17592186020124 |
+llama_memory_breakdown_print: |   - Host                   |                   376 =   306 +       0 +      70                   |
+
+
+[ Prompt: 574.5 t/s | Generation: 165.9 t/s ]
+
+Exiting...

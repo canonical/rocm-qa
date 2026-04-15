@@ -1,0 +1,217 @@
++ SERVER_PID=8170
++ lemonade-server serve
+++ seq 1 60
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
+WARNING: 'lemonade-server' is deprecated. Use 'lemond' to start the server,
+or 'lemonade' for CLI commands. See 'lemonade --help' for details.
+
+2026-04-15 03:11:07.690 [Info] (main) Starting Lemonade Server...
+2026-04-15 03:11:07.690 [Info] (main)   Version: 10.2.0
+2026-04-15 03:11:07.690 [Info] (main)   Cache dir: /root/.cache/lemonade
+2026-04-15 03:11:07.690 [Info] (main)   Port: 13305
+2026-04-15 03:11:07.690 [Info] (main)   Host: localhost
+2026-04-15 03:11:07.690 [Info] (main)   Log level: info
++ sleep 1
+2026-04-15 03:11:07.691 [Info] (WebSocket) Configured port: 9001
+2026-04-15 03:11:07.691 [Info] (Server) Starting HTTP server on localhost:13305
+2026-04-15 03:11:07.692 [Info] (Server) Host resolution: IPv4=127.0.0.1, IPv6=::1
+2026-04-15 03:11:07.697 [Info] (WebSocket) Server started on port 9001
+2026-04-15 03:11:07.697 [Info] (Server) WebSocket server started on port 9001
+2026-04-15 03:11:07.698 [Info] (Server) Binding IPv4 HTTP server to 127.0.0.1:13305...
+[Server] [Net Broadcast] Broadcasting on 3 RFC1918 interface(s): 127.0.0.1 (bcast 255.255.255.255) 10.18.158.1 (bcast 10.18.158.1) 10.48.6.246 (bcast 10.48.6.255)
+%Y-%m-%d %H:%M:%S.#ms [Error] (log) Binding IPv6 HTTP server to [::1]:13305...
+2026-04-15 03:11:07.698 [Error] (Server) Failed to bind IPv4 HTTP server to 127.0.0.1:13305
+2026-04-15 03:11:07.698 [Error] (Server) Failed to bind IPv6 HTTP server to [::1]:13305
+[Server] Another Lemonade router/server instance is already running on localhost:13305. Duplicate instance now exiting.
+2026-04-15 03:11:07.698 [Info] (Server) Stopping HTTP server...
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
++ sleep 1
+2026-04-15 03:11:09.698 [Info] (Server) Stopping WebSocket server...
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
+2026-04-15 03:11:09.700 [Info] (WebSocket) Server stopped
+2026-04-15 03:11:09.700 [Info] (Server) Unloading models and stopping backend servers...
+2026-04-15 03:11:09.700 [Info] (Router) Unload all models called
+2026-04-15 03:11:09.700 [Info] (Router) Evicting all models (0 total)
+2026-04-15 03:11:09.700 [Info] (Router) All models evicted
+2026-04-15 03:11:09.700 [Info] (Server) Cleanup complete
+2026-04-15 03:11:09.700 [Info] (Router) Unload all models called
+2026-04-15 03:11:09.700 [Info] (Router) Evicting all models (0 total)
+2026-04-15 03:11:09.700 [Info] (Router) All models evicted
++ sleep 1
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
++ sleep 1
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
++ sleep 1
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
++ sleep 1
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
++ sleep 1
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
++ sleep 1
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
++ sleep 1
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
++ sleep 1
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
++ sleep 1
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
++ sleep 1
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
++ sleep 1
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
++ sleep 1
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
++ sleep 1
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
++ sleep 1
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
++ sleep 1
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
++ sleep 1
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
++ sleep 1
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
++ sleep 1
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
++ sleep 1
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
++ sleep 1
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
++ sleep 1
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
++ sleep 1
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
++ sleep 1
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
++ sleep 1
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
++ sleep 1
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
++ sleep 1
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
++ sleep 1
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
++ sleep 1
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
++ sleep 1
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
++ sleep 1
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
++ sleep 1
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
++ sleep 1
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
++ sleep 1
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
++ sleep 1
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
++ sleep 1
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
++ sleep 1
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
++ sleep 1
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
++ sleep 1
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
++ sleep 1
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
++ sleep 1
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
++ sleep 1
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
++ sleep 1
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
++ sleep 1
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
++ sleep 1
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
++ sleep 1
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
++ sleep 1
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
++ sleep 1
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
++ sleep 1
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
++ sleep 1
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
++ sleep 1
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
++ sleep 1
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
++ sleep 1
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
++ sleep 1
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
++ sleep 1
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
++ sleep 1
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
++ sleep 1
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
++ sleep 1
++ for i in $(seq 1 60)
++ curl -s http://localhost:8000/live
++ sleep 1
++ echo 'Pulling model...'
+Pulling model...
++ curl -sf -X POST http://localhost:8000/api/v1/pull -H 'Content-Type: application/json' -d '{"model_name": "Qwen3-0.6B-GGUF"}'
