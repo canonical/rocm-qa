@@ -18,6 +18,10 @@ the development version of these packages, please see the instructions in [this 
 
 The [main page](/rocm-qa) shows the latest test results from automated test runs.
 
+### Logs
+
+Test logs for each run can be found in [rocm-qa](https://github.com/canonical/rocm-qa/tree/logs) repository in logs branch.
+
 ### How to interpret the tables?
 
 Test results tables consists of "Test Suite", "System" and "Result" columns.
