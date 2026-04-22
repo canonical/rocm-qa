@@ -108,3 +108,5 @@ suites:
     summary: prompt tests for lemonade-server with LLM inference
   tests/blender/render/:
     summary: rendering tests for blender with HIP backend
+  tests/pytorch/smoke/:
+    summary: smoke tests for pytorch with HIP backend

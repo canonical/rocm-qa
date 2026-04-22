@@ -96,6 +96,8 @@ Automated testing infrastructure for ROCm packages on Ubuntu.
 
 [![blender](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/blender.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#blender)
 
+[![pytorch](https://img.shields.io/endpoint?url=https://canonical.github.io/rocm-qa/badges/pytorch.json&style=for-the-badge)](https://canonical.github.io/rocm-qa/#pytorch)
+
 ## About
 
 This repository contains automated testing infrastructure for ROCm packages
