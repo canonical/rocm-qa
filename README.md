@@ -4,6 +4,8 @@ Automated testing infrastructure for ROCm packages on Ubuntu.
 
 [View Test Results Dashboard](https://canonical.github.io/rocm-qa/)
 
+Test Logs for each run can be found in the [logs](https://github.com/canonical/rocm-qa/tree/logs) branch.
+
 ## Test Status
 
 ### Core ROCm Stack
@@ -151,4 +153,5 @@ Tests run automatically on a weekly schedule during off-hours (nights, US Easter
 ## Links
 
 - [Test Results Dashboard](https://canonical.github.io/rocm-qa/)
+- [Test Logs for each run](https://github.com/canonical/rocm-qa/tree/logs)
 - [ROCm Documentation](https://rocm.docs.amd.com/)
