@@ -1,0 +1,202 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: llvm-project
+Source: https://github.com/ROCm/llvm-project
+Files-Excluded: amd/comgr/test/source/legacy
+                amd/comgr/test/source/*.s
+                amd/comgr/test/source/*.b
+                amd/git-hooks
+                amd/README.md
+                amd/utils
+                .azuredevops
+                .ci
+                .clang-format
+                .clang-tidy
+                .git-blame-ignore-revs
+                .gitattributes
+                .github
+                .gitignore
+                .mailmap
+                CODE_OF_CONDUCT.md
+                CONTRIBUTING.md
+                LICENSE.TXT
+                README.md
+                SECURITY.md
+                bolt
+                clang
+                clang-tools-extra
+                cmake
+                compiler-rt
+                cross-project-tests
+                flang
+                flang-rt
+                libc
+                libclc
+                libcxx
+                libcxxabi
+                libunwind
+                lld
+                lldb
+                llvm
+                llvm-libgcc
+                mlir
+                offload
+                openmp
+                polly
+                pstl
+                pyproject.toml
+                revert_patches.txt
+                runtimes
+                third-party
+                utils
+Comment: These files are the LLVM codes from upstream repository.
+ As we are using the LLVM in Debian's official archive, we exclude
+ the LLVM-related codebase from the source package.
+ .
+ Besides, amd/comgr/test/source/legacy/* and *.s binary/assemble files are used to emit
+ LLVM amdgpu v2/v3 code, which violates DFSG, so we exclude them as well.
+
+Files: amd/hipcc/*
+Copyright: 2008-2025, Advanced Micro Devices, Inc.
+License: Expat
+
+Files: amd/comgr/*
+Copyright: 2014-2024, Advanced Micro Devices, Inc.
+License: NCSA-AMD
+
+Files: amd/comgr/src/comgr-clang-command.h
+       amd/comgr/src/comgr-compiler.cpp
+       amd/comgr/src/comgr-compiler.h
+       amd/comgr/src/comgr-elfdump.cpp
+       amd/comgr/src/comgr-objdump.cpp
+       amd/comgr/src/comgr-objdump.h
+       amd/comgr/src/comgr-symbol.cpp
+       amd/comgr/src/comgr-symbolizer.cpp
+       amd/comgr/src/comgr-symbolizer.h
+       amd/comgr/test/source/symbolize.cl
+Copyright: 2003-2017, University of Illinois at Urbana-Champaign
+           2018, Advanced Micro Devices, Inc.
+License: NCSA
+
+Files: amd/comgr/test/compile_source_with_device_libs_to_bc_with_vfs_test.c
+Copyright: 2014-2016, Advanced Micro Devices, Inc.
+License: APACHE-2-LLVM-EXCEPTIONS
+ On Debian systems the full text of the Apache Software License 2.0 can be
+ found in the `/usr/share/common-licenses/Apache-2.0' file.
+ .
+ ---- LLVM Exceptions to the Apache 2.0 License ----
+ .
+ As an exception, if, as a result of your compiling your source code, portions
+ of this Software are embedded into an Object form of such source code, you
+ may redistribute such embedded portions in such Object form without complying
+ with the conditions of Sections 4(a), 4(b) and 4(d) of the License.
+ .
+ In addition, if you combine or link compiled forms of this Software with
+ software that is licensed under the GPLv2 ("Combined Software") and if a
+ court of competent jurisdiction determines that the patent provision (Section
+ 3), the indemnity provision (Section 9) or other Section of the License
+ conflicts with the conditions of the GPLv2, you may retroactively and
+ prospectively choose to deem waived or otherwise exclude such Section(s) of
+ the License, but only in their entirety and only with respect to the Combined
+ Software.
+Comment: This file states that it is licensed Apache License v2.0 with LLVM
+ Exceptions and direct users in their licence header to amd/comgr/LICENSE.txt,
+ which actually contains a variant of the NCSA license. The commit that updated
+ amd/comgr/LICENSE.txt to the Apache 2.0 with LLVM Exceptions licence text
+ appears to have occurred after the release was branched:
+ .
+ https://github.com/ROCm/llvm-project/commit/b7d104727c87f9cf8c43dafa1af82e3df74ed11d
+ .
+ It appears that all of amd/comgr/* will be under the Apache License v2.0 with
+ LLVM Exceptions in future releases. This new file was just the first one
+ to use the new licence.
+
+Files: amd/device-libs/*
+Copyright: 2014-2016, Advanced Micro Devices, Inc.
+License: NCSA
+
+Files: debian/*
+Copyright: 2022, Maxime Chambonnet <maxzor@maxzor.eu>
+           2022-2023, Étienne Mollier <emollier@debian.org>
+           2022-2025, Cordell Bloor <cgmb@debian.org>
+           2024, Xuanteng Huang <xuanteng.huang@outlook.com>
+License: Expat
+Comment: Some contents in the metafiles are borrowed from the origin rocm-hipamd
+ repository (https://salsa.debian.org/rocm-team/rocm-hipamd) so we inherit the
+ copyrights from there.
+
+License: Expat
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+ .
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ THE SOFTWARE.
+
+License: NCSA
+ University of Illinois/NCSA
+ Open Source License
+ .
+ All rights reserved.
+ .
+ Permission is hereby granted, free of charge, to any person obtaining a copy of
+ this software and associated documentation files (the "Software"), to deal with
+ the Software without restriction, including without limitation the rights to
+ use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+ of the Software, and to permit persons to whom the Software is furnished to do
+ so, subject to the following conditions:
+ .
+ * Redistributions of source code must retain the above copyright notice,
+   this list of conditions and the following disclaimers.
+ * Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimers in the
+   documentation and/or other materials provided with the distribution.
+ * Neither the names of the LLVM Team, University of Illinois at
+   Urbana-Champaign, nor the names of its contributors may be used to
+   endorse or promote products derived from this Software without specific
+   prior written permission.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+ FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE
+ CONTRIBUTORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS WITH THE
+ SOFTWARE.
+
+License: NCSA-AMD
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ with the Software without restriction, including without limitation the
+ rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+ sell copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+ .
+     * Redistributions of source code must retain the above copyright notice,
+       this list of conditions and the following disclaimers.
+ .
+     * Redistributions in binary form must reproduce the above copyright
+       notice, this list of conditions and the following disclaimers in the
+       documentation and/or other materials provided with the distribution.
+ .
+     * Neither the names of Advanced Micro Devices, Inc. nor the names of its
+       contributors may be used to endorse or promote products derived from
+       this Software without specific prior written permission.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ CONTRIBUTORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS WITH
+ THE SOFTWARE.

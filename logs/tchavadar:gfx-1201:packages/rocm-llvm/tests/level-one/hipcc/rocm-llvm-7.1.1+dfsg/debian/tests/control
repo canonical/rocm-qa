@@ -1,0 +1,8 @@
+Tests: hipcc.sh,
+       clang.sh,
+       hipconfig.sh,
+       gcc.sh,
+       g++.sh,
+Depends: hipcc (>= 6.1.2~), cmake, make, gcc, g++, rocminfo (>= 6.1.2~), libamdhip64-dev (>= 5.7.1)
+Restrictions: superficial, skippable
+

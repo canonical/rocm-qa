@@ -1,0 +1,34 @@
+From: Cordell Bloor <cgmb@debian.org>
+Date: Mon, 22 Sep 2025 15:37:39 -0600
+Subject: fix devicelibs path
+
+---
+ amd/hipcc/src/hipBin_amd.h | 8 +-------
+ 1 file changed, 1 insertion(+), 7 deletions(-)
+
+diff --git a/amd/hipcc/src/hipBin_amd.h b/amd/hipcc/src/hipBin_amd.h
+index b89b83a..58f180a 100644
+--- a/amd/hipcc/src/hipBin_amd.h
++++ b/amd/hipcc/src/hipBin_amd.h
+@@ -323,12 +323,6 @@ string HipBinAmd::getDeviceLibPath() const {
+     amdgcnBitcode /= "amdgcn/bitcode";
+     if (fs::exists(amdgcnBitcode)) {
+       deviceLibPath = amdgcnBitcode.string();
+-    } else {
+-      // This path is to support an older build of the device library
+-      // TODO(hipcc): To be removed in the future.
+-      fs::path lib = roccmPath;
+-      lib /= "lib";
+-      deviceLibPath = lib.string();
+     }
+   }
+   return deviceLibPath;
+@@ -865,7 +859,7 @@ void HipBinAmd::executeHipCCCmd(vector<string> argv) {
+   if (hasHIP) {
+     fs::path bitcodeFs = roccmPath;
+     bitcodeFs /= "amdgcn/bitcode";
+-    if (deviceLibPath != bitcodeFs.string()) {
++    if (!deviceLibPath.empty() && deviceLibPath != bitcodeFs.string() && fs::exists(deviceLibPath)) {
+       string hip_device_lib_str = " --hip-device-lib-path=\""
+                                   + deviceLibPath + "\"";
+       HIPCXXFLAGS += hip_device_lib_str;

@@ -1,0 +1,52 @@
+#!/usr/bin/make -f
+include /usr/share/dpkg/pkg-info.mk
+
+export DH_VERBOSE = 1
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all optimize=-lto
+export DEB_CXXFLAGS_MAINT_PREPEND = -gz
+
+CFLAGS := $(subst -fno-cf-protection,,$(CXXFLAGS))
+CXXFLAGS := $(subst -fno-cf-protection,,$(CXXFLAGS))
+
+ifneq ($(filter $(DEB_HOST_ARCH),armel mipsel powerpc),)
+DEVICE_LIBS_CONFIG_FLAGS += -DCMAKE_CXX_STANDARD_LIBRARIES=-latomic
+endif
+
+%:
+	dh $@
+
+# comgr and hipcc rely on device-libs, so we have to build it first before config these 2 packages
+override_dh_auto_configure:
+	dh_auto_configure --buildsystem=cmake --sourcedir=amd/device-libs --builddir=build.device-libs \
+				-- $(DEVICE_LIBS_CONFIG_FLAGS)
+	dh_auto_build --builddir=build.device-libs
+
+	dh_auto_configure --buildsystem=cmake --sourcedir=amd/comgr --builddir=build.comgr \
+				-- -DCMAKE_PREFIX_PATH="/usr/lib/llvm-21" \
+				-DAMDDeviceLibs_DIR="$(CURDIR)/build.device-libs/lib/$(DEB_HOST_MULTIARCH)/cmake/AMDDeviceLibs" \
+				-DBUILD_TESTING=OFF -DCOMGR_BUILD_SHARED_LIBS=ON \
+				-DBUILD_FILE_REORG_BACKWARD_COMPATIBILITY=OFF
+
+	dh_auto_configure --buildsystem=cmake --sourcedir=amd/hipcc --builddir=build.hipcc \
+				-- -DHIPCC_BACKWARD_COMPATIBILITY=ON
+
+override_dh_auto_build:
+	dh_auto_build --builddir=build.comgr
+	dh_auto_build --builddir=build.hipcc
+
+# dwz doesn't fully support DWARF-5 yet, see #1016936
+override_dh_dwz:
+	:
+
+override_dh_auto_install:
+	dh_auto_install -O--buildsystem=cmake -O--builddirectory=$(CURDIR)/build.device-libs
+	dh_auto_install -O--buildsystem=cmake -O--builddirectory=$(CURDIR)/build.comgr
+	dh_auto_install -O--buildsystem=cmake -O--builddirectory=$(CURDIR)/build.hipcc
+
+override_dh_install:
+	mv $(CURDIR)/build.comgr/amd_comgr-config.cmake.install $(CURDIR)/build.comgr/amd_comgr-config.cmake
+	chrpath -d $(shell find . -type f -name libamd_comgr.so*)
+	dh_install
+
+override_dh_shlibdeps:
+	dh_shlibdeps --dpkg-shlibdeps-params=--ignore-missing-info
