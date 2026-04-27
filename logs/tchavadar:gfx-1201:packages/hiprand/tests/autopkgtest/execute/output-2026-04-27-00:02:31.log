@@ -1,0 +1,1407 @@
+autopkgtest [00:02:31]: starting date and time: 2026-04-27 00:02:31+0000
+autopkgtest [00:02:31]: version 5.55
+autopkgtest [00:02:31]: host lxc-sessionizer-github-1; command line: /usr/bin/autopkgtest hiprand -U '--setup-commands=add-apt-repository -ss -y' '--setup-commands=add-apt-repository ppa:bullwinkle-team/rocm-devel-21 --enable-source -y' -- lxd ubuntu-daily:resolute --profile=rocm-gpu
+autopkgtest [00:04:38]: testbed dpkg architecture: amd64
+autopkgtest [00:04:38]: testbed apt version: 3.2.0
+autopkgtest [00:04:38]: @@@@@@@@@@@@@@@@@@@@ test bed setup
+autopkgtest [00:04:38]: updating testbed package index (apt update)
+Hit:1 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Get:2 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Components [212 B]
+Get:3 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 c-n-f Metadata [116 B]
+Get:4 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 Components [212 B]
+Get:5 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 c-n-f Metadata [120 B]
+Get:6 http://archive.ubuntu.com/ubuntu resolute InRelease [136 kB]
+Hit:7 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Get:8 http://archive.ubuntu.com/ubuntu resolute-backports InRelease [136 kB]
+Get:9 http://archive.ubuntu.com/ubuntu resolute/main amd64 Packages [1480 kB]
+Get:10 http://archive.ubuntu.com/ubuntu resolute/main Translation-en [524 kB]
+Get:11 http://archive.ubuntu.com/ubuntu resolute/main amd64 Components [395 kB]
+Get:12 http://archive.ubuntu.com/ubuntu resolute/main amd64 c-n-f Metadata [32.4 kB]
+Get:13 http://archive.ubuntu.com/ubuntu resolute/universe amd64 Packages [16.0 MB]
+Get:14 http://archive.ubuntu.com/ubuntu resolute/universe Translation-en [6329 kB]
+Get:15 http://archive.ubuntu.com/ubuntu resolute/universe amd64 Components [4556 kB]
+Get:16 http://archive.ubuntu.com/ubuntu resolute/universe amd64 c-n-f Metadata [313 kB]
+Get:17 http://archive.ubuntu.com/ubuntu resolute/restricted amd64 Packages [152 kB]
+Get:18 http://archive.ubuntu.com/ubuntu resolute/restricted amd64 Components [556 B]
+Get:19 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 Packages [290 kB]
+Get:20 http://archive.ubuntu.com/ubuntu resolute/multiverse Translation-en [127 kB]
+Get:21 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 Components [50.0 kB]
+Get:22 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 c-n-f Metadata [8276 B]
+Get:23 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Components [212 B]
+Get:24 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 c-n-f Metadata [116 B]
+Get:25 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 Components [216 B]
+Get:26 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 c-n-f Metadata [116 B]
+Get:27 http://archive.ubuntu.com/ubuntu resolute-backports/main amd64 Components [212 B]
+Get:28 http://archive.ubuntu.com/ubuntu resolute-backports/main amd64 c-n-f Metadata [112 B]
+Get:29 http://archive.ubuntu.com/ubuntu resolute-backports/universe amd64 Components [216 B]
+Get:30 http://archive.ubuntu.com/ubuntu resolute-backports/universe amd64 c-n-f Metadata [116 B]
+Get:31 http://archive.ubuntu.com/ubuntu resolute-backports/restricted amd64 Components [216 B]
+Get:32 http://archive.ubuntu.com/ubuntu resolute-backports/restricted amd64 c-n-f Metadata [120 B]
+Get:33 http://archive.ubuntu.com/ubuntu resolute-backports/multiverse amd64 Components [216 B]
+Get:34 http://archive.ubuntu.com/ubuntu resolute-backports/multiverse amd64 c-n-f Metadata [120 B]
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 30.5 MB in 3s (9638 kB/s)
+Reading package lists...
+autopkgtest [00:04:44]: testbed release detected to be: resolute
+autopkgtest [00:04:44]: updating testbed package index (apt update)
+Hit:1 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Reading package lists...
+Hit:1 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Get:5 http://archive.ubuntu.com/ubuntu resolute/restricted Sources [18.6 kB]
+Get:6 http://archive.ubuntu.com/ubuntu resolute/main Sources [1002 kB]
+Get:7 http://archive.ubuntu.com/ubuntu resolute/multiverse Sources [215 kB]
+Get:8 http://archive.ubuntu.com/ubuntu resolute/universe Sources [13.4 MB]
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 14.6 MB in 2s (7317 kB/s)
+Reading package lists...
+Enabling deb-src for all repositories.
+Added: ## Ubuntu distribution repository
+##
+## The following settings can be adjusted to configure which packages to use from Ubuntu.
+## Mirror your choices (except for URIs and Suites) in the security section below to
+## ensure timely security updates.
+##
+## Types: Append deb-src to enable the fetching of source package.
+## URIs: A URL to the repository (you may add multiple URLs)
+## Suites: The following additional suites can be configured
+##   <name>-updates   - Major bug fix updates produced after the final release of the
+##                      distribution.
+##   <name>-backports - software from this repository may not have been tested as
+##                      extensively as that contained in the main release, although it includes
+##                      newer versions of some applications which may provide useful features.
+##                      Also, please note that software in backports WILL NOT receive any review
+##                      or updates from the Ubuntu security team.
+## Components: Aside from main, the following components can be added to the list
+##   restricted  - Software that may not be under a free license, or protected by patents.
+##   universe    - Community maintained packages. Software in this repository receives maintenance
+##                 from volunteers in the Ubuntu community, or a 10 year security maintenance
+##                 commitment from Canonical when an Ubuntu Pro subscription is attached.
+##   multiverse  - Community maintained of restricted. Software from this repository is
+##                 ENTIRELY UNSUPPORTED by the Ubuntu team, and may not be under a free
+##                 licence. Please satisfy yourself as to your rights to use the software.
+##                 Also, please note that software in multiverse WILL NOT receive any
+##                 review or updates from the Ubuntu security team.
+##
+## See the sources.list(5) manual page for further settings.
+Types: deb-src
+URIs: http://archive.ubuntu.com/ubuntu
+Suites: resolute resolute-updates resolute-backports
+Components: universe restricted multiverse main
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+Added: ## Ubuntu security updates. Aside from URIs and Suites,
+## this should mirror your choices in the previous section.
+Types: deb-src
+URIs: http://security.ubuntu.com/ubuntu
+Suites: resolute-security
+Components: universe restricted multiverse main
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Hit:4 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Get:5 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel-21/ubuntu resolute InRelease [27.2 kB]
+Get:6 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel-21/ubuntu resolute/main Sources [15.5 kB]
+Get:7 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel-21/ubuntu resolute/main amd64 Packages [24.9 kB]
+Get:8 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel-21/ubuntu resolute/main Translation-en [15.5 kB]
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 83.1 kB in 15s (5697 B/s)
+Reading package lists...
+PPA publishes dbgsym, you may need to include 'main/debug' component
+Repository: 'Types: deb
+URIs: https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel-21/ubuntu/
+Suites: resolute
+Components: main
+'
+Description:
+ROCm development archive which holds packages built against upstream LLVM-21
+
+Please use https://launchpad.net/~bullwinkle-team/+archive/ubuntu/rocm-devel to get rolling rocm releases in development grade
+More info: https://launchpad.net/~bullwinkle-team/+archive/ubuntu/rocm-devel-21
+Adding repository.
+autopkgtest [00:05:06]: upgrading testbed (apt dist-upgrade and autopurge)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+The following packages will be upgraded:
+  python3-distupgrade ubuntu-release-upgrader-core
+2 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Need to get 126 kB of archives.
+After this operation, 1024 B of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu resolute/main amd64 ubuntu-release-upgrader-core all 1:26.04.18 [24.9 kB]
+Get:2 http://archive.ubuntu.com/ubuntu resolute/main amd64 python3-distupgrade all 1:26.04.18 [101 kB]
+Fetched 126 kB in 0s (1177 kB/s)
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 44370 files and directories currently installed.)
+Preparing to unpack .../ubuntu-release-upgrader-core_1%3a26.04.18_all.deb ...
+Unpacking ubuntu-release-upgrader-core (1:26.04.18) over (1:26.04.16) ...
+Preparing to unpack .../python3-distupgrade_1%3a26.04.18_all.deb ...
+Unpacking python3-distupgrade (1:26.04.18) over (1:26.04.16) ...
+Setting up python3-distupgrade (1:26.04.18) ...
+Setting up ubuntu-release-upgrader-core (1:26.04.18) ...
+Processing triggers for man-db (2.13.1-1build1) ...
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+autopkgtest [00:05:10]: testbed running kernel: Linux 7.0.0-14-generic #14-Ubuntu SMP PREEMPT_DYNAMIC Mon Apr 13 11:09:53 UTC 2026
+autopkgtest [00:05:10]: @@@@@@@@@@@@@@@@@@@@ apt-source hiprand
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+The following NEW packages will be installed:
+  bzip2 dpkg-dev libdpkg-perl lto-disabled-list make
+0 upgraded, 5 newly installed, 0 to remove and 0 not upgraded.
+Need to get 1596 kB of archives.
+After this operation, 4247 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu resolute/main amd64 bzip2 amd64 1.0.8-6build2 [34.3 kB]
+Get:2 http://archive.ubuntu.com/ubuntu resolute/main amd64 libdpkg-perl all 1.23.7ubuntu1 [289 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute/main amd64 make amd64 4.4.1-3 [197 kB]
+Get:4 http://archive.ubuntu.com/ubuntu resolute/main amd64 lto-disabled-list all 79 [14.2 kB]
+Get:5 http://archive.ubuntu.com/ubuntu resolute/main amd64 dpkg-dev all 1.23.7ubuntu1 [1062 kB]
+Fetched 1596 kB in 0s (13.1 MB/s)
+Selecting previously unselected package bzip2.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 44370 files and directories currently installed.)
+Preparing to unpack .../bzip2_1.0.8-6build2_amd64.deb ...
+Unpacking bzip2 (1.0.8-6build2) ...
+Selecting previously unselected package libdpkg-perl.
+Preparing to unpack .../libdpkg-perl_1.23.7ubuntu1_all.deb ...
+Unpacking libdpkg-perl (1.23.7ubuntu1) ...
+Selecting previously unselected package make.
+Preparing to unpack .../make_4.4.1-3_amd64.deb ...
+Unpacking make (4.4.1-3) ...
+Selecting previously unselected package lto-disabled-list.
+Preparing to unpack .../lto-disabled-list_79_all.deb ...
+Unpacking lto-disabled-list (79) ...
+Selecting previously unselected package dpkg-dev.
+Preparing to unpack .../dpkg-dev_1.23.7ubuntu1_all.deb ...
+Unpacking dpkg-dev (1.23.7ubuntu1) ...
+Setting up lto-disabled-list (79) ...
+Setting up bzip2 (1.0.8-6build2) ...
+Setting up make (4.4.1-3) ...
+Setting up libdpkg-perl (1.23.7ubuntu1) ...
+Setting up dpkg-dev (1.23.7ubuntu1) ...
+Processing triggers for man-db (2.13.1-1build1) ...
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+Get:1 http://archive.ubuntu.com/ubuntu resolute/universe hiprand 7.1.1-0ubuntu1 (tar) [135 kB]
+Get:2 http://archive.ubuntu.com/ubuntu resolute/universe hiprand 7.1.1-0ubuntu1 (diff) [7076 B]
+Get:3 http://archive.ubuntu.com/ubuntu resolute/universe hiprand 7.1.1-0ubuntu1 (dsc) [2861 B]
+gpgv: Signature made Thu Apr 16 18:19:20 2026 UTC
+gpgv:                using RSA key 1E1312DF4B7158B6EBF9DE782574387962FEB0D1
+gpgv:                issuer "talha.can.havadar@canonical.com"
+gpgv: Can't check signature: No public key
+dpkg-source: warning: cannot verify inline signature for ./hiprand_7.1.1-0ubuntu1.dsc: no acceptable signature found
+autopkgtest [00:05:14]: testing package hiprand version 7.1.1-0ubuntu1
+autopkgtest [00:05:14]: build not needed
+autopkgtest [00:05:14]: test libhiprand1-tests: preparing testbed
+autopkgtest [00:07:21]: testbed dpkg architecture: amd64
+autopkgtest [00:07:21]: testbed apt version: 3.2.0
+autopkgtest [00:07:21]: @@@@@@@@@@@@@@@@@@@@ test bed setup
+autopkgtest [00:07:21]: updating testbed package index (apt update)
+Hit:1 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Get:2 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Components [212 B]
+Get:3 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 c-n-f Metadata [116 B]
+Get:4 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 Components [212 B]
+Get:5 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 c-n-f Metadata [120 B]
+Get:6 http://archive.ubuntu.com/ubuntu resolute InRelease [136 kB]
+Hit:7 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Get:8 http://archive.ubuntu.com/ubuntu resolute-backports InRelease [136 kB]
+Get:9 http://archive.ubuntu.com/ubuntu resolute/main amd64 Packages [1480 kB]
+Get:10 http://archive.ubuntu.com/ubuntu resolute/main Translation-en [524 kB]
+Get:11 http://archive.ubuntu.com/ubuntu resolute/main amd64 Components [395 kB]
+Get:12 http://archive.ubuntu.com/ubuntu resolute/main amd64 c-n-f Metadata [32.4 kB]
+Get:13 http://archive.ubuntu.com/ubuntu resolute/universe amd64 Packages [16.0 MB]
+Get:14 http://archive.ubuntu.com/ubuntu resolute/universe Translation-en [6329 kB]
+Get:15 http://archive.ubuntu.com/ubuntu resolute/universe amd64 Components [4556 kB]
+Get:16 http://archive.ubuntu.com/ubuntu resolute/universe amd64 c-n-f Metadata [313 kB]
+Get:17 http://archive.ubuntu.com/ubuntu resolute/restricted amd64 Packages [152 kB]
+Get:18 http://archive.ubuntu.com/ubuntu resolute/restricted amd64 Components [556 B]
+Get:19 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 Packages [290 kB]
+Get:20 http://archive.ubuntu.com/ubuntu resolute/multiverse Translation-en [127 kB]
+Get:21 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 Components [50.0 kB]
+Get:22 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 c-n-f Metadata [8276 B]
+Get:23 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Components [212 B]
+Get:24 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 c-n-f Metadata [116 B]
+Get:25 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 Components [216 B]
+Get:26 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 c-n-f Metadata [116 B]
+Get:27 http://archive.ubuntu.com/ubuntu resolute-backports/main amd64 Components [212 B]
+Get:28 http://archive.ubuntu.com/ubuntu resolute-backports/main amd64 c-n-f Metadata [112 B]
+Get:29 http://archive.ubuntu.com/ubuntu resolute-backports/universe amd64 Components [216 B]
+Get:30 http://archive.ubuntu.com/ubuntu resolute-backports/universe amd64 c-n-f Metadata [116 B]
+Get:31 http://archive.ubuntu.com/ubuntu resolute-backports/restricted amd64 Components [216 B]
+Get:32 http://archive.ubuntu.com/ubuntu resolute-backports/restricted amd64 c-n-f Metadata [120 B]
+Get:33 http://archive.ubuntu.com/ubuntu resolute-backports/multiverse amd64 Components [216 B]
+Get:34 http://archive.ubuntu.com/ubuntu resolute-backports/multiverse amd64 c-n-f Metadata [120 B]
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 30.5 MB in 2s (13.0 MB/s)
+Reading package lists...
+autopkgtest [00:07:26]: testbed release detected to be: resolute
+autopkgtest [00:07:26]: updating testbed package index (apt update)
+Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:2 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Reading package lists...
+Hit:1 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Get:5 http://archive.ubuntu.com/ubuntu resolute/universe Sources [13.4 MB]
+Get:6 http://archive.ubuntu.com/ubuntu resolute/multiverse Sources [215 kB]
+Get:7 http://archive.ubuntu.com/ubuntu resolute/restricted Sources [18.6 kB]
+Get:8 http://archive.ubuntu.com/ubuntu resolute/main Sources [1002 kB]
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 14.6 MB in 1s (11.5 MB/s)
+Reading package lists...
+Enabling deb-src for all repositories.
+Added: ## Ubuntu distribution repository
+##
+## The following settings can be adjusted to configure which packages to use from Ubuntu.
+## Mirror your choices (except for URIs and Suites) in the security section below to
+## ensure timely security updates.
+##
+## Types: Append deb-src to enable the fetching of source package.
+## URIs: A URL to the repository (you may add multiple URLs)
+## Suites: The following additional suites can be configured
+##   <name>-updates   - Major bug fix updates produced after the final release of the
+##                      distribution.
+##   <name>-backports - software from this repository may not have been tested as
+##                      extensively as that contained in the main release, although it includes
+##                      newer versions of some applications which may provide useful features.
+##                      Also, please note that software in backports WILL NOT receive any review
+##                      or updates from the Ubuntu security team.
+## Components: Aside from main, the following components can be added to the list
+##   restricted  - Software that may not be under a free license, or protected by patents.
+##   universe    - Community maintained packages. Software in this repository receives maintenance
+##                 from volunteers in the Ubuntu community, or a 10 year security maintenance
+##                 commitment from Canonical when an Ubuntu Pro subscription is attached.
+##   multiverse  - Community maintained of restricted. Software from this repository is
+##                 ENTIRELY UNSUPPORTED by the Ubuntu team, and may not be under a free
+##                 licence. Please satisfy yourself as to your rights to use the software.
+##                 Also, please note that software in multiverse WILL NOT receive any
+##                 review or updates from the Ubuntu security team.
+##
+## See the sources.list(5) manual page for further settings.
+Types: deb-src
+URIs: http://archive.ubuntu.com/ubuntu
+Suites: resolute resolute-updates resolute-backports
+Components: main restricted universe multiverse
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+Added: ## Ubuntu security updates. Aside from URIs and Suites,
+## this should mirror your choices in the previous section.
+Types: deb-src
+URIs: http://security.ubuntu.com/ubuntu
+Suites: resolute-security
+Components: main restricted universe multiverse
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+Get:1 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel-21/ubuntu resolute InRelease [27.2 kB]
+Get:2 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel-21/ubuntu resolute/main Sources [15.5 kB]
+Get:3 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel-21/ubuntu resolute/main amd64 Packages [24.9 kB]
+Get:4 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel-21/ubuntu resolute/main Translation-en [15.5 kB]
+Hit:5 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:6 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Hit:7 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:8 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 83.1 kB in 0s (234 kB/s)
+Reading package lists...
+PPA publishes dbgsym, you may need to include 'main/debug' component
+Repository: 'Types: deb
+URIs: https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel-21/ubuntu/
+Suites: resolute
+Components: main
+'
+Description:
+ROCm development archive which holds packages built against upstream LLVM-21
+
+Please use https://launchpad.net/~bullwinkle-team/+archive/ubuntu/rocm-devel to get rolling rocm releases in development grade
+More info: https://launchpad.net/~bullwinkle-team/+archive/ubuntu/rocm-devel-21
+Adding repository.
+autopkgtest [00:07:34]: upgrading testbed (apt dist-upgrade and autopurge)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+The following packages will be upgraded:
+  python3-distupgrade ubuntu-release-upgrader-core
+2 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Need to get 126 kB of archives.
+After this operation, 1024 B of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu resolute/main amd64 ubuntu-release-upgrader-core all 1:26.04.18 [24.9 kB]
+Get:2 http://archive.ubuntu.com/ubuntu resolute/main amd64 python3-distupgrade all 1:26.04.18 [101 kB]
+Fetched 126 kB in 1s (235 kB/s)
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 44370 files and directories currently installed.)
+Preparing to unpack .../ubuntu-release-upgrader-core_1%3a26.04.18_all.deb ...
+Unpacking ubuntu-release-upgrader-core (1:26.04.18) over (1:26.04.16) ...
+Preparing to unpack .../python3-distupgrade_1%3a26.04.18_all.deb ...
+Unpacking python3-distupgrade (1:26.04.18) over (1:26.04.16) ...
+Setting up python3-distupgrade (1:26.04.18) ...
+Setting up ubuntu-release-upgrader-core (1:26.04.18) ...
+Processing triggers for man-db (2.13.1-1build1) ...
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+The following NEW packages will be installed:
+  bzip2 dpkg-dev libamd-comgr3 libamdhip64-7 libdpkg-perl libhiprand1
+  libhiprand1-tests libhsa-runtime64-1 libhsakmt1 libllvm21 librocrand1
+  lto-disabled-list make pkg-rocm-tools
+0 upgraded, 14 newly installed, 0 to remove and 0 not upgraded.
+Need to get 106 MB of archives.
+After this operation, 380 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu resolute/main amd64 bzip2 amd64 1.0.8-6build2 [34.3 kB]
+Get:2 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel-21/ubuntu resolute/main amd64 libamdhip64-7 amd64 7.1.0-0ubuntu2 [11.1 MB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute/main amd64 libdpkg-perl all 1.23.7ubuntu1 [289 kB]
+Get:4 http://archive.ubuntu.com/ubuntu resolute/main amd64 make amd64 4.4.1-3 [197 kB]
+Get:5 http://archive.ubuntu.com/ubuntu resolute/main amd64 lto-disabled-list all 79 [14.2 kB]
+Get:6 http://archive.ubuntu.com/ubuntu resolute/main amd64 dpkg-dev all 1.23.7ubuntu1 [1062 kB]
+Get:7 http://archive.ubuntu.com/ubuntu resolute/main amd64 libllvm21 amd64 1:21.1.8-6ubuntu1 [30.7 MB]
+Get:8 http://archive.ubuntu.com/ubuntu resolute/universe amd64 libamd-comgr3 amd64 7.1.1+dfsg-0ubuntu1 [15.2 MB]
+Get:9 http://archive.ubuntu.com/ubuntu resolute/universe amd64 libhsakmt1 amd64 7.1.0+dfsg-0ubuntu9 [77.5 kB]
+Get:10 http://archive.ubuntu.com/ubuntu resolute/universe amd64 libhsa-runtime64-1 amd64 7.1.0+dfsg-0ubuntu9 [600 kB]
+Get:11 http://archive.ubuntu.com/ubuntu resolute/universe amd64 librocrand1 amd64 7.1.1-0ubuntu1 [45.1 MB]
+Get:12 http://archive.ubuntu.com/ubuntu resolute/universe amd64 libhiprand1 amd64 7.1.1-0ubuntu1 [8660 B]
+Get:13 http://archive.ubuntu.com/ubuntu resolute/universe amd64 libhiprand1-tests amd64 7.1.1-0ubuntu1 [1914 kB]
+Get:14 http://archive.ubuntu.com/ubuntu resolute/universe amd64 pkg-rocm-tools all 0.9.6ubuntu3 [12.1 kB]
+Fetched 106 MB in 2s (65.9 MB/s)
+Selecting previously unselected package bzip2.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 44370 files and directories currently installed.)
+Preparing to unpack .../00-bzip2_1.0.8-6build2_amd64.deb ...
+Unpacking bzip2 (1.0.8-6build2) ...
+Selecting previously unselected package libdpkg-perl.
+Preparing to unpack .../01-libdpkg-perl_1.23.7ubuntu1_all.deb ...
+Unpacking libdpkg-perl (1.23.7ubuntu1) ...
+Selecting previously unselected package make.
+Preparing to unpack .../02-make_4.4.1-3_amd64.deb ...
+Unpacking make (4.4.1-3) ...
+Selecting previously unselected package lto-disabled-list.
+Preparing to unpack .../03-lto-disabled-list_79_all.deb ...
+Unpacking lto-disabled-list (79) ...
+Selecting previously unselected package dpkg-dev.
+Preparing to unpack .../04-dpkg-dev_1.23.7ubuntu1_all.deb ...
+Unpacking dpkg-dev (1.23.7ubuntu1) ...
+Selecting previously unselected package libllvm21:amd64.
+Preparing to unpack .../05-libllvm21_1%3a21.1.8-6ubuntu1_amd64.deb ...
+Unpacking libllvm21:amd64 (1:21.1.8-6ubuntu1) ...
+Selecting previously unselected package libamd-comgr3:amd64.
+Preparing to unpack .../06-libamd-comgr3_7.1.1+dfsg-0ubuntu1_amd64.deb ...
+Unpacking libamd-comgr3:amd64 (7.1.1+dfsg-0ubuntu1) ...
+Selecting previously unselected package libhsakmt1:amd64.
+Preparing to unpack .../07-libhsakmt1_7.1.0+dfsg-0ubuntu9_amd64.deb ...
+Unpacking libhsakmt1:amd64 (7.1.0+dfsg-0ubuntu9) ...
+Selecting previously unselected package libhsa-runtime64-1:amd64.
+Preparing to unpack .../08-libhsa-runtime64-1_7.1.0+dfsg-0ubuntu9_amd64.deb ...
+Unpacking libhsa-runtime64-1:amd64 (7.1.0+dfsg-0ubuntu9) ...
+Selecting previously unselected package libamdhip64-7:amd64.
+Preparing to unpack .../09-libamdhip64-7_7.1.0-0ubuntu2_amd64.deb ...
+Unpacking libamdhip64-7:amd64 (7.1.0-0ubuntu2) ...
+Selecting previously unselected package librocrand1.
+Preparing to unpack .../10-librocrand1_7.1.1-0ubuntu1_amd64.deb ...
+Unpacking librocrand1 (7.1.1-0ubuntu1) ...
+Selecting previously unselected package libhiprand1.
+Preparing to unpack .../11-libhiprand1_7.1.1-0ubuntu1_amd64.deb ...
+Unpacking libhiprand1 (7.1.1-0ubuntu1) ...
+Selecting previously unselected package libhiprand1-tests.
+Preparing to unpack .../12-libhiprand1-tests_7.1.1-0ubuntu1_amd64.deb ...
+Unpacking libhiprand1-tests (7.1.1-0ubuntu1) ...
+Selecting previously unselected package pkg-rocm-tools.
+Preparing to unpack .../13-pkg-rocm-tools_0.9.6ubuntu3_all.deb ...
+Unpacking pkg-rocm-tools (0.9.6ubuntu3) ...
+Setting up lto-disabled-list (79) ...
+Setting up bzip2 (1.0.8-6build2) ...
+Setting up make (4.4.1-3) ...
+Setting up libllvm21:amd64 (1:21.1.8-6ubuntu1) ...
+Setting up libdpkg-perl (1.23.7ubuntu1) ...
+Setting up libamd-comgr3:amd64 (7.1.1+dfsg-0ubuntu1) ...
+Setting up libhsakmt1:amd64 (7.1.0+dfsg-0ubuntu9) ...
+Setting up dpkg-dev (1.23.7ubuntu1) ...
+Setting up libhsa-runtime64-1:amd64 (7.1.0+dfsg-0ubuntu9) ...
+Setting up pkg-rocm-tools (0.9.6ubuntu3) ...
+Setting up libamdhip64-7:amd64 (7.1.0-0ubuntu2) ...
+Setting up librocrand1 (7.1.1-0ubuntu1) ...
+Setting up libhiprand1 (7.1.1-0ubuntu1) ...
+Setting up libhiprand1-tests (7.1.1-0ubuntu1) ...
+Processing triggers for man-db (2.13.1-1build1) ...
+Processing triggers for libc-bin (2.43-2ubuntu2) ...
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+autopkgtest [00:07:43]: test libhiprand1-tests: rocm-test-launcher /usr/libexec/rocm/libhiprand1-tests/run-tests
+autopkgtest [00:07:43]: test libhiprand1-tests: [-----------------------
+Running main() from ./googletest/src/gtest_main.cc
+[==========] Running 85 tests from 5 test suites.
+[----------] Global test environment set-up.
+[----------] 7 tests from hiprand_32/hiprand_api_32
+[ RUN      ] hiprand_32/hiprand_api_32.hiprand_generate_test/0
+[       OK ] hiprand_32/hiprand_api_32.hiprand_generate_test/0 (349 ms)
+[ RUN      ] hiprand_32/hiprand_api_32.hiprand_generate_test/1
+[       OK ] hiprand_32/hiprand_api_32.hiprand_generate_test/1 (1 ms)
+[ RUN      ] hiprand_32/hiprand_api_32.hiprand_generate_test/2
+[       OK ] hiprand_32/hiprand_api_32.hiprand_generate_test/2 (2 ms)
+[ RUN      ] hiprand_32/hiprand_api_32.hiprand_generate_test/3
+[       OK ] hiprand_32/hiprand_api_32.hiprand_generate_test/3 (157 ms)
+[ RUN      ] hiprand_32/hiprand_api_32.hiprand_generate_test/4
+[       OK ] hiprand_32/hiprand_api_32.hiprand_generate_test/4 (2 ms)
+[ RUN      ] hiprand_32/hiprand_api_32.hiprand_generate_test/5
+[       OK ] hiprand_32/hiprand_api_32.hiprand_generate_test/5 (1 ms)
+[ RUN      ] hiprand_32/hiprand_api_32.hiprand_generate_test/6
+[       OK ] hiprand_32/hiprand_api_32.hiprand_generate_test/6 (1 ms)
+[----------] 7 tests from hiprand_32/hiprand_api_32 (516 ms total)
+
+[----------] 2 tests from hiprand_64/hiprand_api_64
+[ RUN      ] hiprand_64/hiprand_api_64.hiprand_generate_long_long_test/0
+[       OK ] hiprand_64/hiprand_api_64.hiprand_generate_long_long_test/0 (1 ms)
+[ RUN      ] hiprand_64/hiprand_api_64.hiprand_generate_long_long_test/1
+[       OK ] hiprand_64/hiprand_api_64.hiprand_generate_long_long_test/1 (1 ms)
+[----------] 2 tests from hiprand_64/hiprand_api_64 (3 ms total)
+
+[----------] 63 tests from hiprand/hiprand_api
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_uniform_test/0
+[       OK ] hiprand/hiprand_api.hiprand_generate_uniform_test/0 (0 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_uniform_test/1
+[       OK ] hiprand/hiprand_api.hiprand_generate_uniform_test/1 (0 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_uniform_test/2
+[       OK ] hiprand/hiprand_api.hiprand_generate_uniform_test/2 (0 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_uniform_test/3
+[       OK ] hiprand/hiprand_api.hiprand_generate_uniform_test/3 (132 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_uniform_test/4
+[       OK ] hiprand/hiprand_api.hiprand_generate_uniform_test/4 (1 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_uniform_test/5
+[       OK ] hiprand/hiprand_api.hiprand_generate_uniform_test/5 (0 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_uniform_test/6
+[       OK ] hiprand/hiprand_api.hiprand_generate_uniform_test/6 (0 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_uniform_test/7
+[       OK ] hiprand/hiprand_api.hiprand_generate_uniform_test/7 (0 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_uniform_test/8
+[       OK ] hiprand/hiprand_api.hiprand_generate_uniform_test/8 (0 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_uniform_double_test/0
+[       OK ] hiprand/hiprand_api.hiprand_generate_uniform_double_test/0 (0 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_uniform_double_test/1
+[       OK ] hiprand/hiprand_api.hiprand_generate_uniform_double_test/1 (0 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_uniform_double_test/2
+[       OK ] hiprand/hiprand_api.hiprand_generate_uniform_double_test/2 (0 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_uniform_double_test/3
+[       OK ] hiprand/hiprand_api.hiprand_generate_uniform_double_test/3 (128 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_uniform_double_test/4
+[       OK ] hiprand/hiprand_api.hiprand_generate_uniform_double_test/4 (1 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_uniform_double_test/5
+[       OK ] hiprand/hiprand_api.hiprand_generate_uniform_double_test/5 (0 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_uniform_double_test/6
+[       OK ] hiprand/hiprand_api.hiprand_generate_uniform_double_test/6 (0 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_uniform_double_test/7
+[       OK ] hiprand/hiprand_api.hiprand_generate_uniform_double_test/7 (0 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_uniform_double_test/8
+[       OK ] hiprand/hiprand_api.hiprand_generate_uniform_double_test/8 (0 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_normal_test/0
+[       OK ] hiprand/hiprand_api.hiprand_generate_normal_test/0 (0 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_normal_test/1
+[       OK ] hiprand/hiprand_api.hiprand_generate_normal_test/1 (0 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_normal_test/2
+[       OK ] hiprand/hiprand_api.hiprand_generate_normal_test/2 (0 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_normal_test/3
+[       OK ] hiprand/hiprand_api.hiprand_generate_normal_test/3 (126 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_normal_test/4
+[       OK ] hiprand/hiprand_api.hiprand_generate_normal_test/4 (1 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_normal_test/5
+[       OK ] hiprand/hiprand_api.hiprand_generate_normal_test/5 (0 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_normal_test/6
+[       OK ] hiprand/hiprand_api.hiprand_generate_normal_test/6 (0 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_normal_test/7
+[       OK ] hiprand/hiprand_api.hiprand_generate_normal_test/7 (0 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_normal_test/8
+[       OK ] hiprand/hiprand_api.hiprand_generate_normal_test/8 (0 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_normal_double_test/0
+[       OK ] hiprand/hiprand_api.hiprand_generate_normal_double_test/0 (0 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_normal_double_test/1
+[       OK ] hiprand/hiprand_api.hiprand_generate_normal_double_test/1 (0 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_normal_double_test/2
+[       OK ] hiprand/hiprand_api.hiprand_generate_normal_double_test/2 (0 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_normal_double_test/3
+[       OK ] hiprand/hiprand_api.hiprand_generate_normal_double_test/3 (126 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_normal_double_test/4
+[       OK ] hiprand/hiprand_api.hiprand_generate_normal_double_test/4 (0 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_normal_double_test/5
+[       OK ] hiprand/hiprand_api.hiprand_generate_normal_double_test/5 (0 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_normal_double_test/6
+[       OK ] hiprand/hiprand_api.hiprand_generate_normal_double_test/6 (0 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_normal_double_test/7
+[       OK ] hiprand/hiprand_api.hiprand_generate_normal_double_test/7 (0 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_normal_double_test/8
+[       OK ] hiprand/hiprand_api.hiprand_generate_normal_double_test/8 (0 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_lognormal_test/0
+[       OK ] hiprand/hiprand_api.hiprand_generate_lognormal_test/0 (0 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_lognormal_test/1
+[       OK ] hiprand/hiprand_api.hiprand_generate_lognormal_test/1 (0 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_lognormal_test/2
+[       OK ] hiprand/hiprand_api.hiprand_generate_lognormal_test/2 (0 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_lognormal_test/3
+[       OK ] hiprand/hiprand_api.hiprand_generate_lognormal_test/3 (125 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_lognormal_test/4
+[       OK ] hiprand/hiprand_api.hiprand_generate_lognormal_test/4 (0 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_lognormal_test/5
+[       OK ] hiprand/hiprand_api.hiprand_generate_lognormal_test/5 (0 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_lognormal_test/6
+[       OK ] hiprand/hiprand_api.hiprand_generate_lognormal_test/6 (0 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_lognormal_test/7
+[       OK ] hiprand/hiprand_api.hiprand_generate_lognormal_test/7 (0 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_lognormal_test/8
+[       OK ] hiprand/hiprand_api.hiprand_generate_lognormal_test/8 (0 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_lognormal_double_test/0
+[       OK ] hiprand/hiprand_api.hiprand_generate_lognormal_double_test/0 (0 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_lognormal_double_test/1
+[       OK ] hiprand/hiprand_api.hiprand_generate_lognormal_double_test/1 (0 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_lognormal_double_test/2
+[       OK ] hiprand/hiprand_api.hiprand_generate_lognormal_double_test/2 (0 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_lognormal_double_test/3
+[       OK ] hiprand/hiprand_api.hiprand_generate_lognormal_double_test/3 (124 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_lognormal_double_test/4
+[       OK ] hiprand/hiprand_api.hiprand_generate_lognormal_double_test/4 (0 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_lognormal_double_test/5
+[       OK ] hiprand/hiprand_api.hiprand_generate_lognormal_double_test/5 (0 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_lognormal_double_test/6
+[       OK ] hiprand/hiprand_api.hiprand_generate_lognormal_double_test/6 (0 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_lognormal_double_test/7
+[       OK ] hiprand/hiprand_api.hiprand_generate_lognormal_double_test/7 (0 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_lognormal_double_test/8
+[       OK ] hiprand/hiprand_api.hiprand_generate_lognormal_double_test/8 (0 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_poisson_test/0
+[       OK ] hiprand/hiprand_api.hiprand_generate_poisson_test/0 (0 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_poisson_test/1
+[       OK ] hiprand/hiprand_api.hiprand_generate_poisson_test/1 (0 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_poisson_test/2
+[       OK ] hiprand/hiprand_api.hiprand_generate_poisson_test/2 (0 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_poisson_test/3
+[       OK ] hiprand/hiprand_api.hiprand_generate_poisson_test/3 (125 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_poisson_test/4
+[       OK ] hiprand/hiprand_api.hiprand_generate_poisson_test/4 (0 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_poisson_test/5
+[       OK ] hiprand/hiprand_api.hiprand_generate_poisson_test/5 (0 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_poisson_test/6
+[       OK ] hiprand/hiprand_api.hiprand_generate_poisson_test/6 (0 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_poisson_test/7
+[       OK ] hiprand/hiprand_api.hiprand_generate_poisson_test/7 (0 ms)
+[ RUN      ] hiprand/hiprand_api.hiprand_generate_poisson_test/8
+[       OK ] hiprand/hiprand_api.hiprand_generate_poisson_test/8 (0 ms)
+[----------] 63 tests from hiprand/hiprand_api (913 ms total)
+
+[----------] 12 tests from hiprand/hiprand_ordering
+[ RUN      ] hiprand/hiprand_ordering.hiprand_ordering_test/0
+[       OK ] hiprand/hiprand_ordering.hiprand_ordering_test/0 (0 ms)
+[ RUN      ] hiprand/hiprand_ordering.hiprand_ordering_test/1
+[       OK ] hiprand/hiprand_ordering.hiprand_ordering_test/1 (0 ms)
+[ RUN      ] hiprand/hiprand_ordering.hiprand_ordering_test/2
+[       OK ] hiprand/hiprand_ordering.hiprand_ordering_test/2 (0 ms)
+[ RUN      ] hiprand/hiprand_ordering.hiprand_ordering_test/3
+[       OK ] hiprand/hiprand_ordering.hiprand_ordering_test/3 (0 ms)
+[ RUN      ] hiprand/hiprand_ordering.hiprand_ordering_test/4
+[       OK ] hiprand/hiprand_ordering.hiprand_ordering_test/4 (0 ms)
+[ RUN      ] hiprand/hiprand_ordering.hiprand_ordering_test/5
+[       OK ] hiprand/hiprand_ordering.hiprand_ordering_test/5 (0 ms)
+[ RUN      ] hiprand/hiprand_ordering.hiprand_invalid_ordering_test/0
+[       OK ] hiprand/hiprand_ordering.hiprand_invalid_ordering_test/0 (0 ms)
+[ RUN      ] hiprand/hiprand_ordering.hiprand_invalid_ordering_test/1
+[       OK ] hiprand/hiprand_ordering.hiprand_invalid_ordering_test/1 (0 ms)
+[ RUN      ] hiprand/hiprand_ordering.hiprand_invalid_ordering_test/2
+[       OK ] hiprand/hiprand_ordering.hiprand_invalid_ordering_test/2 (0 ms)
+[ RUN      ] hiprand/hiprand_ordering.hiprand_invalid_ordering_test/3
+[       OK ] hiprand/hiprand_ordering.hiprand_invalid_ordering_test/3 (0 ms)
+[ RUN      ] hiprand/hiprand_ordering.hiprand_invalid_ordering_test/4
+[       OK ] hiprand/hiprand_ordering.hiprand_invalid_ordering_test/4 (0 ms)
+[ RUN      ] hiprand/hiprand_ordering.hiprand_invalid_ordering_test/5
+[       OK ] hiprand/hiprand_ordering.hiprand_invalid_ordering_test/5 (0 ms)
+[----------] 12 tests from hiprand/hiprand_ordering (3 ms total)
+
+[----------] 1 test from hiprand/hiprand_host
+[ RUN      ] hiprand/hiprand_host.hiprand_generate_uniform_host/0
+[       OK ] hiprand/hiprand_host.hiprand_generate_uniform_host/0 (6 ms)
+[----------] 1 test from hiprand/hiprand_host (6 ms total)
+
+[----------] Global test environment tear-down
+[==========] 85 tests from 5 test suites ran. (1442 ms total)
+[  PASSED  ] 85 tests.
+Running main() from ./googletest/src/gtest_main.cc
+[==========] Running 152 tests from 36 test suites.
+[----------] Global test environment set-up.
+[----------] 5 tests from hiprand_cpp_wrapper
+[ RUN      ] hiprand_cpp_wrapper.hiprand_error
+[       OK ] hiprand_cpp_wrapper.hiprand_error (0 ms)
+[ RUN      ] hiprand_cpp_wrapper.hiprand_prng_default_seed
+[       OK ] hiprand_cpp_wrapper.hiprand_prng_default_seed (0 ms)
+[ RUN      ] hiprand_cpp_wrapper.hiprand_normal_dist_param
+[       OK ] hiprand_cpp_wrapper.hiprand_normal_dist_param (0 ms)
+[ RUN      ] hiprand_cpp_wrapper.hiprand_lognormal_dist_param
+[       OK ] hiprand_cpp_wrapper.hiprand_lognormal_dist_param (0 ms)
+[ RUN      ] hiprand_cpp_wrapper.hiprand_poisson_dist_param
+[       OK ] hiprand_cpp_wrapper.hiprand_poisson_dist_param (0 ms)
+[----------] 5 tests from hiprand_cpp_wrapper (0 ms total)
+
+[----------] 9 tests from hiprand_cpp_wrapper/0, where TypeParam = hiprand_cpp::mrg32k3a_engine<12345ull>
+[ RUN      ] hiprand_cpp_wrapper/0.hiprand_rng_ctor
+[       OK ] hiprand_cpp_wrapper/0.hiprand_rng_ctor (168 ms)
+[ RUN      ] hiprand_cpp_wrapper/0.hiprand_rng_stream
+[       OK ] hiprand_cpp_wrapper/0.hiprand_rng_stream (91 ms)
+[ RUN      ] hiprand_cpp_wrapper/0.hiprand_uniform_real_dist_float
+[       OK ] hiprand_cpp_wrapper/0.hiprand_uniform_real_dist_float (8 ms)
+[ RUN      ] hiprand_cpp_wrapper/0.hiprand_uniform_real_dist_double
+[       OK ] hiprand_cpp_wrapper/0.hiprand_uniform_real_dist_double (0 ms)
+[ RUN      ] hiprand_cpp_wrapper/0.hiprand_normal_dist_float
+[       OK ] hiprand_cpp_wrapper/0.hiprand_normal_dist_float (0 ms)
+[ RUN      ] hiprand_cpp_wrapper/0.hiprand_normal_dist_double
+[       OK ] hiprand_cpp_wrapper/0.hiprand_normal_dist_double (0 ms)
+[ RUN      ] hiprand_cpp_wrapper/0.hiprand_lognormal_dist_float
+[       OK ] hiprand_cpp_wrapper/0.hiprand_lognormal_dist_float (0 ms)
+[ RUN      ] hiprand_cpp_wrapper/0.hiprand_lognormal_dist_double
+[       OK ] hiprand_cpp_wrapper/0.hiprand_lognormal_dist_double (0 ms)
+[ RUN      ] hiprand_cpp_wrapper/0.hiprand_poisson_dist
+[       OK ] hiprand_cpp_wrapper/0.hiprand_poisson_dist (2 ms)
+[----------] 9 tests from hiprand_cpp_wrapper/0 (272 ms total)
+
+[----------] 9 tests from hiprand_cpp_wrapper/1, where TypeParam = hiprand_cpp::mt19937_engine<0ull>
+[ RUN      ] hiprand_cpp_wrapper/1.hiprand_rng_ctor
+[       OK ] hiprand_cpp_wrapper/1.hiprand_rng_ctor (0 ms)
+[ RUN      ] hiprand_cpp_wrapper/1.hiprand_rng_stream
+[       OK ] hiprand_cpp_wrapper/1.hiprand_rng_stream (2 ms)
+[ RUN      ] hiprand_cpp_wrapper/1.hiprand_uniform_real_dist_float
+[       OK ] hiprand_cpp_wrapper/1.hiprand_uniform_real_dist_float (156 ms)
+[ RUN      ] hiprand_cpp_wrapper/1.hiprand_uniform_real_dist_double
+[       OK ] hiprand_cpp_wrapper/1.hiprand_uniform_real_dist_double (132 ms)
+[ RUN      ] hiprand_cpp_wrapper/1.hiprand_normal_dist_float
+[       OK ] hiprand_cpp_wrapper/1.hiprand_normal_dist_float (124 ms)
+[ RUN      ] hiprand_cpp_wrapper/1.hiprand_normal_dist_double
+[       OK ] hiprand_cpp_wrapper/1.hiprand_normal_dist_double (124 ms)
+[ RUN      ] hiprand_cpp_wrapper/1.hiprand_lognormal_dist_float
+[       OK ] hiprand_cpp_wrapper/1.hiprand_lognormal_dist_float (126 ms)
+[ RUN      ] hiprand_cpp_wrapper/1.hiprand_lognormal_dist_double
+[       OK ] hiprand_cpp_wrapper/1.hiprand_lognormal_dist_double (125 ms)
+[ RUN      ] hiprand_cpp_wrapper/1.hiprand_poisson_dist
+[       OK ] hiprand_cpp_wrapper/1.hiprand_poisson_dist (756 ms)
+[----------] 9 tests from hiprand_cpp_wrapper/1 (1549 ms total)
+
+[----------] 9 tests from hiprand_cpp_wrapper/2, where TypeParam = hiprand_cpp::mtgp32_engine<0ull>
+[ RUN      ] hiprand_cpp_wrapper/2.hiprand_rng_ctor
+[       OK ] hiprand_cpp_wrapper/2.hiprand_rng_ctor (0 ms)
+[ RUN      ] hiprand_cpp_wrapper/2.hiprand_rng_stream
+[       OK ] hiprand_cpp_wrapper/2.hiprand_rng_stream (1 ms)
+[ RUN      ] hiprand_cpp_wrapper/2.hiprand_uniform_real_dist_float
+[       OK ] hiprand_cpp_wrapper/2.hiprand_uniform_real_dist_float (2 ms)
+[ RUN      ] hiprand_cpp_wrapper/2.hiprand_uniform_real_dist_double
+[       OK ] hiprand_cpp_wrapper/2.hiprand_uniform_real_dist_double (0 ms)
+[ RUN      ] hiprand_cpp_wrapper/2.hiprand_normal_dist_float
+[       OK ] hiprand_cpp_wrapper/2.hiprand_normal_dist_float (0 ms)
+[ RUN      ] hiprand_cpp_wrapper/2.hiprand_normal_dist_double
+[       OK ] hiprand_cpp_wrapper/2.hiprand_normal_dist_double (0 ms)
+[ RUN      ] hiprand_cpp_wrapper/2.hiprand_lognormal_dist_float
+[       OK ] hiprand_cpp_wrapper/2.hiprand_lognormal_dist_float (0 ms)
+[ RUN      ] hiprand_cpp_wrapper/2.hiprand_lognormal_dist_double
+[       OK ] hiprand_cpp_wrapper/2.hiprand_lognormal_dist_double (0 ms)
+[ RUN      ] hiprand_cpp_wrapper/2.hiprand_poisson_dist
+[       OK ] hiprand_cpp_wrapper/2.hiprand_poisson_dist (4 ms)
+[----------] 9 tests from hiprand_cpp_wrapper/2 (12 ms total)
+
+[----------] 9 tests from hiprand_cpp_wrapper/3, where TypeParam = hiprand_cpp::philox4x32_10_engine<0ull>
+[ RUN      ] hiprand_cpp_wrapper/3.hiprand_rng_ctor
+[       OK ] hiprand_cpp_wrapper/3.hiprand_rng_ctor (0 ms)
+[ RUN      ] hiprand_cpp_wrapper/3.hiprand_rng_stream
+[       OK ] hiprand_cpp_wrapper/3.hiprand_rng_stream (1 ms)
+[ RUN      ] hiprand_cpp_wrapper/3.hiprand_uniform_real_dist_float
+[       OK ] hiprand_cpp_wrapper/3.hiprand_uniform_real_dist_float (1 ms)
+[ RUN      ] hiprand_cpp_wrapper/3.hiprand_uniform_real_dist_double
+[       OK ] hiprand_cpp_wrapper/3.hiprand_uniform_real_dist_double (0 ms)
+[ RUN      ] hiprand_cpp_wrapper/3.hiprand_normal_dist_float
+[       OK ] hiprand_cpp_wrapper/3.hiprand_normal_dist_float (0 ms)
+[ RUN      ] hiprand_cpp_wrapper/3.hiprand_normal_dist_double
+[       OK ] hiprand_cpp_wrapper/3.hiprand_normal_dist_double (0 ms)
+[ RUN      ] hiprand_cpp_wrapper/3.hiprand_lognormal_dist_float
+[       OK ] hiprand_cpp_wrapper/3.hiprand_lognormal_dist_float (0 ms)
+[ RUN      ] hiprand_cpp_wrapper/3.hiprand_lognormal_dist_double
+[       OK ] hiprand_cpp_wrapper/3.hiprand_lognormal_dist_double (0 ms)
+[ RUN      ] hiprand_cpp_wrapper/3.hiprand_poisson_dist
+[       OK ] hiprand_cpp_wrapper/3.hiprand_poisson_dist (1 ms)
+[----------] 9 tests from hiprand_cpp_wrapper/3 (5 ms total)
+
+[----------] 9 tests from hiprand_cpp_wrapper/4, where TypeParam = hiprand_cpp::scrambled_sobol32_engine<1u>
+[ RUN      ] hiprand_cpp_wrapper/4.hiprand_rng_ctor
+[       OK ] hiprand_cpp_wrapper/4.hiprand_rng_ctor (0 ms)
+[ RUN      ] hiprand_cpp_wrapper/4.hiprand_rng_stream
+[       OK ] hiprand_cpp_wrapper/4.hiprand_rng_stream (1 ms)
+[ RUN      ] hiprand_cpp_wrapper/4.hiprand_uniform_real_dist_float
+[       OK ] hiprand_cpp_wrapper/4.hiprand_uniform_real_dist_float (0 ms)
+[ RUN      ] hiprand_cpp_wrapper/4.hiprand_uniform_real_dist_double
+[       OK ] hiprand_cpp_wrapper/4.hiprand_uniform_real_dist_double (0 ms)
+[ RUN      ] hiprand_cpp_wrapper/4.hiprand_normal_dist_float
+[       OK ] hiprand_cpp_wrapper/4.hiprand_normal_dist_float (0 ms)
+[ RUN      ] hiprand_cpp_wrapper/4.hiprand_normal_dist_double
+[       OK ] hiprand_cpp_wrapper/4.hiprand_normal_dist_double (0 ms)
+[ RUN      ] hiprand_cpp_wrapper/4.hiprand_lognormal_dist_float
+[       OK ] hiprand_cpp_wrapper/4.hiprand_lognormal_dist_float (0 ms)
+[ RUN      ] hiprand_cpp_wrapper/4.hiprand_lognormal_dist_double
+[       OK ] hiprand_cpp_wrapper/4.hiprand_lognormal_dist_double (0 ms)
+[ RUN      ] hiprand_cpp_wrapper/4.hiprand_poisson_dist
+[       OK ] hiprand_cpp_wrapper/4.hiprand_poisson_dist (0 ms)
+[----------] 9 tests from hiprand_cpp_wrapper/4 (4 ms total)
+
+[----------] 9 tests from hiprand_cpp_wrapper/5, where TypeParam = hiprand_cpp::scrambled_sobol64_engine<1u>
+[ RUN      ] hiprand_cpp_wrapper/5.hiprand_rng_ctor
+[       OK ] hiprand_cpp_wrapper/5.hiprand_rng_ctor (0 ms)
+[ RUN      ] hiprand_cpp_wrapper/5.hiprand_rng_stream
+[       OK ] hiprand_cpp_wrapper/5.hiprand_rng_stream (1 ms)
+[ RUN      ] hiprand_cpp_wrapper/5.hiprand_uniform_real_dist_float
+[       OK ] hiprand_cpp_wrapper/5.hiprand_uniform_real_dist_float (0 ms)
+[ RUN      ] hiprand_cpp_wrapper/5.hiprand_uniform_real_dist_double
+[       OK ] hiprand_cpp_wrapper/5.hiprand_uniform_real_dist_double (0 ms)
+[ RUN      ] hiprand_cpp_wrapper/5.hiprand_normal_dist_float
+[       OK ] hiprand_cpp_wrapper/5.hiprand_normal_dist_float (0 ms)
+[ RUN      ] hiprand_cpp_wrapper/5.hiprand_normal_dist_double
+[       OK ] hiprand_cpp_wrapper/5.hiprand_normal_dist_double (0 ms)
+[ RUN      ] hiprand_cpp_wrapper/5.hiprand_lognormal_dist_float
+[       OK ] hiprand_cpp_wrapper/5.hiprand_lognormal_dist_float (0 ms)
+[ RUN      ] hiprand_cpp_wrapper/5.hiprand_lognormal_dist_double
+[       OK ] hiprand_cpp_wrapper/5.hiprand_lognormal_dist_double (0 ms)
+[ RUN      ] hiprand_cpp_wrapper/5.hiprand_poisson_dist
+[       OK ] hiprand_cpp_wrapper/5.hiprand_poisson_dist (0 ms)
+[----------] 9 tests from hiprand_cpp_wrapper/5 (4 ms total)
+
+[----------] 9 tests from hiprand_cpp_wrapper/6, where TypeParam = hiprand_cpp::sobol32_engine<1u>
+[ RUN      ] hiprand_cpp_wrapper/6.hiprand_rng_ctor
+[       OK ] hiprand_cpp_wrapper/6.hiprand_rng_ctor (0 ms)
+[ RUN      ] hiprand_cpp_wrapper/6.hiprand_rng_stream
+[       OK ] hiprand_cpp_wrapper/6.hiprand_rng_stream (1 ms)
+[ RUN      ] hiprand_cpp_wrapper/6.hiprand_uniform_real_dist_float
+[       OK ] hiprand_cpp_wrapper/6.hiprand_uniform_real_dist_float (0 ms)
+[ RUN      ] hiprand_cpp_wrapper/6.hiprand_uniform_real_dist_double
+[       OK ] hiprand_cpp_wrapper/6.hiprand_uniform_real_dist_double (0 ms)
+[ RUN      ] hiprand_cpp_wrapper/6.hiprand_normal_dist_float
+[       OK ] hiprand_cpp_wrapper/6.hiprand_normal_dist_float (0 ms)
+[ RUN      ] hiprand_cpp_wrapper/6.hiprand_normal_dist_double
+[       OK ] hiprand_cpp_wrapper/6.hiprand_normal_dist_double (0 ms)
+[ RUN      ] hiprand_cpp_wrapper/6.hiprand_lognormal_dist_float
+[       OK ] hiprand_cpp_wrapper/6.hiprand_lognormal_dist_float (0 ms)
+[ RUN      ] hiprand_cpp_wrapper/6.hiprand_lognormal_dist_double
+[       OK ] hiprand_cpp_wrapper/6.hiprand_lognormal_dist_double (0 ms)
+[ RUN      ] hiprand_cpp_wrapper/6.hiprand_poisson_dist
+[       OK ] hiprand_cpp_wrapper/6.hiprand_poisson_dist (0 ms)
+[----------] 9 tests from hiprand_cpp_wrapper/6 (4 ms total)
+
+[----------] 9 tests from hiprand_cpp_wrapper/7, where TypeParam = hiprand_cpp::sobol64_engine<1u>
+[ RUN      ] hiprand_cpp_wrapper/7.hiprand_rng_ctor
+[       OK ] hiprand_cpp_wrapper/7.hiprand_rng_ctor (0 ms)
+[ RUN      ] hiprand_cpp_wrapper/7.hiprand_rng_stream
+[       OK ] hiprand_cpp_wrapper/7.hiprand_rng_stream (1 ms)
+[ RUN      ] hiprand_cpp_wrapper/7.hiprand_uniform_real_dist_float
+[       OK ] hiprand_cpp_wrapper/7.hiprand_uniform_real_dist_float (0 ms)
+[ RUN      ] hiprand_cpp_wrapper/7.hiprand_uniform_real_dist_double
+[       OK ] hiprand_cpp_wrapper/7.hiprand_uniform_real_dist_double (0 ms)
+[ RUN      ] hiprand_cpp_wrapper/7.hiprand_normal_dist_float
+[       OK ] hiprand_cpp_wrapper/7.hiprand_normal_dist_float (0 ms)
+[ RUN      ] hiprand_cpp_wrapper/7.hiprand_normal_dist_double
+[       OK ] hiprand_cpp_wrapper/7.hiprand_normal_dist_double (0 ms)
+[ RUN      ] hiprand_cpp_wrapper/7.hiprand_lognormal_dist_float
+[       OK ] hiprand_cpp_wrapper/7.hiprand_lognormal_dist_float (0 ms)
+[ RUN      ] hiprand_cpp_wrapper/7.hiprand_lognormal_dist_double
+[       OK ] hiprand_cpp_wrapper/7.hiprand_lognormal_dist_double (0 ms)
+[ RUN      ] hiprand_cpp_wrapper/7.hiprand_poisson_dist
+[       OK ] hiprand_cpp_wrapper/7.hiprand_poisson_dist (0 ms)
+[----------] 9 tests from hiprand_cpp_wrapper/7 (4 ms total)
+
+[----------] 9 tests from hiprand_cpp_wrapper/8, where TypeParam = hiprand_cpp::xorwow_engine<0ull>
+[ RUN      ] hiprand_cpp_wrapper/8.hiprand_rng_ctor
+[       OK ] hiprand_cpp_wrapper/8.hiprand_rng_ctor (0 ms)
+[ RUN      ] hiprand_cpp_wrapper/8.hiprand_rng_stream
+[       OK ] hiprand_cpp_wrapper/8.hiprand_rng_stream (1 ms)
+[ RUN      ] hiprand_cpp_wrapper/8.hiprand_uniform_real_dist_float
+[       OK ] hiprand_cpp_wrapper/8.hiprand_uniform_real_dist_float (2 ms)
+[ RUN      ] hiprand_cpp_wrapper/8.hiprand_uniform_real_dist_double
+[       OK ] hiprand_cpp_wrapper/8.hiprand_uniform_real_dist_double (0 ms)
+[ RUN      ] hiprand_cpp_wrapper/8.hiprand_normal_dist_float
+[       OK ] hiprand_cpp_wrapper/8.hiprand_normal_dist_float (0 ms)
+[ RUN      ] hiprand_cpp_wrapper/8.hiprand_normal_dist_double
+[       OK ] hiprand_cpp_wrapper/8.hiprand_normal_dist_double (0 ms)
+[ RUN      ] hiprand_cpp_wrapper/8.hiprand_lognormal_dist_float
+[       OK ] hiprand_cpp_wrapper/8.hiprand_lognormal_dist_float (0 ms)
+[ RUN      ] hiprand_cpp_wrapper/8.hiprand_lognormal_dist_double
+[       OK ] hiprand_cpp_wrapper/8.hiprand_lognormal_dist_double (0 ms)
+[ RUN      ] hiprand_cpp_wrapper/8.hiprand_poisson_dist
+[       OK ] hiprand_cpp_wrapper/8.hiprand_poisson_dist (4 ms)
+[----------] 9 tests from hiprand_cpp_wrapper/8 (10 ms total)
+
+[----------] 2 tests from hiprand_cpp_wrapper_prng/0, where TypeParam = hiprand_cpp::mrg32k3a_engine<12345ull>
+[ RUN      ] hiprand_cpp_wrapper_prng/0.hiprand_ctor
+[       OK ] hiprand_cpp_wrapper_prng/0.hiprand_ctor (0 ms)
+[ RUN      ] hiprand_cpp_wrapper_prng/0.hiprand_seed
+[       OK ] hiprand_cpp_wrapper_prng/0.hiprand_seed (0 ms)
+[----------] 2 tests from hiprand_cpp_wrapper_prng/0 (0 ms total)
+
+[----------] 2 tests from hiprand_cpp_wrapper_prng/1, where TypeParam = hiprand_cpp::mt19937_engine<0ull>
+[ RUN      ] hiprand_cpp_wrapper_prng/1.hiprand_ctor
+[       OK ] hiprand_cpp_wrapper_prng/1.hiprand_ctor (0 ms)
+[ RUN      ] hiprand_cpp_wrapper_prng/1.hiprand_seed
+[       OK ] hiprand_cpp_wrapper_prng/1.hiprand_seed (0 ms)
+[----------] 2 tests from hiprand_cpp_wrapper_prng/1 (0 ms total)
+
+[----------] 2 tests from hiprand_cpp_wrapper_prng/2, where TypeParam = hiprand_cpp::mtgp32_engine<0ull>
+[ RUN      ] hiprand_cpp_wrapper_prng/2.hiprand_ctor
+[       OK ] hiprand_cpp_wrapper_prng/2.hiprand_ctor (0 ms)
+[ RUN      ] hiprand_cpp_wrapper_prng/2.hiprand_seed
+[       OK ] hiprand_cpp_wrapper_prng/2.hiprand_seed (0 ms)
+[----------] 2 tests from hiprand_cpp_wrapper_prng/2 (0 ms total)
+
+[----------] 2 tests from hiprand_cpp_wrapper_prng/3, where TypeParam = hiprand_cpp::philox4x32_10_engine<0ull>
+[ RUN      ] hiprand_cpp_wrapper_prng/3.hiprand_ctor
+[       OK ] hiprand_cpp_wrapper_prng/3.hiprand_ctor (0 ms)
+[ RUN      ] hiprand_cpp_wrapper_prng/3.hiprand_seed
+[       OK ] hiprand_cpp_wrapper_prng/3.hiprand_seed (0 ms)
+[----------] 2 tests from hiprand_cpp_wrapper_prng/3 (0 ms total)
+
+[----------] 2 tests from hiprand_cpp_wrapper_prng/4, where TypeParam = hiprand_cpp::xorwow_engine<0ull>
+[ RUN      ] hiprand_cpp_wrapper_prng/4.hiprand_ctor
+[       OK ] hiprand_cpp_wrapper_prng/4.hiprand_ctor (0 ms)
+[ RUN      ] hiprand_cpp_wrapper_prng/4.hiprand_seed
+[       OK ] hiprand_cpp_wrapper_prng/4.hiprand_seed (0 ms)
+[----------] 2 tests from hiprand_cpp_wrapper_prng/4 (0 ms total)
+
+[----------] 2 tests from hiprand_cpp_wrapper_32/0, where TypeParam = hiprand_cpp::mrg32k3a_engine<12345ull>
+[ RUN      ] hiprand_cpp_wrapper_32/0.hiprand_rng_result_type
+[       OK ] hiprand_cpp_wrapper_32/0.hiprand_rng_result_type (0 ms)
+[ RUN      ] hiprand_cpp_wrapper_32/0.hiprand_uniform_int_dist_32
+[       OK ] hiprand_cpp_wrapper_32/0.hiprand_uniform_int_dist_32 (0 ms)
+[----------] 2 tests from hiprand_cpp_wrapper_32/0 (0 ms total)
+
+[----------] 2 tests from hiprand_cpp_wrapper_32/1, where TypeParam = hiprand_cpp::mt19937_engine<0ull>
+[ RUN      ] hiprand_cpp_wrapper_32/1.hiprand_rng_result_type
+[       OK ] hiprand_cpp_wrapper_32/1.hiprand_rng_result_type (0 ms)
+[ RUN      ] hiprand_cpp_wrapper_32/1.hiprand_uniform_int_dist_32
+[       OK ] hiprand_cpp_wrapper_32/1.hiprand_uniform_int_dist_32 (134 ms)
+[----------] 2 tests from hiprand_cpp_wrapper_32/1 (134 ms total)
+
+[----------] 2 tests from hiprand_cpp_wrapper_32/2, where TypeParam = hiprand_cpp::mtgp32_engine<0ull>
+[ RUN      ] hiprand_cpp_wrapper_32/2.hiprand_rng_result_type
+[       OK ] hiprand_cpp_wrapper_32/2.hiprand_rng_result_type (0 ms)
+[ RUN      ] hiprand_cpp_wrapper_32/2.hiprand_uniform_int_dist_32
+[       OK ] hiprand_cpp_wrapper_32/2.hiprand_uniform_int_dist_32 (1 ms)
+[----------] 2 tests from hiprand_cpp_wrapper_32/2 (1 ms total)
+
+[----------] 2 tests from hiprand_cpp_wrapper_32/3, where TypeParam = hiprand_cpp::philox4x32_10_engine<0ull>
+[ RUN      ] hiprand_cpp_wrapper_32/3.hiprand_rng_result_type
+[       OK ] hiprand_cpp_wrapper_32/3.hiprand_rng_result_type (0 ms)
+[ RUN      ] hiprand_cpp_wrapper_32/3.hiprand_uniform_int_dist_32
+[       OK ] hiprand_cpp_wrapper_32/3.hiprand_uniform_int_dist_32 (0 ms)
+[----------] 2 tests from hiprand_cpp_wrapper_32/3 (0 ms total)
+
+[----------] 2 tests from hiprand_cpp_wrapper_32/4, where TypeParam = hiprand_cpp::scrambled_sobol32_engine<1u>
+[ RUN      ] hiprand_cpp_wrapper_32/4.hiprand_rng_result_type
+[       OK ] hiprand_cpp_wrapper_32/4.hiprand_rng_result_type (0 ms)
+[ RUN      ] hiprand_cpp_wrapper_32/4.hiprand_uniform_int_dist_32
+[       OK ] hiprand_cpp_wrapper_32/4.hiprand_uniform_int_dist_32 (0 ms)
+[----------] 2 tests from hiprand_cpp_wrapper_32/4 (0 ms total)
+
+[----------] 2 tests from hiprand_cpp_wrapper_32/5, where TypeParam = hiprand_cpp::sobol32_engine<1u>
+[ RUN      ] hiprand_cpp_wrapper_32/5.hiprand_rng_result_type
+[       OK ] hiprand_cpp_wrapper_32/5.hiprand_rng_result_type (0 ms)
+[ RUN      ] hiprand_cpp_wrapper_32/5.hiprand_uniform_int_dist_32
+[       OK ] hiprand_cpp_wrapper_32/5.hiprand_uniform_int_dist_32 (0 ms)
+[----------] 2 tests from hiprand_cpp_wrapper_32/5 (0 ms total)
+
+[----------] 2 tests from hiprand_cpp_wrapper_32/6, where TypeParam = hiprand_cpp::xorwow_engine<0ull>
+[ RUN      ] hiprand_cpp_wrapper_32/6.hiprand_rng_result_type
+[       OK ] hiprand_cpp_wrapper_32/6.hiprand_rng_result_type (0 ms)
+[ RUN      ] hiprand_cpp_wrapper_32/6.hiprand_uniform_int_dist_32
+[       OK ] hiprand_cpp_wrapper_32/6.hiprand_uniform_int_dist_32 (0 ms)
+[----------] 2 tests from hiprand_cpp_wrapper_32/6 (0 ms total)
+
+[----------] 2 tests from hiprand_cpp_wrapper_64/0, where TypeParam = hiprand_cpp::scrambled_sobol64_engine<1u>
+[ RUN      ] hiprand_cpp_wrapper_64/0.hiprand_rng_result_type
+[       OK ] hiprand_cpp_wrapper_64/0.hiprand_rng_result_type (0 ms)
+[ RUN      ] hiprand_cpp_wrapper_64/0.hiprand_uniform_int_dist_64
+[       OK ] hiprand_cpp_wrapper_64/0.hiprand_uniform_int_dist_64 (0 ms)
+[----------] 2 tests from hiprand_cpp_wrapper_64/0 (0 ms total)
+
+[----------] 2 tests from hiprand_cpp_wrapper_64/1, where TypeParam = hiprand_cpp::sobol64_engine<1u>
+[ RUN      ] hiprand_cpp_wrapper_64/1.hiprand_rng_result_type
+[       OK ] hiprand_cpp_wrapper_64/1.hiprand_rng_result_type (0 ms)
+[ RUN      ] hiprand_cpp_wrapper_64/1.hiprand_uniform_int_dist_64
+[       OK ] hiprand_cpp_wrapper_64/1.hiprand_uniform_int_dist_64 (0 ms)
+[----------] 2 tests from hiprand_cpp_wrapper_64/1 (0 ms total)
+
+[----------] 2 tests from hiprand_cpp_wrapper_offset/0, where TypeParam = hiprand_cpp::mrg32k3a_engine<12345ull>
+[ RUN      ] hiprand_cpp_wrapper_offset/0.hiprand_rng_offset_type
+[       OK ] hiprand_cpp_wrapper_offset/0.hiprand_rng_offset_type (0 ms)
+[ RUN      ] hiprand_cpp_wrapper_offset/0.hiprand_rng_offset
+[       OK ] hiprand_cpp_wrapper_offset/0.hiprand_rng_offset (0 ms)
+[----------] 2 tests from hiprand_cpp_wrapper_offset/0 (0 ms total)
+
+[----------] 2 tests from hiprand_cpp_wrapper_offset/1, where TypeParam = hiprand_cpp::philox4x32_10_engine<0ull>
+[ RUN      ] hiprand_cpp_wrapper_offset/1.hiprand_rng_offset_type
+[       OK ] hiprand_cpp_wrapper_offset/1.hiprand_rng_offset_type (0 ms)
+[ RUN      ] hiprand_cpp_wrapper_offset/1.hiprand_rng_offset
+[       OK ] hiprand_cpp_wrapper_offset/1.hiprand_rng_offset (0 ms)
+[----------] 2 tests from hiprand_cpp_wrapper_offset/1 (0 ms total)
+
+[----------] 2 tests from hiprand_cpp_wrapper_offset/2, where TypeParam = hiprand_cpp::scrambled_sobol32_engine<1u>
+[ RUN      ] hiprand_cpp_wrapper_offset/2.hiprand_rng_offset_type
+[       OK ] hiprand_cpp_wrapper_offset/2.hiprand_rng_offset_type (0 ms)
+[ RUN      ] hiprand_cpp_wrapper_offset/2.hiprand_rng_offset
+[       OK ] hiprand_cpp_wrapper_offset/2.hiprand_rng_offset (0 ms)
+[----------] 2 tests from hiprand_cpp_wrapper_offset/2 (0 ms total)
+
+[----------] 2 tests from hiprand_cpp_wrapper_offset/3, where TypeParam = hiprand_cpp::scrambled_sobol64_engine<1u>
+[ RUN      ] hiprand_cpp_wrapper_offset/3.hiprand_rng_offset_type
+[       OK ] hiprand_cpp_wrapper_offset/3.hiprand_rng_offset_type (0 ms)
+[ RUN      ] hiprand_cpp_wrapper_offset/3.hiprand_rng_offset
+[       OK ] hiprand_cpp_wrapper_offset/3.hiprand_rng_offset (0 ms)
+[----------] 2 tests from hiprand_cpp_wrapper_offset/3 (0 ms total)
+
+[----------] 2 tests from hiprand_cpp_wrapper_offset/4, where TypeParam = hiprand_cpp::sobol32_engine<1u>
+[ RUN      ] hiprand_cpp_wrapper_offset/4.hiprand_rng_offset_type
+[       OK ] hiprand_cpp_wrapper_offset/4.hiprand_rng_offset_type (0 ms)
+[ RUN      ] hiprand_cpp_wrapper_offset/4.hiprand_rng_offset
+[       OK ] hiprand_cpp_wrapper_offset/4.hiprand_rng_offset (0 ms)
+[----------] 2 tests from hiprand_cpp_wrapper_offset/4 (0 ms total)
+
+[----------] 2 tests from hiprand_cpp_wrapper_offset/5, where TypeParam = hiprand_cpp::sobol64_engine<1u>
+[ RUN      ] hiprand_cpp_wrapper_offset/5.hiprand_rng_offset_type
+[       OK ] hiprand_cpp_wrapper_offset/5.hiprand_rng_offset_type (0 ms)
+[ RUN      ] hiprand_cpp_wrapper_offset/5.hiprand_rng_offset
+[       OK ] hiprand_cpp_wrapper_offset/5.hiprand_rng_offset (0 ms)
+[----------] 2 tests from hiprand_cpp_wrapper_offset/5 (0 ms total)
+
+[----------] 2 tests from hiprand_cpp_wrapper_offset/6, where TypeParam = hiprand_cpp::xorwow_engine<0ull>
+[ RUN      ] hiprand_cpp_wrapper_offset/6.hiprand_rng_offset_type
+[       OK ] hiprand_cpp_wrapper_offset/6.hiprand_rng_offset_type (0 ms)
+[ RUN      ] hiprand_cpp_wrapper_offset/6.hiprand_rng_offset
+[       OK ] hiprand_cpp_wrapper_offset/6.hiprand_rng_offset (0 ms)
+[----------] 2 tests from hiprand_cpp_wrapper_offset/6 (0 ms total)
+
+[----------] 3 tests from hiprand_cpp_wrapper_qrng/0, where TypeParam = hiprand_cpp::scrambled_sobol32_engine<1u>
+[ RUN      ] hiprand_cpp_wrapper_qrng/0.hiprand_qrng_default_num_dimensions
+[       OK ] hiprand_cpp_wrapper_qrng/0.hiprand_qrng_default_num_dimensions (0 ms)
+[ RUN      ] hiprand_cpp_wrapper_qrng/0.hiprand_ctor
+[       OK ] hiprand_cpp_wrapper_qrng/0.hiprand_ctor (0 ms)
+[ RUN      ] hiprand_cpp_wrapper_qrng/0.hiprand_dims
+[       OK ] hiprand_cpp_wrapper_qrng/0.hiprand_dims (0 ms)
+[----------] 3 tests from hiprand_cpp_wrapper_qrng/0 (0 ms total)
+
+[----------] 3 tests from hiprand_cpp_wrapper_qrng/1, where TypeParam = hiprand_cpp::scrambled_sobol64_engine<1u>
+[ RUN      ] hiprand_cpp_wrapper_qrng/1.hiprand_qrng_default_num_dimensions
+[       OK ] hiprand_cpp_wrapper_qrng/1.hiprand_qrng_default_num_dimensions (0 ms)
+[ RUN      ] hiprand_cpp_wrapper_qrng/1.hiprand_ctor
+[       OK ] hiprand_cpp_wrapper_qrng/1.hiprand_ctor (0 ms)
+[ RUN      ] hiprand_cpp_wrapper_qrng/1.hiprand_dims
+[       OK ] hiprand_cpp_wrapper_qrng/1.hiprand_dims (0 ms)
+[----------] 3 tests from hiprand_cpp_wrapper_qrng/1 (0 ms total)
+
+[----------] 3 tests from hiprand_cpp_wrapper_qrng/2, where TypeParam = hiprand_cpp::sobol32_engine<1u>
+[ RUN      ] hiprand_cpp_wrapper_qrng/2.hiprand_qrng_default_num_dimensions
+[       OK ] hiprand_cpp_wrapper_qrng/2.hiprand_qrng_default_num_dimensions (0 ms)
+[ RUN      ] hiprand_cpp_wrapper_qrng/2.hiprand_ctor
+[       OK ] hiprand_cpp_wrapper_qrng/2.hiprand_ctor (0 ms)
+[ RUN      ] hiprand_cpp_wrapper_qrng/2.hiprand_dims
+[       OK ] hiprand_cpp_wrapper_qrng/2.hiprand_dims (0 ms)
+[----------] 3 tests from hiprand_cpp_wrapper_qrng/2 (0 ms total)
+
+[----------] 3 tests from hiprand_cpp_wrapper_qrng/3, where TypeParam = hiprand_cpp::sobol64_engine<1u>
+[ RUN      ] hiprand_cpp_wrapper_qrng/3.hiprand_qrng_default_num_dimensions
+[       OK ] hiprand_cpp_wrapper_qrng/3.hiprand_qrng_default_num_dimensions (0 ms)
+[ RUN      ] hiprand_cpp_wrapper_qrng/3.hiprand_ctor
+[       OK ] hiprand_cpp_wrapper_qrng/3.hiprand_ctor (0 ms)
+[ RUN      ] hiprand_cpp_wrapper_qrng/3.hiprand_dims
+[       OK ] hiprand_cpp_wrapper_qrng/3.hiprand_dims (0 ms)
+[----------] 3 tests from hiprand_cpp_wrapper_qrng/3 (0 ms total)
+
+[----------] 12 tests from hiprand/hiprand_ordering
+[ RUN      ] hiprand/hiprand_ordering.hiprand_ordering_test/0
+[       OK ] hiprand/hiprand_ordering.hiprand_ordering_test/0 (0 ms)
+[ RUN      ] hiprand/hiprand_ordering.hiprand_ordering_test/1
+[       OK ] hiprand/hiprand_ordering.hiprand_ordering_test/1 (0 ms)
+[ RUN      ] hiprand/hiprand_ordering.hiprand_ordering_test/2
+[       OK ] hiprand/hiprand_ordering.hiprand_ordering_test/2 (0 ms)
+[ RUN      ] hiprand/hiprand_ordering.hiprand_ordering_test/3
+[       OK ] hiprand/hiprand_ordering.hiprand_ordering_test/3 (0 ms)
+[ RUN      ] hiprand/hiprand_ordering.hiprand_ordering_test/4
+[       OK ] hiprand/hiprand_ordering.hiprand_ordering_test/4 (0 ms)
+[ RUN      ] hiprand/hiprand_ordering.hiprand_ordering_test/5
+[       OK ] hiprand/hiprand_ordering.hiprand_ordering_test/5 (0 ms)
+[ RUN      ] hiprand/hiprand_ordering.hiprand_invalid_ordering_test/0
+[       OK ] hiprand/hiprand_ordering.hiprand_invalid_ordering_test/0 (0 ms)
+[ RUN      ] hiprand/hiprand_ordering.hiprand_invalid_ordering_test/1
+[       OK ] hiprand/hiprand_ordering.hiprand_invalid_ordering_test/1 (0 ms)
+[ RUN      ] hiprand/hiprand_ordering.hiprand_invalid_ordering_test/2
+[       OK ] hiprand/hiprand_ordering.hiprand_invalid_ordering_test/2 (0 ms)
+[ RUN      ] hiprand/hiprand_ordering.hiprand_invalid_ordering_test/3
+[       OK ] hiprand/hiprand_ordering.hiprand_invalid_ordering_test/3 (0 ms)
+[ RUN      ] hiprand/hiprand_ordering.hiprand_invalid_ordering_test/4
+[       OK ] hiprand/hiprand_ordering.hiprand_invalid_ordering_test/4 (0 ms)
+[ RUN      ] hiprand/hiprand_ordering.hiprand_invalid_ordering_test/5
+[       OK ] hiprand/hiprand_ordering.hiprand_invalid_ordering_test/5 (0 ms)
+[----------] 12 tests from hiprand/hiprand_ordering (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 152 tests from 36 test suites ran. (2007 ms total)
+[  PASSED  ] 152 tests.
+Running main() from ./googletest/src/gtest_main.cc
+[==========] Running 123 tests from 18 test suites.
+[----------] Global test environment set-up.
+[----------] 5 tests from hiprand_kernel_h_philox4x32_10
+[ RUN      ] hiprand_kernel_h_philox4x32_10.hiprand_init
+[       OK ] hiprand_kernel_h_philox4x32_10.hiprand_init (270 ms)
+[ RUN      ] hiprand_kernel_h_philox4x32_10.hiprand
+[       OK ] hiprand_kernel_h_philox4x32_10.hiprand (5 ms)
+[ RUN      ] hiprand_kernel_h_philox4x32_10.hiprand_uniform
+[       OK ] hiprand_kernel_h_philox4x32_10.hiprand_uniform (0 ms)
+[ RUN      ] hiprand_kernel_h_philox4x32_10.hiprand_normal
+[       OK ] hiprand_kernel_h_philox4x32_10.hiprand_normal (0 ms)
+[ RUN      ] hiprand_kernel_h_philox4x32_10.hiprand_log_normal
+[       OK ] hiprand_kernel_h_philox4x32_10.hiprand_log_normal (0 ms)
+[----------] 5 tests from hiprand_kernel_h_philox4x32_10 (276 ms total)
+
+[----------] 5 tests from hiprand_kernel_h_mrg32k3a
+[ RUN      ] hiprand_kernel_h_mrg32k3a.hiprand_init
+[       OK ] hiprand_kernel_h_mrg32k3a.hiprand_init (0 ms)
+[ RUN      ] hiprand_kernel_h_mrg32k3a.hiprand
+[       OK ] hiprand_kernel_h_mrg32k3a.hiprand (0 ms)
+[ RUN      ] hiprand_kernel_h_mrg32k3a.hiprand_uniform
+[       OK ] hiprand_kernel_h_mrg32k3a.hiprand_uniform (0 ms)
+[ RUN      ] hiprand_kernel_h_mrg32k3a.hiprand_normal
+[       OK ] hiprand_kernel_h_mrg32k3a.hiprand_normal (0 ms)
+[ RUN      ] hiprand_kernel_h_mrg32k3a.hiprand_log_normal
+[       OK ] hiprand_kernel_h_mrg32k3a.hiprand_log_normal (0 ms)
+[----------] 5 tests from hiprand_kernel_h_mrg32k3a (0 ms total)
+
+[----------] 5 tests from hiprand_kernel_h_xorwow
+[ RUN      ] hiprand_kernel_h_xorwow.hiprand_init
+[       OK ] hiprand_kernel_h_xorwow.hiprand_init (0 ms)
+[ RUN      ] hiprand_kernel_h_xorwow.hiprand
+[       OK ] hiprand_kernel_h_xorwow.hiprand (0 ms)
+[ RUN      ] hiprand_kernel_h_xorwow.hiprand_uniform
+[       OK ] hiprand_kernel_h_xorwow.hiprand_uniform (0 ms)
+[ RUN      ] hiprand_kernel_h_xorwow.hiprand_normal
+[       OK ] hiprand_kernel_h_xorwow.hiprand_normal (0 ms)
+[ RUN      ] hiprand_kernel_h_xorwow.hiprand_log_normal
+[       OK ] hiprand_kernel_h_xorwow.hiprand_log_normal (0 ms)
+[----------] 5 tests from hiprand_kernel_h_xorwow (0 ms total)
+
+[----------] 5 tests from hiprand_kernel_h_default
+[ RUN      ] hiprand_kernel_h_default.hiprand_init
+[       OK ] hiprand_kernel_h_default.hiprand_init (0 ms)
+[ RUN      ] hiprand_kernel_h_default.hiprand
+[       OK ] hiprand_kernel_h_default.hiprand (0 ms)
+[ RUN      ] hiprand_kernel_h_default.hiprand_uniform
+[       OK ] hiprand_kernel_h_default.hiprand_uniform (0 ms)
+[ RUN      ] hiprand_kernel_h_default.hiprand_normal
+[       OK ] hiprand_kernel_h_default.hiprand_normal (0 ms)
+[ RUN      ] hiprand_kernel_h_default.hiprand_log_normal
+[       OK ] hiprand_kernel_h_default.hiprand_log_normal (0 ms)
+[----------] 5 tests from hiprand_kernel_h_default (0 ms total)
+
+[----------] 5 tests from hiprand_kernel_h_sobol_32
+[ RUN      ] hiprand_kernel_h_sobol_32.hiprand_init
+[       OK ] hiprand_kernel_h_sobol_32.hiprand_init (0 ms)
+[ RUN      ] hiprand_kernel_h_sobol_32.hiprand
+[       OK ] hiprand_kernel_h_sobol_32.hiprand (0 ms)
+[ RUN      ] hiprand_kernel_h_sobol_32.hiprand_uniform
+[       OK ] hiprand_kernel_h_sobol_32.hiprand_uniform (0 ms)
+[ RUN      ] hiprand_kernel_h_sobol_32.hiprand_normal
+[       OK ] hiprand_kernel_h_sobol_32.hiprand_normal (0 ms)
+[ RUN      ] hiprand_kernel_h_sobol_32.hiprand_log_normal
+[       OK ] hiprand_kernel_h_sobol_32.hiprand_log_normal (0 ms)
+[----------] 5 tests from hiprand_kernel_h_sobol_32 (0 ms total)
+
+[----------] 5 tests from hiprand_kernel_h_sobol_64
+[ RUN      ] hiprand_kernel_h_sobol_64.hiprand_init
+[       OK ] hiprand_kernel_h_sobol_64.hiprand_init (0 ms)
+[ RUN      ] hiprand_kernel_h_sobol_64.hiprand
+[       OK ] hiprand_kernel_h_sobol_64.hiprand (0 ms)
+[ RUN      ] hiprand_kernel_h_sobol_64.hiprand_uniform
+[       OK ] hiprand_kernel_h_sobol_64.hiprand_uniform (0 ms)
+[ RUN      ] hiprand_kernel_h_sobol_64.hiprand_normal
+[       OK ] hiprand_kernel_h_sobol_64.hiprand_normal (0 ms)
+[ RUN      ] hiprand_kernel_h_sobol_64.hiprand_log_normal
+[       OK ] hiprand_kernel_h_sobol_64.hiprand_log_normal (0 ms)
+[----------] 5 tests from hiprand_kernel_h_sobol_64 (0 ms total)
+
+[----------] 5 tests from hiprand_kernel_h_mtgp_32
+[ RUN      ] hiprand_kernel_h_mtgp_32.hiprand_init
+[       OK ] hiprand_kernel_h_mtgp_32.hiprand_init (0 ms)
+[ RUN      ] hiprand_kernel_h_mtgp_32.hiprand
+[       OK ] hiprand_kernel_h_mtgp_32.hiprand (0 ms)
+[ RUN      ] hiprand_kernel_h_mtgp_32.hiprand_uniform
+[       OK ] hiprand_kernel_h_mtgp_32.hiprand_uniform (0 ms)
+[ RUN      ] hiprand_kernel_h_mtgp_32.hiprand_normal
+[       OK ] hiprand_kernel_h_mtgp_32.hiprand_normal (0 ms)
+[ RUN      ] hiprand_kernel_h_mtgp_32.hiprand_log_normal
+[       OK ] hiprand_kernel_h_mtgp_32.hiprand_log_normal (0 ms)
+[----------] 5 tests from hiprand_kernel_h_mtgp_32 (2 ms total)
+
+[----------] 1 test from sobol_tests/0, where TypeParam = sobol_test_type<hiprandStateSobol32,unsigned int>
+[ RUN      ] sobol_tests/0.sobol_tests
+[       OK ] sobol_tests/0.sobol_tests (0 ms)
+[----------] 1 test from sobol_tests/0 (0 ms total)
+
+[----------] 1 test from sobol_tests/1, where TypeParam = sobol_test_type<hiprandStateSobol64,unsigned long long>
+[ RUN      ] sobol_tests/1.sobol_tests
+[       OK ] sobol_tests/1.sobol_tests (2 ms)
+[----------] 1 test from sobol_tests/1 (2 ms total)
+
+[----------] 1 test from sobol_tests/2, where TypeParam = sobol_test_type<hiprandStateScrambledSobol32,unsigned int>
+[ RUN      ] sobol_tests/2.sobol_tests
+[       OK ] sobol_tests/2.sobol_tests (0 ms)
+[----------] 1 test from sobol_tests/2 (0 ms total)
+
+[----------] 1 test from sobol_tests/3, where TypeParam = sobol_test_type<hiprandStateScrambledSobol64,unsigned long long>
+[ RUN      ] sobol_tests/3.sobol_tests
+[       OK ] sobol_tests/3.sobol_tests (2 ms)
+[----------] 1 test from sobol_tests/3 (2 ms total)
+
+[----------] 12 tests from hiprand_kernel_h_philox4x32_10_poisson/hiprand_kernel_h_philox4x32_10_poisson
+[ RUN      ] hiprand_kernel_h_philox4x32_10_poisson/hiprand_kernel_h_philox4x32_10_poisson.hiprand_poisson/0
+[       OK ] hiprand_kernel_h_philox4x32_10_poisson/hiprand_kernel_h_philox4x32_10_poisson.hiprand_poisson/0 (0 ms)
+[ RUN      ] hiprand_kernel_h_philox4x32_10_poisson/hiprand_kernel_h_philox4x32_10_poisson.hiprand_poisson/1
+[       OK ] hiprand_kernel_h_philox4x32_10_poisson/hiprand_kernel_h_philox4x32_10_poisson.hiprand_poisson/1 (0 ms)
+[ RUN      ] hiprand_kernel_h_philox4x32_10_poisson/hiprand_kernel_h_philox4x32_10_poisson.hiprand_poisson/2
+[       OK ] hiprand_kernel_h_philox4x32_10_poisson/hiprand_kernel_h_philox4x32_10_poisson.hiprand_poisson/2 (0 ms)
+[ RUN      ] hiprand_kernel_h_philox4x32_10_poisson/hiprand_kernel_h_philox4x32_10_poisson.hiprand_poisson/3
+[       OK ] hiprand_kernel_h_philox4x32_10_poisson/hiprand_kernel_h_philox4x32_10_poisson.hiprand_poisson/3 (0 ms)
+[ RUN      ] hiprand_kernel_h_philox4x32_10_poisson/hiprand_kernel_h_philox4x32_10_poisson.hiprand_poisson/4
+[       OK ] hiprand_kernel_h_philox4x32_10_poisson/hiprand_kernel_h_philox4x32_10_poisson.hiprand_poisson/4 (0 ms)
+[ RUN      ] hiprand_kernel_h_philox4x32_10_poisson/hiprand_kernel_h_philox4x32_10_poisson.hiprand_poisson/5
+[       OK ] hiprand_kernel_h_philox4x32_10_poisson/hiprand_kernel_h_philox4x32_10_poisson.hiprand_poisson/5 (0 ms)
+[ RUN      ] hiprand_kernel_h_philox4x32_10_poisson/hiprand_kernel_h_philox4x32_10_poisson.hiprand_discrete/0
+[       OK ] hiprand_kernel_h_philox4x32_10_poisson/hiprand_kernel_h_philox4x32_10_poisson.hiprand_discrete/0 (0 ms)
+[ RUN      ] hiprand_kernel_h_philox4x32_10_poisson/hiprand_kernel_h_philox4x32_10_poisson.hiprand_discrete/1
+[       OK ] hiprand_kernel_h_philox4x32_10_poisson/hiprand_kernel_h_philox4x32_10_poisson.hiprand_discrete/1 (0 ms)
+[ RUN      ] hiprand_kernel_h_philox4x32_10_poisson/hiprand_kernel_h_philox4x32_10_poisson.hiprand_discrete/2
+[       OK ] hiprand_kernel_h_philox4x32_10_poisson/hiprand_kernel_h_philox4x32_10_poisson.hiprand_discrete/2 (0 ms)
+[ RUN      ] hiprand_kernel_h_philox4x32_10_poisson/hiprand_kernel_h_philox4x32_10_poisson.hiprand_discrete/3
+[       OK ] hiprand_kernel_h_philox4x32_10_poisson/hiprand_kernel_h_philox4x32_10_poisson.hiprand_discrete/3 (0 ms)
+[ RUN      ] hiprand_kernel_h_philox4x32_10_poisson/hiprand_kernel_h_philox4x32_10_poisson.hiprand_discrete/4
+[       OK ] hiprand_kernel_h_philox4x32_10_poisson/hiprand_kernel_h_philox4x32_10_poisson.hiprand_discrete/4 (0 ms)
+[ RUN      ] hiprand_kernel_h_philox4x32_10_poisson/hiprand_kernel_h_philox4x32_10_poisson.hiprand_discrete/5
+[       OK ] hiprand_kernel_h_philox4x32_10_poisson/hiprand_kernel_h_philox4x32_10_poisson.hiprand_discrete/5 (0 ms)
+[----------] 12 tests from hiprand_kernel_h_philox4x32_10_poisson/hiprand_kernel_h_philox4x32_10_poisson (4 ms total)
+
+[----------] 12 tests from hiprand_kernel_h_mrg32k3a_poisson/hiprand_kernel_h_mrg32k3a_poisson
+[ RUN      ] hiprand_kernel_h_mrg32k3a_poisson/hiprand_kernel_h_mrg32k3a_poisson.hiprand_poisson/0
+[       OK ] hiprand_kernel_h_mrg32k3a_poisson/hiprand_kernel_h_mrg32k3a_poisson.hiprand_poisson/0 (0 ms)
+[ RUN      ] hiprand_kernel_h_mrg32k3a_poisson/hiprand_kernel_h_mrg32k3a_poisson.hiprand_poisson/1
+[       OK ] hiprand_kernel_h_mrg32k3a_poisson/hiprand_kernel_h_mrg32k3a_poisson.hiprand_poisson/1 (0 ms)
+[ RUN      ] hiprand_kernel_h_mrg32k3a_poisson/hiprand_kernel_h_mrg32k3a_poisson.hiprand_poisson/2
+[       OK ] hiprand_kernel_h_mrg32k3a_poisson/hiprand_kernel_h_mrg32k3a_poisson.hiprand_poisson/2 (0 ms)
+[ RUN      ] hiprand_kernel_h_mrg32k3a_poisson/hiprand_kernel_h_mrg32k3a_poisson.hiprand_poisson/3
+[       OK ] hiprand_kernel_h_mrg32k3a_poisson/hiprand_kernel_h_mrg32k3a_poisson.hiprand_poisson/3 (0 ms)
+[ RUN      ] hiprand_kernel_h_mrg32k3a_poisson/hiprand_kernel_h_mrg32k3a_poisson.hiprand_poisson/4
+[       OK ] hiprand_kernel_h_mrg32k3a_poisson/hiprand_kernel_h_mrg32k3a_poisson.hiprand_poisson/4 (0 ms)
+[ RUN      ] hiprand_kernel_h_mrg32k3a_poisson/hiprand_kernel_h_mrg32k3a_poisson.hiprand_poisson/5
+[       OK ] hiprand_kernel_h_mrg32k3a_poisson/hiprand_kernel_h_mrg32k3a_poisson.hiprand_poisson/5 (0 ms)
+[ RUN      ] hiprand_kernel_h_mrg32k3a_poisson/hiprand_kernel_h_mrg32k3a_poisson.hiprand_discrete/0
+[       OK ] hiprand_kernel_h_mrg32k3a_poisson/hiprand_kernel_h_mrg32k3a_poisson.hiprand_discrete/0 (0 ms)
+[ RUN      ] hiprand_kernel_h_mrg32k3a_poisson/hiprand_kernel_h_mrg32k3a_poisson.hiprand_discrete/1
+[       OK ] hiprand_kernel_h_mrg32k3a_poisson/hiprand_kernel_h_mrg32k3a_poisson.hiprand_discrete/1 (0 ms)
+[ RUN      ] hiprand_kernel_h_mrg32k3a_poisson/hiprand_kernel_h_mrg32k3a_poisson.hiprand_discrete/2
+[       OK ] hiprand_kernel_h_mrg32k3a_poisson/hiprand_kernel_h_mrg32k3a_poisson.hiprand_discrete/2 (0 ms)
+[ RUN      ] hiprand_kernel_h_mrg32k3a_poisson/hiprand_kernel_h_mrg32k3a_poisson.hiprand_discrete/3
+[       OK ] hiprand_kernel_h_mrg32k3a_poisson/hiprand_kernel_h_mrg32k3a_poisson.hiprand_discrete/3 (0 ms)
+[ RUN      ] hiprand_kernel_h_mrg32k3a_poisson/hiprand_kernel_h_mrg32k3a_poisson.hiprand_discrete/4
+[       OK ] hiprand_kernel_h_mrg32k3a_poisson/hiprand_kernel_h_mrg32k3a_poisson.hiprand_discrete/4 (0 ms)
+[ RUN      ] hiprand_kernel_h_mrg32k3a_poisson/hiprand_kernel_h_mrg32k3a_poisson.hiprand_discrete/5
+[       OK ] hiprand_kernel_h_mrg32k3a_poisson/hiprand_kernel_h_mrg32k3a_poisson.hiprand_discrete/5 (0 ms)
+[----------] 12 tests from hiprand_kernel_h_mrg32k3a_poisson/hiprand_kernel_h_mrg32k3a_poisson (4 ms total)
+
+[----------] 12 tests from hiprand_kernel_h_xorwow_poisson/hiprand_kernel_h_xorwow_poisson
+[ RUN      ] hiprand_kernel_h_xorwow_poisson/hiprand_kernel_h_xorwow_poisson.hiprand_poisson/0
+[       OK ] hiprand_kernel_h_xorwow_poisson/hiprand_kernel_h_xorwow_poisson.hiprand_poisson/0 (0 ms)
+[ RUN      ] hiprand_kernel_h_xorwow_poisson/hiprand_kernel_h_xorwow_poisson.hiprand_poisson/1
+[       OK ] hiprand_kernel_h_xorwow_poisson/hiprand_kernel_h_xorwow_poisson.hiprand_poisson/1 (0 ms)
+[ RUN      ] hiprand_kernel_h_xorwow_poisson/hiprand_kernel_h_xorwow_poisson.hiprand_poisson/2
+[       OK ] hiprand_kernel_h_xorwow_poisson/hiprand_kernel_h_xorwow_poisson.hiprand_poisson/2 (0 ms)
+[ RUN      ] hiprand_kernel_h_xorwow_poisson/hiprand_kernel_h_xorwow_poisson.hiprand_poisson/3
+[       OK ] hiprand_kernel_h_xorwow_poisson/hiprand_kernel_h_xorwow_poisson.hiprand_poisson/3 (0 ms)
+[ RUN      ] hiprand_kernel_h_xorwow_poisson/hiprand_kernel_h_xorwow_poisson.hiprand_poisson/4
+[       OK ] hiprand_kernel_h_xorwow_poisson/hiprand_kernel_h_xorwow_poisson.hiprand_poisson/4 (0 ms)
+[ RUN      ] hiprand_kernel_h_xorwow_poisson/hiprand_kernel_h_xorwow_poisson.hiprand_poisson/5
+[       OK ] hiprand_kernel_h_xorwow_poisson/hiprand_kernel_h_xorwow_poisson.hiprand_poisson/5 (0 ms)
+[ RUN      ] hiprand_kernel_h_xorwow_poisson/hiprand_kernel_h_xorwow_poisson.hiprand_discrete/0
+[       OK ] hiprand_kernel_h_xorwow_poisson/hiprand_kernel_h_xorwow_poisson.hiprand_discrete/0 (0 ms)
+[ RUN      ] hiprand_kernel_h_xorwow_poisson/hiprand_kernel_h_xorwow_poisson.hiprand_discrete/1
+[       OK ] hiprand_kernel_h_xorwow_poisson/hiprand_kernel_h_xorwow_poisson.hiprand_discrete/1 (0 ms)
+[ RUN      ] hiprand_kernel_h_xorwow_poisson/hiprand_kernel_h_xorwow_poisson.hiprand_discrete/2
+[       OK ] hiprand_kernel_h_xorwow_poisson/hiprand_kernel_h_xorwow_poisson.hiprand_discrete/2 (0 ms)
+[ RUN      ] hiprand_kernel_h_xorwow_poisson/hiprand_kernel_h_xorwow_poisson.hiprand_discrete/3
+[       OK ] hiprand_kernel_h_xorwow_poisson/hiprand_kernel_h_xorwow_poisson.hiprand_discrete/3 (0 ms)
+[ RUN      ] hiprand_kernel_h_xorwow_poisson/hiprand_kernel_h_xorwow_poisson.hiprand_discrete/4
+[       OK ] hiprand_kernel_h_xorwow_poisson/hiprand_kernel_h_xorwow_poisson.hiprand_discrete/4 (0 ms)
+[ RUN      ] hiprand_kernel_h_xorwow_poisson/hiprand_kernel_h_xorwow_poisson.hiprand_discrete/5
+[       OK ] hiprand_kernel_h_xorwow_poisson/hiprand_kernel_h_xorwow_poisson.hiprand_discrete/5 (0 ms)
+[----------] 12 tests from hiprand_kernel_h_xorwow_poisson/hiprand_kernel_h_xorwow_poisson (4 ms total)
+
+[----------] 12 tests from hiprand_kernel_h_default_poisson/hiprand_kernel_h_default_poisson
+[ RUN      ] hiprand_kernel_h_default_poisson/hiprand_kernel_h_default_poisson.hiprand_poisson/0
+[       OK ] hiprand_kernel_h_default_poisson/hiprand_kernel_h_default_poisson.hiprand_poisson/0 (0 ms)
+[ RUN      ] hiprand_kernel_h_default_poisson/hiprand_kernel_h_default_poisson.hiprand_poisson/1
+[       OK ] hiprand_kernel_h_default_poisson/hiprand_kernel_h_default_poisson.hiprand_poisson/1 (0 ms)
+[ RUN      ] hiprand_kernel_h_default_poisson/hiprand_kernel_h_default_poisson.hiprand_poisson/2
+[       OK ] hiprand_kernel_h_default_poisson/hiprand_kernel_h_default_poisson.hiprand_poisson/2 (0 ms)
+[ RUN      ] hiprand_kernel_h_default_poisson/hiprand_kernel_h_default_poisson.hiprand_poisson/3
+[       OK ] hiprand_kernel_h_default_poisson/hiprand_kernel_h_default_poisson.hiprand_poisson/3 (0 ms)
+[ RUN      ] hiprand_kernel_h_default_poisson/hiprand_kernel_h_default_poisson.hiprand_poisson/4
+[       OK ] hiprand_kernel_h_default_poisson/hiprand_kernel_h_default_poisson.hiprand_poisson/4 (0 ms)
+[ RUN      ] hiprand_kernel_h_default_poisson/hiprand_kernel_h_default_poisson.hiprand_poisson/5
+[       OK ] hiprand_kernel_h_default_poisson/hiprand_kernel_h_default_poisson.hiprand_poisson/5 (0 ms)
+[ RUN      ] hiprand_kernel_h_default_poisson/hiprand_kernel_h_default_poisson.hiprand_discrete/0
+[       OK ] hiprand_kernel_h_default_poisson/hiprand_kernel_h_default_poisson.hiprand_discrete/0 (0 ms)
+[ RUN      ] hiprand_kernel_h_default_poisson/hiprand_kernel_h_default_poisson.hiprand_discrete/1
+[       OK ] hiprand_kernel_h_default_poisson/hiprand_kernel_h_default_poisson.hiprand_discrete/1 (0 ms)
+[ RUN      ] hiprand_kernel_h_default_poisson/hiprand_kernel_h_default_poisson.hiprand_discrete/2
+[       OK ] hiprand_kernel_h_default_poisson/hiprand_kernel_h_default_poisson.hiprand_discrete/2 (0 ms)
+[ RUN      ] hiprand_kernel_h_default_poisson/hiprand_kernel_h_default_poisson.hiprand_discrete/3
+[       OK ] hiprand_kernel_h_default_poisson/hiprand_kernel_h_default_poisson.hiprand_discrete/3 (0 ms)
+[ RUN      ] hiprand_kernel_h_default_poisson/hiprand_kernel_h_default_poisson.hiprand_discrete/4
+[       OK ] hiprand_kernel_h_default_poisson/hiprand_kernel_h_default_poisson.hiprand_discrete/4 (0 ms)
+[ RUN      ] hiprand_kernel_h_default_poisson/hiprand_kernel_h_default_poisson.hiprand_discrete/5
+[       OK ] hiprand_kernel_h_default_poisson/hiprand_kernel_h_default_poisson.hiprand_discrete/5 (0 ms)
+[----------] 12 tests from hiprand_kernel_h_default_poisson/hiprand_kernel_h_default_poisson (4 ms total)
+
+[----------] 12 tests from hiprand_kernel_h_sobol_32_poisson/hiprand_kernel_h_sobol_32_poisson
+[ RUN      ] hiprand_kernel_h_sobol_32_poisson/hiprand_kernel_h_sobol_32_poisson.hiprand_poisson/0
+[       OK ] hiprand_kernel_h_sobol_32_poisson/hiprand_kernel_h_sobol_32_poisson.hiprand_poisson/0 (0 ms)
+[ RUN      ] hiprand_kernel_h_sobol_32_poisson/hiprand_kernel_h_sobol_32_poisson.hiprand_poisson/1
+[       OK ] hiprand_kernel_h_sobol_32_poisson/hiprand_kernel_h_sobol_32_poisson.hiprand_poisson/1 (0 ms)
+[ RUN      ] hiprand_kernel_h_sobol_32_poisson/hiprand_kernel_h_sobol_32_poisson.hiprand_poisson/2
+[       OK ] hiprand_kernel_h_sobol_32_poisson/hiprand_kernel_h_sobol_32_poisson.hiprand_poisson/2 (0 ms)
+[ RUN      ] hiprand_kernel_h_sobol_32_poisson/hiprand_kernel_h_sobol_32_poisson.hiprand_poisson/3
+[       OK ] hiprand_kernel_h_sobol_32_poisson/hiprand_kernel_h_sobol_32_poisson.hiprand_poisson/3 (0 ms)
+[ RUN      ] hiprand_kernel_h_sobol_32_poisson/hiprand_kernel_h_sobol_32_poisson.hiprand_poisson/4
+[       OK ] hiprand_kernel_h_sobol_32_poisson/hiprand_kernel_h_sobol_32_poisson.hiprand_poisson/4 (0 ms)
+[ RUN      ] hiprand_kernel_h_sobol_32_poisson/hiprand_kernel_h_sobol_32_poisson.hiprand_poisson/5
+[       OK ] hiprand_kernel_h_sobol_32_poisson/hiprand_kernel_h_sobol_32_poisson.hiprand_poisson/5 (0 ms)
+[ RUN      ] hiprand_kernel_h_sobol_32_poisson/hiprand_kernel_h_sobol_32_poisson.hiprand_discrete/0
+[       OK ] hiprand_kernel_h_sobol_32_poisson/hiprand_kernel_h_sobol_32_poisson.hiprand_discrete/0 (0 ms)
+[ RUN      ] hiprand_kernel_h_sobol_32_poisson/hiprand_kernel_h_sobol_32_poisson.hiprand_discrete/1
+[       OK ] hiprand_kernel_h_sobol_32_poisson/hiprand_kernel_h_sobol_32_poisson.hiprand_discrete/1 (0 ms)
+[ RUN      ] hiprand_kernel_h_sobol_32_poisson/hiprand_kernel_h_sobol_32_poisson.hiprand_discrete/2
+[       OK ] hiprand_kernel_h_sobol_32_poisson/hiprand_kernel_h_sobol_32_poisson.hiprand_discrete/2 (0 ms)
+[ RUN      ] hiprand_kernel_h_sobol_32_poisson/hiprand_kernel_h_sobol_32_poisson.hiprand_discrete/3
+[       OK ] hiprand_kernel_h_sobol_32_poisson/hiprand_kernel_h_sobol_32_poisson.hiprand_discrete/3 (0 ms)
+[ RUN      ] hiprand_kernel_h_sobol_32_poisson/hiprand_kernel_h_sobol_32_poisson.hiprand_discrete/4
+[       OK ] hiprand_kernel_h_sobol_32_poisson/hiprand_kernel_h_sobol_32_poisson.hiprand_discrete/4 (0 ms)
+[ RUN      ] hiprand_kernel_h_sobol_32_poisson/hiprand_kernel_h_sobol_32_poisson.hiprand_discrete/5
+[       OK ] hiprand_kernel_h_sobol_32_poisson/hiprand_kernel_h_sobol_32_poisson.hiprand_discrete/5 (0 ms)
+[----------] 12 tests from hiprand_kernel_h_sobol_32_poisson/hiprand_kernel_h_sobol_32_poisson (4 ms total)
+
+[----------] 12 tests from hiprand_kernel_h_sobol_64_poisson/hiprand_kernel_h_sobol_64_poisson
+[ RUN      ] hiprand_kernel_h_sobol_64_poisson/hiprand_kernel_h_sobol_64_poisson.hiprand_poisson/0
+[       OK ] hiprand_kernel_h_sobol_64_poisson/hiprand_kernel_h_sobol_64_poisson.hiprand_poisson/0 (0 ms)
+[ RUN      ] hiprand_kernel_h_sobol_64_poisson/hiprand_kernel_h_sobol_64_poisson.hiprand_poisson/1
+[       OK ] hiprand_kernel_h_sobol_64_poisson/hiprand_kernel_h_sobol_64_poisson.hiprand_poisson/1 (0 ms)
+[ RUN      ] hiprand_kernel_h_sobol_64_poisson/hiprand_kernel_h_sobol_64_poisson.hiprand_poisson/2
+[       OK ] hiprand_kernel_h_sobol_64_poisson/hiprand_kernel_h_sobol_64_poisson.hiprand_poisson/2 (0 ms)
+[ RUN      ] hiprand_kernel_h_sobol_64_poisson/hiprand_kernel_h_sobol_64_poisson.hiprand_poisson/3
+[       OK ] hiprand_kernel_h_sobol_64_poisson/hiprand_kernel_h_sobol_64_poisson.hiprand_poisson/3 (0 ms)
+[ RUN      ] hiprand_kernel_h_sobol_64_poisson/hiprand_kernel_h_sobol_64_poisson.hiprand_poisson/4
+[       OK ] hiprand_kernel_h_sobol_64_poisson/hiprand_kernel_h_sobol_64_poisson.hiprand_poisson/4 (0 ms)
+[ RUN      ] hiprand_kernel_h_sobol_64_poisson/hiprand_kernel_h_sobol_64_poisson.hiprand_poisson/5
+[       OK ] hiprand_kernel_h_sobol_64_poisson/hiprand_kernel_h_sobol_64_poisson.hiprand_poisson/5 (0 ms)
+[ RUN      ] hiprand_kernel_h_sobol_64_poisson/hiprand_kernel_h_sobol_64_poisson.hiprand_discrete/0
+[       OK ] hiprand_kernel_h_sobol_64_poisson/hiprand_kernel_h_sobol_64_poisson.hiprand_discrete/0 (0 ms)
+[ RUN      ] hiprand_kernel_h_sobol_64_poisson/hiprand_kernel_h_sobol_64_poisson.hiprand_discrete/1
+[       OK ] hiprand_kernel_h_sobol_64_poisson/hiprand_kernel_h_sobol_64_poisson.hiprand_discrete/1 (0 ms)
+[ RUN      ] hiprand_kernel_h_sobol_64_poisson/hiprand_kernel_h_sobol_64_poisson.hiprand_discrete/2
+[       OK ] hiprand_kernel_h_sobol_64_poisson/hiprand_kernel_h_sobol_64_poisson.hiprand_discrete/2 (0 ms)
+[ RUN      ] hiprand_kernel_h_sobol_64_poisson/hiprand_kernel_h_sobol_64_poisson.hiprand_discrete/3
+[       OK ] hiprand_kernel_h_sobol_64_poisson/hiprand_kernel_h_sobol_64_poisson.hiprand_discrete/3 (0 ms)
+[ RUN      ] hiprand_kernel_h_sobol_64_poisson/hiprand_kernel_h_sobol_64_poisson.hiprand_discrete/4
+[       OK ] hiprand_kernel_h_sobol_64_poisson/hiprand_kernel_h_sobol_64_poisson.hiprand_discrete/4 (0 ms)
+[ RUN      ] hiprand_kernel_h_sobol_64_poisson/hiprand_kernel_h_sobol_64_poisson.hiprand_discrete/5
+[       OK ] hiprand_kernel_h_sobol_64_poisson/hiprand_kernel_h_sobol_64_poisson.hiprand_discrete/5 (0 ms)
+[----------] 12 tests from hiprand_kernel_h_sobol_64_poisson/hiprand_kernel_h_sobol_64_poisson (4 ms total)
+
+[----------] 12 tests from hiprand_kernel_h_mtgp_32_poisson/hiprand_kernel_h_mtgp_32_poisson
+[ RUN      ] hiprand_kernel_h_mtgp_32_poisson/hiprand_kernel_h_mtgp_32_poisson.hiprand_poisson/0
+[       OK ] hiprand_kernel_h_mtgp_32_poisson/hiprand_kernel_h_mtgp_32_poisson.hiprand_poisson/0 (0 ms)
+[ RUN      ] hiprand_kernel_h_mtgp_32_poisson/hiprand_kernel_h_mtgp_32_poisson.hiprand_poisson/1
+[       OK ] hiprand_kernel_h_mtgp_32_poisson/hiprand_kernel_h_mtgp_32_poisson.hiprand_poisson/1 (0 ms)
+[ RUN      ] hiprand_kernel_h_mtgp_32_poisson/hiprand_kernel_h_mtgp_32_poisson.hiprand_poisson/2
+[       OK ] hiprand_kernel_h_mtgp_32_poisson/hiprand_kernel_h_mtgp_32_poisson.hiprand_poisson/2 (0 ms)
+[ RUN      ] hiprand_kernel_h_mtgp_32_poisson/hiprand_kernel_h_mtgp_32_poisson.hiprand_poisson/3
+[       OK ] hiprand_kernel_h_mtgp_32_poisson/hiprand_kernel_h_mtgp_32_poisson.hiprand_poisson/3 (1 ms)
+[ RUN      ] hiprand_kernel_h_mtgp_32_poisson/hiprand_kernel_h_mtgp_32_poisson.hiprand_poisson/4
+[       OK ] hiprand_kernel_h_mtgp_32_poisson/hiprand_kernel_h_mtgp_32_poisson.hiprand_poisson/4 (0 ms)
+[ RUN      ] hiprand_kernel_h_mtgp_32_poisson/hiprand_kernel_h_mtgp_32_poisson.hiprand_poisson/5
+[       OK ] hiprand_kernel_h_mtgp_32_poisson/hiprand_kernel_h_mtgp_32_poisson.hiprand_poisson/5 (0 ms)
+[ RUN      ] hiprand_kernel_h_mtgp_32_poisson/hiprand_kernel_h_mtgp_32_poisson.hiprand_discrete/0
+[       OK ] hiprand_kernel_h_mtgp_32_poisson/hiprand_kernel_h_mtgp_32_poisson.hiprand_discrete/0 (0 ms)
+[ RUN      ] hiprand_kernel_h_mtgp_32_poisson/hiprand_kernel_h_mtgp_32_poisson.hiprand_discrete/1
+[       OK ] hiprand_kernel_h_mtgp_32_poisson/hiprand_kernel_h_mtgp_32_poisson.hiprand_discrete/1 (0 ms)
+[ RUN      ] hiprand_kernel_h_mtgp_32_poisson/hiprand_kernel_h_mtgp_32_poisson.hiprand_discrete/2
+[       OK ] hiprand_kernel_h_mtgp_32_poisson/hiprand_kernel_h_mtgp_32_poisson.hiprand_discrete/2 (0 ms)
+[ RUN      ] hiprand_kernel_h_mtgp_32_poisson/hiprand_kernel_h_mtgp_32_poisson.hiprand_discrete/3
+[       OK ] hiprand_kernel_h_mtgp_32_poisson/hiprand_kernel_h_mtgp_32_poisson.hiprand_discrete/3 (0 ms)
+[ RUN      ] hiprand_kernel_h_mtgp_32_poisson/hiprand_kernel_h_mtgp_32_poisson.hiprand_discrete/4
+[       OK ] hiprand_kernel_h_mtgp_32_poisson/hiprand_kernel_h_mtgp_32_poisson.hiprand_discrete/4 (0 ms)
+[ RUN      ] hiprand_kernel_h_mtgp_32_poisson/hiprand_kernel_h_mtgp_32_poisson.hiprand_discrete/5
+[       OK ] hiprand_kernel_h_mtgp_32_poisson/hiprand_kernel_h_mtgp_32_poisson.hiprand_discrete/5 (0 ms)
+[----------] 12 tests from hiprand_kernel_h_mtgp_32_poisson/hiprand_kernel_h_mtgp_32_poisson (9 ms total)
+
+[----------] Global test environment tear-down
+[==========] 123 tests from 18 test suites ran. (324 ms total)
+[  PASSED  ] 123 tests.
+Running main() from ./googletest/src/gtest_main.cc
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from hiprand_linkage_tests
+[ RUN      ] hiprand_linkage_tests.get_version_test
+[       OK ] hiprand_linkage_tests.get_version_test (0 ms)
+[----------] 1 test from hiprand_linkage_tests (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+autopkgtest [00:07:47]: test libhiprand1-tests: -----------------------]
+autopkgtest [00:07:48]: test libhiprand1-tests:  - - - - - - - - - - results - - - - - - - - - -
+libhiprand1-tests    PASS
+autopkgtest [00:07:48]: @@@@@@@@@@@@@@@@@@@@ summary
+libhiprand1-tests    PASS
