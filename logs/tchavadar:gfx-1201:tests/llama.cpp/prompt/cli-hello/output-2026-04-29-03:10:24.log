@@ -1,0 +1,40 @@
+ggml_cuda_init: found 1 ROCm devices (Total VRAM: 32624 MiB):
+  Device 0: AMD Radeon AI PRO R9700, gfx1201 (0x1201), VMM: no, Wave Size: 32, VRAM: 32624 MiB
+load_backend: loaded ROCm backend from /usr/lib/x86_64-linux-gnu/ggml/backends0/libggml-hip.so
+load_backend: loaded CPU backend from /usr/lib/x86_64-linux-gnu/ggml/backends0/libggml-cpu-haswell.so
+
+Loading model... |-\|/-\ 
+
+
+▄▄ ▄▄
+██ ██
+██ ██  ▀▀█▄ ███▄███▄  ▀▀█▄    ▄████ ████▄ ████▄
+██ ██ ▄█▀██ ██ ██ ██ ▄█▀██    ██    ██ ██ ██ ██
+██ ██ ▀█▄██ ██ ██ ██ ▀█▄██ ██ ▀████ ████▀ ████▀
+                                    ██    ██
+                                    ▀▀    ▀▀
+
+build      : b8681-Debian
+model      : ggml-org/gemma-3-1b-it-GGUF
+modalities : text
+
+available commands:
+  /exit or Ctrl+C     stop or exit
+  /regen              regenerate the last response
+  /clear              clear the chat history
+  /read <file>        add a text file
+  /glob <pattern>     add text files using globbing pattern
+
+
+> Hello Moto!
+
+| Hello there! How’s your day going so far? 😊 
+
+Is there anything you'd like to chat about or any help I can offer?llama_memory_breakdown_print: | memory breakdown [MiB]   | total    free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - ROCm0 (AI PRO R9700) | 32624 = 30950 + (1426 =   762 +     150 +     514) +         247 |
+llama_memory_breakdown_print: |   - Host                 |                   376 =   306 +       0 +      70                |
+
+
+[ Prompt: 720.3 t/s | Generation: 196.3 t/s ]
+
+Exiting...
