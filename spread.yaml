@@ -49,8 +49,7 @@ backends:
     systems:
       - gfx-908:
           username: canonical
-          password: ubuntu
-          # ssh-rsa-key: '$(HOST: echo "$SPREAD_SSH_KEY")'
+          ssh-rsa-key: '$(HOST: echo "$SPREAD_SSH_KEY")'
           # ssh-key-pass: '$(HOST: echo "$SPREAD_SSH_KEY_PASS")'
           environment:
             DEB_BUILD_OPTIONS: "parallel=79"
