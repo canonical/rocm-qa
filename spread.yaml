@@ -77,11 +77,11 @@ prepare: |
 
   # Configure profile devices
   lxc profile device add rocm-gpu root disk path=/ pool=rocm-gpu-pool
-  lxc profile device add rocm-gpu kfd unix-char path=/dev/kfd mode=0666 uid=0 gid=992 required=true
+  lxc profile device add rocm-gpu kfd unix-char path=/dev/kfd mode=0666 uid=0 gid=990 required=true
 
   for i in /dev/dri/renderD*; do
     name=$(basename "$i")
-    lxc profile device add rocm-gpu "$name" unix-char path="$i" mode=0666 uid=0 gid=992 required=true
+    lxc profile device add rocm-gpu "$name" unix-char path="$i" mode=0666 uid=0 gid=990 required=true
   done
 
   lxc profile device add rocm-gpu eth0 nic network=lxdbr0
