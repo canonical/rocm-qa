@@ -1,0 +1,20 @@
+From: Cordell Bloor <cgmb@debian.org>
+Date: Mon, 22 Sep 2025 15:04:21 -0600
+Subject: fix hip-clang path
+
+Forwarded: not-needed
+---
+ amd/hipcc/src/hipBin_amd.h | 1 -
+ 1 file changed, 1 deletion(-)
+
+--- a/amd/hipcc/src/hipBin_amd.h
++++ b/amd/hipcc/src/hipBin_amd.h
+@@ -208,7 +208,7 @@
+     } else {
+       compilerPath = getRoccmPath();
+       hipClangPath = compilerPath;
+-      hipClangPath /= "lib/llvm/bin";
++      hipClangPath /= "lib/llvm-21/bin";
+     }
+ 
+     compilerPath = hipClangPath.string();

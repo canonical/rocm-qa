@@ -1,0 +1,5 @@
+usr/bin/hipvars.pm
+usr/bin/hipconfig
+usr/hip/*
+usr/share/doc/*
+

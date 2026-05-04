@@ -1,0 +1,9 @@
+---
+include:
+  - https://salsa.debian.org/salsa-ci-team/pipeline/raw/master/recipes/debian.yml
+
+variables:
+  RELEASE: "experimental"
+  SALSA_CI_PIUPARTS_PRE_INSTALL_SCRIPT: "debian/ci-piuparts.sh"
+  # hipcc is for 64-bit architectures
+  SALSA_CI_DISABLE_BUILD_PACKAGE_I386: 1

@@ -1,0 +1,7 @@
+++ mktemp -d
++ OUT=/tmp/tmp.SzzA24nWRR
++ hipcc -o /tmp/tmp.SzzA24nWRR/test test.cpp
++ /tmp/tmp.SzzA24nWRR/test
+Agent Radeon 8060S Graphics
+System version 11.5
+TESTS PASSED!

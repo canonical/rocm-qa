@@ -1,0 +1,183 @@
+autopkgtest [03:08:11]: starting date and time: 2026-05-04 03:08:11+0000
+autopkgtest [03:08:11]: version 5.55
+autopkgtest [03:08:11]: host lxc-sessionizer-canonical-1; command line: /usr/bin/autopkgtest rocm-hipamd -U '--setup-commands=add-apt-repository -ss -y' '--setup-commands=add-apt-repository ppa:bullwinkle-team/rocm-devel-21 --enable-source -y' -- lxd ubuntu-daily:resolute --profile=rocm-gpu
+autopkgtest [03:10:18]: testbed dpkg architecture: amd64
+autopkgtest [03:10:19]: testbed apt version: 3.2.0
+autopkgtest [03:10:19]: @@@@@@@@@@@@@@@@@@@@ test bed setup
+autopkgtest [03:10:19]: updating testbed package index (apt update)
+Get:1 http://security.ubuntu.com/ubuntu resolute-security InRelease [136 kB]
+Get:2 http://archive.ubuntu.com/ubuntu resolute InRelease [136 kB]
+Get:3 http://security.ubuntu.com/ubuntu resolute-security/main amd64 Packages [14.6 kB]
+Get:4 http://security.ubuntu.com/ubuntu resolute-security/main Translation-en [7692 B]
+Get:5 http://security.ubuntu.com/ubuntu resolute-security/main amd64 Components [792 B]
+Get:6 http://security.ubuntu.com/ubuntu resolute-security/main amd64 c-n-f Metadata [704 B]
+Get:7 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Packages [26.9 kB]
+Get:8 http://security.ubuntu.com/ubuntu resolute-security/universe Translation-en [7920 B]
+Get:9 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Components [15.9 kB]
+Get:10 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 c-n-f Metadata [612 B]
+Get:11 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 Components [212 B]
+Get:12 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 c-n-f Metadata [120 B]
+Get:13 http://archive.ubuntu.com/ubuntu resolute-updates InRelease [136 kB]
+Get:14 http://archive.ubuntu.com/ubuntu resolute-backports InRelease [136 kB]
+Get:15 http://archive.ubuntu.com/ubuntu resolute/main amd64 Packages [1480 kB]
+Get:16 http://archive.ubuntu.com/ubuntu resolute/main Translation-en [524 kB]
+Get:17 http://archive.ubuntu.com/ubuntu resolute/main amd64 Components [395 kB]
+Get:18 http://archive.ubuntu.com/ubuntu resolute/main amd64 c-n-f Metadata [32.4 kB]
+Get:19 http://archive.ubuntu.com/ubuntu resolute/universe amd64 Packages [16.0 MB]
+Get:20 http://archive.ubuntu.com/ubuntu resolute/universe Translation-en [6329 kB]
+Get:21 http://archive.ubuntu.com/ubuntu resolute/universe amd64 Components [4556 kB]
+Get:22 http://archive.ubuntu.com/ubuntu resolute/universe amd64 c-n-f Metadata [313 kB]
+Get:23 http://archive.ubuntu.com/ubuntu resolute/restricted amd64 Packages [152 kB]
+Get:24 http://archive.ubuntu.com/ubuntu resolute/restricted amd64 Components [556 B]
+Get:25 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 Packages [290 kB]
+Get:26 http://archive.ubuntu.com/ubuntu resolute/multiverse Translation-en [127 kB]
+Get:27 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 Components [50.0 kB]
+Get:28 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 c-n-f Metadata [8276 B]
+Get:29 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Packages [50.2 kB]
+Get:30 http://archive.ubuntu.com/ubuntu resolute-updates/main Translation-en [13.3 kB]
+Get:31 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Components [792 B]
+Get:32 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 c-n-f Metadata [872 B]
+Get:33 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Packages [26.9 kB]
+Get:34 http://archive.ubuntu.com/ubuntu resolute-updates/universe Translation-en [7920 B]
+Get:35 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Components [15.9 kB]
+Get:36 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 c-n-f Metadata [608 B]
+Get:37 http://archive.ubuntu.com/ubuntu resolute-updates/restricted amd64 Packages [29.4 kB]
+Get:38 http://archive.ubuntu.com/ubuntu resolute-updates/restricted Translation-en [6588 B]
+Get:39 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 Components [216 B]
+Get:40 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 c-n-f Metadata [116 B]
+Get:41 http://archive.ubuntu.com/ubuntu resolute-backports/main amd64 Components [212 B]
+Get:42 http://archive.ubuntu.com/ubuntu resolute-backports/main amd64 c-n-f Metadata [112 B]
+Get:43 http://archive.ubuntu.com/ubuntu resolute-backports/universe amd64 Components [216 B]
+Get:44 http://archive.ubuntu.com/ubuntu resolute-backports/universe amd64 c-n-f Metadata [116 B]
+Get:45 http://archive.ubuntu.com/ubuntu resolute-backports/restricted amd64 Components [216 B]
+Get:46 http://archive.ubuntu.com/ubuntu resolute-backports/restricted amd64 c-n-f Metadata [120 B]
+Get:47 http://archive.ubuntu.com/ubuntu resolute-backports/multiverse amd64 Components [216 B]
+Get:48 http://archive.ubuntu.com/ubuntu resolute-backports/multiverse amd64 c-n-f Metadata [120 B]
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 31.0 MB in 5s (6560 kB/s)
+Reading package lists...
+autopkgtest [03:10:28]: testbed release detected to be: resolute
+autopkgtest [03:10:28]: updating testbed package index (apt update)
+Hit:1 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Reading package lists...
+Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:2 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Get:4 http://security.ubuntu.com/ubuntu resolute-security/universe Sources [24.2 kB]
+Hit:5 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Get:6 http://archive.ubuntu.com/ubuntu resolute/universe Sources [13.4 MB]
+Get:7 http://security.ubuntu.com/ubuntu resolute-security/main Sources [10.3 kB]
+Get:8 http://archive.ubuntu.com/ubuntu resolute/multiverse Sources [215 kB]
+Get:9 http://archive.ubuntu.com/ubuntu resolute/main Sources [1002 kB]
+Get:10 http://archive.ubuntu.com/ubuntu resolute/restricted Sources [18.6 kB]
+Get:11 http://archive.ubuntu.com/ubuntu resolute-updates/restricted Sources [3300 B]
+Get:12 http://archive.ubuntu.com/ubuntu resolute-updates/universe Sources [24.2 kB]
+Get:13 http://archive.ubuntu.com/ubuntu resolute-updates/main Sources [15.2 kB]
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 14.7 MB in 2s (8490 kB/s)
+Reading package lists...
+Enabling deb-src for all repositories.
+Added: ## Ubuntu distribution repository
+##
+## The following settings can be adjusted to configure which packages to use from Ubuntu.
+## Mirror your choices (except for URIs and Suites) in the security section below to
+## ensure timely security updates.
+##
+## Types: Append deb-src to enable the fetching of source package.
+## URIs: A URL to the repository (you may add multiple URLs)
+## Suites: The following additional suites can be configured
+##   <name>-updates   - Major bug fix updates produced after the final release of the
+##                      distribution.
+##   <name>-backports - software from this repository may not have been tested as
+##                      extensively as that contained in the main release, although it includes
+##                      newer versions of some applications which may provide useful features.
+##                      Also, please note that software in backports WILL NOT receive any review
+##                      or updates from the Ubuntu security team.
+## Components: Aside from main, the following components can be added to the list
+##   restricted  - Software that may not be under a free license, or protected by patents.
+##   universe    - Community maintained packages. Software in this repository receives maintenance
+##                 from volunteers in the Ubuntu community, or a 10 year security maintenance
+##                 commitment from Canonical when an Ubuntu Pro subscription is attached.
+##   multiverse  - Community maintained of restricted. Software from this repository is
+##                 ENTIRELY UNSUPPORTED by the Ubuntu team, and may not be under a free
+##                 licence. Please satisfy yourself as to your rights to use the software.
+##                 Also, please note that software in multiverse WILL NOT receive any
+##                 review or updates from the Ubuntu security team.
+##
+## See the sources.list(5) manual page for further settings.
+Types: deb-src
+URIs: http://archive.ubuntu.com/ubuntu
+Suites: resolute resolute-updates resolute-backports
+Components: main multiverse universe restricted
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+Added: ## Ubuntu security updates. Aside from URIs and Suites,
+## this should mirror your choices in the previous section.
+Types: deb-src
+URIs: http://security.ubuntu.com/ubuntu
+Suites: resolute-security
+Components: main multiverse universe restricted
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+PPA publishes dbgsym, you may need to include 'main/debug' component
+Repository: 'Types: deb
+URIs: https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel-21/ubuntu/
+Suites: resolute
+Components: main
+'
+Description:
+ROCm development archive which holds packages built against upstream LLVM-21
+
+Please use https://launchpad.net/~bullwinkle-team/+archive/ubuntu/rocm-devel to get rolling rocm releases in development grade
+More info: https://launchpad.net/~bullwinkle-team/+archive/ubuntu/rocm-devel-21
+Adding repository.
+Traceback (most recent call last):
+  File "/usr/bin/add-apt-repository", line 632, in <module>
+    sys.exit(0 if addaptrepo.main() else 1)
+                  ~~~~~~~~~~~~~~~^^
+  File "/usr/bin/add-apt-repository", line 625, in main
+    shortcut.add()
+    ~~~~~~~~~~~~^^
+  File "/usr/lib/python3/dist-packages/softwareproperties/shortcuthandler.py", line 226, in add
+    self.add_source()
+    ~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3/dist-packages/softwareproperties/shortcuthandler.py", line 316, in add_source
+    self._add_deb822_source()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3/dist-packages/softwareproperties/shortcuthandler.py", line 265, in _add_deb822_source
+    if self.trustedparts_content:
+       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/softwareproperties/ppa.py", line 154, in trustedparts_content
+    key = self.lpppa.getSigningKeyData()
+  File "/usr/lib/python3/dist-packages/lazr/restfulclient/resource.py", line 642, in __call__
+    response, content = self.root._browser._request(
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        url,
+        ^^^^
+    ...<2 lines>...
+        extra_headers=extra_headers,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/lib/python3/dist-packages/lazr/restfulclient/_browser.py", line 484, in _request
+    raise error
+lazr.restfulclient.errors.ServerError: HTTP Error 504: Gateway Time-out
+Response headers:
+---
+-content-encoding: gzip
+cache-control: no-cache
+content-length: 92
+content-type: text/html
+date: Mon, 04 May 2026 03:10:36 GMT
+server: Apache/2.4.41 (Ubuntu)
+status: 504
+vary: Accept-Encoding
+---
+Response body:
+---
+b"<html><body><h1>504 Gateway Time-out</h1>\nThe server didn't respond in time.\n</body></html>\n"
+---
+
+autopkgtest [03:11:29]: ERROR: testbed failure: testbed setup commands failed with status 1

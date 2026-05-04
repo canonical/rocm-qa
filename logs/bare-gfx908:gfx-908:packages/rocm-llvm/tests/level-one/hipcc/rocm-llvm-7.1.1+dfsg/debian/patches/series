@@ -1,0 +1,7 @@
+upstream-llvm-compatibility.patch
+cmake-4-compat.patch
+comgr-fix-createAsmStreamer.patch
+fix-DiagnosticOptions-IntrusiveRefCntPtr.patch
+fix-hip-clang-path.patch
+fix-devicelibs-path.patch
+use-signed-char-in-comgr-build.patch

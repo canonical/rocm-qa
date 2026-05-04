@@ -1,0 +1,62 @@
+.TH HIPCC "1" "October 2025" "hipcc 7.0.1" "User Commands"
+.SH NAME
+hipcc \- HIP compiler
+.SH SYNOPSIS
+usage: hipcc [OPTIONS] FILENAME ...
+.SH DESCRIPTION
+The hipcc script wraps clang or nvcc depending on the value of the
+.RB HIP_PLATFORM
+reported by hipconfig. When building for the AMD platform, the options given to
+hipcc are forwarded to clang. The hipcc script adds additional options to the
+list of arguments being forwarded, including
+.I \-x hip
+to force the compilation language to HIP,
+.I \-O3
+when no optimization level is specified, and
+.I \-\-offload-arch
+with an autodetected GPU architecture if
+no target architecture is specified.
+.SH ENVIRONMENT
+.TP
+.B HIPCC_VERBOSE
+This environment variable can enable additional output. The following flags
+control the level of verbosity to be printed:
+.IP \(bu 4
+.B 0x1
+The clang command being invoked.
+.IP \(bu 4
+.B 0x2
+The paths to HIP components.
+.IP \(bu 4
+.B 0x3
+The arguments hipcc was called with.
+.TP
+.B HIPCC_COMPILE_FLAGS_APPEND
+The contents of this variable are added to the end of the argument list that is
+passed to clang when compiling.
+.TP
+.B HIPCC_LINK_FLAGS_APPEND
+The contents of this variable are added to the end of the argument list that is
+passed to clang when linking.
+.TP
+.B DEVICE_LIB_PATH
+This variable is used to override the path to the ROCm device libraries.
+.TP
+.B HIP_LIB_PATH
+This variable is used to override the path to the directory containing the HIP runtime library.
+.TP
+.B HIP_CLANG_HCC_COMPAT_MODE
+This variable is used to specify if clang should enable options that make it
+more compatible with the old hcc compiler. This includes allowing the half
+float type to be used in function signatures as arguments or return values.
+When in this mode, the
+.B __HIP_HCC_COMPAT_MODE__
+preprocessor macro will also be defined.
+.TP
+.B HIP_CLANG_LAUNCHER
+This environment variable specifies a path to an executable to use for
+launching HIP clang, which can be useful for making use of a compiler caching
+tool.
+.SH SEE ALSO
+.sp
+\fBhipconfig(1)\fP

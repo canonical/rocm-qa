@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.16)
+project(rocm-cmake-smoke-test NONE)
+list(APPEND CMAKE_MODULE_PATH "/usr/share/rocm/cmake")
+include(ROCMSetupVersion)
+message(STATUS "ROCm CMake modules loaded successfully")

@@ -1,0 +1,7 @@
+Version: 5
+
+Source: https://github.com/rocm/llvm-project/tags
+Matching-Pattern: (?:.*?/)?rocm-@ANY_VERSION@\.tar\.gz
+Dversionmangle: s/\+dfsg//
+Filenamemangle: s%.*/rocm-@ANY_VERSION@%llvm-project-$1%
+Oversionmangle: s/(.*)/$1+dfsg/

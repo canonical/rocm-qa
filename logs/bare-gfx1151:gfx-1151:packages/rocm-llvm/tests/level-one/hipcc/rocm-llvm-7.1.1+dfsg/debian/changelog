@@ -1,0 +1,188 @@
+rocm-llvm (7.1.1+dfsg-0ubuntu1) resolute; urgency=medium
+
+  * New upstream version 7.1.1 (no changes stack rebuild)
+    (LP: #2148304)
+
+ -- Igor Luppi <igor.luppi@canonical.com>  Tue, 14 Apr 2026 08:24:33 -0300
+
+rocm-llvm (7.1.0+dfsg-0ubuntu6) resolute; urgency=medium
+
+  * d/control: Fix dependency to explicitly require libstdc++-16-dev
+    for ROCm v7.1.0 stack (LP: #2143637). 
+
+ -- Igor Luppi <igor.luppi@canonical.com>  Sat, 07 Mar 2026 16:01:26 +0000
+
+rocm-llvm (7.1.0+dfsg-0ubuntu5) resolute; urgency=medium
+
+  * d/p/upstream-llvm-compatibility: remove not needed reinterpret_cast.
+    This fixes offload compression issue we see in ROCm stack with LLVM-21
+    (LP: #2142813)
+
+ -- Talha Can Havadar <talha.can.havadar@canonical.com>  Tue, 03 Mar 2026 13:26:06 +0100
+
+rocm-llvm (7.1.0+dfsg-0ubuntu4) resolute; urgency=medium
+
+  * No change rebuild due to rocr-runtime upgrade
+
+ -- Talha Can Havadar <talha.can.havadar@canonical.com>  Tue, 03 Feb 2026 18:57:51 +0300
+
+rocm-llvm (7.1.0+dfsg-0ubuntu3) resolute; urgency=medium
+
+  * d/control: add ppc64el builds back (LP: #2138906)
+
+ -- Talha Can Havadar <talha.can.havadar@canonical.com>  Mon, 26 Jan 2026 17:36:53 +0100
+
+rocm-llvm (7.1.0+dfsg-0ubuntu2) resolute; urgency=medium
+
+  * d/control: build rocm-device-libs-21 only for amd64 and arm64 (LP: #2138733)
+
+ -- Talha Can Havadar <talha.can.havadar@canonical.com>  Tue, 20 Jan 2026 15:14:25 +0100
+
+rocm-llvm (7.1.0+dfsg-0ubuntu1) resolute; urgency=medium
+
+  * New upstream version 7.1.0
+  * d/control: remove unsupported architectures riscv64 and ppc64el
+
+ -- Talha Can Havadar <talha.can.havadar@canonical.com>  Thu, 15 Jan 2026 15:09:35 +0100
+
+rocm-llvm (7.0.2+dfsg-2) unstable; urgency=medium
+
+  * Change HIP_CLANG_PATH from /usr/bin to /usr/lib/llvm-21/bin because
+    this improves compatibility with tooling that expects the compiler
+    name to be clang++ without any version suffix.
+    * It is no longer necessary to explicitly specify HIPCXX for CMake
+      when using the HIP language if hipcc is installed (Closes: #1118435)
+  * Set minimum libamdhip64-dev version for hipcc to 6.4.3 as a workaround
+    for underspecified dependencies in the rocm-hipamd 5.7.1 autopkgtests
+
+ -- Cordell Bloor <cgmb@debian.org>  Wed, 26 Nov 2025 17:47:24 -0700
+
+rocm-llvm (7.0.2+dfsg-1) unstable; urgency=medium
+
+  [ Sakura286 ]
+  * Add d/p/use-signed-char-in-comgr-build.patch to fix FTBFS
+    on platforms that default to char being unsigned (Closes: #1118511)
+
+  [ Cordell Bloor ]
+  * New upstream version 7.0.2+dfsg
+
+ -- Cordell Bloor <cgmb@debian.org>  Fri, 24 Oct 2025 16:47:26 -0600
+
+rocm-llvm (7.0.1+dfsg-1) unstable; urgency=medium
+
+  * Upload to unstable
+  * Add riscv64 to build architectures
+  * Limit libamd-comgr3 and libamd-comgr-dev to architectures
+    with driver support for HSA_AMD
+
+ -- Cordell Bloor <cgmb@debian.org>  Fri, 17 Oct 2025 12:25:52 -0600
+
+rocm-llvm (7.0.1+dfsg-1~exp2) experimental; urgency=medium
+
+  * rocm-device-libs-21: move CMake files to from the global
+    library path to /usr/lib/llvm-21/lib/cmake/ to avoid
+    conflicts with rocm-device-libs-17 and rocm-device-libs-20
+  * hipcc: update manpage
+  * Update d/gbp.conf to follow DEP-14
+    https://dep-team.pages.debian.net/deps/dep14/
+
+ -- Cordell Bloor <cgmb@debian.org>  Thu, 09 Oct 2025 10:43:52 -0600
+
+rocm-llvm (7.0.1+dfsg-1~exp1) experimental; urgency=medium
+
+  * New upstream version 7.0.1+dfsg
+  * Update copyright file
+    * Fix comgr license text. The NCSA license used for comgr
+      prohibits using the name of Advanced Micro Devices, Inc.,
+      for endorsements, but this was not previously reflected
+      in the copyright file.
+  * Update from LLVM 20 to LLVM 21
+    * Drop rocm-device-libs-20 and add rocm-device-libs-21
+    * Add compatibility patches for comgr backported from upstream
+      commits, as the rocm-llvm upstream is based on LLVM 20:
+      * d/p/comgr-fix-createAsmStreamer.patch
+      * d/p/fix-DiagnosticOptions-IntrusiveRefCntPtr.patch
+  * Replace perl hipconfig and hipcc scripts with precompiled
+    executables, as the perl versions have been removed upstream.
+    * Move hipcc from libdevel section to devel section.
+    * Replace hipconfig with symbolic link to hipcc. The name of
+      the command is used to choose the operation performed.
+    * Drop perl script patches:
+      * d/p/specify-compiler-version-and-option.patch
+      * d/p/add-hipvars-to-perl-include-path.patch
+      * d/p/fix-HIP_version.patch
+      * d/p/use-Debian-FHS-to-find-runtime-components.patch
+    * Add d/p/specify-clang-version.patch to direct hipcc to use
+      LLVM 21.
+    * Add d/p/fix-devicelibs-path.patch to ensure hipcc does not
+      pass clang a non-existant path to the ROCm device libs. This
+      ensures that clang will search in the system default locations
+      for the device libraries.
+    * Add fix-hip-clang-path.patch to ensure that hipcc considers
+      /usr/bin when searching for clang.
+  * d/rules: fix path to AMDDeviceLibs on non-x86 systems
+  * d/copyright: update my email address
+  * Update standards version to 4.7.2. No changes required.
+
+ -- Cordell Bloor <cgmb@debian.org>  Sun, 28 Sep 2025 02:38:25 -0600
+
+rocm-llvm (6.4.3+dfsg-1~exp3) experimental; urgency=medium
+
+  * Re-upload with rocm-llvm_6.4.3+dfsg.orig.tar.xz
+
+ -- Cordell Bloor <cgmb@debian.org>  Fri, 15 Aug 2025 04:04:26 -0600
+
+rocm-llvm (6.4.3+dfsg-1~exp2) experimental; urgency=medium
+
+  * Add d/p/add-hipvars-to-perl-include-path.patch to fix use of hipvars
+    in hipcc and hipconfig.
+
+ -- Cordell Bloor <cgmb@debian.org>  Fri, 15 Aug 2025 00:54:53 -0600
+
+rocm-llvm (6.4.3+dfsg-1~exp1) experimental; urgency=medium
+
+  * New upstream version 6.4.3+dfsg
+    * Based on LLVM 20
+    * Update Files-Excluded
+  * Replace libamd-comgr2 with libamd-comgr3
+  * Switch to hand-written hipcc man pages
+  * Update d/watch to Version 5
+  * Refresh patches
+  * Drop d/p/0001-add-wf64-target-constraints-to-kernels-using-w64-ins.patch
+  * Drop patch numbers
+  * Add d/p/upstream-llvm-compatibility.patch to enable compatibility
+    with LLVM 20
+  * Add d/p/cmake-4-compat.patch to enable compatibility with CMake 4.1
+  * hipcc now depends on libamdhip64-dev, rather than merely recommending it.
+    This is a return to the hipcc package behaviour from Trixie.
+  * Add self to uploaders
+
+ -- Cordell Bloor <cgmb@debian.org>  Thu, 14 Aug 2025 22:32:37 -0600
+
+rocm-llvm (6.1.2+dfsg-1~exp2) experimental; urgency=medium
+
+  Team upload.
+
+  [ Christian Kastner ]
+  * CI: Drop autopkgtest pinning, deps are in unstable now
+
+  [ Cordell Bloor ]
+  * d/control: remove stray comma in maintainer field to fix
+    the package information listed on tracker.debian.org.
+  * d/control: add perl to hipcc dependencies
+  * d/control: add libamdhip64-dev to hipcc recommended packages
+
+ -- Cordell Bloor <cgmb@slerp.xyz>  Mon, 30 Jun 2025 12:47:43 -0600
+
+rocm-llvm (6.1.2+dfsg-1~exp1) experimental; urgency=medium
+
+  [ Xuanteng Huang ]
+  * New upstream 6.1.2
+    - This replaces all of src:rocm-compilersupport as well as the compiler
+      components of src:rocm-hipamd.
+  * Reorganize code layout, strip LLVM code forked by AMD
+  * Borrow patch from rocm-hipamd to keep the include path order for hipcc
+  * Migrate tests from rocm-hipamd as well to validate HIP code compilation
+  * Enable Salsa CI pipeline
+
+ -- Xuanteng Huang <xuanteng.huang@outlook.com>  Tue, 22 Oct 2024 23:36:16 +0200

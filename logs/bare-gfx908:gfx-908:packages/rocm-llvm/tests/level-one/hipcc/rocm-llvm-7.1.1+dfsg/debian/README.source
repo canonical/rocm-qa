@@ -1,0 +1,25 @@
+rocm-llvm for Debian
+-------------------
+
+## Upstream reorg
+
+Upstream codebase contains the entire LLVM code for building device-libs, comgr and hipcc.
+In Debian, we use the existing official LLVM package to build these, and we do not need the entire LLVM codebase.
+Therefore, we exlucde all the files except the "amd" directory containing the codes for these 3 packages.
+
+Origin Salsa repositories:
+- hipcc: https://salsa.debian.org/rocm-team/rocm-hipamd
+- comgr: https://salsa.debian.org/rocm-team/rocm-compilersupport
+- device-libs: https://salsa.debian.org/rocm-team/rocm-device-libs
+
+We should consider to handle the binary package content conflicts generaged from the new and old src packages.
+
+
+## DFSG
+
+amd/comgr/test/source/legacy/*
+amd/comgr/test/source/*.s
+amd/comgr/test/source/*.b
+
+These files are either binaries or assembly codes which violate DFSG, and we manually exclude them from source.
+

@@ -1,0 +1,57 @@
+From: Cordell Bloor <cgmb@debian.org>
+Date: Mon, 4 Aug 2025 20:43:03 -0600
+Subject: upstream llvm compatibility
+
+- The CompressedOffloadBundle::V3HeaderSize field has been removed
+  from upstream LLVM 21.
+- The Header is unsigned char* and requires an explicit cast to
+  const char*.
+
+[ Talha Can Havadar ]
+Remove not needed reinterpret_cast of "Header", which fixes the bug we see
+here in ubuntu: https://bugs.launchpad.net/ubuntu/+source/rocm-llvm/+bug/2142813
+
+Last-Update: 2026-03-03
+---
+ amd/comgr/src/comgr-cache-bundler-command.cpp | 25 ++++++++++++++++++++++++-
+ 1 file changed, 24 insertions(+), 1 deletion(-)
+
+diff --git a/amd/comgr/src/comgr-cache-bundler-command.cpp b/amd/comgr/src/comgr-cache-bundler-command.cpp
+index 5142627..d6ab8b0 100644
+--- a/amd/comgr/src/comgr-cache-bundler-command.cpp
++++ b/amd/comgr/src/comgr-cache-bundler-command.cpp
+@@ -152,10 +152,33 @@ void UnbundleCommand::addOptionsIdentifier(HashAlgorithm &H) const {
+   }
+ }
+ 
++namespace DebianCompressedOffloadBundleExt {
++  static inline const size_t MagicSize = 4;
++  static inline const size_t VersionFieldSize = sizeof(uint16_t);
++  static inline const size_t MethodFieldSize = sizeof(uint16_t);
++  static inline const size_t FileSizeFieldSizeV2 = sizeof(uint32_t);
++  static inline const size_t UncompressedSizeFieldSizeV2 = sizeof(uint32_t);
++  static inline const size_t FileSizeFieldSizeV3 = sizeof(uint64_t);
++  static inline const size_t UncompressedSizeFieldSizeV3 = sizeof(uint64_t);
++  static inline const size_t HashFieldSize = sizeof(uint64_t);
++
++  static inline const size_t V1HeaderSize =
++      MagicSize + VersionFieldSize + MethodFieldSize +
++      UncompressedSizeFieldSizeV2 + HashFieldSize;
++
++  static inline const size_t V2HeaderSize =
++      MagicSize + VersionFieldSize + FileSizeFieldSizeV2 + MethodFieldSize +
++      UncompressedSizeFieldSizeV2 + HashFieldSize;
++
++  static inline const size_t V3HeaderSize =
++      MagicSize + VersionFieldSize + FileSizeFieldSizeV3 + MethodFieldSize +
++      UncompressedSizeFieldSizeV3 + HashFieldSize;
++}
++
+ Error UnbundleCommand::addInputIdentifier(HashAlgorithm &H) const {
+   StringRef InputFilename = Config.InputFileNames.front();
+ 
+-  constexpr size_t LargestHeaderSize = CompressedOffloadBundle::V3HeaderSize;
++  const size_t LargestHeaderSize = DebianCompressedOffloadBundleExt::V3HeaderSize;
+ 
+   ErrorOr<std::unique_ptr<MemoryBuffer>> MaybeInputBuffer =
+       MemoryBuffer::getFileSlice(InputFilename, LargestHeaderSize, 0);

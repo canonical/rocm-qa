@@ -1,0 +1,42 @@
+From a7ad03285bf9ff361acb5e721386870be9354620 Mon Sep 17 00:00:00 2001
+From: Ron Lieberman <ron.lieberman@amd.com>
+Date: Fri, 11 Apr 2025 08:31:22 -0500
+Subject: [PATCH] comgr:fix for removal of createAsmStreamer
+
+Applied-Upstream: https://github.com/ROCm/llvm-project/commit/a7ad03285bf9ff361acb5e721386870be9354620
+Forwarded: not-needed
+---
+ amd/comgr/src/comgr-compiler.cpp | 8 +++++---
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+
+--- a/amd/comgr/src/comgr-compiler.cpp
++++ b/amd/comgr/src/comgr-compiler.cpp
+@@ -70,6 +70,7 @@
+ #include "llvm/MC/MCCodeEmitter.h"
+ #include "llvm/MC/MCContext.h"
+ #include "llvm/MC/MCInstrInfo.h"
++#include "llvm/MC/MCInstPrinter.h"
+ #include "llvm/MC/MCObjectFileInfo.h"
+ #include "llvm/MC/MCObjectWriter.h"
+ #include "llvm/MC/MCParser/MCAsmParser.h"
+@@ -462,8 +463,9 @@
+ 
+   // FIXME: There is a bit of code duplication with addPassesToEmitFile.
+   if (Opts.OutputType == AssemblerInvocation::FT_Asm) {
+-    MCInstPrinter *IP = TheTarget->createMCInstPrinter(
+-        llvm::Triple(Opts.Triple), Opts.OutputAsmVariant, *MAI, *MCII, *MRI);
++    std::unique_ptr<MCInstPrinter> InstructionPrinter(
++      TheTarget->createMCInstPrinter(
++         llvm::Triple(Opts.Triple), Opts.OutputAsmVariant, *MAI, *MCII, *MRI));
+     std::unique_ptr<MCCodeEmitter> MCE;
+     std::unique_ptr<MCAsmBackend> MAB;
+     if (Opts.ShowEncoding) {
+@@ -472,7 +474,7 @@
+       MAB.reset(TheTarget->createMCAsmBackend(*STI, *MRI, Options));
+     }
+     auto FOut = std::make_unique<formatted_raw_ostream>(*Out);
+-    Str.reset(TheTarget->createAsmStreamer(Ctx, std::move(FOut), IP,
++    Str.reset(TheTarget->createAsmStreamer(Ctx, std::move(FOut), std::move(InstructionPrinter),
+                                            std::move(MCE), std::move(MAB)));
+   } else if (Opts.OutputType == AssemblerInvocation::FT_Null) {
+     Str.reset(createNullStreamer(Ctx));

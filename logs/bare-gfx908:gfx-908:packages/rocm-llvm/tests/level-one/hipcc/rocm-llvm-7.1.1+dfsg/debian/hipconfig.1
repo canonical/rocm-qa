@@ -1,0 +1,97 @@
+.TH HIPCONFIG "1" "October 2025" "hipconfig 7.0.1" "User Commands"
+.SH NAME
+hipconfig \- HIP configuration information utility
+.SH SYNOPSIS
+usage: hipconfig [OPTIONS]
+.SH DESCRIPTION
+The hipconfig utility is used to query information about the HIP installation,
+such as the version, installation path, compiler, or target platform.
+.SH OPTIONS
+.TP
+\fB\-\-path\fR,  \fB\-p\fR
+: print HIP_PATH (use env var if set, else determine from hipconfig path)
+.TP
+\fB\-\-rocmpath\fR,  \fB\-R\fR
+: print ROCM_PATH (use env var if set, else determine from hip path or \fI\,/opt/rocm\/\fP)
+.TP
+\fB\-\-cpp_config\fR, \fB\-C\fR
+: print C++ compiler options
+.TP
+\fB\-\-compiler\fR, \fB\-c\fR
+: print compiler (clang or nvcc)
+.TP
+\fB\-\-platform\fR, \fB\-P\fR
+: print platform (amd or nvidia)
+.TP
+\fB\-\-runtime\fR, \fB\-r\fR
+: print runtime (rocclr or cuda)
+.HP
+\fB\-\-hipclangpath\fR, \fB\-l\fR : print HIP_CLANG_PATH
+.TP
+\fB\-\-full\fR, \fB\-f\fR
+: print full config
+.TP
+\fB\-\-version\fR, \fB\-v\fR
+: print hip version
+.TP
+\fB\-\-check\fR
+: check configuration
+.TP
+\fB\-\-newline\fR, \fB\-n\fR
+: print newline
+.TP
+\fB\-\-help\fR, \fB\-h\fR
+: print help message
+.SH ENVIRONMENT
+.TP
+.B HIP_PLATFORM
+The 
+.RB $ HIP_PLATFORM
+variable is used to explicitly specify the target platform for hipcc. Valid options are
+"amd" and "nvidia".
+.TP
+.B HIP_COMPILER
+The 
+.RB $ HIP_COMPILER
+variable is used to specify the target compiler for hipcc. Valid options are "clang" and "nvcc".
+This variable is usually set automatically based on the value of the
+.RB $ HIP_PLATFORM
+variable
+.TP
+.B HIP_RUNTIME
+The 
+.RB $ HIP_RUNTIME
+variable is used to specify the target runtime for hipcc. Valid options are "rocclr" and "cuda".
+This variable is usually set automatically based on the value of the
+.RB $ HIP_PLATFORM
+variable
+.TP
+.B ROCM_PATH
+The 
+.RB $ ROCM_PATH
+variable is used to specify the path to the AMD ROCm tools and libraries. This variable defaults
+to "/usr".
+.TP
+.B CUDA_PATH
+The 
+.RB $ CUDA_PATH
+variable is used to specify the path to the CUDA tools and libraries. This variable defaults to
+"/usr/local/cuda".
+.TP
+.B HIP_PATH
+The 
+.RB $ HIP_PATH
+variable is used to specify the path to the base directory of the HIP runtime library.
+This variable is not typically used when building on Debian.
+.TP
+.B HIP_ROCCLR_HOME
+The 
+.RB $ HIP_ROCCLR_HOME
+variable is used to specify the path to the base directory of the HIP runtime library.
+This variable is not typically used when building on Debian.
+.TP
+.B HIP_CLANG_PATH
+The 
+.RB $ HIP_CLANG_PATH
+variable is used to specify the path to the base directory of the HIP clang compiler.
+This variable is not typically used when building on Debian.
