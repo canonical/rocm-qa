@@ -1,0 +1,5 @@
+++ mktemp -d
++ OUT=/tmp/tmp.nmz9MNI5AL
++ hipcc -o /tmp/tmp.nmz9MNI5AL/test test.cpp -lhipsolver
++ /tmp/tmp.nmz9MNI5AL/test
+TESTS PASSED!
