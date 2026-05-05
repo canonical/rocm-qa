@@ -1,0 +1,18 @@
+++ mktemp -d
++ OUT=/tmp/tmp.qwCpGuqCp1
++ hipcc -o /tmp/tmp.qwCpGuqCp1/test test.cpp -lrocalution
++ /tmp/tmp.qwCpGuqCp1/test
+Number of CPU cores: 8
+Host thread affinity policy - thread mapping on every core
+rocALUTION ver 4.0.1-
+rocALUTION platform is initialized
+Accelerator backend: None
+OpenMP threads: 8
+MPI is not initialized
+LocalMatrix name=matrix; rows=128; cols=128; nnz=382; prec=32bit; format=CSR(32,32); host backend={CPU(OpenMP)}; accelerator backend={None}; current=CPU(OpenMP)
+CG (non-precond) linear solver starts
+IterationControl criteria: abs tol=1e-06; rel tol=0.0005; div tol=1000; max iter=1000000
+IterationControl initial residual = 6.44246
+IterationControl RELATIVE criteria has been reached: res norm=4.95283e-05; rel val=7.6878e-06; iter=128
+CG (non-precond) ends
+TESTS PASSED!
