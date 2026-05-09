@@ -1,0 +1,5 @@
+++ mktemp -d
++ OUT=/tmp/tmp.pKoYqwsjqc
++ hipcc -o /tmp/tmp.pKoYqwsjqc/test test.cpp
++ /tmp/tmp.pKoYqwsjqc/test
+TESTS PASSED!
