@@ -1,0 +1,104 @@
+name: "ROCm package sync (LP → Salsa)"
+on:
+  schedule:
+    # Sundays at 22:00 UTC
+    - cron: "0 22 * * 0"
+  workflow_dispatch:
+    inputs:
+      series:
+        description: "Comma-separated list of series (default: all configured)"
+        required: false
+        type: string
+        default: ""
+      packages:
+        description: "Comma-separated list of packages (default: all in package set)"
+        required: false
+        type: string
+        default: ""
+      dry_run:
+        description: "Dry run: analyze only, skip push/MR"
+        required: false
+        type: boolean
+        default: false
+permissions:
+  contents: read
+  issues: write
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GITLAB_HOST: salsa.debian.org
+      GITLAB_TOKEN: ${{ secrets.SALSA_TOKEN }}
+    steps:
+      - name: Checkout rocm-qa
+        uses: actions/checkout@v6
+      - name: Install uv
+        uses: astral-sh/setup-uv@v7
+        with:
+          version: "latest"
+      - name: Install glab
+        env:
+          GLAB_VERSION: "1.95.0"
+        run: |
+          set -euo pipefail
+          curl -fsSL -o /tmp/glab.tar.gz \
+            "https://gitlab.com/gitlab-org/cli/-/releases/v${GLAB_VERSION}/downloads/glab_${GLAB_VERSION}_linux_amd64.tar.gz"
+          mkdir -p /tmp/glab
+          tar -xzf /tmp/glab.tar.gz -C /tmp/glab
+          sudo install -m 0755 /tmp/glab/bin/glab /usr/local/bin/glab
+          glab --version
+      - name: Configure SSH for Salsa
+        env:
+          SALSA_SSH_KEY: ${{ secrets.SALSA_SSH_KEY }}
+        run: |
+          set -euo pipefail
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          printf '%s\n' "$SALSA_SSH_KEY" > ~/.ssh/salsa_id
+          chmod 600 ~/.ssh/salsa_id
+          ssh-keyscan -t rsa,ecdsa,ed25519 salsa.debian.org >> ~/.ssh/known_hosts 2>/dev/null
+          cat >> ~/.ssh/config <<'EOF'
+          Host salsa.debian.org
+            User git
+            IdentityFile ~/.ssh/salsa_id
+            IdentitiesOnly yes
+            BatchMode yes
+            ConnectTimeout 30
+            ServerAliveInterval 30
+            ServerAliveCountMax 3
+          EOF
+          chmod 600 ~/.ssh/config
+      - name: Configure git identity
+        run: |
+          git config --global user.email "rocm-sync@canonical.com"
+          git config --global user.name "ROCm Sync Bot"
+      - name: Authenticate glab to Salsa
+        env:
+          SALSA_TOKEN: ${{ secrets.SALSA_TOKEN }}
+        run: |
+          set -euo pipefail
+          # glab auth status / glab repo etc. check the config file, not env
+          # vars, so do an explicit non-interactive login.
+          printf '%s' "$SALSA_TOKEN" | glab auth login \
+            --hostname salsa.debian.org \
+            --stdin
+          glab auth status --hostname salsa.debian.org
+      - name: Install sync deps
+        working-directory: sync
+        run: uv sync
+      - name: Run sync
+        working-directory: sync
+        run: |
+          set -euo pipefail
+          ARGS=()
+          if [[ -n "${{ inputs.series }}" ]]; then
+            ARGS+=(--series "${{ inputs.series }}")
+          fi
+          if [[ -n "${{ inputs.packages }}" ]]; then
+            ARGS+=(--packages "${{ inputs.packages }}")
+          fi
+          if [[ "${{ inputs.dry_run }}" == "true" ]]; then
+            ARGS+=(--dry-run)
+          fi
+          uv run python sync.py "${ARGS[@]}"

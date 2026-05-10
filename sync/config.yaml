@@ -1,0 +1,13 @@
+salsa_user: tchavadar
+salsa_group: rocm-team
+series:
+  resolute:
+    skip_packages:
+      - pytorch-rocm
+      - magma-rocm
+      - llvm-toolchain-rocm
+  stonking:
+    skip_packages:
+      - pytorch-rocm
+      - magma-rocm
+      - llvm-toolchain-rocm
