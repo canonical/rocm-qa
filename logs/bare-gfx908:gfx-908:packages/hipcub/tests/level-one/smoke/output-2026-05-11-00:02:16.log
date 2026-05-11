@@ -1,0 +1,19 @@
+++ mktemp -d
++ OUT=/tmp/tmp.ZE4gYfVKLi
++ hipcc -o /tmp/tmp.ZE4gYfVKLi/test test.cpp
+test.cpp:39:5: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+   39 |     hipcub::DeviceRadixSort::SortKeys(tmp_storage, tmp_storage_bytes, x, xs, size);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+test.cpp:41:5: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+   41 |     hipcub::DeviceRadixSort::SortKeys(tmp_storage, tmp_storage_bytes, x, xs, size);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2 warnings generated when compiling for gfx908.
+test.cpp:39:5: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+   39 |     hipcub::DeviceRadixSort::SortKeys(tmp_storage, tmp_storage_bytes, x, xs, size);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+test.cpp:41:5: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+   41 |     hipcub::DeviceRadixSort::SortKeys(tmp_storage, tmp_storage_bytes, x, xs, size);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2 warnings generated when compiling for host.
++ /tmp/tmp.ZE4gYfVKLi/test
+TESTS PASSED!
