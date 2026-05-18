@@ -1,0 +1,7 @@
+++ mktemp -d
++ OUT=/tmp/tmp.AbEArRjera
++ g++ -o /tmp/tmp.AbEArRjera/test test.cpp -lhsa-runtime64
++ /tmp/tmp.AbEArRjera/test
+HSA runtime version: 1.1
+CPU agents: 1, GPU agents: 1
+TESTS PASSED!

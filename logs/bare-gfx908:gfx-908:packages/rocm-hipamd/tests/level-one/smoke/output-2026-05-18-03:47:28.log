@@ -1,0 +1,7 @@
+++ mktemp -d
++ OUT=/tmp/tmp.LiektosIVM
++ hipcc -o /tmp/tmp.LiektosIVM/test test.cpp
++ /tmp/tmp.LiektosIVM/test
+Agent AMD Instinct MI100
+System version 9.0
+TESTS PASSED!
