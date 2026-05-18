@@ -1,0 +1,7 @@
+autopkgtest [23:20:41]: starting date and time: 2026-05-17 23:20:41+0000
+autopkgtest [23:20:41]: version 5.55
+autopkgtest [23:20:41]: host lxc-sessionizer-test-1; command line: /usr/bin/autopkgtest hipblas-common -U '--setup-commands=add-apt-repository -ss -y' '--setup-commands=add-apt-repository ppa:bullwinkle-team/rocm-devel-21 --enable-source -y' -- lxd ubuntu-daily:resolute --profile=rocm-gpu
+<VirtSubproc>: failure: ['lxc', 'launch', '--ephemeral', 'ubuntu-daily:resolute', 'autopkgtest-lxd-gheucc', '--profile=rocm-gpu'] failed (exit status 1, stderr 'Error: Failed instance creation: Failed to start device "gpu": The "major" property may not be set when adding a device to a nested container\n')
+autopkgtest [23:20:45]: ERROR: testbed failure: eof from the virtualisation server
+Exception ignored while finalizing file <_io.TextIOWrapper name=5 encoding='UTF-8'>:
+BrokenPipeError: [Errno 32] Broken pipe
