@@ -1,0 +1,7 @@
+++ mktemp -d
++ OUT=/tmp/tmp.7RkgxysZnw
++ g++ -o /tmp/tmp.7RkgxysZnw/test test.cpp -lrocm-core
++ /tmp/tmp.7RkgxysZnw/test
+SUCCESS: ROCm install path from rocm-core detected as: /usr/
+SUCCESS: ROCm Version from rocm-core detected as: 7.1.0
+All tests passed successfully.
