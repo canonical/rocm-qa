@@ -1,0 +1,4 @@
+++ mktemp -d
++ OUT=/tmp/tmp.kfCAB9hY2y
++ /opt/rocm/bin/hipcc -o /tmp/tmp.kfCAB9hY2y/test test.cpp -lhipsparse -lrocsparse
+/bin/bash: line 35: /opt/rocm/bin/hipcc: No such file or directory
