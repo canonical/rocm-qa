@@ -124,6 +124,14 @@ jobs:
           path: |
             ${{ steps.run-spread.outputs.log }}
             ${{ steps.run-spread.outputs.results }}
+      - name: Debug PE_PAT permissions
+        if: always() && !cancelled() && runner.debug == '1'
+        env:
+          GH_TOKEN: ${{ secrets.PE_PAT }}
+        run: |
+          echo "Authenticated as: $(gh api user --jq '.login')"
+          echo "Repo permissions for token:"
+          gh api repos/canonical/rocm-qa --jq '.permissions'
       - name: Push spread logs to rocm-qa
         id: push-spread-logs-to-rocm-qa
         if: always() && !cancelled()
