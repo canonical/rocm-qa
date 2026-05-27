@@ -44,6 +44,7 @@ jobs:
       - name: Checkout ROCm QA
         uses: actions/checkout@v6
         with:
+          token: ${{ secrets.PE_PAT }}
           path: ${{ env.ROCM_QA_PROJECT_DIR }}
       - name: Checkout common actions
         uses: actions/checkout@v6
