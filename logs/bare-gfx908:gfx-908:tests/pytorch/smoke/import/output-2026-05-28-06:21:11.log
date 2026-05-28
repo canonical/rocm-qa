@@ -1,0 +1,4 @@
++ python3 -c 'import torch; print(f'\''PyTorch version: {torch.__version__}'\'');'
+PyTorch version: 2.9.1+debian
++ python3 -c 'import torch; print(torch.cuda.get_device_name(0))'
+AMD Instinct MI100
