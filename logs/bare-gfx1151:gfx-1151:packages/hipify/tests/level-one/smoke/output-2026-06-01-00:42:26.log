@@ -1,0 +1,23 @@
++ bash test.sh
+[TEST 1] Testing hipify-clang (API call)...
+warning: CUDA version 12.4 is only partially supported [-Wunknown-cuda-version]
+[TEST 1] PASS: hipify-clang transformed API call as expected
+
+#include <hip/hip_runtime.h>
+// Minimal CUDA-like API sample for hipify-clang that avoids CUDA language features
+// Uses a forward declaration so no CUDA headers are needed.
+extern int hipDeviceSynchronize();
+int main() { return hipDeviceSynchronize(); }
+[TEST 2] Testing hipify-perl...
+[TEST 2] PASS: hipify-perl translated include as expected
+// Minimal CUDA sample for hipify-perl that exercises include translation
+#include <hip/hip_runtime.h>
+int main() { return 0; }
+[TEST 3] Probing CUDA installation for optional CUDA syntax test...
+[TEST 3] Found CUDA_PATH=/usr/lib/cuda, CUDA_INCLUDE=/usr/lib/cuda/include
+warning: CUDA version 12.4 is only partially supported [-Wunknown-cuda-version]
+[TEST 3] PASS: hipify-clang transformed kernel launch syntax as expected
+#include <hip/hip_runtime.h>
+__global__ void kernel() {}
+int main() { hipLaunchKernelGGL(kernel, dim3(1), dim3(1), 0, 0); return 0; }
+hipify smoke test: PASS
