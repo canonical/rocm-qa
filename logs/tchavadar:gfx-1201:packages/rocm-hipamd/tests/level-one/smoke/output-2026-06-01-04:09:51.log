@@ -1,0 +1,7 @@
+++ mktemp -d
++ OUT=/tmp/tmp.WoR4q51AeI
++ hipcc -o /tmp/tmp.WoR4q51AeI/test test.cpp
++ /tmp/tmp.WoR4q51AeI/test
+Agent AMD Radeon AI PRO R9700
+System version 12.0
+TESTS PASSED!
