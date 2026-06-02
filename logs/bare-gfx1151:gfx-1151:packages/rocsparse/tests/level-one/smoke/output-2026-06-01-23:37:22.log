@@ -1,0 +1,5 @@
+++ mktemp -d
++ OUT=/tmp/tmp.kLEkkzADZF
++ hipcc -o /tmp/tmp.kLEkkzADZF/test test.cpp -lrocsparse
++ /tmp/tmp.kLEkkzADZF/test
+TESTS PASSED!
