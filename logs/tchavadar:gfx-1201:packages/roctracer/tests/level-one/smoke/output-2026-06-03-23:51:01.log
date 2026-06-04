@@ -1,0 +1,4 @@
+++ mktemp -d
++ OUT=/tmp/tmp.FUU8zKRo3K
++ hipcc -o /tmp/tmp.FUU8zKRo3K/test test.cpp -lroctx64
++ /tmp/tmp.FUU8zKRo3K/test

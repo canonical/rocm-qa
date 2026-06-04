@@ -1,0 +1,4 @@
+++ mktemp -d
++ OUT=/tmp/tmp.OrevWvDf4a
++ hipcc -o /tmp/tmp.OrevWvDf4a/test test.cpp -lroctx64
++ /tmp/tmp.OrevWvDf4a/test

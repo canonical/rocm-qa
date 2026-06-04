@@ -1,0 +1,4 @@
+++ mktemp -d
++ OUT=/tmp/tmp.8PyF4HtRx1
++ /opt/rocm/bin/hipcc -o /tmp/tmp.8PyF4HtRx1/test test.cpp -lrocrand
+/bin/bash: line 35: /opt/rocm/bin/hipcc: No such file or directory
