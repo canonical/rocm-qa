@@ -1,0 +1,9 @@
++ cmake -S . -B /tmp/rocm-cmake-test
+CMake Error at CMakeLists.txt:4 (include):
+  include could not find requested file:
+
+    ROCMSetupVersion
+
+
+-- ROCm CMake modules loaded successfully
+-- Configuring incomplete, errors occurred!

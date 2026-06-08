@@ -1,0 +1,7 @@
+++ mktemp -d
++ OUT=/tmp/tmp.gGcTVFpgiF
++ g++ -o /tmp/tmp.gGcTVFpgiF/test test.cpp -lrocm-core
++ /tmp/tmp.gGcTVFpgiF/test
+SUCCESS: ROCm install path from rocm-core detected as: /usr/
+SUCCESS: ROCm Version from rocm-core detected as: 7.1.0
+All tests passed successfully.
