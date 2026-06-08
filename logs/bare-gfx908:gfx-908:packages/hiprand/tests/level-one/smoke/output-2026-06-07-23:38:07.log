@@ -1,0 +1,5 @@
+++ mktemp -d
++ OUT=/tmp/tmp.57LFuREG2d
++ hipcc -o /tmp/tmp.57LFuREG2d/test test.cpp -lhiprand
++ /tmp/tmp.57LFuREG2d/test
+TESTS PASSED!
