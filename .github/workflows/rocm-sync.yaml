@@ -1,8 +1,7 @@
 name: "ROCm package sync (LP → Salsa)"
 on:
   schedule:
-    # Sundays at 22:00 UTC
-    - cron: "0 22 * * 0"
+    - cron: "0 22 * * *"
   workflow_dispatch:
     inputs:
       series:
