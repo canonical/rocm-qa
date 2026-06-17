@@ -1,0 +1,5 @@
+++ mktemp -d
++ OUT=/tmp/tmp.WinWmu0mu3
++ hipcc -o /tmp/tmp.WinWmu0mu3/test test.cpp -lhipsolver
++ /tmp/tmp.WinWmu0mu3/test
+TESTS PASSED!
