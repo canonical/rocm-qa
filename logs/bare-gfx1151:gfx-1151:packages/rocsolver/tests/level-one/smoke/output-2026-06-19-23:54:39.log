@@ -1,0 +1,5 @@
+++ mktemp -d
++ OUT=/tmp/tmp.EngYUAUvYM
++ hipcc -o /tmp/tmp.EngYUAUvYM/test test.cpp -lrocsolver -lrocblas
++ /tmp/tmp.EngYUAUvYM/test
+TESTS PASSED!
