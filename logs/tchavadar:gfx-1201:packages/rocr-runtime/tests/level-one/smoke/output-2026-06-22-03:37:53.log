@@ -1,0 +1,7 @@
+++ mktemp -d
++ OUT=/tmp/tmp.cRu4ldaRGJ
++ g++ -o /tmp/tmp.cRu4ldaRGJ/test test.cpp -lhsa-runtime64
++ /tmp/tmp.cRu4ldaRGJ/test
+HSA runtime version: 1.1
+CPU agents: 1, GPU agents: 1
+TESTS PASSED!

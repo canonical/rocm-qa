@@ -1,0 +1,598 @@
+autopkgtest [03:20:26]: starting date and time: 2026-06-22 03:20:26+0000
+autopkgtest [03:20:26]: version 5.55
+autopkgtest [03:20:26]: host lxc-sessionizer-test-1; command line: /usr/bin/autopkgtest rocminfo -U '--setup-commands=add-apt-repository -ss -y' '--setup-commands=add-apt-repository ppa:bullwinkle-team/rocm-devel --enable-source -y' -- lxd ubuntu-daily:resolute --profile=rocm-gpu
+autopkgtest [03:22:33]: testbed dpkg architecture: amd64
+autopkgtest [03:22:33]: testbed apt version: 3.2.0
+autopkgtest [03:22:33]: @@@@@@@@@@@@@@@@@@@@ test bed setup
+autopkgtest [03:22:33]: updating testbed package index (apt update)
+Get:1 http://security.ubuntu.com/ubuntu resolute-security InRelease [137 kB]
+Hit:2 http://archive.ubuntu.com/ubuntu resolute InRelease
+Get:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease [137 kB]
+Get:4 http://security.ubuntu.com/ubuntu resolute-security/main amd64 Components [31.2 kB]
+Get:5 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Packages [125 kB]
+Get:6 http://security.ubuntu.com/ubuntu resolute-security/universe Translation-en [38.7 kB]
+Get:7 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Components [43.1 kB]
+Get:8 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 c-n-f Metadata [3264 B]
+Get:9 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 Components [212 B]
+Get:10 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 c-n-f Metadata [120 B]
+Get:11 http://archive.ubuntu.com/ubuntu resolute-backports InRelease [136 kB]
+Get:12 http://archive.ubuntu.com/ubuntu resolute/universe amd64 Packages [16.0 MB]
+Get:13 http://archive.ubuntu.com/ubuntu resolute/universe Translation-en [6329 kB]
+Get:14 http://archive.ubuntu.com/ubuntu resolute/universe amd64 Components [4556 kB]
+Get:15 http://archive.ubuntu.com/ubuntu resolute/universe amd64 c-n-f Metadata [313 kB]
+Get:16 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 Packages [290 kB]
+Get:17 http://archive.ubuntu.com/ubuntu resolute/multiverse Translation-en [127 kB]
+Get:18 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 Components [50.0 kB]
+Get:19 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 c-n-f Metadata [8276 B]
+Get:20 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Packages [257 kB]
+Get:21 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Components [49.4 kB]
+Get:22 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Packages [150 kB]
+Get:23 http://archive.ubuntu.com/ubuntu resolute-updates/universe Translation-en [47.0 kB]
+Get:24 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Components [62.0 kB]
+Get:25 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 c-n-f Metadata [3908 B]
+Get:26 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 Packages [3328 B]
+Get:27 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse Translation-en [772 B]
+Get:28 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 Components [216 B]
+Get:29 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 c-n-f Metadata [256 B]
+Get:30 http://archive.ubuntu.com/ubuntu resolute-backports/main amd64 Components [212 B]
+Get:31 http://archive.ubuntu.com/ubuntu resolute-backports/main amd64 c-n-f Metadata [112 B]
+Get:32 http://archive.ubuntu.com/ubuntu resolute-backports/universe amd64 Components [216 B]
+Get:33 http://archive.ubuntu.com/ubuntu resolute-backports/universe amd64 c-n-f Metadata [116 B]
+Get:34 http://archive.ubuntu.com/ubuntu resolute-backports/restricted amd64 Components [216 B]
+Get:35 http://archive.ubuntu.com/ubuntu resolute-backports/restricted amd64 c-n-f Metadata [120 B]
+Get:36 http://archive.ubuntu.com/ubuntu resolute-backports/multiverse amd64 Components [216 B]
+Get:37 http://archive.ubuntu.com/ubuntu resolute-backports/multiverse amd64 c-n-f Metadata [120 B]
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 28.9 MB in 3s (9809 kB/s)
+Reading package lists...
+autopkgtest [03:22:39]: testbed release detected to be: resolute
+autopkgtest [03:22:39]: updating testbed package index (apt update)
+Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:2 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Reading package lists...
+Hit:1 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu resolute InRelease
+Get:3 http://security.ubuntu.com/ubuntu resolute-security/main Sources [92.7 kB]
+Get:4 http://security.ubuntu.com/ubuntu resolute-security/universe Sources [45.8 kB]
+Get:5 http://security.ubuntu.com/ubuntu resolute-security/restricted Sources [19.5 kB]
+Hit:6 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:7 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Get:8 http://archive.ubuntu.com/ubuntu resolute/main Sources [1002 kB]
+Get:9 http://archive.ubuntu.com/ubuntu resolute/universe Sources [13.4 MB]
+Get:10 http://archive.ubuntu.com/ubuntu resolute/multiverse Sources [215 kB]
+Get:11 http://archive.ubuntu.com/ubuntu resolute/restricted Sources [18.6 kB]
+Get:12 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse Sources [5596 B]
+Get:13 http://archive.ubuntu.com/ubuntu resolute-updates/universe Sources [53.1 kB]
+Get:14 http://archive.ubuntu.com/ubuntu resolute-updates/main Sources [113 kB]
+Get:15 http://archive.ubuntu.com/ubuntu resolute-updates/restricted Sources [19.5 kB]
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 15.0 MB in 1s (11.4 MB/s)
+Reading package lists...
+Enabling deb-src for all repositories.
+Added: ## Ubuntu distribution repository
+##
+## The following settings can be adjusted to configure which packages to use from Ubuntu.
+## Mirror your choices (except for URIs and Suites) in the security section below to
+## ensure timely security updates.
+##
+## Types: Append deb-src to enable the fetching of source package.
+## URIs: A URL to the repository (you may add multiple URLs)
+## Suites: The following additional suites can be configured
+##   <name>-updates   - Major bug fix updates produced after the final release of the
+##                      distribution.
+##   <name>-backports - software from this repository may not have been tested as
+##                      extensively as that contained in the main release, although it includes
+##                      newer versions of some applications which may provide useful features.
+##                      Also, please note that software in backports WILL NOT receive any review
+##                      or updates from the Ubuntu security team.
+## Components: Aside from main, the following components can be added to the list
+##   restricted  - Software that may not be under a free license, or protected by patents.
+##   universe    - Community maintained packages. Software in this repository receives maintenance
+##                 from volunteers in the Ubuntu community, or a 10 year security maintenance
+##                 commitment from Canonical when an Ubuntu Pro subscription is attached.
+##   multiverse  - Community maintained of restricted. Software from this repository is
+##                 ENTIRELY UNSUPPORTED by the Ubuntu team, and may not be under a free
+##                 licence. Please satisfy yourself as to your rights to use the software.
+##                 Also, please note that software in multiverse WILL NOT receive any
+##                 review or updates from the Ubuntu security team.
+##
+## See the sources.list(5) manual page for further settings.
+Types: deb-src
+URIs: http://archive.ubuntu.com/ubuntu
+Suites: resolute resolute-updates resolute-backports
+Components: universe restricted multiverse main
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+Added: ## Ubuntu security updates. Aside from URIs and Suites,
+## this should mirror your choices in the previous section.
+Types: deb-src
+URIs: http://security.ubuntu.com/ubuntu
+Suites: resolute-security
+Components: universe restricted multiverse main
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:2 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Get:5 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute InRelease [27.2 kB]
+Get:6 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main Sources [12.3 kB]
+Get:7 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main amd64 Packages [19.7 kB]
+Get:8 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main Translation-en [12.9 kB]
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 72.1 kB in 1s (74.9 kB/s)
+Reading package lists...
+PPA publishes dbgsym, you may need to include 'main/debug' component
+Repository: 'Types: deb
+URIs: https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu/
+Suites: resolute
+Components: main
+'
+Description:
+Development archive for AMD ROCm packages on Ubuntu with an aim to have packages build for next Ubuntu release
+More info: https://launchpad.net/~bullwinkle-team/+archive/ubuntu/rocm-devel
+Adding repository.
+autopkgtest [03:22:47]: upgrading testbed (apt dist-upgrade and autopurge)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+autopkgtest [03:22:49]: testbed running kernel: Linux 7.0.0-22-generic #22-Ubuntu SMP PREEMPT_DYNAMIC Mon May 25 15:54:34 UTC 2026
+autopkgtest [03:22:50]: @@@@@@@@@@@@@@@@@@@@ apt-source rocminfo
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+The following NEW packages will be installed:
+  bzip2 dpkg-dev libdpkg-perl lto-disabled-list make
+0 upgraded, 5 newly installed, 0 to remove and 0 not upgraded.
+Need to get 1596 kB of archives.
+After this operation, 4247 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu resolute/main amd64 bzip2 amd64 1.0.8-6build2 [34.3 kB]
+Get:2 http://archive.ubuntu.com/ubuntu resolute/main amd64 libdpkg-perl all 1.23.7ubuntu1 [289 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute/main amd64 make amd64 4.4.1-3 [197 kB]
+Get:4 http://archive.ubuntu.com/ubuntu resolute/main amd64 lto-disabled-list all 79 [14.2 kB]
+Get:5 http://archive.ubuntu.com/ubuntu resolute/main amd64 dpkg-dev all 1.23.7ubuntu1 [1062 kB]
+Fetched 1596 kB in 0s (8634 kB/s)
+Selecting previously unselected package bzip2.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 44349 files and directories currently installed.)
+Preparing to unpack .../bzip2_1.0.8-6build2_amd64.deb ...
+Unpacking bzip2 (1.0.8-6build2) ...
+Selecting previously unselected package libdpkg-perl.
+Preparing to unpack .../libdpkg-perl_1.23.7ubuntu1_all.deb ...
+Unpacking libdpkg-perl (1.23.7ubuntu1) ...
+Selecting previously unselected package make.
+Preparing to unpack .../make_4.4.1-3_amd64.deb ...
+Unpacking make (4.4.1-3) ...
+Selecting previously unselected package lto-disabled-list.
+Preparing to unpack .../lto-disabled-list_79_all.deb ...
+Unpacking lto-disabled-list (79) ...
+Selecting previously unselected package dpkg-dev.
+Preparing to unpack .../dpkg-dev_1.23.7ubuntu1_all.deb ...
+Unpacking dpkg-dev (1.23.7ubuntu1) ...
+Setting up lto-disabled-list (79) ...
+Setting up bzip2 (1.0.8-6build2) ...
+Setting up make (4.4.1-3) ...
+Setting up libdpkg-perl (1.23.7ubuntu1) ...
+Setting up dpkg-dev (1.23.7ubuntu1) ...
+Processing triggers for man-db (2.13.1-1build1) ...
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+Get:1 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main rocminfo 7.2.4-1~exp1~git202606120702.1dcd091~ubuntu26.04.1 (tar) [29.4 kB]
+Get:2 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main rocminfo 7.2.4-1~exp1~git202606120702.1dcd091~ubuntu26.04.1 (diff) [6056 B]
+Get:3 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main rocminfo 7.2.4-1~exp1~git202606120702.1dcd091~ubuntu26.04.1 (dsc) [1596 B]
+dpkg-source: warning: extracting unsigned source package (rocminfo_7.2.4-1~exp1~git202606120702.1dcd091~ubuntu26.04.1.dsc)
+autopkgtest [03:22:53]: testing package rocminfo version 7.2.4-1~exp1~git202606120702.1dcd091~ubuntu26.04.1
+autopkgtest [03:22:53]: build not needed
+autopkgtest [03:22:53]: test rocminfo: preparing testbed
+autopkgtest [03:25:01]: testbed dpkg architecture: amd64
+autopkgtest [03:25:01]: testbed apt version: 3.2.0
+autopkgtest [03:25:01]: @@@@@@@@@@@@@@@@@@@@ test bed setup
+autopkgtest [03:25:01]: updating testbed package index (apt update)
+Get:1 http://security.ubuntu.com/ubuntu resolute-security InRelease [137 kB]
+Hit:2 http://archive.ubuntu.com/ubuntu resolute InRelease
+Get:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease [137 kB]
+Get:4 http://security.ubuntu.com/ubuntu resolute-security/main amd64 Components [31.2 kB]
+Get:5 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Packages [125 kB]
+Get:6 http://security.ubuntu.com/ubuntu resolute-security/universe Translation-en [38.7 kB]
+Get:7 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Components [43.1 kB]
+Get:8 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 c-n-f Metadata [3264 B]
+Get:9 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 Components [212 B]
+Get:10 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 c-n-f Metadata [120 B]
+Get:11 http://archive.ubuntu.com/ubuntu resolute-backports InRelease [136 kB]
+Get:12 http://archive.ubuntu.com/ubuntu resolute/universe amd64 Packages [16.0 MB]
+Get:13 http://archive.ubuntu.com/ubuntu resolute/universe Translation-en [6329 kB]
+Get:14 http://archive.ubuntu.com/ubuntu resolute/universe amd64 Components [4556 kB]
+Get:15 http://archive.ubuntu.com/ubuntu resolute/universe amd64 c-n-f Metadata [313 kB]
+Get:16 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 Packages [290 kB]
+Get:17 http://archive.ubuntu.com/ubuntu resolute/multiverse Translation-en [127 kB]
+Get:18 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 Components [50.0 kB]
+Get:19 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 c-n-f Metadata [8276 B]
+Get:20 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Packages [257 kB]
+Get:21 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Components [49.4 kB]
+Get:22 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Packages [150 kB]
+Get:23 http://archive.ubuntu.com/ubuntu resolute-updates/universe Translation-en [47.0 kB]
+Get:24 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Components [62.0 kB]
+Get:25 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 c-n-f Metadata [3908 B]
+Get:26 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 Packages [3328 B]
+Get:27 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse Translation-en [772 B]
+Get:28 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 Components [216 B]
+Get:29 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 c-n-f Metadata [256 B]
+Get:30 http://archive.ubuntu.com/ubuntu resolute-backports/main amd64 Components [212 B]
+Get:31 http://archive.ubuntu.com/ubuntu resolute-backports/main amd64 c-n-f Metadata [112 B]
+Get:32 http://archive.ubuntu.com/ubuntu resolute-backports/universe amd64 Components [216 B]
+Get:33 http://archive.ubuntu.com/ubuntu resolute-backports/universe amd64 c-n-f Metadata [116 B]
+Get:34 http://archive.ubuntu.com/ubuntu resolute-backports/restricted amd64 Components [216 B]
+Get:35 http://archive.ubuntu.com/ubuntu resolute-backports/restricted amd64 c-n-f Metadata [120 B]
+Get:36 http://archive.ubuntu.com/ubuntu resolute-backports/multiverse amd64 Components [216 B]
+Get:37 http://archive.ubuntu.com/ubuntu resolute-backports/multiverse amd64 c-n-f Metadata [120 B]
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 28.9 MB in 3s (9861 kB/s)
+Reading package lists...
+autopkgtest [03:25:07]: testbed release detected to be: resolute
+autopkgtest [03:25:07]: updating testbed package index (apt update)
+Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:2 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Reading package lists...
+Hit:1 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Get:2 http://security.ubuntu.com/ubuntu resolute-security/restricted Sources [19.5 kB]
+Get:3 http://security.ubuntu.com/ubuntu resolute-security/universe Sources [45.8 kB]
+Get:4 http://security.ubuntu.com/ubuntu resolute-security/main Sources [92.7 kB]
+Hit:5 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:6 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:7 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Get:8 http://archive.ubuntu.com/ubuntu resolute/restricted Sources [18.6 kB]
+Get:9 http://archive.ubuntu.com/ubuntu resolute/multiverse Sources [215 kB]
+Get:10 http://archive.ubuntu.com/ubuntu resolute/main Sources [1002 kB]
+Get:11 http://archive.ubuntu.com/ubuntu resolute/universe Sources [13.4 MB]
+Get:12 http://archive.ubuntu.com/ubuntu resolute-updates/restricted Sources [19.5 kB]
+Get:13 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse Sources [5596 B]
+Get:14 http://archive.ubuntu.com/ubuntu resolute-updates/main Sources [113 kB]
+Get:15 http://archive.ubuntu.com/ubuntu resolute-updates/universe Sources [53.1 kB]
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 15.0 MB in 1s (10.1 MB/s)
+Reading package lists...
+Enabling deb-src for all repositories.
+Added: ## Ubuntu distribution repository
+##
+## The following settings can be adjusted to configure which packages to use from Ubuntu.
+## Mirror your choices (except for URIs and Suites) in the security section below to
+## ensure timely security updates.
+##
+## Types: Append deb-src to enable the fetching of source package.
+## URIs: A URL to the repository (you may add multiple URLs)
+## Suites: The following additional suites can be configured
+##   <name>-updates   - Major bug fix updates produced after the final release of the
+##                      distribution.
+##   <name>-backports - software from this repository may not have been tested as
+##                      extensively as that contained in the main release, although it includes
+##                      newer versions of some applications which may provide useful features.
+##                      Also, please note that software in backports WILL NOT receive any review
+##                      or updates from the Ubuntu security team.
+## Components: Aside from main, the following components can be added to the list
+##   restricted  - Software that may not be under a free license, or protected by patents.
+##   universe    - Community maintained packages. Software in this repository receives maintenance
+##                 from volunteers in the Ubuntu community, or a 10 year security maintenance
+##                 commitment from Canonical when an Ubuntu Pro subscription is attached.
+##   multiverse  - Community maintained of restricted. Software from this repository is
+##                 ENTIRELY UNSUPPORTED by the Ubuntu team, and may not be under a free
+##                 licence. Please satisfy yourself as to your rights to use the software.
+##                 Also, please note that software in multiverse WILL NOT receive any
+##                 review or updates from the Ubuntu security team.
+##
+## See the sources.list(5) manual page for further settings.
+Types: deb-src
+URIs: http://archive.ubuntu.com/ubuntu
+Suites: resolute resolute-updates resolute-backports
+Components: multiverse main restricted universe
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+Added: ## Ubuntu security updates. Aside from URIs and Suites,
+## this should mirror your choices in the previous section.
+Types: deb-src
+URIs: http://security.ubuntu.com/ubuntu
+Suites: resolute-security
+Components: multiverse main restricted universe
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+Hit:1 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Get:5 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute InRelease [27.2 kB]
+Get:6 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main Sources [12.3 kB]
+Get:7 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main amd64 Packages [19.7 kB]
+Get:8 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main Translation-en [12.9 kB]
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 72.1 kB in 1s (72.3 kB/s)
+Reading package lists...
+PPA publishes dbgsym, you may need to include 'main/debug' component
+Repository: 'Types: deb
+URIs: https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu/
+Suites: resolute
+Components: main
+'
+Description:
+Development archive for AMD ROCm packages on Ubuntu with an aim to have packages build for next Ubuntu release
+More info: https://launchpad.net/~bullwinkle-team/+archive/ubuntu/rocm-devel
+Adding repository.
+autopkgtest [03:25:15]: upgrading testbed (apt dist-upgrade and autopurge)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+The following NEW packages will be installed:
+  libhsa-runtime64-1 libhsakmt1 rocminfo
+0 upgraded, 3 newly installed, 0 to remove and 0 not upgraded.
+Need to get 727 kB of archives.
+After this operation, 4300 kB of additional disk space will be used.
+Get:1 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main amd64 libhsakmt1 amd64 7.2.4+dfsg~ppa1-0ubuntu1~git202606011102.6fd0c927~ubuntu26.04.1 [79.0 kB]
+Get:2 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main amd64 libhsa-runtime64-1 amd64 7.2.4+dfsg~ppa1-0ubuntu1~git202606011102.6fd0c927~ubuntu26.04.1 [618 kB]
+Get:3 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main amd64 rocminfo amd64 7.2.4-1~exp1~git202606120702.1dcd091~ubuntu26.04.1 [29.4 kB]
+Fetched 727 kB in 1s (575 kB/s)
+Selecting previously unselected package libhsakmt1:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 44349 files and directories currently installed.)
+Preparing to unpack .../libhsakmt1_7.2.4+dfsg~ppa1-0ubuntu1~git202606011102.6fd0c927~ubuntu26.04.1_amd64.deb ...
+Unpacking libhsakmt1:amd64 (7.2.4+dfsg~ppa1-0ubuntu1~git202606011102.6fd0c927~ubuntu26.04.1) ...
+Selecting previously unselected package libhsa-runtime64-1:amd64.
+Preparing to unpack .../libhsa-runtime64-1_7.2.4+dfsg~ppa1-0ubuntu1~git202606011102.6fd0c927~ubuntu26.04.1_amd64.deb ...
+Unpacking libhsa-runtime64-1:amd64 (7.2.4+dfsg~ppa1-0ubuntu1~git202606011102.6fd0c927~ubuntu26.04.1) ...
+Selecting previously unselected package rocminfo.
+Preparing to unpack .../rocminfo_7.2.4-1~exp1~git202606120702.1dcd091~ubuntu26.04.1_amd64.deb ...
+Unpacking rocminfo (7.2.4-1~exp1~git202606120702.1dcd091~ubuntu26.04.1) ...
+Setting up libhsakmt1:amd64 (7.2.4+dfsg~ppa1-0ubuntu1~git202606011102.6fd0c927~ubuntu26.04.1) ...
+Setting up libhsa-runtime64-1:amd64 (7.2.4+dfsg~ppa1-0ubuntu1~git202606011102.6fd0c927~ubuntu26.04.1) ...
+Setting up rocminfo (7.2.4-1~exp1~git202606120702.1dcd091~ubuntu26.04.1) ...
+Processing triggers for man-db (2.13.1-1build1) ...
+Processing triggers for libc-bin (2.43-2ubuntu2) ...
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+autopkgtest [03:25:21]: test rocminfo: [-----------------------
+Running rocminfo and expecting GPU information
+[37mROCk module is loaded[0m
+=====================    
+HSA System Attributes    
+=====================    
+Runtime Version:         1.1
+Runtime Ext Version:     1.15
+System Timestamp Freq.:  1000.000000MHz
+Sig. Max Wait Duration:  18446744073709551615 (0xFFFFFFFFFFFFFFFF) (timestamp count)
+Machine Model:           LARGE                              
+System Endianness:       LITTLE                             
+Mwaitx:                  DISABLED
+XNACK enabled:           NO
+DMAbuf Support:          YES
+VMM Support:             YES
+
+==========               
+HSA Agents               
+==========               
+*******                  
+Agent 1                  
+*******                  
+  Name:                    AMD RYZEN AI MAX+ PRO 395 w/ Radeon 8060S
+  Uuid:                    CPU-XX                             
+  Marketing Name:          AMD RYZEN AI MAX+ PRO 395 w/ Radeon 8060S
+  Vendor Name:             CPU                                
+  Feature:                 None specified                     
+  Profile:                 FULL_PROFILE                       
+  Float Round Mode:        NEAR                               
+  Max Queue Number:        0(0x0)                             
+  Queue Min Size:          0(0x0)                             
+  Queue Max Size:          0(0x0)                             
+  Queue Type:              MULTI                              
+  Node:                    0                                  
+  Device Type:             CPU                                
+  Cache Info:              
+    L1:                      49152(0xc000) KB                   
+  Chip ID:                 0(0x0)                             
+  ASIC Revision:           0(0x0)                             
+  Cacheline Size:          64(0x40)                           
+  Max Clock Freq. (MHz):   5187                               
+  BDFID:                   0                                  
+  Internal Node ID:        0                                  
+  Compute Unit:            32                                 
+  SIMDs per CU:            0                                  
+  Shader Engines:          0                                  
+  Shader Arrs. per Eng.:   0                                  
+  WatchPts on Addr. Ranges:1                                  
+  Memory Properties:       
+  Features:                None
+  Pool Info:               
+    Pool 1                   
+      Segment:                 GLOBAL; FLAGS: FINE GRAINED        
+      Size:                    47774564(0x2d8fb64) KB             
+      Allocatable:             TRUE                               
+      Alloc Granule:           4KB                                
+      Alloc Recommended Granule:4KB                                
+      Alloc Alignment:         4KB                                
+      Accessible by all:       TRUE                               
+    Pool 2                   
+      Segment:                 GLOBAL; FLAGS: EXTENDED FINE GRAINED
+      Size:                    47774564(0x2d8fb64) KB             
+      Allocatable:             TRUE                               
+      Alloc Granule:           4KB                                
+      Alloc Recommended Granule:4KB                                
+      Alloc Alignment:         4KB                                
+      Accessible by all:       TRUE                               
+    Pool 3                   
+      Segment:                 GLOBAL; FLAGS: KERNARG, FINE GRAINED
+      Size:                    47774564(0x2d8fb64) KB             
+      Allocatable:             TRUE                               
+      Alloc Granule:           4KB                                
+      Alloc Recommended Granule:4KB                                
+      Alloc Alignment:         4KB                                
+      Accessible by all:       TRUE                               
+    Pool 4                   
+      Segment:                 GLOBAL; FLAGS: COARSE GRAINED      
+      Size:                    47774564(0x2d8fb64) KB             
+      Allocatable:             TRUE                               
+      Alloc Granule:           4KB                                
+      Alloc Recommended Granule:4KB                                
+      Alloc Alignment:         4KB                                
+      Accessible by all:       TRUE                               
+  ISA Info:                
+*******                  
+Agent 2                  
+*******                  
+  Name:                    gfx1151                            
+  Uuid:                    GPU-XX                             
+  Marketing Name:          Radeon 8060S Graphics              
+  Vendor Name:             AMD                                
+  Feature:                 KERNEL_DISPATCH                    
+  Profile:                 BASE_PROFILE                       
+  Float Round Mode:        NEAR                               
+  Max Queue Number:        128(0x80)                          
+  Queue Min Size:          64(0x40)                           
+  Queue Max Size:          131072(0x20000)                    
+  Queue Type:              MULTI                              
+  Node:                    1                                  
+  Device Type:             GPU                                
+  Cache Info:              
+    L1:                      32(0x20) KB                        
+    L2:                      2048(0x800) KB                     
+    L3:                      32768(0x8000) KB                   
+  Chip ID:                 5510(0x1586)                       
+  ASIC Revision:           0(0x0)                             
+  Cacheline Size:          128(0x80)                          
+  Max Clock Freq. (MHz):   2900                               
+  BDFID:                   50176                              
+  Internal Node ID:        1                                  
+  Compute Unit:            40                                 
+  SIMDs per CU:            2                                  
+  Shader Engines:          2                                  
+  Shader Arrs. per Eng.:   2                                  
+  WatchPts on Addr. Ranges:4                                  
+  Coherent Host Access:    FALSE                              
+  Memory Properties:       APU
+  Features:                KERNEL_DISPATCH 
+  Fast F16 Operation:      TRUE                               
+  Wavefront Size:          32(0x20)                           
+  Workgroup Max Size:      1024(0x400)                        
+  Workgroup Max Size per Dimension:
+    x                        1024(0x400)                        
+    y                        1024(0x400)                        
+    z                        1024(0x400)                        
+  Max Waves Per CU:        32(0x20)                           
+  Max Work-item Per CU:    1024(0x400)                        
+  Grid Max Size:           4294967295(0xffffffff)             
+  Grid Max Size per Dimension:
+    x                        2147483647(0x7fffffff)             
+    y                        65535(0xffff)                      
+    z                        65535(0xffff)                      
+  Max fbarriers/Workgrp:   32                                 
+  Packet Processor uCode:: 34                                 
+  SDMA engine uCode::      18                                 
+  IOMMU Support::          None                               
+  Pool Info:               
+    Pool 1                   
+      Segment:                 GLOBAL; FLAGS: COARSE GRAINED      
+      Size:                    23887280(0x16c7db0) KB             
+      Allocatable:             TRUE                               
+      Alloc Granule:           4KB                                
+      Alloc Recommended Granule:2048KB                             
+      Alloc Alignment:         4KB                                
+      Accessible by all:       FALSE                              
+    Pool 2                   
+      Segment:                 GLOBAL; FLAGS: EXTENDED FINE GRAINED
+      Size:                    23887280(0x16c7db0) KB             
+      Allocatable:             TRUE                               
+      Alloc Granule:           4KB                                
+      Alloc Recommended Granule:2048KB                             
+      Alloc Alignment:         4KB                                
+      Accessible by all:       FALSE                              
+    Pool 3                   
+      Segment:                 GROUP                              
+      Size:                    64(0x40) KB                        
+      Allocatable:             FALSE                              
+      Alloc Granule:           0KB                                
+      Alloc Recommended Granule:0KB                                
+      Alloc Alignment:         0KB                                
+      Accessible by all:       FALSE                              
+  ISA Info:                
+    ISA 1                    
+      Name:                    amdgcn-amd-amdhsa--gfx1151         
+      Machine Models:          HSA_MACHINE_MODEL_LARGE            
+      Profiles:                HSA_PROFILE_BASE                   
+      Default Rounding Mode:   NEAR                               
+      Default Rounding Mode:   NEAR                               
+      Fast f16:                TRUE                               
+      Workgroup Max Size:      1024(0x400)                        
+      Workgroup Max Size per Dimension:
+        x                        1024(0x400)                        
+        y                        1024(0x400)                        
+        z                        1024(0x400)                        
+      Grid Max Size:           4294967295(0xffffffff)             
+      Grid Max Size per Dimension:
+        x                        2147483647(0x7fffffff)             
+        y                        65535(0xffff)                      
+        z                        65535(0xffff)                      
+      FBarrier Max Size:       32                                 
+    ISA 2                    
+      Name:                    amdgcn-amd-amdhsa--gfx11-generic   
+      Machine Models:          HSA_MACHINE_MODEL_LARGE            
+      Profiles:                HSA_PROFILE_BASE                   
+      Default Rounding Mode:   NEAR                               
+      Default Rounding Mode:   NEAR                               
+      Fast f16:                TRUE                               
+      Workgroup Max Size:      1024(0x400)                        
+      Workgroup Max Size per Dimension:
+        x                        1024(0x400)                        
+        y                        1024(0x400)                        
+        z                        1024(0x400)                        
+      Grid Max Size:           4294967295(0xffffffff)             
+      Grid Max Size per Dimension:
+        x                        2147483647(0x7fffffff)             
+        y                        65535(0xffff)                      
+        z                        65535(0xffff)                      
+      FBarrier Max Size:       32                                 
+*** Done ***             
+autopkgtest [03:25:22]: test rocminfo: -----------------------]
+autopkgtest [03:25:23]: test rocminfo:  - - - - - - - - - - results - - - - - - - - - -
+rocminfo             PASS (superficial)
+autopkgtest [03:25:23]: test enumerator: preparing testbed
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+autopkgtest [03:25:24]: test enumerator: [-----------------------
+gfx1151
+autopkgtest [03:25:24]: test enumerator: -----------------------]
+autopkgtest [03:25:25]: test enumerator:  - - - - - - - - - - results - - - - - - - - - -
+enumerator           PASS (superficial)
+autopkgtest [03:25:25]: @@@@@@@@@@@@@@@@@@@@ summary
+rocminfo             PASS (superficial)
+enumerator           PASS (superficial)

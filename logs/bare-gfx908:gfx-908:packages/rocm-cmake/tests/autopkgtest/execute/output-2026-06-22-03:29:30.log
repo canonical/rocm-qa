@@ -1,0 +1,3171 @@
+autopkgtest [03:29:30]: starting date and time: 2026-06-22 03:29:30+0000
+autopkgtest [03:29:30]: version 5.55
+autopkgtest [03:29:30]: host lxc-sessionizer-canonical-1; command line: /usr/bin/autopkgtest rocm-cmake -U '--setup-commands=add-apt-repository -ss -y' '--setup-commands=add-apt-repository ppa:bullwinkle-team/rocm-devel --enable-source -y' -- lxd ubuntu-daily:resolute --profile=rocm-gpu
+autopkgtest [03:31:38]: testbed dpkg architecture: amd64
+autopkgtest [03:31:38]: testbed apt version: 3.2.0
+autopkgtest [03:31:39]: @@@@@@@@@@@@@@@@@@@@ test bed setup
+autopkgtest [03:31:39]: updating testbed package index (apt update)
+Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+Get:2 http://security.ubuntu.com/ubuntu resolute-security InRelease [137 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease [137 kB]
+Get:4 http://security.ubuntu.com/ubuntu resolute-security/main amd64 Components [31.2 kB]
+Get:5 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Packages [125 kB]
+Get:6 http://security.ubuntu.com/ubuntu resolute-security/universe Translation-en [38.7 kB]
+Get:7 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Components [43.1 kB]
+Get:8 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 c-n-f Metadata [3264 B]
+Get:9 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 Components [212 B]
+Get:10 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 c-n-f Metadata [120 B]
+Get:11 http://archive.ubuntu.com/ubuntu resolute-backports InRelease [136 kB]
+Get:12 http://archive.ubuntu.com/ubuntu resolute/universe amd64 Packages [16.0 MB]
+Get:13 http://archive.ubuntu.com/ubuntu resolute/universe Translation-en [6329 kB]
+Get:14 http://archive.ubuntu.com/ubuntu resolute/universe amd64 Components [4556 kB]
+Get:15 http://archive.ubuntu.com/ubuntu resolute/universe amd64 c-n-f Metadata [313 kB]
+Get:16 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 Packages [290 kB]
+Get:17 http://archive.ubuntu.com/ubuntu resolute/multiverse Translation-en [127 kB]
+Get:18 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 Components [50.0 kB]
+Get:19 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 c-n-f Metadata [8276 B]
+Get:20 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Packages [257 kB]
+Get:21 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Components [49.4 kB]
+Get:22 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Packages [150 kB]
+Get:23 http://archive.ubuntu.com/ubuntu resolute-updates/universe Translation-en [47.0 kB]
+Get:24 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Components [62.0 kB]
+Get:25 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 c-n-f Metadata [3908 B]
+Get:26 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 Packages [3328 B]
+Get:27 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse Translation-en [772 B]
+Get:28 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 Components [216 B]
+Get:29 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 c-n-f Metadata [256 B]
+Get:30 http://archive.ubuntu.com/ubuntu resolute-backports/main amd64 Components [212 B]
+Get:31 http://archive.ubuntu.com/ubuntu resolute-backports/main amd64 c-n-f Metadata [112 B]
+Get:32 http://archive.ubuntu.com/ubuntu resolute-backports/universe amd64 Components [216 B]
+Get:33 http://archive.ubuntu.com/ubuntu resolute-backports/universe amd64 c-n-f Metadata [116 B]
+Get:34 http://archive.ubuntu.com/ubuntu resolute-backports/restricted amd64 Components [216 B]
+Get:35 http://archive.ubuntu.com/ubuntu resolute-backports/restricted amd64 c-n-f Metadata [120 B]
+Get:36 http://archive.ubuntu.com/ubuntu resolute-backports/multiverse amd64 Components [216 B]
+Get:37 http://archive.ubuntu.com/ubuntu resolute-backports/multiverse amd64 c-n-f Metadata [120 B]
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 28.9 MB in 3s (8451 kB/s)
+Reading package lists...
+autopkgtest [03:31:46]: testbed release detected to be: resolute
+autopkgtest [03:31:46]: updating testbed package index (apt update)
+Hit:1 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Reading package lists...
+Hit:1 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Get:2 http://security.ubuntu.com/ubuntu resolute-security/main Sources [92.7 kB]
+Get:3 http://security.ubuntu.com/ubuntu resolute-security/restricted Sources [19.5 kB]
+Get:4 http://security.ubuntu.com/ubuntu resolute-security/universe Sources [45.8 kB]
+Hit:5 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:6 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:7 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Get:8 http://archive.ubuntu.com/ubuntu resolute/universe Sources [13.4 MB]
+Get:9 http://archive.ubuntu.com/ubuntu resolute/multiverse Sources [215 kB]
+Get:10 http://archive.ubuntu.com/ubuntu resolute/restricted Sources [18.6 kB]
+Get:11 http://archive.ubuntu.com/ubuntu resolute/main Sources [1002 kB]
+Get:12 http://archive.ubuntu.com/ubuntu resolute-updates/main Sources [113 kB]
+Get:13 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse Sources [5596 B]
+Get:14 http://archive.ubuntu.com/ubuntu resolute-updates/universe Sources [53.1 kB]
+Get:15 http://archive.ubuntu.com/ubuntu resolute-updates/restricted Sources [19.5 kB]
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 15.0 MB in 2s (8754 kB/s)
+Reading package lists...
+Enabling deb-src for all repositories.
+Added: ## Ubuntu distribution repository
+##
+## The following settings can be adjusted to configure which packages to use from Ubuntu.
+## Mirror your choices (except for URIs and Suites) in the security section below to
+## ensure timely security updates.
+##
+## Types: Append deb-src to enable the fetching of source package.
+## URIs: A URL to the repository (you may add multiple URLs)
+## Suites: The following additional suites can be configured
+##   <name>-updates   - Major bug fix updates produced after the final release of the
+##                      distribution.
+##   <name>-backports - software from this repository may not have been tested as
+##                      extensively as that contained in the main release, although it includes
+##                      newer versions of some applications which may provide useful features.
+##                      Also, please note that software in backports WILL NOT receive any review
+##                      or updates from the Ubuntu security team.
+## Components: Aside from main, the following components can be added to the list
+##   restricted  - Software that may not be under a free license, or protected by patents.
+##   universe    - Community maintained packages. Software in this repository receives maintenance
+##                 from volunteers in the Ubuntu community, or a 10 year security maintenance
+##                 commitment from Canonical when an Ubuntu Pro subscription is attached.
+##   multiverse  - Community maintained of restricted. Software from this repository is
+##                 ENTIRELY UNSUPPORTED by the Ubuntu team, and may not be under a free
+##                 licence. Please satisfy yourself as to your rights to use the software.
+##                 Also, please note that software in multiverse WILL NOT receive any
+##                 review or updates from the Ubuntu security team.
+##
+## See the sources.list(5) manual page for further settings.
+Types: deb-src
+URIs: http://archive.ubuntu.com/ubuntu
+Suites: resolute resolute-updates resolute-backports
+Components: multiverse universe main restricted
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+Added: ## Ubuntu security updates. Aside from URIs and Suites,
+## this should mirror your choices in the previous section.
+Types: deb-src
+URIs: http://security.ubuntu.com/ubuntu
+Suites: resolute-security
+Components: multiverse universe main restricted
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:2 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Get:4 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute InRelease [27.2 kB]
+Hit:5 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Get:6 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main Sources [12.3 kB]
+Get:7 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main amd64 Packages [19.7 kB]
+Get:8 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main Translation-en [12.9 kB]
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 72.1 kB in 1s (74.1 kB/s)
+Reading package lists...
+PPA publishes dbgsym, you may need to include 'main/debug' component
+Repository: 'Types: deb
+URIs: https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu/
+Suites: resolute
+Components: main
+'
+Description:
+Development archive for AMD ROCm packages on Ubuntu with an aim to have packages build for next Ubuntu release
+More info: https://launchpad.net/~bullwinkle-team/+archive/ubuntu/rocm-devel
+Adding repository.
+autopkgtest [03:32:04]: upgrading testbed (apt dist-upgrade and autopurge)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+autopkgtest [03:32:07]: testbed running kernel: Linux 6.17.0-35-generic #35-Ubuntu SMP PREEMPT_DYNAMIC Tue May 26 13:10:28 UTC 2026
+autopkgtest [03:32:07]: @@@@@@@@@@@@@@@@@@@@ apt-source rocm-cmake
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+The following NEW packages will be installed:
+  bzip2 dpkg-dev libdpkg-perl lto-disabled-list make
+0 upgraded, 5 newly installed, 0 to remove and 0 not upgraded.
+Need to get 1596 kB of archives.
+After this operation, 4247 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu resolute/main amd64 bzip2 amd64 1.0.8-6build2 [34.3 kB]
+Get:2 http://archive.ubuntu.com/ubuntu resolute/main amd64 libdpkg-perl all 1.23.7ubuntu1 [289 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute/main amd64 make amd64 4.4.1-3 [197 kB]
+Get:4 http://archive.ubuntu.com/ubuntu resolute/main amd64 lto-disabled-list all 79 [14.2 kB]
+Get:5 http://archive.ubuntu.com/ubuntu resolute/main amd64 dpkg-dev all 1.23.7ubuntu1 [1062 kB]
+Fetched 1596 kB in 0s (6218 kB/s)
+Selecting previously unselected package bzip2.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 44349 files and directories currently installed.)
+Preparing to unpack .../bzip2_1.0.8-6build2_amd64.deb ...
+Unpacking bzip2 (1.0.8-6build2) ...
+Selecting previously unselected package libdpkg-perl.
+Preparing to unpack .../libdpkg-perl_1.23.7ubuntu1_all.deb ...
+Unpacking libdpkg-perl (1.23.7ubuntu1) ...
+Selecting previously unselected package make.
+Preparing to unpack .../make_4.4.1-3_amd64.deb ...
+Unpacking make (4.4.1-3) ...
+Selecting previously unselected package lto-disabled-list.
+Preparing to unpack .../lto-disabled-list_79_all.deb ...
+Unpacking lto-disabled-list (79) ...
+Selecting previously unselected package dpkg-dev.
+Preparing to unpack .../dpkg-dev_1.23.7ubuntu1_all.deb ...
+Unpacking dpkg-dev (1.23.7ubuntu1) ...
+Setting up lto-disabled-list (79) ...
+Setting up bzip2 (1.0.8-6build2) ...
+Setting up make (4.4.1-3) ...
+Setting up libdpkg-perl (1.23.7ubuntu1) ...
+Setting up dpkg-dev (1.23.7ubuntu1) ...
+Processing triggers for man-db (2.13.1-1build1) ...
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+Get:1 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main rocm-cmake 7.2.3-0ubuntu2~git202605231501.331dca7~ubuntu26.04.1 (tar) [79.2 kB]
+Get:2 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main rocm-cmake 7.2.3-0ubuntu2~git202605231501.331dca7~ubuntu26.04.1 (dsc) [1325 B]
+dpkg-source: warning: extracting unsigned source package (rocm-cmake_7.2.3-0ubuntu2~git202605231501.331dca7~ubuntu26.04.1.dsc)
+dpkg-source: warning: native package version may not have a revision
+autopkgtest [03:32:12]: testing package rocm-cmake version 7.2.3-0ubuntu2~git202605231501.331dca7~ubuntu26.04.1
+autopkgtest [03:32:12]: build not needed
+autopkgtest [03:32:13]: test cmake-find-package: preparing testbed
+autopkgtest [03:34:22]: testbed dpkg architecture: amd64
+autopkgtest [03:34:23]: testbed apt version: 3.2.0
+autopkgtest [03:34:23]: @@@@@@@@@@@@@@@@@@@@ test bed setup
+autopkgtest [03:34:23]: updating testbed package index (apt update)
+Get:1 http://security.ubuntu.com/ubuntu resolute-security InRelease [137 kB]
+Hit:2 http://archive.ubuntu.com/ubuntu resolute InRelease
+Get:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease [137 kB]
+Get:4 http://security.ubuntu.com/ubuntu resolute-security/main amd64 Components [31.2 kB]
+Get:5 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Packages [125 kB]
+Get:6 http://security.ubuntu.com/ubuntu resolute-security/universe Translation-en [38.7 kB]
+Get:7 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Components [43.1 kB]
+Get:8 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 c-n-f Metadata [3264 B]
+Get:9 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 Components [212 B]
+Get:10 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 c-n-f Metadata [120 B]
+Get:11 http://archive.ubuntu.com/ubuntu resolute-backports InRelease [136 kB]
+Get:12 http://archive.ubuntu.com/ubuntu resolute/universe amd64 Packages [16.0 MB]
+Get:13 http://archive.ubuntu.com/ubuntu resolute/universe Translation-en [6329 kB]
+Get:14 http://archive.ubuntu.com/ubuntu resolute/universe amd64 Components [4556 kB]
+Get:15 http://archive.ubuntu.com/ubuntu resolute/universe amd64 c-n-f Metadata [313 kB]
+Get:16 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 Packages [290 kB]
+Get:17 http://archive.ubuntu.com/ubuntu resolute/multiverse Translation-en [127 kB]
+Get:18 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 Components [50.0 kB]
+Get:19 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 c-n-f Metadata [8276 B]
+Get:20 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Packages [257 kB]
+Get:21 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Components [49.4 kB]
+Get:22 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Packages [150 kB]
+Get:23 http://archive.ubuntu.com/ubuntu resolute-updates/universe Translation-en [47.0 kB]
+Get:24 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Components [62.0 kB]
+Get:25 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 c-n-f Metadata [3908 B]
+Get:26 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 Packages [3328 B]
+Get:27 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse Translation-en [772 B]
+Get:28 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 Components [216 B]
+Get:29 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 c-n-f Metadata [256 B]
+Get:30 http://archive.ubuntu.com/ubuntu resolute-backports/main amd64 Components [212 B]
+Get:31 http://archive.ubuntu.com/ubuntu resolute-backports/main amd64 c-n-f Metadata [112 B]
+Get:32 http://archive.ubuntu.com/ubuntu resolute-backports/universe amd64 Components [216 B]
+Get:33 http://archive.ubuntu.com/ubuntu resolute-backports/universe amd64 c-n-f Metadata [116 B]
+Get:34 http://archive.ubuntu.com/ubuntu resolute-backports/restricted amd64 Components [216 B]
+Get:35 http://archive.ubuntu.com/ubuntu resolute-backports/restricted amd64 c-n-f Metadata [120 B]
+Get:36 http://archive.ubuntu.com/ubuntu resolute-backports/multiverse amd64 Components [216 B]
+Get:37 http://archive.ubuntu.com/ubuntu resolute-backports/multiverse amd64 c-n-f Metadata [120 B]
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 28.9 MB in 3s (8441 kB/s)
+Reading package lists...
+autopkgtest [03:34:31]: testbed release detected to be: resolute
+autopkgtest [03:34:31]: updating testbed package index (apt update)
+Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:2 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Reading package lists...
+Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:2 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Get:3 http://security.ubuntu.com/ubuntu resolute-security/restricted Sources [19.5 kB]
+Get:4 http://security.ubuntu.com/ubuntu resolute-security/universe Sources [45.8 kB]
+Get:5 http://security.ubuntu.com/ubuntu resolute-security/main Sources [92.7 kB]
+Hit:6 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:7 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Get:8 http://archive.ubuntu.com/ubuntu resolute/universe Sources [13.4 MB]
+Get:9 http://archive.ubuntu.com/ubuntu resolute/multiverse Sources [215 kB]
+Get:10 http://archive.ubuntu.com/ubuntu resolute/main Sources [1002 kB]
+Get:11 http://archive.ubuntu.com/ubuntu resolute/restricted Sources [18.6 kB]
+Get:12 http://archive.ubuntu.com/ubuntu resolute-updates/restricted Sources [19.5 kB]
+Get:13 http://archive.ubuntu.com/ubuntu resolute-updates/universe Sources [53.1 kB]
+Get:14 http://archive.ubuntu.com/ubuntu resolute-updates/main Sources [113 kB]
+Get:15 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse Sources [5596 B]
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 15.0 MB in 2s (9493 kB/s)
+Reading package lists...
+Enabling deb-src for all repositories.
+Added: ## Ubuntu distribution repository
+##
+## The following settings can be adjusted to configure which packages to use from Ubuntu.
+## Mirror your choices (except for URIs and Suites) in the security section below to
+## ensure timely security updates.
+##
+## Types: Append deb-src to enable the fetching of source package.
+## URIs: A URL to the repository (you may add multiple URLs)
+## Suites: The following additional suites can be configured
+##   <name>-updates   - Major bug fix updates produced after the final release of the
+##                      distribution.
+##   <name>-backports - software from this repository may not have been tested as
+##                      extensively as that contained in the main release, although it includes
+##                      newer versions of some applications which may provide useful features.
+##                      Also, please note that software in backports WILL NOT receive any review
+##                      or updates from the Ubuntu security team.
+## Components: Aside from main, the following components can be added to the list
+##   restricted  - Software that may not be under a free license, or protected by patents.
+##   universe    - Community maintained packages. Software in this repository receives maintenance
+##                 from volunteers in the Ubuntu community, or a 10 year security maintenance
+##                 commitment from Canonical when an Ubuntu Pro subscription is attached.
+##   multiverse  - Community maintained of restricted. Software from this repository is
+##                 ENTIRELY UNSUPPORTED by the Ubuntu team, and may not be under a free
+##                 licence. Please satisfy yourself as to your rights to use the software.
+##                 Also, please note that software in multiverse WILL NOT receive any
+##                 review or updates from the Ubuntu security team.
+##
+## See the sources.list(5) manual page for further settings.
+Types: deb-src
+URIs: http://archive.ubuntu.com/ubuntu
+Suites: resolute resolute-updates resolute-backports
+Components: main universe restricted multiverse
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+Added: ## Ubuntu security updates. Aside from URIs and Suites,
+## this should mirror your choices in the previous section.
+Types: deb-src
+URIs: http://security.ubuntu.com/ubuntu
+Suites: resolute-security
+Components: main universe restricted multiverse
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+Hit:1 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Get:4 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute InRelease [27.2 kB]
+Hit:5 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Get:6 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main Sources [12.3 kB]
+Get:7 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main amd64 Packages [19.7 kB]
+Get:8 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main Translation-en [12.9 kB]
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 72.1 kB in 1s (72.9 kB/s)
+Reading package lists...
+PPA publishes dbgsym, you may need to include 'main/debug' component
+Repository: 'Types: deb
+URIs: https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu/
+Suites: resolute
+Components: main
+'
+Description:
+Development archive for AMD ROCm packages on Ubuntu with an aim to have packages build for next Ubuntu release
+More info: https://launchpad.net/~bullwinkle-team/+archive/ubuntu/rocm-devel
+Adding repository.
+autopkgtest [03:34:43]: upgrading testbed (apt dist-upgrade and autopurge)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+The following NEW packages will be installed:
+  cmake cmake-data libarchive13t64 libjsoncpp26 librhash1 make rocm-cmake
+0 upgraded, 7 newly installed, 0 to remove and 0 not upgraded.
+Need to get 17.2 MB of archives.
+After this operation, 60.6 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu resolute/main amd64 cmake-data all 4.2.3-2ubuntu2 [2581 kB]
+Get:2 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libarchive13t64 amd64 3.8.5-1ubuntu2.1 [397 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute/main amd64 libjsoncpp26 amd64 1.9.6-5 [84.0 kB]
+Get:4 http://archive.ubuntu.com/ubuntu resolute/main amd64 librhash1 amd64 1.4.6-1.1 [133 kB]
+Get:5 http://archive.ubuntu.com/ubuntu resolute/main amd64 cmake amd64 4.2.3-2ubuntu2 [13.7 MB]
+Get:6 http://archive.ubuntu.com/ubuntu resolute/main amd64 make amd64 4.4.1-3 [197 kB]
+Get:7 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main amd64 rocm-cmake all 7.2.3-0ubuntu2~git202605231501.331dca7~ubuntu26.04.1 [28.3 kB]
+Fetched 17.2 MB in 1s (24.8 MB/s)
+Selecting previously unselected package cmake-data.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 44349 files and directories currently installed.)
+Preparing to unpack .../0-cmake-data_4.2.3-2ubuntu2_all.deb ...
+Unpacking cmake-data (4.2.3-2ubuntu2) ...
+Selecting previously unselected package libarchive13t64:amd64.
+Preparing to unpack .../1-libarchive13t64_3.8.5-1ubuntu2.1_amd64.deb ...
+Unpacking libarchive13t64:amd64 (3.8.5-1ubuntu2.1) ...
+Selecting previously unselected package libjsoncpp26:amd64.
+Preparing to unpack .../2-libjsoncpp26_1.9.6-5_amd64.deb ...
+Unpacking libjsoncpp26:amd64 (1.9.6-5) ...
+Selecting previously unselected package librhash1:amd64.
+Preparing to unpack .../3-librhash1_1.4.6-1.1_amd64.deb ...
+Unpacking librhash1:amd64 (1.4.6-1.1) ...
+Selecting previously unselected package cmake.
+Preparing to unpack .../4-cmake_4.2.3-2ubuntu2_amd64.deb ...
+Unpacking cmake (4.2.3-2ubuntu2) ...
+Selecting previously unselected package make.
+Preparing to unpack .../5-make_4.4.1-3_amd64.deb ...
+Unpacking make (4.4.1-3) ...
+Selecting previously unselected package rocm-cmake.
+Preparing to unpack .../6-rocm-cmake_7.2.3-0ubuntu2~git202605231501.331dca7~ubuntu26.04.1_all.deb ...
+Unpacking rocm-cmake (7.2.3-0ubuntu2~git202605231501.331dca7~ubuntu26.04.1) ...
+Setting up rocm-cmake (7.2.3-0ubuntu2~git202605231501.331dca7~ubuntu26.04.1) ...
+Setting up make (4.4.1-3) ...
+Setting up libjsoncpp26:amd64 (1.9.6-5) ...
+Setting up cmake-data (4.2.3-2ubuntu2) ...
+Setting up librhash1:amd64 (1.4.6-1.1) ...
+Setting up libarchive13t64:amd64 (3.8.5-1ubuntu2.1) ...
+Setting up cmake (4.2.3-2ubuntu2) ...
+Processing triggers for man-db (2.13.1-1build1) ...
+Processing triggers for libc-bin (2.43-2ubuntu2) ...
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+autopkgtest [03:34:51]: test cmake-find-package: [-----------------------
+-- rocm-cmake modules loaded successfully
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.Wd27ItnsaS
+PASS: rocm-cmake find_package test succeeded
+autopkgtest [03:34:51]: test cmake-find-package: -----------------------]
+autopkgtest [03:34:52]: test cmake-find-package:  - - - - - - - - - - results - - - - - - - - - -
+cmake-find-package   PASS (superficial)
+autopkgtest [03:34:52]: test build-simple-library: preparing testbed
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+The following NEW packages will be installed:
+  build-essential bzip2 cpp cpp-15 cpp-15-x86-64-linux-gnu
+  cpp-x86-64-linux-gnu dpkg-dev g++ g++-15 g++-15-x86-64-linux-gnu
+  g++-x86-64-linux-gnu gcc gcc-15 gcc-15-base gcc-15-x86-64-linux-gnu
+  gcc-x86-64-linux-gnu libasan8 libc-dev-bin libc6-dev libcc1-0 libdpkg-perl
+  libgcc-15-dev libgomp1 libhwasan0 libisl23 libitm1 liblsan0 libmpc3
+  libquadmath0 libstdc++-15-dev libtsan2 libubsan1 linux-libc-dev
+  lto-disabled-list rpcsvc-proto
+0 upgraded, 35 newly installed, 0 to remove and 0 not upgraded.
+Need to get 76.1 MB of archives.
+After this operation, 268 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu resolute/main amd64 libc-dev-bin amd64 2.43-2ubuntu2 [23.3 kB]
+Get:2 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 linux-libc-dev amd64 7.0.0-22.22 [1548 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute/main amd64 rpcsvc-proto amd64 1.4.3-1build1 [68.3 kB]
+Get:4 http://archive.ubuntu.com/ubuntu resolute/main amd64 libc6-dev amd64 2.43-2ubuntu2 [2295 kB]
+Get:5 http://archive.ubuntu.com/ubuntu resolute/main amd64 gcc-15-base amd64 15.2.0-16ubuntu1 [39.0 kB]
+Get:6 http://archive.ubuntu.com/ubuntu resolute/main amd64 libisl23 amd64 0.27-1build1 [691 kB]
+Get:7 http://archive.ubuntu.com/ubuntu resolute/main amd64 libmpc3 amd64 1.3.1-3 [54.6 kB]
+Get:8 http://archive.ubuntu.com/ubuntu resolute/main amd64 cpp-15-x86-64-linux-gnu amd64 15.2.0-16ubuntu1 [12.9 MB]
+Get:9 http://archive.ubuntu.com/ubuntu resolute/main amd64 cpp-15 amd64 15.2.0-16ubuntu1 [1030 B]
+Get:10 http://archive.ubuntu.com/ubuntu resolute/main amd64 cpp-x86-64-linux-gnu amd64 4:15.2.0-5ubuntu1 [5840 B]
+Get:11 http://archive.ubuntu.com/ubuntu resolute/main amd64 cpp amd64 4:15.2.0-5ubuntu1 [22.4 kB]
+Get:12 http://archive.ubuntu.com/ubuntu resolute/main amd64 libcc1-0 amd64 16-20260322-1ubuntu1 [51.2 kB]
+Get:13 http://archive.ubuntu.com/ubuntu resolute/main amd64 libgomp1 amd64 16-20260322-1ubuntu1 [162 kB]
+Get:14 http://archive.ubuntu.com/ubuntu resolute/main amd64 libitm1 amd64 16-20260322-1ubuntu1 [30.0 kB]
+Get:15 http://archive.ubuntu.com/ubuntu resolute/main amd64 libasan8 amd64 16-20260322-1ubuntu1 [3184 kB]
+Get:16 http://archive.ubuntu.com/ubuntu resolute/main amd64 liblsan0 amd64 16-20260322-1ubuntu1 [1394 kB]
+Get:17 http://archive.ubuntu.com/ubuntu resolute/main amd64 libtsan2 amd64 16-20260322-1ubuntu1 [2849 kB]
+Get:18 http://archive.ubuntu.com/ubuntu resolute/main amd64 libubsan1 amd64 16-20260322-1ubuntu1 [1240 kB]
+Get:19 http://archive.ubuntu.com/ubuntu resolute/main amd64 libhwasan0 amd64 16-20260322-1ubuntu1 [1731 kB]
+Get:20 http://archive.ubuntu.com/ubuntu resolute/main amd64 libquadmath0 amd64 16-20260322-1ubuntu1 [155 kB]
+Get:21 http://archive.ubuntu.com/ubuntu resolute/main amd64 libgcc-15-dev amd64 15.2.0-16ubuntu1 [2866 kB]
+Get:22 http://archive.ubuntu.com/ubuntu resolute/main amd64 gcc-15-x86-64-linux-gnu amd64 15.2.0-16ubuntu1 [25.4 MB]
+Get:23 http://archive.ubuntu.com/ubuntu resolute/main amd64 gcc-15 amd64 15.2.0-16ubuntu1 [539 kB]
+Get:24 http://archive.ubuntu.com/ubuntu resolute/main amd64 gcc-x86-64-linux-gnu amd64 4:15.2.0-5ubuntu1 [1208 B]
+Get:25 http://archive.ubuntu.com/ubuntu resolute/main amd64 gcc amd64 4:15.2.0-5ubuntu1 [5010 B]
+Get:26 http://archive.ubuntu.com/ubuntu resolute/main amd64 libstdc++-15-dev amd64 15.2.0-16ubuntu1 [2920 kB]
+Get:27 http://archive.ubuntu.com/ubuntu resolute/main amd64 g++-15-x86-64-linux-gnu amd64 15.2.0-16ubuntu1 [14.4 MB]
+Get:28 http://archive.ubuntu.com/ubuntu resolute/main amd64 g++-15 amd64 15.2.0-16ubuntu1 [26.7 kB]
+Get:29 http://archive.ubuntu.com/ubuntu resolute/main amd64 g++-x86-64-linux-gnu amd64 4:15.2.0-5ubuntu1 [968 B]
+Get:30 http://archive.ubuntu.com/ubuntu resolute/main amd64 g++ amd64 4:15.2.0-5ubuntu1 [1100 B]
+Get:31 http://archive.ubuntu.com/ubuntu resolute/main amd64 libdpkg-perl all 1.23.7ubuntu1 [289 kB]
+Get:32 http://archive.ubuntu.com/ubuntu resolute/main amd64 bzip2 amd64 1.0.8-6build2 [34.3 kB]
+Get:33 http://archive.ubuntu.com/ubuntu resolute/main amd64 lto-disabled-list all 79 [14.2 kB]
+Get:34 http://archive.ubuntu.com/ubuntu resolute/main amd64 dpkg-dev all 1.23.7ubuntu1 [1062 kB]
+Get:35 http://archive.ubuntu.com/ubuntu resolute/main amd64 build-essential amd64 12.12ubuntu2 [5256 B]
+Fetched 76.1 MB in 1s (61.3 MB/s)
+Selecting previously unselected package libc-dev-bin.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 48515 files and directories currently installed.)
+Preparing to unpack .../00-libc-dev-bin_2.43-2ubuntu2_amd64.deb ...
+Unpacking libc-dev-bin (2.43-2ubuntu2) ...
+Selecting previously unselected package linux-libc-dev:amd64.
+Preparing to unpack .../01-linux-libc-dev_7.0.0-22.22_amd64.deb ...
+Unpacking linux-libc-dev:amd64 (7.0.0-22.22) ...
+Selecting previously unselected package rpcsvc-proto.
+Preparing to unpack .../02-rpcsvc-proto_1.4.3-1build1_amd64.deb ...
+Unpacking rpcsvc-proto (1.4.3-1build1) ...
+Selecting previously unselected package libc6-dev:amd64.
+Preparing to unpack .../03-libc6-dev_2.43-2ubuntu2_amd64.deb ...
+Unpacking libc6-dev:amd64 (2.43-2ubuntu2) ...
+Selecting previously unselected package gcc-15-base:amd64.
+Preparing to unpack .../04-gcc-15-base_15.2.0-16ubuntu1_amd64.deb ...
+Unpacking gcc-15-base:amd64 (15.2.0-16ubuntu1) ...
+Selecting previously unselected package libisl23:amd64.
+Preparing to unpack .../05-libisl23_0.27-1build1_amd64.deb ...
+Unpacking libisl23:amd64 (0.27-1build1) ...
+Selecting previously unselected package libmpc3:amd64.
+Preparing to unpack .../06-libmpc3_1.3.1-3_amd64.deb ...
+Unpacking libmpc3:amd64 (1.3.1-3) ...
+Selecting previously unselected package cpp-15-x86-64-linux-gnu.
+Preparing to unpack .../07-cpp-15-x86-64-linux-gnu_15.2.0-16ubuntu1_amd64.deb ...
+Unpacking cpp-15-x86-64-linux-gnu (15.2.0-16ubuntu1) ...
+Selecting previously unselected package cpp-15.
+Preparing to unpack .../08-cpp-15_15.2.0-16ubuntu1_amd64.deb ...
+Unpacking cpp-15 (15.2.0-16ubuntu1) ...
+Selecting previously unselected package cpp-x86-64-linux-gnu.
+Preparing to unpack .../09-cpp-x86-64-linux-gnu_4%3a15.2.0-5ubuntu1_amd64.deb ...
+Unpacking cpp-x86-64-linux-gnu (4:15.2.0-5ubuntu1) ...
+Selecting previously unselected package cpp.
+Preparing to unpack .../10-cpp_4%3a15.2.0-5ubuntu1_amd64.deb ...
+Unpacking cpp (4:15.2.0-5ubuntu1) ...
+Selecting previously unselected package libcc1-0:amd64.
+Preparing to unpack .../11-libcc1-0_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libcc1-0:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libgomp1:amd64.
+Preparing to unpack .../12-libgomp1_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libgomp1:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libitm1:amd64.
+Preparing to unpack .../13-libitm1_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libitm1:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libasan8:amd64.
+Preparing to unpack .../14-libasan8_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libasan8:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package liblsan0:amd64.
+Preparing to unpack .../15-liblsan0_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking liblsan0:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libtsan2:amd64.
+Preparing to unpack .../16-libtsan2_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libtsan2:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libubsan1:amd64.
+Preparing to unpack .../17-libubsan1_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libubsan1:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libhwasan0:amd64.
+Preparing to unpack .../18-libhwasan0_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libhwasan0:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libquadmath0:amd64.
+Preparing to unpack .../19-libquadmath0_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libquadmath0:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libgcc-15-dev:amd64.
+Preparing to unpack .../20-libgcc-15-dev_15.2.0-16ubuntu1_amd64.deb ...
+Unpacking libgcc-15-dev:amd64 (15.2.0-16ubuntu1) ...
+Selecting previously unselected package gcc-15-x86-64-linux-gnu.
+Preparing to unpack .../21-gcc-15-x86-64-linux-gnu_15.2.0-16ubuntu1_amd64.deb ...
+Unpacking gcc-15-x86-64-linux-gnu (15.2.0-16ubuntu1) ...
+Selecting previously unselected package gcc-15.
+Preparing to unpack .../22-gcc-15_15.2.0-16ubuntu1_amd64.deb ...
+Unpacking gcc-15 (15.2.0-16ubuntu1) ...
+Selecting previously unselected package gcc-x86-64-linux-gnu.
+Preparing to unpack .../23-gcc-x86-64-linux-gnu_4%3a15.2.0-5ubuntu1_amd64.deb ...
+Unpacking gcc-x86-64-linux-gnu (4:15.2.0-5ubuntu1) ...
+Selecting previously unselected package gcc.
+Preparing to unpack .../24-gcc_4%3a15.2.0-5ubuntu1_amd64.deb ...
+Unpacking gcc (4:15.2.0-5ubuntu1) ...
+Selecting previously unselected package libstdc++-15-dev:amd64.
+Preparing to unpack .../25-libstdc++-15-dev_15.2.0-16ubuntu1_amd64.deb ...
+Unpacking libstdc++-15-dev:amd64 (15.2.0-16ubuntu1) ...
+Selecting previously unselected package g++-15-x86-64-linux-gnu.
+Preparing to unpack .../26-g++-15-x86-64-linux-gnu_15.2.0-16ubuntu1_amd64.deb ...
+Unpacking g++-15-x86-64-linux-gnu (15.2.0-16ubuntu1) ...
+Selecting previously unselected package g++-15.
+Preparing to unpack .../27-g++-15_15.2.0-16ubuntu1_amd64.deb ...
+Unpacking g++-15 (15.2.0-16ubuntu1) ...
+Selecting previously unselected package g++-x86-64-linux-gnu.
+Preparing to unpack .../28-g++-x86-64-linux-gnu_4%3a15.2.0-5ubuntu1_amd64.deb ...
+Unpacking g++-x86-64-linux-gnu (4:15.2.0-5ubuntu1) ...
+Selecting previously unselected package g++.
+Preparing to unpack .../29-g++_4%3a15.2.0-5ubuntu1_amd64.deb ...
+Unpacking g++ (4:15.2.0-5ubuntu1) ...
+Selecting previously unselected package libdpkg-perl.
+Preparing to unpack .../30-libdpkg-perl_1.23.7ubuntu1_all.deb ...
+Unpacking libdpkg-perl (1.23.7ubuntu1) ...
+Selecting previously unselected package bzip2.
+Preparing to unpack .../31-bzip2_1.0.8-6build2_amd64.deb ...
+Unpacking bzip2 (1.0.8-6build2) ...
+Selecting previously unselected package lto-disabled-list.
+Preparing to unpack .../32-lto-disabled-list_79_all.deb ...
+Unpacking lto-disabled-list (79) ...
+Selecting previously unselected package dpkg-dev.
+Preparing to unpack .../33-dpkg-dev_1.23.7ubuntu1_all.deb ...
+Unpacking dpkg-dev (1.23.7ubuntu1) ...
+Selecting previously unselected package build-essential.
+Preparing to unpack .../34-build-essential_12.12ubuntu2_amd64.deb ...
+Unpacking build-essential (12.12ubuntu2) ...
+Setting up lto-disabled-list (79) ...
+Setting up linux-libc-dev:amd64 (7.0.0-22.22) ...
+Setting up libgomp1:amd64 (16-20260322-1ubuntu1) ...
+Setting up bzip2 (1.0.8-6build2) ...
+Setting up rpcsvc-proto (1.4.3-1build1) ...
+Setting up libquadmath0:amd64 (16-20260322-1ubuntu1) ...
+Setting up libmpc3:amd64 (1.3.1-3) ...
+Setting up libdpkg-perl (1.23.7ubuntu1) ...
+Setting up libubsan1:amd64 (16-20260322-1ubuntu1) ...
+Setting up libhwasan0:amd64 (16-20260322-1ubuntu1) ...
+Setting up libasan8:amd64 (16-20260322-1ubuntu1) ...
+Setting up libtsan2:amd64 (16-20260322-1ubuntu1) ...
+Setting up libisl23:amd64 (0.27-1build1) ...
+Setting up libc-dev-bin (2.43-2ubuntu2) ...
+Setting up gcc-15-base:amd64 (15.2.0-16ubuntu1) ...
+Setting up libcc1-0:amd64 (16-20260322-1ubuntu1) ...
+Setting up liblsan0:amd64 (16-20260322-1ubuntu1) ...
+Setting up libitm1:amd64 (16-20260322-1ubuntu1) ...
+Setting up libgcc-15-dev:amd64 (15.2.0-16ubuntu1) ...
+Setting up cpp-15-x86-64-linux-gnu (15.2.0-16ubuntu1) ...
+Setting up dpkg-dev (1.23.7ubuntu1) ...
+Setting up gcc-15-x86-64-linux-gnu (15.2.0-16ubuntu1) ...
+Setting up cpp-15 (15.2.0-16ubuntu1) ...
+Setting up libc6-dev:amd64 (2.43-2ubuntu2) ...
+Setting up cpp-x86-64-linux-gnu (4:15.2.0-5ubuntu1) ...
+Setting up gcc-x86-64-linux-gnu (4:15.2.0-5ubuntu1) ...
+Setting up gcc-15 (15.2.0-16ubuntu1) ...
+Setting up libstdc++-15-dev:amd64 (15.2.0-16ubuntu1) ...
+Setting up cpp (4:15.2.0-5ubuntu1) ...
+Setting up g++-15-x86-64-linux-gnu (15.2.0-16ubuntu1) ...
+Setting up gcc (4:15.2.0-5ubuntu1) ...
+Setting up g++-x86-64-linux-gnu (4:15.2.0-5ubuntu1) ...
+Setting up g++-15 (15.2.0-16ubuntu1) ...
+Setting up g++ (4:15.2.0-5ubuntu1) ...
+update-alternatives: using /usr/bin/g++ to provide /usr/bin/c++ (c++) in auto mode
+Setting up build-essential (12.12ubuntu2) ...
+Processing triggers for man-db (2.13.1-1build1) ...
+Processing triggers for libc-bin (2.43-2ubuntu2) ...
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+autopkgtest [03:34:58]: test build-simple-library: [-----------------------
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- rocm-cmake: Set license file to /tmp/tmp.rz13EeOfB7/src/LICENSE.
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.rz13EeOfB7/build
+[ 50%] Building CXX object CMakeFiles/mylib.dir/mylib.cpp.o
+[100%] Linking CXX static library libmylib.a
+[100%] Built target mylib
+-- Install configuration: ""
+-- Installing: /tmp/tmp.rz13EeOfB7/install/include
+-- Installing: /tmp/tmp.rz13EeOfB7/install/include/mylib.h
+-- Installing: /tmp/tmp.rz13EeOfB7/install/lib/libmylib.a
+-- Installing: /tmp/tmp.rz13EeOfB7/install/lib/cmake/mylib/mylib-targets.cmake
+-- Installing: /tmp/tmp.rz13EeOfB7/install/lib/cmake/mylib/mylib-targets-noconfig.cmake
+-- Installing: /tmp/tmp.rz13EeOfB7/install/lib/cmake/mylib/mylib-config.cmake
+-- Installing: /tmp/tmp.rz13EeOfB7/install/lib/cmake/mylib/mylib-config-version.cmake
+-- Installing: /tmp/tmp.rz13EeOfB7/install/share/doc/mylib/LICENSE
+PASS: build-simple-library test succeeded
+autopkgtest [03:34:59]: test build-simple-library: -----------------------]
+autopkgtest [03:35:00]: test build-simple-library:  - - - - - - - - - - results - - - - - - - - - -
+build-simple-library PASS
+autopkgtest [03:35:00]: test upstream-tests: preparing testbed
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+autopkgtest [03:35:01]: test upstream-tests: [-----------------------
+Running test: analyze-gh.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-huQcw/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-huQcw/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Clang tidy not found
+-- Cppcheck not found
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.l7EaDbDrCy/tmp-huQcw/builds/AeSps/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build
+[ 33%] Building CXX object CMakeFiles/simple.dir/simple.cpp.o
+[ 66%] Building CXX object CMakeFiles/simple.dir/simple_with_a_ridiculously_long_filename_in_order_to_test_long_filenames_in_clang_tidy_cmake.cpp.o
+[100%] Linking CXX static library libsimple.a
+[100%] Built target simple
+Built target analyze
+Built target analyze
+[100%] Built target simple
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-huQcw/usr/include
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-huQcw/usr/include/simple.h
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-huQcw/usr/lib/libsimple.a
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-huQcw/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-huQcw/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Clang tidy not found
+-- Cppcheck not found
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.l7EaDbDrCy/tmp-huQcw/builds/1zUOS/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build
+[ 33%] Building CXX object CMakeFiles/simple.dir/simple.cpp.o
+[ 66%] Building CXX object CMakeFiles/simple.dir/simple_with_a_ridiculously_long_filename_in_order_to_test_long_filenames_in_clang_tidy_cmake.cpp.o
+[100%] Linking CXX static library libsimple.a
+[100%] Built target simple
+Built target analyze
+Built target analyze
+[100%] Built target simple
+Install the project...
+-- Install configuration: ""
+-- Up-to-date: /tmp/tmp.l7EaDbDrCy/tmp-huQcw/usr/include
+-- Up-to-date: /tmp/tmp.l7EaDbDrCy/tmp-huQcw/usr/include/simple.h
+-- Up-to-date: /tmp/tmp.l7EaDbDrCy/tmp-huQcw/usr/lib/libsimple.a
+Running test: analyze.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-e33CN/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-e33CN/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Clang tidy not found
+-- Cppcheck not found
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.l7EaDbDrCy/tmp-e33CN/builds/JX8x5/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build
+[ 33%] Building CXX object CMakeFiles/simple.dir/simple.cpp.o
+[ 66%] Building CXX object CMakeFiles/simple.dir/simple_with_a_ridiculously_long_filename_in_order_to_test_long_filenames_in_clang_tidy_cmake.cpp.o
+[100%] Linking CXX static library libsimple.a
+[100%] Built target simple
+Built target analyze
+Built target analyze
+[100%] Built target simple
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-e33CN/usr/include
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-e33CN/usr/include/simple.h
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-e33CN/usr/lib/libsimple.a
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-e33CN/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-e33CN/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Clang tidy not found
+-- Cppcheck not found
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.l7EaDbDrCy/tmp-e33CN/builds/C36Rr/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build
+[ 33%] Building CXX object CMakeFiles/simple.dir/simple.cpp.o
+[ 66%] Building CXX object CMakeFiles/simple.dir/simple_with_a_ridiculously_long_filename_in_order_to_test_long_filenames_in_clang_tidy_cmake.cpp.o
+[100%] Linking CXX static library libsimple.a
+[100%] Built target simple
+Built target analyze
+Built target analyze
+[100%] Built target simple
+Install the project...
+-- Install configuration: ""
+-- Up-to-date: /tmp/tmp.l7EaDbDrCy/tmp-e33CN/usr/include
+-- Up-to-date: /tmp/tmp.l7EaDbDrCy/tmp-e33CN/usr/include/simple.h
+-- Up-to-date: /tmp/tmp.l7EaDbDrCy/tmp-e33CN/usr/lib/libsimple.a
+Running test: basic-shared.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-FGbNs/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-FGbNs/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- rocm-cmake: Set license file to /tmp/autopkgtest.gTRafh/build.AzI/src/test/libsimple/LICENSE.
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.l7EaDbDrCy/tmp-FGbNs/builds/W92Nj/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build
+[ 25%] Building CXX object CMakeFiles/simple.dir/simple.cpp.o
+[ 50%] Linking CXX shared library lib/libsimple.so
+[ 50%] Built target simple
+[ 75%] Building CXX object CMakeFiles/simple-main.dir/main.cpp.o
+[100%] Linking CXX executable bin/simple-main
+[100%] Built target simple-main
+[ 50%] Built target simple
+[100%] Built target simple-main
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-FGbNs/usr/share/doc/simple/LICENSE
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-FGbNs/usr/include
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-FGbNs/usr/include/simple.h
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-FGbNs/usr/lib/libsimple.so.1.1.2
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-FGbNs/usr/lib/libsimple.so.1
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.l7EaDbDrCy/tmp-FGbNs/usr/lib/libsimple.so.1.1.2" to "$ORIGIN/../lib:$ORIGIN/../lib/simple/lib"
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-FGbNs/usr/lib/libsimple.so
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-FGbNs/usr/bin/simple-main
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.l7EaDbDrCy/tmp-FGbNs/usr/bin/simple-main" to "$ORIGIN/../lib:$ORIGIN/../lib/simple/lib"
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-FGbNs/usr/lib/cmake/simple/importtarget.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-FGbNs/usr/lib/cmake/simple/simple-targets.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-FGbNs/usr/lib/cmake/simple/simple-targets-noconfig.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-FGbNs/usr/lib/cmake/simple/simple-config.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-FGbNs/usr/lib/cmake/simple/simple-config-version.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-FGbNs/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-FGbNs/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- PKG: simple
+-- PKG_TARGET: simple
+-- CHECK_TARGET: simple
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    ROCM_ERROR_TOOLCHAIN_VAR
+    ROCM_SYMLINK_LIBS
+
+
+-- Build files have been written to: /tmp/tmp.l7EaDbDrCy/tmp-FGbNs/builds/AlIAx/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build
+[ 50%] Building CXX object CMakeFiles/main.dir/main.cpp.o
+[100%] Linking CXX executable main
+[100%] Built target main
+[100%] Built target main
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-FGbNs/usr/bin/main
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.l7EaDbDrCy/tmp-FGbNs/usr/bin/main" to ""
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-FGbNs/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-FGbNs/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.l7EaDbDrCy/tmp-FGbNs/builds/3mUj3/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build
+[ 50%] Building CXX object CMakeFiles/basic.dir/main.cpp.o
+[100%] Linking CXX shared library libbasic.so
+[100%] Built target basic
+[100%] Built target basic
+Install the project...
+-- Install configuration: ""
+-- Up-to-date: /tmp/tmp.l7EaDbDrCy/tmp-FGbNs/usr/include
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-FGbNs/usr/include/basic.h
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-FGbNs/usr/lib/libbasic.so
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.l7EaDbDrCy/tmp-FGbNs/usr/lib/libbasic.so" to "$ORIGIN/../lib:$ORIGIN/../lib/basic/lib"
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-FGbNs/usr/lib/cmake/basic/basic-targets.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-FGbNs/usr/lib/cmake/basic/basic-targets-noconfig.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-FGbNs/usr/lib/cmake/basic/basic-config.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-FGbNs/usr/lib/cmake/basic/basic-config-version.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-FGbNs/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-FGbNs/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- PKG: basic
+-- PKG_TARGET: basic
+-- CHECK_TARGET: basic
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    ROCM_ERROR_TOOLCHAIN_VAR
+    ROCM_SYMLINK_LIBS
+
+
+-- Build files have been written to: /tmp/tmp.l7EaDbDrCy/tmp-FGbNs/builds/o8CYD/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build
+[ 50%] Building CXX object CMakeFiles/main.dir/main.cpp.o
+[100%] Linking CXX executable main
+[100%] Built target main
+[100%] Built target main
+Install the project...
+-- Install configuration: ""
+-- Up-to-date: /tmp/tmp.l7EaDbDrCy/tmp-FGbNs/usr/bin/main
+Running test: basic-static.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-4VTDx/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-4VTDx/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- rocm-cmake: Set license file to /tmp/autopkgtest.gTRafh/build.AzI/src/test/libsimple/LICENSE.
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.l7EaDbDrCy/tmp-4VTDx/builds/cmr82/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build
+[ 25%] Building CXX object CMakeFiles/simple.dir/simple.cpp.o
+[ 50%] Linking CXX static library lib/libsimple.a
+[ 50%] Built target simple
+[ 75%] Building CXX object CMakeFiles/simple-main.dir/main.cpp.o
+[100%] Linking CXX executable bin/simple-main
+[100%] Built target simple-main
+[ 50%] Built target simple
+[100%] Built target simple-main
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-4VTDx/usr/share/doc/simple/LICENSE
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-4VTDx/usr/include
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-4VTDx/usr/include/simple.h
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-4VTDx/usr/lib/libsimple.a
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-4VTDx/usr/bin/simple-main
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.l7EaDbDrCy/tmp-4VTDx/usr/bin/simple-main" to "$ORIGIN/../lib:$ORIGIN/../lib/simple/lib"
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-4VTDx/usr/lib/cmake/simple/importtarget.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-4VTDx/usr/lib/cmake/simple/simple-targets.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-4VTDx/usr/lib/cmake/simple/simple-targets-noconfig.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-4VTDx/usr/lib/cmake/simple/simple-config.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-4VTDx/usr/lib/cmake/simple/simple-config-version.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-4VTDx/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-4VTDx/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- PKG: simple
+-- PKG_TARGET: simple
+-- CHECK_TARGET: simple
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    ROCM_ERROR_TOOLCHAIN_VAR
+    ROCM_SYMLINK_LIBS
+
+
+-- Build files have been written to: /tmp/tmp.l7EaDbDrCy/tmp-4VTDx/builds/I8Yla/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build
+[ 50%] Building CXX object CMakeFiles/main.dir/main.cpp.o
+[100%] Linking CXX executable main
+[100%] Built target main
+[100%] Built target main
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-4VTDx/usr/bin/main
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-4VTDx/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-4VTDx/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.l7EaDbDrCy/tmp-4VTDx/builds/NhVAd/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build
+[ 50%] Building CXX object CMakeFiles/basic.dir/main.cpp.o
+[100%] Linking CXX static library libbasic.a
+[100%] Built target basic
+[100%] Built target basic
+Install the project...
+-- Install configuration: ""
+-- Up-to-date: /tmp/tmp.l7EaDbDrCy/tmp-4VTDx/usr/include
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-4VTDx/usr/include/basic.h
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-4VTDx/usr/lib/libbasic.a
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-4VTDx/usr/lib/cmake/basic/basic-targets.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-4VTDx/usr/lib/cmake/basic/basic-targets-noconfig.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-4VTDx/usr/lib/cmake/basic/basic-config.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-4VTDx/usr/lib/cmake/basic/basic-config-version.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-4VTDx/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-4VTDx/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- PKG: basic
+-- PKG_TARGET: basic
+-- CHECK_TARGET: simple
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    ROCM_ERROR_TOOLCHAIN_VAR
+    ROCM_SYMLINK_LIBS
+
+
+-- Build files have been written to: /tmp/tmp.l7EaDbDrCy/tmp-4VTDx/builds/RutMe/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build
+[ 50%] Building CXX object CMakeFiles/main.dir/main.cpp.o
+[100%] Linking CXX executable main
+[100%] Built target main
+[100%] Built target main
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-4VTDx/usr/bin/main
+Skipping test: doc-sphinxdoxygen.cmake (requires sphinx)
+Running test: headeronly.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-ax4dY/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-ax4dY/usr"
+
+
+-- rocm-cmake: Set license file to /tmp/autopkgtest.gTRafh/build.AzI/src/test/libheaderonly/LICENSE.
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.l7EaDbDrCy/tmp-ax4dY/builds/OGmER/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build
+Run CPack packaging tool...
+CPack: Create package using TGZ
+CPack: Install projects
+CPack: - Run preinstall target for: headeronly
+CPack: - Install project: headeronly []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.l7EaDbDrCy/tmp-ax4dY/builds/OGmER/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build/headeronly-1.0.0-Linux-devel.tar.gz generated.
+CPack: Create package using ZIP
+CPack: Install projects
+CPack: - Run preinstall target for: headeronly
+CPack: - Install project: headeronly []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.l7EaDbDrCy/tmp-ax4dY/builds/OGmER/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build/headeronly-1.0.0-Linux-devel.zip generated.
+CPack: Create package using DEB
+CPack: Install projects
+CPack: - Run preinstall target for: headeronly
+CPack: - Install project: headeronly []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.l7EaDbDrCy/tmp-ax4dY/builds/OGmER/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build/headeronly-dev_1.0.0_amd64.deb generated.
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-ax4dY/usr/share/doc/headeronly/LICENSE
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-ax4dY/usr/include
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-ax4dY/usr/include/headeronly.h
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-ax4dY/usr/headeronly/include/
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-ax4dY/usr/headeronly/include//headeronly.h
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-ax4dY/usr/lib/cmake/headeronly/importtarget.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-ax4dY/usr/lib/cmake/headeronly/headeronly-targets.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-ax4dY/usr/lib/cmake/headeronly/headeronly-config.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-ax4dY/usr/lib/cmake/headeronly/headeronly-config-version.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-ax4dY/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-ax4dY/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- PKG: headeronly
+-- PKG_TARGET: headeronly
+-- CHECK_TARGET: headeronly
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    ROCM_ERROR_TOOLCHAIN_VAR
+    ROCM_SYMLINK_LIBS
+
+
+-- Build files have been written to: /tmp/tmp.l7EaDbDrCy/tmp-ax4dY/builds/Kz9v8/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build
+[ 50%] Building CXX object CMakeFiles/main.dir/main.cpp.o
+[100%] Linking CXX executable main
+[100%] Built target main
+[100%] Built target main
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-ax4dY/usr/bin/main
+Running test: libprivate.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-CIgWw/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-CIgWw/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- rocm-cmake: Set license file to /tmp/autopkgtest.gTRafh/build.AzI/src/test/libprivate/LICENSE.
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.l7EaDbDrCy/tmp-CIgWw/builds/n35fv/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build
+[ 25%] Building CXX object CMakeFiles/simple_private.dir/simpleprivate.cpp.o
+[ 50%] Linking CXX static library lib/libsimple_private.a
+[ 50%] Built target simple_private
+[ 75%] Building CXX object CMakeFiles/simple_private_main.dir/main.cpp.o
+[100%] Linking CXX executable bin/simple_private_main
+[100%] Built target simple_private_main
+[ 50%] Built target simple_private
+[100%] Built target simple_private_main
+Run CPack packaging tool...
+CPack: Create package using TGZ
+CPack: Install projects
+CPack: - Run preinstall target for: libprivate
+CPack: - Install project: libprivate []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.l7EaDbDrCy/tmp-CIgWw/builds/n35fv/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build/simple-private-1.0.0-Linux-devel.tar.gz generated.
+CPack: Create package using ZIP
+CPack: Install projects
+CPack: - Run preinstall target for: libprivate
+CPack: - Install project: libprivate []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.l7EaDbDrCy/tmp-CIgWw/builds/n35fv/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build/simple-private-1.0.0-Linux-devel.zip generated.
+CPack: Create package using DEB
+CPack: Install projects
+CPack: - Run preinstall target for: libprivate
+CPack: - Install project: libprivate []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.l7EaDbDrCy/tmp-CIgWw/builds/n35fv/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build/simple-private-dev_1.0.0_amd64.deb generated.
+[ 50%] Built target simple_private
+[100%] Built target simple_private_main
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-CIgWw/usr/share/doc/simple-private/LICENSE
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-CIgWw/usr/rocm/lib/libprivate/include
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-CIgWw/usr/rocm/lib/libprivate/include/simpleprivate.h
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-CIgWw/usr/rocm/lib/libprivate/lib/libsimple_private.a
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-CIgWw/usr/rocm/lib/libprivate/bin/simple_private_main
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.l7EaDbDrCy/tmp-CIgWw/usr/rocm/lib/libprivate/bin/simple_private_main" to "$ORIGIN/../lib:$ORIGIN/../../"
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-CIgWw/usr/rocm/lib/cmake/libprivate/importtarget.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-CIgWw/usr/rocm/lib/cmake/libprivate/libprivate-targets.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-CIgWw/usr/rocm/lib/cmake/libprivate/libprivate-targets-noconfig.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-CIgWw/usr/rocm/lib/cmake/libprivate/libprivate-config.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-CIgWw/usr/rocm/lib/cmake/libprivate/libprivate-config-version.cmake
+-- symlink: ../../../rocm/lib/cmake/libprivate/importtarget.cmake -> /tmp/tmp.l7EaDbDrCy/tmp-CIgWw/usr/lib/cmake/libprivate/importtarget.cmake
+-- symlink: ../../../rocm/lib/cmake/libprivate/libprivate-config-version.cmake -> /tmp/tmp.l7EaDbDrCy/tmp-CIgWw/usr/lib/cmake/libprivate/libprivate-config-version.cmake
+-- symlink: ../../../rocm/lib/cmake/libprivate/libprivate-config.cmake -> /tmp/tmp.l7EaDbDrCy/tmp-CIgWw/usr/lib/cmake/libprivate/libprivate-config.cmake
+-- symlink: ../../../rocm/lib/cmake/libprivate/libprivate-targets-noconfig.cmake -> /tmp/tmp.l7EaDbDrCy/tmp-CIgWw/usr/lib/cmake/libprivate/libprivate-targets-noconfig.cmake
+-- symlink: ../../../rocm/lib/cmake/libprivate/libprivate-targets.cmake -> /tmp/tmp.l7EaDbDrCy/tmp-CIgWw/usr/lib/cmake/libprivate/libprivate-targets.cmake
+-- symlink: ../../../rocm/lib/libprivate/bin/simple_private_main -> /tmp/tmp.l7EaDbDrCy/tmp-CIgWw/usr/lib/libprivate/bin/simple_private_main
+-- symlink: ../../../rocm/lib/libprivate/include/simpleprivate.h -> /tmp/tmp.l7EaDbDrCy/tmp-CIgWw/usr/lib/libprivate/include/simpleprivate.h
+-- symlink: ../../../rocm/lib/libprivate/lib/libsimple_private.a -> /tmp/tmp.l7EaDbDrCy/tmp-CIgWw/usr/lib/libprivate/lib/libsimple_private.a
+-- symlink: ../../../rocm/lib/cmake/libprivate/importtarget.cmake -> /tmp/tmp.l7EaDbDrCy/tmp-CIgWw/usr/lib/cmake/libprivate/importtarget.cmake
+-- symlink: ../../../rocm/lib/cmake/libprivate/libprivate-config-version.cmake -> /tmp/tmp.l7EaDbDrCy/tmp-CIgWw/usr/lib/cmake/libprivate/libprivate-config-version.cmake
+-- symlink: ../../../rocm/lib/cmake/libprivate/libprivate-config.cmake -> /tmp/tmp.l7EaDbDrCy/tmp-CIgWw/usr/lib/cmake/libprivate/libprivate-config.cmake
+-- symlink: ../../../rocm/lib/cmake/libprivate/libprivate-targets-noconfig.cmake -> /tmp/tmp.l7EaDbDrCy/tmp-CIgWw/usr/lib/cmake/libprivate/libprivate-targets-noconfig.cmake
+-- symlink: ../../../rocm/lib/cmake/libprivate/libprivate-targets.cmake -> /tmp/tmp.l7EaDbDrCy/tmp-CIgWw/usr/lib/cmake/libprivate/libprivate-targets.cmake
+-- symlink: ../../../rocm/lib/libprivate/bin/simple_private_main -> /tmp/tmp.l7EaDbDrCy/tmp-CIgWw/usr/lib/libprivate/bin/simple_private_main
+-- symlink: ../../../rocm/lib/libprivate/include/simpleprivate.h -> /tmp/tmp.l7EaDbDrCy/tmp-CIgWw/usr/lib/libprivate/include/simpleprivate.h
+-- symlink: ../../../rocm/lib/libprivate/lib/libsimple_private.a -> /tmp/tmp.l7EaDbDrCy/tmp-CIgWw/usr/lib/libprivate/lib/libsimple_private.a
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-CIgWw/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-CIgWw/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- rocm-cmake: Set license file to /tmp/autopkgtest.gTRafh/build.AzI/src/test/libprivate/LICENSE.
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.l7EaDbDrCy/tmp-CIgWw/builds/Rr25p/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build
+[ 25%] Building CXX object CMakeFiles/simple_private.dir/simpleprivate.cpp.o
+[ 50%] Linking CXX static library lib/libsimple_private.a
+[ 50%] Built target simple_private
+[ 75%] Building CXX object CMakeFiles/simple_private_main.dir/main.cpp.o
+[100%] Linking CXX executable bin/simple_private_main
+[100%] Built target simple_private_main
+[ 50%] Built target simple_private
+[100%] Built target simple_private_main
+Install the project...
+-- Install configuration: ""
+-- Up-to-date: /tmp/tmp.l7EaDbDrCy/tmp-CIgWw/usr/share/doc/simple-private/LICENSE
+-- Up-to-date: /tmp/tmp.l7EaDbDrCy/tmp-CIgWw/usr/lib/libprivate/include
+-- Up-to-date: /tmp/tmp.l7EaDbDrCy/tmp-CIgWw/usr/lib/libprivate/include/simpleprivate.h
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-CIgWw/usr/lib/libprivate/lib/libsimple_private.a
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-CIgWw/usr/lib/libprivate/bin/simple_private_main
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.l7EaDbDrCy/tmp-CIgWw/usr/lib/libprivate/bin/simple_private_main" to "$ORIGIN/../lib:$ORIGIN/../../"
+-- Up-to-date: /tmp/tmp.l7EaDbDrCy/tmp-CIgWw/usr/lib/cmake/libprivate/importtarget.cmake
+-- Old export file "/tmp/tmp.l7EaDbDrCy/tmp-CIgWw/usr/lib/cmake/libprivate/libprivate-targets.cmake" will be replaced.  Removing files [/tmp/tmp.l7EaDbDrCy/tmp-CIgWw/usr/lib/cmake/libprivate/libprivate-targets-noconfig.cmake].
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-CIgWw/usr/lib/cmake/libprivate/libprivate-targets.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-CIgWw/usr/lib/cmake/libprivate/libprivate-targets-noconfig.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-CIgWw/usr/lib/cmake/libprivate/libprivate-config.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-CIgWw/usr/lib/cmake/libprivate/libprivate-config-version.cmake
+Running test: rename-compatibility.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-87FQd/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-87FQd/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- rocm-cmake: Set license file to /tmp/autopkgtest.gTRafh/build.AzI/src/test/libsimplecompat/LICENSE.
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.l7EaDbDrCy/tmp-87FQd/builds/Mh3UK/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build
+[ 25%] Building CXX object CMakeFiles/simple.dir/simple.cpp.o
+[ 50%] Linking CXX static library lib/libsimple.a
+[ 50%] Built target simple
+[ 75%] Building CXX object CMakeFiles/simple-main.dir/main.cpp.o
+[100%] Linking CXX executable bin/simple-main
+[100%] Built target simple-main
+[ 50%] Built target simple
+[100%] Built target simple-main
+Run CPack packaging tool...
+CPack: Create package using TGZ
+CPack: Install projects
+CPack: - Run preinstall target for: simple
+CPack: - Install project: simple []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.l7EaDbDrCy/tmp-87FQd/builds/Mh3UK/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build/simple-1.0.0-Linux-devel.tar.gz generated.
+CPack: Create package using ZIP
+CPack: Install projects
+CPack: - Run preinstall target for: simple
+CPack: - Install project: simple []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.l7EaDbDrCy/tmp-87FQd/builds/Mh3UK/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build/simple-1.0.0-Linux-devel.zip generated.
+CPack: Create package using DEB
+CPack: Install projects
+CPack: - Run preinstall target for: simple
+CPack: - Install project: simple []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.l7EaDbDrCy/tmp-87FQd/builds/Mh3UK/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build/simple-dev_1.0.0_amd64.deb generated.
+[ 50%] Built target simple
+[100%] Built target simple-main
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-87FQd/usr/share/doc/simple/LICENSE
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-87FQd/usr/include
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-87FQd/usr/include/simple.h
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-87FQd/usr/lib/libsimple.a
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-87FQd/usr/bin/simple-main
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.l7EaDbDrCy/tmp-87FQd/usr/bin/simple-main" to "$ORIGIN/../lib:$ORIGIN/../lib/simple/lib"
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-87FQd/usr/lib/cmake/simple/importtarget.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-87FQd/usr/lib/cmake/simple/simple-targets.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-87FQd/usr/lib/cmake/simple/simple-targets-noconfig.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-87FQd/usr/lib/cmake/simple/simple-config.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-87FQd/usr/lib/cmake/simple/simple-config-version.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-87FQd/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-87FQd/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- PKG: simple
+-- PKG_TARGET: simple
+-- CHECK_TARGET: simple
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    ROCM_ERROR_TOOLCHAIN_VAR
+    ROCM_SYMLINK_LIBS
+
+
+-- Build files have been written to: /tmp/tmp.l7EaDbDrCy/tmp-87FQd/builds/9nMVW/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build
+[ 50%] Building CXX object CMakeFiles/main.dir/main.cpp.o
+[100%] Linking CXX executable main
+[100%] Built target main
+[100%] Built target main
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-87FQd/usr/bin/main
+Running test: rocm-find-program-version.cmake
+CMake Warning at /usr/share/rocmcmakebuildtools/cmake/ROCMUtilities.cmake:77 (message):
+  Could not determine the version of program foobar.
+Call Stack (most recent call first):
+  /tmp/autopkgtest.gTRafh/build.AzI/src/test/pass/rocm-find-program-version.cmake:28 (rocm_find_program_version)
+  test.cmake:190 (include)
+
+
+Running test: rocm-join-if-set.cmake
+Running test: rocm-list-split.cmake
+Running test: rocm-package-add-dependencies.cmake
+Running test: rocm-package-setup-component.cmake
+Running test: simple-build-id.cmake
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-a6ZyK/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-a6ZyK/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- rocm-cmake: Set license file to /tmp/autopkgtest.gTRafh/build.AzI/src/test/libsimple/LICENSE.
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.l7EaDbDrCy/tmp-a6ZyK/builds/8EwY4/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build
+[ 25%] Building CXX object CMakeFiles/simple.dir/simple.cpp.o
+[ 50%] Linking CXX static library lib/libsimple.a
+[ 50%] Built target simple
+[ 75%] Building CXX object CMakeFiles/simple-main.dir/main.cpp.o
+[100%] Linking CXX executable bin/simple-main
+[100%] Built target simple-main
+[ 50%] Built target simple
+[100%] Built target simple-main
+Run CPack packaging tool...
+CPack: Create package using TGZ
+CPack: Install projects
+CPack: - Run preinstall target for: simple
+CPack: - Install project: simple []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.l7EaDbDrCy/tmp-a6ZyK/builds/8EwY4/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build/simple-1.0.0-Linux-devel.tar.gz generated.
+CPack: Create package using ZIP
+CPack: Install projects
+CPack: - Run preinstall target for: simple
+CPack: - Install project: simple []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.l7EaDbDrCy/tmp-a6ZyK/builds/8EwY4/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build/simple-1.0.0-Linux-devel.zip generated.
+CPack: Create package using DEB
+CPack: Install projects
+CPack: - Run preinstall target for: simple
+CPack: - Install project: simple []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.l7EaDbDrCy/tmp-a6ZyK/builds/8EwY4/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build/simple-dev_1.0.0_amd64.deb generated.
+[ 50%] Built target simple
+[100%] Built target simple-main
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-a6ZyK/usr/share/doc/simple/LICENSE
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-a6ZyK/usr/include
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-a6ZyK/usr/include/simple.h
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-a6ZyK/usr/lib/libsimple.a
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-a6ZyK/usr/bin/simple-main
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.l7EaDbDrCy/tmp-a6ZyK/usr/bin/simple-main" to "$ORIGIN/../lib:$ORIGIN/../lib/simple/lib"
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-a6ZyK/usr/lib/cmake/simple/importtarget.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-a6ZyK/usr/lib/cmake/simple/simple-targets.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-a6ZyK/usr/lib/cmake/simple/simple-targets-noconfig.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-a6ZyK/usr/lib/cmake/simple/simple-config.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-a6ZyK/usr/lib/cmake/simple/simple-config-version.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-a6ZyK/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-a6ZyK/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- PKG: simple
+-- PKG_TARGET: simple
+-- CHECK_TARGET: simple
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    ROCM_ERROR_TOOLCHAIN_VAR
+    ROCM_SYMLINK_LIBS
+
+
+-- Build files have been written to: /tmp/tmp.l7EaDbDrCy/tmp-a6ZyK/builds/6VPVT/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build
+[ 50%] Building CXX object CMakeFiles/main.dir/main.cpp.o
+[100%] Linking CXX executable main
+[100%] Built target main
+[100%] Built target main
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-a6ZyK/usr/bin/main
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-a6ZyK/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-a6ZyK/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.l7EaDbDrCy/tmp-a6ZyK/builds/cDoqB/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build
+[ 50%] Building CXX object CMakeFiles/basic.dir/main.cpp.o
+[100%] Linking CXX static library libbasic.a
+[100%] Built target basic
+[100%] Built target basic
+Install the project...
+-- Install configuration: ""
+-- Up-to-date: /tmp/tmp.l7EaDbDrCy/tmp-a6ZyK/usr/include
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-a6ZyK/usr/include/basic.h
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-a6ZyK/usr/lib/libbasic.a
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-a6ZyK/usr/lib/cmake/basic/basic-targets.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-a6ZyK/usr/lib/cmake/basic/basic-targets-noconfig.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-a6ZyK/usr/lib/cmake/basic/basic-config.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-a6ZyK/usr/lib/cmake/basic/basic-config-version.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-a6ZyK/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-a6ZyK/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- rocm-cmake: Set license file to /tmp/autopkgtest.gTRafh/build.AzI/src/test/libsimple2/LICENSE.
+-- Configuring done (0.3s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.l7EaDbDrCy/tmp-a6ZyK/builds/S9a9o/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build
+[ 50%] Building CXX object CMakeFiles/simple2.dir/simple2.cpp.o
+[100%] Linking CXX static library libsimple2.a
+[100%] Built target simple2
+[100%] Built target simple2
+Run CPack packaging tool...
+CPack: Create package using TGZ
+CPack: Install projects
+CPack: - Run preinstall target for: simple2
+CPack: - Install project: simple2 []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.l7EaDbDrCy/tmp-a6ZyK/builds/S9a9o/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build/simple2-1.0.0-Linux-devel.tar.gz generated.
+CPack: Create package using ZIP
+CPack: Install projects
+CPack: - Run preinstall target for: simple2
+CPack: - Install project: simple2 []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.l7EaDbDrCy/tmp-a6ZyK/builds/S9a9o/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build/simple2-1.0.0-Linux-devel.zip generated.
+CPack: Create package using DEB
+CPack: Install projects
+CPack: - Run preinstall target for: simple2
+CPack: - Install project: simple2 []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.l7EaDbDrCy/tmp-a6ZyK/builds/S9a9o/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build/simple2-dev_1.0.0_amd64.deb generated.
+[100%] Built target simple2
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-a6ZyK/usr/share/doc/simple2/LICENSE
+-- Up-to-date: /tmp/tmp.l7EaDbDrCy/tmp-a6ZyK/usr/include
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-a6ZyK/usr/include/simple2.h
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-a6ZyK/usr/lib/libsimple2.a
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-a6ZyK/usr/lib/cmake/simple2/importtarget.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-a6ZyK/usr/lib/cmake/simple2/simple2-targets.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-a6ZyK/usr/lib/cmake/simple2/simple2-targets-noconfig.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-a6ZyK/usr/lib/cmake/simple2/simple2-config.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-a6ZyK/usr/lib/cmake/simple2/simple2-config-version.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-a6ZyK/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-a6ZyK/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- PKG: simple2
+-- PKG_TARGET: simple2
+-- CHECK_TARGET: simple2
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    ROCM_ERROR_TOOLCHAIN_VAR
+    ROCM_SYMLINK_LIBS
+
+
+-- Build files have been written to: /tmp/tmp.l7EaDbDrCy/tmp-a6ZyK/builds/dxoBn/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build
+[ 50%] Building CXX object CMakeFiles/main.dir/main.cpp.o
+[100%] Linking CXX executable main
+[100%] Built target main
+[100%] Built target main
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-a6ZyK/usr/bin/main
+Running test: simple-prefix.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-oIcnW/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-oIcnW/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- rocm-cmake: Set license file to /tmp/autopkgtest.gTRafh/build.AzI/src/test/libsimple/LICENSE.
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.l7EaDbDrCy/tmp-oIcnW/builds/RtzvH/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build
+[ 25%] Building CXX object CMakeFiles/simple.dir/simple.cpp.o
+[ 50%] Linking CXX static library lib/libsimple.a
+[ 50%] Built target simple
+[ 75%] Building CXX object CMakeFiles/simple-main.dir/main.cpp.o
+[100%] Linking CXX executable bin/simple-main
+[100%] Built target simple-main
+[ 50%] Built target simple
+[100%] Built target simple-main
+Run CPack packaging tool...
+CPack: Create package using TGZ
+CPack: Install projects
+CPack: - Run preinstall target for: simple
+CPack: - Install project: simple []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.l7EaDbDrCy/tmp-oIcnW/builds/RtzvH/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build/simple-1.0.0-Linux-devel.tar.gz generated.
+CPack: Create package using ZIP
+CPack: Install projects
+CPack: - Run preinstall target for: simple
+CPack: - Install project: simple []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.l7EaDbDrCy/tmp-oIcnW/builds/RtzvH/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build/simple-1.0.0-Linux-devel.zip generated.
+CPack: Create package using DEB
+CPack: Install projects
+CPack: - Run preinstall target for: simple
+CPack: - Install project: simple []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.l7EaDbDrCy/tmp-oIcnW/builds/RtzvH/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build/simple-dev_1.0.0_amd64.deb generated.
+[ 50%] Built target simple
+[100%] Built target simple-main
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-oIcnW/usr/share/doc/simple/LICENSE
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-oIcnW/usr/simple/include
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-oIcnW/usr/simple/include/simple.h
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-oIcnW/usr/simple/lib/libsimple.a
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-oIcnW/usr/simple/bin/simple-main
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.l7EaDbDrCy/tmp-oIcnW/usr/simple/bin/simple-main" to "$ORIGIN/../lib:$ORIGIN/../lib/simple/lib"
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-oIcnW/usr/simple/lib/cmake/simple/importtarget.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-oIcnW/usr/simple/lib/cmake/simple/simple-targets.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-oIcnW/usr/simple/lib/cmake/simple/simple-targets-noconfig.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-oIcnW/usr/simple/lib/cmake/simple/simple-config.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-oIcnW/usr/simple/lib/cmake/simple/simple-config-version.cmake
+-- symlink: ../simple/bin/simple-main -> /tmp/tmp.l7EaDbDrCy/tmp-oIcnW/usr/bin/simple-main
+-- symlink: ../simple/include/simple.h -> /tmp/tmp.l7EaDbDrCy/tmp-oIcnW/usr/include/simple.h
+-- symlink: ../../../simple/lib/cmake/simple/importtarget.cmake -> /tmp/tmp.l7EaDbDrCy/tmp-oIcnW/usr/lib/cmake/simple/importtarget.cmake
+-- symlink: ../../../simple/lib/cmake/simple/simple-config-version.cmake -> /tmp/tmp.l7EaDbDrCy/tmp-oIcnW/usr/lib/cmake/simple/simple-config-version.cmake
+-- symlink: ../../../simple/lib/cmake/simple/simple-config.cmake -> /tmp/tmp.l7EaDbDrCy/tmp-oIcnW/usr/lib/cmake/simple/simple-config.cmake
+-- symlink: ../../../simple/lib/cmake/simple/simple-targets-noconfig.cmake -> /tmp/tmp.l7EaDbDrCy/tmp-oIcnW/usr/lib/cmake/simple/simple-targets-noconfig.cmake
+-- symlink: ../../../simple/lib/cmake/simple/simple-targets.cmake -> /tmp/tmp.l7EaDbDrCy/tmp-oIcnW/usr/lib/cmake/simple/simple-targets.cmake
+-- symlink: ../simple/lib/libsimple.a -> /tmp/tmp.l7EaDbDrCy/tmp-oIcnW/usr/lib/libsimple.a
+-- symlink: ../simple/bin/simple-main -> /tmp/tmp.l7EaDbDrCy/tmp-oIcnW/usr/bin/simple-main
+-- symlink: ../simple/include/simple.h -> /tmp/tmp.l7EaDbDrCy/tmp-oIcnW/usr/include/simple.h
+-- symlink: ../../../simple/lib/cmake/simple/importtarget.cmake -> /tmp/tmp.l7EaDbDrCy/tmp-oIcnW/usr/lib/cmake/simple/importtarget.cmake
+-- symlink: ../../../simple/lib/cmake/simple/simple-config-version.cmake -> /tmp/tmp.l7EaDbDrCy/tmp-oIcnW/usr/lib/cmake/simple/simple-config-version.cmake
+-- symlink: ../../../simple/lib/cmake/simple/simple-config.cmake -> /tmp/tmp.l7EaDbDrCy/tmp-oIcnW/usr/lib/cmake/simple/simple-config.cmake
+-- symlink: ../../../simple/lib/cmake/simple/simple-targets-noconfig.cmake -> /tmp/tmp.l7EaDbDrCy/tmp-oIcnW/usr/lib/cmake/simple/simple-targets-noconfig.cmake
+-- symlink: ../../../simple/lib/cmake/simple/simple-targets.cmake -> /tmp/tmp.l7EaDbDrCy/tmp-oIcnW/usr/lib/cmake/simple/simple-targets.cmake
+-- symlink: ../simple/lib/libsimple.a -> /tmp/tmp.l7EaDbDrCy/tmp-oIcnW/usr/lib/libsimple.a
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-oIcnW/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-oIcnW/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.l7EaDbDrCy/tmp-oIcnW/builds/XlMG2/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build
+[ 50%] Building CXX object CMakeFiles/basic.dir/main.cpp.o
+[100%] Linking CXX static library libbasic.a
+[100%] Built target basic
+[100%] Built target basic
+Install the project...
+-- Install configuration: ""
+-- Up-to-date: /tmp/tmp.l7EaDbDrCy/tmp-oIcnW/usr/include
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-oIcnW/usr/include/basic.h
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-oIcnW/usr/lib/libbasic.a
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-oIcnW/usr/lib/cmake/basic/basic-targets.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-oIcnW/usr/lib/cmake/basic/basic-targets-noconfig.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-oIcnW/usr/lib/cmake/basic/basic-config.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-oIcnW/usr/lib/cmake/basic/basic-config-version.cmake
+Running test: simple-rocmversion-env.cmake
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-KmYI4/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-KmYI4/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- rocm-cmake: Set license file to /tmp/autopkgtest.gTRafh/build.AzI/src/test/libsimple/LICENSE.
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.l7EaDbDrCy/tmp-KmYI4/builds/lADrA/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build
+[ 25%] Building CXX object CMakeFiles/simple.dir/simple.cpp.o
+[ 50%] Linking CXX static library lib/libsimple.a
+[ 50%] Built target simple
+[ 75%] Building CXX object CMakeFiles/simple-main.dir/main.cpp.o
+[100%] Linking CXX executable bin/simple-main
+[100%] Built target simple-main
+[ 50%] Built target simple
+[100%] Built target simple-main
+Run CPack packaging tool...
+CPack: Create package using TGZ
+CPack: Install projects
+CPack: - Run preinstall target for: simple
+CPack: - Install project: simple []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.l7EaDbDrCy/tmp-KmYI4/builds/lADrA/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build/simple-1.0.0.21001-Linux-devel.tar.gz generated.
+CPack: Create package using ZIP
+CPack: Install projects
+CPack: - Run preinstall target for: simple
+CPack: - Install project: simple []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.l7EaDbDrCy/tmp-KmYI4/builds/lADrA/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build/simple-1.0.0.21001-Linux-devel.zip generated.
+CPack: Create package using DEB
+CPack: Install projects
+CPack: - Run preinstall target for: simple
+CPack: - Install project: simple []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.l7EaDbDrCy/tmp-KmYI4/builds/lADrA/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build/simple-dev_1.0.0.21001_amd64.deb generated.
+[ 50%] Built target simple
+[100%] Built target simple-main
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-KmYI4/usr/share/doc/simple/LICENSE
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-KmYI4/usr/include
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-KmYI4/usr/include/simple.h
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-KmYI4/usr/lib/libsimple.a
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-KmYI4/usr/bin/simple-main
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.l7EaDbDrCy/tmp-KmYI4/usr/bin/simple-main" to "$ORIGIN/../lib:$ORIGIN/../lib/simple/lib"
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-KmYI4/usr/lib/cmake/simple/importtarget.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-KmYI4/usr/lib/cmake/simple/simple-targets.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-KmYI4/usr/lib/cmake/simple/simple-targets-noconfig.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-KmYI4/usr/lib/cmake/simple/simple-config.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-KmYI4/usr/lib/cmake/simple/simple-config-version.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-KmYI4/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-KmYI4/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- PKG: simple
+-- PKG_TARGET: simple
+-- CHECK_TARGET: simple
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    ROCM_ERROR_TOOLCHAIN_VAR
+    ROCM_SYMLINK_LIBS
+
+
+-- Build files have been written to: /tmp/tmp.l7EaDbDrCy/tmp-KmYI4/builds/3wo9f/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build
+[ 50%] Building CXX object CMakeFiles/main.dir/main.cpp.o
+[100%] Linking CXX executable main
+[100%] Built target main
+[100%] Built target main
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-KmYI4/usr/bin/main
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-KmYI4/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-KmYI4/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.l7EaDbDrCy/tmp-KmYI4/builds/bkZvU/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build
+[ 50%] Building CXX object CMakeFiles/basic.dir/main.cpp.o
+[100%] Linking CXX static library libbasic.a
+[100%] Built target basic
+[100%] Built target basic
+Install the project...
+-- Install configuration: ""
+-- Up-to-date: /tmp/tmp.l7EaDbDrCy/tmp-KmYI4/usr/include
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-KmYI4/usr/include/basic.h
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-KmYI4/usr/lib/libbasic.a
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-KmYI4/usr/lib/cmake/basic/basic-targets.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-KmYI4/usr/lib/cmake/basic/basic-targets-noconfig.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-KmYI4/usr/lib/cmake/basic/basic-config.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-KmYI4/usr/lib/cmake/basic/basic-config-version.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-KmYI4/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-KmYI4/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- rocm-cmake: Set license file to /tmp/autopkgtest.gTRafh/build.AzI/src/test/libsimple2/LICENSE.
+-- Configuring done (0.3s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.l7EaDbDrCy/tmp-KmYI4/builds/noy73/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build
+[ 50%] Building CXX object CMakeFiles/simple2.dir/simple2.cpp.o
+[100%] Linking CXX static library libsimple2.a
+[100%] Built target simple2
+[100%] Built target simple2
+Run CPack packaging tool...
+CPack: Create package using TGZ
+CPack: Install projects
+CPack: - Run preinstall target for: simple2
+CPack: - Install project: simple2 []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.l7EaDbDrCy/tmp-KmYI4/builds/noy73/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build/simple2-1.0.0.21001-Linux-devel.tar.gz generated.
+CPack: Create package using ZIP
+CPack: Install projects
+CPack: - Run preinstall target for: simple2
+CPack: - Install project: simple2 []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.l7EaDbDrCy/tmp-KmYI4/builds/noy73/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build/simple2-1.0.0.21001-Linux-devel.zip generated.
+CPack: Create package using DEB
+CPack: Install projects
+CPack: - Run preinstall target for: simple2
+CPack: - Install project: simple2 []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.l7EaDbDrCy/tmp-KmYI4/builds/noy73/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build/simple2-dev_1.0.0.21001_amd64.deb generated.
+[100%] Built target simple2
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-KmYI4/usr/share/doc/simple2/LICENSE
+-- Up-to-date: /tmp/tmp.l7EaDbDrCy/tmp-KmYI4/usr/include
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-KmYI4/usr/include/simple2.h
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-KmYI4/usr/lib/libsimple2.a
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-KmYI4/usr/lib/cmake/simple2/importtarget.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-KmYI4/usr/lib/cmake/simple2/simple2-targets.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-KmYI4/usr/lib/cmake/simple2/simple2-targets-noconfig.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-KmYI4/usr/lib/cmake/simple2/simple2-config.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-KmYI4/usr/lib/cmake/simple2/simple2-config-version.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-KmYI4/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-KmYI4/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- PKG: simple2
+-- PKG_TARGET: simple2
+-- CHECK_TARGET: simple2
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    ROCM_ERROR_TOOLCHAIN_VAR
+    ROCM_SYMLINK_LIBS
+
+
+-- Build files have been written to: /tmp/tmp.l7EaDbDrCy/tmp-KmYI4/builds/7HecL/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build
+[ 50%] Building CXX object CMakeFiles/main.dir/main.cpp.o
+[100%] Linking CXX executable main
+[100%] Built target main
+[100%] Built target main
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-KmYI4/usr/bin/main
+Running test: simple-soversion-env.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-47zcO/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-47zcO/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- rocm-cmake: Set license file to /tmp/autopkgtest.gTRafh/build.AzI/src/test/libsimple/LICENSE.
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.l7EaDbDrCy/tmp-47zcO/builds/m8373/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build
+[ 25%] Building CXX object CMakeFiles/simple.dir/simple.cpp.o
+[ 50%] Linking CXX shared library lib/libsimple.so
+[ 50%] Built target simple
+[ 75%] Building CXX object CMakeFiles/simple-main.dir/main.cpp.o
+[100%] Linking CXX executable bin/simple-main
+[100%] Built target simple-main
+[ 50%] Built target simple
+[100%] Built target simple-main
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-47zcO/usr/share/doc/simple/LICENSE
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-47zcO/usr/include
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-47zcO/usr/include/simple.h
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-47zcO/usr/lib/libsimple.so.1.1.2.21001
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-47zcO/usr/lib/libsimple.so.1
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.l7EaDbDrCy/tmp-47zcO/usr/lib/libsimple.so.1.1.2.21001" to "$ORIGIN/../lib:$ORIGIN/../lib/simple/lib"
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-47zcO/usr/lib/libsimple.so
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-47zcO/usr/bin/simple-main
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.l7EaDbDrCy/tmp-47zcO/usr/bin/simple-main" to "$ORIGIN/../lib:$ORIGIN/../lib/simple/lib"
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-47zcO/usr/lib/cmake/simple/importtarget.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-47zcO/usr/lib/cmake/simple/simple-targets.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-47zcO/usr/lib/cmake/simple/simple-targets-noconfig.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-47zcO/usr/lib/cmake/simple/simple-config.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-47zcO/usr/lib/cmake/simple/simple-config-version.cmake
+Running test: simple-soversion.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-70UuO/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-70UuO/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- rocm-cmake: Set license file to /tmp/autopkgtest.gTRafh/build.AzI/src/test/libsimple/LICENSE.
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.l7EaDbDrCy/tmp-70UuO/builds/w801t/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build
+[ 25%] Building CXX object CMakeFiles/simple.dir/simple.cpp.o
+[ 50%] Linking CXX shared library lib/libsimple.so
+[ 50%] Built target simple
+[ 75%] Building CXX object CMakeFiles/simple-main.dir/main.cpp.o
+[100%] Linking CXX executable bin/simple-main
+[100%] Built target simple-main
+[ 50%] Built target simple
+[100%] Built target simple-main
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-70UuO/usr/share/doc/simple/LICENSE
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-70UuO/usr/include
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-70UuO/usr/include/simple.h
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-70UuO/usr/lib/libsimple.so.1.1.2
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-70UuO/usr/lib/libsimple.so.1
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.l7EaDbDrCy/tmp-70UuO/usr/lib/libsimple.so.1.1.2" to "$ORIGIN/../lib:$ORIGIN/../lib/simple/lib"
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-70UuO/usr/lib/libsimple.so
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-70UuO/usr/bin/simple-main
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.l7EaDbDrCy/tmp-70UuO/usr/bin/simple-main" to "$ORIGIN/../lib:$ORIGIN/../lib/simple/lib"
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-70UuO/usr/lib/cmake/simple/importtarget.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-70UuO/usr/lib/cmake/simple/simple-targets.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-70UuO/usr/lib/cmake/simple/simple-targets-noconfig.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-70UuO/usr/lib/cmake/simple/simple-config.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-70UuO/usr/lib/cmake/simple/simple-config-version.cmake
+Running test: simple-test-package.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-wG266/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-wG266/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Enable test package simple
+-- rocm-cmake: Set license file to /tmp/autopkgtest.gTRafh/build.AzI/src/test/libsimpletest/LICENSE.
+-- Generate ctest file
+-- Configuring done (0.4s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.l7EaDbDrCy/tmp-wG266/builds/QdweO/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build
+[ 11%] Building CXX object CMakeFiles/simple.dir/simple.cpp.o
+[ 22%] Linking CXX static library lib/libsimple.a
+[ 22%] Built target simple
+[ 33%] Building CXX object CMakeFiles/simple-main.dir/main.cpp.o
+[ 44%] Linking CXX executable bin/simple-main
+[ 44%] Built target simple-main
+[ 55%] Building CXX object test/CMakeFiles/simple-test.dir/__/test.cpp.o
+[ 66%] Linking CXX executable ../bin/simple-test
+[ 66%] Built target simple-test
+[ 77%] Building CXX object test/CMakeFiles/header_include_simple_h.dir/header-main-include-header_include_simple_h.cpp.o
+[ 88%] Building CXX object test/CMakeFiles/header_include_simple_h.dir/header-static-include-header_include_simple_h.cpp.o
+[100%] Linking CXX executable ../bin/header_include_simple_h
+[100%] Built target header_include_simple_h
+Run CPack packaging tool...
+CPack: Create package using TGZ
+CPack: Install projects
+CPack: - Run preinstall target for: simple
+CPack: - Install project: simple []
+CPack: -   Install component: devel
+CPack: -   Install component: tests
+CPack: Create package
+CPack: - package: /tmp/tmp.l7EaDbDrCy/tmp-wG266/builds/QdweO/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build/simple-1.0.0-Linux-devel.tar.gz generated.
+CPack: - package: /tmp/tmp.l7EaDbDrCy/tmp-wG266/builds/QdweO/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build/simple-1.0.0-Linux-tests.tar.gz generated.
+CPack: Create package using ZIP
+CPack: Install projects
+CPack: - Run preinstall target for: simple
+CPack: - Install project: simple []
+CPack: -   Install component: devel
+CPack: -   Install component: tests
+CPack: Create package
+CPack: - package: /tmp/tmp.l7EaDbDrCy/tmp-wG266/builds/QdweO/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build/simple-1.0.0-Linux-devel.zip generated.
+CPack: - package: /tmp/tmp.l7EaDbDrCy/tmp-wG266/builds/QdweO/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build/simple-1.0.0-Linux-tests.zip generated.
+CPack: Create package using DEB
+CPack: Install projects
+CPack: - Run preinstall target for: simple
+CPack: - Install project: simple []
+CPack: -   Install component: devel
+CPack: -   Install component: tests
+CPack: Create package
+CPack: - package: /tmp/tmp.l7EaDbDrCy/tmp-wG266/builds/QdweO/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build/simple-dev_1.0.0_amd64.deb generated.
+CPack: - package: /tmp/tmp.l7EaDbDrCy/tmp-wG266/builds/QdweO/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build/simple-tests_1.0.0_amd64.deb generated.
+libexec/
+libexec/installed-tests/
+libexec/installed-tests/simple/
+libexec/installed-tests/simple/CTestTestfile.cmake
+libexec/installed-tests/simple/bin/
+libexec/installed-tests/simple/bin/header_include_simple_h
+libexec/installed-tests/simple/bin/simple-test
+Running test: simple-test.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-36cqD/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-36cqD/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Enable test package simple
+-- rocm-cmake: Set license file to /tmp/autopkgtest.gTRafh/build.AzI/src/test/libsimpletest/LICENSE.
+-- Generate ctest file
+-- Configuring done (0.4s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.l7EaDbDrCy/tmp-36cqD/builds/13vL8/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build
+[ 11%] Building CXX object CMakeFiles/simple.dir/simple.cpp.o
+[ 22%] Linking CXX static library lib/libsimple.a
+[ 22%] Built target simple
+[ 33%] Building CXX object CMakeFiles/simple-main.dir/main.cpp.o
+[ 44%] Linking CXX executable bin/simple-main
+[ 44%] Built target simple-main
+[ 55%] Building CXX object test/CMakeFiles/simple-test.dir/__/test.cpp.o
+[ 66%] Linking CXX executable ../bin/simple-test
+[ 66%] Built target simple-test
+[ 77%] Building CXX object test/CMakeFiles/header_include_simple_h.dir/header-main-include-header_include_simple_h.cpp.o
+[ 88%] Building CXX object test/CMakeFiles/header_include_simple_h.dir/header-static-include-header_include_simple_h.cpp.o
+[100%] Linking CXX executable ../bin/header_include_simple_h
+[100%] Built target header_include_simple_h
+[ 28%] Built target simple
+[ 71%] Built target header_include_simple_h
+[100%] Built target simple-test
+[100%] Built target tests
+Test project /tmp/tmp.l7EaDbDrCy/tmp-36cqD/builds/13vL8/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build
+    Start 1: simple-test
+    Start 2: header_include_simple_h
+1/2 Test #1: simple-test ......................   Passed    0.00 sec
+2/2 Test #2: header_include_simple_h ..........   Passed    0.00 sec
+
+100% tests passed, 0 tests failed out of 2
+
+Total Test time (real) =   0.00 sec
+[100%] Built target check
+[ 28%] Built target simple
+[ 71%] Built target header_include_simple_h
+[100%] Built target simple-test
+[100%] Built target tests
+-- Install component: "tests"
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-36cqD/usr/libexec/installed-tests/simple/bin/simple-test
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.l7EaDbDrCy/tmp-36cqD/usr/libexec/installed-tests/simple/bin/simple-test" to "$ORIGIN/../../../../lib:$ORIGIN/../../../../lib/simple/lib"
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-36cqD/usr/libexec/installed-tests/simple/bin/header_include_simple_h
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.l7EaDbDrCy/tmp-36cqD/usr/libexec/installed-tests/simple/bin/header_include_simple_h" to "$ORIGIN/../../../../lib:$ORIGIN/../../../../lib/simple/lib"
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-36cqD/usr/libexec/installed-tests/simple//CTestTestfile.cmake
+[100%] Built target install-tests
+[ 22%] Built target simple
+[ 44%] Built target simple-main
+[ 66%] Built target simple-test
+[100%] Built target header_include_simple_h
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-36cqD/usr/share/doc/simple/LICENSE
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-36cqD/usr/include
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-36cqD/usr/include/simple.h
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-36cqD/usr/lib/libsimple.a
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-36cqD/usr/bin/simple-main
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.l7EaDbDrCy/tmp-36cqD/usr/bin/simple-main" to "$ORIGIN/../lib:$ORIGIN/../lib/simple/lib"
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-36cqD/usr/lib/cmake/simple/simple-targets.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-36cqD/usr/lib/cmake/simple/simple-targets-noconfig.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-36cqD/usr/lib/cmake/simple/simple-config.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-36cqD/usr/lib/cmake/simple/simple-config-version.cmake
+Test project /tmp/tmp.l7EaDbDrCy/tmp-36cqD/usr/libexec/installed-tests/simple
+    Start 1: simple-test
+1/2 Test #1: simple-test ......................   Passed    0.00 sec
+    Start 2: header_include_simple_h
+2/2 Test #2: header_include_simple_h ..........   Passed    0.00 sec
+
+100% tests passed, 0 tests failed out of 2
+
+Total Test time (real) =   0.00 sec
+Running test: simple.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-xSMuj/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-xSMuj/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- rocm-cmake: Set license file to /tmp/autopkgtest.gTRafh/build.AzI/src/test/libsimple/LICENSE.
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.l7EaDbDrCy/tmp-xSMuj/builds/0fA3H/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build
+[ 25%] Building CXX object CMakeFiles/simple.dir/simple.cpp.o
+[ 50%] Linking CXX static library lib/libsimple.a
+[ 50%] Built target simple
+[ 75%] Building CXX object CMakeFiles/simple-main.dir/main.cpp.o
+[100%] Linking CXX executable bin/simple-main
+[100%] Built target simple-main
+[ 50%] Built target simple
+[100%] Built target simple-main
+Run CPack packaging tool...
+CPack: Create package using TGZ
+CPack: Install projects
+CPack: - Run preinstall target for: simple
+CPack: - Install project: simple []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.l7EaDbDrCy/tmp-xSMuj/builds/0fA3H/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build/simple-1.0.0-Linux-devel.tar.gz generated.
+CPack: Create package using ZIP
+CPack: Install projects
+CPack: - Run preinstall target for: simple
+CPack: - Install project: simple []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.l7EaDbDrCy/tmp-xSMuj/builds/0fA3H/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build/simple-1.0.0-Linux-devel.zip generated.
+CPack: Create package using DEB
+CPack: Install projects
+CPack: - Run preinstall target for: simple
+CPack: - Install project: simple []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.l7EaDbDrCy/tmp-xSMuj/builds/0fA3H/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build/simple-dev_1.0.0_amd64.deb generated.
+[ 50%] Built target simple
+[100%] Built target simple-main
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-xSMuj/usr/share/doc/simple/LICENSE
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-xSMuj/usr/include
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-xSMuj/usr/include/simple.h
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-xSMuj/usr/lib/libsimple.a
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-xSMuj/usr/bin/simple-main
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.l7EaDbDrCy/tmp-xSMuj/usr/bin/simple-main" to "$ORIGIN/../lib:$ORIGIN/../lib/simple/lib"
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-xSMuj/usr/lib/cmake/simple/importtarget.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-xSMuj/usr/lib/cmake/simple/simple-targets.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-xSMuj/usr/lib/cmake/simple/simple-targets-noconfig.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-xSMuj/usr/lib/cmake/simple/simple-config.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-xSMuj/usr/lib/cmake/simple/simple-config-version.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-xSMuj/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-xSMuj/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- PKG: simple
+-- PKG_TARGET: simple
+-- CHECK_TARGET: simple
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    ROCM_ERROR_TOOLCHAIN_VAR
+    ROCM_SYMLINK_LIBS
+
+
+-- Build files have been written to: /tmp/tmp.l7EaDbDrCy/tmp-xSMuj/builds/TXVBA/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build
+[ 50%] Building CXX object CMakeFiles/main.dir/main.cpp.o
+[100%] Linking CXX executable main
+[100%] Built target main
+[100%] Built target main
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-xSMuj/usr/bin/main
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-xSMuj/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-xSMuj/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.l7EaDbDrCy/tmp-xSMuj/builds/pG7tX/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build
+[ 50%] Building CXX object CMakeFiles/basic.dir/main.cpp.o
+[100%] Linking CXX static library libbasic.a
+[100%] Built target basic
+[100%] Built target basic
+Install the project...
+-- Install configuration: ""
+-- Up-to-date: /tmp/tmp.l7EaDbDrCy/tmp-xSMuj/usr/include
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-xSMuj/usr/include/basic.h
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-xSMuj/usr/lib/libbasic.a
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-xSMuj/usr/lib/cmake/basic/basic-targets.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-xSMuj/usr/lib/cmake/basic/basic-targets-noconfig.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-xSMuj/usr/lib/cmake/basic/basic-config.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-xSMuj/usr/lib/cmake/basic/basic-config-version.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-xSMuj/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-xSMuj/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- rocm-cmake: Set license file to /tmp/autopkgtest.gTRafh/build.AzI/src/test/libsimple2/LICENSE.
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.l7EaDbDrCy/tmp-xSMuj/builds/f452m/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build
+[ 50%] Building CXX object CMakeFiles/simple2.dir/simple2.cpp.o
+[100%] Linking CXX static library libsimple2.a
+[100%] Built target simple2
+[100%] Built target simple2
+Run CPack packaging tool...
+CPack: Create package using TGZ
+CPack: Install projects
+CPack: - Run preinstall target for: simple2
+CPack: - Install project: simple2 []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.l7EaDbDrCy/tmp-xSMuj/builds/f452m/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build/simple2-1.0.0-Linux-devel.tar.gz generated.
+CPack: Create package using ZIP
+CPack: Install projects
+CPack: - Run preinstall target for: simple2
+CPack: - Install project: simple2 []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.l7EaDbDrCy/tmp-xSMuj/builds/f452m/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build/simple2-1.0.0-Linux-devel.zip generated.
+CPack: Create package using DEB
+CPack: Install projects
+CPack: - Run preinstall target for: simple2
+CPack: - Install project: simple2 []
+CPack: -   Install component: devel
+CPack: Create package
+CPack: - package: /tmp/tmp.l7EaDbDrCy/tmp-xSMuj/builds/f452m/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build/simple2-dev_1.0.0_amd64.deb generated.
+[100%] Built target simple2
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-xSMuj/usr/share/doc/simple2/LICENSE
+-- Up-to-date: /tmp/tmp.l7EaDbDrCy/tmp-xSMuj/usr/include
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-xSMuj/usr/include/simple2.h
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-xSMuj/usr/lib/libsimple2.a
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-xSMuj/usr/lib/cmake/simple2/importtarget.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-xSMuj/usr/lib/cmake/simple2/simple2-targets.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-xSMuj/usr/lib/cmake/simple2/simple2-targets-noconfig.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-xSMuj/usr/lib/cmake/simple2/simple2-config.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-xSMuj/usr/lib/cmake/simple2/simple2-config-version.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-xSMuj/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-xSMuj/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- PKG: simple2
+-- PKG_TARGET: simple2
+-- CHECK_TARGET: simple2
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    ROCM_ERROR_TOOLCHAIN_VAR
+    ROCM_SYMLINK_LIBS
+
+
+-- Build files have been written to: /tmp/tmp.l7EaDbDrCy/tmp-xSMuj/builds/rpWJn/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build
+[ 50%] Building CXX object CMakeFiles/main.dir/main.cpp.o
+[100%] Linking CXX executable main
+[100%] Built target main
+[100%] Built target main
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-xSMuj/usr/bin/main
+Skipping test: version-atag-short.cmake (requires git)
+Skipping test: version-atag.cmake (requires git)
+Skipping test: version-nogit.cmake (requires git)
+Skipping test: version-norepo.cmake (requires git)
+Skipping test: version-parent.cmake (requires git)
+Skipping test: version-patch.cmake (requires git)
+Skipping test: version.cmake (requires git)
+Running test: wrapper-nowarn.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-sVOlp/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-sVOlp/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- rocm-cmake: Set license file to /tmp/autopkgtest.gTRafh/build.AzI/src/test/libwrapper/LICENSE.
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.l7EaDbDrCy/tmp-sVOlp/builds/jJQb9/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build
+[ 16%] Building CXX object CMakeFiles/wrapper.dir/wrapper.cpp.o
+[ 33%] Linking CXX shared library lib/libwrapper.so
+[ 33%] Built target wrapper
+[ 50%] Building CXX object CMakeFiles/wrapper-use-wrapper.dir/use_wrapper.cpp.o
+[ 66%] Linking CXX executable bin/wrapper-use-wrapper
+[ 66%] Built target wrapper-use-wrapper
+[ 83%] Building CXX object CMakeFiles/wrapper-use-original.dir/use_original.cpp.o
+[100%] Linking CXX executable bin/wrapper-use-original
+[100%] Built target wrapper-use-original
+[ 33%] Built target wrapper
+[ 66%] Built target wrapper-use-wrapper
+[100%] Built target wrapper-use-original
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-sVOlp/usr/share/doc/wrapper/LICENSE
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-sVOlp/usr/include
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-sVOlp/usr/include/wrapper
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-sVOlp/usr/include/wrapper/wrapper.h
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-sVOlp/usr/include/other
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-sVOlp/usr/include/other/th
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-sVOlp/usr/include/other/th/two-letter-dir.h
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-sVOlp/usr/include/other/other.h
+-- Up-to-date: /tmp/tmp.l7EaDbDrCy/tmp-sVOlp/usr/include
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-sVOlp/usr/include/th
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-sVOlp/usr/include/th/two-letter-dir.h
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-sVOlp/usr/include/other.h
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-sVOlp/usr/include/wrapper.h
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-sVOlp/usr/lib/libwrapper.so.1.1.2
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-sVOlp/usr/lib/libwrapper.so.1
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.l7EaDbDrCy/tmp-sVOlp/usr/lib/libwrapper.so.1.1.2" to "$ORIGIN/../lib:$ORIGIN/../lib/test-wrapper/lib"
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-sVOlp/usr/lib/libwrapper.so
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-sVOlp/usr/bin/wrapper-use-wrapper
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.l7EaDbDrCy/tmp-sVOlp/usr/bin/wrapper-use-wrapper" to "$ORIGIN/../lib:$ORIGIN/../lib/test-wrapper/lib"
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-sVOlp/usr/bin/wrapper-use-original
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.l7EaDbDrCy/tmp-sVOlp/usr/bin/wrapper-use-original" to "$ORIGIN/../lib:$ORIGIN/../lib/test-wrapper/lib"
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-sVOlp/usr/lib/cmake/test-wrapper/importtarget.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-sVOlp/usr/lib/cmake/test-wrapper/test-wrapper-targets.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-sVOlp/usr/lib/cmake/test-wrapper/test-wrapper-targets-noconfig.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-sVOlp/usr/lib/cmake/test-wrapper/test-wrapper-config.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-sVOlp/usr/lib/cmake/test-wrapper/test-wrapper-config-version.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-sVOlp/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-sVOlp/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- PKG: test-wrapper
+-- PKG_TARGET: wrapper
+-- CHECK_TARGET: wrapper
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    ROCM_ERROR_TOOLCHAIN_VAR
+    ROCM_SYMLINK_LIBS
+
+
+-- Build files have been written to: /tmp/tmp.l7EaDbDrCy/tmp-sVOlp/builds/p5avl/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build
+[ 50%] Building CXX object CMakeFiles/main.dir/main.cpp.o
+In file included from /tmp/tmp.l7EaDbDrCy/tmp-sVOlp/builds/p5avl/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build/main.cpp:2:
+/tmp/tmp.l7EaDbDrCy/tmp-sVOlp/usr/include/wrapper.h:22:2: warning: #warning "This file is deprecated. Use the header file from /tmp/tmp.l7EaDbDrCy/tmp-sVOlp/usr/include/wrapper/wrapper.h by using #include <wrapper/wrapper.h>" [-Wcpp]
+   22 | #warning "This file is deprecated. Use the header file from /tmp/tmp.l7EaDbDrCy/tmp-sVOlp/usr/include/wrapper/wrapper.h by using #include <wrapper/wrapper.h>"
+      |  ^~~~~~~
+[100%] Linking CXX executable main
+[100%] Built target main
+[100%] Built target main
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-sVOlp/usr/bin/main
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.l7EaDbDrCy/tmp-sVOlp/usr/bin/main" to ""
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-sVOlp/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-sVOlp/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- PKG: test-wrapper
+-- PKG_TARGET: wrapper
+-- CHECK_TARGET: wrapper
+-- Configuring done (0.2s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    ROCM_ERROR_TOOLCHAIN_VAR
+    ROCM_SYMLINK_LIBS
+
+
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.l7EaDbDrCy/tmp-sVOlp/builds/PVJ2n/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build
+[ 50%] Building CXX object CMakeFiles/main.dir/main.cpp.o
+[100%] Linking CXX executable main
+[100%] Built target main
+[100%] Built target main
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-sVOlp/usr/bin/main
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.l7EaDbDrCy/tmp-sVOlp/usr/bin/main" to ""
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-sVOlp/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-sVOlp/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- PKG: test-wrapper
+-- PKG_TARGET: wrapper
+-- CHECK_TARGET: wrapper
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    ROCM_ERROR_TOOLCHAIN_VAR
+    ROCM_SYMLINK_LIBS
+
+
+-- Build files have been written to: /tmp/tmp.l7EaDbDrCy/tmp-sVOlp/builds/Wm7nQ/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build
+[ 50%] Building CXX object CMakeFiles/main.dir/main.cpp.o
+In file included from /tmp/tmp.l7EaDbDrCy/tmp-sVOlp/builds/Wm7nQ/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build/main.cpp:2:
+/tmp/tmp.l7EaDbDrCy/tmp-sVOlp/usr/include/other.h:22:2: warning: #warning "This file is deprecated. Use the header file from /tmp/tmp.l7EaDbDrCy/tmp-sVOlp/usr/include/other/other.h by using #include <other/other.h>" [-Wcpp]
+   22 | #warning "This file is deprecated. Use the header file from /tmp/tmp.l7EaDbDrCy/tmp-sVOlp/usr/include/other/other.h by using #include <other/other.h>"
+      |  ^~~~~~~
+[100%] Linking CXX executable main
+[100%] Built target main
+[100%] Built target main
+Install the project...
+-- Install configuration: ""
+-- Up-to-date: /tmp/tmp.l7EaDbDrCy/tmp-sVOlp/usr/bin/main
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-sVOlp/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-sVOlp/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- PKG: test-wrapper
+-- PKG_TARGET: wrapper
+-- CHECK_TARGET: wrapper
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    ROCM_ERROR_TOOLCHAIN_VAR
+    ROCM_SYMLINK_LIBS
+
+
+-- Build files have been written to: /tmp/tmp.l7EaDbDrCy/tmp-sVOlp/builds/Rdlzx/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build
+[ 50%] Building CXX object CMakeFiles/main.dir/main.cpp.o
+[100%] Linking CXX executable main
+[100%] Built target main
+[100%] Built target main
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-sVOlp/usr/bin/main
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.l7EaDbDrCy/tmp-sVOlp/usr/bin/main" to ""
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-sVOlp/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-sVOlp/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- PKG: test-wrapper
+-- PKG_TARGET: wrapper
+-- CHECK_TARGET: wrapper
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    ROCM_ERROR_TOOLCHAIN_VAR
+    ROCM_SYMLINK_LIBS
+
+
+-- Build files have been written to: /tmp/tmp.l7EaDbDrCy/tmp-sVOlp/builds/aYuZN/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build
+[ 50%] Building CXX object CMakeFiles/main.dir/main.cpp.o
+[100%] Linking CXX executable main
+[100%] Built target main
+[100%] Built target main
+Install the project...
+-- Install configuration: ""
+-- Up-to-date: /tmp/tmp.l7EaDbDrCy/tmp-sVOlp/usr/bin/main
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-sVOlp/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-sVOlp/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- PKG: test-wrapper
+-- PKG_TARGET: wrapper
+-- CHECK_TARGET: wrapper
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    ROCM_ERROR_TOOLCHAIN_VAR
+    ROCM_SYMLINK_LIBS
+
+
+-- Build files have been written to: /tmp/tmp.l7EaDbDrCy/tmp-sVOlp/builds/hqYJb/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build
+[ 50%] Building CXX object CMakeFiles/main.dir/main.cpp.o
+In file included from /tmp/tmp.l7EaDbDrCy/tmp-sVOlp/builds/hqYJb/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build/main.cpp:2:
+/tmp/tmp.l7EaDbDrCy/tmp-sVOlp/usr/include/th/two-letter-dir.h:22:2: warning: #warning "This file is deprecated. Use the header file from /tmp/tmp.l7EaDbDrCy/tmp-sVOlp/usr/include/other/th/two-letter-dir.h by using #include <other/th/two-letter-dir.h>" [-Wcpp]
+   22 | #warning "This file is deprecated. Use the header file from /tmp/tmp.l7EaDbDrCy/tmp-sVOlp/usr/include/other/th/two-letter-dir.h by using #include <other/th/two-letter-dir.h>"
+      |  ^~~~~~~
+[100%] Linking CXX executable main
+[100%] Built target main
+[100%] Built target main
+Install the project...
+-- Install configuration: ""
+-- Up-to-date: /tmp/tmp.l7EaDbDrCy/tmp-sVOlp/usr/bin/main
+Running test: wrapper.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- rocm-cmake: Set license file to /tmp/autopkgtest.gTRafh/build.AzI/src/test/libwrapper/LICENSE.
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.l7EaDbDrCy/tmp-hl1fV/builds/cZxHx/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build
+[ 16%] Building CXX object CMakeFiles/wrapper.dir/wrapper.cpp.o
+[ 33%] Linking CXX shared library lib/libwrapper.so
+[ 33%] Built target wrapper
+[ 50%] Building CXX object CMakeFiles/wrapper-use-wrapper.dir/use_wrapper.cpp.o
+In file included from /tmp/autopkgtest.gTRafh/build.AzI/src/test/libwrapper/use_wrapper.cpp:1:
+/tmp/tmp.l7EaDbDrCy/tmp-hl1fV/builds/cZxHx/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build/include/wrapper.h:22:2: warning: #warning "This file is deprecated. Use the header file from /tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr/include/wrapper/wrapper.h by using #include <wrapper/wrapper.h>" [-Wcpp]
+   22 | #warning "This file is deprecated. Use the header file from /tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr/include/wrapper/wrapper.h by using #include <wrapper/wrapper.h>"
+      |  ^~~~~~~
+In file included from /tmp/autopkgtest.gTRafh/build.AzI/src/test/libwrapper/use_wrapper.cpp:2:
+/tmp/tmp.l7EaDbDrCy/tmp-hl1fV/builds/cZxHx/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build/include/other.h:22:2: warning: #warning "This file is deprecated. Use the header file from /tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr/include/other/other.h by using #include <other/other.h>" [-Wcpp]
+   22 | #warning "This file is deprecated. Use the header file from /tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr/include/other/other.h by using #include <other/other.h>"
+      |  ^~~~~~~
+[ 66%] Linking CXX executable bin/wrapper-use-wrapper
+[ 66%] Built target wrapper-use-wrapper
+[ 83%] Building CXX object CMakeFiles/wrapper-use-original.dir/use_original.cpp.o
+[100%] Linking CXX executable bin/wrapper-use-original
+[100%] Built target wrapper-use-original
+[ 33%] Built target wrapper
+[ 66%] Built target wrapper-use-wrapper
+[100%] Built target wrapper-use-original
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr/share/doc/wrapper/LICENSE
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr/include
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr/include/wrapper
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr/include/wrapper/wrapper.h
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr/include/other
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr/include/other/th
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr/include/other/th/two-letter-dir.h
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr/include/other/other.h
+-- Up-to-date: /tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr/include
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr/include/th
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr/include/th/two-letter-dir.h
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr/include/other.h
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr/include/wrapper.h
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr/lib/libwrapper.so.1.1.2
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr/lib/libwrapper.so.1
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr/lib/libwrapper.so.1.1.2" to "$ORIGIN/../lib:$ORIGIN/../lib/test-wrapper/lib"
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr/lib/libwrapper.so
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr/bin/wrapper-use-wrapper
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr/bin/wrapper-use-wrapper" to "$ORIGIN/../lib:$ORIGIN/../lib/test-wrapper/lib"
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr/bin/wrapper-use-original
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr/bin/wrapper-use-original" to "$ORIGIN/../lib:$ORIGIN/../lib/test-wrapper/lib"
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr/lib/cmake/test-wrapper/importtarget.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr/lib/cmake/test-wrapper/test-wrapper-targets.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr/lib/cmake/test-wrapper/test-wrapper-targets-noconfig.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr/lib/cmake/test-wrapper/test-wrapper-config.cmake
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr/lib/cmake/test-wrapper/test-wrapper-config-version.cmake
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- PKG: test-wrapper
+-- PKG_TARGET: wrapper
+-- CHECK_TARGET: wrapper
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    ROCM_ERROR_TOOLCHAIN_VAR
+    ROCM_SYMLINK_LIBS
+
+
+-- Build files have been written to: /tmp/tmp.l7EaDbDrCy/tmp-hl1fV/builds/KmmgK/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build
+[ 50%] Building CXX object CMakeFiles/main.dir/main.cpp.o
+In file included from /tmp/tmp.l7EaDbDrCy/tmp-hl1fV/builds/KmmgK/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build/main.cpp:2:
+/tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr/include/wrapper.h:22:2: warning: #warning "This file is deprecated. Use the header file from /tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr/include/wrapper/wrapper.h by using #include <wrapper/wrapper.h>" [-Wcpp]
+   22 | #warning "This file is deprecated. Use the header file from /tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr/include/wrapper/wrapper.h by using #include <wrapper/wrapper.h>"
+      |  ^~~~~~~
+[100%] Linking CXX executable main
+[100%] Built target main
+[100%] Built target main
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr/bin/main
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr/bin/main" to ""
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- PKG: test-wrapper
+-- PKG_TARGET: wrapper
+-- CHECK_TARGET: wrapper
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    ROCM_ERROR_TOOLCHAIN_VAR
+    ROCM_SYMLINK_LIBS
+
+
+-- Build files have been written to: /tmp/tmp.l7EaDbDrCy/tmp-hl1fV/builds/km9pl/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build
+[ 50%] Building CXX object CMakeFiles/main.dir/main.cpp.o
+[100%] Linking CXX executable main
+[100%] Built target main
+[100%] Built target main
+Install the project...
+-- Install configuration: ""
+-- Up-to-date: /tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr/bin/main
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- PKG: test-wrapper
+-- PKG_TARGET: wrapper
+-- CHECK_TARGET: wrapper
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    ROCM_ERROR_TOOLCHAIN_VAR
+    ROCM_SYMLINK_LIBS
+
+
+-- Build files have been written to: /tmp/tmp.l7EaDbDrCy/tmp-hl1fV/builds/2NOar/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build
+[ 50%] Building CXX object CMakeFiles/main.dir/main.cpp.o
+In file included from /tmp/tmp.l7EaDbDrCy/tmp-hl1fV/builds/2NOar/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build/main.cpp:2:
+/tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr/include/other.h:22:2: warning: #warning "This file is deprecated. Use the header file from /tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr/include/other/other.h by using #include <other/other.h>" [-Wcpp]
+   22 | #warning "This file is deprecated. Use the header file from /tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr/include/other/other.h by using #include <other/other.h>"
+      |  ^~~~~~~
+[100%] Linking CXX executable main
+[100%] Built target main
+[100%] Built target main
+Install the project...
+-- Install configuration: ""
+-- Up-to-date: /tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr/bin/main
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- PKG: test-wrapper
+-- PKG_TARGET: wrapper
+-- CHECK_TARGET: wrapper
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    ROCM_ERROR_TOOLCHAIN_VAR
+    ROCM_SYMLINK_LIBS
+
+
+-- Build files have been written to: /tmp/tmp.l7EaDbDrCy/tmp-hl1fV/builds/qvsMK/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build
+[ 50%] Building CXX object CMakeFiles/main.dir/main.cpp.o
+[100%] Linking CXX executable main
+[100%] Built target main
+[100%] Built target main
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr/bin/main
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr/bin/main" to ""
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- PKG: test-wrapper
+-- PKG_TARGET: wrapper
+-- CHECK_TARGET: wrapper
+-- Configuring done (0.2s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    ROCM_ERROR_TOOLCHAIN_VAR
+    ROCM_SYMLINK_LIBS
+
+
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tmp.l7EaDbDrCy/tmp-hl1fV/builds/8t90l/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build
+[ 50%] Building CXX object CMakeFiles/main.dir/main.cpp.o
+[100%] Linking CXX executable main
+[100%] Built target main
+[100%] Built target main
+Install the project...
+-- Install configuration: ""
+-- Up-to-date: /tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr/bin/main
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr"
+
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- PKG: test-wrapper
+-- PKG_TARGET: wrapper
+-- CHECK_TARGET: wrapper
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    ROCM_ERROR_TOOLCHAIN_VAR
+    ROCM_SYMLINK_LIBS
+
+
+-- Build files have been written to: /tmp/tmp.l7EaDbDrCy/tmp-hl1fV/builds/Vdeu1/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build
+[ 50%] Building CXX object CMakeFiles/main.dir/main.cpp.o
+In file included from /tmp/tmp.l7EaDbDrCy/tmp-hl1fV/builds/Vdeu1/longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/some-os-version/version/build/rocm-cmake/build/main.cpp:2:
+/tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr/include/th/two-letter-dir.h:22:2: warning: #warning "This file is deprecated. Use the header file from /tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr/include/other/th/two-letter-dir.h by using #include <other/th/two-letter-dir.h>" [-Wcpp]
+   22 | #warning "This file is deprecated. Use the header file from /tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr/include/other/th/two-letter-dir.h by using #include <other/th/two-letter-dir.h>"
+      |  ^~~~~~~
+[100%] Linking CXX executable main
+[100%] Built target main
+[100%] Built target main
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr/bin/main
+-- Set non-toolchain portion of runtime path of "/tmp/tmp.l7EaDbDrCy/tmp-hl1fV/usr/bin/main" to ""
+PASS: all upstream tests succeeded
+autopkgtest [03:35:31]: test upstream-tests: -----------------------]
+autopkgtest [03:35:31]: test upstream-tests:  - - - - - - - - - - results - - - - - - - - - -
+upstream-tests       PASS
+autopkgtest [03:35:32]: @@@@@@@@@@@@@@@@@@@@ summary
+cmake-find-package   PASS (superficial)
+build-simple-library PASS
+upstream-tests       PASS
