@@ -1,0 +1,4 @@
+++ mktemp -d
++ OUT=/tmp/tmp.LXGSM5Wc04
++ g++ -std=c++17 -I/usr/include/hipblas-common -o /tmp/tmp.LXGSM5Wc04/test test.cpp
++ /tmp/tmp.LXGSM5Wc04/test
