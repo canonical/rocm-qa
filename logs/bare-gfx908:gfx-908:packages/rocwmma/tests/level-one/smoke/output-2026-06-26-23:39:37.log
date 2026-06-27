@@ -1,0 +1,6 @@
+++ mktemp -d
++ OUT=/tmp/tmp.vERTfoJTzU
++ hipcc -o /tmp/tmp.vERTfoJTzU/test test.cpp
++ /tmp/tmp.vERTfoJTzU/test
+rocWMMA version: 2.0.0
+TESTS PASSED!
