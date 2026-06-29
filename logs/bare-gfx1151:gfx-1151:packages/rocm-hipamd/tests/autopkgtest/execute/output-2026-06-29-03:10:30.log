@@ -1,0 +1,1075 @@
+autopkgtest [03:10:30]: starting date and time: 2026-06-29 03:10:30+0000
+autopkgtest [03:10:30]: version 5.55
+autopkgtest [03:10:30]: host lxc-sessionizer-test-1; command line: /usr/bin/autopkgtest rocm-hipamd -U '--setup-commands=add-apt-repository -ss -y' '--setup-commands=add-apt-repository ppa:bullwinkle-team/rocm-devel --enable-source -y' -- lxd ubuntu-daily:resolute --profile=rocm-gpu
+autopkgtest [03:12:36]: testbed dpkg architecture: amd64
+autopkgtest [03:12:36]: testbed apt version: 3.2.0
+autopkgtest [03:12:36]: @@@@@@@@@@@@@@@@@@@@ test bed setup
+autopkgtest [03:12:36]: updating testbed package index (apt update)
+Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+Get:2 http://security.ubuntu.com/ubuntu resolute-security InRelease [137 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease [137 kB]
+Get:4 http://security.ubuntu.com/ubuntu resolute-security/main amd64 Components [31.2 kB]
+Get:5 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Packages [126 kB]
+Get:6 http://security.ubuntu.com/ubuntu resolute-security/universe Translation-en [39.2 kB]
+Get:7 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Components [43.2 kB]
+Get:8 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 c-n-f Metadata [3324 B]
+Get:9 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 Components [212 B]
+Get:10 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 c-n-f Metadata [120 B]
+Get:11 http://archive.ubuntu.com/ubuntu resolute-backports InRelease [136 kB]
+Get:12 http://archive.ubuntu.com/ubuntu resolute/universe amd64 Packages [16.0 MB]
+Get:13 http://archive.ubuntu.com/ubuntu resolute/universe Translation-en [6329 kB]
+Get:14 http://archive.ubuntu.com/ubuntu resolute/universe amd64 Components [4556 kB]
+Get:15 http://archive.ubuntu.com/ubuntu resolute/universe amd64 c-n-f Metadata [313 kB]
+Get:16 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 Packages [290 kB]
+Get:17 http://archive.ubuntu.com/ubuntu resolute/multiverse Translation-en [127 kB]
+Get:18 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 Components [50.0 kB]
+Get:19 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 c-n-f Metadata [8276 B]
+Get:20 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Packages [282 kB]
+Get:21 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Components [49.4 kB]
+Get:22 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Packages [159 kB]
+Get:23 http://archive.ubuntu.com/ubuntu resolute-updates/universe Translation-en [50.1 kB]
+Get:24 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Components [62.9 kB]
+Get:25 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 c-n-f Metadata [3996 B]
+Get:26 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 Packages [3328 B]
+Get:27 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse Translation-en [772 B]
+Get:28 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 Components [216 B]
+Get:29 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 c-n-f Metadata [256 B]
+Get:30 http://archive.ubuntu.com/ubuntu resolute-backports/main amd64 Components [212 B]
+Get:31 http://archive.ubuntu.com/ubuntu resolute-backports/main amd64 c-n-f Metadata [112 B]
+Get:32 http://archive.ubuntu.com/ubuntu resolute-backports/universe amd64 Components [216 B]
+Get:33 http://archive.ubuntu.com/ubuntu resolute-backports/universe amd64 c-n-f Metadata [116 B]
+Get:34 http://archive.ubuntu.com/ubuntu resolute-backports/restricted amd64 Components [216 B]
+Get:35 http://archive.ubuntu.com/ubuntu resolute-backports/restricted amd64 c-n-f Metadata [120 B]
+Get:36 http://archive.ubuntu.com/ubuntu resolute-backports/multiverse amd64 Components [216 B]
+Get:37 http://archive.ubuntu.com/ubuntu resolute-backports/multiverse amd64 c-n-f Metadata [120 B]
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 28.9 MB in 3s (9837 kB/s)
+Reading package lists...
+autopkgtest [03:12:42]: testbed release detected to be: resolute
+autopkgtest [03:12:42]: updating testbed package index (apt update)
+Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:2 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Reading package lists...
+Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:2 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Get:3 http://security.ubuntu.com/ubuntu resolute-security/main Sources [103 kB]
+Get:4 http://security.ubuntu.com/ubuntu resolute-security/restricted Sources [19.5 kB]
+Get:5 http://security.ubuntu.com/ubuntu resolute-security/universe Sources [45.8 kB]
+Hit:6 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:7 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Get:8 http://archive.ubuntu.com/ubuntu resolute/universe Sources [13.4 MB]
+Get:9 http://archive.ubuntu.com/ubuntu resolute/multiverse Sources [215 kB]
+Get:10 http://archive.ubuntu.com/ubuntu resolute/restricted Sources [18.6 kB]
+Get:11 http://archive.ubuntu.com/ubuntu resolute/main Sources [1002 kB]
+Get:12 http://archive.ubuntu.com/ubuntu resolute-updates/universe Sources [55.6 kB]
+Get:13 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse Sources [5596 B]
+Get:14 http://archive.ubuntu.com/ubuntu resolute-updates/main Sources [121 kB]
+Get:15 http://archive.ubuntu.com/ubuntu resolute-updates/restricted Sources [19.5 kB]
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 15.0 MB in 1s (10.5 MB/s)
+Reading package lists...
+Enabling deb-src for all repositories.
+Added: ## Ubuntu distribution repository
+##
+## The following settings can be adjusted to configure which packages to use from Ubuntu.
+## Mirror your choices (except for URIs and Suites) in the security section below to
+## ensure timely security updates.
+##
+## Types: Append deb-src to enable the fetching of source package.
+## URIs: A URL to the repository (you may add multiple URLs)
+## Suites: The following additional suites can be configured
+##   <name>-updates   - Major bug fix updates produced after the final release of the
+##                      distribution.
+##   <name>-backports - software from this repository may not have been tested as
+##                      extensively as that contained in the main release, although it includes
+##                      newer versions of some applications which may provide useful features.
+##                      Also, please note that software in backports WILL NOT receive any review
+##                      or updates from the Ubuntu security team.
+## Components: Aside from main, the following components can be added to the list
+##   restricted  - Software that may not be under a free license, or protected by patents.
+##   universe    - Community maintained packages. Software in this repository receives maintenance
+##                 from volunteers in the Ubuntu community, or a 10 year security maintenance
+##                 commitment from Canonical when an Ubuntu Pro subscription is attached.
+##   multiverse  - Community maintained of restricted. Software from this repository is
+##                 ENTIRELY UNSUPPORTED by the Ubuntu team, and may not be under a free
+##                 licence. Please satisfy yourself as to your rights to use the software.
+##                 Also, please note that software in multiverse WILL NOT receive any
+##                 review or updates from the Ubuntu security team.
+##
+## See the sources.list(5) manual page for further settings.
+Types: deb-src
+URIs: http://archive.ubuntu.com/ubuntu
+Suites: resolute resolute-updates resolute-backports
+Components: restricted main universe multiverse
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+Added: ## Ubuntu security updates. Aside from URIs and Suites,
+## this should mirror your choices in the previous section.
+Types: deb-src
+URIs: http://security.ubuntu.com/ubuntu
+Suites: resolute-security
+Components: restricted main universe multiverse
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+Hit:1 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Get:4 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute InRelease [27.2 kB]
+Hit:5 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Get:6 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main Sources [12.5 kB]
+Get:7 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main amd64 Packages [19.9 kB]
+Get:8 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main Translation-en [13.0 kB]
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 72.5 kB in 1s (74.1 kB/s)
+Reading package lists...
+PPA publishes dbgsym, you may need to include 'main/debug' component
+Repository: 'Types: deb
+URIs: https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu/
+Suites: resolute
+Components: main
+'
+Description:
+Development archive for AMD ROCm packages on Ubuntu with an aim to have packages build for next Ubuntu release
+More info: https://launchpad.net/~bullwinkle-team/+archive/ubuntu/rocm-devel
+Adding repository.
+autopkgtest [03:12:50]: upgrading testbed (apt dist-upgrade and autopurge)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+autopkgtest [03:12:54]: testbed running kernel: Linux 7.0.0-22-generic #22-Ubuntu SMP PREEMPT_DYNAMIC Mon May 25 15:54:34 UTC 2026
+autopkgtest [03:12:54]: @@@@@@@@@@@@@@@@@@@@ apt-source rocm-hipamd
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+The following NEW packages will be installed:
+  bzip2 dpkg-dev libdpkg-perl lto-disabled-list make
+0 upgraded, 5 newly installed, 0 to remove and 0 not upgraded.
+Need to get 1596 kB of archives.
+After this operation, 4247 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu resolute/main amd64 bzip2 amd64 1.0.8-6build2 [34.3 kB]
+Get:2 http://archive.ubuntu.com/ubuntu resolute/main amd64 libdpkg-perl all 1.23.7ubuntu1 [289 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute/main amd64 make amd64 4.4.1-3 [197 kB]
+Get:4 http://archive.ubuntu.com/ubuntu resolute/main amd64 lto-disabled-list all 79 [14.2 kB]
+Get:5 http://archive.ubuntu.com/ubuntu resolute/main amd64 dpkg-dev all 1.23.7ubuntu1 [1062 kB]
+Fetched 1596 kB in 0s (8826 kB/s)
+Selecting previously unselected package bzip2.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 44349 files and directories currently installed.)
+Preparing to unpack .../bzip2_1.0.8-6build2_amd64.deb ...
+Unpacking bzip2 (1.0.8-6build2) ...
+Selecting previously unselected package libdpkg-perl.
+Preparing to unpack .../libdpkg-perl_1.23.7ubuntu1_all.deb ...
+Unpacking libdpkg-perl (1.23.7ubuntu1) ...
+Selecting previously unselected package make.
+Preparing to unpack .../make_4.4.1-3_amd64.deb ...
+Unpacking make (4.4.1-3) ...
+Selecting previously unselected package lto-disabled-list.
+Preparing to unpack .../lto-disabled-list_79_all.deb ...
+Unpacking lto-disabled-list (79) ...
+Selecting previously unselected package dpkg-dev.
+Preparing to unpack .../dpkg-dev_1.23.7ubuntu1_all.deb ...
+Unpacking dpkg-dev (1.23.7ubuntu1) ...
+Setting up lto-disabled-list (79) ...
+Setting up bzip2 (1.0.8-6build2) ...
+Setting up make (4.4.1-3) ...
+Setting up libdpkg-perl (1.23.7ubuntu1) ...
+Setting up dpkg-dev (1.23.7ubuntu1) ...
+Processing triggers for man-db (2.13.1-1build1) ...
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+Get:1 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main rocm-hipamd 7.2.4-0ubuntu1~b1~git202606121458.a082f7a (tar) [1922 kB]
+Get:2 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main rocm-hipamd 7.2.4-0ubuntu1~b1~git202606121458.a082f7a (tar) [2155 kB]
+Get:3 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main rocm-hipamd 7.2.4-0ubuntu1~b1~git202606121458.a082f7a (diff) [31.6 kB]
+Get:4 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main rocm-hipamd 7.2.4-0ubuntu1~b1~git202606121458.a082f7a (dsc) [3353 B]
+gpgv: Signature made Fri Jun 12 12:58:25 2026 UTC
+gpgv:                using RSA key 1E1312DF4B7158B6EBF9DE782574387962FEB0D1
+gpgv:                issuer "talha.can.havadar@canonical.com"
+gpgv: Can't check signature: No public key
+dpkg-source: warning: cannot verify inline signature for ./rocm-hipamd_7.2.4-0ubuntu1~b1~git202606121458.a082f7a.dsc: no acceptable signature found
+autopkgtest [03:13:02]: testing package rocm-hipamd version 7.2.4-0ubuntu1~b1~git202606121458.a082f7a
+autopkgtest [03:13:02]: build not needed
+autopkgtest [03:13:02]: test cmake-hip-config: preparing testbed
+autopkgtest [03:15:09]: testbed dpkg architecture: amd64
+autopkgtest [03:15:09]: testbed apt version: 3.2.0
+autopkgtest [03:15:10]: @@@@@@@@@@@@@@@@@@@@ test bed setup
+autopkgtest [03:15:10]: updating testbed package index (apt update)
+Get:1 http://security.ubuntu.com/ubuntu resolute-security InRelease [137 kB]
+Hit:2 http://archive.ubuntu.com/ubuntu resolute InRelease
+Get:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease [137 kB]
+Get:4 http://security.ubuntu.com/ubuntu resolute-security/main amd64 Components [31.2 kB]
+Get:5 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Packages [126 kB]
+Get:6 http://security.ubuntu.com/ubuntu resolute-security/universe Translation-en [39.2 kB]
+Get:7 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Components [43.2 kB]
+Get:8 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 c-n-f Metadata [3324 B]
+Get:9 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 Components [212 B]
+Get:10 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 c-n-f Metadata [120 B]
+Get:11 http://archive.ubuntu.com/ubuntu resolute-backports InRelease [136 kB]
+Get:12 http://archive.ubuntu.com/ubuntu resolute/universe amd64 Packages [16.0 MB]
+Get:13 http://archive.ubuntu.com/ubuntu resolute/universe Translation-en [6329 kB]
+Get:14 http://archive.ubuntu.com/ubuntu resolute/universe amd64 Components [4556 kB]
+Get:15 http://archive.ubuntu.com/ubuntu resolute/universe amd64 c-n-f Metadata [313 kB]
+Get:16 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 Packages [290 kB]
+Get:17 http://archive.ubuntu.com/ubuntu resolute/multiverse Translation-en [127 kB]
+Get:18 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 Components [50.0 kB]
+Get:19 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 c-n-f Metadata [8276 B]
+Get:20 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Packages [282 kB]
+Get:21 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Components [49.4 kB]
+Get:22 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Packages [159 kB]
+Get:23 http://archive.ubuntu.com/ubuntu resolute-updates/universe Translation-en [50.1 kB]
+Get:24 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Components [62.9 kB]
+Get:25 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 c-n-f Metadata [3996 B]
+Get:26 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 Packages [3328 B]
+Get:27 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse Translation-en [772 B]
+Get:28 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 Components [216 B]
+Get:29 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 c-n-f Metadata [256 B]
+Get:30 http://archive.ubuntu.com/ubuntu resolute-backports/main amd64 Components [212 B]
+Get:31 http://archive.ubuntu.com/ubuntu resolute-backports/main amd64 c-n-f Metadata [112 B]
+Get:32 http://archive.ubuntu.com/ubuntu resolute-backports/universe amd64 Components [216 B]
+Get:33 http://archive.ubuntu.com/ubuntu resolute-backports/universe amd64 c-n-f Metadata [116 B]
+Get:34 http://archive.ubuntu.com/ubuntu resolute-backports/restricted amd64 Components [216 B]
+Get:35 http://archive.ubuntu.com/ubuntu resolute-backports/restricted amd64 c-n-f Metadata [120 B]
+Get:36 http://archive.ubuntu.com/ubuntu resolute-backports/multiverse amd64 Components [216 B]
+Get:37 http://archive.ubuntu.com/ubuntu resolute-backports/multiverse amd64 c-n-f Metadata [120 B]
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 28.9 MB in 3s (9410 kB/s)
+Reading package lists...
+autopkgtest [03:15:16]: testbed release detected to be: resolute
+autopkgtest [03:15:16]: updating testbed package index (apt update)
+Hit:1 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Reading package lists...
+Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:2 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Get:3 http://security.ubuntu.com/ubuntu resolute-security/restricted Sources [19.5 kB]
+Get:4 http://security.ubuntu.com/ubuntu resolute-security/universe Sources [45.8 kB]
+Get:5 http://security.ubuntu.com/ubuntu resolute-security/main Sources [103 kB]
+Hit:6 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:7 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Get:8 http://archive.ubuntu.com/ubuntu resolute/universe Sources [13.4 MB]
+Get:9 http://archive.ubuntu.com/ubuntu resolute/main Sources [1002 kB]
+Get:10 http://archive.ubuntu.com/ubuntu resolute/multiverse Sources [215 kB]
+Get:11 http://archive.ubuntu.com/ubuntu resolute/restricted Sources [18.6 kB]
+Get:12 http://archive.ubuntu.com/ubuntu resolute-updates/restricted Sources [19.5 kB]
+Get:13 http://archive.ubuntu.com/ubuntu resolute-updates/main Sources [121 kB]
+Get:14 http://archive.ubuntu.com/ubuntu resolute-updates/universe Sources [55.6 kB]
+Get:15 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse Sources [5596 B]
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 15.0 MB in 1s (11.6 MB/s)
+Reading package lists...
+Enabling deb-src for all repositories.
+Added: ## Ubuntu distribution repository
+##
+## The following settings can be adjusted to configure which packages to use from Ubuntu.
+## Mirror your choices (except for URIs and Suites) in the security section below to
+## ensure timely security updates.
+##
+## Types: Append deb-src to enable the fetching of source package.
+## URIs: A URL to the repository (you may add multiple URLs)
+## Suites: The following additional suites can be configured
+##   <name>-updates   - Major bug fix updates produced after the final release of the
+##                      distribution.
+##   <name>-backports - software from this repository may not have been tested as
+##                      extensively as that contained in the main release, although it includes
+##                      newer versions of some applications which may provide useful features.
+##                      Also, please note that software in backports WILL NOT receive any review
+##                      or updates from the Ubuntu security team.
+## Components: Aside from main, the following components can be added to the list
+##   restricted  - Software that may not be under a free license, or protected by patents.
+##   universe    - Community maintained packages. Software in this repository receives maintenance
+##                 from volunteers in the Ubuntu community, or a 10 year security maintenance
+##                 commitment from Canonical when an Ubuntu Pro subscription is attached.
+##   multiverse  - Community maintained of restricted. Software from this repository is
+##                 ENTIRELY UNSUPPORTED by the Ubuntu team, and may not be under a free
+##                 licence. Please satisfy yourself as to your rights to use the software.
+##                 Also, please note that software in multiverse WILL NOT receive any
+##                 review or updates from the Ubuntu security team.
+##
+## See the sources.list(5) manual page for further settings.
+Types: deb-src
+URIs: http://archive.ubuntu.com/ubuntu
+Suites: resolute resolute-updates resolute-backports
+Components: main multiverse universe restricted
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+Added: ## Ubuntu security updates. Aside from URIs and Suites,
+## this should mirror your choices in the previous section.
+Types: deb-src
+URIs: http://security.ubuntu.com/ubuntu
+Suites: resolute-security
+Components: main multiverse universe restricted
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+Hit:1 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Get:4 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute InRelease [27.2 kB]
+Hit:5 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Get:6 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main Sources [12.5 kB]
+Get:7 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main amd64 Packages [19.9 kB]
+Get:8 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main Translation-en [13.0 kB]
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 72.5 kB in 1s (74.3 kB/s)
+Reading package lists...
+PPA publishes dbgsym, you may need to include 'main/debug' component
+Repository: 'Types: deb
+URIs: https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu/
+Suites: resolute
+Components: main
+'
+Description:
+Development archive for AMD ROCm packages on Ubuntu with an aim to have packages build for next Ubuntu release
+More info: https://launchpad.net/~bullwinkle-team/+archive/ubuntu/rocm-devel
+Adding repository.
+autopkgtest [03:15:24]: upgrading testbed (apt dist-upgrade and autopurge)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+The following NEW packages will be installed:
+  bzip2 clang-22 clang-tools-22 cmake cmake-data cpp cpp-15
+  cpp-15-x86-64-linux-gnu cpp-x86-64-linux-gnu dpkg-dev g++ g++-15
+  g++-15-x86-64-linux-gnu g++-x86-64-linux-gnu gcc gcc-15 gcc-15-base
+  gcc-15-x86-64-linux-gnu gcc-x86-64-linux-gnu hip-utils hipcc lib32gcc-s1
+  lib32stdc++6 libamd-comgr-dev libamd-comgr3 libamdhip64-7 libamdhip64-dev
+  libarchive13t64 libasan8 libc-dev-bin libc6-dev libc6-i386 libcc1-0
+  libclang-common-22-dev libclang-cpp22 libclang-rt-22-dev libclang1-22
+  libdpkg-perl libfile-which-perl libgc1 libgcc-15-dev libgcc-16-dev libgomp1
+  libhiprtc-builtins7 libhiprtc7 libhsa-runtime-dev libhsa-runtime64-1
+  libhsakmt1 libhwasan0 libisl23 libitm1 libjsoncpp26 libllvm22 liblsan0
+  libmpc3 libobjc-15-dev libobjc4 libpfm4 libquadmath0 librhash1
+  libstdc++-15-dev libstdc++-16-dev libtsan2 libubsan1 liburi-encode-perl
+  libz3-4 linux-libc-dev lld-22 llvm-22 llvm-22-linker-tools llvm-22-runtime
+  lto-disabled-list make rocm-device-libs-22 rocm-opencl-icd rocminfo
+  rpcsvc-proto
+0 upgraded, 77 newly installed, 0 to remove and 0 not upgraded.
+Need to get 231 MB of archives.
+After this operation, 970 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu resolute/main amd64 bzip2 amd64 1.0.8-6build2 [34.3 kB]
+Get:2 http://archive.ubuntu.com/ubuntu resolute/universe amd64 libz3-4 amd64 4.13.3-1build1 [6887 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute/universe amd64 libllvm22 amd64 1:22.1.2-1ubuntu1 [32.1 MB]
+Get:4 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main amd64 rocm-device-libs-22 amd64 7.2.4+dfsg-1~exp1~git202606061101.1256c6d~ubuntu26.04.1 [553 kB]
+Get:5 http://archive.ubuntu.com/ubuntu resolute/universe amd64 libclang-cpp22 amd64 1:22.1.2-1ubuntu1 [14.2 MB]
+Get:6 http://archive.ubuntu.com/ubuntu resolute/main amd64 gcc-15-base amd64 15.2.0-16ubuntu1 [39.0 kB]
+Get:7 http://archive.ubuntu.com/ubuntu resolute/main amd64 libgomp1 amd64 16-20260322-1ubuntu1 [162 kB]
+Get:8 http://archive.ubuntu.com/ubuntu resolute/main amd64 libitm1 amd64 16-20260322-1ubuntu1 [30.0 kB]
+Get:9 http://archive.ubuntu.com/ubuntu resolute/main amd64 libasan8 amd64 16-20260322-1ubuntu1 [3184 kB]
+Get:10 http://archive.ubuntu.com/ubuntu resolute/main amd64 liblsan0 amd64 16-20260322-1ubuntu1 [1394 kB]
+Get:11 http://archive.ubuntu.com/ubuntu resolute/main amd64 libtsan2 amd64 16-20260322-1ubuntu1 [2849 kB]
+Get:12 http://archive.ubuntu.com/ubuntu resolute/main amd64 libubsan1 amd64 16-20260322-1ubuntu1 [1240 kB]
+Get:13 http://archive.ubuntu.com/ubuntu resolute/main amd64 libhwasan0 amd64 16-20260322-1ubuntu1 [1731 kB]
+Get:14 http://archive.ubuntu.com/ubuntu resolute/main amd64 libquadmath0 amd64 16-20260322-1ubuntu1 [155 kB]
+Get:15 http://archive.ubuntu.com/ubuntu resolute/main amd64 libgcc-15-dev amd64 15.2.0-16ubuntu1 [2866 kB]
+Get:16 http://archive.ubuntu.com/ubuntu resolute/main amd64 libc-dev-bin amd64 2.43-2ubuntu2 [23.3 kB]
+Get:17 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 linux-libc-dev amd64 7.0.0-27.27 [1561 kB]
+Get:18 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main amd64 libhsakmt1 amd64 7.2.4+dfsg~ppa1-0ubuntu1~git202606011102.6fd0c927~ubuntu26.04.1 [79.0 kB]
+Get:19 http://archive.ubuntu.com/ubuntu resolute/main amd64 rpcsvc-proto amd64 1.4.3-1build1 [68.3 kB]
+Get:20 http://archive.ubuntu.com/ubuntu resolute/main amd64 libc6-dev amd64 2.43-2ubuntu2 [2295 kB]
+Get:21 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main amd64 libhsa-runtime64-1 amd64 7.2.4+dfsg~ppa1-0ubuntu1~git202606011102.6fd0c927~ubuntu26.04.1 [618 kB]
+Get:22 http://archive.ubuntu.com/ubuntu resolute/main amd64 libstdc++-15-dev amd64 15.2.0-16ubuntu1 [2920 kB]
+Get:23 http://archive.ubuntu.com/ubuntu resolute/main amd64 libgc1 amd64 1:8.2.12-1 [92.9 kB]
+Get:24 http://archive.ubuntu.com/ubuntu resolute/universe amd64 libobjc4 amd64 16-20260322-1ubuntu1 [48.2 kB]
+Get:25 http://archive.ubuntu.com/ubuntu resolute/universe amd64 libobjc-15-dev amd64 15.2.0-16ubuntu1 [196 kB]
+Get:26 http://archive.ubuntu.com/ubuntu resolute/universe amd64 libclang-common-22-dev amd64 1:22.1.2-1ubuntu1 [771 kB]
+Get:27 http://archive.ubuntu.com/ubuntu resolute/universe amd64 llvm-22-linker-tools amd64 1:22.1.2-1ubuntu1 [1284 kB]
+Get:28 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main amd64 rocminfo amd64 7.2.4-1~exp1~git202606120702.1dcd091~ubuntu26.04.1 [29.4 kB]
+Get:29 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main amd64 libamd-comgr3 amd64 7.2.4+dfsg-1~exp1~git202606061101.1256c6d~ubuntu26.04.1 [13.4 MB]
+Get:30 http://archive.ubuntu.com/ubuntu resolute/universe amd64 libclang1-22 amd64 1:22.1.2-1ubuntu1 [8545 kB]
+Get:31 http://archive.ubuntu.com/ubuntu resolute/universe amd64 clang-22 amd64 1:22.1.2-1ubuntu1 [129 kB]
+Get:32 http://archive.ubuntu.com/ubuntu resolute/universe amd64 clang-tools-22 amd64 1:22.1.2-1ubuntu1 [9882 kB]
+Get:33 http://archive.ubuntu.com/ubuntu resolute/main amd64 cmake-data all 4.2.3-2ubuntu2 [2581 kB]
+Get:34 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libarchive13t64 amd64 3.8.5-1ubuntu2.1 [397 kB]
+Get:35 http://archive.ubuntu.com/ubuntu resolute/main amd64 libjsoncpp26 amd64 1.9.6-5 [84.0 kB]
+Get:36 http://archive.ubuntu.com/ubuntu resolute/main amd64 librhash1 amd64 1.4.6-1.1 [133 kB]
+Get:37 http://archive.ubuntu.com/ubuntu resolute/main amd64 cmake amd64 4.2.3-2ubuntu2 [13.7 MB]
+Get:38 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main amd64 libamd-comgr-dev amd64 7.2.4+dfsg-1~exp1~git202606061101.1256c6d~ubuntu26.04.1 [24.9 kB]
+Get:39 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main amd64 libamdhip64-7 amd64 7.2.4-0ubuntu1~b1~git202606121458.a082f7a [11.0 MB]
+Get:40 http://archive.ubuntu.com/ubuntu resolute/main amd64 libisl23 amd64 0.27-1build1 [691 kB]
+Get:41 http://archive.ubuntu.com/ubuntu resolute/main amd64 libmpc3 amd64 1.3.1-3 [54.6 kB]
+Get:42 http://archive.ubuntu.com/ubuntu resolute/main amd64 cpp-15-x86-64-linux-gnu amd64 15.2.0-16ubuntu1 [12.9 MB]
+Get:43 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main amd64 libhiprtc-builtins7 amd64 7.2.4-0ubuntu1~b1~git202606121458.a082f7a [68.6 kB]
+Get:44 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main amd64 libhiprtc7 amd64 7.2.4-0ubuntu1~b1~git202606121458.a082f7a [160 kB]
+Get:45 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main amd64 libhsa-runtime-dev amd64 7.2.4+dfsg~ppa1-0ubuntu1~git202606011102.6fd0c927~ubuntu26.04.1 [93.6 kB]
+Get:46 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main amd64 libamdhip64-dev amd64 7.2.4-0ubuntu1~b1~git202606121458.a082f7a [252 kB]
+Get:47 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main amd64 hipcc amd64 7.2.4+dfsg-1~exp1~git202606061101.1256c6d~ubuntu26.04.1 [123 kB]
+Get:48 http://archive.ubuntu.com/ubuntu resolute/main amd64 cpp-15 amd64 15.2.0-16ubuntu1 [1030 B]
+Get:49 http://archive.ubuntu.com/ubuntu resolute/main amd64 cpp-x86-64-linux-gnu amd64 4:15.2.0-5ubuntu1 [5840 B]
+Get:50 http://archive.ubuntu.com/ubuntu resolute/main amd64 cpp amd64 4:15.2.0-5ubuntu1 [22.4 kB]
+Get:51 http://archive.ubuntu.com/ubuntu resolute/main amd64 libdpkg-perl all 1.23.7ubuntu1 [289 kB]
+Get:52 http://archive.ubuntu.com/ubuntu resolute/main amd64 make amd64 4.4.1-3 [197 kB]
+Get:53 http://archive.ubuntu.com/ubuntu resolute/main amd64 lto-disabled-list all 79 [14.2 kB]
+Get:54 http://archive.ubuntu.com/ubuntu resolute/main amd64 dpkg-dev all 1.23.7ubuntu1 [1062 kB]
+Get:55 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main amd64 hip-utils amd64 7.2.4-0ubuntu1~b1~git202606121458.a082f7a [22.4 kB]
+Get:56 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main amd64 rocm-opencl-icd amd64 7.2.4-0ubuntu1~b1~git202606121458.a082f7a [473 kB]
+Get:57 http://archive.ubuntu.com/ubuntu resolute/main amd64 libcc1-0 amd64 16-20260322-1ubuntu1 [51.2 kB]
+Get:58 http://archive.ubuntu.com/ubuntu resolute/main amd64 gcc-15-x86-64-linux-gnu amd64 15.2.0-16ubuntu1 [25.4 MB]
+Get:59 http://archive.ubuntu.com/ubuntu resolute/main amd64 gcc-15 amd64 15.2.0-16ubuntu1 [539 kB]
+Get:60 http://archive.ubuntu.com/ubuntu resolute/main amd64 gcc-x86-64-linux-gnu amd64 4:15.2.0-5ubuntu1 [1208 B]
+Get:61 http://archive.ubuntu.com/ubuntu resolute/main amd64 gcc amd64 4:15.2.0-5ubuntu1 [5010 B]
+Get:62 http://archive.ubuntu.com/ubuntu resolute/main amd64 g++-15-x86-64-linux-gnu amd64 15.2.0-16ubuntu1 [14.4 MB]
+Get:63 http://archive.ubuntu.com/ubuntu resolute/main amd64 g++-15 amd64 15.2.0-16ubuntu1 [26.7 kB]
+Get:64 http://archive.ubuntu.com/ubuntu resolute/main amd64 g++-x86-64-linux-gnu amd64 4:15.2.0-5ubuntu1 [968 B]
+Get:65 http://archive.ubuntu.com/ubuntu resolute/main amd64 g++ amd64 4:15.2.0-5ubuntu1 [1100 B]
+Get:66 http://archive.ubuntu.com/ubuntu resolute/universe amd64 llvm-22-runtime amd64 1:22.1.2-1ubuntu1 [598 kB]
+Get:67 http://archive.ubuntu.com/ubuntu resolute/universe amd64 libpfm4 amd64 4.13.0+git106-g3e4031b-1 [438 kB]
+Get:68 http://archive.ubuntu.com/ubuntu resolute/universe amd64 llvm-22 amd64 1:22.1.2-1ubuntu1 [20.7 MB]
+Get:69 http://archive.ubuntu.com/ubuntu resolute/universe amd64 lld-22 amd64 1:22.1.2-1ubuntu1 [1549 kB]
+Get:70 http://archive.ubuntu.com/ubuntu resolute/main amd64 libc6-i386 amd64 2.43-2ubuntu2 [2932 kB]
+Get:71 http://archive.ubuntu.com/ubuntu resolute/main amd64 lib32gcc-s1 amd64 16-20260322-1ubuntu1 [91.9 kB]
+Get:72 http://archive.ubuntu.com/ubuntu resolute/main amd64 lib32stdc++6 amd64 16-20260322-1ubuntu1 [840 kB]
+Get:73 http://archive.ubuntu.com/ubuntu resolute/universe amd64 libclang-rt-22-dev amd64 1:22.1.2-1ubuntu1 [4317 kB]
+Get:74 http://archive.ubuntu.com/ubuntu resolute/universe amd64 libgcc-16-dev amd64 16-20260322-1ubuntu1 [2931 kB]
+Get:75 http://archive.ubuntu.com/ubuntu resolute/universe amd64 libstdc++-16-dev amd64 16-20260322-1ubuntu1 [2731 kB]
+Get:76 http://archive.ubuntu.com/ubuntu resolute/main amd64 libfile-which-perl all 1.27-2 [12.5 kB]
+Get:77 http://archive.ubuntu.com/ubuntu resolute/universe amd64 liburi-encode-perl all 1.1.1-3 [9258 B]
+Fetched 231 MB in 4s (60.4 MB/s)
+Selecting previously unselected package bzip2.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 44349 files and directories currently installed.)
+Preparing to unpack .../00-bzip2_1.0.8-6build2_amd64.deb ...
+Unpacking bzip2 (1.0.8-6build2) ...
+Selecting previously unselected package libz3-4:amd64.
+Preparing to unpack .../01-libz3-4_4.13.3-1build1_amd64.deb ...
+Unpacking libz3-4:amd64 (4.13.3-1build1) ...
+Selecting previously unselected package libllvm22:amd64.
+Preparing to unpack .../02-libllvm22_1%3a22.1.2-1ubuntu1_amd64.deb ...
+Unpacking libllvm22:amd64 (1:22.1.2-1ubuntu1) ...
+Selecting previously unselected package libclang-cpp22.
+Preparing to unpack .../03-libclang-cpp22_1%3a22.1.2-1ubuntu1_amd64.deb ...
+Unpacking libclang-cpp22 (1:22.1.2-1ubuntu1) ...
+Selecting previously unselected package gcc-15-base:amd64.
+Preparing to unpack .../04-gcc-15-base_15.2.0-16ubuntu1_amd64.deb ...
+Unpacking gcc-15-base:amd64 (15.2.0-16ubuntu1) ...
+Selecting previously unselected package libgomp1:amd64.
+Preparing to unpack .../05-libgomp1_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libgomp1:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libitm1:amd64.
+Preparing to unpack .../06-libitm1_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libitm1:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libasan8:amd64.
+Preparing to unpack .../07-libasan8_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libasan8:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package liblsan0:amd64.
+Preparing to unpack .../08-liblsan0_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking liblsan0:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libtsan2:amd64.
+Preparing to unpack .../09-libtsan2_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libtsan2:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libubsan1:amd64.
+Preparing to unpack .../10-libubsan1_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libubsan1:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libhwasan0:amd64.
+Preparing to unpack .../11-libhwasan0_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libhwasan0:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libquadmath0:amd64.
+Preparing to unpack .../12-libquadmath0_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libquadmath0:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libgcc-15-dev:amd64.
+Preparing to unpack .../13-libgcc-15-dev_15.2.0-16ubuntu1_amd64.deb ...
+Unpacking libgcc-15-dev:amd64 (15.2.0-16ubuntu1) ...
+Selecting previously unselected package libc-dev-bin.
+Preparing to unpack .../14-libc-dev-bin_2.43-2ubuntu2_amd64.deb ...
+Unpacking libc-dev-bin (2.43-2ubuntu2) ...
+Selecting previously unselected package linux-libc-dev:amd64.
+Preparing to unpack .../15-linux-libc-dev_7.0.0-27.27_amd64.deb ...
+Unpacking linux-libc-dev:amd64 (7.0.0-27.27) ...
+Selecting previously unselected package rpcsvc-proto.
+Preparing to unpack .../16-rpcsvc-proto_1.4.3-1build1_amd64.deb ...
+Unpacking rpcsvc-proto (1.4.3-1build1) ...
+Selecting previously unselected package libc6-dev:amd64.
+Preparing to unpack .../17-libc6-dev_2.43-2ubuntu2_amd64.deb ...
+Unpacking libc6-dev:amd64 (2.43-2ubuntu2) ...
+Selecting previously unselected package libstdc++-15-dev:amd64.
+Preparing to unpack .../18-libstdc++-15-dev_15.2.0-16ubuntu1_amd64.deb ...
+Unpacking libstdc++-15-dev:amd64 (15.2.0-16ubuntu1) ...
+Selecting previously unselected package libgc1:amd64.
+Preparing to unpack .../19-libgc1_1%3a8.2.12-1_amd64.deb ...
+Unpacking libgc1:amd64 (1:8.2.12-1) ...
+Selecting previously unselected package libobjc4:amd64.
+Preparing to unpack .../20-libobjc4_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libobjc4:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libobjc-15-dev:amd64.
+Preparing to unpack .../21-libobjc-15-dev_15.2.0-16ubuntu1_amd64.deb ...
+Unpacking libobjc-15-dev:amd64 (15.2.0-16ubuntu1) ...
+Selecting previously unselected package libclang-common-22-dev:amd64.
+Preparing to unpack .../22-libclang-common-22-dev_1%3a22.1.2-1ubuntu1_amd64.deb ...
+Unpacking libclang-common-22-dev:amd64 (1:22.1.2-1ubuntu1) ...
+Selecting previously unselected package llvm-22-linker-tools.
+Preparing to unpack .../23-llvm-22-linker-tools_1%3a22.1.2-1ubuntu1_amd64.deb ...
+Unpacking llvm-22-linker-tools (1:22.1.2-1ubuntu1) ...
+Selecting previously unselected package libclang1-22.
+Preparing to unpack .../24-libclang1-22_1%3a22.1.2-1ubuntu1_amd64.deb ...
+Unpacking libclang1-22 (1:22.1.2-1ubuntu1) ...
+Selecting previously unselected package clang-22.
+Preparing to unpack .../25-clang-22_1%3a22.1.2-1ubuntu1_amd64.deb ...
+Unpacking clang-22 (1:22.1.2-1ubuntu1) ...
+Selecting previously unselected package clang-tools-22.
+Preparing to unpack .../26-clang-tools-22_1%3a22.1.2-1ubuntu1_amd64.deb ...
+Unpacking clang-tools-22 (1:22.1.2-1ubuntu1) ...
+Selecting previously unselected package cmake-data.
+Preparing to unpack .../27-cmake-data_4.2.3-2ubuntu2_all.deb ...
+Unpacking cmake-data (4.2.3-2ubuntu2) ...
+Selecting previously unselected package libarchive13t64:amd64.
+Preparing to unpack .../28-libarchive13t64_3.8.5-1ubuntu2.1_amd64.deb ...
+Unpacking libarchive13t64:amd64 (3.8.5-1ubuntu2.1) ...
+Selecting previously unselected package libjsoncpp26:amd64.
+Preparing to unpack .../29-libjsoncpp26_1.9.6-5_amd64.deb ...
+Unpacking libjsoncpp26:amd64 (1.9.6-5) ...
+Selecting previously unselected package librhash1:amd64.
+Preparing to unpack .../30-librhash1_1.4.6-1.1_amd64.deb ...
+Unpacking librhash1:amd64 (1.4.6-1.1) ...
+Selecting previously unselected package cmake.
+Preparing to unpack .../31-cmake_4.2.3-2ubuntu2_amd64.deb ...
+Unpacking cmake (4.2.3-2ubuntu2) ...
+Selecting previously unselected package libisl23:amd64.
+Preparing to unpack .../32-libisl23_0.27-1build1_amd64.deb ...
+Unpacking libisl23:amd64 (0.27-1build1) ...
+Selecting previously unselected package libmpc3:amd64.
+Preparing to unpack .../33-libmpc3_1.3.1-3_amd64.deb ...
+Unpacking libmpc3:amd64 (1.3.1-3) ...
+Selecting previously unselected package cpp-15-x86-64-linux-gnu.
+Preparing to unpack .../34-cpp-15-x86-64-linux-gnu_15.2.0-16ubuntu1_amd64.deb ...
+Unpacking cpp-15-x86-64-linux-gnu (15.2.0-16ubuntu1) ...
+Selecting previously unselected package cpp-15.
+Preparing to unpack .../35-cpp-15_15.2.0-16ubuntu1_amd64.deb ...
+Unpacking cpp-15 (15.2.0-16ubuntu1) ...
+Selecting previously unselected package cpp-x86-64-linux-gnu.
+Preparing to unpack .../36-cpp-x86-64-linux-gnu_4%3a15.2.0-5ubuntu1_amd64.deb ...
+Unpacking cpp-x86-64-linux-gnu (4:15.2.0-5ubuntu1) ...
+Selecting previously unselected package cpp.
+Preparing to unpack .../37-cpp_4%3a15.2.0-5ubuntu1_amd64.deb ...
+Unpacking cpp (4:15.2.0-5ubuntu1) ...
+Selecting previously unselected package libdpkg-perl.
+Preparing to unpack .../38-libdpkg-perl_1.23.7ubuntu1_all.deb ...
+Unpacking libdpkg-perl (1.23.7ubuntu1) ...
+Selecting previously unselected package make.
+Preparing to unpack .../39-make_4.4.1-3_amd64.deb ...
+Unpacking make (4.4.1-3) ...
+Selecting previously unselected package lto-disabled-list.
+Preparing to unpack .../40-lto-disabled-list_79_all.deb ...
+Unpacking lto-disabled-list (79) ...
+Selecting previously unselected package dpkg-dev.
+Preparing to unpack .../41-dpkg-dev_1.23.7ubuntu1_all.deb ...
+Unpacking dpkg-dev (1.23.7ubuntu1) ...
+Selecting previously unselected package libcc1-0:amd64.
+Preparing to unpack .../42-libcc1-0_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libcc1-0:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package gcc-15-x86-64-linux-gnu.
+Preparing to unpack .../43-gcc-15-x86-64-linux-gnu_15.2.0-16ubuntu1_amd64.deb ...
+Unpacking gcc-15-x86-64-linux-gnu (15.2.0-16ubuntu1) ...
+Selecting previously unselected package gcc-15.
+Preparing to unpack .../44-gcc-15_15.2.0-16ubuntu1_amd64.deb ...
+Unpacking gcc-15 (15.2.0-16ubuntu1) ...
+Selecting previously unselected package gcc-x86-64-linux-gnu.
+Preparing to unpack .../45-gcc-x86-64-linux-gnu_4%3a15.2.0-5ubuntu1_amd64.deb ...
+Unpacking gcc-x86-64-linux-gnu (4:15.2.0-5ubuntu1) ...
+Selecting previously unselected package gcc.
+Preparing to unpack .../46-gcc_4%3a15.2.0-5ubuntu1_amd64.deb ...
+Unpacking gcc (4:15.2.0-5ubuntu1) ...
+Selecting previously unselected package g++-15-x86-64-linux-gnu.
+Preparing to unpack .../47-g++-15-x86-64-linux-gnu_15.2.0-16ubuntu1_amd64.deb ...
+Unpacking g++-15-x86-64-linux-gnu (15.2.0-16ubuntu1) ...
+Selecting previously unselected package g++-15.
+Preparing to unpack .../48-g++-15_15.2.0-16ubuntu1_amd64.deb ...
+Unpacking g++-15 (15.2.0-16ubuntu1) ...
+Selecting previously unselected package g++-x86-64-linux-gnu.
+Preparing to unpack .../49-g++-x86-64-linux-gnu_4%3a15.2.0-5ubuntu1_amd64.deb ...
+Unpacking g++-x86-64-linux-gnu (4:15.2.0-5ubuntu1) ...
+Selecting previously unselected package g++.
+Preparing to unpack .../50-g++_4%3a15.2.0-5ubuntu1_amd64.deb ...
+Unpacking g++ (4:15.2.0-5ubuntu1) ...
+Selecting previously unselected package llvm-22-runtime.
+Preparing to unpack .../51-llvm-22-runtime_1%3a22.1.2-1ubuntu1_amd64.deb ...
+Unpacking llvm-22-runtime (1:22.1.2-1ubuntu1) ...
+Selecting previously unselected package libpfm4:amd64.
+Preparing to unpack .../52-libpfm4_4.13.0+git106-g3e4031b-1_amd64.deb ...
+Unpacking libpfm4:amd64 (4.13.0+git106-g3e4031b-1) ...
+Selecting previously unselected package llvm-22.
+Preparing to unpack .../53-llvm-22_1%3a22.1.2-1ubuntu1_amd64.deb ...
+Unpacking llvm-22 (1:22.1.2-1ubuntu1) ...
+Selecting previously unselected package lld-22.
+Preparing to unpack .../54-lld-22_1%3a22.1.2-1ubuntu1_amd64.deb ...
+Unpacking lld-22 (1:22.1.2-1ubuntu1) ...
+Selecting previously unselected package libc6-i386.
+Preparing to unpack .../55-libc6-i386_2.43-2ubuntu2_amd64.deb ...
+Unpacking libc6-i386 (2.43-2ubuntu2) ...
+Selecting previously unselected package lib32gcc-s1.
+Preparing to unpack .../56-lib32gcc-s1_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking lib32gcc-s1 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package lib32stdc++6.
+Preparing to unpack .../57-lib32stdc++6_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking lib32stdc++6 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libclang-rt-22-dev.
+Preparing to unpack .../58-libclang-rt-22-dev_1%3a22.1.2-1ubuntu1_amd64.deb ...
+Unpacking libclang-rt-22-dev (1:22.1.2-1ubuntu1) ...
+Selecting previously unselected package rocm-device-libs-22.
+Preparing to unpack .../59-rocm-device-libs-22_7.2.4+dfsg-1~exp1~git202606061101.1256c6d~ubuntu26.04.1_amd64.deb ...
+Unpacking rocm-device-libs-22 (7.2.4+dfsg-1~exp1~git202606061101.1256c6d~ubuntu26.04.1) ...
+Selecting previously unselected package libhsakmt1:amd64.
+Preparing to unpack .../60-libhsakmt1_7.2.4+dfsg~ppa1-0ubuntu1~git202606011102.6fd0c927~ubuntu26.04.1_amd64.deb ...
+Unpacking libhsakmt1:amd64 (7.2.4+dfsg~ppa1-0ubuntu1~git202606011102.6fd0c927~ubuntu26.04.1) ...
+Selecting previously unselected package libhsa-runtime64-1:amd64.
+Preparing to unpack .../61-libhsa-runtime64-1_7.2.4+dfsg~ppa1-0ubuntu1~git202606011102.6fd0c927~ubuntu26.04.1_amd64.deb ...
+Unpacking libhsa-runtime64-1:amd64 (7.2.4+dfsg~ppa1-0ubuntu1~git202606011102.6fd0c927~ubuntu26.04.1) ...
+Selecting previously unselected package rocminfo.
+Preparing to unpack .../62-rocminfo_7.2.4-1~exp1~git202606120702.1dcd091~ubuntu26.04.1_amd64.deb ...
+Unpacking rocminfo (7.2.4-1~exp1~git202606120702.1dcd091~ubuntu26.04.1) ...
+Selecting previously unselected package libamd-comgr3:amd64.
+Preparing to unpack .../63-libamd-comgr3_7.2.4+dfsg-1~exp1~git202606061101.1256c6d~ubuntu26.04.1_amd64.deb ...
+Unpacking libamd-comgr3:amd64 (7.2.4+dfsg-1~exp1~git202606061101.1256c6d~ubuntu26.04.1) ...
+Selecting previously unselected package libamd-comgr-dev.
+Preparing to unpack .../64-libamd-comgr-dev_7.2.4+dfsg-1~exp1~git202606061101.1256c6d~ubuntu26.04.1_amd64.deb ...
+Unpacking libamd-comgr-dev (7.2.4+dfsg-1~exp1~git202606061101.1256c6d~ubuntu26.04.1) ...
+Selecting previously unselected package libamdhip64-7:amd64.
+Preparing to unpack .../65-libamdhip64-7_7.2.4-0ubuntu1~b1~git202606121458.a082f7a_amd64.deb ...
+Unpacking libamdhip64-7:amd64 (7.2.4-0ubuntu1~b1~git202606121458.a082f7a) ...
+Selecting previously unselected package libhiprtc-builtins7:amd64.
+Preparing to unpack .../66-libhiprtc-builtins7_7.2.4-0ubuntu1~b1~git202606121458.a082f7a_amd64.deb ...
+Unpacking libhiprtc-builtins7:amd64 (7.2.4-0ubuntu1~b1~git202606121458.a082f7a) ...
+Selecting previously unselected package libhiprtc7:amd64.
+Preparing to unpack .../67-libhiprtc7_7.2.4-0ubuntu1~b1~git202606121458.a082f7a_amd64.deb ...
+Unpacking libhiprtc7:amd64 (7.2.4-0ubuntu1~b1~git202606121458.a082f7a) ...
+Selecting previously unselected package libhsa-runtime-dev:amd64.
+Preparing to unpack .../68-libhsa-runtime-dev_7.2.4+dfsg~ppa1-0ubuntu1~git202606011102.6fd0c927~ubuntu26.04.1_amd64.deb ...
+Unpacking libhsa-runtime-dev:amd64 (7.2.4+dfsg~ppa1-0ubuntu1~git202606011102.6fd0c927~ubuntu26.04.1) ...
+Selecting previously unselected package libamdhip64-dev.
+Preparing to unpack .../69-libamdhip64-dev_7.2.4-0ubuntu1~b1~git202606121458.a082f7a_amd64.deb ...
+Unpacking libamdhip64-dev (7.2.4-0ubuntu1~b1~git202606121458.a082f7a) ...
+Selecting previously unselected package libgcc-16-dev:amd64.
+Preparing to unpack .../70-libgcc-16-dev_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libgcc-16-dev:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libstdc++-16-dev:amd64.
+Preparing to unpack .../71-libstdc++-16-dev_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libstdc++-16-dev:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package hipcc.
+Preparing to unpack .../72-hipcc_7.2.4+dfsg-1~exp1~git202606061101.1256c6d~ubuntu26.04.1_amd64.deb ...
+Unpacking hipcc (7.2.4+dfsg-1~exp1~git202606061101.1256c6d~ubuntu26.04.1) ...
+Selecting previously unselected package libfile-which-perl.
+Preparing to unpack .../73-libfile-which-perl_1.27-2_all.deb ...
+Unpacking libfile-which-perl (1.27-2) ...
+Selecting previously unselected package liburi-encode-perl.
+Preparing to unpack .../74-liburi-encode-perl_1.1.1-3_all.deb ...
+Unpacking liburi-encode-perl (1.1.1-3) ...
+Selecting previously unselected package hip-utils.
+Preparing to unpack .../75-hip-utils_7.2.4-0ubuntu1~b1~git202606121458.a082f7a_amd64.deb ...
+Unpacking hip-utils (7.2.4-0ubuntu1~b1~git202606121458.a082f7a) ...
+Selecting previously unselected package rocm-opencl-icd:amd64.
+Preparing to unpack .../76-rocm-opencl-icd_7.2.4-0ubuntu1~b1~git202606121458.a082f7a_amd64.deb ...
+Unpacking rocm-opencl-icd:amd64 (7.2.4-0ubuntu1~b1~git202606121458.a082f7a) ...
+Setting up libfile-which-perl (1.27-2) ...
+Setting up lto-disabled-list (79) ...
+Setting up linux-libc-dev:amd64 (7.0.0-27.27) ...
+Setting up libclang-common-22-dev:amd64 (1:22.1.2-1ubuntu1) ...
+Setting up libgomp1:amd64 (16-20260322-1ubuntu1) ...
+Setting up bzip2 (1.0.8-6build2) ...
+Setting up libz3-4:amd64 (4.13.3-1build1) ...
+Setting up libpfm4:amd64 (4.13.0+git106-g3e4031b-1) ...
+Setting up rpcsvc-proto (1.4.3-1build1) ...
+Setting up libhiprtc-builtins7:amd64 (7.2.4-0ubuntu1~b1~git202606121458.a082f7a) ...
+Setting up make (4.4.1-3) ...
+Setting up libjsoncpp26:amd64 (1.9.6-5) ...
+Setting up liburi-encode-perl (1.1.1-3) ...
+Setting up libquadmath0:amd64 (16-20260322-1ubuntu1) ...
+Setting up libmpc3:amd64 (1.3.1-3) ...
+Setting up libgc1:amd64 (1:8.2.12-1) ...
+Setting up libdpkg-perl (1.23.7ubuntu1) ...
+Setting up libubsan1:amd64 (16-20260322-1ubuntu1) ...
+Setting up rocm-device-libs-22 (7.2.4+dfsg-1~exp1~git202606061101.1256c6d~ubuntu26.04.1) ...
+Setting up libhwasan0:amd64 (16-20260322-1ubuntu1) ...
+Setting up libllvm22:amd64 (1:22.1.2-1ubuntu1) ...
+Setting up libamd-comgr3:amd64 (7.2.4+dfsg-1~exp1~git202606061101.1256c6d~ubuntu26.04.1) ...
+Setting up libasan8:amd64 (16-20260322-1ubuntu1) ...
+Setting up libc6-i386 (2.43-2ubuntu2) ...
+Setting up libclang1-22 (1:22.1.2-1ubuntu1) ...
+Setting up cmake-data (4.2.3-2ubuntu2) ...
+Setting up librhash1:amd64 (1.4.6-1.1) ...
+Setting up libtsan2:amd64 (16-20260322-1ubuntu1) ...
+Setting up libamd-comgr-dev (7.2.4+dfsg-1~exp1~git202606061101.1256c6d~ubuntu26.04.1) ...
+Setting up libisl23:amd64 (0.27-1build1) ...
+Setting up libc-dev-bin (2.43-2ubuntu2) ...
+Setting up gcc-15-base:amd64 (15.2.0-16ubuntu1) ...
+Setting up libarchive13t64:amd64 (3.8.5-1ubuntu2.1) ...
+Setting up libcc1-0:amd64 (16-20260322-1ubuntu1) ...
+Setting up liblsan0:amd64 (16-20260322-1ubuntu1) ...
+Setting up libhsakmt1:amd64 (7.2.4+dfsg~ppa1-0ubuntu1~git202606011102.6fd0c927~ubuntu26.04.1) ...
+Setting up libhiprtc7:amd64 (7.2.4-0ubuntu1~b1~git202606121458.a082f7a) ...
+Setting up libitm1:amd64 (16-20260322-1ubuntu1) ...
+Setting up llvm-22-runtime (1:22.1.2-1ubuntu1) ...
+Setting up libgcc-15-dev:amd64 (15.2.0-16ubuntu1) ...
+Setting up libgcc-16-dev:amd64 (16-20260322-1ubuntu1) ...
+Setting up libobjc4:amd64 (16-20260322-1ubuntu1) ...
+Setting up cpp-15-x86-64-linux-gnu (15.2.0-16ubuntu1) ...
+Setting up dpkg-dev (1.23.7ubuntu1) ...
+Setting up llvm-22-linker-tools (1:22.1.2-1ubuntu1) ...
+Setting up gcc-15-x86-64-linux-gnu (15.2.0-16ubuntu1) ...
+Setting up lld-22 (1:22.1.2-1ubuntu1) ...
+Setting up llvm-22 (1:22.1.2-1ubuntu1) ...
+Setting up lib32gcc-s1 (16-20260322-1ubuntu1) ...
+Setting up lib32stdc++6 (16-20260322-1ubuntu1) ...
+Setting up libclang-cpp22 (1:22.1.2-1ubuntu1) ...
+Setting up cpp-15 (15.2.0-16ubuntu1) ...
+Setting up libhsa-runtime64-1:amd64 (7.2.4+dfsg~ppa1-0ubuntu1~git202606011102.6fd0c927~ubuntu26.04.1) ...
+Setting up cmake (4.2.3-2ubuntu2) ...
+Setting up libc6-dev:amd64 (2.43-2ubuntu2) ...
+Setting up libobjc-15-dev:amd64 (15.2.0-16ubuntu1) ...
+Setting up cpp-x86-64-linux-gnu (4:15.2.0-5ubuntu1) ...
+Setting up gcc-x86-64-linux-gnu (4:15.2.0-5ubuntu1) ...
+Setting up rocminfo (7.2.4-1~exp1~git202606120702.1dcd091~ubuntu26.04.1) ...
+Setting up rocm-opencl-icd:amd64 (7.2.4-0ubuntu1~b1~git202606121458.a082f7a) ...
+Setting up libclang-rt-22-dev (1:22.1.2-1ubuntu1) ...
+Setting up gcc-15 (15.2.0-16ubuntu1) ...
+Setting up libhsa-runtime-dev:amd64 (7.2.4+dfsg~ppa1-0ubuntu1~git202606011102.6fd0c927~ubuntu26.04.1) ...
+Setting up libstdc++-15-dev:amd64 (15.2.0-16ubuntu1) ...
+Setting up libstdc++-16-dev:amd64 (16-20260322-1ubuntu1) ...
+Setting up libamdhip64-7:amd64 (7.2.4-0ubuntu1~b1~git202606121458.a082f7a) ...
+Setting up cpp (4:15.2.0-5ubuntu1) ...
+Setting up libamdhip64-dev (7.2.4-0ubuntu1~b1~git202606121458.a082f7a) ...
+Setting up g++-15-x86-64-linux-gnu (15.2.0-16ubuntu1) ...
+Setting up clang-22 (1:22.1.2-1ubuntu1) ...
+Setting up gcc (4:15.2.0-5ubuntu1) ...
+Setting up g++-x86-64-linux-gnu (4:15.2.0-5ubuntu1) ...
+Setting up g++-15 (15.2.0-16ubuntu1) ...
+Setting up clang-tools-22 (1:22.1.2-1ubuntu1) ...
+Setting up g++ (4:15.2.0-5ubuntu1) ...
+update-alternatives: using /usr/bin/g++ to provide /usr/bin/c++ (c++) in auto mode
+Setting up hipcc (7.2.4+dfsg-1~exp1~git202606061101.1256c6d~ubuntu26.04.1) ...
+Setting up hip-utils (7.2.4-0ubuntu1~b1~git202606121458.a082f7a) ...
+Processing triggers for man-db (2.13.1-1build1) ...
+Processing triggers for base-files (14ubuntu6.1) ...
+Processing triggers for libc-bin (2.43-2ubuntu2) ...
+Processing triggers for systemd (259.5-0ubuntu3) ...
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+autopkgtest [03:15:37]: test cmake-hip-config: [-----------------------
+$ cat main.cpp
+#include <stdio.h>
+#include <stdlib.h>
+#include <hip/hip_runtime.h>
+
+#define CHECK_HIP(expr) do {                hipError_t result = (expr);               if (result != hipSuccess) {                 fprintf(stderr, "%s:%d: %s (%d)\n",         __FILE__, __LINE__,                       hipGetErrorString(result), result);     exit(EXIT_FAILURE);                     }                                       } while(0)
+
+__global__ void sq_arr(float *arr, int n) {
+  int tid = blockDim.x*blockIdx.x + threadIdx.x;
+  if (tid < n) {
+    arr[tid] = arr[tid] * arr[tid];
+  }
+}
+
+int main() {
+  enum { N = 5 };
+  float hArr[N] = { 1, 2, 3, 4, 5 };
+  float *dArr;
+  CHECK_HIP(hipMalloc(&dArr, sizeof(float) * N));
+  CHECK_HIP(hipMemcpy(dArr, hArr, sizeof(float) * N, hipMemcpyHostToDevice));
+  sq_arr<<<dim3(1), dim3(32,1,1), 0, 0>>>(dArr, N);
+  CHECK_HIP(hipMemcpy(hArr, dArr, sizeof(float) * N, hipMemcpyDeviceToHost));
+  for (int i = 0; i < N; ++i) {
+    printf("%f\n", hArr[i]);
+  }
+  CHECK_HIP(hipFree(dArr));
+  return 0;
+}
+$ cat CMakeLists.txt
+cmake_minimum_required(VERSION 3.22)
+project(example LANGUAGES CXX)
+find_package(hip REQUIRED)
+add_executable(ex main.cpp)
+target_link_libraries(ex PRIVATE hip::device)
+$ CXX=/usr/lib/llvm-22/bin/clang++ cmake -S. -Bbuild -DGPU_TARGETS=gfx1030
+-- The CXX compiler identification is Clang 22.1.2
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/lib/llvm-22/bin/clang++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- hip::amdhip64 is SHARED_LIBRARY
+-- Performing Test HIP_CLANG_SUPPORTS_PARALLEL_JOBS
+-- Performing Test HIP_CLANG_SUPPORTS_PARALLEL_JOBS - Failed
+-- Configuring done (0.4s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/autopkgtest.nMwFih/autopkgtest_tmp/build
+$ make -C build
+make: Entering directory '/tmp/autopkgtest.nMwFih/autopkgtest_tmp/build'
+[ 50%] Building CXX object CMakeFiles/ex.dir/main.cpp.o
+[100%] Linking CXX executable ex
+[100%] Built target ex
+make: Leaving directory '/tmp/autopkgtest.nMwFih/autopkgtest_tmp/build'
+autopkgtest [03:15:39]: test cmake-hip-config: -----------------------]
+autopkgtest [03:15:39]: test cmake-hip-config:  - - - - - - - - - - results - - - - - - - - - -
+cmake-hip-config     PASS (superficial)
+autopkgtest [03:15:40]: test cmake-hip-detect: preparing testbed
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+autopkgtest [03:15:41]: test cmake-hip-detect: [-----------------------
+amdgpu-arch reports: gfx1151
+$ cat CMakeLists.txt
+cmake_minimum_required(VERSION 3.22)
+project(example LANGUAGES CXX)
+find_package(hip REQUIRED)
+add_executable(ex main.cpp)
+target_link_libraries(ex PRIVATE hip::device)
+$ CXX=/usr/lib/llvm-22/bin/clang++ cmake -S. -Bbuild
+-- The CXX compiler identification is Clang 22.1.2
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/lib/llvm-22/bin/clang++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- hip::amdhip64 is SHARED_LIBRARY
+-- Performing Test HIP_CLANG_SUPPORTS_PARALLEL_JOBS
+-- Performing Test HIP_CLANG_SUPPORTS_PARALLEL_JOBS - Failed
+-- Configuring done (0.4s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/autopkgtest.nMwFih/autopkgtest_tmp/build
+cmake autodetected GPU_BUILD_TARGETS: 'gfx1151'
+PASS: GPU autodetection matches amdgpu-arch
+autopkgtest [03:15:42]: test cmake-hip-detect: -----------------------]
+autopkgtest [03:15:42]: test cmake-hip-detect:  - - - - - - - - - - results - - - - - - - - - -
+cmake-hip-detect     PASS (superficial)
+autopkgtest [03:15:43]: test cmake-hip-lang: preparing testbed
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+autopkgtest [03:15:45]: test cmake-hip-lang: [-----------------------
+$ cat main.hip
+#include <stdio.h>
+#include <stdlib.h>
+#include <hip/hip_runtime.h>
+
+#define CHECK_HIP(expr) do {                hipError_t result = (expr);               if (result != hipSuccess) {                 fprintf(stderr, "%s:%d: %s (%d)\n",         __FILE__, __LINE__,                       hipGetErrorString(result), result);     exit(EXIT_FAILURE);                     }                                       } while(0)
+
+__global__ void sq_arr(float *arr, int n) {
+  int tid = blockDim.x*blockIdx.x + threadIdx.x;
+  if (tid < n) {
+    arr[tid] = arr[tid] * arr[tid];
+  }
+}
+
+int main() {
+  enum { N = 5 };
+  float hArr[N] = { 1, 2, 3, 4, 5 };
+  float *dArr;
+  CHECK_HIP(hipMalloc(&dArr, sizeof(float) * N));
+  CHECK_HIP(hipMemcpy(dArr, hArr, sizeof(float) * N, hipMemcpyHostToDevice));
+  sq_arr<<<dim3(1), dim3(32,1,1), 0, 0>>>(dArr, N);
+  CHECK_HIP(hipMemcpy(hArr, dArr, sizeof(float) * N, hipMemcpyDeviceToHost));
+  for (int i = 0; i < N; ++i) {
+    printf("%f\n", hArr[i]);
+  }
+  CHECK_HIP(hipFree(dArr));
+  return 0;
+}
+$ cat CMakeLists.txt
+cmake_minimum_required(VERSION 3.22)
+project(example LANGUAGES HIP)
+add_executable(ex main.hip)
+$ HIPCXX=/usr/lib/llvm-22/bin/clang++ cmake -S. -Bbuild -DCMAKE_HIP_ARCHITECTURES=gfx1030
+-- The HIP compiler identification is Clang 22.1.2
+-- Detecting HIP compiler ABI info
+-- Detecting HIP compiler ABI info - done
+-- Check for working HIP compiler: /usr/lib/llvm-22/bin/clang++ - skipped
+-- Detecting HIP compile features
+-- Detecting HIP compile features - done
+-- Configuring done (1.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/autopkgtest.nMwFih/autopkgtest_tmp/build
+$ make -C build
+make: Entering directory '/tmp/autopkgtest.nMwFih/autopkgtest_tmp/build'
+[ 50%] Building HIP object CMakeFiles/ex.dir/main.hip.o
+[100%] Linking HIP executable ex
+[100%] Built target ex
+make: Leaving directory '/tmp/autopkgtest.nMwFih/autopkgtest_tmp/build'
+autopkgtest [03:15:48]: test cmake-hip-lang: -----------------------]
+autopkgtest [03:15:48]: test cmake-hip-lang:  - - - - - - - - - - results - - - - - - - - - -
+cmake-hip-lang       PASS (superficial)
+autopkgtest [03:15:48]: test cmake-hip-module: preparing testbed
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+autopkgtest [03:15:50]: test cmake-hip-module: [-----------------------
+$ cat sq.h
+#include <stdio.h>
+#include <stdlib.h>
+#include <hip/hip_runtime.h>
+
+#define CHECK_HIP(expr) do {                hipError_t result = (expr);               if (result != hipSuccess) {                 fprintf(stderr, "%s:%d: %s (%d)\n",         __FILE__, __LINE__,                       hipGetErrorString(result), result);     exit(EXIT_FAILURE);                     }                                       } while(0)
+
+void sq_arrh(float *arr, int n);
+$ cat sq.cpp
+#include "sq.h"
+
+__global__ void sq_arrd(float *arr, int n) {
+  int tid = blockDim.x*blockIdx.x + threadIdx.x;
+  if (tid < n) {
+    arr[tid] = arr[tid] * arr[tid];
+  }
+}
+
+void sq_arrh(float *arr, int n) {
+  sq_arrd<<<dim3(1), dim3(32,1,1), 0, 0>>>(arr, n);
+}
+$ cat main.cpp
+#include <stdio.h>
+#include <stdlib.h>
+#include <hip/hip_runtime.h>
+
+#include "sq.h"
+
+int main() {
+  enum { N = 5 };
+  float hArr[N] = { 1, 2, 3, 4, 5 };
+  float *dArr;
+  CHECK_HIP(hipMalloc(&dArr, sizeof(float) * N));
+  CHECK_HIP(hipMemcpy(dArr, hArr, sizeof(float) * N, hipMemcpyHostToDevice));
+  sq_arrh(dArr, N);
+  CHECK_HIP(hipMemcpy(hArr, dArr, sizeof(float) * N, hipMemcpyDeviceToHost));
+  for (int i = 0; i < N; ++i) {
+    printf("%f\n", hArr[i]);
+  }
+  CHECK_HIP(hipFree(dArr));
+  return 0;
+}
+$ cat CMakeLists.txt
+cmake_minimum_required(VERSION 3.22)
+project(example LANGUAGES CXX)
+find_package(HIP MODULE REQUIRED)
+set_source_files_properties(sq.cpp PROPERTIES HIP_SOURCE_PROPERTY_FORMAT 1)
+hip_add_library(exlib sq.cpp)
+add_executable(ex main.cpp)
+target_link_libraries(ex PRIVATE exlib amdhip64)
+$ CXXFLAGS=-D__HIP_PLATFORM_AMD__ cmake -S. -Bbuild -DHIP_ROOT_DIR=${HIP_ROOT_DIR} -DCMAKE_MODULE_PATH=/usr/lib/$(dpkg-architecture -qDEB_BUILD_MULTIARCH)/cmake/hip -DHIP_CXX_COMPILER=/usr/bin/hipcc -DHIP_HIPCC_FLAGS=--offload-arch=gfx1200
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found HIP: /usr (found version "7.2.53211-9999")
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/autopkgtest.nMwFih/autopkgtest_tmp/build
+$ make -C build
+make: Entering directory '/tmp/autopkgtest.nMwFih/autopkgtest_tmp/build'
+[ 25%] Building HIPCC object CMakeFiles/exlib.dir/exlib_generated_sq.cpp.o
+[ 50%] Linking CXX static library libexlib.a
+[ 50%] Built target exlib
+[ 75%] Building CXX object CMakeFiles/ex.dir/main.cpp.o
+[100%] Linking CXX executable ex
+[100%] Built target ex
+make: Leaving directory '/tmp/autopkgtest.nMwFih/autopkgtest_tmp/build'
+autopkgtest [03:15:52]: test cmake-hip-module: -----------------------]
+autopkgtest [03:15:52]: test cmake-hip-module:  - - - - - - - - - - results - - - - - - - - - -
+cmake-hip-module     PASS (superficial)
+autopkgtest [03:15:52]: test g++: preparing testbed
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+autopkgtest [03:15:54]: test g++: [-----------------------
+$ cat main.cpp
+#include <stdio.h>
+#include <stdlib.h>
+#include <hip/hip_runtime.h>
+
+#define CHECK_HIP(expr) do {                hipError_t result = (expr);               if (result != hipSuccess) {                 fprintf(stderr, "%s:%d: %s (%d)\n",         __FILE__, __LINE__,                       hipGetErrorString(result), result);     exit(EXIT_FAILURE);                     }                                       } while(0)
+
+int main() {
+  enum { N = 5 };
+  float hArr[N] = { 1, 2, 3, 4, 5 };
+  float *dArr;
+  CHECK_HIP(hipMalloc(&dArr, sizeof(float) * N));
+  CHECK_HIP(hipMemcpy(dArr, hArr, sizeof(float) * N, hipMemcpyHostToDevice));
+  CHECK_HIP(hipMemcpy(hArr, dArr, sizeof(float) * N, hipMemcpyDeviceToHost));
+  for (int i = 0; i < N; ++i) {
+    printf("%f\n", hArr[i]);
+  }
+  CHECK_HIP(hipFree(dArr));
+  return 0;
+}
+$ g++ -D__HIP_PLATFORM_AMD__ main.cpp -lamdhip64 -o main
+autopkgtest [03:15:55]: test g++: -----------------------]
+autopkgtest [03:15:55]: test g++:  - - - - - - - - - - results - - - - - - - - - -
+g++                  PASS (superficial)
+autopkgtest [03:15:55]: test gcc: preparing testbed
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+autopkgtest [03:15:57]: test gcc: [-----------------------
+$ cat main.c
+#include <stdio.h>
+#include <stdlib.h>
+#include <hip/hip_runtime.h>
+
+#define CHECK_HIP(expr) do {                hipError_t result = (expr);               if (result != hipSuccess) {                 fprintf(stderr, "%s:%d: %s (%d)\n",         __FILE__, __LINE__,                       hipGetErrorString(result), result);     exit(EXIT_FAILURE);                     }                                       } while(0)
+
+int main() {
+  enum { N = 5 };
+  float hArr[N] = { 1, 2, 3, 4, 5 };
+  float *dArr;
+  CHECK_HIP(hipMalloc((void**)&dArr, sizeof(float) * N));
+  CHECK_HIP(hipMemcpy((void**)dArr, hArr, sizeof(float) * N, hipMemcpyHostToDevice));
+  CHECK_HIP(hipMemcpy((void**)hArr, dArr, sizeof(float) * N, hipMemcpyDeviceToHost));
+  for (int i = 0; i < N; ++i) {
+    printf("%f\n", hArr[i]);
+  }
+  CHECK_HIP(hipFree(dArr));
+  return 0;
+}
+$ gcc -D__HIP_PLATFORM_AMD__ main.c -lamdhip64 -o main
+autopkgtest [03:15:57]: test gcc: -----------------------]
+autopkgtest [03:15:58]: test gcc:  - - - - - - - - - - results - - - - - - - - - -
+gcc                  PASS (superficial)
+autopkgtest [03:15:58]: @@@@@@@@@@@@@@@@@@@@ summary
+cmake-hip-config     PASS (superficial)
+cmake-hip-detect     PASS (superficial)
+cmake-hip-lang       PASS (superficial)
+cmake-hip-module     PASS (superficial)
+g++                  PASS (superficial)
+gcc                  PASS (superficial)

@@ -1,0 +1,7 @@
+++ mktemp -d
++ OUT=/tmp/tmp.argylVuLem
++ hipcc -o /tmp/tmp.argylVuLem/test test.cpp
++ /tmp/tmp.argylVuLem/test
+Agent Radeon 8060S Graphics
+System version 11.5
+TESTS PASSED!

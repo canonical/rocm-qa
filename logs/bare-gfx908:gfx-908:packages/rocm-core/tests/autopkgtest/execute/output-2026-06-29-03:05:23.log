@@ -1,0 +1,611 @@
+autopkgtest [03:05:23]: starting date and time: 2026-06-29 03:05:23+0000
+autopkgtest [03:05:23]: version 5.55
+autopkgtest [03:05:23]: host lxc-sessionizer-canonical-1; command line: /usr/bin/autopkgtest rocm-core -U '--setup-commands=add-apt-repository -ss -y' '--setup-commands=add-apt-repository ppa:bullwinkle-team/rocm-devel --enable-source -y' -- lxd ubuntu-daily:resolute --profile=rocm-gpu
+autopkgtest [03:07:39]: testbed dpkg architecture: amd64
+autopkgtest [03:07:40]: testbed apt version: 3.2.0
+autopkgtest [03:07:40]: @@@@@@@@@@@@@@@@@@@@ test bed setup
+autopkgtest [03:07:40]: updating testbed package index (apt update)
+Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+Get:2 http://security.ubuntu.com/ubuntu resolute-security InRelease [137 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease [137 kB]
+Get:4 http://archive.ubuntu.com/ubuntu resolute-backports InRelease [136 kB]
+Get:5 http://archive.ubuntu.com/ubuntu resolute/universe amd64 Packages [16.0 MB]
+Get:6 http://security.ubuntu.com/ubuntu resolute-security/main amd64 Components [31.2 kB]
+Get:7 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Packages [126 kB]
+Get:8 http://security.ubuntu.com/ubuntu resolute-security/universe Translation-en [39.2 kB]
+Get:9 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Components [43.2 kB]
+Get:10 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 c-n-f Metadata [3324 B]
+Get:11 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 Components [212 B]
+Get:12 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 c-n-f Metadata [120 B]
+Get:13 http://archive.ubuntu.com/ubuntu resolute/universe Translation-en [6329 kB]
+Get:14 http://archive.ubuntu.com/ubuntu resolute/universe amd64 Components [4556 kB]
+Get:15 http://archive.ubuntu.com/ubuntu resolute/universe amd64 c-n-f Metadata [313 kB]
+Get:16 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 Packages [290 kB]
+Get:17 http://archive.ubuntu.com/ubuntu resolute/multiverse Translation-en [127 kB]
+Get:18 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 Components [50.0 kB]
+Get:19 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 c-n-f Metadata [8276 B]
+Get:20 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Packages [282 kB]
+Get:21 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Components [49.4 kB]
+Get:22 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Packages [159 kB]
+Get:23 http://archive.ubuntu.com/ubuntu resolute-updates/universe Translation-en [50.1 kB]
+Get:24 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Components [62.9 kB]
+Get:25 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 c-n-f Metadata [3996 B]
+Get:26 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 Packages [3328 B]
+Get:27 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse Translation-en [772 B]
+Get:28 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 Components [216 B]
+Get:29 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 c-n-f Metadata [256 B]
+Get:30 http://archive.ubuntu.com/ubuntu resolute-backports/main amd64 Components [212 B]
+Get:31 http://archive.ubuntu.com/ubuntu resolute-backports/main amd64 c-n-f Metadata [112 B]
+Get:32 http://archive.ubuntu.com/ubuntu resolute-backports/universe amd64 Components [216 B]
+Get:33 http://archive.ubuntu.com/ubuntu resolute-backports/universe amd64 c-n-f Metadata [116 B]
+Get:34 http://archive.ubuntu.com/ubuntu resolute-backports/restricted amd64 Components [216 B]
+Get:35 http://archive.ubuntu.com/ubuntu resolute-backports/restricted amd64 c-n-f Metadata [120 B]
+Get:36 http://archive.ubuntu.com/ubuntu resolute-backports/multiverse amd64 Components [216 B]
+Get:37 http://archive.ubuntu.com/ubuntu resolute-backports/multiverse amd64 c-n-f Metadata [120 B]
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 28.9 MB in 3s (10.1 MB/s)
+Reading package lists...
+autopkgtest [03:07:47]: testbed release detected to be: resolute
+autopkgtest [03:07:47]: updating testbed package index (apt update)
+Hit:1 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Reading package lists...
+Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:2 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Get:3 http://security.ubuntu.com/ubuntu resolute-security/universe Sources [45.8 kB]
+Get:4 http://security.ubuntu.com/ubuntu resolute-security/restricted Sources [19.5 kB]
+Get:5 http://security.ubuntu.com/ubuntu resolute-security/main Sources [103 kB]
+Hit:6 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:7 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Get:8 http://archive.ubuntu.com/ubuntu resolute/multiverse Sources [215 kB]
+Get:9 http://archive.ubuntu.com/ubuntu resolute/universe Sources [13.4 MB]
+Get:10 http://archive.ubuntu.com/ubuntu resolute/restricted Sources [18.6 kB]
+Get:11 http://archive.ubuntu.com/ubuntu resolute/main Sources [1002 kB]
+Get:12 http://archive.ubuntu.com/ubuntu resolute-updates/main Sources [121 kB]
+Get:13 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse Sources [5596 B]
+Get:14 http://archive.ubuntu.com/ubuntu resolute-updates/universe Sources [55.6 kB]
+Get:15 http://archive.ubuntu.com/ubuntu resolute-updates/restricted Sources [19.5 kB]
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 15.0 MB in 2s (9710 kB/s)
+Reading package lists...
+Enabling deb-src for all repositories.
+Added: ## Ubuntu distribution repository
+##
+## The following settings can be adjusted to configure which packages to use from Ubuntu.
+## Mirror your choices (except for URIs and Suites) in the security section below to
+## ensure timely security updates.
+##
+## Types: Append deb-src to enable the fetching of source package.
+## URIs: A URL to the repository (you may add multiple URLs)
+## Suites: The following additional suites can be configured
+##   <name>-updates   - Major bug fix updates produced after the final release of the
+##                      distribution.
+##   <name>-backports - software from this repository may not have been tested as
+##                      extensively as that contained in the main release, although it includes
+##                      newer versions of some applications which may provide useful features.
+##                      Also, please note that software in backports WILL NOT receive any review
+##                      or updates from the Ubuntu security team.
+## Components: Aside from main, the following components can be added to the list
+##   restricted  - Software that may not be under a free license, or protected by patents.
+##   universe    - Community maintained packages. Software in this repository receives maintenance
+##                 from volunteers in the Ubuntu community, or a 10 year security maintenance
+##                 commitment from Canonical when an Ubuntu Pro subscription is attached.
+##   multiverse  - Community maintained of restricted. Software from this repository is
+##                 ENTIRELY UNSUPPORTED by the Ubuntu team, and may not be under a free
+##                 licence. Please satisfy yourself as to your rights to use the software.
+##                 Also, please note that software in multiverse WILL NOT receive any
+##                 review or updates from the Ubuntu security team.
+##
+## See the sources.list(5) manual page for further settings.
+Types: deb-src
+URIs: http://archive.ubuntu.com/ubuntu
+Suites: resolute resolute-updates resolute-backports
+Components: main universe restricted multiverse
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+Added: ## Ubuntu security updates. Aside from URIs and Suites,
+## this should mirror your choices in the previous section.
+Types: deb-src
+URIs: http://security.ubuntu.com/ubuntu
+Suites: resolute-security
+Components: main universe restricted multiverse
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:2 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Get:4 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute InRelease [27.2 kB]
+Hit:5 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Get:6 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main Sources [12.5 kB]
+Get:7 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main amd64 Packages [19.9 kB]
+Get:8 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main Translation-en [13.0 kB]
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 72.5 kB in 1s (77.8 kB/s)
+Reading package lists...
+PPA publishes dbgsym, you may need to include 'main/debug' component
+Repository: 'Types: deb
+URIs: https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu/
+Suites: resolute
+Components: main
+'
+Description:
+Development archive for AMD ROCm packages on Ubuntu with an aim to have packages build for next Ubuntu release
+More info: https://launchpad.net/~bullwinkle-team/+archive/ubuntu/rocm-devel
+Adding repository.
+autopkgtest [03:07:58]: upgrading testbed (apt dist-upgrade and autopurge)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+autopkgtest [03:08:01]: testbed running kernel: Linux 6.17.0-35-generic #35-Ubuntu SMP PREEMPT_DYNAMIC Tue May 26 13:10:28 UTC 2026
+autopkgtest [03:08:02]: @@@@@@@@@@@@@@@@@@@@ apt-source rocm-core
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+The following NEW packages will be installed:
+  bzip2 dpkg-dev libdpkg-perl lto-disabled-list make
+0 upgraded, 5 newly installed, 0 to remove and 0 not upgraded.
+Need to get 1596 kB of archives.
+After this operation, 4247 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu resolute/main amd64 bzip2 amd64 1.0.8-6build2 [34.3 kB]
+Get:2 http://archive.ubuntu.com/ubuntu resolute/main amd64 libdpkg-perl all 1.23.7ubuntu1 [289 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute/main amd64 make amd64 4.4.1-3 [197 kB]
+Get:4 http://archive.ubuntu.com/ubuntu resolute/main amd64 lto-disabled-list all 79 [14.2 kB]
+Get:5 http://archive.ubuntu.com/ubuntu resolute/main amd64 dpkg-dev all 1.23.7ubuntu1 [1062 kB]
+Fetched 1596 kB in 0s (6692 kB/s)
+Selecting previously unselected package bzip2.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 44349 files and directories currently installed.)
+Preparing to unpack .../bzip2_1.0.8-6build2_amd64.deb ...
+Unpacking bzip2 (1.0.8-6build2) ...
+Selecting previously unselected package libdpkg-perl.
+Preparing to unpack .../libdpkg-perl_1.23.7ubuntu1_all.deb ...
+Unpacking libdpkg-perl (1.23.7ubuntu1) ...
+Selecting previously unselected package make.
+Preparing to unpack .../make_4.4.1-3_amd64.deb ...
+Unpacking make (4.4.1-3) ...
+Selecting previously unselected package lto-disabled-list.
+Preparing to unpack .../lto-disabled-list_79_all.deb ...
+Unpacking lto-disabled-list (79) ...
+Selecting previously unselected package dpkg-dev.
+Preparing to unpack .../dpkg-dev_1.23.7ubuntu1_all.deb ...
+Unpacking dpkg-dev (1.23.7ubuntu1) ...
+Setting up lto-disabled-list (79) ...
+Setting up bzip2 (1.0.8-6build2) ...
+Setting up make (4.4.1-3) ...
+Setting up libdpkg-perl (1.23.7ubuntu1) ...
+Setting up dpkg-dev (1.23.7ubuntu1) ...
+Processing triggers for man-db (2.13.1-1build1) ...
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+Get:1 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main rocm-core 7.2.3-0ubuntu1~git202605231431.b92f038~ubuntu26.04.1 (tar) [40.9 kB]
+Get:2 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main rocm-core 7.2.3-0ubuntu1~git202605231431.b92f038~ubuntu26.04.1 (dsc) [1214 B]
+dpkg-source: warning: extracting unsigned source package (rocm-core_7.2.3-0ubuntu1~git202605231431.b92f038~ubuntu26.04.1.dsc)
+dpkg-source: warning: native package version may not have a revision
+autopkgtest [03:08:07]: testing package rocm-core version 7.2.3-0ubuntu1~git202605231431.b92f038~ubuntu26.04.1
+autopkgtest [03:08:07]: build not needed
+autopkgtest [03:08:07]: test rocm-core-path.sh: preparing testbed
+autopkgtest [03:10:17]: testbed dpkg architecture: amd64
+autopkgtest [03:10:17]: testbed apt version: 3.2.0
+autopkgtest [03:10:18]: @@@@@@@@@@@@@@@@@@@@ test bed setup
+autopkgtest [03:10:18]: updating testbed package index (apt update)
+Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+Get:2 http://security.ubuntu.com/ubuntu resolute-security InRelease [137 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease [137 kB]
+Get:4 http://security.ubuntu.com/ubuntu resolute-security/main amd64 Components [31.2 kB]
+Get:5 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Packages [126 kB]
+Get:6 http://security.ubuntu.com/ubuntu resolute-security/universe Translation-en [39.2 kB]
+Get:7 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Components [43.2 kB]
+Get:8 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 c-n-f Metadata [3324 B]
+Get:9 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 Components [212 B]
+Get:10 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 c-n-f Metadata [120 B]
+Get:11 http://archive.ubuntu.com/ubuntu resolute-backports InRelease [136 kB]
+Get:12 http://archive.ubuntu.com/ubuntu resolute/universe amd64 Packages [16.0 MB]
+Get:13 http://archive.ubuntu.com/ubuntu resolute/universe Translation-en [6329 kB]
+Get:14 http://archive.ubuntu.com/ubuntu resolute/universe amd64 Components [4556 kB]
+Get:15 http://archive.ubuntu.com/ubuntu resolute/universe amd64 c-n-f Metadata [313 kB]
+Get:16 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 Packages [290 kB]
+Get:17 http://archive.ubuntu.com/ubuntu resolute/multiverse Translation-en [127 kB]
+Get:18 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 Components [50.0 kB]
+Get:19 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 c-n-f Metadata [8276 B]
+Get:20 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Packages [282 kB]
+Get:21 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Components [49.4 kB]
+Get:22 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Packages [159 kB]
+Get:23 http://archive.ubuntu.com/ubuntu resolute-updates/universe Translation-en [50.1 kB]
+Get:24 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Components [62.9 kB]
+Get:25 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 c-n-f Metadata [3996 B]
+Get:26 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 Packages [3328 B]
+Get:27 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse Translation-en [772 B]
+Get:28 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 Components [216 B]
+Get:29 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 c-n-f Metadata [256 B]
+Get:30 http://archive.ubuntu.com/ubuntu resolute-backports/main amd64 Components [212 B]
+Get:31 http://archive.ubuntu.com/ubuntu resolute-backports/main amd64 c-n-f Metadata [112 B]
+Get:32 http://archive.ubuntu.com/ubuntu resolute-backports/universe amd64 Components [216 B]
+Get:33 http://archive.ubuntu.com/ubuntu resolute-backports/universe amd64 c-n-f Metadata [116 B]
+Get:34 http://archive.ubuntu.com/ubuntu resolute-backports/restricted amd64 Components [216 B]
+Get:35 http://archive.ubuntu.com/ubuntu resolute-backports/restricted amd64 c-n-f Metadata [120 B]
+Get:36 http://archive.ubuntu.com/ubuntu resolute-backports/multiverse amd64 Components [216 B]
+Get:37 http://archive.ubuntu.com/ubuntu resolute-backports/multiverse amd64 c-n-f Metadata [120 B]
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 28.9 MB in 3s (8340 kB/s)
+Reading package lists...
+autopkgtest [03:10:26]: testbed release detected to be: resolute
+autopkgtest [03:10:26]: updating testbed package index (apt update)
+Hit:1 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Reading package lists...
+Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:2 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Get:3 http://security.ubuntu.com/ubuntu resolute-security/universe Sources [45.8 kB]
+Get:4 http://security.ubuntu.com/ubuntu resolute-security/main Sources [103 kB]
+Get:5 http://security.ubuntu.com/ubuntu resolute-security/restricted Sources [19.5 kB]
+Hit:6 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:7 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Get:8 http://archive.ubuntu.com/ubuntu resolute/restricted Sources [18.6 kB]
+Get:9 http://archive.ubuntu.com/ubuntu resolute/main Sources [1002 kB]
+Get:10 http://archive.ubuntu.com/ubuntu resolute/multiverse Sources [215 kB]
+Get:11 http://archive.ubuntu.com/ubuntu resolute/universe Sources [13.4 MB]
+Get:12 http://archive.ubuntu.com/ubuntu resolute-updates/restricted Sources [19.5 kB]
+Get:13 http://archive.ubuntu.com/ubuntu resolute-updates/universe Sources [55.6 kB]
+Get:14 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse Sources [5596 B]
+Get:15 http://archive.ubuntu.com/ubuntu resolute-updates/main Sources [121 kB]
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 15.0 MB in 2s (9761 kB/s)
+Reading package lists...
+Enabling deb-src for all repositories.
+Added: ## Ubuntu distribution repository
+##
+## The following settings can be adjusted to configure which packages to use from Ubuntu.
+## Mirror your choices (except for URIs and Suites) in the security section below to
+## ensure timely security updates.
+##
+## Types: Append deb-src to enable the fetching of source package.
+## URIs: A URL to the repository (you may add multiple URLs)
+## Suites: The following additional suites can be configured
+##   <name>-updates   - Major bug fix updates produced after the final release of the
+##                      distribution.
+##   <name>-backports - software from this repository may not have been tested as
+##                      extensively as that contained in the main release, although it includes
+##                      newer versions of some applications which may provide useful features.
+##                      Also, please note that software in backports WILL NOT receive any review
+##                      or updates from the Ubuntu security team.
+## Components: Aside from main, the following components can be added to the list
+##   restricted  - Software that may not be under a free license, or protected by patents.
+##   universe    - Community maintained packages. Software in this repository receives maintenance
+##                 from volunteers in the Ubuntu community, or a 10 year security maintenance
+##                 commitment from Canonical when an Ubuntu Pro subscription is attached.
+##   multiverse  - Community maintained of restricted. Software from this repository is
+##                 ENTIRELY UNSUPPORTED by the Ubuntu team, and may not be under a free
+##                 licence. Please satisfy yourself as to your rights to use the software.
+##                 Also, please note that software in multiverse WILL NOT receive any
+##                 review or updates from the Ubuntu security team.
+##
+## See the sources.list(5) manual page for further settings.
+Types: deb-src
+URIs: http://archive.ubuntu.com/ubuntu
+Suites: resolute resolute-updates resolute-backports
+Components: multiverse universe restricted main
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+Added: ## Ubuntu security updates. Aside from URIs and Suites,
+## this should mirror your choices in the previous section.
+Types: deb-src
+URIs: http://security.ubuntu.com/ubuntu
+Suites: resolute-security
+Components: multiverse universe restricted main
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:2 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Get:5 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute InRelease [27.2 kB]
+Get:6 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main Sources [12.5 kB]
+Get:7 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main amd64 Packages [19.9 kB]
+Get:8 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main Translation-en [13.0 kB]
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 72.5 kB in 1s (64.6 kB/s)
+Reading package lists...
+PPA publishes dbgsym, you may need to include 'main/debug' component
+Repository: 'Types: deb
+URIs: https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu/
+Suites: resolute
+Components: main
+'
+Description:
+Development archive for AMD ROCm packages on Ubuntu with an aim to have packages build for next Ubuntu release
+More info: https://launchpad.net/~bullwinkle-team/+archive/ubuntu/rocm-devel
+Adding repository.
+autopkgtest [03:10:38]: upgrading testbed (apt dist-upgrade and autopurge)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+The following NEW packages will be installed:
+  cpp cpp-15 cpp-15-x86-64-linux-gnu cpp-x86-64-linux-gnu g++ g++-15
+  g++-15-x86-64-linux-gnu g++-x86-64-linux-gnu gcc gcc-15 gcc-15-base
+  gcc-15-x86-64-linux-gnu gcc-x86-64-linux-gnu libasan8 libc-dev-bin libc6-dev
+  libcc1-0 libgcc-15-dev libgomp1 libhwasan0 libisl23 libitm1 liblsan0 libmpc3
+  libquadmath0 librocm-core-dev librocm-core1 libstdc++-15-dev libtsan2
+  libubsan1 linux-libc-dev rpcsvc-proto
+0 upgraded, 32 newly installed, 0 to remove and 0 not upgraded.
+Need to get 74.7 MB of archives.
+After this operation, 264 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu resolute/main amd64 gcc-15-base amd64 15.2.0-16ubuntu1 [39.0 kB]
+Get:2 http://archive.ubuntu.com/ubuntu resolute/main amd64 libisl23 amd64 0.27-1build1 [691 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute/main amd64 libmpc3 amd64 1.3.1-3 [54.6 kB]
+Get:4 http://archive.ubuntu.com/ubuntu resolute/main amd64 cpp-15-x86-64-linux-gnu amd64 15.2.0-16ubuntu1 [12.9 MB]
+Get:5 http://archive.ubuntu.com/ubuntu resolute/main amd64 cpp-15 amd64 15.2.0-16ubuntu1 [1030 B]
+Get:6 http://archive.ubuntu.com/ubuntu resolute/main amd64 cpp-x86-64-linux-gnu amd64 4:15.2.0-5ubuntu1 [5840 B]
+Get:7 http://archive.ubuntu.com/ubuntu resolute/main amd64 cpp amd64 4:15.2.0-5ubuntu1 [22.4 kB]
+Get:8 http://archive.ubuntu.com/ubuntu resolute/main amd64 libcc1-0 amd64 16-20260322-1ubuntu1 [51.2 kB]
+Get:9 http://archive.ubuntu.com/ubuntu resolute/main amd64 libgomp1 amd64 16-20260322-1ubuntu1 [162 kB]
+Get:10 http://archive.ubuntu.com/ubuntu resolute/main amd64 libitm1 amd64 16-20260322-1ubuntu1 [30.0 kB]
+Get:11 http://archive.ubuntu.com/ubuntu resolute/main amd64 libasan8 amd64 16-20260322-1ubuntu1 [3184 kB]
+Get:12 http://archive.ubuntu.com/ubuntu resolute/main amd64 liblsan0 amd64 16-20260322-1ubuntu1 [1394 kB]
+Get:13 http://archive.ubuntu.com/ubuntu resolute/main amd64 libtsan2 amd64 16-20260322-1ubuntu1 [2849 kB]
+Get:14 http://archive.ubuntu.com/ubuntu resolute/main amd64 libubsan1 amd64 16-20260322-1ubuntu1 [1240 kB]
+Get:15 http://archive.ubuntu.com/ubuntu resolute/main amd64 libhwasan0 amd64 16-20260322-1ubuntu1 [1731 kB]
+Get:16 http://archive.ubuntu.com/ubuntu resolute/main amd64 libquadmath0 amd64 16-20260322-1ubuntu1 [155 kB]
+Get:17 http://archive.ubuntu.com/ubuntu resolute/main amd64 libgcc-15-dev amd64 15.2.0-16ubuntu1 [2866 kB]
+Get:18 http://archive.ubuntu.com/ubuntu resolute/main amd64 gcc-15-x86-64-linux-gnu amd64 15.2.0-16ubuntu1 [25.4 MB]
+Get:19 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main amd64 librocm-core1 amd64 7.2.3-0ubuntu1~git202605231431.b92f038~ubuntu26.04.1 [24.7 kB]
+Get:20 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main amd64 librocm-core-dev amd64 7.2.3-0ubuntu1~git202605231431.b92f038~ubuntu26.04.1 [7816 B]
+Get:21 http://archive.ubuntu.com/ubuntu resolute/main amd64 gcc-15 amd64 15.2.0-16ubuntu1 [539 kB]
+Get:22 http://archive.ubuntu.com/ubuntu resolute/main amd64 gcc-x86-64-linux-gnu amd64 4:15.2.0-5ubuntu1 [1208 B]
+Get:23 http://archive.ubuntu.com/ubuntu resolute/main amd64 gcc amd64 4:15.2.0-5ubuntu1 [5010 B]
+Get:24 http://archive.ubuntu.com/ubuntu resolute/main amd64 libc-dev-bin amd64 2.43-2ubuntu2 [23.3 kB]
+Get:25 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 linux-libc-dev amd64 7.0.0-27.27 [1561 kB]
+Get:26 http://archive.ubuntu.com/ubuntu resolute/main amd64 rpcsvc-proto amd64 1.4.3-1build1 [68.3 kB]
+Get:27 http://archive.ubuntu.com/ubuntu resolute/main amd64 libc6-dev amd64 2.43-2ubuntu2 [2295 kB]
+Get:28 http://archive.ubuntu.com/ubuntu resolute/main amd64 libstdc++-15-dev amd64 15.2.0-16ubuntu1 [2920 kB]
+Get:29 http://archive.ubuntu.com/ubuntu resolute/main amd64 g++-15-x86-64-linux-gnu amd64 15.2.0-16ubuntu1 [14.4 MB]
+Get:30 http://archive.ubuntu.com/ubuntu resolute/main amd64 g++-15 amd64 15.2.0-16ubuntu1 [26.7 kB]
+Get:31 http://archive.ubuntu.com/ubuntu resolute/main amd64 g++-x86-64-linux-gnu amd64 4:15.2.0-5ubuntu1 [968 B]
+Get:32 http://archive.ubuntu.com/ubuntu resolute/main amd64 g++ amd64 4:15.2.0-5ubuntu1 [1100 B]
+Fetched 74.7 MB in 1s (58.3 MB/s)
+Selecting previously unselected package gcc-15-base:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 44349 files and directories currently installed.)
+Preparing to unpack .../00-gcc-15-base_15.2.0-16ubuntu1_amd64.deb ...
+Unpacking gcc-15-base:amd64 (15.2.0-16ubuntu1) ...
+Selecting previously unselected package libisl23:amd64.
+Preparing to unpack .../01-libisl23_0.27-1build1_amd64.deb ...
+Unpacking libisl23:amd64 (0.27-1build1) ...
+Selecting previously unselected package libmpc3:amd64.
+Preparing to unpack .../02-libmpc3_1.3.1-3_amd64.deb ...
+Unpacking libmpc3:amd64 (1.3.1-3) ...
+Selecting previously unselected package cpp-15-x86-64-linux-gnu.
+Preparing to unpack .../03-cpp-15-x86-64-linux-gnu_15.2.0-16ubuntu1_amd64.deb ...
+Unpacking cpp-15-x86-64-linux-gnu (15.2.0-16ubuntu1) ...
+Selecting previously unselected package cpp-15.
+Preparing to unpack .../04-cpp-15_15.2.0-16ubuntu1_amd64.deb ...
+Unpacking cpp-15 (15.2.0-16ubuntu1) ...
+Selecting previously unselected package cpp-x86-64-linux-gnu.
+Preparing to unpack .../05-cpp-x86-64-linux-gnu_4%3a15.2.0-5ubuntu1_amd64.deb ...
+Unpacking cpp-x86-64-linux-gnu (4:15.2.0-5ubuntu1) ...
+Selecting previously unselected package cpp.
+Preparing to unpack .../06-cpp_4%3a15.2.0-5ubuntu1_amd64.deb ...
+Unpacking cpp (4:15.2.0-5ubuntu1) ...
+Selecting previously unselected package libcc1-0:amd64.
+Preparing to unpack .../07-libcc1-0_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libcc1-0:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libgomp1:amd64.
+Preparing to unpack .../08-libgomp1_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libgomp1:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libitm1:amd64.
+Preparing to unpack .../09-libitm1_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libitm1:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libasan8:amd64.
+Preparing to unpack .../10-libasan8_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libasan8:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package liblsan0:amd64.
+Preparing to unpack .../11-liblsan0_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking liblsan0:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libtsan2:amd64.
+Preparing to unpack .../12-libtsan2_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libtsan2:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libubsan1:amd64.
+Preparing to unpack .../13-libubsan1_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libubsan1:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libhwasan0:amd64.
+Preparing to unpack .../14-libhwasan0_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libhwasan0:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libquadmath0:amd64.
+Preparing to unpack .../15-libquadmath0_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libquadmath0:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libgcc-15-dev:amd64.
+Preparing to unpack .../16-libgcc-15-dev_15.2.0-16ubuntu1_amd64.deb ...
+Unpacking libgcc-15-dev:amd64 (15.2.0-16ubuntu1) ...
+Selecting previously unselected package gcc-15-x86-64-linux-gnu.
+Preparing to unpack .../17-gcc-15-x86-64-linux-gnu_15.2.0-16ubuntu1_amd64.deb ...
+Unpacking gcc-15-x86-64-linux-gnu (15.2.0-16ubuntu1) ...
+Selecting previously unselected package gcc-15.
+Preparing to unpack .../18-gcc-15_15.2.0-16ubuntu1_amd64.deb ...
+Unpacking gcc-15 (15.2.0-16ubuntu1) ...
+Selecting previously unselected package gcc-x86-64-linux-gnu.
+Preparing to unpack .../19-gcc-x86-64-linux-gnu_4%3a15.2.0-5ubuntu1_amd64.deb ...
+Unpacking gcc-x86-64-linux-gnu (4:15.2.0-5ubuntu1) ...
+Selecting previously unselected package gcc.
+Preparing to unpack .../20-gcc_4%3a15.2.0-5ubuntu1_amd64.deb ...
+Unpacking gcc (4:15.2.0-5ubuntu1) ...
+Selecting previously unselected package libc-dev-bin.
+Preparing to unpack .../21-libc-dev-bin_2.43-2ubuntu2_amd64.deb ...
+Unpacking libc-dev-bin (2.43-2ubuntu2) ...
+Selecting previously unselected package linux-libc-dev:amd64.
+Preparing to unpack .../22-linux-libc-dev_7.0.0-27.27_amd64.deb ...
+Unpacking linux-libc-dev:amd64 (7.0.0-27.27) ...
+Selecting previously unselected package rpcsvc-proto.
+Preparing to unpack .../23-rpcsvc-proto_1.4.3-1build1_amd64.deb ...
+Unpacking rpcsvc-proto (1.4.3-1build1) ...
+Selecting previously unselected package libc6-dev:amd64.
+Preparing to unpack .../24-libc6-dev_2.43-2ubuntu2_amd64.deb ...
+Unpacking libc6-dev:amd64 (2.43-2ubuntu2) ...
+Selecting previously unselected package libstdc++-15-dev:amd64.
+Preparing to unpack .../25-libstdc++-15-dev_15.2.0-16ubuntu1_amd64.deb ...
+Unpacking libstdc++-15-dev:amd64 (15.2.0-16ubuntu1) ...
+Selecting previously unselected package g++-15-x86-64-linux-gnu.
+Preparing to unpack .../26-g++-15-x86-64-linux-gnu_15.2.0-16ubuntu1_amd64.deb ...
+Unpacking g++-15-x86-64-linux-gnu (15.2.0-16ubuntu1) ...
+Selecting previously unselected package g++-15.
+Preparing to unpack .../27-g++-15_15.2.0-16ubuntu1_amd64.deb ...
+Unpacking g++-15 (15.2.0-16ubuntu1) ...
+Selecting previously unselected package g++-x86-64-linux-gnu.
+Preparing to unpack .../28-g++-x86-64-linux-gnu_4%3a15.2.0-5ubuntu1_amd64.deb ...
+Unpacking g++-x86-64-linux-gnu (4:15.2.0-5ubuntu1) ...
+Selecting previously unselected package g++.
+Preparing to unpack .../29-g++_4%3a15.2.0-5ubuntu1_amd64.deb ...
+Unpacking g++ (4:15.2.0-5ubuntu1) ...
+Selecting previously unselected package librocm-core1.
+Preparing to unpack .../30-librocm-core1_7.2.3-0ubuntu1~git202605231431.b92f038~ubuntu26.04.1_amd64.deb ...
+Unpacking librocm-core1 (7.2.3-0ubuntu1~git202605231431.b92f038~ubuntu26.04.1) ...
+Selecting previously unselected package librocm-core-dev.
+Preparing to unpack .../31-librocm-core-dev_7.2.3-0ubuntu1~git202605231431.b92f038~ubuntu26.04.1_amd64.deb ...
+Unpacking librocm-core-dev (7.2.3-0ubuntu1~git202605231431.b92f038~ubuntu26.04.1) ...
+Setting up linux-libc-dev:amd64 (7.0.0-27.27) ...
+Setting up libgomp1:amd64 (16-20260322-1ubuntu1) ...
+Setting up rpcsvc-proto (1.4.3-1build1) ...
+Setting up libquadmath0:amd64 (16-20260322-1ubuntu1) ...
+Setting up libmpc3:amd64 (1.3.1-3) ...
+Setting up libubsan1:amd64 (16-20260322-1ubuntu1) ...
+Setting up libhwasan0:amd64 (16-20260322-1ubuntu1) ...
+Setting up libasan8:amd64 (16-20260322-1ubuntu1) ...
+Setting up libtsan2:amd64 (16-20260322-1ubuntu1) ...
+Setting up libisl23:amd64 (0.27-1build1) ...
+Setting up libc-dev-bin (2.43-2ubuntu2) ...
+Setting up gcc-15-base:amd64 (15.2.0-16ubuntu1) ...
+Setting up librocm-core1 (7.2.3-0ubuntu1~git202605231431.b92f038~ubuntu26.04.1) ...
+Setting up libcc1-0:amd64 (16-20260322-1ubuntu1) ...
+Setting up liblsan0:amd64 (16-20260322-1ubuntu1) ...
+Setting up libitm1:amd64 (16-20260322-1ubuntu1) ...
+Setting up libgcc-15-dev:amd64 (15.2.0-16ubuntu1) ...
+Setting up cpp-15-x86-64-linux-gnu (15.2.0-16ubuntu1) ...
+Setting up gcc-15-x86-64-linux-gnu (15.2.0-16ubuntu1) ...
+Setting up librocm-core-dev (7.2.3-0ubuntu1~git202605231431.b92f038~ubuntu26.04.1) ...
+Setting up cpp-15 (15.2.0-16ubuntu1) ...
+Setting up libc6-dev:amd64 (2.43-2ubuntu2) ...
+Setting up cpp-x86-64-linux-gnu (4:15.2.0-5ubuntu1) ...
+Setting up gcc-x86-64-linux-gnu (4:15.2.0-5ubuntu1) ...
+Setting up gcc-15 (15.2.0-16ubuntu1) ...
+Setting up libstdc++-15-dev:amd64 (15.2.0-16ubuntu1) ...
+Setting up cpp (4:15.2.0-5ubuntu1) ...
+Setting up g++-15-x86-64-linux-gnu (15.2.0-16ubuntu1) ...
+Setting up gcc (4:15.2.0-5ubuntu1) ...
+Setting up g++-x86-64-linux-gnu (4:15.2.0-5ubuntu1) ...
+Setting up g++-15 (15.2.0-16ubuntu1) ...
+Setting up g++ (4:15.2.0-5ubuntu1) ...
+update-alternatives: using /usr/bin/g++ to provide /usr/bin/c++ (c++) in auto mode
+Processing triggers for man-db (2.13.1-1build1) ...
+Processing triggers for libc-bin (2.43-2ubuntu2) ...
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+autopkgtest [03:10:48]: test rocm-core-path.sh: [-----------------------
+$ cat test-rocm-core-path.cpp
+#include <cstdint>
+#include <cstdio>
+#include <cinttypes>
+#include <cstdlib>
+
+#include <rocm-core/rocm_getpath.h>
+
+int main()
+{
+    char *installPath=NULL;
+    unsigned int installPathLen = 0;
+    PathErrors_t installStatus;
+
+    installStatus = getROCmInstallPath( &installPath, &installPathLen );
+
+    if(installStatus !=PathSuccess )
+    {  // error occured
+        free(installPath); //caller must free allocated memory after usage.
+        std::printf("ERROR: recieved return code from getROCmInstallPath: %d\n", installStatus);
+        return 255;
+    }
+
+    std::printf("SUCCESS: ROCm install path from rocm-core detected as: %s\n", installPath);
+    free(installPath); //caller must free allocated memory after usage.
+    return 0;
+
+}
+$ g++ -o test-rocm-core-path test-rocm-core-path.cpp -lrocm-core
+SUCCESS: ROCm install path from rocm-core detected as: /usr/
+autopkgtest [03:10:48]: test rocm-core-path.sh: -----------------------]
+autopkgtest [03:10:49]: test rocm-core-path.sh:  - - - - - - - - - - results - - - - - - - - - -
+rocm-core-path.sh    PASS (superficial)
+autopkgtest [03:10:49]: test rocm-core-version.sh: preparing testbed
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+autopkgtest [03:10:50]: test rocm-core-version.sh: [-----------------------
+$ cat test-rocm-core-version.cpp
+// disable warning about relying on rocm core version
+#define NO_ROCMCORE_VERSION_WARNING
+
+#include <cstdint>
+#include <cstdio>
+#include <cinttypes>
+
+#include <rocm-core/rocm_version.h>
+
+
+int main()
+{
+    unsigned int major=0,minor=0,patch=0,ret=0;
+
+    ret = getROCmVersion(&major,&minor,&patch);
+
+    if(ret !=VerSuccess )
+    {
+        std::printf("ERROR: recieved return code from getROCMVersion: %d\n", ret);
+        return 255;
+    }
+
+    else
+    {
+        std::printf("SUCCESS: ROCm Version from rocm-core detected as: %d.%d.%d\n", major, minor, patch);
+        return 0;
+    }
+
+}
+$ g++ -o test-rocm-core-version test-rocm-core-version.cpp -lrocm-core
+SUCCESS: ROCm Version from rocm-core detected as: 7.2.3
+autopkgtest [03:10:51]: test rocm-core-version.sh: -----------------------]
+autopkgtest [03:10:51]: test rocm-core-version.sh:  - - - - - - - - - - results - - - - - - - - - -
+rocm-core-version.sh PASS (superficial)
+autopkgtest [03:10:51]: @@@@@@@@@@@@@@@@@@@@ summary
+rocm-core-path.sh    PASS (superficial)
+rocm-core-version.sh PASS (superficial)

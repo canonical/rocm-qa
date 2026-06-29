@@ -1,0 +1,7 @@
+++ mktemp -d
++ OUT=/tmp/tmp.y8rlJVQFzM
++ hipcc -o /tmp/tmp.y8rlJVQFzM/test test.cpp
++ /tmp/tmp.y8rlJVQFzM/test
+Agent AMD Instinct MI100
+System version 9.0
+TESTS PASSED!
