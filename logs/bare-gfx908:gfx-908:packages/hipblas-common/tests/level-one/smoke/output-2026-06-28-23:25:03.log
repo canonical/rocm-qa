@@ -1,0 +1,4 @@
+++ mktemp -d
++ OUT=/tmp/tmp.lvEbi72I4X
++ g++ -std=c++17 -I/usr/include/hipblas-common -o /tmp/tmp.lvEbi72I4X/test test.cpp
++ /tmp/tmp.lvEbi72I4X/test
