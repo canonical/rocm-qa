@@ -1,0 +1,433 @@
+autopkgtest [05:40:55]: starting date and time: 2026-06-30 05:40:55+0000
+autopkgtest [05:40:55]: version 5.55
+autopkgtest [05:40:55]: host lxc-sessionizer-github-1; command line: /usr/bin/autopkgtest rocalution -U '--setup-commands=add-apt-repository -ss -y' '--setup-commands=add-apt-repository ppa:bullwinkle-team/rocm-devel --enable-source -y' -- lxd ubuntu-daily:resolute --profile=rocm-gpu
+autopkgtest [05:43:01]: testbed dpkg architecture: amd64
+autopkgtest [05:43:01]: testbed apt version: 3.2.0
+autopkgtest [05:43:01]: @@@@@@@@@@@@@@@@@@@@ test bed setup
+autopkgtest [05:43:01]: updating testbed package index (apt update)
+Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+Get:2 http://security.ubuntu.com/ubuntu resolute-security InRelease [137 kB]
+Get:3 http://security.ubuntu.com/ubuntu resolute-security/main amd64 Packages [249 kB]
+Get:4 http://archive.ubuntu.com/ubuntu resolute-updates InRelease [137 kB]
+Get:5 http://security.ubuntu.com/ubuntu resolute-security/main Translation-en [64.7 kB]
+Get:6 http://security.ubuntu.com/ubuntu resolute-security/main amd64 Components [31.2 kB]
+Get:7 http://security.ubuntu.com/ubuntu resolute-security/main amd64 c-n-f Metadata [4144 B]
+Get:8 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Packages [127 kB]
+Get:9 http://security.ubuntu.com/ubuntu resolute-security/universe Translation-en [39.7 kB]
+Get:10 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Components [43.1 kB]
+Get:11 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 c-n-f Metadata [3388 B]
+Get:12 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 Components [212 B]
+Get:13 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 c-n-f Metadata [120 B]
+Get:14 http://archive.ubuntu.com/ubuntu resolute-backports InRelease [136 kB]
+Get:15 http://archive.ubuntu.com/ubuntu resolute/universe amd64 Packages [16.0 MB]
+Get:16 http://archive.ubuntu.com/ubuntu resolute/universe Translation-en [6329 kB]
+Get:17 http://archive.ubuntu.com/ubuntu resolute/universe amd64 Components [4556 kB]
+Get:18 http://archive.ubuntu.com/ubuntu resolute/universe amd64 c-n-f Metadata [313 kB]
+Get:19 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 Packages [290 kB]
+Get:20 http://archive.ubuntu.com/ubuntu resolute/multiverse Translation-en [127 kB]
+Get:21 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 Components [50.0 kB]
+Get:22 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 c-n-f Metadata [8276 B]
+Get:23 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Packages [284 kB]
+Get:24 http://archive.ubuntu.com/ubuntu resolute-updates/main Translation-en [74.5 kB]
+Get:25 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Components [49.4 kB]
+Get:26 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 c-n-f Metadata [5408 B]
+Get:27 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Packages [181 kB]
+Get:28 http://archive.ubuntu.com/ubuntu resolute-updates/universe Translation-en [55.4 kB]
+Get:29 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Components [62.9 kB]
+Get:30 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 c-n-f Metadata [4060 B]
+Get:31 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 Packages [3328 B]
+Get:32 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse Translation-en [772 B]
+Get:33 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 Components [216 B]
+Get:34 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 c-n-f Metadata [256 B]
+Get:35 http://archive.ubuntu.com/ubuntu resolute-backports/main amd64 Components [212 B]
+Get:36 http://archive.ubuntu.com/ubuntu resolute-backports/main amd64 c-n-f Metadata [112 B]
+Get:37 http://archive.ubuntu.com/ubuntu resolute-backports/universe amd64 Components [216 B]
+Get:38 http://archive.ubuntu.com/ubuntu resolute-backports/universe amd64 c-n-f Metadata [116 B]
+Get:39 http://archive.ubuntu.com/ubuntu resolute-backports/restricted amd64 Components [216 B]
+Get:40 http://archive.ubuntu.com/ubuntu resolute-backports/restricted amd64 c-n-f Metadata [120 B]
+Get:41 http://archive.ubuntu.com/ubuntu resolute-backports/multiverse amd64 Components [216 B]
+Get:42 http://archive.ubuntu.com/ubuntu resolute-backports/multiverse amd64 c-n-f Metadata [120 B]
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 29.3 MB in 3s (11.6 MB/s)
+Reading package lists...
+autopkgtest [05:43:06]: testbed release detected to be: resolute
+autopkgtest [05:43:06]: updating testbed package index (apt update)
+Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:2 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Reading package lists...
+Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:2 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Get:3 http://security.ubuntu.com/ubuntu resolute-security/main Sources [104 kB]
+Get:4 http://security.ubuntu.com/ubuntu resolute-security/restricted Sources [19.5 kB]
+Get:5 http://security.ubuntu.com/ubuntu resolute-security/universe Sources [45.8 kB]
+Hit:6 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:7 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Get:8 http://archive.ubuntu.com/ubuntu resolute/restricted Sources [18.6 kB]
+Get:9 http://archive.ubuntu.com/ubuntu resolute/main Sources [1002 kB]
+Get:10 http://archive.ubuntu.com/ubuntu resolute/multiverse Sources [215 kB]
+Get:11 http://archive.ubuntu.com/ubuntu resolute/universe Sources [13.4 MB]
+Get:12 http://archive.ubuntu.com/ubuntu resolute-updates/restricted Sources [19.5 kB]
+Get:13 http://archive.ubuntu.com/ubuntu resolute-updates/main Sources [122 kB]
+Get:14 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse Sources [5596 B]
+Get:15 http://archive.ubuntu.com/ubuntu resolute-updates/universe Sources [69.4 kB]
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 15.0 MB in 1s (12.3 MB/s)
+Reading package lists...
+Enabling deb-src for all repositories.
+Added: ## Ubuntu distribution repository
+##
+## The following settings can be adjusted to configure which packages to use from Ubuntu.
+## Mirror your choices (except for URIs and Suites) in the security section below to
+## ensure timely security updates.
+##
+## Types: Append deb-src to enable the fetching of source package.
+## URIs: A URL to the repository (you may add multiple URLs)
+## Suites: The following additional suites can be configured
+##   <name>-updates   - Major bug fix updates produced after the final release of the
+##                      distribution.
+##   <name>-backports - software from this repository may not have been tested as
+##                      extensively as that contained in the main release, although it includes
+##                      newer versions of some applications which may provide useful features.
+##                      Also, please note that software in backports WILL NOT receive any review
+##                      or updates from the Ubuntu security team.
+## Components: Aside from main, the following components can be added to the list
+##   restricted  - Software that may not be under a free license, or protected by patents.
+##   universe    - Community maintained packages. Software in this repository receives maintenance
+##                 from volunteers in the Ubuntu community, or a 10 year security maintenance
+##                 commitment from Canonical when an Ubuntu Pro subscription is attached.
+##   multiverse  - Community maintained of restricted. Software from this repository is
+##                 ENTIRELY UNSUPPORTED by the Ubuntu team, and may not be under a free
+##                 licence. Please satisfy yourself as to your rights to use the software.
+##                 Also, please note that software in multiverse WILL NOT receive any
+##                 review or updates from the Ubuntu security team.
+##
+## See the sources.list(5) manual page for further settings.
+Types: deb-src
+URIs: http://archive.ubuntu.com/ubuntu
+Suites: resolute resolute-updates resolute-backports
+Components: universe main restricted multiverse
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+Added: ## Ubuntu security updates. Aside from URIs and Suites,
+## this should mirror your choices in the previous section.
+Types: deb-src
+URIs: http://security.ubuntu.com/ubuntu
+Suites: resolute-security
+Components: universe main restricted multiverse
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+Get:1 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute InRelease [27.2 kB]
+Hit:2 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Get:3 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main Sources [12.5 kB]
+Get:4 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main amd64 Packages [19.9 kB]
+Get:5 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main Translation-en [13.0 kB]
+Hit:6 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:7 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:8 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 72.5 kB in 0s (183 kB/s)
+Reading package lists...
+PPA publishes dbgsym, you may need to include 'main/debug' component
+Repository: 'Types: deb
+URIs: https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu/
+Suites: resolute
+Components: main
+'
+Description:
+Development archive for AMD ROCm packages on Ubuntu with an aim to have packages build for next Ubuntu release
+More info: https://launchpad.net/~bullwinkle-team/+archive/ubuntu/rocm-devel
+Adding repository.
+autopkgtest [05:43:29]: upgrading testbed (apt dist-upgrade and autopurge)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+The following packages will be upgraded:
+  libnss3 libsqlite3-0
+2 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Need to get 2234 kB of archives.
+After this operation, 3072 B disk space will be freed.
+Get:1 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libsqlite3-0 amd64 3.46.1-9ubuntu0.1 [719 kB]
+Get:2 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libnss3 amd64 2:3.120-1ubuntu2.1 [1515 kB]
+Fetched 2234 kB in 0s (31.5 MB/s)
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 44349 files and directories currently installed.)
+Preparing to unpack .../libsqlite3-0_3.46.1-9ubuntu0.1_amd64.deb ...
+Unpacking libsqlite3-0:amd64 (3.46.1-9ubuntu0.1) over (3.46.1-9) ...
+Preparing to unpack .../libnss3_2%3a3.120-1ubuntu2.1_amd64.deb ...
+Unpacking libnss3:amd64 (2:3.120-1ubuntu2.1) over (2:3.120-1ubuntu2) ...
+Setting up libsqlite3-0:amd64 (3.46.1-9ubuntu0.1) ...
+Setting up libnss3:amd64 (2:3.120-1ubuntu2.1) ...
+Processing triggers for libc-bin (2.43-2ubuntu2) ...
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+autopkgtest [05:43:33]: testbed running kernel: Linux 7.0.0-14-generic #14-Ubuntu SMP PREEMPT_DYNAMIC Mon Apr 13 11:09:53 UTC 2026
+autopkgtest [05:43:33]: @@@@@@@@@@@@@@@@@@@@ apt-source rocalution
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+The following NEW packages will be installed:
+  bzip2 dpkg-dev libdpkg-perl lto-disabled-list make
+0 upgraded, 5 newly installed, 0 to remove and 0 not upgraded.
+Need to get 1596 kB of archives.
+After this operation, 4247 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu resolute/main amd64 bzip2 amd64 1.0.8-6build2 [34.3 kB]
+Get:2 http://archive.ubuntu.com/ubuntu resolute/main amd64 libdpkg-perl all 1.23.7ubuntu1 [289 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute/main amd64 make amd64 4.4.1-3 [197 kB]
+Get:4 http://archive.ubuntu.com/ubuntu resolute/main amd64 lto-disabled-list all 79 [14.2 kB]
+Get:5 http://archive.ubuntu.com/ubuntu resolute/main amd64 dpkg-dev all 1.23.7ubuntu1 [1062 kB]
+Fetched 1596 kB in 0s (14.9 MB/s)
+Selecting previously unselected package bzip2.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 44349 files and directories currently installed.)
+Preparing to unpack .../bzip2_1.0.8-6build2_amd64.deb ...
+Unpacking bzip2 (1.0.8-6build2) ...
+Selecting previously unselected package libdpkg-perl.
+Preparing to unpack .../libdpkg-perl_1.23.7ubuntu1_all.deb ...
+Unpacking libdpkg-perl (1.23.7ubuntu1) ...
+Selecting previously unselected package make.
+Preparing to unpack .../make_4.4.1-3_amd64.deb ...
+Unpacking make (4.4.1-3) ...
+Selecting previously unselected package lto-disabled-list.
+Preparing to unpack .../lto-disabled-list_79_all.deb ...
+Unpacking lto-disabled-list (79) ...
+Selecting previously unselected package dpkg-dev.
+Preparing to unpack .../dpkg-dev_1.23.7ubuntu1_all.deb ...
+Unpacking dpkg-dev (1.23.7ubuntu1) ...
+Setting up lto-disabled-list (79) ...
+Setting up bzip2 (1.0.8-6build2) ...
+Setting up make (4.4.1-3) ...
+Setting up libdpkg-perl (1.23.7ubuntu1) ...
+Setting up dpkg-dev (1.23.7ubuntu1) ...
+Processing triggers for man-db (2.13.1-1build1) ...
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+Get:1 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main rocalution 7.2.3~ppa1-0ubuntu1~git202605282102.e34ca76~ubuntu26.04.1 (tar) [1744 kB]
+Get:2 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main rocalution 7.2.3~ppa1-0ubuntu1~git202605282102.e34ca76~ubuntu26.04.1 (dsc) [1770 B]
+dpkg-source: warning: extracting unsigned source package (rocalution_7.2.3~ppa1-0ubuntu1~git202605282102.e34ca76~ubuntu26.04.1.dsc)
+dpkg-source: warning: native package version may not have a revision
+autopkgtest [05:43:36]: testing package rocalution version 7.2.3~ppa1-0ubuntu1~git202605282102.e34ca76~ubuntu26.04.1
+autopkgtest [05:43:37]: build not needed
+autopkgtest [05:43:37]: test command1: preparing testbed
+autopkgtest [05:45:43]: testbed dpkg architecture: amd64
+autopkgtest [05:45:43]: testbed apt version: 3.2.0
+autopkgtest [05:45:43]: @@@@@@@@@@@@@@@@@@@@ test bed setup
+autopkgtest [05:45:43]: updating testbed package index (apt update)
+Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+Get:2 http://security.ubuntu.com/ubuntu resolute-security InRelease [137 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease [137 kB]
+Get:4 http://archive.ubuntu.com/ubuntu resolute-backports InRelease [136 kB]
+Get:5 http://archive.ubuntu.com/ubuntu resolute/universe amd64 Packages [16.0 MB]
+Get:6 http://security.ubuntu.com/ubuntu resolute-security/main amd64 Packages [249 kB]
+Get:7 http://security.ubuntu.com/ubuntu resolute-security/main Translation-en [64.7 kB]
+Get:8 http://security.ubuntu.com/ubuntu resolute-security/main amd64 Components [31.2 kB]
+Get:9 http://security.ubuntu.com/ubuntu resolute-security/main amd64 c-n-f Metadata [4144 B]
+Get:10 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Packages [127 kB]
+Get:11 http://security.ubuntu.com/ubuntu resolute-security/universe Translation-en [39.7 kB]
+Get:12 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Components [43.1 kB]
+Get:13 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 c-n-f Metadata [3388 B]
+Get:14 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 Components [212 B]
+Get:15 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 c-n-f Metadata [120 B]
+Get:16 http://archive.ubuntu.com/ubuntu resolute/universe Translation-en [6329 kB]
+Get:17 http://archive.ubuntu.com/ubuntu resolute/universe amd64 Components [4556 kB]
+Get:18 http://archive.ubuntu.com/ubuntu resolute/universe amd64 c-n-f Metadata [313 kB]
+Get:19 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 Packages [290 kB]
+Get:20 http://archive.ubuntu.com/ubuntu resolute/multiverse Translation-en [127 kB]
+Get:21 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 Components [50.0 kB]
+Get:22 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 c-n-f Metadata [8276 B]
+Get:23 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Packages [284 kB]
+Get:24 http://archive.ubuntu.com/ubuntu resolute-updates/main Translation-en [74.5 kB]
+Get:25 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Components [49.4 kB]
+Get:26 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 c-n-f Metadata [5408 B]
+Get:27 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Packages [181 kB]
+Get:28 http://archive.ubuntu.com/ubuntu resolute-updates/universe Translation-en [55.4 kB]
+Get:29 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Components [62.9 kB]
+Get:30 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 c-n-f Metadata [4060 B]
+Get:31 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 Packages [3328 B]
+Get:32 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse Translation-en [772 B]
+Get:33 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 Components [216 B]
+Get:34 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 c-n-f Metadata [256 B]
+Get:35 http://archive.ubuntu.com/ubuntu resolute-backports/main amd64 Components [212 B]
+Get:36 http://archive.ubuntu.com/ubuntu resolute-backports/main amd64 c-n-f Metadata [112 B]
+Get:37 http://archive.ubuntu.com/ubuntu resolute-backports/universe amd64 Components [216 B]
+Get:38 http://archive.ubuntu.com/ubuntu resolute-backports/universe amd64 c-n-f Metadata [116 B]
+Get:39 http://archive.ubuntu.com/ubuntu resolute-backports/restricted amd64 Components [216 B]
+Get:40 http://archive.ubuntu.com/ubuntu resolute-backports/restricted amd64 c-n-f Metadata [120 B]
+Get:41 http://archive.ubuntu.com/ubuntu resolute-backports/multiverse amd64 Components [216 B]
+Get:42 http://archive.ubuntu.com/ubuntu resolute-backports/multiverse amd64 c-n-f Metadata [120 B]
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 29.3 MB in 2s (12.8 MB/s)
+Reading package lists...
+autopkgtest [05:45:48]: testbed release detected to be: resolute
+autopkgtest [05:45:48]: updating testbed package index (apt update)
+Hit:1 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Reading package lists...
+Hit:1 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu resolute InRelease
+Get:3 http://security.ubuntu.com/ubuntu resolute-security/universe Sources [45.8 kB]
+Get:4 http://security.ubuntu.com/ubuntu resolute-security/restricted Sources [19.5 kB]
+Get:5 http://security.ubuntu.com/ubuntu resolute-security/main Sources [104 kB]
+Hit:6 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:7 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Get:8 http://archive.ubuntu.com/ubuntu resolute/multiverse Sources [215 kB]
+Get:9 http://archive.ubuntu.com/ubuntu resolute/universe Sources [13.4 MB]
+Get:10 http://archive.ubuntu.com/ubuntu resolute/restricted Sources [18.6 kB]
+Get:11 http://archive.ubuntu.com/ubuntu resolute/main Sources [1002 kB]
+Get:12 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse Sources [5596 B]
+Get:13 http://archive.ubuntu.com/ubuntu resolute-updates/main Sources [122 kB]
+Get:14 http://archive.ubuntu.com/ubuntu resolute-updates/restricted Sources [19.5 kB]
+Get:15 http://archive.ubuntu.com/ubuntu resolute-updates/universe Sources [69.4 kB]
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 15.0 MB in 1s (12.4 MB/s)
+Reading package lists...
+Enabling deb-src for all repositories.
+Added: ## Ubuntu distribution repository
+##
+## The following settings can be adjusted to configure which packages to use from Ubuntu.
+## Mirror your choices (except for URIs and Suites) in the security section below to
+## ensure timely security updates.
+##
+## Types: Append deb-src to enable the fetching of source package.
+## URIs: A URL to the repository (you may add multiple URLs)
+## Suites: The following additional suites can be configured
+##   <name>-updates   - Major bug fix updates produced after the final release of the
+##                      distribution.
+##   <name>-backports - software from this repository may not have been tested as
+##                      extensively as that contained in the main release, although it includes
+##                      newer versions of some applications which may provide useful features.
+##                      Also, please note that software in backports WILL NOT receive any review
+##                      or updates from the Ubuntu security team.
+## Components: Aside from main, the following components can be added to the list
+##   restricted  - Software that may not be under a free license, or protected by patents.
+##   universe    - Community maintained packages. Software in this repository receives maintenance
+##                 from volunteers in the Ubuntu community, or a 10 year security maintenance
+##                 commitment from Canonical when an Ubuntu Pro subscription is attached.
+##   multiverse  - Community maintained of restricted. Software from this repository is
+##                 ENTIRELY UNSUPPORTED by the Ubuntu team, and may not be under a free
+##                 licence. Please satisfy yourself as to your rights to use the software.
+##                 Also, please note that software in multiverse WILL NOT receive any
+##                 review or updates from the Ubuntu security team.
+##
+## See the sources.list(5) manual page for further settings.
+Types: deb-src
+URIs: http://archive.ubuntu.com/ubuntu
+Suites: resolute resolute-updates resolute-backports
+Components: universe restricted multiverse main
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+Added: ## Ubuntu security updates. Aside from URIs and Suites,
+## this should mirror your choices in the previous section.
+Types: deb-src
+URIs: http://security.ubuntu.com/ubuntu
+Suites: resolute-security
+Components: universe restricted multiverse main
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:2 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Get:4 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute InRelease [27.2 kB]
+Get:5 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main Sources [12.5 kB]
+Get:6 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main amd64 Packages [19.9 kB]
+Get:7 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main Translation-en [13.0 kB]
+Hit:8 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 72.5 kB in 0s (242 kB/s)
+Reading package lists...
+PPA publishes dbgsym, you may need to include 'main/debug' component
+Repository: 'Types: deb
+URIs: https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu/
+Suites: resolute
+Components: main
+'
+Description:
+Development archive for AMD ROCm packages on Ubuntu with an aim to have packages build for next Ubuntu release
+More info: https://launchpad.net/~bullwinkle-team/+archive/ubuntu/rocm-devel
+Adding repository.
+autopkgtest [05:46:20]: upgrading testbed (apt dist-upgrade and autopurge)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+The following packages will be upgraded:
+  libnss3 libsqlite3-0
+2 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Need to get 2234 kB of archives.
+After this operation, 3072 B disk space will be freed.
+Get:1 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libsqlite3-0 amd64 3.46.1-9ubuntu0.1 [719 kB]
+Get:2 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libnss3 amd64 2:3.120-1ubuntu2.1 [1515 kB]
+Fetched 2234 kB in 0s (30.2 MB/s)
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 44349 files and directories currently installed.)
+Preparing to unpack .../libsqlite3-0_3.46.1-9ubuntu0.1_amd64.deb ...
+Unpacking libsqlite3-0:amd64 (3.46.1-9ubuntu0.1) over (3.46.1-9) ...
+Preparing to unpack .../libnss3_2%3a3.120-1ubuntu2.1_amd64.deb ...
+Unpacking libnss3:amd64 (2:3.120-1ubuntu2.1) over (2:3.120-1ubuntu2) ...
+Setting up libsqlite3-0:amd64 (3.46.1-9ubuntu0.1) ...
+Setting up libnss3:amd64 (2:3.120-1ubuntu2.1) ...
+Processing triggers for libc-bin (2.43-2ubuntu2) ...
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+Some packages could not be installed. This may mean that you have
+requested an impossible situation or if you are using the unstable
+distribution that some required packages have not yet been created
+or been moved out of Incoming.
+The following information may help to resolve the situation:
+
+The following packages have unmet dependencies:
+ satisfy:command-line : Depends: librocalution1-tests but it is not going to be installed
+E: Unable to satisfy dependencies. Reached two conflicting assignments:
+   1. librocalution1-tests:amd64=7.2.3~ppa1-0ubuntu1~git202605282102.e34ca76~ubuntu26.04.1 is selected for install because:
+      1. satisfy:command-line:amd64=1 is selected for install
+      2. satisfy:command-line:amd64 Depends librocalution1-tests
+      3. librocalution1-tests:amd64 is available in versions 7.2.3~ppa1-0ubuntu1~git202605282102.e34ca76~ubuntu26.04.1, 7.1.1-0ubuntu1
+         [selected librocalution1-tests:amd64]
+      For context, additional choices that could not be installed:
+      * In librocalution1-tests:amd64 is available in versions 7.2.3~ppa1-0ubuntu1~git202605282102.e34ca76~ubuntu26.04.1, 7.1.1-0ubuntu1:
+        - librocalution1-tests:amd64=7.1.1-0ubuntu1 is not selected for install
+   2. librocalution1-tests:amd64=7.2.3~ppa1-0ubuntu1~git202605282102.e34ca76~ubuntu26.04.1 Depends librocalution1 (>= 7.2.3)
+      but none of the choices are installable:
+      [no choices]
+command1             FAIL badpkg
+blame: rocalution
+badpkg: Test dependencies are unsatisfiable. A common reason is that your testbed is out of date with respect to the archive, and you need to use a current testbed or run apt-get update or use -U.
+autopkgtest [05:46:23]: @@@@@@@@@@@@@@@@@@@@ summary
+command1             FAIL badpkg
+blame: rocalution
+badpkg: Test dependencies are unsatisfiable. A common reason is that your testbed is out of date with respect to the archive, and you need to use a current testbed or run apt-get update or use -U.
