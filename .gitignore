@@ -2,3 +2,6 @@ __pycache__/
 *.py[codz]
 *$py.class
 
+# Generated in CI by deploy-pages.yml; not intended to be committed.
+pages/graphs/
+

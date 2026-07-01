@@ -1,0 +1,325 @@
+---
+layout: default
+title: Dependency Graph
+---
+<style>
+  .graph-intro {
+    color: #475569;
+    margin-bottom: 1rem;
+  }
+  .graph-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  .graph-tab {
+    padding: 0.5rem 1rem;
+    border: 1px solid #e2e8f0;
+    background: white;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    color: #475569;
+    font-family: inherit;
+    transition: background 0.15s, color 0.15s, border-color 0.15s;
+  }
+  .graph-tab:hover {
+    border-color: #94a3b8;
+  }
+  .graph-tab.active {
+    background: #0f172a;
+    color: white;
+    border-color: #0f172a;
+  }
+  .graph-frame {
+    display: block;
+    width: 100%;
+    height: 70vh;
+    min-height: 500px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background: #1a1a2e;
+  }
+  .graph-status {
+    padding: 2rem;
+    text-align: center;
+    color: #64748b;
+    background: white;
+    border: 1px dashed #e2e8f0;
+    border-radius: 8px;
+  }
+
+  /* Build order section */
+  .build-order {
+    margin-top: 2rem;
+  }
+  .build-order h2 {
+    font-size: 1.1rem;
+    border-bottom: none;
+    margin-bottom: 0.25rem;
+  }
+  .build-order .intro {
+    color: #64748b;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+  .build-order .group {
+    padding: 0.75rem 1rem;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    margin-bottom: 0.75rem;
+  }
+  .build-order .group.cyclic {
+    background: #fffbeb;
+    border-color: #fbbf24;
+  }
+  .build-order .group-header {
+    font-weight: 600;
+    color: #0f172a;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+  }
+  .build-order .cycle-badge {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.15rem 0.5rem;
+    background: #fef3c7;
+    color: #92400e;
+    border-radius: 9999px;
+    font-weight: 600;
+  }
+  .build-order .pkgs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+  }
+  .build-order .pkg {
+    display: inline-block;
+    padding: 0.15rem 0.5rem;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    color: #334155;
+  }
+  .build-order .subgroup {
+    margin-top: 0.5rem;
+  }
+  .build-order .subgroup-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #64748b;
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+  }
+  .build-order .cycle-edge {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.8rem;
+    color: #334155;
+    padding: 0.15rem 0;
+  }
+  .build-order .notes {
+    margin-top: 1rem;
+    padding: 0.75rem 1rem;
+    background: #fef3c7;
+    border-left: 3px solid #fbbf24;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    color: #78350f;
+  }
+</style>
+
+<h1>Dependency Graph</h1>
+<p class="graph-intro">
+  Source-level dependency graph for the <code>rocm</code> Launchpad package-set,
+  rendered per Ubuntu series. Hover a node to highlight its dependencies and
+  reverse dependencies; press <kbd>Space</kbd> to cycle highlight modes.
+</p>
+
+<div class="graph-tabs" id="graph-tabs"></div>
+<iframe id="graph-frame" class="graph-frame" title="Dependency graph" src="about:blank"></iframe>
+<noscript>
+  <p class="graph-status">JavaScript is required to switch between distributions.</p>
+</noscript>
+
+<section class="build-order" id="build-order" hidden>
+  <h2>Build Order</h2>
+  <p class="intro">
+    Packages in the same group can be built in parallel. Groups must be built
+    in order (Group 1 first, then Group 2, etc.).
+  </p>
+  <div id="build-order-groups"></div>
+</section>
+
+<script>
+  (async function () {
+    const tabsEl = document.getElementById('graph-tabs');
+    const frame = document.getElementById('graph-frame');
+    const boSection = document.getElementById('build-order');
+    const boGroups = document.getElementById('build-order-groups');
+    const baseurl = '{{ site.baseurl }}';
+
+    function showStatus(msg) {
+      frame.style.display = 'none';
+      const status = document.createElement('p');
+      status.className = 'graph-status';
+      status.textContent = msg;
+      tabsEl.replaceWith(status);
+    }
+
+    function makeChip(name) {
+      const s = document.createElement('span');
+      s.className = 'pkg';
+      s.textContent = name;
+      return s;
+    }
+
+    function renderBuildOrder(data) {
+      boGroups.innerHTML = '';
+      const groups = Array.isArray(data.build_order) ? data.build_order : [];
+      if (groups.length === 0) {
+        boSection.hidden = true;
+        return;
+      }
+
+      groups.forEach(function (group) {
+        const el = document.createElement('div');
+        el.className = 'group' + (group.has_cycles ? ' cyclic' : '');
+
+        const header = document.createElement('div');
+        header.className = 'group-header';
+        const count = group.packages.length;
+        header.textContent =
+          'Group ' + group.group + ' · ' + count + ' ' +
+          (count === 1 ? 'package' : 'packages');
+        if (group.has_cycles) {
+          const badge = document.createElement('span');
+          badge.className = 'cycle-badge';
+          badge.textContent = 'contains cycles';
+          header.appendChild(badge);
+        }
+        el.appendChild(header);
+
+        if (group.has_cycles) {
+          const regulars = group.regular_packages || [];
+          if (regulars.length) {
+            const sub = document.createElement('div');
+            sub.className = 'subgroup';
+            const lbl = document.createElement('div');
+            lbl.className = 'subgroup-label';
+            lbl.textContent = 'Regular';
+            sub.appendChild(lbl);
+            const pkgs = document.createElement('div');
+            pkgs.className = 'pkgs';
+            regulars.forEach(function (p) { pkgs.appendChild(makeChip(p)); });
+            sub.appendChild(pkgs);
+            el.appendChild(sub);
+          }
+          const cyclic = group.cyclic_packages || {};
+          const cyclicKeys = Object.keys(cyclic);
+          if (cyclicKeys.length) {
+            const sub = document.createElement('div');
+            sub.className = 'subgroup';
+            const lbl = document.createElement('div');
+            lbl.className = 'subgroup-label';
+            lbl.textContent = 'Cyclic (bootstrap required)';
+            sub.appendChild(lbl);
+            cyclicKeys.forEach(function (pkg) {
+              const deps = cyclic[pkg] || [];
+              const line = document.createElement('div');
+              line.className = 'cycle-edge';
+              line.textContent = deps.length
+                ? pkg + ' → depends on: ' + deps.join(', ')
+                : pkg;
+              sub.appendChild(line);
+            });
+            el.appendChild(sub);
+          }
+        } else {
+          const pkgs = document.createElement('div');
+          pkgs.className = 'pkgs';
+          group.packages.forEach(function (p) { pkgs.appendChild(makeChip(p)); });
+          el.appendChild(pkgs);
+        }
+
+        boGroups.appendChild(el);
+      });
+
+      if (data.has_cycles) {
+        const notes = document.createElement('div');
+        notes.className = 'notes';
+        const strong = document.createElement('strong');
+        strong.textContent = 'Cycle resolution: ';
+        notes.appendChild(strong);
+        notes.appendChild(document.createTextNode(
+          'cyclic packages require bootstrapping — first build with ' +
+          'reduced features or stub dependencies, then rebuild with full ' +
+          'dependencies.'
+        ));
+        boGroups.appendChild(notes);
+      }
+
+      boSection.hidden = false;
+    }
+
+    async function loadBuildOrder(codename) {
+      boSection.hidden = true;
+      boGroups.innerHTML = '';
+      try {
+        const res = await fetch(
+          baseurl + '/graphs/' + codename + '.json',
+          { cache: 'no-cache' }
+        );
+        if (!res.ok) return;
+        renderBuildOrder(await res.json());
+      } catch (e) {
+        /* Leave section hidden on error. */
+      }
+    }
+
+    let dists;
+    try {
+      const res = await fetch(baseurl + '/graphs/dists.json', { cache: 'no-cache' });
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      dists = await res.json();
+    } catch (e) {
+      showStatus('Failed to load distribution list.');
+      return;
+    }
+
+    if (!Array.isArray(dists) || dists.length === 0) {
+      showStatus('No dependency graphs available yet.');
+      return;
+    }
+
+    function select(idx) {
+      Array.from(tabsEl.children).forEach(function (el, i) {
+        el.classList.toggle('active', i === idx);
+      });
+      const d = dists[idx];
+      frame.src = baseurl + '/graphs/' + d.codename + '.html';
+      loadBuildOrder(d.codename);
+    }
+
+    dists.forEach(function (d, i) {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'graph-tab';
+      btn.textContent = d.label === d.codename
+        ? d.codename
+        : d.label + ' (' + d.codename + ')';
+      btn.addEventListener('click', function () { select(i); });
+      tabsEl.appendChild(btn);
+    });
+
+    select(0);
+  })();
+</script>

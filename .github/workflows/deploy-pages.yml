@@ -114,6 +114,67 @@ jobs:
           echo "::group::Badge files"
           ls -la pages/badges/
           echo "::endgroup::"
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+      - name: Generate dependency graphs
+        env:
+          # Pinned commit of talhaHavadar/dotfiles containing dep-viz.
+          # Bump this to pick up upstream changes to the visualiser.
+          DEP_VIZ_SHA: 2a6ba6405cec28dcb9e515f055740b21e98d9723
+          # Space-separated list of dist labels to render graphs for.
+          # The special label "devel" is resolved to the current Ubuntu devel
+          # codename via archive.ubuntu.com; other labels are used verbatim.
+          DISTS: "devel resolute"
+        run: |
+          set -eo pipefail
+          mkdir -p pages/graphs
+
+          curl -sSfL \
+            "https://raw.githubusercontent.com/talhaHavadar/dotfiles/${DEP_VIZ_SHA}/dot/bin/packaging/dep-viz" \
+            -o dep-viz
+          chmod +x dep-viz
+
+          entries=()
+          for label in $DISTS; do
+            if [[ "$label" == "devel" ]]; then
+              # No `exit` in awk: with `pipefail`, closing wget's stdout early
+              # trips wget's File-I/O exit (3) and fails the step. The Release
+              # file has exactly one `Codename:` line, so reading to EOF is safe.
+              codename=$(wget -qO- http://archive.ubuntu.com/ubuntu/dists/devel/Release \
+                | awk -F ': ' '$1 == "Codename" { print $2 }')
+              if [[ -z "$codename" ]]; then
+                echo "::warning::Could not resolve devel codename; skipping"
+                continue
+              fi
+            else
+              codename="$label"
+            fi
+
+            echo "::group::Generating dependency graph for ${label} (${codename})"
+            # --json emits the build_order structure on stdout while still
+            # writing the HTML file to disk. A trailing "[SUCCESS] ..." line
+            # follows the JSON payload, so slice from the first '{' to the
+            # last '}' to isolate the JSON blob ([SUCCESS] contains no '}').
+            if ./dep-viz --package-set rocm --dist "$codename" \
+                 --format html --mode source --json \
+                 --output "pages/graphs/${codename}" \
+               | python3 -c "import sys,json; d=sys.stdin.read(); i,j=d.find('{'),d.rfind('}'); assert i>=0 and j>i, 'no JSON in dep-viz output'; json.dump(json.loads(d[i:j+1]), sys.stdout, separators=(',',':'))" \
+               > "pages/graphs/${codename}.json"; then
+              entries+=("{\"label\":\"${label}\",\"codename\":\"${codename}\"}")
+            else
+              echo "::warning::Failed to generate graph for ${codename}"
+              rm -f "pages/graphs/${codename}.json"
+            fi
+            echo "::endgroup::"
+          done
+
+          # Emit the tab manifest consumed by pages/dependency-graph.html
+          (IFS=,; printf '[%s]\n' "${entries[*]}") > pages/graphs/dists.json
+
+          echo "::group::Graph manifest"
+          cat pages/graphs/dists.json
+          ls -la pages/graphs/
+          echo "::endgroup::"
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Build with Jekyll

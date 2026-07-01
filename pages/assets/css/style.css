@@ -63,6 +63,11 @@ body {
 /* Main content */
 main {
   flex: 1;
+}
+
+/* Bottom breathing room; specificity has to beat `.container`'s padding
+   shorthand which otherwise zeroes out padding-bottom on <main>. */
+main.container {
   padding-bottom: 2rem;
 }
 
