@@ -1,0 +1,10 @@
+++ mktemp -d
++ OUT=/tmp/tmp.fIuTNdllLu
+++ pkg-config --cflags amd-dbgapi
+++ pkg-config --libs amd-dbgapi
++ g++ -I/usr/lib/x86_64-linux-gnu/pkgconfig/../../../include -o /tmp/tmp.fIuTNdllLu/test test.cpp -L/usr/lib/x86_64-linux-gnu/pkgconfig/../../../lib/x86_64-linux-gnu -lrocm-dbgapi
++ /tmp/tmp.fIuTNdllLu/test
+ROCm Debugger API Version: 0.77.4
+Build string: 0.77.4-developer-build-20260416T173816-buildd
+Status string for SUCCESS: The function has executed successfully
+rocdbgapi smoke test: PASS
