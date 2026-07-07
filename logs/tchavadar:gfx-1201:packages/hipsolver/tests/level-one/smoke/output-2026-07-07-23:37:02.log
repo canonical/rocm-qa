@@ -1,0 +1,5 @@
+++ mktemp -d
++ OUT=/tmp/tmp.Tfv4c8Bq42
++ hipcc -o /tmp/tmp.Tfv4c8Bq42/test test.cpp -lhipsolver
++ /tmp/tmp.Tfv4c8Bq42/test
+TESTS PASSED!
