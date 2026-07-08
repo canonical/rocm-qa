@@ -313,6 +313,7 @@ def _process_package(
         target_branch=lp_branch,
         title=title,
         description=description,
+        cwd=repo.path,
     )
     if mr_url is None:
         report.add(
