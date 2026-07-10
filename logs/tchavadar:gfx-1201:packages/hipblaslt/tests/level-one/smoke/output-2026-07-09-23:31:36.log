@@ -1,0 +1,9 @@
+++ mktemp -d
++ OUT=/tmp/tmp.5BW1rRzQYk
++ hipcc -o /tmp/tmp.5BW1rRzQYk/test test.cpp -lhipblaslt
+In file included from test.cpp:1:
+/usr/include/hipblaslt/hipblaslt.h:49:10: fatal error: 'hipblas-common/hipblas-common.h' file not found
+   49 | #include <hipblas-common/hipblas-common.h>
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 error generated when compiling for gfx1201.
+failed to execute:/usr/lib/llvm-21/bin/clang++  --offload-arch=gfx1201 -O3 --driver-mode=g++ -O3 --hip-link  -o "/tmp/tmp.5BW1rRzQYk/test" -x hip test.cpp -lhipblaslt
