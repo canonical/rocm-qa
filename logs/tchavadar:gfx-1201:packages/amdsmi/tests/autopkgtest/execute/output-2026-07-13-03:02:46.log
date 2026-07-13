@@ -1,0 +1,1050 @@
+autopkgtest [03:02:46]: starting date and time: 2026-07-13 03:02:46+0000
+autopkgtest [03:02:46]: version 5.55
+autopkgtest [03:02:46]: host lxc-sessionizer-github-1; command line: /usr/bin/autopkgtest amdsmi -U '--add-apt-source=deb-src http://archive.ubuntu.com/ubuntu resolute main restricted universe multiverse' -- lxd ubuntu-daily:resolute --profile=rocm-gpu
+autopkgtest [03:04:57]: testbed dpkg architecture: amd64
+autopkgtest [03:04:57]: testbed apt version: 3.2.0
+autopkgtest [03:04:57]: @@@@@@@@@@@@@@@@@@@@ test bed setup
+autopkgtest [03:04:57]: updating testbed package index (apt update)
+Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+Get:2 http://archive.ubuntu.com/ubuntu resolute-updates InRelease [137 kB]
+Get:3 http://security.ubuntu.com/ubuntu resolute-security InRelease [137 kB]
+Get:4 http://archive.ubuntu.com/ubuntu resolute-backports InRelease [136 kB]
+Get:5 http://archive.ubuntu.com/ubuntu resolute/universe amd64 Packages [16.0 MB]
+Get:6 http://security.ubuntu.com/ubuntu resolute-security/main amd64 Packages [272 kB]
+Get:7 http://security.ubuntu.com/ubuntu resolute-security/main Translation-en [71.6 kB]
+Get:8 http://security.ubuntu.com/ubuntu resolute-security/main amd64 Components [31.2 kB]
+Get:9 http://security.ubuntu.com/ubuntu resolute-security/main amd64 c-n-f Metadata [4616 B]
+Get:10 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Packages [130 kB]
+Get:11 http://security.ubuntu.com/ubuntu resolute-security/universe Translation-en [41.2 kB]
+Get:12 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Components [43.1 kB]
+Get:13 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 c-n-f Metadata [3552 B]
+Get:14 http://security.ubuntu.com/ubuntu resolute-security/restricted amd64 Packages [240 kB]
+Get:15 http://security.ubuntu.com/ubuntu resolute-security/restricted Translation-en [44.3 kB]
+Get:16 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 Components [212 B]
+Get:17 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 c-n-f Metadata [120 B]
+Get:18 http://archive.ubuntu.com/ubuntu resolute/universe Translation-en [6329 kB]
+Get:19 http://archive.ubuntu.com/ubuntu resolute/universe amd64 Components [4556 kB]
+Get:20 http://archive.ubuntu.com/ubuntu resolute/universe amd64 c-n-f Metadata [313 kB]
+Get:21 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 Packages [290 kB]
+Get:22 http://archive.ubuntu.com/ubuntu resolute/multiverse Translation-en [127 kB]
+Get:23 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 Components [50.0 kB]
+Get:24 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 c-n-f Metadata [8276 B]
+Get:25 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Packages [330 kB]
+Get:26 http://archive.ubuntu.com/ubuntu resolute-updates/main Translation-en [86.7 kB]
+Get:27 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Components [53.0 kB]
+Get:28 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 c-n-f Metadata [5756 B]
+Get:29 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Packages [201 kB]
+Get:30 http://archive.ubuntu.com/ubuntu resolute-updates/universe Translation-en [62.5 kB]
+Get:31 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Components [153 kB]
+Get:32 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 c-n-f Metadata [4704 B]
+Get:33 http://archive.ubuntu.com/ubuntu resolute-updates/restricted amd64 Packages [247 kB]
+Get:34 http://archive.ubuntu.com/ubuntu resolute-updates/restricted Translation-en [45.5 kB]
+Get:35 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 Packages [3328 B]
+Get:36 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse Translation-en [772 B]
+Get:37 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 Components [216 B]
+Get:38 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 c-n-f Metadata [256 B]
+Get:39 http://archive.ubuntu.com/ubuntu resolute-backports/main amd64 Components [212 B]
+Get:40 http://archive.ubuntu.com/ubuntu resolute-backports/main amd64 c-n-f Metadata [112 B]
+Get:41 http://archive.ubuntu.com/ubuntu resolute-backports/universe amd64 Components [216 B]
+Get:42 http://archive.ubuntu.com/ubuntu resolute-backports/universe amd64 c-n-f Metadata [116 B]
+Get:43 http://archive.ubuntu.com/ubuntu resolute-backports/restricted amd64 Components [216 B]
+Get:44 http://archive.ubuntu.com/ubuntu resolute-backports/restricted amd64 c-n-f Metadata [120 B]
+Get:45 http://archive.ubuntu.com/ubuntu resolute-backports/multiverse amd64 Components [216 B]
+Get:46 http://archive.ubuntu.com/ubuntu resolute-backports/multiverse amd64 c-n-f Metadata [120 B]
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 30.1 MB in 2s (14.0 MB/s)
+Reading package lists...
+autopkgtest [03:05:03]: testbed release detected to be: resolute
+autopkgtest [03:05:03]: updating testbed package index for new source autopkgtest-add-apt-sources.list
+Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+Get:2 http://archive.ubuntu.com/ubuntu resolute/main Sources [1002 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute/multiverse Sources [215 kB]
+Get:4 http://archive.ubuntu.com/ubuntu resolute/universe Sources [13.4 MB]
+Get:5 http://archive.ubuntu.com/ubuntu resolute/restricted Sources [18.6 kB]
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 14.6 MB in 2s (7444 kB/s)
+Reading package lists...
+autopkgtest [03:05:05]: updating testbed package index (apt update)
+Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Hit:4 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Reading package lists...
+autopkgtest [03:05:06]: upgrading testbed (apt dist-upgrade and autopurge)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+The following upgrades have been deferred due to phasing:
+  python3-software-properties software-properties-common
+The following packages will be upgraded:
+  curl fwupd gzip iproute2 libcurl3t64-gnutls libcurl4t64 libfwupd3
+  libgcrypt20 libnghttp2-14 libnss3 libpython3.14 libpython3.14-minimal
+  libpython3.14-stdlib libsqlite3-0 libssh2-1t64 python3.14 python3.14-gdbm
+  python3.14-minimal tar tzdata ubuntu-minimal ubuntu-server ubuntu-standard
+  vim vim-common vim-runtime vim-tiny xxd
+28 upgraded, 0 newly installed, 0 to remove and 2 not upgraded.
+Need to get 39.2 MB of archives.
+After this operation, 48.1 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 gzip amd64 1.14-1~exp2ubuntu1.1 [106 kB]
+Get:2 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 tar amd64 1.35+dfsg-4ubuntu0.2 [258 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 python3.14 amd64 3.14.4-1ubuntu0.1 [830 kB]
+Get:4 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libpython3.14 amd64 3.14.4-1ubuntu0.1 [2579 kB]
+Get:5 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libpython3.14-stdlib amd64 3.14.4-1ubuntu0.1 [2414 kB]
+Get:6 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 python3.14-minimal amd64 3.14.4-1ubuntu0.1 [2580 kB]
+Get:7 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libpython3.14-minimal amd64 3.14.4-1ubuntu0.1 [916 kB]
+Get:8 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 tzdata all 2026b-0ubuntu0.26.04.1 [194 kB]
+Get:9 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libsqlite3-0 amd64 3.46.1-9ubuntu0.1 [719 kB]
+Get:10 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libgcrypt20 amd64 1.12.0-2ubuntu1 [671 kB]
+Get:11 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 iproute2 amd64 6.19.0-1ubuntu1.1 [1198 kB]
+Get:12 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 vim amd64 2:9.1.2141-1ubuntu4.6 [2063 kB]
+Get:13 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 vim-tiny amd64 2:9.1.2141-1ubuntu4.6 [868 kB]
+Get:14 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 vim-runtime all 2:9.1.2141-1ubuntu4.6 [7513 kB]
+Get:15 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 vim-common all 2:9.1.2141-1ubuntu4.6 [495 kB]
+Get:16 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 ubuntu-minimal amd64 1.570.1 [8546 B]
+Get:17 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 xxd amd64 2:9.1.2141-1ubuntu4.6 [68.6 kB]
+Get:18 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libnghttp2-14 amd64 1.68.0-2ubuntu0.2 [71.0 kB]
+Get:19 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 python3.14-gdbm amd64 3.14.4-1ubuntu0.1 [29.3 kB]
+Get:20 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 ubuntu-standard amd64 1.570.1 [8540 B]
+Get:21 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libssh2-1t64 amd64 1.11.1-1ubuntu0.26.04.2 [137 kB]
+Get:22 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 curl amd64 8.18.0-1ubuntu2.3 [272 kB]
+Get:23 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libcurl4t64 amd64 8.18.0-1ubuntu2.3 [426 kB]
+Get:24 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libcurl3t64-gnutls amd64 8.18.0-1ubuntu2.3 [417 kB]
+Get:25 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 fwupd amd64 2.1.1-1ubuntu3.1 [12.7 MB]
+Get:26 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libfwupd3 amd64 2.1.1-1ubuntu3.1 [145 kB]
+Get:27 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libnss3 amd64 2:3.120-1ubuntu2.1 [1515 kB]
+Get:28 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 ubuntu-server amd64 1.570.1 [8420 B]
+Preconfiguring packages ...
+Fetched 39.2 MB in 1s (46.3 MB/s)
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 44349 files and directories currently installed.)
+Preparing to unpack .../gzip_1.14-1~exp2ubuntu1.1_amd64.deb ...
+Unpacking gzip (1.14-1~exp2ubuntu1.1) over (1.14-1~exp2ubuntu1) ...
+Setting up gzip (1.14-1~exp2ubuntu1.1) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 44349 files and directories currently installed.)
+Preparing to unpack .../tar_1.35+dfsg-4ubuntu0.2_amd64.deb ...
+Unpacking tar (1.35+dfsg-4ubuntu0.2) over (1.35+dfsg-4ubuntu0.1) ...
+Setting up tar (1.35+dfsg-4ubuntu0.2) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 44349 files and directories currently installed.)
+Preparing to unpack .../0-python3.14_3.14.4-1ubuntu0.1_amd64.deb ...
+Unpacking python3.14 (3.14.4-1ubuntu0.1) over (3.14.4-1) ...
+Preparing to unpack .../1-libpython3.14_3.14.4-1ubuntu0.1_amd64.deb ...
+Unpacking libpython3.14:amd64 (3.14.4-1ubuntu0.1) over (3.14.4-1) ...
+Preparing to unpack .../2-libpython3.14-stdlib_3.14.4-1ubuntu0.1_amd64.deb ...
+Unpacking libpython3.14-stdlib:amd64 (3.14.4-1ubuntu0.1) over (3.14.4-1) ...
+Preparing to unpack .../3-python3.14-minimal_3.14.4-1ubuntu0.1_amd64.deb ...
+Unpacking python3.14-minimal (3.14.4-1ubuntu0.1) over (3.14.4-1) ...
+Preparing to unpack .../4-libpython3.14-minimal_3.14.4-1ubuntu0.1_amd64.deb ...
+Unpacking libpython3.14-minimal:amd64 (3.14.4-1ubuntu0.1) over (3.14.4-1) ...
+Preparing to unpack .../5-tzdata_2026b-0ubuntu0.26.04.1_all.deb ...
+Unpacking tzdata (2026b-0ubuntu0.26.04.1) over (2026a-3ubuntu1) ...
+Preparing to unpack .../6-libsqlite3-0_3.46.1-9ubuntu0.1_amd64.deb ...
+Unpacking libsqlite3-0:amd64 (3.46.1-9ubuntu0.1) over (3.46.1-9) ...
+Preparing to unpack .../7-libgcrypt20_1.12.0-2ubuntu1_amd64.deb ...
+Unpacking libgcrypt20:amd64 (1.12.0-2ubuntu1) over (1.12.0-2ubuntu0.1) ...
+Setting up libgcrypt20:amd64 (1.12.0-2ubuntu1) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 44349 files and directories currently installed.)
+Preparing to unpack .../00-iproute2_6.19.0-1ubuntu1.1_amd64.deb ...
+Unpacking iproute2 (6.19.0-1ubuntu1.1) over (6.19.0-1ubuntu1) ...
+Preparing to unpack .../01-vim_2%3a9.1.2141-1ubuntu4.6_amd64.deb ...
+Unpacking vim (2:9.1.2141-1ubuntu4.6) over (2:9.1.2141-1ubuntu4.5) ...
+Preparing to unpack .../02-vim-tiny_2%3a9.1.2141-1ubuntu4.6_amd64.deb ...
+Unpacking vim-tiny (2:9.1.2141-1ubuntu4.6) over (2:9.1.2141-1ubuntu4.5) ...
+Preparing to unpack .../03-vim-runtime_2%3a9.1.2141-1ubuntu4.6_all.deb ...
+Unpacking vim-runtime (2:9.1.2141-1ubuntu4.6) over (2:9.1.2141-1ubuntu4.5) ...
+Preparing to unpack .../04-vim-common_2%3a9.1.2141-1ubuntu4.6_all.deb ...
+Unpacking vim-common (2:9.1.2141-1ubuntu4.6) over (2:9.1.2141-1ubuntu4.5) ...
+Preparing to unpack .../05-ubuntu-minimal_1.570.1_amd64.deb ...
+Unpacking ubuntu-minimal (1.570.1) over (1.570) ...
+Preparing to unpack .../06-xxd_2%3a9.1.2141-1ubuntu4.6_amd64.deb ...
+Unpacking xxd (2:9.1.2141-1ubuntu4.6) over (2:9.1.2141-1ubuntu4.5) ...
+Preparing to unpack .../07-libnghttp2-14_1.68.0-2ubuntu0.2_amd64.deb ...
+Unpacking libnghttp2-14:amd64 (1.68.0-2ubuntu0.2) over (1.68.0-2ubuntu0.1) ...
+Preparing to unpack .../08-python3.14-gdbm_3.14.4-1ubuntu0.1_amd64.deb ...
+Unpacking python3.14-gdbm (3.14.4-1ubuntu0.1) over (3.14.4-1) ...
+Preparing to unpack .../09-ubuntu-standard_1.570.1_amd64.deb ...
+Unpacking ubuntu-standard (1.570.1) over (1.570) ...
+Preparing to unpack .../10-libssh2-1t64_1.11.1-1ubuntu0.26.04.2_amd64.deb ...
+Unpacking libssh2-1t64:amd64 (1.11.1-1ubuntu0.26.04.2) over (1.11.1-1ubuntu0.26.04.1) ...
+Preparing to unpack .../11-curl_8.18.0-1ubuntu2.3_amd64.deb ...
+Unpacking curl (8.18.0-1ubuntu2.3) over (8.18.0-1ubuntu2.1) ...
+Preparing to unpack .../12-libcurl4t64_8.18.0-1ubuntu2.3_amd64.deb ...
+Unpacking libcurl4t64:amd64 (8.18.0-1ubuntu2.3) over (8.18.0-1ubuntu2.1) ...
+Preparing to unpack .../13-libcurl3t64-gnutls_8.18.0-1ubuntu2.3_amd64.deb ...
+Unpacking libcurl3t64-gnutls:amd64 (8.18.0-1ubuntu2.3) over (8.18.0-1ubuntu2.1) ...
+Preparing to unpack .../14-fwupd_2.1.1-1ubuntu3.1_amd64.deb ...
+Unpacking fwupd (2.1.1-1ubuntu3.1) over (2.1.1-1ubuntu3) ...
+Preparing to unpack .../15-libfwupd3_2.1.1-1ubuntu3.1_amd64.deb ...
+Unpacking libfwupd3:amd64 (2.1.1-1ubuntu3.1) over (2.1.1-1ubuntu3) ...
+Preparing to unpack .../16-libnss3_2%3a3.120-1ubuntu2.1_amd64.deb ...
+Unpacking libnss3:amd64 (2:3.120-1ubuntu2.1) over (2:3.120-1ubuntu2) ...
+Preparing to unpack .../17-ubuntu-server_1.570.1_amd64.deb ...
+Unpacking ubuntu-server (1.570.1) over (1.570) ...
+Setting up iproute2 (6.19.0-1ubuntu1.1) ...
+Setting up libpython3.14-minimal:amd64 (3.14.4-1ubuntu0.1) ...
+Setting up libsqlite3-0:amd64 (3.46.1-9ubuntu0.1) ...
+Setting up libnghttp2-14:amd64 (1.68.0-2ubuntu0.2) ...
+Setting up libnss3:amd64 (2:3.120-1ubuntu2.1) ...
+Setting up ubuntu-standard (1.570.1) ...
+Setting up xxd (2:9.1.2141-1ubuntu4.6) ...
+Setting up tzdata (2026b-0ubuntu0.26.04.1) ...
+
+Current default time zone: 'Etc/UTC'
+Local time is now:      Mon Jul 13 03:05:09 UTC 2026.
+Universal Time is now:  Mon Jul 13 03:05:09 UTC 2026.
+Run 'dpkg-reconfigure tzdata' if you wish to change it.
+
+Setting up vim-common (2:9.1.2141-1ubuntu4.6) ...
+Setting up python3.14-gdbm (3.14.4-1ubuntu0.1) ...
+Setting up libssh2-1t64:amd64 (1.11.1-1ubuntu0.26.04.2) ...
+Setting up vim-runtime (2:9.1.2141-1ubuntu4.6) ...
+Setting up python3.14-minimal (3.14.4-1ubuntu0.1) ...
+Setting up libcurl4t64:amd64 (8.18.0-1ubuntu2.3) ...
+Setting up libpython3.14-stdlib:amd64 (3.14.4-1ubuntu0.1) ...
+Setting up libcurl3t64-gnutls:amd64 (8.18.0-1ubuntu2.3) ...
+Setting up libfwupd3:amd64 (2.1.1-1ubuntu3.1) ...
+Setting up vim-tiny (2:9.1.2141-1ubuntu4.6) ...
+Setting up libpython3.14:amd64 (3.14.4-1ubuntu0.1) ...
+Setting up curl (8.18.0-1ubuntu2.3) ...
+Setting up python3.14 (3.14.4-1ubuntu0.1) ...
+Setting up fwupd (2.1.1-1ubuntu3.1) ...
+fwupd-refresh.service is a disabled or a static unit not running, not starting it.
+fwupd.service is a disabled or a static unit not running, not starting it.
+Job for dbus.service failed.
+See "systemctl status dbus.service" and "journalctl -xeu dbus.service" for details.
+Setting up vim (2:9.1.2141-1ubuntu4.6) ...
+Setting up ubuntu-minimal (1.570.1) ...
+Setting up ubuntu-server (1.570.1) ...
+Processing triggers for libc-bin (2.43-2ubuntu2) ...
+Processing triggers for systemd (259.5-0ubuntu3) ...
+Processing triggers for man-db (2.13.1-1build1) ...
+Processing triggers for dbus (1.16.2-2ubuntu4) ...
+Failed to open connection to "system" message bus: Failed to query AppArmor policy: Permission denied
+Processing triggers for install-info (7.2-5ubuntu2) ...
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+
+Restarting services...
+
+Service restarts being deferred:
+ systemctl restart unattended-upgrades.service
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+0 upgraded, 0 newly installed, 0 to remove and 2 not upgraded.
+autopkgtest [03:05:13]: testbed running kernel: Linux 7.0.0-14-generic #14-Ubuntu SMP PREEMPT_DYNAMIC Mon Apr 13 11:09:53 UTC 2026
+autopkgtest [03:05:13]: @@@@@@@@@@@@@@@@@@@@ apt-source amdsmi
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+The following NEW packages will be installed:
+  bzip2 dpkg-dev libdpkg-perl lto-disabled-list make
+0 upgraded, 5 newly installed, 0 to remove and 2 not upgraded.
+Need to get 1596 kB of archives.
+After this operation, 4247 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu resolute/main amd64 bzip2 amd64 1.0.8-6build2 [34.3 kB]
+Get:2 http://archive.ubuntu.com/ubuntu resolute/main amd64 libdpkg-perl all 1.23.7ubuntu1 [289 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute/main amd64 make amd64 4.4.1-3 [197 kB]
+Get:4 http://archive.ubuntu.com/ubuntu resolute/main amd64 lto-disabled-list all 79 [14.2 kB]
+Get:5 http://archive.ubuntu.com/ubuntu resolute/main amd64 dpkg-dev all 1.23.7ubuntu1 [1062 kB]
+Fetched 1596 kB in 1s (1848 kB/s)
+Selecting previously unselected package bzip2.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 44349 files and directories currently installed.)
+Preparing to unpack .../bzip2_1.0.8-6build2_amd64.deb ...
+Unpacking bzip2 (1.0.8-6build2) ...
+Selecting previously unselected package libdpkg-perl.
+Preparing to unpack .../libdpkg-perl_1.23.7ubuntu1_all.deb ...
+Unpacking libdpkg-perl (1.23.7ubuntu1) ...
+Selecting previously unselected package make.
+Preparing to unpack .../make_4.4.1-3_amd64.deb ...
+Unpacking make (4.4.1-3) ...
+Selecting previously unselected package lto-disabled-list.
+Preparing to unpack .../lto-disabled-list_79_all.deb ...
+Unpacking lto-disabled-list (79) ...
+Selecting previously unselected package dpkg-dev.
+Preparing to unpack .../dpkg-dev_1.23.7ubuntu1_all.deb ...
+Unpacking dpkg-dev (1.23.7ubuntu1) ...
+Setting up lto-disabled-list (79) ...
+Setting up bzip2 (1.0.8-6build2) ...
+Setting up make (4.4.1-3) ...
+Setting up libdpkg-perl (1.23.7ubuntu1) ...
+Setting up dpkg-dev (1.23.7ubuntu1) ...
+Processing triggers for man-db (2.13.1-1build1) ...
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+
+Restarting services...
+
+Service restarts being deferred:
+ systemctl restart unattended-upgrades.service
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+Get:1 http://archive.ubuntu.com/ubuntu resolute/universe amdsmi 7.2.0-3 (dsc) [2443 B]
+Get:2 http://archive.ubuntu.com/ubuntu resolute/universe amdsmi 7.2.0-3 (tar) [712 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute/universe amdsmi 7.2.0-3 (diff) [156 kB]
+gpgv: Signature made Sat Mar  7 04:55:50 2026 UTC
+gpgv:                using RSA key 0B0B6E494E9D5EFB39180D9A2D192CA624770276
+gpgv:                issuer "superm1@debian.org"
+gpgv: Can't check signature: No public key
+dpkg-source: warning: cannot verify inline signature for ./amdsmi_7.2.0-3.dsc: no acceptable signature found
+autopkgtest [03:05:19]: testing package amdsmi version 7.2.0-3
+autopkgtest [03:05:19]: build not needed
+autopkgtest [03:05:19]: test run-amdsmi: preparing testbed
+autopkgtest [03:07:26]: testbed dpkg architecture: amd64
+autopkgtest [03:07:26]: testbed apt version: 3.2.0
+autopkgtest [03:07:26]: @@@@@@@@@@@@@@@@@@@@ test bed setup
+autopkgtest [03:07:26]: updating testbed package index (apt update)
+Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+Get:2 http://security.ubuntu.com/ubuntu resolute-security InRelease [137 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease [137 kB]
+Get:4 http://security.ubuntu.com/ubuntu resolute-security/main amd64 Packages [272 kB]
+Get:5 http://archive.ubuntu.com/ubuntu resolute-backports InRelease [136 kB]
+Get:6 http://archive.ubuntu.com/ubuntu resolute/universe amd64 Packages [16.0 MB]
+Get:7 http://security.ubuntu.com/ubuntu resolute-security/main Translation-en [71.6 kB]
+Get:8 http://security.ubuntu.com/ubuntu resolute-security/main amd64 Components [31.2 kB]
+Get:9 http://security.ubuntu.com/ubuntu resolute-security/main amd64 c-n-f Metadata [4616 B]
+Get:10 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Packages [130 kB]
+Get:11 http://security.ubuntu.com/ubuntu resolute-security/universe Translation-en [41.2 kB]
+Get:12 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Components [43.1 kB]
+Get:13 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 c-n-f Metadata [3552 B]
+Get:14 http://security.ubuntu.com/ubuntu resolute-security/restricted amd64 Packages [240 kB]
+Get:15 http://security.ubuntu.com/ubuntu resolute-security/restricted Translation-en [44.3 kB]
+Get:16 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 Components [212 B]
+Get:17 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 c-n-f Metadata [120 B]
+Get:18 http://archive.ubuntu.com/ubuntu resolute/universe Translation-en [6329 kB]
+Get:19 http://archive.ubuntu.com/ubuntu resolute/universe amd64 Components [4556 kB]
+Get:20 http://archive.ubuntu.com/ubuntu resolute/universe amd64 c-n-f Metadata [313 kB]
+Get:21 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 Packages [290 kB]
+Get:22 http://archive.ubuntu.com/ubuntu resolute/multiverse Translation-en [127 kB]
+Get:23 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 Components [50.0 kB]
+Get:24 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 c-n-f Metadata [8276 B]
+Get:25 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Packages [330 kB]
+Get:26 http://archive.ubuntu.com/ubuntu resolute-updates/main Translation-en [86.7 kB]
+Get:27 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Components [53.0 kB]
+Get:28 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 c-n-f Metadata [5756 B]
+Get:29 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Packages [201 kB]
+Get:30 http://archive.ubuntu.com/ubuntu resolute-updates/universe Translation-en [62.5 kB]
+Get:31 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Components [153 kB]
+Get:32 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 c-n-f Metadata [4704 B]
+Get:33 http://archive.ubuntu.com/ubuntu resolute-updates/restricted amd64 Packages [247 kB]
+Get:34 http://archive.ubuntu.com/ubuntu resolute-updates/restricted Translation-en [45.5 kB]
+Get:35 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 Packages [3328 B]
+Get:36 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse Translation-en [772 B]
+Get:37 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 Components [216 B]
+Get:38 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 c-n-f Metadata [256 B]
+Get:39 http://archive.ubuntu.com/ubuntu resolute-backports/main amd64 Components [212 B]
+Get:40 http://archive.ubuntu.com/ubuntu resolute-backports/main amd64 c-n-f Metadata [112 B]
+Get:41 http://archive.ubuntu.com/ubuntu resolute-backports/universe amd64 Components [216 B]
+Get:42 http://archive.ubuntu.com/ubuntu resolute-backports/universe amd64 c-n-f Metadata [116 B]
+Get:43 http://archive.ubuntu.com/ubuntu resolute-backports/restricted amd64 Components [216 B]
+Get:44 http://archive.ubuntu.com/ubuntu resolute-backports/restricted amd64 c-n-f Metadata [120 B]
+Get:45 http://archive.ubuntu.com/ubuntu resolute-backports/multiverse amd64 Components [216 B]
+Get:46 http://archive.ubuntu.com/ubuntu resolute-backports/multiverse amd64 c-n-f Metadata [120 B]
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 30.1 MB in 2s (13.2 MB/s)
+Reading package lists...
+autopkgtest [03:07:32]: testbed release detected to be: resolute
+autopkgtest [03:07:32]: updating testbed package index for new source autopkgtest-add-apt-sources.list
+Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+Get:2 http://archive.ubuntu.com/ubuntu resolute/universe Sources [13.4 MB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute/main Sources [1002 kB]
+Get:4 http://archive.ubuntu.com/ubuntu resolute/multiverse Sources [215 kB]
+Get:5 http://archive.ubuntu.com/ubuntu resolute/restricted Sources [18.6 kB]
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 14.6 MB in 1s (13.8 MB/s)
+Reading package lists...
+autopkgtest [03:07:33]: updating testbed package index (apt update)
+Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Hit:4 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Reading package lists...
+autopkgtest [03:07:34]: upgrading testbed (apt dist-upgrade and autopurge)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+The following upgrades have been deferred due to phasing:
+  python3-software-properties software-properties-common
+The following packages will be upgraded:
+  curl fwupd gzip iproute2 libcurl3t64-gnutls libcurl4t64 libfwupd3
+  libgcrypt20 libnghttp2-14 libnss3 libpython3.14 libpython3.14-minimal
+  libpython3.14-stdlib libsqlite3-0 libssh2-1t64 python3.14 python3.14-gdbm
+  python3.14-minimal tar tzdata ubuntu-minimal ubuntu-server ubuntu-standard
+  vim vim-common vim-runtime vim-tiny xxd
+28 upgraded, 0 newly installed, 0 to remove and 2 not upgraded.
+Need to get 39.2 MB of archives.
+After this operation, 48.1 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 gzip amd64 1.14-1~exp2ubuntu1.1 [106 kB]
+Get:2 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 tar amd64 1.35+dfsg-4ubuntu0.2 [258 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 python3.14 amd64 3.14.4-1ubuntu0.1 [830 kB]
+Get:4 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libpython3.14 amd64 3.14.4-1ubuntu0.1 [2579 kB]
+Get:5 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libpython3.14-stdlib amd64 3.14.4-1ubuntu0.1 [2414 kB]
+Get:6 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 python3.14-minimal amd64 3.14.4-1ubuntu0.1 [2580 kB]
+Get:7 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libpython3.14-minimal amd64 3.14.4-1ubuntu0.1 [916 kB]
+Get:8 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 tzdata all 2026b-0ubuntu0.26.04.1 [194 kB]
+Get:9 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libsqlite3-0 amd64 3.46.1-9ubuntu0.1 [719 kB]
+Get:10 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libgcrypt20 amd64 1.12.0-2ubuntu1 [671 kB]
+Get:11 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 iproute2 amd64 6.19.0-1ubuntu1.1 [1198 kB]
+Get:12 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 vim amd64 2:9.1.2141-1ubuntu4.6 [2063 kB]
+Get:13 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 vim-tiny amd64 2:9.1.2141-1ubuntu4.6 [868 kB]
+Get:14 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 vim-runtime all 2:9.1.2141-1ubuntu4.6 [7513 kB]
+Get:15 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 vim-common all 2:9.1.2141-1ubuntu4.6 [495 kB]
+Get:16 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 ubuntu-minimal amd64 1.570.1 [8546 B]
+Get:17 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 xxd amd64 2:9.1.2141-1ubuntu4.6 [68.6 kB]
+Get:18 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libnghttp2-14 amd64 1.68.0-2ubuntu0.2 [71.0 kB]
+Get:19 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 python3.14-gdbm amd64 3.14.4-1ubuntu0.1 [29.3 kB]
+Get:20 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 ubuntu-standard amd64 1.570.1 [8540 B]
+Get:21 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libssh2-1t64 amd64 1.11.1-1ubuntu0.26.04.2 [137 kB]
+Get:22 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 curl amd64 8.18.0-1ubuntu2.3 [272 kB]
+Get:23 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libcurl4t64 amd64 8.18.0-1ubuntu2.3 [426 kB]
+Get:24 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libcurl3t64-gnutls amd64 8.18.0-1ubuntu2.3 [417 kB]
+Get:25 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 fwupd amd64 2.1.1-1ubuntu3.1 [12.7 MB]
+Get:26 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libfwupd3 amd64 2.1.1-1ubuntu3.1 [145 kB]
+Get:27 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libnss3 amd64 2:3.120-1ubuntu2.1 [1515 kB]
+Get:28 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 ubuntu-server amd64 1.570.1 [8420 B]
+Preconfiguring packages ...
+Fetched 39.2 MB in 1s (45.1 MB/s)
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 44349 files and directories currently installed.)
+Preparing to unpack .../gzip_1.14-1~exp2ubuntu1.1_amd64.deb ...
+Unpacking gzip (1.14-1~exp2ubuntu1.1) over (1.14-1~exp2ubuntu1) ...
+Setting up gzip (1.14-1~exp2ubuntu1.1) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 44349 files and directories currently installed.)
+Preparing to unpack .../tar_1.35+dfsg-4ubuntu0.2_amd64.deb ...
+Unpacking tar (1.35+dfsg-4ubuntu0.2) over (1.35+dfsg-4ubuntu0.1) ...
+Setting up tar (1.35+dfsg-4ubuntu0.2) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 44349 files and directories currently installed.)
+Preparing to unpack .../0-python3.14_3.14.4-1ubuntu0.1_amd64.deb ...
+Unpacking python3.14 (3.14.4-1ubuntu0.1) over (3.14.4-1) ...
+Preparing to unpack .../1-libpython3.14_3.14.4-1ubuntu0.1_amd64.deb ...
+Unpacking libpython3.14:amd64 (3.14.4-1ubuntu0.1) over (3.14.4-1) ...
+Preparing to unpack .../2-libpython3.14-stdlib_3.14.4-1ubuntu0.1_amd64.deb ...
+Unpacking libpython3.14-stdlib:amd64 (3.14.4-1ubuntu0.1) over (3.14.4-1) ...
+Preparing to unpack .../3-python3.14-minimal_3.14.4-1ubuntu0.1_amd64.deb ...
+Unpacking python3.14-minimal (3.14.4-1ubuntu0.1) over (3.14.4-1) ...
+Preparing to unpack .../4-libpython3.14-minimal_3.14.4-1ubuntu0.1_amd64.deb ...
+Unpacking libpython3.14-minimal:amd64 (3.14.4-1ubuntu0.1) over (3.14.4-1) ...
+Preparing to unpack .../5-tzdata_2026b-0ubuntu0.26.04.1_all.deb ...
+Unpacking tzdata (2026b-0ubuntu0.26.04.1) over (2026a-3ubuntu1) ...
+Preparing to unpack .../6-libsqlite3-0_3.46.1-9ubuntu0.1_amd64.deb ...
+Unpacking libsqlite3-0:amd64 (3.46.1-9ubuntu0.1) over (3.46.1-9) ...
+Preparing to unpack .../7-libgcrypt20_1.12.0-2ubuntu1_amd64.deb ...
+Unpacking libgcrypt20:amd64 (1.12.0-2ubuntu1) over (1.12.0-2ubuntu0.1) ...
+Setting up libgcrypt20:amd64 (1.12.0-2ubuntu1) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 44349 files and directories currently installed.)
+Preparing to unpack .../00-iproute2_6.19.0-1ubuntu1.1_amd64.deb ...
+Unpacking iproute2 (6.19.0-1ubuntu1.1) over (6.19.0-1ubuntu1) ...
+Preparing to unpack .../01-vim_2%3a9.1.2141-1ubuntu4.6_amd64.deb ...
+Unpacking vim (2:9.1.2141-1ubuntu4.6) over (2:9.1.2141-1ubuntu4.5) ...
+Preparing to unpack .../02-vim-tiny_2%3a9.1.2141-1ubuntu4.6_amd64.deb ...
+Unpacking vim-tiny (2:9.1.2141-1ubuntu4.6) over (2:9.1.2141-1ubuntu4.5) ...
+Preparing to unpack .../03-vim-runtime_2%3a9.1.2141-1ubuntu4.6_all.deb ...
+Unpacking vim-runtime (2:9.1.2141-1ubuntu4.6) over (2:9.1.2141-1ubuntu4.5) ...
+Preparing to unpack .../04-vim-common_2%3a9.1.2141-1ubuntu4.6_all.deb ...
+Unpacking vim-common (2:9.1.2141-1ubuntu4.6) over (2:9.1.2141-1ubuntu4.5) ...
+Preparing to unpack .../05-ubuntu-minimal_1.570.1_amd64.deb ...
+Unpacking ubuntu-minimal (1.570.1) over (1.570) ...
+Preparing to unpack .../06-xxd_2%3a9.1.2141-1ubuntu4.6_amd64.deb ...
+Unpacking xxd (2:9.1.2141-1ubuntu4.6) over (2:9.1.2141-1ubuntu4.5) ...
+Preparing to unpack .../07-libnghttp2-14_1.68.0-2ubuntu0.2_amd64.deb ...
+Unpacking libnghttp2-14:amd64 (1.68.0-2ubuntu0.2) over (1.68.0-2ubuntu0.1) ...
+Preparing to unpack .../08-python3.14-gdbm_3.14.4-1ubuntu0.1_amd64.deb ...
+Unpacking python3.14-gdbm (3.14.4-1ubuntu0.1) over (3.14.4-1) ...
+Preparing to unpack .../09-ubuntu-standard_1.570.1_amd64.deb ...
+Unpacking ubuntu-standard (1.570.1) over (1.570) ...
+Preparing to unpack .../10-libssh2-1t64_1.11.1-1ubuntu0.26.04.2_amd64.deb ...
+Unpacking libssh2-1t64:amd64 (1.11.1-1ubuntu0.26.04.2) over (1.11.1-1ubuntu0.26.04.1) ...
+Preparing to unpack .../11-curl_8.18.0-1ubuntu2.3_amd64.deb ...
+Unpacking curl (8.18.0-1ubuntu2.3) over (8.18.0-1ubuntu2.1) ...
+Preparing to unpack .../12-libcurl4t64_8.18.0-1ubuntu2.3_amd64.deb ...
+Unpacking libcurl4t64:amd64 (8.18.0-1ubuntu2.3) over (8.18.0-1ubuntu2.1) ...
+Preparing to unpack .../13-libcurl3t64-gnutls_8.18.0-1ubuntu2.3_amd64.deb ...
+Unpacking libcurl3t64-gnutls:amd64 (8.18.0-1ubuntu2.3) over (8.18.0-1ubuntu2.1) ...
+Preparing to unpack .../14-fwupd_2.1.1-1ubuntu3.1_amd64.deb ...
+Unpacking fwupd (2.1.1-1ubuntu3.1) over (2.1.1-1ubuntu3) ...
+Preparing to unpack .../15-libfwupd3_2.1.1-1ubuntu3.1_amd64.deb ...
+Unpacking libfwupd3:amd64 (2.1.1-1ubuntu3.1) over (2.1.1-1ubuntu3) ...
+Preparing to unpack .../16-libnss3_2%3a3.120-1ubuntu2.1_amd64.deb ...
+Unpacking libnss3:amd64 (2:3.120-1ubuntu2.1) over (2:3.120-1ubuntu2) ...
+Preparing to unpack .../17-ubuntu-server_1.570.1_amd64.deb ...
+Unpacking ubuntu-server (1.570.1) over (1.570) ...
+Setting up iproute2 (6.19.0-1ubuntu1.1) ...
+Setting up libpython3.14-minimal:amd64 (3.14.4-1ubuntu0.1) ...
+Setting up libsqlite3-0:amd64 (3.46.1-9ubuntu0.1) ...
+Setting up libnghttp2-14:amd64 (1.68.0-2ubuntu0.2) ...
+Setting up libnss3:amd64 (2:3.120-1ubuntu2.1) ...
+Setting up ubuntu-standard (1.570.1) ...
+Setting up xxd (2:9.1.2141-1ubuntu4.6) ...
+Setting up tzdata (2026b-0ubuntu0.26.04.1) ...
+
+Current default time zone: 'Etc/UTC'
+Local time is now:      Mon Jul 13 03:07:37 UTC 2026.
+Universal Time is now:  Mon Jul 13 03:07:37 UTC 2026.
+Run 'dpkg-reconfigure tzdata' if you wish to change it.
+
+Setting up vim-common (2:9.1.2141-1ubuntu4.6) ...
+Setting up python3.14-gdbm (3.14.4-1ubuntu0.1) ...
+Setting up libssh2-1t64:amd64 (1.11.1-1ubuntu0.26.04.2) ...
+Setting up vim-runtime (2:9.1.2141-1ubuntu4.6) ...
+Setting up python3.14-minimal (3.14.4-1ubuntu0.1) ...
+Setting up libcurl4t64:amd64 (8.18.0-1ubuntu2.3) ...
+Setting up libpython3.14-stdlib:amd64 (3.14.4-1ubuntu0.1) ...
+Setting up libcurl3t64-gnutls:amd64 (8.18.0-1ubuntu2.3) ...
+Setting up libfwupd3:amd64 (2.1.1-1ubuntu3.1) ...
+Setting up vim-tiny (2:9.1.2141-1ubuntu4.6) ...
+Setting up libpython3.14:amd64 (3.14.4-1ubuntu0.1) ...
+Setting up curl (8.18.0-1ubuntu2.3) ...
+Setting up python3.14 (3.14.4-1ubuntu0.1) ...
+Setting up fwupd (2.1.1-1ubuntu3.1) ...
+fwupd-refresh.service is a disabled or a static unit not running, not starting it.
+fwupd.service is a disabled or a static unit not running, not starting it.
+Job for dbus.service failed.
+See "systemctl status dbus.service" and "journalctl -xeu dbus.service" for details.
+Setting up vim (2:9.1.2141-1ubuntu4.6) ...
+Setting up ubuntu-minimal (1.570.1) ...
+Setting up ubuntu-server (1.570.1) ...
+Processing triggers for libc-bin (2.43-2ubuntu2) ...
+Processing triggers for systemd (259.5-0ubuntu3) ...
+Processing triggers for man-db (2.13.1-1build1) ...
+Processing triggers for dbus (1.16.2-2ubuntu4) ...
+Failed to open connection to "system" message bus: Failed to query AppArmor policy: Permission denied
+Processing triggers for install-info (7.2-5ubuntu2) ...
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+
+Restarting services...
+
+Service restarts being deferred:
+ systemctl restart unattended-upgrades.service
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+0 upgraded, 0 newly installed, 0 to remove and 2 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+The following NEW packages will be installed:
+  amd-smi libamd-smi-dev libamd-smi26 libc-dev-bin libc6-dev libdrm-dev
+  libdrm-intel1 libdrm-nouveau2 libdrm-radeon1 libpciaccess-dev libpciaccess0
+  linux-libc-dev python3-argcomplete rpcsvc-proto zlib1g-dev
+0 upgraded, 15 newly installed, 0 to remove and 2 not upgraded.
+Need to get 6398 kB of archives.
+After this operation, 30.8 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu resolute/main amd64 libpciaccess0 amd64 0.18.1-1ubuntu4 [19.2 kB]
+Get:2 http://archive.ubuntu.com/ubuntu resolute/main amd64 libdrm-intel1 amd64 2.4.131-1 [66.7 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute/main amd64 libdrm-radeon1 amd64 2.4.131-1 [21.5 kB]
+Get:4 http://archive.ubuntu.com/ubuntu resolute/main amd64 libdrm-nouveau2 amd64 2.4.131-1 [18.8 kB]
+Get:5 http://archive.ubuntu.com/ubuntu resolute/main amd64 libc-dev-bin amd64 2.43-2ubuntu2 [23.3 kB]
+Get:6 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 linux-libc-dev amd64 7.0.0-27.27 [1561 kB]
+Get:7 http://archive.ubuntu.com/ubuntu resolute/main amd64 rpcsvc-proto amd64 1.4.3-1build1 [68.3 kB]
+Get:8 http://archive.ubuntu.com/ubuntu resolute/main amd64 libc6-dev amd64 2.43-2ubuntu2 [2295 kB]
+Get:9 http://archive.ubuntu.com/ubuntu resolute/main amd64 zlib1g-dev amd64 1:1.3.dfsg+really1.3.1-1ubuntu3 [895 kB]
+Get:10 http://archive.ubuntu.com/ubuntu resolute/main amd64 libpciaccess-dev amd64 0.18.1-1ubuntu4 [22.1 kB]
+Get:11 http://archive.ubuntu.com/ubuntu resolute/main amd64 libdrm-dev amd64 2.4.131-1 [321 kB]
+Get:12 http://archive.ubuntu.com/ubuntu resolute/universe amd64 libamd-smi26 amd64 7.2.0-3 [855 kB]
+Get:13 http://archive.ubuntu.com/ubuntu resolute/universe amd64 libamd-smi-dev amd64 7.2.0-3 [52.6 kB]
+Get:14 http://archive.ubuntu.com/ubuntu resolute/universe amd64 python3-argcomplete all 3.6.3-1 [36.1 kB]
+Get:15 http://archive.ubuntu.com/ubuntu resolute/universe amd64 amd-smi amd64 7.2.0-3 [142 kB]
+Fetched 6398 kB in 1s (6031 kB/s)
+Selecting previously unselected package libpciaccess0:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 44349 files and directories currently installed.)
+Preparing to unpack .../00-libpciaccess0_0.18.1-1ubuntu4_amd64.deb ...
+Unpacking libpciaccess0:amd64 (0.18.1-1ubuntu4) ...
+Selecting previously unselected package libdrm-intel1:amd64.
+Preparing to unpack .../01-libdrm-intel1_2.4.131-1_amd64.deb ...
+Unpacking libdrm-intel1:amd64 (2.4.131-1) ...
+Selecting previously unselected package libdrm-radeon1:amd64.
+Preparing to unpack .../02-libdrm-radeon1_2.4.131-1_amd64.deb ...
+Unpacking libdrm-radeon1:amd64 (2.4.131-1) ...
+Selecting previously unselected package libdrm-nouveau2:amd64.
+Preparing to unpack .../03-libdrm-nouveau2_2.4.131-1_amd64.deb ...
+Unpacking libdrm-nouveau2:amd64 (2.4.131-1) ...
+Selecting previously unselected package libc-dev-bin.
+Preparing to unpack .../04-libc-dev-bin_2.43-2ubuntu2_amd64.deb ...
+Unpacking libc-dev-bin (2.43-2ubuntu2) ...
+Selecting previously unselected package linux-libc-dev:amd64.
+Preparing to unpack .../05-linux-libc-dev_7.0.0-27.27_amd64.deb ...
+Unpacking linux-libc-dev:amd64 (7.0.0-27.27) ...
+Selecting previously unselected package rpcsvc-proto.
+Preparing to unpack .../06-rpcsvc-proto_1.4.3-1build1_amd64.deb ...
+Unpacking rpcsvc-proto (1.4.3-1build1) ...
+Selecting previously unselected package libc6-dev:amd64.
+Preparing to unpack .../07-libc6-dev_2.43-2ubuntu2_amd64.deb ...
+Unpacking libc6-dev:amd64 (2.43-2ubuntu2) ...
+Selecting previously unselected package zlib1g-dev:amd64.
+Preparing to unpack .../08-zlib1g-dev_1%3a1.3.dfsg+really1.3.1-1ubuntu3_amd64.deb ...
+Unpacking zlib1g-dev:amd64 (1:1.3.dfsg+really1.3.1-1ubuntu3) ...
+Selecting previously unselected package libpciaccess-dev:amd64.
+Preparing to unpack .../09-libpciaccess-dev_0.18.1-1ubuntu4_amd64.deb ...
+Unpacking libpciaccess-dev:amd64 (0.18.1-1ubuntu4) ...
+Selecting previously unselected package libdrm-dev:amd64.
+Preparing to unpack .../10-libdrm-dev_2.4.131-1_amd64.deb ...
+Unpacking libdrm-dev:amd64 (2.4.131-1) ...
+Selecting previously unselected package libamd-smi26.
+Preparing to unpack .../11-libamd-smi26_7.2.0-3_amd64.deb ...
+Unpacking libamd-smi26 (7.2.0-3) ...
+Selecting previously unselected package libamd-smi-dev.
+Preparing to unpack .../12-libamd-smi-dev_7.2.0-3_amd64.deb ...
+Unpacking libamd-smi-dev (7.2.0-3) ...
+Selecting previously unselected package python3-argcomplete.
+Preparing to unpack .../13-python3-argcomplete_3.6.3-1_all.deb ...
+Unpacking python3-argcomplete (3.6.3-1) ...
+Selecting previously unselected package amd-smi.
+Preparing to unpack .../14-amd-smi_7.2.0-3_amd64.deb ...
+Unpacking amd-smi (7.2.0-3) ...
+Setting up libpciaccess0:amd64 (0.18.1-1ubuntu4) ...
+Setting up libdrm-nouveau2:amd64 (2.4.131-1) ...
+Setting up libdrm-radeon1:amd64 (2.4.131-1) ...
+Setting up libdrm-intel1:amd64 (2.4.131-1) ...
+Setting up linux-libc-dev:amd64 (7.0.0-27.27) ...
+Setting up rpcsvc-proto (1.4.3-1build1) ...
+Setting up libc-dev-bin (2.43-2ubuntu2) ...
+Setting up python3-argcomplete (3.6.3-1) ...
+Setting up libc6-dev:amd64 (2.43-2ubuntu2) ...
+Setting up zlib1g-dev:amd64 (1:1.3.dfsg+really1.3.1-1ubuntu3) ...
+Setting up libpciaccess-dev:amd64 (0.18.1-1ubuntu4) ...
+Setting up libdrm-dev:amd64 (2.4.131-1) ...
+Setting up libamd-smi26 (7.2.0-3) ...
+Setting up libamd-smi-dev (7.2.0-3) ...
+Setting up amd-smi (7.2.0-3) ...
+Processing triggers for man-db (2.13.1-1build1) ...
+Processing triggers for libc-bin (2.43-2ubuntu2) ...
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+
+Restarting services...
+
+Service restarts being deferred:
+ systemctl restart unattended-upgrades.service
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+autopkgtest [03:07:45]: test run-amdsmi: /bin/bash debian/tests/amdsmi.sh
+autopkgtest [03:07:45]: test run-amdsmi: [-----------------------
+/usr/bin/amd-smi
+usage: amd-smi [-h]  ...
+
+AMD System Management Interface | Version: 26.2.1+unknown | ROCm version: N/A | Platform:
+Linux Guest (Passthrough)
+
+options:
+  -h, --help          show this help message and exit
+
+AMD-SMI Commands:
+                      Descriptions:
+    version           Display version information
+    list              List GPU information
+    static            Gets static information about the specified GPU
+    firmware (ucode)  Gets firmware information about the specified GPU
+    bad-pages         Gets bad page information about the specified GPU
+    metric            Gets metric/performance information about the specified GPU
+    process           Lists compute process information running on the specified GPU
+    event             Displays event information for the given GPU
+    topology          Displays topology information of the devices
+    set               Set options for devices
+    reset             Reset options for devices
+    monitor (dmon)    Monitor metrics for target devices
+    xgmi              Displays xgmi information of the devices
+    partition         Displays partition information of the devices
+    ras               Retrieve RAS (CPER) entries from the driver
+    node              Gets power information for the node
+
+For detailed help on specific commands: amd-smi [command] -h
+AMDSMI Tool: 26.2.1+unknown | AMDSMI Library version: 26.2.1 | ROCm version: N/A | amdgpu version: Linuxversion7.0.0-14-generic(buildd@lcy02-amd64-043)(x86_64-linux-gnu-gcc(Ubuntu15.2.0-16ubuntu1)15.2.0,GNUld(GNUBinutilsforUbuntu)2.46)#14-UbuntuSMPPREEMPT_DYNAMICMonApr1311:09:53UTC2026 | hsmp version: N/A
+GPU: 0
+    BDF: 0000:01:00.0
+    UUID: 01ff7551-0000-1000-80f5-79ed4b1f22d9
+    KFD_ID: 8001
+    NODE_ID: 1
+    PARTITION_ID: 0
+
+GPU: 0
+    ASIC:
+        MARKET_NAME: AMD Radeon AI PRO R9700
+        VENDOR_ID: 0x1002
+        VENDOR_NAME: Advanced Micro Devices Inc. [AMD/ATI]
+        SUBVENDOR_ID: 0x1043
+        DEVICE_ID: 0x7551
+        SUBSYSTEM_ID: 0x0626
+        REV_ID: 0xc0
+        ASIC_SERIAL: 0x01F579ED4B1F22D9
+        OAM_ID: N/A
+        NUM_COMPUTE_UNITS: 64
+        TARGET_GRAPHICS_VERSION: gfx1201
+    BUS:
+        BDF: 0000:01:00.0
+        MAX_PCIE_WIDTH: 16
+        MAX_PCIE_SPEED: 32 GT/s
+        PCIE_LEVELS:
+            0: (16.0 GT/s, 16)
+            1: (16.0 GT/s, 16)
+            2: (16.0 GT/s, 16)
+        PCIE_INTERFACE_VERSION: Gen 5
+        SLOT_TYPE: CEM
+    IFWI:
+        NAME: 7551OG.23.8.0.68.AS01
+        BUILD_DATE: 2025/07/25 02:32
+        PART_NUMBER: 115-G287BP00-100
+        VERSION: 00158744
+    LIMIT:
+        PPT0:
+            MAX_POWER_LIMIT: 300 W
+            MIN_POWER_LIMIT: 210 W
+            SOCKET_POWER_LIMIT: 300 W
+        PPT1:
+            MAX_POWER_LIMIT: N/A
+            MIN_POWER_LIMIT: N/A
+            SOCKET_POWER_LIMIT: N/A
+        SLOWDOWN_EDGE_TEMPERATURE: 110 °C
+        SLOWDOWN_HOTSPOT_TEMPERATURE: 110 °C
+        SLOWDOWN_VRAM_TEMPERATURE: 108 °C
+        SHUTDOWN_EDGE_TEMPERATURE: 115 °C
+        SHUTDOWN_HOTSPOT_TEMPERATURE: 115 °C
+        SHUTDOWN_VRAM_TEMPERATURE: 113 °C
+        PTL_STATE: N/A
+        PTL_FORMAT: N/A
+    DRIVER:
+        NAME: amdgpu
+        VERSION: Linuxversion7.0.0-14-generic(buildd@lcy02-amd64-043)(x86_64-linux-gnu-gcc(Ubuntu15.2.0-16ubuntu1)15.2.0,GNUld(GNUBinutilsforUbuntu)2.46)#14-UbuntuSMPPREEMPT_DYNAMICMonApr1311:09:53UTC2026
+    BOARD:
+        MODEL_NUMBER: N/A
+        PRODUCT_SERIAL: N/A
+        FRU_ID: N/A
+        PRODUCT_NAME: Navi 48 [Radeon AI PRO R9700]
+        MANUFACTURER_NAME: Advanced Micro Devices, Inc. [AMD/ATI]
+    RAS:
+        EEPROM_VERSION: 0x10000
+        BAD_PAGE_THRESHOLD: N/A
+        BAD_PAGE_THRESHOLD_EXCEEDED: N/A
+        PARITY_SCHEMA: ENABLED
+        SINGLE_BIT_SCHEMA: ENABLED
+        DOUBLE_BIT_SCHEMA: ENABLED
+        POISON_SCHEMA: DISABLED
+        ECC_BLOCK_STATE:
+            UMC: ENABLED
+            SDMA: DISABLED
+            GFX: DISABLED
+            MMHUB: DISABLED
+            ATHUB: DISABLED
+            PCIE_BIF: DISABLED
+            HDP: DISABLED
+            XGMI_WAFL: DISABLED
+            DF: ENABLED
+            SMN: DISABLED
+            SEM: DISABLED
+            MP0: DISABLED
+            MP1: DISABLED
+            FUSE: DISABLED
+            MCA: DISABLED
+            VCN: DISABLED
+            JPEG: DISABLED
+            IH: DISABLED
+            MPIO: DISABLED
+    SOC_PSTATE: N/A
+    XGMI_PLPD: N/A
+    PROCESS_ISOLATION: Disabled
+    NUMA:
+        NODE: 0
+        AFFINITY: NONE
+        CPU_AFFINITY: N/A
+        SOCKET_AFFINITY: N/A
+    VRAM:
+        TYPE: GDDR6
+        VENDOR: SAMSUNG
+        SIZE: 32624 MB
+        BIT_WIDTH: 256
+        MAX_BANDWIDTH: N/A 
+    CACHE_INFO:
+        CACHE_0:
+            CACHE_PROPERTIES: DATA_CACHE, SIMD_CACHE
+            CACHE_SIZE: 32 KB
+            CACHE_LEVEL: 1
+            MAX_NUM_CU_SHARED: 1
+            NUM_CACHE_INSTANCE: 64
+        CACHE_1:
+            CACHE_PROPERTIES: INST_CACHE, SIMD_CACHE
+            CACHE_SIZE: 32 KB
+            CACHE_LEVEL: 1
+            MAX_NUM_CU_SHARED: 2
+            NUM_CACHE_INSTANCE: 32
+        CACHE_2:
+            CACHE_PROPERTIES: DATA_CACHE, SIMD_CACHE
+            CACHE_SIZE: 16 KB
+            CACHE_LEVEL: 1
+            MAX_NUM_CU_SHARED: 2
+            NUM_CACHE_INSTANCE: 32
+        CACHE_3:
+            CACHE_PROPERTIES: DATA_CACHE, SIMD_CACHE
+            CACHE_SIZE: 256 KB
+            CACHE_LEVEL: 1
+            MAX_NUM_CU_SHARED: 8
+            NUM_CACHE_INSTANCE: 8
+        CACHE_4:
+            CACHE_PROPERTIES: DATA_CACHE, SIMD_CACHE
+            CACHE_SIZE: 8192 KB
+            CACHE_LEVEL: 2
+            MAX_NUM_CU_SHARED: 64
+            NUM_CACHE_INSTANCE: 1
+        CACHE_5:
+            CACHE_PROPERTIES: DATA_CACHE, SIMD_CACHE
+            CACHE_SIZE: 65536 KB
+            CACHE_LEVEL: 3
+            MAX_NUM_CU_SHARED: 64
+            NUM_CACHE_INSTANCE: 1
+    MEM_CARVEOUT: N/A
+    CLOCK:
+        SYS:
+            CURRENT_LEVEL: 1
+            CURRENT_FREQUENCY: 1211MHz
+            FREQUENCY_LEVELS:
+                LEVEL 0: 500 MHz
+                LEVEL 1: 1211 MHz
+                LEVEL 2: 2350 MHz
+        MEM:
+            CURRENT_LEVEL: 0
+            CURRENT_FREQUENCY: 96MHz
+            FREQUENCY_LEVELS:
+                LEVEL 0: 96 MHz
+                LEVEL 1: 456 MHz
+                LEVEL 2: 772 MHz
+                LEVEL 3: 875 MHz
+                LEVEL 4: 1124 MHz
+                LEVEL 5: 1258 MHz
+        DF:
+            CURRENT_LEVEL: 1
+            CURRENT_FREQUENCY: 582MHz
+            FREQUENCY_LEVELS:
+                LEVEL 0: 313 MHz
+                LEVEL 1: 582 MHz
+                LEVEL 2: 2400 MHz
+        SOC:
+            CURRENT_LEVEL: 0
+            CURRENT_FREQUENCY: 417MHz
+            FREQUENCY_LEVELS:
+                LEVEL 0: 417 MHz
+                LEVEL 1: 1476 MHz
+        DCEF:
+            CURRENT_LEVEL: 1
+            CURRENT_FREQUENCY: 219MHz
+            FREQUENCY_LEVELS:
+                LEVEL 0: 147 MHz
+                LEVEL 1: 219 MHz
+                LEVEL 2: 1800 MHz
+        VCLK0:
+            CURRENT_LEVEL: 0
+            CURRENT_FREQUENCY: 25MHz
+            FREQUENCY_LEVELS:
+                LEVEL 0: 25 MHz
+        VCLK1:
+            CURRENT_LEVEL: 0
+            CURRENT_FREQUENCY: 25MHz
+            FREQUENCY_LEVELS:
+                LEVEL 0: 25 MHz
+        DCLK0:
+            CURRENT_LEVEL: 0
+            CURRENT_FREQUENCY: 25MHz
+            FREQUENCY_LEVELS:
+                LEVEL 0: 25 MHz
+        DCLK1:
+            CURRENT_LEVEL: 0
+            CURRENT_FREQUENCY: 25MHz
+            FREQUENCY_LEVELS:
+                LEVEL 0: 25 MHz
+
+GPU: 0
+    USAGE:
+        GFX_ACTIVITY: 4 %
+        UMC_ACTIVITY: 0 %
+        MM_ACTIVITY: 0 %
+        VCN_ACTIVITY: [0 %, N/A, N/A, N/A]
+        JPEG_ACTIVITY: [N/A, N/A, N/A, N/A, N/A, N/A, N/A, N/A, N/A, N/A, N/A, N/A, N/A, N/A, N/A, N/A, N/A, N/A, N/A, N/A, N/A, N/A, N/A, N/A, N/A, N/A, N/A, N/A, N/A, N/A, N/A, N/A]
+        GFX_BUSY_INST: N/A
+        JPEG_BUSY: N/A
+        VCN_BUSY: N/A
+    POWER:
+        SOCKET_POWER: 14 W
+        GFX_VOLTAGE: 638 mV
+        SOC_VOLTAGE: 818 mV
+        MEM_VOLTAGE: 1264 mV
+        THROTTLE_STATUS: THROTTLED
+        POWER_MANAGEMENT: ENABLED
+    CLOCK:
+        GFX_0:
+            CLK: 59 MHz
+            MIN_CLK: 500 MHz
+            MAX_CLK: 2350 MHz
+            DEEP_SLEEP: ENABLED
+        MEM_0:
+            CLK: 96 MHz
+            MIN_CLK: 96 MHz
+            MAX_CLK: 1258 MHz
+            DEEP_SLEEP: DISABLED
+        VCLK_0:
+            CLK: 25 MHz
+        DCLK_0:
+            CLK: 25 MHz
+        FCLK_0:
+            CLK: 582 MHz
+            MIN_CLK: 313 MHz
+            MAX_CLK: 2400 MHz
+            DEEP_SLEEP: DISABLED
+        SOCCLK_0:
+            CLK: 417 MHz
+            MIN_CLK: 417 MHz
+            MAX_CLK: 1476 MHz
+            DEEP_SLEEP: DISABLED
+    TEMPERATURE:
+        EDGE: 32 °C
+        HOTSPOT: 34 °C
+        MEM: 32 °C
+    PCIE:
+        WIDTH: 16
+        SPEED: 16 GT/s
+        BANDWIDTH: N/A
+        REPLAY_COUNT: N/A
+        L0_TO_RECOVERY_COUNT: N/A
+        REPLAY_ROLL_OVER_COUNT: N/A
+        NAK_SENT_COUNT: N/A
+        NAK_RECEIVED_COUNT: N/A
+        CURRENT_BANDWIDTH_SENT: N/A
+        CURRENT_BANDWIDTH_RECEIVED: N/A
+        MAX_PACKET_SIZE: N/A
+        LC_PERF_OTHER_END_RECOVERY: N/A
+    ECC:
+        TOTAL_CORRECTABLE_COUNT: 0
+        TOTAL_UNCORRECTABLE_COUNT: 0
+        TOTAL_DEFERRED_COUNT: 0
+        CACHE_CORRECTABLE_COUNT: 0
+        CACHE_UNCORRECTABLE_COUNT: 0
+    ECC_BLOCKS:
+        UMC:
+            CORRECTABLE_COUNT: 0
+            UNCORRECTABLE_COUNT: 0
+            DEFERRED_COUNT: 0
+    FAN:
+        SPEED: 76
+        MAX: 255
+        RPM: 1972
+        USAGE: 29.8 %
+    VOLTAGE_CURVE:
+        POINT_0_FREQUENCY: N/A
+        POINT_0_VOLTAGE: N/A
+        POINT_1_FREQUENCY: N/A
+        POINT_1_VOLTAGE: N/A
+        POINT_2_FREQUENCY: N/A
+        POINT_2_VOLTAGE: N/A
+    OVERDRIVE: N/A
+    MEM_OVERDRIVE: N/A
+    PERF_LEVEL: AMDSMI_DEV_PERF_LEVEL_AUTO
+    XGMI_ERR: N/A
+    VOLTAGE:
+        VDDBOARD: N/A
+    ENERGY:
+        TOTAL_ENERGY_CONSUMPTION: 0.0 J
+    MEM_USAGE:
+        TOTAL_VRAM: 32624 MB
+        USED_VRAM: 57 MB
+        FREE_VRAM: 32567 MB
+        TOTAL_VISIBLE_VRAM: 32624 MB
+        USED_VISIBLE_VRAM: 57 MB
+        FREE_VISIBLE_VRAM: 32567 MB
+        TOTAL_GTT: 3606 MB
+        USED_GTT: 14 MB
+        FREE_GTT: 3592 MB
+    THROTTLE:
+        ACCUMULATION_COUNTER: N/A
+        PROCHOT_ACCUMULATED: N/A
+        PPT_ACCUMULATED: N/A
+        SOCKET_THERMAL_ACCUMULATED: N/A
+        VR_THERMAL_ACCUMULATED: N/A
+        HBM_THERMAL_ACCUMULATED: N/A
+        GFX_CLK_BELOW_HOST_LIMIT_ACCUMULATED: N/A
+        GFX_CLK_BELOW_HOST_LIMIT_POWER_ACCUMULATED: N/A
+        GFX_CLK_BELOW_HOST_LIMIT_THERMAL_ACCUMULATED: N/A
+        TOTAL_GFX_CLK_BELOW_HOST_LIMIT_ACCUMULATED: N/A
+        LOW_UTILIZATION_ACCUMULATED: N/A
+        PROCHOT_VIOLATION_STATUS: N/A
+        PPT_VIOLATION_STATUS: N/A
+        SOCKET_THERMAL_VIOLATION_STATUS: N/A
+        VR_THERMAL_VIOLATION_STATUS: N/A
+        HBM_THERMAL_VIOLATION_STATUS: N/A
+        GFX_CLK_BELOW_HOST_LIMIT_VIOLATION_STATUS: N/A
+        GFX_CLK_BELOW_HOST_LIMIT_POWER_VIOLATION_STATUS: N/A
+        GFX_CLK_BELOW_HOST_LIMIT_THERMAL_VIOLATION_STATUS: N/A
+        TOTAL_GFX_CLK_BELOW_HOST_LIMIT_VIOLATION_STATUS: N/A
+        LOW_UTILIZATION_VIOLATION_STATUS: N/A
+        PROCHOT_VIOLATION_ACTIVITY: N/A
+        PPT_VIOLATION_ACTIVITY: N/A
+        SOCKET_THERMAL_VIOLATION_ACTIVITY: N/A
+        VR_THERMAL_VIOLATION_ACTIVITY: N/A
+        HBM_THERMAL_VIOLATION_ACTIVITY: N/A
+        GFX_CLK_BELOW_HOST_LIMIT_VIOLATION_ACTIVITY: N/A
+        GFX_CLK_BELOW_HOST_LIMIT_POWER_VIOLATION_ACTIVITY: N/A
+        GFX_CLK_BELOW_HOST_LIMIT_THERMAL_VIOLATION_ACTIVITY: N/A
+        TOTAL_GFX_CLK_BELOW_HOST_LIMIT_VIOLATION_ACTIVITY: N/A
+        LOW_UTILIZATION_VIOLATION_ACTIVITY: N/A
+
+ACCESS TABLE:
+             0000:01:00.0
+0000:01:00.0 ENABLED
+WEIGHT TABLE:
+             0000:01:00.0
+0000:01:00.0 0
+HOPS TABLE:
+             0000:01:00.0
+0000:01:00.0 0
+LINK TYPE TABLE:
+             0000:01:00.0
+0000:01:00.0 SELF
+NUMA BW TABLE:
+             0000:01:00.0
+0000:01:00.0 N/A
+CACHE COHERANCY TABLE:
+             0000:01:00.0
+0000:01:00.0 SELF
+ATOMICS TABLE:
+             0000:01:00.0
+0000:01:00.0 SELF
+DMA TABLE:
+             0000:01:00.0
+0000:01:00.0 SELF
+BI-DIRECTIONAL TABLE:
+             0000:01:00.0
+0000:01:00.0 SELF
+
+
+Legend:
+  SELF = Current GPU
+  ENABLED / DISABLED = Link is enabled or disabled
+  N/A = Not supported
+  T/F = True / False
+  C/NC = Coherant / Non-Coherant io links
+  64,32 = 64 bit and 32 bit atomic support
+  <BW from>-<BW to>
+GPU  XCP  POWER   GPU_T   MEM_T   GFX_CLK   GFX%   MEM%   ENC%   DEC%      VRAM_USAGE
+  0    0   14 W   34 °C   32 °C    78 MHz    5 %    0 %    N/A    0 %    0.1/ 31.9 GB
+autopkgtest [03:07:46]: test run-amdsmi: -----------------------]
+autopkgtest [03:07:46]: test run-amdsmi:  - - - - - - - - - - results - - - - - - - - - -
+run-amdsmi           PASS
+autopkgtest [03:07:47]: @@@@@@@@@@@@@@@@@@@@ summary
+run-amdsmi           PASS

@@ -1,0 +1,7 @@
+++ mktemp -d
++ OUT=/tmp/tmp.fpHunYoNUx
++ hipcc -o /tmp/tmp.fpHunYoNUx/test test.cpp
++ /tmp/tmp.fpHunYoNUx/test
+Agent AMD Radeon AI PRO R9700
+System version 12.0
+TESTS PASSED!
