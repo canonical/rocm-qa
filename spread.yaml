@@ -97,6 +97,75 @@ prepare: |
   DEBIAN_FRONTEND=noninteractive apt install -y \
     software-properties-common autopkgtest dnsmasq-base
 suites:
+  packages/amdsmi/tests/level-one/:
+    summary: level one integration tests for amdsmi package
+    prepare: |
+      echo "Preparing.."
+      # TODO: enable ppa here maybe we also need to disable it in `restore:`
+  packages/hipblas/tests/level-one/:
+    summary: level one integration tests for hipblas package
+  packages/hipblas-common/tests/level-one/:
+    summary: level one integration tests for hipblas-common package
+  packages/hipblaslt/tests/level-one/:
+    summary: level one integration tests for hipblaslt package
+  packages/rocdbgapi/tests/level-one/:
+    summary: level one integration tests for rocdbgapi package
+  packages/hipify/tests/level-one/:
+    summary: level one integration tests for hipify package
+  packages/rocm-core/tests/level-one/:
+    summary: level one integration tests for rocm-core package
+  packages/rocm-cmake/tests/level-one/:
+    summary: level one integration tests for rocm-cmake package
+  packages/rocm-smi-lib/tests/level-one/:
+    summary: level one integration tests for rocm-smi-lib package
+  packages/rocminfo/tests/level-one/:
+    summary: level one integration tests for rocminfo package
+  packages/rocr-runtime/tests/level-one/:
+    summary: level one integration tests for rocr-runtime package
+  packages/rocfft/tests/level-one/:
+    summary: level one integration tests for rocfft package
+  packages/rocm/tests/level-one/:
+    summary: level one integration tests for rocm package
+  packages/hiprand/tests/level-one/:
+    summary: level one integration tests for hiprand package
+  packages/hipsolver/tests/level-one/:
+    summary: level one integration tests for hipsolver package
+  packages/hipsparse/tests/level-one/:
+    summary: level one integration tests for hipsparse package
+  packages/hipsparselt/tests/level-one/:
+    summary: level one integration tests for hipsparselt package
+  packages/rocalution/tests/level-one/:
+    summary: level one integration tests for rocalution package
+  packages/hipcub/tests/level-one/:
+    summary: level one integration tests for hipcub package
+  packages/hipfft/tests/level-one/:
+    summary: level one integration tests for hipfft package
+  packages/rocwmma/tests/level-one/:
+    summary: level one integration tests for rocwmma package
+  packages/rocblas/tests/level-one/:
+    summary: level one integration tests for rocblas package
+  packages/rocprim/tests/level-one/:
+    summary: level one integration tests for rocprim package
+  packages/rocrand/tests/level-one/:
+    summary: level one integration tests for rocrand package
+  packages/rocsolver/tests/level-one/:
+    summary: level one integration tests for rocsolver package
+  packages/rocsparse/tests/level-one/:
+    summary: level one integration tests for rocsparse package
+  packages/rocthrust/tests/level-one/:
+    summary: level one integration tests for rocthrust package
+  packages/roctracer/tests/level-one/:
+    summary: level one integration tests for roctracer package
+  packages/rccl/tests/level-one/:
+    summary: level one integration tests for rccl package
+  packages/rocm-hipamd/tests/level-one/:
+    summary: level one integration tests for rocm-hipamd package
+  packages/rocm-llvm/tests/level-one/:
+    summary: level one integration tests for rocm-llvm package
+  packages/llvm-toolchain-rocm/tests/level-one/:
+    summary: level one integration tests for llvm-toolchain-rocm package
+  packages/miopen/tests/level-one/:
+    summary: level one integration tests for miopen package
   tests/llama.cpp/smoke/:
     summary: smoke tests for llama.cpp with ROCm
   tests/llama.cpp/prompt/:
