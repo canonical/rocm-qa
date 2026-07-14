@@ -1,0 +1,635 @@
+autopkgtest [23:23:39]: starting date and time: 2026-07-14 23:23:39+0000
+autopkgtest [23:23:39]: version 5.55
+autopkgtest [23:23:39]: host lxc-sessionizer-github-1; command line: /usr/bin/autopkgtest hipsolver -U '--setup-commands=add-apt-repository -ss -y' '--setup-commands=add-apt-repository ppa:bullwinkle-team/rocm-devel --enable-source -y' -- lxd ubuntu-daily:resolute --profile=rocm-gpu
+autopkgtest [23:25:50]: testbed dpkg architecture: amd64
+autopkgtest [23:25:50]: testbed apt version: 3.2.0
+autopkgtest [23:25:50]: @@@@@@@@@@@@@@@@@@@@ test bed setup
+autopkgtest [23:25:50]: updating testbed package index (apt update)
+Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+Get:2 http://security.ubuntu.com/ubuntu resolute-security InRelease [137 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease [137 kB]
+Get:4 http://security.ubuntu.com/ubuntu resolute-security/main amd64 Packages [282 kB]
+Get:5 http://archive.ubuntu.com/ubuntu resolute-backports InRelease [136 kB]
+Get:6 http://archive.ubuntu.com/ubuntu resolute/universe amd64 Packages [16.0 MB]
+Get:7 http://security.ubuntu.com/ubuntu resolute-security/main Translation-en [74.5 kB]
+Get:8 http://security.ubuntu.com/ubuntu resolute-security/main amd64 Components [31.2 kB]
+Get:9 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Packages [137 kB]
+Get:10 http://security.ubuntu.com/ubuntu resolute-security/universe Translation-en [43.5 kB]
+Get:11 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Components [43.1 kB]
+Get:12 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 c-n-f Metadata [3552 B]
+Get:13 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 Components [212 B]
+Get:14 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 c-n-f Metadata [120 B]
+Get:15 http://archive.ubuntu.com/ubuntu resolute/universe Translation-en [6329 kB]
+Get:16 http://archive.ubuntu.com/ubuntu resolute/universe amd64 Components [4556 kB]
+Get:17 http://archive.ubuntu.com/ubuntu resolute/universe amd64 c-n-f Metadata [313 kB]
+Get:18 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 Packages [290 kB]
+Get:19 http://archive.ubuntu.com/ubuntu resolute/multiverse Translation-en [127 kB]
+Get:20 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 Components [50.0 kB]
+Get:21 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 c-n-f Metadata [8276 B]
+Get:22 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Packages [340 kB]
+Get:23 http://archive.ubuntu.com/ubuntu resolute-updates/main Translation-en [89.4 kB]
+Get:24 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Components [53.1 kB]
+Get:25 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Packages [208 kB]
+Get:26 http://archive.ubuntu.com/ubuntu resolute-updates/universe Translation-en [64.8 kB]
+Get:27 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Components [153 kB]
+Get:28 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 c-n-f Metadata [4704 B]
+Get:29 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 Packages [3328 B]
+Get:30 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse Translation-en [772 B]
+Get:31 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 Components [216 B]
+Get:32 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 c-n-f Metadata [256 B]
+Get:33 http://archive.ubuntu.com/ubuntu resolute-backports/main amd64 Components [212 B]
+Get:34 http://archive.ubuntu.com/ubuntu resolute-backports/main amd64 c-n-f Metadata [112 B]
+Get:35 http://archive.ubuntu.com/ubuntu resolute-backports/universe amd64 Components [216 B]
+Get:36 http://archive.ubuntu.com/ubuntu resolute-backports/universe amd64 c-n-f Metadata [116 B]
+Get:37 http://archive.ubuntu.com/ubuntu resolute-backports/restricted amd64 Components [216 B]
+Get:38 http://archive.ubuntu.com/ubuntu resolute-backports/restricted amd64 c-n-f Metadata [120 B]
+Get:39 http://archive.ubuntu.com/ubuntu resolute-backports/multiverse amd64 Components [216 B]
+Get:40 http://archive.ubuntu.com/ubuntu resolute-backports/multiverse amd64 c-n-f Metadata [120 B]
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 29.6 MB in 2s (14.2 MB/s)
+Reading package lists...
+autopkgtest [23:25:55]: testbed release detected to be: resolute
+autopkgtest [23:25:55]: updating testbed package index (apt update)
+Hit:1 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Reading package lists...
+Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Get:4 http://archive.ubuntu.com/ubuntu resolute/restricted Sources [18.6 kB]
+Get:5 http://archive.ubuntu.com/ubuntu resolute/universe Sources [13.4 MB]
+Hit:6 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Get:7 http://security.ubuntu.com/ubuntu resolute-security/universe Sources [45.8 kB]
+Get:8 http://archive.ubuntu.com/ubuntu resolute/main Sources [1002 kB]
+Get:9 http://archive.ubuntu.com/ubuntu resolute/multiverse Sources [215 kB]
+Get:10 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse Sources [5596 B]
+Get:11 http://archive.ubuntu.com/ubuntu resolute-updates/main Sources [152 kB]
+Get:12 http://archive.ubuntu.com/ubuntu resolute-updates/restricted Sources [21.0 kB]
+Get:13 http://archive.ubuntu.com/ubuntu resolute-updates/universe Sources [76.8 kB]
+Get:14 http://security.ubuntu.com/ubuntu resolute-security/restricted Sources [21.1 kB]
+Get:15 http://security.ubuntu.com/ubuntu resolute-security/main Sources [120 kB]
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 15.1 MB in 1s (14.6 MB/s)
+Reading package lists...
+Enabling deb-src for all repositories.
+Added: ## Ubuntu distribution repository
+##
+## The following settings can be adjusted to configure which packages to use from Ubuntu.
+## Mirror your choices (except for URIs and Suites) in the security section below to
+## ensure timely security updates.
+##
+## Types: Append deb-src to enable the fetching of source package.
+## URIs: A URL to the repository (you may add multiple URLs)
+## Suites: The following additional suites can be configured
+##   <name>-updates   - Major bug fix updates produced after the final release of the
+##                      distribution.
+##   <name>-backports - software from this repository may not have been tested as
+##                      extensively as that contained in the main release, although it includes
+##                      newer versions of some applications which may provide useful features.
+##                      Also, please note that software in backports WILL NOT receive any review
+##                      or updates from the Ubuntu security team.
+## Components: Aside from main, the following components can be added to the list
+##   restricted  - Software that may not be under a free license, or protected by patents.
+##   universe    - Community maintained packages. Software in this repository receives maintenance
+##                 from volunteers in the Ubuntu community, or a 10 year security maintenance
+##                 commitment from Canonical when an Ubuntu Pro subscription is attached.
+##   multiverse  - Community maintained of restricted. Software from this repository is
+##                 ENTIRELY UNSUPPORTED by the Ubuntu team, and may not be under a free
+##                 licence. Please satisfy yourself as to your rights to use the software.
+##                 Also, please note that software in multiverse WILL NOT receive any
+##                 review or updates from the Ubuntu security team.
+##
+## See the sources.list(5) manual page for further settings.
+Types: deb-src
+URIs: http://archive.ubuntu.com/ubuntu
+Suites: resolute resolute-updates resolute-backports
+Components: universe main restricted multiverse
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+Added: ## Ubuntu security updates. Aside from URIs and Suites,
+## this should mirror your choices in the previous section.
+Types: deb-src
+URIs: http://security.ubuntu.com/ubuntu
+Suites: resolute-security
+Components: universe main restricted multiverse
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+Get:2 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute InRelease [27.2 kB]
+Hit:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Get:4 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main Sources [18.6 kB]
+Get:5 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main amd64 Packages [29.7 kB]
+Get:6 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main Translation-en [13.1 kB]
+Hit:7 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Hit:8 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 88.6 kB in 0s (444 kB/s)
+Reading package lists...
+PPA publishes dbgsym, you may need to include 'main/debug' component
+Repository: 'Types: deb
+URIs: https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu/
+Suites: resolute
+Components: main
+'
+Description:
+Development archive for AMD ROCm packages on Ubuntu with an aim to have packages build for next Ubuntu release
+More info: https://launchpad.net/~bullwinkle-team/+archive/ubuntu/rocm-devel
+Adding repository.
+autopkgtest [23:26:14]: upgrading testbed (apt dist-upgrade and autopurge)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+The following packages will be upgraded:
+  python3-httplib2 vim vim-common vim-runtime vim-tiny wget xxd
+7 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Need to get 11.4 MB of archives.
+After this operation, 4096 B of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 vim amd64 2:9.1.2141-1ubuntu4.7 [2064 kB]
+Get:2 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 vim-common all 2:9.1.2141-1ubuntu4.7 [495 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 vim-tiny amd64 2:9.1.2141-1ubuntu4.7 [868 kB]
+Get:4 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 vim-runtime all 2:9.1.2141-1ubuntu4.7 [7512 kB]
+Get:5 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 xxd amd64 2:9.1.2141-1ubuntu4.7 [68.7 kB]
+Get:6 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 wget amd64 1.25.0-2ubuntu4.2 [352 kB]
+Get:7 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 python3-httplib2 all 0.22.0-1ubuntu0.1 [32.1 kB]
+Fetched 11.4 MB in 0s (50.6 MB/s)
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 44349 files and directories currently installed.)
+Preparing to unpack .../0-vim_2%3a9.1.2141-1ubuntu4.7_amd64.deb ...
+Unpacking vim (2:9.1.2141-1ubuntu4.7) over (2:9.1.2141-1ubuntu4.6) ...
+Preparing to unpack .../1-vim-common_2%3a9.1.2141-1ubuntu4.7_all.deb ...
+Unpacking vim-common (2:9.1.2141-1ubuntu4.7) over (2:9.1.2141-1ubuntu4.6) ...
+Preparing to unpack .../2-vim-tiny_2%3a9.1.2141-1ubuntu4.7_amd64.deb ...
+Unpacking vim-tiny (2:9.1.2141-1ubuntu4.7) over (2:9.1.2141-1ubuntu4.6) ...
+Preparing to unpack .../3-vim-runtime_2%3a9.1.2141-1ubuntu4.7_all.deb ...
+Unpacking vim-runtime (2:9.1.2141-1ubuntu4.7) over (2:9.1.2141-1ubuntu4.6) ...
+Preparing to unpack .../4-xxd_2%3a9.1.2141-1ubuntu4.7_amd64.deb ...
+Unpacking xxd (2:9.1.2141-1ubuntu4.7) over (2:9.1.2141-1ubuntu4.6) ...
+Preparing to unpack .../5-wget_1.25.0-2ubuntu4.2_amd64.deb ...
+Unpacking wget (1.25.0-2ubuntu4.2) over (1.25.0-2ubuntu4) ...
+Preparing to unpack .../6-python3-httplib2_0.22.0-1ubuntu0.1_all.deb ...
+Unpacking python3-httplib2 (0.22.0-1ubuntu0.1) over (0.22.0-1build1) ...
+Setting up wget (1.25.0-2ubuntu4.2) ...
+Setting up xxd (2:9.1.2141-1ubuntu4.7) ...
+Setting up vim-common (2:9.1.2141-1ubuntu4.7) ...
+Setting up python3-httplib2 (0.22.0-1ubuntu0.1) ...
+Setting up vim-runtime (2:9.1.2141-1ubuntu4.7) ...
+Setting up vim (2:9.1.2141-1ubuntu4.7) ...
+Setting up vim-tiny (2:9.1.2141-1ubuntu4.7) ...
+Processing triggers for install-info (7.2-5ubuntu2) ...
+Processing triggers for man-db (2.13.1-1build1) ...
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+autopkgtest [23:26:18]: testbed running kernel: Linux 7.0.0-14-generic #14-Ubuntu SMP PREEMPT_DYNAMIC Mon Apr 13 11:09:53 UTC 2026
+autopkgtest [23:26:18]: @@@@@@@@@@@@@@@@@@@@ apt-source hipsolver
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+The following NEW packages will be installed:
+  bzip2 dpkg-dev libdpkg-perl lto-disabled-list make
+0 upgraded, 5 newly installed, 0 to remove and 0 not upgraded.
+Need to get 1596 kB of archives.
+After this operation, 4247 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu resolute/main amd64 bzip2 amd64 1.0.8-6build2 [34.3 kB]
+Get:2 http://archive.ubuntu.com/ubuntu resolute/main amd64 libdpkg-perl all 1.23.7ubuntu1 [289 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute/main amd64 make amd64 4.4.1-3 [197 kB]
+Get:4 http://archive.ubuntu.com/ubuntu resolute/main amd64 lto-disabled-list all 79 [14.2 kB]
+Get:5 http://archive.ubuntu.com/ubuntu resolute/main amd64 dpkg-dev all 1.23.7ubuntu1 [1062 kB]
+Fetched 1596 kB in 0s (6126 kB/s)
+Selecting previously unselected package bzip2.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 44350 files and directories currently installed.)
+Preparing to unpack .../bzip2_1.0.8-6build2_amd64.deb ...
+Unpacking bzip2 (1.0.8-6build2) ...
+Selecting previously unselected package libdpkg-perl.
+Preparing to unpack .../libdpkg-perl_1.23.7ubuntu1_all.deb ...
+Unpacking libdpkg-perl (1.23.7ubuntu1) ...
+Selecting previously unselected package make.
+Preparing to unpack .../make_4.4.1-3_amd64.deb ...
+Unpacking make (4.4.1-3) ...
+Selecting previously unselected package lto-disabled-list.
+Preparing to unpack .../lto-disabled-list_79_all.deb ...
+Unpacking lto-disabled-list (79) ...
+Selecting previously unselected package dpkg-dev.
+Preparing to unpack .../dpkg-dev_1.23.7ubuntu1_all.deb ...
+Unpacking dpkg-dev (1.23.7ubuntu1) ...
+Setting up lto-disabled-list (79) ...
+Setting up bzip2 (1.0.8-6build2) ...
+Setting up make (4.4.1-3) ...
+Setting up libdpkg-perl (1.23.7ubuntu1) ...
+Setting up dpkg-dev (1.23.7ubuntu1) ...
+Processing triggers for man-db (2.13.1-1build1) ...
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+Get:1 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main hipsolver 7.2.4-0ubuntu1~git202606091912.8cf7fb0~ubuntu26.04.1 (tar) [2203 kB]
+Get:2 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main hipsolver 7.2.4-0ubuntu1~git202606091912.8cf7fb0~ubuntu26.04.1 (dsc) [2435 B]
+dpkg-source: warning: extracting unsigned source package (hipsolver_7.2.4-0ubuntu1~git202606091912.8cf7fb0~ubuntu26.04.1.dsc)
+dpkg-source: warning: native package version may not have a revision
+autopkgtest [23:26:23]: testing package hipsolver version 7.2.4-0ubuntu1~git202606091912.8cf7fb0~ubuntu26.04.1
+autopkgtest [23:26:23]: build not needed
+autopkgtest [23:26:23]: test libhipsolver1-tests: preparing testbed
+autopkgtest [23:28:30]: testbed dpkg architecture: amd64
+autopkgtest [23:28:30]: testbed apt version: 3.2.0
+autopkgtest [23:28:30]: @@@@@@@@@@@@@@@@@@@@ test bed setup
+autopkgtest [23:28:30]: updating testbed package index (apt update)
+Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+Get:2 http://security.ubuntu.com/ubuntu resolute-security InRelease [137 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease [137 kB]
+Get:4 http://archive.ubuntu.com/ubuntu resolute-backports InRelease [136 kB]
+Get:5 http://archive.ubuntu.com/ubuntu resolute/universe amd64 Packages [16.0 MB]
+Get:6 http://security.ubuntu.com/ubuntu resolute-security/main amd64 Packages [282 kB]
+Get:7 http://security.ubuntu.com/ubuntu resolute-security/main Translation-en [74.5 kB]
+Get:8 http://security.ubuntu.com/ubuntu resolute-security/main amd64 Components [31.2 kB]
+Get:9 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Packages [137 kB]
+Get:10 http://security.ubuntu.com/ubuntu resolute-security/universe Translation-en [43.5 kB]
+Get:11 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Components [43.1 kB]
+Get:12 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 c-n-f Metadata [3552 B]
+Get:13 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 Components [212 B]
+Get:14 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 c-n-f Metadata [120 B]
+Get:15 http://archive.ubuntu.com/ubuntu resolute/universe Translation-en [6329 kB]
+Get:16 http://archive.ubuntu.com/ubuntu resolute/universe amd64 Components [4556 kB]
+Get:17 http://archive.ubuntu.com/ubuntu resolute/universe amd64 c-n-f Metadata [313 kB]
+Get:18 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 Packages [290 kB]
+Get:19 http://archive.ubuntu.com/ubuntu resolute/multiverse Translation-en [127 kB]
+Get:20 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 Components [50.0 kB]
+Get:21 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 c-n-f Metadata [8276 B]
+Get:22 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Packages [340 kB]
+Get:23 http://archive.ubuntu.com/ubuntu resolute-updates/main Translation-en [89.4 kB]
+Get:24 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Components [53.1 kB]
+Get:25 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Packages [208 kB]
+Get:26 http://archive.ubuntu.com/ubuntu resolute-updates/universe Translation-en [64.8 kB]
+Get:27 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Components [153 kB]
+Get:28 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 c-n-f Metadata [4704 B]
+Get:29 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 Packages [3328 B]
+Get:30 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse Translation-en [772 B]
+Get:31 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 Components [216 B]
+Get:32 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 c-n-f Metadata [256 B]
+Get:33 http://archive.ubuntu.com/ubuntu resolute-backports/main amd64 Components [212 B]
+Get:34 http://archive.ubuntu.com/ubuntu resolute-backports/main amd64 c-n-f Metadata [112 B]
+Get:35 http://archive.ubuntu.com/ubuntu resolute-backports/universe amd64 Components [216 B]
+Get:36 http://archive.ubuntu.com/ubuntu resolute-backports/universe amd64 c-n-f Metadata [116 B]
+Get:37 http://archive.ubuntu.com/ubuntu resolute-backports/restricted amd64 Components [216 B]
+Get:38 http://archive.ubuntu.com/ubuntu resolute-backports/restricted amd64 c-n-f Metadata [120 B]
+Get:39 http://archive.ubuntu.com/ubuntu resolute-backports/multiverse amd64 Components [216 B]
+Get:40 http://archive.ubuntu.com/ubuntu resolute-backports/multiverse amd64 c-n-f Metadata [120 B]
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 29.6 MB in 2s (14.5 MB/s)
+Reading package lists...
+autopkgtest [23:28:36]: testbed release detected to be: resolute
+autopkgtest [23:28:36]: updating testbed package index (apt update)
+Hit:1 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Reading package lists...
+Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Get:4 http://archive.ubuntu.com/ubuntu resolute/universe Sources [13.4 MB]
+Hit:5 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Get:6 http://security.ubuntu.com/ubuntu resolute-security/main Sources [120 kB]
+Get:7 http://security.ubuntu.com/ubuntu resolute-security/restricted Sources [21.1 kB]
+Get:8 http://security.ubuntu.com/ubuntu resolute-security/universe Sources [45.8 kB]
+Get:9 http://archive.ubuntu.com/ubuntu resolute/multiverse Sources [215 kB]
+Get:10 http://archive.ubuntu.com/ubuntu resolute/restricted Sources [18.6 kB]
+Get:11 http://archive.ubuntu.com/ubuntu resolute/main Sources [1002 kB]
+Get:12 http://archive.ubuntu.com/ubuntu resolute-updates/universe Sources [76.8 kB]
+Get:13 http://archive.ubuntu.com/ubuntu resolute-updates/main Sources [152 kB]
+Get:14 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse Sources [5596 B]
+Get:15 http://archive.ubuntu.com/ubuntu resolute-updates/restricted Sources [21.0 kB]
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 15.1 MB in 1s (14.3 MB/s)
+Reading package lists...
+Enabling deb-src for all repositories.
+Added: ## Ubuntu distribution repository
+##
+## The following settings can be adjusted to configure which packages to use from Ubuntu.
+## Mirror your choices (except for URIs and Suites) in the security section below to
+## ensure timely security updates.
+##
+## Types: Append deb-src to enable the fetching of source package.
+## URIs: A URL to the repository (you may add multiple URLs)
+## Suites: The following additional suites can be configured
+##   <name>-updates   - Major bug fix updates produced after the final release of the
+##                      distribution.
+##   <name>-backports - software from this repository may not have been tested as
+##                      extensively as that contained in the main release, although it includes
+##                      newer versions of some applications which may provide useful features.
+##                      Also, please note that software in backports WILL NOT receive any review
+##                      or updates from the Ubuntu security team.
+## Components: Aside from main, the following components can be added to the list
+##   restricted  - Software that may not be under a free license, or protected by patents.
+##   universe    - Community maintained packages. Software in this repository receives maintenance
+##                 from volunteers in the Ubuntu community, or a 10 year security maintenance
+##                 commitment from Canonical when an Ubuntu Pro subscription is attached.
+##   multiverse  - Community maintained of restricted. Software from this repository is
+##                 ENTIRELY UNSUPPORTED by the Ubuntu team, and may not be under a free
+##                 licence. Please satisfy yourself as to your rights to use the software.
+##                 Also, please note that software in multiverse WILL NOT receive any
+##                 review or updates from the Ubuntu security team.
+##
+## See the sources.list(5) manual page for further settings.
+Types: deb-src
+URIs: http://archive.ubuntu.com/ubuntu
+Suites: resolute resolute-updates resolute-backports
+Components: multiverse main restricted universe
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+Added: ## Ubuntu security updates. Aside from URIs and Suites,
+## this should mirror your choices in the previous section.
+Types: deb-src
+URIs: http://security.ubuntu.com/ubuntu
+Suites: resolute-security
+Components: multiverse main restricted universe
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+Get:1 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute InRelease [27.2 kB]
+Get:2 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main Sources [18.6 kB]
+Get:3 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main amd64 Packages [29.7 kB]
+Get:4 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main Translation-en [13.1 kB]
+Hit:5 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Hit:6 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:7 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:8 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+Fetched 88.6 kB in 0s (242 kB/s)
+Reading package lists...
+PPA publishes dbgsym, you may need to include 'main/debug' component
+Repository: 'Types: deb
+URIs: https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu/
+Suites: resolute
+Components: main
+'
+Description:
+Development archive for AMD ROCm packages on Ubuntu with an aim to have packages build for next Ubuntu release
+More info: https://launchpad.net/~bullwinkle-team/+archive/ubuntu/rocm-devel
+Adding repository.
+autopkgtest [23:28:42]: upgrading testbed (apt dist-upgrade and autopurge)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+The following packages will be upgraded:
+  python3-httplib2 vim vim-common vim-runtime vim-tiny wget xxd
+7 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Need to get 11.4 MB of archives.
+After this operation, 4096 B of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 vim amd64 2:9.1.2141-1ubuntu4.7 [2064 kB]
+Get:2 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 vim-common all 2:9.1.2141-1ubuntu4.7 [495 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 vim-tiny amd64 2:9.1.2141-1ubuntu4.7 [868 kB]
+Get:4 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 vim-runtime all 2:9.1.2141-1ubuntu4.7 [7512 kB]
+Get:5 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 xxd amd64 2:9.1.2141-1ubuntu4.7 [68.7 kB]
+Get:6 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 wget amd64 1.25.0-2ubuntu4.2 [352 kB]
+Get:7 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 python3-httplib2 all 0.22.0-1ubuntu0.1 [32.1 kB]
+Fetched 11.4 MB in 1s (9968 kB/s)
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 44349 files and directories currently installed.)
+Preparing to unpack .../0-vim_2%3a9.1.2141-1ubuntu4.7_amd64.deb ...
+Unpacking vim (2:9.1.2141-1ubuntu4.7) over (2:9.1.2141-1ubuntu4.6) ...
+Preparing to unpack .../1-vim-common_2%3a9.1.2141-1ubuntu4.7_all.deb ...
+Unpacking vim-common (2:9.1.2141-1ubuntu4.7) over (2:9.1.2141-1ubuntu4.6) ...
+Preparing to unpack .../2-vim-tiny_2%3a9.1.2141-1ubuntu4.7_amd64.deb ...
+Unpacking vim-tiny (2:9.1.2141-1ubuntu4.7) over (2:9.1.2141-1ubuntu4.6) ...
+Preparing to unpack .../3-vim-runtime_2%3a9.1.2141-1ubuntu4.7_all.deb ...
+Unpacking vim-runtime (2:9.1.2141-1ubuntu4.7) over (2:9.1.2141-1ubuntu4.6) ...
+Preparing to unpack .../4-xxd_2%3a9.1.2141-1ubuntu4.7_amd64.deb ...
+Unpacking xxd (2:9.1.2141-1ubuntu4.7) over (2:9.1.2141-1ubuntu4.6) ...
+Preparing to unpack .../5-wget_1.25.0-2ubuntu4.2_amd64.deb ...
+Unpacking wget (1.25.0-2ubuntu4.2) over (1.25.0-2ubuntu4) ...
+Preparing to unpack .../6-python3-httplib2_0.22.0-1ubuntu0.1_all.deb ...
+Unpacking python3-httplib2 (0.22.0-1ubuntu0.1) over (0.22.0-1build1) ...
+Setting up wget (1.25.0-2ubuntu4.2) ...
+Setting up xxd (2:9.1.2141-1ubuntu4.7) ...
+Setting up vim-common (2:9.1.2141-1ubuntu4.7) ...
+Setting up python3-httplib2 (0.22.0-1ubuntu0.1) ...
+Setting up vim-runtime (2:9.1.2141-1ubuntu4.7) ...
+Setting up vim (2:9.1.2141-1ubuntu4.7) ...
+Setting up vim-tiny (2:9.1.2141-1ubuntu4.7) ...
+Processing triggers for install-info (7.2-5ubuntu2) ...
+Processing triggers for man-db (2.13.1-1build1) ...
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+The following NEW packages will be installed:
+  bzip2 dpkg-dev libamd-comgr3 libamd3 libamdhip64-7 libcamd3 libccolamd3
+  libcholmod5 libclang-common-22-dev libcolamd3 libdpkg-perl libfmt10
+  libgfortran5 libgomp1 libhipsolver1 libhipsolver1-tests
+  libhipsolver1-tests-data libhipsparse4 libhsa-runtime64-1 libhsakmt1
+  libllvm22 libopenblas0-pthread librocblas5 librocsolver0 librocsparse1
+  libroctx64-4 libsuitesparseconfig7 libz3-4 lto-disabled-list make
+  pkg-rocm-tools
+0 upgraded, 31 newly installed, 0 to remove and 0 not upgraded.
+Need to get 971 MB of archives.
+After this operation, 1841 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu resolute/main amd64 bzip2 amd64 1.0.8-6build2 [34.3 kB]
+Get:2 http://archive.ubuntu.com/ubuntu resolute/main amd64 libdpkg-perl all 1.23.7ubuntu1 [289 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute/main amd64 make amd64 4.4.1-3 [197 kB]
+Get:4 http://archive.ubuntu.com/ubuntu resolute/main amd64 lto-disabled-list all 79 [14.2 kB]
+Get:5 http://archive.ubuntu.com/ubuntu resolute/main amd64 dpkg-dev all 1.23.7ubuntu1 [1062 kB]
+Get:6 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main amd64 libamd-comgr3 amd64 7.2.4+dfsg-1~exp1~git202606061101.1256c6d~ubuntu26.04.1 [13.4 MB]
+Get:7 http://archive.ubuntu.com/ubuntu resolute/universe amd64 libz3-4 amd64 4.13.3-1build1 [6887 kB]
+Get:8 http://archive.ubuntu.com/ubuntu resolute/universe amd64 libllvm22 amd64 1:22.1.2-1ubuntu1 [32.1 MB]
+Get:9 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main amd64 libhsakmt1 amd64 7.2.4+dfsg~ppa1-0ubuntu1~git202606011102.6fd0c927~ubuntu26.04.1 [79.0 kB]
+Get:10 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main amd64 libhsa-runtime64-1 amd64 7.2.4+dfsg~ppa1-0ubuntu1~git202606011102.6fd0c927~ubuntu26.04.1 [618 kB]
+Get:11 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main amd64 libamdhip64-7 amd64 7.2.4-0ubuntu1~b1~git202606121458.a082f7a [11.0 MB]
+Get:12 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main amd64 libroctx64-4 amd64 7.2.3-0ubuntu1~git202606040948.c795f56~ubuntu26.04.1 [6566 B]
+Get:13 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main amd64 librocblas5 amd64 7.2.4-0ubuntu1~git202606030738.ef072fa~ubuntu26.04.1 [244 MB]
+Get:14 http://archive.ubuntu.com/ubuntu resolute/universe amd64 libclang-common-22-dev amd64 1:22.1.2-1ubuntu1 [771 kB]
+Get:15 http://archive.ubuntu.com/ubuntu resolute/main amd64 libgomp1 amd64 16-20260322-1ubuntu1 [162 kB]
+Get:16 http://archive.ubuntu.com/ubuntu resolute/main amd64 libsuitesparseconfig7 amd64 1:7.12.2+dfsg-1ubuntu1 [22.2 kB]
+Get:17 http://archive.ubuntu.com/ubuntu resolute/universe amd64 libamd3 amd64 1:7.12.2+dfsg-1ubuntu1 [35.8 kB]
+Get:18 http://archive.ubuntu.com/ubuntu resolute/universe amd64 libcamd3 amd64 1:7.12.2+dfsg-1ubuntu1 [32.3 kB]
+Get:19 http://archive.ubuntu.com/ubuntu resolute/universe amd64 libccolamd3 amd64 1:7.12.2+dfsg-1ubuntu1 [34.5 kB]
+Get:20 http://archive.ubuntu.com/ubuntu resolute/main amd64 libgfortran5 amd64 16-20260322-1ubuntu1 [958 kB]
+Get:21 http://archive.ubuntu.com/ubuntu resolute/universe amd64 libopenblas0-pthread amd64 0.3.32+ds-5 [5351 kB]
+Get:22 http://archive.ubuntu.com/ubuntu resolute/main amd64 libcolamd3 amd64 1:7.12.2+dfsg-1ubuntu1 [27.4 kB]
+Get:23 http://archive.ubuntu.com/ubuntu resolute/universe amd64 libcholmod5 amd64 1:7.12.2+dfsg-1ubuntu1 [717 kB]
+Get:24 http://archive.ubuntu.com/ubuntu resolute/universe amd64 libfmt10 amd64 10.1.1+ds1-4build1 [75.6 kB]
+Get:25 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main amd64 librocsolver0 amd64 7.2.4-0ubuntu1~git202606051922.d7235d0~ubuntu26.04.1 [402 MB]
+Get:26 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main amd64 libhipsolver1 amd64 7.2.4-0ubuntu1~git202606091912.8cf7fb0~ubuntu26.04.1 [74.2 kB]
+Get:27 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main amd64 libhipsolver1-tests-data all 7.2.4-0ubuntu1~git202606091912.8cf7fb0~ubuntu26.04.1 [2011 kB]
+Get:28 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main amd64 librocsparse1 amd64 7.2.4-1~exp1~git202607081638.b62ba723~ubuntu26.04.1 [248 MB]
+Get:29 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main amd64 libhipsparse4 amd64 7.2.4-1~exp1~git202607142019.2f578d1~ubuntu26.04.1 [57.9 kB]
+Get:30 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main amd64 libhipsolver1-tests amd64 7.2.4-0ubuntu1~git202606091912.8cf7fb0~ubuntu26.04.1 [2200 kB]
+Get:31 https://ppa.launchpadcontent.net/bullwinkle-team/rocm-devel/ubuntu resolute/main amd64 pkg-rocm-tools all 0.9.8ubuntu1~git202606251347.4c69ed9~ubuntu26.04.1 [15.1 kB]
+Fetched 971 MB in 16s (60.9 MB/s)
+Selecting previously unselected package bzip2.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 44350 files and directories currently installed.)
+Preparing to unpack .../00-bzip2_1.0.8-6build2_amd64.deb ...
+Unpacking bzip2 (1.0.8-6build2) ...
+Selecting previously unselected package libdpkg-perl.
+Preparing to unpack .../01-libdpkg-perl_1.23.7ubuntu1_all.deb ...
+Unpacking libdpkg-perl (1.23.7ubuntu1) ...
+Selecting previously unselected package make.
+Preparing to unpack .../02-make_4.4.1-3_amd64.deb ...
+Unpacking make (4.4.1-3) ...
+Selecting previously unselected package lto-disabled-list.
+Preparing to unpack .../03-lto-disabled-list_79_all.deb ...
+Unpacking lto-disabled-list (79) ...
+Selecting previously unselected package dpkg-dev.
+Preparing to unpack .../04-dpkg-dev_1.23.7ubuntu1_all.deb ...
+Unpacking dpkg-dev (1.23.7ubuntu1) ...
+Selecting previously unselected package libz3-4:amd64.
+Preparing to unpack .../05-libz3-4_4.13.3-1build1_amd64.deb ...
+Unpacking libz3-4:amd64 (4.13.3-1build1) ...
+Selecting previously unselected package libllvm22:amd64.
+Preparing to unpack .../06-libllvm22_1%3a22.1.2-1ubuntu1_amd64.deb ...
+Unpacking libllvm22:amd64 (1:22.1.2-1ubuntu1) ...
+Selecting previously unselected package libclang-common-22-dev:amd64.
+Preparing to unpack .../07-libclang-common-22-dev_1%3a22.1.2-1ubuntu1_amd64.deb ...
+Unpacking libclang-common-22-dev:amd64 (1:22.1.2-1ubuntu1) ...
+Selecting previously unselected package libamd-comgr3:amd64.
+Preparing to unpack .../08-libamd-comgr3_7.2.4+dfsg-1~exp1~git202606061101.1256c6d~ubuntu26.04.1_amd64.deb ...
+Unpacking libamd-comgr3:amd64 (7.2.4+dfsg-1~exp1~git202606061101.1256c6d~ubuntu26.04.1) ...
+Selecting previously unselected package libgomp1:amd64.
+Preparing to unpack .../09-libgomp1_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libgomp1:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libsuitesparseconfig7:amd64.
+Preparing to unpack .../10-libsuitesparseconfig7_1%3a7.12.2+dfsg-1ubuntu1_amd64.deb ...
+Unpacking libsuitesparseconfig7:amd64 (1:7.12.2+dfsg-1ubuntu1) ...
+Selecting previously unselected package libamd3:amd64.
+Preparing to unpack .../11-libamd3_1%3a7.12.2+dfsg-1ubuntu1_amd64.deb ...
+Unpacking libamd3:amd64 (1:7.12.2+dfsg-1ubuntu1) ...
+Selecting previously unselected package libhsakmt1:amd64.
+Preparing to unpack .../12-libhsakmt1_7.2.4+dfsg~ppa1-0ubuntu1~git202606011102.6fd0c927~ubuntu26.04.1_amd64.deb ...
+Unpacking libhsakmt1:amd64 (7.2.4+dfsg~ppa1-0ubuntu1~git202606011102.6fd0c927~ubuntu26.04.1) ...
+Selecting previously unselected package libhsa-runtime64-1:amd64.
+Preparing to unpack .../13-libhsa-runtime64-1_7.2.4+dfsg~ppa1-0ubuntu1~git202606011102.6fd0c927~ubuntu26.04.1_amd64.deb ...
+Unpacking libhsa-runtime64-1:amd64 (7.2.4+dfsg~ppa1-0ubuntu1~git202606011102.6fd0c927~ubuntu26.04.1) ...
+Selecting previously unselected package libamdhip64-7:amd64.
+Preparing to unpack .../14-libamdhip64-7_7.2.4-0ubuntu1~b1~git202606121458.a082f7a_amd64.deb ...
+Unpacking libamdhip64-7:amd64 (7.2.4-0ubuntu1~b1~git202606121458.a082f7a) ...
+Selecting previously unselected package libcamd3:amd64.
+Preparing to unpack .../15-libcamd3_1%3a7.12.2+dfsg-1ubuntu1_amd64.deb ...
+Unpacking libcamd3:amd64 (1:7.12.2+dfsg-1ubuntu1) ...
+Selecting previously unselected package libccolamd3:amd64.
+Preparing to unpack .../16-libccolamd3_1%3a7.12.2+dfsg-1ubuntu1_amd64.deb ...
+Unpacking libccolamd3:amd64 (1:7.12.2+dfsg-1ubuntu1) ...
+Selecting previously unselected package libgfortran5:amd64.
+Preparing to unpack .../17-libgfortran5_16-20260322-1ubuntu1_amd64.deb ...
+Unpacking libgfortran5:amd64 (16-20260322-1ubuntu1) ...
+Selecting previously unselected package libopenblas0-pthread:amd64.
+Preparing to unpack .../18-libopenblas0-pthread_0.3.32+ds-5_amd64.deb ...
+Unpacking libopenblas0-pthread:amd64 (0.3.32+ds-5) ...
+Selecting previously unselected package libcolamd3:amd64.
+Preparing to unpack .../19-libcolamd3_1%3a7.12.2+dfsg-1ubuntu1_amd64.deb ...
+Unpacking libcolamd3:amd64 (1:7.12.2+dfsg-1ubuntu1) ...
+Selecting previously unselected package libcholmod5:amd64.
+Preparing to unpack .../20-libcholmod5_1%3a7.12.2+dfsg-1ubuntu1_amd64.deb ...
+Unpacking libcholmod5:amd64 (1:7.12.2+dfsg-1ubuntu1) ...
+Selecting previously unselected package libfmt10:amd64.
+Preparing to unpack .../21-libfmt10_10.1.1+ds1-4build1_amd64.deb ...
+Unpacking libfmt10:amd64 (10.1.1+ds1-4build1) ...
+Selecting previously unselected package libroctx64-4.
+Preparing to unpack .../22-libroctx64-4_7.2.3-0ubuntu1~git202606040948.c795f56~ubuntu26.04.1_amd64.deb ...
+Unpacking libroctx64-4 (7.2.3-0ubuntu1~git202606040948.c795f56~ubuntu26.04.1) ...
+Selecting previously unselected package librocblas5.
+Preparing to unpack .../23-librocblas5_7.2.4-0ubuntu1~git202606030738.ef072fa~ubuntu26.04.1_amd64.deb ...
+Unpacking librocblas5 (7.2.4-0ubuntu1~git202606030738.ef072fa~ubuntu26.04.1) ...
+Selecting previously unselected package librocsolver0.
+Preparing to unpack .../24-librocsolver0_7.2.4-0ubuntu1~git202606051922.d7235d0~ubuntu26.04.1_amd64.deb ...
+Unpacking librocsolver0 (7.2.4-0ubuntu1~git202606051922.d7235d0~ubuntu26.04.1) ...
+Selecting previously unselected package libhipsolver1.
+Preparing to unpack .../25-libhipsolver1_7.2.4-0ubuntu1~git202606091912.8cf7fb0~ubuntu26.04.1_amd64.deb ...
+Unpacking libhipsolver1 (7.2.4-0ubuntu1~git202606091912.8cf7fb0~ubuntu26.04.1) ...
+Selecting previously unselected package libhipsolver1-tests-data.
+Preparing to unpack .../26-libhipsolver1-tests-data_7.2.4-0ubuntu1~git202606091912.8cf7fb0~ubuntu26.04.1_all.deb ...
+Unpacking libhipsolver1-tests-data (7.2.4-0ubuntu1~git202606091912.8cf7fb0~ubuntu26.04.1) ...
+Selecting previously unselected package librocsparse1.
+Preparing to unpack .../27-librocsparse1_7.2.4-1~exp1~git202607081638.b62ba723~ubuntu26.04.1_amd64.deb ...
+Unpacking librocsparse1 (7.2.4-1~exp1~git202607081638.b62ba723~ubuntu26.04.1) ...
+Selecting previously unselected package libhipsparse4.
+Preparing to unpack .../28-libhipsparse4_7.2.4-1~exp1~git202607142019.2f578d1~ubuntu26.04.1_amd64.deb ...
+Unpacking libhipsparse4 (7.2.4-1~exp1~git202607142019.2f578d1~ubuntu26.04.1) ...
+Selecting previously unselected package libhipsolver1-tests.
+Preparing to unpack .../29-libhipsolver1-tests_7.2.4-0ubuntu1~git202606091912.8cf7fb0~ubuntu26.04.1_amd64.deb ...
+Unpacking libhipsolver1-tests (7.2.4-0ubuntu1~git202606091912.8cf7fb0~ubuntu26.04.1) ...
+Selecting previously unselected package pkg-rocm-tools.
+Preparing to unpack .../30-pkg-rocm-tools_0.9.8ubuntu1~git202606251347.4c69ed9~ubuntu26.04.1_all.deb ...
+Unpacking pkg-rocm-tools (0.9.8ubuntu1~git202606251347.4c69ed9~ubuntu26.04.1) ...
+Setting up libroctx64-4 (7.2.3-0ubuntu1~git202606040948.c795f56~ubuntu26.04.1) ...
+Setting up lto-disabled-list (79) ...
+Setting up libclang-common-22-dev:amd64 (1:22.1.2-1ubuntu1) ...
+Setting up libgomp1:amd64 (16-20260322-1ubuntu1) ...
+Setting up bzip2 (1.0.8-6build2) ...
+Setting up libz3-4:amd64 (4.13.3-1build1) ...
+Setting up make (4.4.1-3) ...
+Setting up libdpkg-perl (1.23.7ubuntu1) ...
+Setting up libgfortran5:amd64 (16-20260322-1ubuntu1) ...
+Setting up libllvm22:amd64 (1:22.1.2-1ubuntu1) ...
+Setting up libamd-comgr3:amd64 (7.2.4+dfsg-1~exp1~git202606061101.1256c6d~ubuntu26.04.1) ...
+Setting up libsuitesparseconfig7:amd64 (1:7.12.2+dfsg-1ubuntu1) ...
+Setting up libhipsolver1-tests-data (7.2.4-0ubuntu1~git202606091912.8cf7fb0~ubuntu26.04.1) ...
+Setting up libfmt10:amd64 (10.1.1+ds1-4build1) ...
+Setting up libhsakmt1:amd64 (7.2.4+dfsg~ppa1-0ubuntu1~git202606011102.6fd0c927~ubuntu26.04.1) ...
+Setting up libopenblas0-pthread:amd64 (0.3.32+ds-5) ...
+update-alternatives: using /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 to provide /usr/lib/x86_64-linux-gnu/libblas.so.3 (libblas.so.3-x86_64-linux-gnu) in auto mode
+update-alternatives: using /usr/lib/x86_64-linux-gnu/openblas-pthread/liblapack.so.3 to provide /usr/lib/x86_64-linux-gnu/liblapack.so.3 (liblapack.so.3-x86_64-linux-gnu) in auto mode
+update-alternatives: using /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblas.so.0 to provide /usr/lib/x86_64-linux-gnu/libopenblas.so.0 (libopenblas.so.0-x86_64-linux-gnu) in auto mode
+Setting up libamd3:amd64 (1:7.12.2+dfsg-1ubuntu1) ...
+Setting up libcolamd3:amd64 (1:7.12.2+dfsg-1ubuntu1) ...
+Setting up libcamd3:amd64 (1:7.12.2+dfsg-1ubuntu1) ...
+Setting up dpkg-dev (1.23.7ubuntu1) ...
+Setting up libccolamd3:amd64 (1:7.12.2+dfsg-1ubuntu1) ...
+Setting up libhsa-runtime64-1:amd64 (7.2.4+dfsg~ppa1-0ubuntu1~git202606011102.6fd0c927~ubuntu26.04.1) ...
+Setting up pkg-rocm-tools (0.9.8ubuntu1~git202606251347.4c69ed9~ubuntu26.04.1) ...
+Setting up libcholmod5:amd64 (1:7.12.2+dfsg-1ubuntu1) ...
+Setting up libamdhip64-7:amd64 (7.2.4-0ubuntu1~b1~git202606121458.a082f7a) ...
+Setting up librocblas5 (7.2.4-0ubuntu1~git202606030738.ef072fa~ubuntu26.04.1) ...
+Setting up librocsparse1 (7.2.4-1~exp1~git202607081638.b62ba723~ubuntu26.04.1) ...
+Setting up libhipsparse4 (7.2.4-1~exp1~git202607142019.2f578d1~ubuntu26.04.1) ...
+Setting up librocsolver0 (7.2.4-0ubuntu1~git202606051922.d7235d0~ubuntu26.04.1) ...
+Setting up libhipsolver1 (7.2.4-0ubuntu1~git202606091912.8cf7fb0~ubuntu26.04.1) ...
+Setting up libhipsolver1-tests (7.2.4-0ubuntu1~git202606091912.8cf7fb0~ubuntu26.04.1) ...
+Processing triggers for man-db (2.13.1-1build1) ...
+Processing triggers for libc-bin (2.43-2ubuntu2) ...
+Error connecting: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Failed to query AppArmor policy: Permission denied
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+autopkgtest [23:29:09]: test libhipsolver1-tests: rocm-test-launcher /usr/libexec/rocm/libhipsolver1-tests/run-tests
+autopkgtest [23:29:09]: test libhipsolver1-tests: [-----------------------
+/dev/kfd present but no read permission.
+Skipping tests.
+autopkgtest [23:29:10]: test libhipsolver1-tests: -----------------------]
+autopkgtest [23:29:10]: test libhipsolver1-tests:  - - - - - - - - - - results - - - - - - - - - -
+libhipsolver1-tests  SKIP exit status 77 and marked as skippable
+autopkgtest [23:29:10]: @@@@@@@@@@@@@@@@@@@@ summary
+libhipsolver1-tests  SKIP exit status 77 and marked as skippable
