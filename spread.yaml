@@ -96,6 +96,21 @@ prepare: |
   DEBIAN_FRONTEND=noninteractive apt upgrade -y
   DEBIAN_FRONTEND=noninteractive apt install -y \
     software-properties-common autopkgtest dnsmasq-base
+
+  # Install the host-passthrough sh-run. Bullwinkle tests (merged in via
+  # sources respread) call `sh-run '<script>'` for every ROCm-facing block.
+  # See bullwinkle-cicd/README.md "The sh-run contract". Kept in sync with
+  # bullwinkle-cicd/scripts/sh-run.
+  cat > /usr/local/bin/sh-run <<'SHRUN_EOF'
+  #!/bin/bash
+  set -eu
+  if [ $# -gt 0 ]; then
+    exec bash -c "$*"
+  else
+    exec bash -s
+  fi
+  SHRUN_EOF
+  chmod 0755 /usr/local/bin/sh-run
 suites:
   packages/amdsmi/tests/level-one/:
     summary: level one integration tests for amdsmi package
