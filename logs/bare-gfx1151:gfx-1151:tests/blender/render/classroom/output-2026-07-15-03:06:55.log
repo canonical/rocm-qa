@@ -1,0 +1,7 @@
++ wget --continue https://download.blender.org/demo/test/classroom.zip
+--2026-07-15 03:06:55--  https://download.blender.org/demo/test/classroom.zip
+Resolving download.blender.org (download.blender.org)... 172.66.172.236, 104.20.41.146, 2606:4700:10::6814:2992, ...
+Connecting to download.blender.org (download.blender.org)|172.66.172.236|:443... connected.
+HTTP request sent, awaiting response... 403 Forbidden
+2026-07-15 03:06:56 ERROR 403: Forbidden.
+
