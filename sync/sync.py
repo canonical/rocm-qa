@@ -35,7 +35,7 @@ def _parse_csv(value: str | None) -> list[str] | None:
     return items or None
 
 
-def _build_mr_description(
+def _build_cherry_pick_mr_description(
     pkg: str,
     series: str,
     lp_version: str | None,
@@ -43,19 +43,39 @@ def _build_mr_description(
     cherry_pick_result: git_ops.CherryPickResult,
 ) -> str:
     picked = cherry_pick_result.picked
-    skipped = cherry_pick_result.skipped_non_debian
+    upstream = cherry_pick_result.upstream_picks
     already = cherry_pick_result.already_applied
 
     lines = [
         f"Automated sync of `{pkg}` for series `{series}`.",
         "",
-        "Cherry-picks LP commits touching `debian/` onto Salsa-tip.",
+        "Histories diverged; LP-only commits were cherry-picked onto"
+        " Salsa-tip.",
         "",
         "## Versions",
         f"- LP `ubuntu/{series}`: `{lp_version or 'unknown'}`",
         f"- Salsa `ubuntu/{series}`: `{salsa_version or 'unknown'}`",
         "",
     ]
+    if upstream:
+        lines.append(
+            f"## ⚠ Contains upstream changes — {len(upstream)} commit(s)"
+        )
+        lines.append("")
+        lines.append(
+            "The following cherry-picked commits touched paths outside"
+            " `debian/`. This usually means a new upstream tarball was"
+            " imported on LP. Verify the upstream branch / tarball state"
+            " on Salsa is consistent before merging."
+        )
+        lines.append("")
+        for sha, subj, paths in upstream[:20]:
+            preview = ", ".join(paths[:5]) + (" …" if len(paths) > 5 else "")
+            lines.append(f"- `{sha[:10]}` {subj}")
+            lines.append(f"    - non-`debian/` paths: {preview}")
+        if len(upstream) > 20:
+            lines.append(f"- ...and {len(upstream) - 20} more")
+        lines.append("")
     if picked:
         lines.append(f"## LP commits cherry-picked ({len(picked)})")
         for sha, subj in picked[:50]:
@@ -83,23 +103,59 @@ def _build_mr_description(
         if len(already) > 30:
             lines.append(f"- ...and {len(already) - 30} more")
         lines.append("")
-    if skipped:
+    lines.append("---")
+    lines.append("Created by `sync/sync.py` in `canonical/rocm-qa`.")
+    return "\n".join(lines)
+
+
+def _build_fast_forward_mr_description(
+    pkg: str,
+    series: str,
+    lp_version: str | None,
+    salsa_version: str | None,
+    commits: list[tuple[str, str, list[str]]],
+) -> str:
+    upstream = [c for c in commits if any(not p.startswith("debian/") for p in c[2])]
+    lines = [
+        f"Automated sync of `{pkg}` for series `{series}`.",
+        "",
+        "Salsa is a strict ancestor of LP: this is a fast-forward. Original"
+        " LP commit SHAs are preserved (including any `gbp import-orig`"
+        " merge commits).",
+        "",
+        "## Versions",
+        f"- LP `ubuntu/{series}`: `{lp_version or 'unknown'}`",
+        f"- Salsa `ubuntu/{series}`: `{salsa_version or 'unknown'}`",
+        "",
+    ]
+    if upstream:
         lines.append(
-            f"## Filtered out (touched non-`debian/` paths) — {len(skipped)}"
+            f"## ⚠ Contains upstream changes — {len(upstream)} commit(s)"
         )
         lines.append("")
         lines.append(
-            "These LP commits were skipped because they touch files outside"
-            " `debian/`. Review manually before applying."
+            "Some fast-forwarded commits touched paths outside `debian/`."
+            " This usually means a new upstream tarball was imported on LP."
+            " Verify the upstream branch / tarball state on Salsa is"
+            " consistent before merging."
         )
         lines.append("")
-        for sha, subj, paths in skipped[:20]:
-            preview = ", ".join(paths[:5]) + (" …" if len(paths) > 5 else "")
+        for sha, subj, paths in upstream[:20]:
+            non_debian = [p for p in paths if not p.startswith("debian/")]
+            preview = ", ".join(non_debian[:5]) + (
+                " …" if len(non_debian) > 5 else ""
+            )
             lines.append(f"- `{sha[:10]}` {subj}")
-            lines.append(f"    - paths: {preview}")
-        if len(skipped) > 20:
-            lines.append(f"- ...and {len(skipped) - 20} more")
+            lines.append(f"    - non-`debian/` paths: {preview}")
+        if len(upstream) > 20:
+            lines.append(f"- ...and {len(upstream) - 20} more")
         lines.append("")
+    lines.append(f"## Commits ({len(commits)})")
+    for sha, subj, _paths in commits[:50]:
+        lines.append(f"- `{sha[:10]}` {subj}")
+    if len(commits) > 50:
+        lines.append(f"- ...and {len(commits) - 50} more")
+    lines.append("")
     lines.append("---")
     lines.append("Created by `sync/sync.py` in `canonical/rocm-qa`.")
     return "\n".join(lines)
@@ -175,7 +231,7 @@ def _process_package(
         )
         return
 
-    if state.action != "cherry-pick":
+    if state.action not in ("cherry-pick", "fast-forward"):
         report.add(
             reporting.PackageOutcome(
                 pkg=pkg,
@@ -187,53 +243,104 @@ def _process_package(
         return
 
     assert state.merge_base is not None
-    try:
-        cp_result = git_ops.cherry_pick_lp_onto_salsa(repo, state.merge_base)
-    except git_ops.GitError:
-        if dry_run:
-            detail = "cherry-pick conflict (dry-run: issue not filed)"
-        else:
-            body = (
-                f"Automated cherry-pick of LP `ubuntu/{series}` commits "
-                f"onto Salsa `ubuntu/{series}` for `{pkg}` failed.\n\n"
-                "Resolve manually on Salsa, then re-run the sync."
-            )
-            url = reporting.create_conflict_issue(pkg, series, body)
-            detail = f"cherry-pick conflict; issue: {url or 'existing'}"
-        report.add(
-            reporting.PackageOutcome(
-                pkg=pkg, series=series, status="conflict", detail=detail
-            )
-        )
-        return
-    log.info(
-        "%s: cherry-picked %d LP commits; %d already applied (patch-id); "
-        "%d filtered (non-debian/)",
-        pkg,
-        len(cp_result.picked),
-        len(cp_result.already_applied),
-        len(cp_result.skipped_non_debian),
+
+    # Build the local branch to push and the MR title/body for both actions.
+    title: str
+    description: str
+    outcome_summary: str
+
+    lp_version = git_ops.get_changelog_version(
+        repo, f"{git_ops.LP_REMOTE}/{lp_branch}"
+    )
+    salsa_version = (
+        git_ops.get_changelog_version(repo, f"{git_ops.SALSA_REMOTE}/{lp_branch}")
+        if repo.salsa_tip
+        else None
     )
 
-    # If we picked nothing (all candidates were filtered or already applied),
-    # there's nothing to push. Surface what we found in the outcome detail.
-    if not cp_result.picked:
-        bits = []
-        if cp_result.already_applied:
-            bits.append(f"{len(cp_result.already_applied)} already on Salsa")
-        if cp_result.skipped_non_debian:
-            bits.append(
-                f"{len(cp_result.skipped_non_debian)} non-debian/ filtered"
-            )
-        detail = "no LP commits to apply" + (
-            f" ({'; '.join(bits)})" if bits else ""
+    if state.action == "fast-forward":
+        git_ops.prepare_fast_forward(repo)
+        commits = git_ops.commits_between(
+            repo,
+            f"{git_ops.SALSA_REMOTE}/{lp_branch}",
+            f"{git_ops.LP_REMOTE}/{lp_branch}",
         )
-        report.add(
-            reporting.PackageOutcome(
-                pkg=pkg, series=series, status="up-to-date", detail=detail
+        upstream_count = sum(
+            1 for _, _, paths in commits
+            if any(not p.startswith("debian/") for p in paths)
+        )
+        description = _build_fast_forward_mr_description(
+            pkg, series, lp_version, salsa_version, commits
+        )
+        title = (
+            f"Sync ubuntu/{series}: fast-forward {len(commits)} LP commit"
+            + ("s" if len(commits) != 1 else "")
+        )
+        outcome_summary = (
+            f"fast-forward: {len(commits)} commit(s)"
+            + (f", {upstream_count} with upstream changes" if upstream_count else "")
+        )
+        log.info("%s: fast-forwarding %d LP commits", pkg, len(commits))
+    else:
+        try:
+            cp_result = git_ops.cherry_pick_lp_onto_salsa(repo, state.merge_base)
+        except git_ops.GitError:
+            if dry_run:
+                detail = "cherry-pick conflict (dry-run: issue not filed)"
+            else:
+                body = (
+                    f"Automated cherry-pick of LP `ubuntu/{series}` commits "
+                    f"onto Salsa `ubuntu/{series}` for `{pkg}` failed.\n\n"
+                    "Resolve manually on Salsa, then re-run the sync."
+                )
+                url = reporting.create_conflict_issue(pkg, series, body)
+                detail = f"cherry-pick conflict; issue: {url or 'existing'}"
+            report.add(
+                reporting.PackageOutcome(
+                    pkg=pkg, series=series, status="conflict", detail=detail
+                )
+            )
+            return
+        log.info(
+            "%s: cherry-picked %d LP commits; %d already applied (patch-id); "
+            "%d with upstream changes",
+            pkg,
+            len(cp_result.picked),
+            len(cp_result.already_applied),
+            len(cp_result.upstream_picks),
+        )
+
+        # Nothing to push (all candidates were dropped as empty or matched
+        # by patch-id).
+        if not cp_result.picked:
+            bits = []
+            if cp_result.already_applied:
+                bits.append(f"{len(cp_result.already_applied)} already on Salsa")
+            detail = "no LP commits to apply" + (
+                f" ({'; '.join(bits)})" if bits else ""
+            )
+            report.add(
+                reporting.PackageOutcome(
+                    pkg=pkg, series=series, status="up-to-date", detail=detail
+                )
+            )
+            return
+
+        description = _build_cherry_pick_mr_description(
+            pkg, series, lp_version, salsa_version, cp_result
+        )
+        title = (
+            f"Sync ubuntu/{series}: cherry-pick {len(cp_result.picked)} LP commit"
+            + ("s" if len(cp_result.picked) != 1 else "")
+        )
+        outcome_summary = (
+            f"cherry-pick: {len(cp_result.picked)} picked"
+            + (
+                f", {len(cp_result.upstream_picks)} with upstream changes"
+                if cp_result.upstream_picks
+                else ""
             )
         )
-        return
 
     if dry_run:
         report.add(
@@ -241,11 +348,7 @@ def _process_package(
                 pkg=pkg,
                 series=series,
                 status="synced",
-                detail=(
-                    f"dry-run: would push and create/update MR "
-                    f"({len(cp_result.picked)} picked, "
-                    f"{len(cp_result.skipped_non_debian)} filtered)"
-                ),
+                detail=f"dry-run: would push and create/update MR ({outcome_summary})",
             )
         )
         return
@@ -273,20 +376,6 @@ def _process_package(
         )
         return
 
-    lp_version = git_ops.get_changelog_version(repo, f"{git_ops.LP_REMOTE}/{lp_branch}")
-    salsa_version = (
-        git_ops.get_changelog_version(repo, f"{git_ops.SALSA_REMOTE}/{lp_branch}")
-        if repo.salsa_tip
-        else None
-    )
-    description = _build_mr_description(
-        pkg, series, lp_version, salsa_version, cp_result
-    )
-    title = (
-        f"Sync ubuntu/{series}: cherry-pick {len(cp_result.picked)} LP commit"
-        + ("s" if len(cp_result.picked) != 1 else "")
-    )
-
     existing = salsa.find_open_mr(
         target_project=target_project,
         source_project=source_project,
@@ -300,7 +389,7 @@ def _process_package(
                 pkg=pkg,
                 series=series,
                 status="synced",
-                detail="updated existing MR via force-push",
+                detail=f"updated existing MR via force-push ({outcome_summary})",
                 mr_url=url,
             )
         )
@@ -324,7 +413,11 @@ def _process_package(
         return
     report.add(
         reporting.PackageOutcome(
-            pkg=pkg, series=series, status="synced", detail="MR created", mr_url=mr_url
+            pkg=pkg,
+            series=series,
+            status="synced",
+            detail=f"MR created ({outcome_summary})",
+            mr_url=mr_url,
         )
     )
 

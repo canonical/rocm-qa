@@ -116,7 +116,17 @@ class Repo:
 class AnalysisResult:
     """What the comparison between LP and Salsa says we should do."""
 
-    action: str  # "skip-equal", "skip-no-base", "rebase", "fast-forward"
+    action: str
+    # One of:
+    #   "skip-equal"           - trees identical, nothing to do
+    #   "skip-salsa-ahead"     - Salsa contains LP plus its own work
+    #   "skip-no-salsa-branch" - Salsa branch missing; caller must fork
+    #   "skip-no-base"         - histories don't share an ancestor
+    #   "fast-forward"         - Salsa is a strict ancestor of LP;
+    #                            push LP-tip as-is (preserves SHAs and
+    #                            upstream-import merge commits)
+    #   "cherry-pick"          - histories have diverged; replay LP-only
+    #                            commits on Salsa-tip
     detail: str
     merge_base: str | None = None
 
@@ -162,6 +172,8 @@ def prepare_repo(
     _run(["git", "config", "user.email", "rocm-sync@canonical.com"], cwd=repo_path)
     _run(["git", "config", "user.name", "ROCm Sync Bot"], cwd=repo_path)
 
+    _configure_changelog_merge_driver(repo_path)
+
     # Fetch both branches. LP must exist; if Salsa doesn't, the caller can
     # fork. --no-tags: tags are noise we never read. Retries handle transient
     # SSH/banner-exchange failures.
@@ -191,6 +203,45 @@ def prepare_repo(
         repo.salsa_tip = None
 
     return repo
+
+
+def _configure_changelog_merge_driver(repo_path: Path) -> None:
+    """Register `dpkg-mergechangelogs` as the merge driver for
+    `debian/changelog` in this clone.
+
+    Debian changelog entries are prepended, so any two diverging branches
+    that both landed a new entry will always conflict on the top lines.
+    `dpkg-mergechangelogs` (from `dpkg-dev`) understands the format and
+    interleaves entries by version instead of by line. Git's 3-way merge
+    machinery picks this up during `git cherry-pick` when the attribute is
+    set. We write the attribute to `$GIT_DIR/info/attributes` so the tree
+    itself is not modified.
+    """
+    _run(
+        [
+            "git",
+            "config",
+            "merge.dpkg-mergechangelogs.name",
+            "debian changelog merge driver",
+        ],
+        cwd=repo_path,
+    )
+    _run(
+        [
+            "git",
+            "config",
+            "merge.dpkg-mergechangelogs.driver",
+            "dpkg-mergechangelogs -m %O %A %B %A",
+        ],
+        cwd=repo_path,
+    )
+    attrs = repo_path / ".git" / "info" / "attributes"
+    attrs.parent.mkdir(parents=True, exist_ok=True)
+    line = "debian/changelog merge=dpkg-mergechangelogs\n"
+    if attrs.exists() and line in attrs.read_text():
+        return
+    with attrs.open("a", encoding="utf-8") as f:
+        f.write(line)
 
 
 def _rev_parse(repo_path: Path, ref: str) -> str:
@@ -241,12 +292,21 @@ def analyze(repo: Repo) -> AnalysisResult:
             detail="LP and Salsa share no common ancestor",
         )
 
-    # Either Salsa is strictly behind LP (degenerate cherry-pick = ff) or
-    # the two have diverged. Both are handled the same way: cherry-pick LP-
-    # only commits onto Salsa-tip, filtered to ones touching only debian/.
+    # Salsa is a strict ancestor of LP: no Salsa-only commits exist, so LP
+    # is a clean fast-forward. Push LP-tip directly and keep original SHAs
+    # (including any gbp import-orig merge commits from upstream imports).
+    if _is_ancestor(repo.path, salsa_ref, lp_ref):
+        return AnalysisResult(
+            action="fast-forward",
+            detail="LP is strictly ahead of Salsa",
+            merge_base=merge_base_proc.stdout.strip(),
+        )
+
+    # Histories have diverged: both LP and Salsa have unique commits since
+    # the merge base. Replay LP-only commits on top of Salsa-tip.
     return AnalysisResult(
         action="cherry-pick",
-        detail="LP has commits not in Salsa",
+        detail="LP and Salsa have diverged",
         merge_base=merge_base_proc.stdout.strip(),
     )
 
@@ -268,9 +328,13 @@ def _merge_base(repo_path: Path, a: str, b: str) -> str:
 class CherryPickResult:
     head: str
     picked: list[tuple[str, str]] = field(default_factory=list)  # (orig_sha, subject)
-    skipped_non_debian: list[tuple[str, str, list[str]]] = field(
+    # Subset of `picked` whose diff touched paths outside `debian/` — i.e.
+    # they carried upstream source changes along with the packaging update
+    # (typically a `gbp import-orig` follow-up). Surfaced in the MR body
+    # so reviewers double-check the upstream branch / tarball state.
+    upstream_picks: list[tuple[str, str, list[str]]] = field(
         default_factory=list
-    )  # (sha, subject, paths)
+    )  # (sha, subject, non-debian paths sample)
     already_applied: list[tuple[str, str]] = field(
         default_factory=list
     )  # (orig_sha, subject) — patch-id-equivalent already in salsa
@@ -316,13 +380,23 @@ def _classify_lp_commits(
 
 def cherry_pick_lp_onto_salsa(repo: Repo, merge_base: str) -> CherryPickResult:
     """Start from Salsa-tip on a fresh local branch, then cherry-pick each
-    LP-only commit (merge_base..lp-tip, oldest first) that exclusively
-    touches `debian/` and isn't already on Salsa by patch-id.
+    LP-only commit (merge_base..lp-tip, oldest first) that isn't already
+    on Salsa by patch-id.
+
+    All LP-only commits are picked, including ones that touch upstream
+    source. Commits touching paths outside `debian/` are still applied,
+    but tracked in `upstream_picks` so the MR body can flag them for
+    reviewer attention (upstream imports usually arrive as a mix of
+    changelog + source-tree changes and reviewers should verify the
+    tarball / upstream branch is consistent).
+
+    `debian/changelog` conflicts are resolved automatically by the
+    `dpkg-mergechangelogs` merge driver registered in `prepare_repo`.
 
     Buckets in the returned result:
       - picked: applied successfully
+      - upstream_picks: subset of `picked` that touched non-`debian/` paths
       - already_applied: patch-id matches an existing salsa commit; skipped
-      - skipped_non_debian: touched paths outside debian/; skipped + flagged
 
     Raises GitError on a real cherry-pick conflict; the local branch is
     reset to Salsa-tip so the working state is clean for the next run.
@@ -355,15 +429,7 @@ def cherry_pick_lp_onto_salsa(repo: Repo, merge_base: str) -> CherryPickResult:
         if not paths:
             log.info("Skipping %s (%s): empty commit", sha[:10], subject)
             continue
-        if not all(p.startswith("debian/") for p in paths):
-            log.warning(
-                "Skipping %s (%s): touches non-debian/ paths: %s",
-                sha[:10],
-                subject,
-                ", ".join(paths[:5]) + (" …" if len(paths) > 5 else ""),
-            )
-            result.skipped_non_debian.append((sha, subject, paths))
-            continue
+        non_debian = [p for p in paths if not p.startswith("debian/")]
         pick = _run(
             ["git", "cherry-pick", "-x", "--empty=drop", sha],
             cwd=repo.path,
@@ -395,9 +461,48 @@ def cherry_pick_lp_onto_salsa(repo: Repo, merge_base: str) -> CherryPickResult:
             continue
         result.head = head_after
         result.picked.append((sha, subject))
+        if non_debian:
+            log.info(
+                "Picked %s (%s): touches non-debian/ paths: %s",
+                sha[:10],
+                subject,
+                ", ".join(non_debian[:5])
+                + (" …" if len(non_debian) > 5 else ""),
+            )
+            result.upstream_picks.append((sha, subject, non_debian))
 
     result.head = _rev_parse(repo.path, "HEAD")
     return result
+
+
+def prepare_fast_forward(repo: Repo) -> str:
+    """Point the sync branch at LP-tip so the caller can push it.
+
+    Used when `analyze()` returns `fast-forward` (Salsa is a strict
+    ancestor of LP). No cherry-picking; the original LP SHAs are pushed
+    as-is, preserving `gbp import-orig` merge commits.
+    """
+    local = f"sync/{repo.branch}"
+    lp_ref = f"{LP_REMOTE}/{repo.branch}"
+    _run(["git", "checkout", "-B", local, lp_ref], cwd=repo.path)
+    return _rev_parse(repo.path, "HEAD")
+
+
+def commits_between(repo: Repo, base_ref: str, tip_ref: str) -> list[tuple[str, str, list[str]]]:
+    """Return (sha, subject, paths) for each commit in `base_ref..tip_ref`,
+    oldest first. Used by the fast-forward path to build the MR summary
+    without cherry-picking.
+    """
+    log_proc = _run(
+        ["git", "log", "--reverse", "--format=%H", f"{base_ref}..{tip_ref}"],
+        cwd=repo.path,
+    )
+    out: list[tuple[str, str, list[str]]] = []
+    for sha in (s for s in log_proc.stdout.split() if s):
+        out.append(
+            (sha, _commit_subject(repo.path, sha), _commit_paths(repo.path, sha))
+        )
+    return out
 
 
 def push_to_fork(
