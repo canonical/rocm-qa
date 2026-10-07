@@ -92,10 +92,10 @@ jobs:
           ${{ env.WIREGUARD_CLIENT_CONFIG_TCHAVADAR }}
           EOF
 
-          nc -zvu "${{ env.WIREGUARD_SERVER_IP }}" "${{ env.WIREGUARD_SERVER_PORT }}"
-          nc -zvu "${{ env.WIREGUARD_SERVER_IP_TCHAVADAR }}" "${{ env.WIREGUARD_SERVER_PORT }}"
-          wg-quick up wg0
-          wg-quick up wg1
+          nc -zvu "${{ env.WIREGUARD_SERVER_IP }}" "${{ env.WIREGUARD_SERVER_PORT }}" || true
+          nc -zvu "${{ env.WIREGUARD_SERVER_IP_TCHAVADAR }}" "${{ env.WIREGUARD_SERVER_PORT }}" || true
+          wg-quick up wg0 || true
+          wg-quick up wg1 || true
       - name: Run Spread
         id: run-spread
         continue-on-error: true
