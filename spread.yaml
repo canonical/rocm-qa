@@ -53,6 +53,17 @@ backends:
           # ssh-key-pass: '$(HOST: echo "$SPREAD_SSH_KEY_PASS")'
           environment:
             DEB_BUILD_OPTIONS: "parallel=79"
+  testflinger:
+    wait-timeout: 2h
+    kill-timeout: 12h
+    halt-timeout: 3h
+    systems:
+      - gfx-1100:
+          queue: 202604-38596
+          image: desktop-26-04-uefi
+          username: ubuntu
+          reserve-key: lp:pe-bot
+          ssh-rsa-key: '$(HOST: echo "$SPREAD_SSH_KEY")'
 prepare: |
   echo "Creating LXD 'rocm-gpu' profile"
 
