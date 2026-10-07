@@ -94,6 +94,11 @@ jobs:
           ${{ env.WIREGUARD_CLIENT_CONFIG_TCHAVADAR }}
           EOF
 
+          # Strip DNS = directives so wg-quick does not override the runner's
+          # resolver — public lookups (e.g. testflinger.canonical.com) must
+          # keep working after the tunnels come up.
+          sudo sed -i '/^DNS\s*=/d' /etc/wireguard/wg0.conf /etc/wireguard/wg1.conf
+
           nc -zvu "${{ env.WIREGUARD_SERVER_IP }}" "${{ env.WIREGUARD_SERVER_PORT }}" || true
           nc -zvu "${{ env.WIREGUARD_SERVER_IP_TCHAVADAR }}" "${{ env.WIREGUARD_SERVER_PORT }}" || true
           wg-quick up wg0 || true
