@@ -13,7 +13,7 @@ on:
         value: ${{ jobs.run-tests.outputs.spread-results-artifact-id }}
 jobs:
   run-tests:
-    runs-on: ubuntu-24.04
+    runs-on: self-hosted-linux-amd64-noble-private-endpoint-small
     env:
       SPREAD_SSH_KEY: ${{ secrets.PE_BOT_BULLWINKLE_PRIVATE_SSH_KEY }}
       SPREAD_BIN: ${{ github.workspace }}/spread-plus/spread-plus
