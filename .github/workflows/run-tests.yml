@@ -26,6 +26,8 @@ jobs:
       WIREGUARD_CLIENT_CONFIG_TCHAVADAR: ${{ secrets.WIREGUARD_CLIENT_CONFIG_TCHAVADAR }}
       SPREAD_PARAMS: "${{ vars.SPREAD_PARAMS }} ${{ inputs.spread-params-extra }}"
       GH_TOKEN: ${{ secrets.PE_PAT }}
+      TESTFLINGER_CLIENT_ID: ${{ secrets.TESTFLINGER_CLIENT_ID }}
+      TESTFLINGER_SECRET_KEY: ${{ secrets.TESTFLINGER_SECRET_KEY }}
     outputs:
       spread-results-artifact-id: ${{ steps.upload-spread-results.outputs.artifact-id }}
     steps:
